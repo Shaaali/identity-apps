@@ -16,3 +16,11 @@ SAML 2.0 is the latest version of SAML, which uses security tokens containing as
 ## How does it work?
 
 The flow... 
+
+## SAML assertions
+
+Xxx xxxx xxxxx xxxx....
+
+## SAML bindings
+
+Xxx xxx x x xxxx xxx...

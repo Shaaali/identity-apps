@@ -33,7 +33,7 @@ module.exports = {
     repo: '',
     editLinks: true,
     docsDir: '',
-    editLinkText: '',
+    editLinkText: 'Edit this page on Github',
     lastUpdated: false,
     logo: '/assets/img/asgardeo-logo.png',
     search: true,
@@ -103,8 +103,8 @@ module.exports = {
            },
            ]
            },    
-      ['','Videos'],
-      ['','References'],
+      ['','APIs'],
+      ['','Customizations'],
       ['','Community'],
       ['','FAQ']
    ]
@@ -115,6 +115,6 @@ module.exports = {
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom'
+    '@vuepress/plugin-medium-zoom',
   ]
 }
