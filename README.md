@@ -21,7 +21,7 @@ yarn --version
 1. Click **Fork** on the top-right corner and fork this repository. 
 2. Git clone the forked repository to your machine.
 
-## Install dependencies
+## Install theme and dependencies
 
 1. Navigate inside the `docs` folder. 
 
@@ -33,6 +33,11 @@ yarn --version
 
   ```
   yarn add -D vuepress
+  ```
+3. Install the theme. 
+
+  ```
+  yarn add -D vuepress-theme-hope
   ```
 
 ## Run the Asgardeo docs site locally
