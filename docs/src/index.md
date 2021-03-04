@@ -1,15 +1,13 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: /assets/img/asgardeo-logo.png
 tagline: 
 actionText: Quick Start →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
-footer: Made by  with ❤️
+- title: Overview
+  details: Explore Asgradeo
+- title: Get Started
+  details: Start using Asgardeo
+footer: Made with ❤ by Asgardeo Team️
 ---
