@@ -1,13 +1,22 @@
 ---
 home: true
 heroImage: /assets/img/asgardeo-logo.png
-tagline: 
-actionText: Quick Start →
-actionLink: /guide/
+tagline:
+
+
 features:
-- title: Overview
-  details: Explore Asgradeo
-- title: Get Started
-  details: Start using Asgardeo
+  - title: Guides 🛠
+    details: 
+    link: /guides/tenant/create-tenant
+
+  - title: Concepts 💡
+    details: 
+    link: /concepts/user-mgt/users-groups-roles
+
+  - title: APIs 🔐
+    details: 
+    link: /apis/apis-overview
+
+
 footer: Made with ❤ by Asgardeo Team️
----
+copyrightText: false

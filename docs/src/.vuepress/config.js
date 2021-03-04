@@ -79,17 +79,17 @@ module.exports = {
             collapsable: true, // optional, defaults to true
             sidebarDepth: 3,
             children: [
-              ['/concepts/user-mgt/users-groups-roles', 'Create a tenant'],
-              ['/concepts/user-mgt/user-types', 'Onboard users'],
+              ['/guides/tenant/create-tenant', 'Create a tenant'],
+              ['/guides/tenant/invite-user-to-set-password.md', 'Onboard users'],
             ]
            },
            {
             title: 'Manage applications',
             collapsable: true, // optional, defaults to true
             children: [
-              ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-              ['/concepts/authentication/saml', 'SAML'],
-              ['/concepts/authentication/oidc', 'OpenID Connect'],
+              ['/guides/authentication/', 'Overview of authentication protocols'],
+              ['/guides/authentication/saml', 'SAML'],
+              ['/guides/authentication/oidc', 'OpenID Connect'],
             ]
            },
            {
@@ -101,8 +101,14 @@ module.exports = {
             ]
            },
            ]
-           },    
-      ['','APIs'],
+           },  
+           {
+            title: 'APIs',
+            collapsable: true, // optional, defaults to true
+            children: [
+              ['/apis/apis-overview', 'Overview of APIs'],
+            ]
+           },  
       ['','Customizations'],
       ['','Community'],
       ['','FAQ']
