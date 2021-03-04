@@ -5,13 +5,11 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Asgardeo Learning Portal',
-  base: '/Asgardeo-docs/',
+  title: "Docs",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
-
+  description: " ",
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
@@ -38,6 +36,7 @@ module.exports = {
     logo: '/assets/img/asgardeo-logo.png',
     search: true,
     Navbar: true,
+    blog: false,
     sidebar: [
       ['/getting-started/asgardeo-overview','Home'],
      {
