@@ -1,5 +1,5 @@
 const { config } = require("vuepress-theme-hope");
-const { description } = require('../../package')
+const { description } = require('../../package.json')
 
 module.exports = {
   /**
