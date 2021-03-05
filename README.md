@@ -23,10 +23,10 @@ yarn --version
 
 ## Install theme and dependencies
 
-1. Navigate inside the `docs` folder. 
+1. Navigate inside the root of `asgardeo-docs`. 
 
   ```
-  cd asgardeo-docs/docs
+  cd asgardeo-docs/
   ```
   
 2. Install dependencies using `Yarn`. 
@@ -47,7 +47,7 @@ yarn --version
   ```
   yarn run dev
   ```
-2. Open http://localhost:8080/ on a new browser window to view the site.
+2. Open http://localhost:8080/asgardeo-docs on a new browser window to view the site.
 
 > Note: The server supports hot deploy so any changes you make to markdown content will automatically apply on your browser within a few seconds. Note that any changes to the page frontmatter or site configuration require you restart the server.
 
