@@ -13,18 +13,20 @@ Register a single page application:
 
 ## Configure general settings 
 
-dsdsdsd
+(TODO:add content)
 
 ## Configure the application protocol 
 
-dsdsdsds
+(TODO:add content)
 
 ## Request user attributes
 
-dsdsds
+(TODO:add content)
 
 ## Configure user login 
 
 (Configure authentication journey?)
 
 ## Configure advanced settings
+
+(TODO:add content)
