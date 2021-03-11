@@ -75,23 +75,38 @@ module.exports = {
          {
           title: 'Guides',
           collapsable: true, // optional, defaults to true
+          sidebarDepth: 3,
           children: [
            {
             title: 'Set up a tenant',
             collapsable: true, // optional, defaults to true
-            sidebarDepth: 3,
             children: [
               ['/guides/tenant/create-tenant', 'Create a tenant'],
-              ['/guides/tenant/invite-user-to-set-password.md', 'Onboard users'],
-            ]
+              {
+                title: 'Onboard users',
+                collapsable: true,
+                children: [
+                  ['/guides/tenant/invite-user-to-set-password.md', 'Invite a user to set their password'],
+                  ['/guides/tenant/onboard-user-with-password.md', 'Onboard a user with a password'],
+                  ['/guides/tenant/invite-guest-user.md', 'Invite a guest user']
+                ]
+              },
+              ['/guides/tenant/create-role', 'Create a role'],
+            ],
            },
            {
             title: 'Manage applications',
             collapsable: true, // optional, defaults to true
             children: [
-              ['/guides/authentication/', 'Overview of authentication protocols'],
-              ['/guides/authentication/saml', 'SAML'],
-              ['/guides/authentication/oidc', 'OpenID Connect'],
+              {
+                title:'Single Page Applications',
+                children: [
+                  ['/guides/applications/spa-angular', 'Angular'],
+                  ['/guides/applications/spa-react', 'React'],
+                  ['/guides/applications/spa-javascript', 'Javascript'],
+                  ['/guides/applications/configure-spa', 'Configurations']
+                ]
+              },
             ]
            },
            {
