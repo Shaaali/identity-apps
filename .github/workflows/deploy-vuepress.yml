@@ -1,0 +1,25 @@
+name: Deploy VuePress
+on:
+  push:
+    branches: [ vue-playground ]
+
+  # Allows to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          ref: vue-test-deploy
+          token: ${{ secrets.ASGARDEO_DOCS_GITHUB_BOT_TOKEN }}
+
+      - name: Build and Deploy
+        uses: jenkey2011/vuepress-deploy@dev
+        env:
+          ACCESS_TOKEN: ${{ secrets.ASGARDEO_DOCS_GITHUB_BOT_TOKEN }}
+          TARGET_BRANCH: gh-pages
+          BUILD_SCRIPT: yarn && yarn docs:build
+          BUILD_DIR: docs/.vuepress/dist
