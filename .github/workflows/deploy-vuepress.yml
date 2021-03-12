@@ -19,6 +19,7 @@ jobs:
         uses: jenkey2011/vuepress-deploy@v1.6.1
         env:
           ACCESS_TOKEN: ${{ secrets.ASGARDEO_DOCS_GITHUB_BOT_TOKEN }}
+          TARGET_REPO: wso2-enterprise/asgardeo-docs
           TARGET_BRANCH: gh-pages
           BUILD_SCRIPT: yarn && yarn build
           BUILD_DIR: docs/.vuepress/dist
