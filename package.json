@@ -8,7 +8,10 @@
     "email": ""
   },
   "scripts": {
+    "predev": "vuepress check-md docs",
     "dev": "vuepress dev docs",
+
+    "prebuild": "vuepress check-md docs",
     "build": "vuepress build docs"
   },
   "license": "MIT",
