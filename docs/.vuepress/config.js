@@ -71,7 +71,7 @@ module.exports = {
           ]
          },
          ]
-         },    
+         },
          {
           title: 'Guides',
           collapsable: true, // optional, defaults to true
@@ -118,14 +118,14 @@ module.exports = {
             ]
            },
            ]
-           },  
+           },
            {
             title: 'APIs',
             collapsable: true, // optional, defaults to true
             children: [
               ['/apis/apis-overview', 'Overview of APIs'],
             ]
-           },  
+           },
       ['','Customizations'],
       ['','Community'],
       ['','FAQ']
@@ -138,5 +138,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+      'check-md'
   ]
 }
