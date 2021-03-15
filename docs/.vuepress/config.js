@@ -95,8 +95,9 @@ module.exports = {
             ],
            },
            {
-            title: 'Manage applications',
+            title: 'Manage applications[option1]',
             collapsable: true, // optional, defaults to true
+            sidebarDepth: 3,
             children: [
               {
                 title:'Single Page Applications',
@@ -105,10 +106,27 @@ module.exports = {
                   ['/guides/applications/spa-react', 'React'],
                   ['/guides/applications/spa-javascript', 'Javascript'],
                   ['/guides/applications/configure-spa', 'Configurations']
+
                 ]
               },
             ]
            },
+          {
+              title: 'Manage applications[option2]',
+              collapsable: true, // optional, defaults to true
+              sidebarDepth: 3,
+              children: [
+                  {
+                      title:'Single Page Applications',
+                      children: [
+                          ['/guides/applications/spa-sample-app', 'Try out a Sample Application'],
+                          ['/guides/applications/spa-onboard-app', 'Onboard an Existing Application'],
+                          ['/guides/applications/spa-new-app', 'Build a new application using SDKs']
+
+                      ]
+                  },
+              ]
+          },
            {
             title: 'Add stronger authentication',
             collapsable: true, // optional, defaults to true
@@ -138,5 +156,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+      'tabs'
   ]
 }
