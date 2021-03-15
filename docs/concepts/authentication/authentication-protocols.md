@@ -6,6 +6,6 @@ A protocol is a set of pre-defined rules used when two or more parties communica
 
 ## Common authentication protocols
 
-- [SAML](../saml)
-- [OpenID Connect](../oidc)
+- [SAML](saml.md)
+- [OpenID Connect](oidc.md)
 

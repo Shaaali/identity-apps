@@ -5,9 +5,9 @@ Once you have registered a [single page application](TODO:link-to-concept) with 
 ::: tip Before you begin
 
 Register a single page application:
-- [Angular](../spa-angular)
-- [React](../spa-react)
-- [Javascript](../spa-javascript)
+- [Angular](spa-angular.md)
+- [React](spa-react.md)
+- [Javascript](spa-javascript.md)
 
 :::
 

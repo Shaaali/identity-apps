@@ -7,7 +7,7 @@ Asgardeo can handle your user management and authenticate users for you. Follow 
 1. On the Asgardeo Console, click **Manage > Users**. 
 
 2. Click **New User** and select **Consumer account**. 
-    > For more information, see [types of user accounts in Asgardeo](../../../concepts/user-mgt/user-types). 
+    > For more information, see [types of user accounts in Asgardeo](../../concepts/user-mgt/user-types.md). 
 
 3. Fill in the user's details. 
 
