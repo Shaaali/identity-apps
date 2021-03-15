@@ -38,4 +38,4 @@ You have successfully set up a single page angular application with basic config
 
 ## What's next?
 
-See [configure a single page application](../configure-spa) to configure more settings for your application. 
+See [configure a single page application](configure-spa.md) to configure more settings for your application. 

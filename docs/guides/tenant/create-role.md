@@ -1,6 +1,7 @@
 # Create a role
 
-A [role](../../../concepts/user-mgt/users-groups-roles#roles) can be used to control access and permissions to applications and console privileges within your tenant.
+A [role](../../concepts/user-mgt/users-groups-roles.md#what-is-a-role) can be used to control access and permissions to 
+applications and console privileges within your tenant.
 
 ---
 
