@@ -38,4 +38,4 @@ You have successfully set up a single page Javascript application with basic con
 
 ## What's next?
 
-See [configure a single page application](../configure-spa) to configure more settings for your application. 
+See [configure a single page application](configure-spa.md) to configure more settings for your application. 
