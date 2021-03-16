@@ -25,6 +25,9 @@
   "dependencies": {
     "markdown-it-html5-embed": "^1.0.0",
     "vuepress-bar": "^0.3.5",
-    "vuepress-plugin-auto-sidebar": "^1.5.0"
+    "vuepress-plugin-auto-sidebar": "^1.5.0",
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-tabs": "^0.3.0",
+    "vuepress-theme-hope": "^1.11.1"
   }
 }
