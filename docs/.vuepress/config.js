@@ -1,5 +1,5 @@
 const {config} = require("vuepress-theme-hope");
-const {description} = require('../../package.json')
+const {description} = require('../../package.json');
 
 module.exports = {
     /**
@@ -42,6 +42,58 @@ module.exports = {
         sidebar: [
             ['/getting-started/asgardeo-overview', 'Home'],
             {
+                title: 'Getting Started',
+                children: [
+                    ['/guides/tenant/create-tenant.md', 'Create a tenant'],
+                    ['/guides/tenant/onboard-user-with-password.md', 'Create a user']
+                ]
+            },
+            // {
+            //     title: 'Quickstart',
+            //     children: [
+            //         ['/guides/applications/spa-sample-app.md', 'Integrate a sample SPA'],
+            //         ['/guides/social-login/google-qsg.md', 'Login with Google'],
+            //         ['/guides/strong-authentication/mfa-qsg.md', 'Enable two factor authentication']
+            //     ]
+            // },
+            {
+                title: 'Guides',
+                children: [
+                    {
+                        title: 'Secure Applications',
+                        children: [
+                            ['/guides/applications/app-overview.md', 'Introduction'],
+                            {
+                                title: 'Application Types',
+                                children: [
+                                    ['/guides/applications/spa/spa-overview.md', 'Single Page Application'],
+                                    ['/guides/applications/web-app/web-app-overview.md', 'Web Application']
+                                ]
+                            },
+                            ['/guides/applications/configuration/app-config-overview.md', 'Application Configurations '],
+                        ]
+                    },
+                    ['/guides/user-management/overview.md', 'Manage users'],
+                    ['/guides/strong-authentication/overview.md', 'Strong Authentication'],
+                    ['/guides/social-login/overview.md', 'Identity Federation']
+                ]
+            },
+
+            {
+                title: 'APIs',
+                collapsable: true, // optional, defaults to true
+                children: [
+                    ['/apis/apis-overview', 'Overview of APIs'],
+                ]
+            },
+            {
+                title: 'SDKs',
+                collapsable: true, // optional, defaults to true
+                children: [
+                    ['/sdks/sdk-overview', 'Overview of APIs'],
+                ]
+            },
+            {
                 title: 'Concepts',
                 collapsable: true, // optional, defaults to true
                 children: [
@@ -72,8 +124,9 @@ module.exports = {
                     },
                 ]
             },
+
             {
-                title: 'Guides',
+                title: 'Guides[deprecated]',
                 collapsable: true, // optional, defaults to true
                 sidebarDepth: 3,
                 children: [
@@ -134,16 +187,8 @@ module.exports = {
                     },
                 ]
             },
-            {
-                title: 'APIs',
-                collapsable: true, // optional, defaults to true
-                children: [
-                    ['/apis/apis-overview', 'Overview of APIs'],
-                ]
-            },
-            ['', 'Customizations'],
-            ['', 'Community'],
-            ['', 'FAQ']
+
+
         ]
     },
 
