@@ -12,7 +12,6 @@ This guide provides the steps to add authentication to your existing React singl
 
 <ToggleButton buttonText='Try out the Sample App' buttonPath='/guides/applications/spa/spa-sample-app' />
 
-
 ## Configure an application in Asgardeo
 
 You need to first create an application in Asgardeo that represents your single-page application.
@@ -27,7 +26,6 @@ Run the following command to install the React SDK and the necessary dependencie
 ```
 npm install @asgardeo/auth-react react-router-dom --save
 ```
-
 ### Configure AuthProvider
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
