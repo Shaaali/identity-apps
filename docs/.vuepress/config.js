@@ -1,7 +1,6 @@
 const {config} = require("vuepress-theme-hope");
-const {description} = require('../../package.json');
 
-module.exports = {
+module.exports = config({
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#title
      */
@@ -39,6 +38,7 @@ module.exports = {
         search: true,
         Navbar: true,
         blog: false,
+        pageInfo: false,
         sidebar: [
             ['/get-started/asgardeo-overview', 'Home'],
             ['/get-started/get-started.md', 'Get started'],
@@ -116,7 +116,10 @@ module.exports = {
                             ['/concepts/authentication/oidc', 'OpenID Connect'],
                         ]
                     },
-                ]
+                ],
+                mdEnhance: {
+                    align: true,
+                },
             },
 
             {
@@ -168,9 +171,7 @@ module.exports = {
                 ]
             },
         ],
-        mdEnhance: {
-            align: true,
-        },
+
     },
 
     /**
@@ -184,4 +185,4 @@ module.exports = {
             exitLevel: 'error'
         }]
     ]
-}
+});

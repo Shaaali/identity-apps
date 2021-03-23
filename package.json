@@ -1,8 +1,7 @@
 {
   "name": "asgardeo-docs",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Asgardeo Documentation",
   "authors": {
     "name": "",
     "email": ""
