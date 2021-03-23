@@ -163,21 +163,6 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Manage applications[option2]',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            {
-                                title:'Single Page Applications',
-                                children: [
-                                    ['/guides/applications/spa-sample-app', 'Try out a Sample Application'],
-                                    ['/guides/applications/spa-onboard-app', 'Onboard an Existing Application'],
-                                    ['/guides/applications/spa-new-app', 'Build a new application using SDKs']
-
-                                ]
-                            },
-                        ]
-                    },
-                    {
                         title: 'Add stronger authentication',
                         collapsable: true, // optional, defaults to true
                         children: [
@@ -187,9 +172,10 @@ module.exports = {
                     },
                 ]
             },
-
-
-        ]
+        ],
+        mdEnhance: {
+            align: true,
+        },
     },
 
     /**
