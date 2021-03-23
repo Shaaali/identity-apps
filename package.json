@@ -22,7 +22,7 @@
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "vuepress": "^1.8.2",
     "vuepress-plugin-check-md": "0.0.2",
-    "vuepress-theme-hope": "^1.11.1"
+    "vuepress-theme-hope": "^1.13.1"
   },
   "dependencies": {
     "markdown-it-html5-embed": "^1.0.0",
@@ -30,6 +30,6 @@
     "vuepress-plugin-auto-sidebar": "^1.5.0",
     "vue-tabs-component": "^1.5.0",
     "vuepress-plugin-tabs": "^0.3.0",
-    "vuepress-theme-hope": "^1.11.1"
+    "vuepress-theme-hope": "^1.13.1"
   }
 }
