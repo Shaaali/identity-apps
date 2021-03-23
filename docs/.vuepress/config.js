@@ -40,14 +40,8 @@ module.exports = {
         Navbar: true,
         blog: false,
         sidebar: [
-            ['/getting-started/asgardeo-overview', 'Home'],
-            {
-                title: 'Getting Started',
-                children: [
-                    ['/guides/tenant/create-tenant.md', 'Create a tenant'],
-                    ['/guides/tenant/onboard-user-with-password.md', 'Create a user']
-                ]
-            },
+            ['/get-started/asgardeo-overview', 'Home'],
+            ['/get-started/get-started.md', 'Get started'],
             // {
             //     title: 'Quickstart',
             //     children: [
@@ -60,22 +54,22 @@ module.exports = {
                 title: 'Guides',
                 children: [
                     {
-                        title: 'Secure Applications',
+                        title: 'Secure applications',
                         children: [
                             ['/guides/applications/app-overview.md', 'Introduction'],
                             {
-                                title: 'Application Types',
+                                title: 'Application types',
                                 children: [
-                                    ['/guides/applications/spa/spa-overview.md', 'Single Page Application'],
-                                    ['/guides/applications/web-app/web-app-overview.md', 'Web Application']
+                                    ['/guides/applications/spa/spa-overview.md', 'Single page application'],
+                                    ['/guides/applications/web-app/web-app-overview.md', 'Web application']
                                 ]
                             },
-                            ['/guides/applications/configuration/app-config-overview.md', 'Application Configurations '],
+                            ['/guides/applications/configuration/app-config-overview.md', 'Application configurations '],
                         ]
                     },
                     ['/guides/user-management/overview.md', 'Manage users'],
-                    ['/guides/strong-authentication/overview.md', 'Strong Authentication'],
-                    ['/guides/social-login/overview.md', 'Identity Federation']
+                    ['/guides/strong-authentication/overview.md', 'Add strong authentication'],
+                    ['/guides/social-login/overview.md', 'Add federated authentication']
                 ]
             },
 
@@ -139,6 +133,7 @@ module.exports = {
                                 title: 'Onboard users',
                                 collapsable: true,
                                 children: [
+                                    ['/guides/tenant/onboard-users.md', 'Overview'],
                                     ['/guides/tenant/invite-user-to-set-password.md', 'Invite a user to set their password'],
                                     ['/guides/tenant/onboard-user-with-password.md', 'Onboard a user with a password'],
                                     ['/guides/tenant/invite-guest-user.md', 'Invite a guest user']
@@ -152,7 +147,7 @@ module.exports = {
                         collapsable: true, // optional, defaults to true
                         children: [
                             {
-                                title: 'Single Page Applications',
+                                title: 'Single page applications',
                                 children: [
                                     ['/guides/applications/spa-angular', 'Angular'],
                                     ['/guides/applications/spa-react', 'React'],
@@ -167,10 +162,10 @@ module.exports = {
                         collapsable: true, // optional, defaults to true
                         children: [
                             {
-                                title:'Single Page Applications',
+                                title:'Single page applications',
                                 children: [
-                                    ['/guides/applications/spa-sample-app', 'Try out a Sample Application'],
-                                    ['/guides/applications/spa-onboard-app', 'Onboard an Existing Application'],
+                                    ['/guides/applications/spa-sample-app', 'Try out a sample application'],
+                                    ['/guides/applications/spa-onboard-app', 'Onboard an existing application'],
                                     ['/guides/applications/spa-new-app', 'Build a new application using SDKs']
 
                                 ]
