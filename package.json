@@ -8,6 +8,8 @@
     "email": ""
   },
   "scripts": {
+    "test": "vuepress check-md docs",
+
     "predev": "vuepress check-md docs",
     "dev": "vuepress dev docs",
 
