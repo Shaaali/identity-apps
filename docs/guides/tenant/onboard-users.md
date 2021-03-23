@@ -6,4 +6,4 @@ Adding new users to access your applications is called onboarding. There are dif
 - [Onboard a user with a temporary password](../tenant/onboard-user-with-password.md)
 - [Invite a guest user](../tenant/invite-guest-user.md)
 
-> For more information about the types of users you can onboard, see [types of users](../concepts/user-mgt/user-types.md).
+> For more information about the types of users you can onboard, see [types of users](../../concepts/user-mgt/user-types.md).
