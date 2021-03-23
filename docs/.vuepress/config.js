@@ -116,10 +116,7 @@ module.exports = config({
                             ['/concepts/authentication/oidc', 'OpenID Connect'],
                         ]
                     },
-                ],
-                mdEnhance: {
-                    align: true,
-                },
+                ]
             },
 
             {
@@ -172,6 +169,9 @@ module.exports = config({
             },
         ],
 
+        mdEnhance: {
+            align : true
+        },
     },
 
     /**
