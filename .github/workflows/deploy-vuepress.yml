@@ -9,24 +9,16 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
-        
     steps:
-      - name: Checkout
+      - name: Checkout Source
         uses: actions/checkout@master
         with:
           ref: vue-playground
           token: ${{ secrets.ASGARDEO_DOCS_GITHUB_BOT_TOKEN }}
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Build and Deploy
-        uses: jenkey2011/vuepress-deploy@dev
+      - name: Build and Deploy to Github Pages
+        uses: jenkey2011/vuepress-deploy@v1.6.1
         env:
           ACCESS_TOKEN: ${{ secrets.ASGARDEO_DOCS_GITHUB_BOT_TOKEN }}
           TARGET_BRANCH: gh-pages
-          BUILD_SCRIPT: yarn && yarn docs:build
+          BUILD_SCRIPT: yarn && yarn build
           BUILD_DIR: docs/.vuepress/dist
