@@ -25,7 +25,7 @@ Let's get you started with Asgardeo!
 
 ## What's next? 
 
-Now that you've set up your own tenant workspace and created your first user, you can:
+Now that you've set up your own tenant and created your first user, you can:
 
 - [Onboard more users](../guides/tenant/onboard-users.md)
 - [Create roles](../guides/tenant/create-role.md)
