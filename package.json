@@ -12,7 +12,9 @@
     "dev": "vuepress dev docs",
 
     "prebuild": "vuepress check-md docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+
+    "test": "vuepress check-md docs"
   },
   "license": "MIT",
   "devDependencies": {

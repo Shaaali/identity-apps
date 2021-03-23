@@ -16,7 +16,7 @@ Let's get you started with Asgardeo!
 
 2. Enter a unique tenant name that describes the workspace. 
 
-    > For more information, see [multitenancy](../concepts/user-mgt/multitenancy.md).
+    > For more information, see [multitenancy](../concepts/user-mgt/multitenancyx.md).
 
 
 ## Create a user
