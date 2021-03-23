@@ -8,13 +8,13 @@
     "email": ""
   },
   "scripts": {
+    "test": "vuepress check-md docs",
+
     "predev": "vuepress check-md docs",
     "dev": "vuepress dev docs",
 
     "prebuild": "vuepress check-md docs",
-    "build": "vuepress build docs",
-
-    "test": "vuepress check-md docs"
+    "build": "vuepress build docs"
   },
   "license": "MIT",
   "devDependencies": {
