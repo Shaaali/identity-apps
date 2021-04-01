@@ -1,7 +1,6 @@
 const {config} = require("vuepress-theme-hope");
-const {description} = require('../../package.json');
 
-module.exports = {
+module.exports = config({
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#title
      */
@@ -39,6 +38,7 @@ module.exports = {
         search: true,
         Navbar: true,
         blog: false,
+        pageInfo: false,
         sidebar: [
             ['/get-started/asgardeo-overview', 'Home'],
             ['/get-started/get-started.md', 'Get started'],
@@ -158,21 +158,6 @@ module.exports = {
                         ]
                     },
                     {
-                        title: 'Manage applications[option2]',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            {
-                                title:'Single page applications',
-                                children: [
-                                    ['/guides/applications/spa-sample-app', 'Try out a sample application'],
-                                    ['/guides/applications/spa-onboard-app', 'Onboard an existing application'],
-                                    ['/guides/applications/spa-new-app', 'Build a new application using SDKs']
-
-                                ]
-                            },
-                        ]
-                    },
-                    {
                         title: 'Add stronger authentication',
                         collapsable: true, // optional, defaults to true
                         children: [
@@ -182,9 +167,11 @@ module.exports = {
                     },
                 ]
             },
+        ],
 
-
-        ]
+        mdEnhance: {
+            align : true
+        },
     },
 
     /**
@@ -198,4 +185,4 @@ module.exports = {
             exitLevel: 'error'
         }]
     ]
-}
+});

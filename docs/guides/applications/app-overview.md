@@ -1,26 +1,18 @@
-# Secure Your Application
+---
+home: true
+heroText: Secure Applications
+heroImage: /assets/img/guides/authentication-flow.png
+tagline: Authentication is the best way to provide security to your application. Password-based login systems is an additional burden to the application developer. Asgardeo provides a cloud based platform to store digital identities of the users. You can configure your applications to manage the user authentication via Asgardeo.
 
-Application security intro
+features:
+  - title: Single Page Applications 
+    details: 
+    link: /guides/applications/spa/spa-overview
 
-
-To proceed
-
-
-## Based on the App Type
-* Single Page Application
-* Web application
-
-
-## Based on the technology
-* React
-* Angular
-* Javascript
-* Java EE
-
-## Based on the protocol
-* OIDC
-* SAML
-
-
-To what exact page will the user be redirected if OIDC is selected. 
-(we will have guides like javaEE with OIDC, .NET with OIDC)
+  - title: Web Application
+    details: traditional web application which runs on a web server.
+    link: /guides/applications/web-app/web-app-overview
+    
+  - title: Application Configurations
+    details: 
+    link: /guides/applications/configurations/app-config-overview

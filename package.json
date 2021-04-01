@@ -1,16 +1,15 @@
 {
   "name": "asgardeo-docs",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Asgardeo Documentation",
   "authors": {
     "name": "",
     "email": ""
   },
   "scripts": {
+    "test": "vuepress check-md docs",
     "predev": "vuepress check-md docs",
     "dev": "vuepress dev docs",
-
     "prebuild": "vuepress check-md docs",
     "build": "vuepress build docs"
   },
@@ -20,14 +19,11 @@
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "vuepress": "^1.8.2",
     "vuepress-plugin-check-md": "0.0.2",
-    "vuepress-theme-hope": "^1.11.1"
-  },
-  "dependencies": {
+    "vuepress-theme-hope": "^1.13.1",
     "markdown-it-html5-embed": "^1.0.0",
     "vuepress-bar": "^0.3.5",
     "vuepress-plugin-auto-sidebar": "^1.5.0",
     "vue-tabs-component": "^1.5.0",
-    "vuepress-plugin-tabs": "^0.3.0",
-    "vuepress-theme-hope": "^1.11.1"
+    "vuepress-plugin-tabs": "^0.3.0"
   }
 }
