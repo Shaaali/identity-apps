@@ -1,8 +1,8 @@
 # Invite a guest user 
 
-Asgardeo can handle your user management and authenticate users for you. Follow the steps below to send an email invitation to a [guest user](TODO:link-to-concept) to collaborate with your tenant. This user can be assigned to an administrative role and can manage your tenant but the user does not reside within your tenant. 
+Asgardeo can handle your user management and authenticate users for you. Follow the steps below to send an email invitation to a guest user to collaborate with your tenant. This user can be assigned to an administrative role and can manage your tenant but the user does not reside within your tenant. 
 
----
+> For more information about the types of users you can onboard, see [types of users](../../concepts/user-mgt/user-types.md).
 
 ## Send invitation 
 

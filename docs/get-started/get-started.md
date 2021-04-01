@@ -27,12 +27,11 @@ Let's get you started with Asgardeo!
 
 Now that you've set up your own tenant and created your first user, you can:
 
-- [Onboard more users](../guides/tenant/onboard-users.md)
-- [Create roles](../guides/tenant/create-role.md)
+- [Onboard more consumer users](../guides/users/consumer-users.md)
+- [Invite a guest user](../guides/users/guest-users.md)
+- [Create roles](../guides/users/create-role.md)
 - [Register an application](../guides/applications/app-overview.md)
 - [Explore Asgardeo with a sample application](../guides/applications/app-overview.md)
-
-
 
 ----
 
