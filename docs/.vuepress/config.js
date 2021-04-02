@@ -20,7 +20,7 @@ module.exports = config({
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}]
     ],
 
-    // base: "/asgardeo-docs/",
+    base: "/asgardeo-docs/",
 
     /**
      * Theme configuration, here is the default theme configuration for VuePress.
@@ -60,7 +60,7 @@ module.exports = config({
             text: 'Concepts',
             link: '/concepts/'
           }
-        ],        
+        ],
         sidebar: {
             '/guides/' : [
             {
@@ -80,7 +80,7 @@ module.exports = config({
                         ['/guides/applications/spa-overview.md', 'Single page application'],
                         ['/guides/applications/web-app-overview.md', 'Web application']
                     ]
-                },  
+                },
                 {
                     title: 'Application settings',
                     children: [
@@ -91,7 +91,7 @@ module.exports = config({
                         ['/guides/applications/configure-advanced.md', 'Configure advanced settings']
 
                     ]
-                },                
+                },
               ]
             },
             {
@@ -103,13 +103,13 @@ module.exports = config({
                     children: [
                         ['/guides/social-login/google-qsg.md', 'Enable Google authentication']
                     ]
-                },  
+                },
                 {
                     title: 'Enterprise login',
                     children: [
                         ['/guides/social-login/google-qsg.md', 'Enable OIDC authentication']
                     ]
-                },                
+                },
               ]
             },
             {
@@ -121,17 +121,48 @@ module.exports = config({
                     children: [
                         ['/guides/strong-authentication/mfa-qsg.md', 'Configure multi factor authentication']
                     ]
-                },  
+                },
                 {
                     title: 'Adaptive authentication',
                     children: [
                         ['/guides/strong-authentication/mfa-qsg.md', 'Configure adaptive authentication']
                     ]
-                },                
+                },
               ]
             },
             ]
         },
+{
+    title: 'Concepts',
+        collapsable: true, // optional, defaults to true
+    children: [
+    {
+        title: 'Users, groups, and roles',
+        collapsable: true, // optional, defaults to true
+        children: [
+            ['/concepts/user-mgt/users-groups-roles', 'Users, groups, and roles'],
+            ['/concepts/user-mgt/user-types', 'Types of user accounts'],
+        ]
+    },
+    {
+        title: 'Authentication',
+        collapsable: true, // optional, defaults to true
+        children: [
+            ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
+            ['/concepts/authentication/saml', 'SAML'],
+            ['/concepts/authentication/oidc', 'OpenID Connect'],
+        ]
+    },
+    {
+        title: 'Authorization',
+        collapsable: true, // optional, defaults to true
+        children: [
+            ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
+            ['/concepts/authentication/oidc', 'OpenID Connect'],
+        ]
+    },
+]
+},
 
         mdEnhance: {
             align : true
