@@ -1,21 +1,26 @@
 ---
 home: true
 heroImage: /assets/img/asgardeo-logo.png
-tagline:
-
+tagline: Asgardeo gives you the tools you need to build your identity and access management solution securely
+actionText: Quick Start →
+actionLink: /guide/
 
 features:
-  - title: Guides 🛠
+  - title: Manage applications
     details: 
-    link: /guides/tenant/create-tenant
+    link: /guides/applications/app-overview
 
-  - title: Concepts 💡
+  - title: Add Social Login 💡
     details: 
-    link: /concepts/user-mgt/users-groups-roles
+    link: /guides/social-login/overview
 
-  - title: APIs 🔐
+  - title: Add strong authentication 🔐
     details: 
-    link: /apis/apis-overview
+    link: /guides/strong-autnetication/overview
+
+  - title: Manage users
+    details: 
+    link: /guides/user-management/overview
 
 
 footer: Made with ❤ by Asgardeo Team️

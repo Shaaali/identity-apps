@@ -73,7 +73,7 @@ module.exports = config({
             {
                 title: 'Manage applications',
                 children: [
-                ['applications/', 'Overview'],
+                ['applications/app-overview.md', 'Overview'],
                 {
                     title: 'Application types',
                     children: [
@@ -97,7 +97,7 @@ module.exports = config({
             {
                 title: 'Add login',
                 children: [
-                ['social-login/', 'Overview'],
+                ['social-login/overview.md', 'Overview'],
                 {
                     title: 'Social login',
                     children: [
@@ -115,7 +115,7 @@ module.exports = config({
             {
                 title: 'Add strong authentication',
                 children: [
-                ['strong-authentication/', 'Overview'],
+                ['strong-authentication/overview.md', 'Overview'],
                 {
                     title: 'Multi factor authentication',
                     children: [
@@ -130,40 +130,34 @@ module.exports = config({
                 },
               ]
             },
+            ],
+
+            '/concepts/' : [
+            '',
+            {
+                title: 'Users, groups, and roles',
+                children: [
+                    ['/concepts/user-mgt/users-groups-roles', 'Users, groups, and roles'],
+                    ['/concepts/user-mgt/user-types', 'Types of user accounts'],
+                ]
+            },
+            {
+                title: 'Authentication',
+                children: [
+                    ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
+                    ['/concepts/authentication/saml', 'SAML'],
+                    ['/concepts/authentication/oidc', 'OpenID Connect'],
+                ]
+            },
+            {
+                title: 'Authorization',
+                children: [
+                    ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
+                    ['/concepts/authentication/oidc', 'OpenID Connect'],
+                ]
+            },
             ]
         },
-{
-    title: 'Concepts',
-        collapsable: true, // optional, defaults to true
-    children: [
-    {
-        title: 'Users, groups, and roles',
-        collapsable: true, // optional, defaults to true
-        children: [
-            ['/concepts/user-mgt/users-groups-roles', 'Users, groups, and roles'],
-            ['/concepts/user-mgt/user-types', 'Types of user accounts'],
-        ]
-    },
-    {
-        title: 'Authentication',
-        collapsable: true, // optional, defaults to true
-        children: [
-            ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-            ['/concepts/authentication/saml', 'SAML'],
-            ['/concepts/authentication/oidc', 'OpenID Connect'],
-        ]
-    },
-    {
-        title: 'Authorization',
-        collapsable: true, // optional, defaults to true
-        children: [
-            ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-            ['/concepts/authentication/oidc', 'OpenID Connect'],
-        ]
-    },
-]
-},
-
         mdEnhance: {
             align : true
         },
