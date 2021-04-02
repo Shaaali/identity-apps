@@ -5,14 +5,14 @@ heroImage: /assets/img/guides/authentication-flow.png
 tagline: Authentication is the best way to provide security to your application. Password-based login systems is an additional burden to the application developer. Asgardeo provides a cloud based platform to store digital identities of the users. You can configure your applications to manage the user authentication via Asgardeo.
 
 features:
-  - title: Single Page Applications 
+  - title: Single page applications 
     details: 
-    link: /guides/applications/spa/spa-overview
+    link: /guides/applications/spa-overview
 
-  - title: Web Application
+  - title: Web application
     details: traditional web application which runs on a web server.
-    link: /guides/applications/web-app/web-app-overview
+    link: /guides/applications/web-app-overview
     
-  - title: Application Configurations
+  - title: Application settings
     details: 
-    link: /guides/applications/configurations/app-config-overview
+    link: /guides/applications/configure-general
