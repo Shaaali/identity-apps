@@ -16,7 +16,7 @@ Let's get you started with Asgardeo!
 
 2. Enter a unique tenant name that describes the workspace. 
 
-    > For more information, see [multitenancy](../concepts/user-mgt/multitenancy.md).
+    > For more information, see [multitenancy](../../concepts/user-mgt/multitenancy.md).
 
 
 ## Create a user
@@ -27,10 +27,10 @@ Let's get you started with Asgardeo!
 
 Now that you've set up your own tenant and created your first user, you can:
 
-- [Onboard more users](../guides/tenant/onboard-users.md)
-- [Create roles](../guides/tenant/create-role.md)
-- [Register an application](../guides/applications/app-overview.md)
-- [Explore Asgardeo with a sample application](../guides/applications/app-overview.md)
+- [Onboard more users](../tenant/onboard-users.md)
+- [Create roles](../tenant/create-role.md)
+- [Register an application](../applications/app-overview.md)
+- [Explore Asgardeo with a sample application](../applications/app-overview.md)
 
 
 

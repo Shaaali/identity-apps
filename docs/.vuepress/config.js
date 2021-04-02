@@ -20,7 +20,7 @@ module.exports = config({
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}]
     ],
 
-    base: "/asgardeo-docs/",
+    // base: "/asgardeo-docs/",
 
     /**
      * Theme configuration, here is the default theme configuration for VuePress.
@@ -39,135 +39,99 @@ module.exports = config({
         Navbar: true,
         blog: false,
         pageInfo: false,
-        sidebar: [
-            ['/get-started/asgardeo-overview', 'Home'],
-            ['/get-started/get-started.md', 'Get started'],
-            // {
-            //     title: 'Quickstart',
-            //     children: [
-            //         ['/guides/applications/spa-sample-app.md', 'Integrate a sample SPA'],
-            //         ['/guides/social-login/google-qsg.md', 'Login with Google'],
-            //         ['/guides/strong-authentication/mfa-qsg.md', 'Enable two factor authentication']
-            //     ]
-            // },
+        nav: [
+          {
+            text: "Guides",
+            link: "/guides/",
+          },
+          {
+            text: 'Quick Starts',
+            link: '/quickstart/',
+          },
+          {
+            text: 'APIs',
+            link: '/apis/',
+          },
+          {
+            text: 'SDKs',
+            link: '/sdks/'
+          },
+          {
+            text: 'Concepts',
+            link: '/concepts/'
+          }
+        ],        
+        sidebar: {
+            '/guides/' : [
             {
-                title: 'Guides',
+                title: 'Get started',
                 children: [
-                    {
-                        title: 'Secure applications',
-                        children: [
-                            ['/guides/applications/app-overview.md', 'Introduction'],
-                            {
-                                title: 'Application types',
-                                children: [
-                                    ['/guides/applications/spa/spa-overview.md', 'Single page application'],
-                                    ['/guides/applications/web-app/web-app-overview.md', 'Web application']
-                                ]
-                            },
-                            ['/guides/applications/configuration/app-config-overview.md', 'Application configurations '],
-                        ]
-                    },
-                    ['/guides/user-management/overview.md', 'Manage users'],
-                    ['/guides/strong-authentication/overview.md', 'Add strong authentication'],
-                    ['/guides/social-login/overview.md', 'Add federated authentication']
-                ]
+                '',
+                ['get-started/create-tenant.md', 'Create tenant']
+              ]
             },
+            {
+                title: 'Manage applications',
+                children: [
+                ['applications/', 'Overview'],
+                {
+                    title: 'Application types',
+                    children: [
+                        ['/guides/applications/spa-overview.md', 'Single page application'],
+                        ['/guides/applications/web-app-overview.md', 'Web application']
+                    ]
+                },  
+                {
+                    title: 'Application settings',
+                    children: [
+                        ['/guides/applications/configure-general.md', 'Configure general details'],
+                        ['/guides/applications/configure-protocol.md', 'Define authorization protocol'],
+                        ['/guides/applications/configure-user-attribute.md', 'Select user attributes'],
+                        ['/guides/applications/configure-sign-on.md', 'Configure sign-on method'],
+                        ['/guides/applications/configure-advanced.md', 'Configure advanced settings']
 
-            {
-                title: 'APIs',
-                collapsable: true, // optional, defaults to true
-                children: [
-                    ['/apis/apis-overview', 'Overview of APIs'],
-                ]
+                    ]
+                },                
+              ]
             },
             {
-                title: 'SDKs',
-                collapsable: true, // optional, defaults to true
+                title: 'Add login',
                 children: [
-                    ['/sdks/sdk-overview', 'Overview of APIs'],
-                ]
+                ['social-login/', 'Overview'],
+                {
+                    title: 'Social login',
+                    children: [
+                        ['/guides/social-login/google-qsg.md', 'Enable Google authentication']
+                    ]
+                },  
+                {
+                    title: 'Enterprise login',
+                    children: [
+                        ['/guides/social-login/google-qsg.md', 'Enable OIDC authentication']
+                    ]
+                },                
+              ]
             },
             {
-                title: 'Concepts',
-                collapsable: true, // optional, defaults to true
+                title: 'Add strong authentication',
                 children: [
-                    {
-                        title: 'Users, groups, and roles',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            ['/concepts/user-mgt/users-groups-roles', 'Users, groups, and roles'],
-                            ['/concepts/user-mgt/user-types', 'Types of user accounts'],
-                        ]
-                    },
-                    {
-                        title: 'Authentication',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-                            ['/concepts/authentication/saml', 'SAML'],
-                            ['/concepts/authentication/oidc', 'OpenID Connect'],
-                        ]
-                    },
-                    {
-                        title: 'Authorization',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-                            ['/concepts/authentication/oidc', 'OpenID Connect'],
-                        ]
-                    },
-                ]
+                ['strong-authentication/', 'Overview'],
+                {
+                    title: 'Multi factor authentication',
+                    children: [
+                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure multi factor authentication']
+                    ]
+                },  
+                {
+                    title: 'Adaptive authentication',
+                    children: [
+                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure adaptive authentication']
+                    ]
+                },                
+              ]
             },
-
-            {
-                title: 'Guides[deprecated]',
-                collapsable: true, // optional, defaults to true
-                sidebarDepth: 3,
-                children: [
-                    {
-                        title: 'Set up a tenant',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            ['/guides/tenant/create-tenant', 'Create a tenant'],
-                            {
-                                title: 'Onboard users',
-                                collapsable: true,
-                                children: [
-                                    ['/guides/tenant/onboard-users.md', 'Overview'],
-                                    ['/guides/tenant/invite-user-to-set-password.md', 'Invite a user to set their password'],
-                                    ['/guides/tenant/onboard-user-with-password.md', 'Onboard a user with a password'],
-                                    ['/guides/tenant/invite-guest-user.md', 'Invite a guest user']
-                                ]
-                            },
-                            ['/guides/tenant/create-role', 'Create a role'],
-                        ],
-                    },
-                    {
-                        title: 'Manage applications[option1]',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            {
-                                title: 'Single page applications',
-                                children: [
-                                    ['/guides/applications/spa-angular', 'Angular'],
-                                    ['/guides/applications/spa-react', 'React'],
-                                    ['/guides/applications/spa-javascript', 'Javascript'],
-                                    ['/guides/applications/configure-spa', 'Configurations']
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        title: 'Add stronger authentication',
-                        collapsable: true, // optional, defaults to true
-                        children: [
-                            ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-                            ['/concepts/authentication/oidc', 'OpenID Connect'],
-                        ]
-                    },
-                ]
-            },
-        ],
+            ]
+        },
 
         mdEnhance: {
             align : true
