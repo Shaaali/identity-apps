@@ -125,21 +125,19 @@ module.exports = config({
                 sidebarDepth: 3,
                 children: [
                     {
-                        title: 'Set up a tenant',
+                        title: 'Users, Groups, and Roles',
                         collapsable: true, // optional, defaults to true
                         children: [
-                            ['/guides/tenant/create-tenant', 'Create a tenant'],
                             {
-                                title: 'Onboard users',
+                                title: 'Users',
                                 collapsable: true,
                                 children: [
-                                    ['/guides/tenant/onboard-users.md', 'Overview'],
-                                    ['/guides/tenant/invite-user-to-set-password.md', 'Invite a user to set their password'],
-                                    ['/guides/tenant/onboard-user-with-password.md', 'Onboard a user with a password'],
-                                    ['/guides/tenant/invite-guest-user.md', 'Invite a guest user']
+                                    ['/guides/users/onboard-users.md', 'Overview'],
+                                    ['/guides/users/consumer-users.md', 'Onboard a consumer user'],
+                                    ['/guides/users/guest-users.md', 'Onboard a guest user'],
                                 ]
                             },
-                            ['/guides/tenant/create-role', 'Create a role'],
+                            ['/guides/users/create-role', 'Create a role'],
                         ],
                     },
                     {
