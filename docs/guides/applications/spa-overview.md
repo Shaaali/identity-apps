@@ -12,8 +12,8 @@ Single Page Applications can be written using various technologies. You can sele
 
 ::: center
 [React](./spa-new-react-app.md)\
-[Angular](../spa-angular.md)\
-[Javascript](../spa-javascript.md)
+[Angular](./spa-angular.md)\
+[Javascript](./spa-javascript.md)
 
 :::
 
