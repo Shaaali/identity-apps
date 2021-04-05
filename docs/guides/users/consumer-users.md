@@ -28,5 +28,5 @@ You can fill in more details about the user such as their mobile number or count
 
 ## What's next?
 
-See [manage users](TODO:link-to-guide) to manage your guest accounts and invitations to guest users. 
+See [manage users](../users/manage-users.md) to manage your guest accounts and invitations to guest users. 
 

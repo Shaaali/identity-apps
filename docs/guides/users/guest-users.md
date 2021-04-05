@@ -19,4 +19,4 @@ Asgardeo can handle your user management and authenticate users for you. Follow 
 
 ## What's next?
 
-See [manage users](TODO:link-to-guide) to manage your guest accounts and invitations to guest users. 
+See [manage users](../users/manage-users.md) to manage your guest accounts and invitations to guest users. 
