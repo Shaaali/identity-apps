@@ -4,11 +4,18 @@ A Single Page Application (SPA) is a web application that loads a single HTML pa
 https://www.youtube.com/watch?v=tmKD2famPJc&t=129s
 
 ## SPA with OIDC
-~ Diagram to explain SPA with OIDC
 
-Single Page Applications can be written using various technologies. You can select the technology of your single page application and onboard it to Asgardeo by following the guide
+<img :src="$withBase('/assets/img/guides/spa-oidc.png')" alt="spa-with-oidc-diagram">
+
+Describes the diagram 
+
+Callback URL in the app, how Asgardeo provides OIDC security to the application.
 
 ## Pick the technology 
+
+SPAs are written in different Javascript frameworks. 
+
+Following guides provide steps to add OIDC authentication to your SPA using Asgardeo SDKs and integrate it with Asgardeo.
 
 ::: center
 [React](./spa-new-react-app.md)\
@@ -17,16 +24,10 @@ Single Page Applications can be written using various technologies. You can sele
 
 :::
 
-::: tip Using any other technology?
-Don't worry if you cannot find the technology of your single page application in the above list. You can still integrate your application with Asgardeo.
-:::
+**Using a different framework?**
 
-## Configure an application in Asgardeo
+Refer the [Add authentication to SPA](./spa-configure-general.md) guide to check how to add authentication to your SPA written using a different framework or without using the Asgardeo SDKs.
 
-You need to first create an application in Asgardeo that represents your single-page application.
+**Want to try out a sample application with Asgardeo?**
 
-<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo.md'/>
-
-## Configure the single page application
-
-~ general steps for adding authentication to an application
+Refer the [Single page application sample](./spa-sample-app.md) guide in the quickstart section.

@@ -1,6 +1,6 @@
 # Single page application: React
 
-This guide provides the steps to add authentication to your existing React single page application and onboard it to Asgardeo
+This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React SDK 
 
 ::: tip Before you begin
 
@@ -10,27 +10,28 @@ This guide provides the steps to add authentication to your existing React singl
 
 :::
 
-<ToggleButton buttonText='Try out the Sample App' buttonPath='/guides/applications/spa/spa-sample-app' />
+<ToggleButton buttonText='Try out the Sample App' buttonPath='/guides/applications/spa-sample-app' />
 
 ## Configure an application in Asgardeo
 
-You need to first create an application in Asgardeo that represents your single-page application.
+You need to first create an application in Asgardeo that represents your SPA.
 
 <CommonGuide guide='guides/fragments/configure-spa-in-asgardeo.md'/>
 
 ## Add authentication to your app
 
-### Install SDK
+**Install SDK**
+
 Run the following command to install the React SDK and the necessary dependencies from the npm registry.
 
 ```
 npm install @asgardeo/auth-react react-router-dom --save
 ```
-### Configure AuthProvider
+**Configure AuthProvider**
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
-:::
-tip Note
+
+::: tip Note
 Make sure to replace `HomePage` component with your own component tree.
 :::
 
@@ -60,7 +61,7 @@ const App = () => (
 render((<App />), document.getElementById("root"));
 ```
 
-### Add login
+**Add login**
 The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button** using the `signIn()` function in the `useAuthContext` hook. Similarly, you can also implement a **Logout button** using the `signOut()` function.\
 If you wish to access the authenticated user's details, use the `state` object from the `useAuthContext` hook.
 
