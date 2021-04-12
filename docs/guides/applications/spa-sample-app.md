@@ -1,4 +1,4 @@
-# Try out a Sample Application
+# Quickstart: Single page application sample
 
 This quick start guide will deploy the sample application in your local environment and secure it with Asgadeo using OpenID Connect.
 
@@ -20,7 +20,7 @@ You need to first create an application in Asgardeo that represents your single-
 
 Pick the technology that you want to try out the sample and follow the given steps.
 
-### Download the sample
+**Download the sample**
 
 :::: tabs
 
@@ -57,7 +57,7 @@ Click the button to download the sample or to view the github source code
 ::::
 
 
-### Configure the sample
+**Configure the sample**
 
 :::: tabs
 
@@ -100,7 +100,7 @@ Change the `config.json` file found in the `asgardeo-angular-app/sr` sample fold
 - **clientID** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
 - **serverOrigin** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>"
 
-``` html {2,4}
+```HTML{2,4}
 const authConfig = {
     clientID: "<client_id>",
     signInRedirectURL: "https://localhost:5000",
@@ -111,10 +111,10 @@ const authConfig = {
 
 ::::
 
-### Run the sample locally
+**Run the sample locally**
 
 Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000` 
 
-```
+```bash
 npm install && npm start
 ```
