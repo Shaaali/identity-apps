@@ -82,10 +82,10 @@ module.exports = config({
                     path: '/guides/applications/spa/',
                     collapsable: false,
                     children: [
-                        ['/guides/applications/spa/spa-react', 'Secure SPA using React SDK'],
-                        ['/guides/applications/spa/spa-angular', 'Secure SPA using Angular SDK'],
-                        ['/guides/applications/spa/spa-javascript', 'Secure SPA using Javascript SDK'],
-                        ['/guides/applications/spa/spa-configure-general', 'Secure any SPA']
+                        ['/guides/applications/spa/spa-react', 'React SDK'],
+                        ['/guides/applications/spa/spa-angular', 'Angular SDK'],
+                        ['/guides/applications/spa/spa-javascript', 'Javascript SDK'],
+                        ['/guides/applications/spa/spa-configure-general', 'Integrate a SPA directly']
                     ]
                 },
                 ['/guides/applications/web-app/', 'Web application'],
