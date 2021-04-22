@@ -1,41 +1,103 @@
-# Single Page Application: Angular
+# Single page application: Angular
 
-A single page application is a web application that runs most of the application logic on the web browser. The browser does not need to reload the entire page when the user interacts with the application. This means that most components on the web page remain the same while a few elements change. 
+This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React SDK
+
+<ToggleButton buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-sample'/>
+
+::: tip Before you begin
+
+1. Create a tenant in Asgardeo
+2. Create a consumer user for your organization
+3. Install npm and node in your local environment
+
+:::
+
+## Configure an application in Asgardeo
+
+You need to first create an application in Asgardeo that represents your SPA.
+
+<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo.md'/>
+
+## Add authentication to your app
+
+**Install SDK**
+
+Run the following command to install the Angular SDK and the necessary dependencies from the npm registry.
+
+```
+npm install @asgardeo/auth-angular --save
+```
+
+<br>
+
+**Configure AsgardeoAuthModule**
+
+Copy and use the following code within your root component to configure `AsgardeoAuthModule` for your application.
 
 
-## Register an application
+Pass the relevant `clientID`, `serverOrigin`, `signInRedirectURL` & `signOutRedirectURL` to the `forRoot()` function of `AsgardeoAuthModule` to get the SDK to work with your application.
 
-1. On the Asgardeo console, click **Develop > Applications**. 
+```
+// Import AsgardeoAuthModule and Provide Configuration Parameters.
 
-2. Click **New Application**.
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { AppComponent } from "./app.component";
 
-3. Select **Single Page Application**. 
+// Import Auth Module
+import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
 
-    > At this point, you can decide whether to integrate your own Angular application or download an Angular Asgardeo sample application and try out the flow. 
+@NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
 
-4. Fill in the following details. 
+        // Add the module as an import providing the configs (See API Docs)
+        AsgardeoAuthModule.forRoot({
+            signInRedirectURL: "https://localhost:5000",
+            signOutRedirectURL: "https://localhost:5000",
+            clientID: "<clientId>",
+            serverOrigin: "https://accounts.asgardeo.io/t/<yourTenantDomain>"
+        })
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+})      
+export class AppModule { }
+```
 
-    - Name: A unique name to identify your application.
-    E.g., MyApp
+<br>
 
-    - Authorized Redirect URLs: The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated, and where the user is redirected to once the logout is complete.
-    E.g., https://myapp.io/login
+**Add login**
 
-    ::: tip
-    If you want to use a sample application to try out the Angular SPA flow, click **Add Now** to use the authorized redirect URL for the sample app. 
-    :::
+Inject `AsgardeoAuthService` to your components to access the authenticated state and sign-in and sign-out functionalities.
 
-5. Click **Register**. 
+```
+import { Component } from "@angular/core";
+import { AsgardeoAuthService } from "@asgardeo/auth-angular";
 
-6. On the **Quick Start** tab, click **Angular**.
+@Component({
+    selector: "app-root",
+    templateUrl: "./app.component.html",
+    styleUrls: ["./app.component.css"]
+})
+export class AppComponent {
+    constructor(private auth: AsgardeoAuthService) { }
 
-7. Select the path you want to follow and follow the steps given on the console to get started. 
-    - **Integrate your application**: If you have an existing Angular application that you want to integrate with Asgardeo, select this option. 
-    - **Try out a sample**: If you want to try out the flow and see how it works with a sample Angular application, select this option. 
+    /*
+    * Use this function in a login button to simply sign-in.
+    */
+    handleSignIn(): void {
+        this.auth.signIn();
+    }
 
-You have successfully set up a single page angular application with basic configurations! 
-
-
-## What's next?
-
-See [configure a single page application](docs/guides/applications/configure-spa.md) to configure more settings for your application. 
+    /*
+    * Use this function in a logout button to simply sign-out.
+    */
+    handleSignOut(): void {
+        this.auth.signOut();
+    }
+}
+```
