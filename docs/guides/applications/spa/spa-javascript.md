@@ -1,41 +1,88 @@
-# Single Page Application: Javascript
+# Single page application: Javascript
 
-A single page application is a web application that runs most of the application logic on the web browser. The browser does not need to reload the entire page when the user interacts with the application. This means that most components on the web page remain the same while a few elements change. 
+This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React SDK
+
+<ToggleButton buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-sample'/>
+
+::: tip Before you begin
+
+1. Create a tenant in Asgardeo
+2. Create a consumer user for your organization
+3. Install npm and node in your local environment
+
+:::
+
+## Configure an application in Asgardeo
+
+You need to first create an application in Asgardeo that represents your SPA.
+
+<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo.md'/>
+
+## Add authentication to your app
+
+**Install SDK**
+
+Add the following script to the `index.html` of your application.
+
+``` html
+<script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
+```
+
+<br>
+
+**Configure AsgardeoSPAClient**
+
+Copy and use the following code within your root component to configure `AsgardeoSPAClient` for your application.
 
 
-## Register an application
+To initialize the SDK, use the `getInstance()` function in the SDK and pass in the required `clientID`, `serverOrigin`, `signInRedirectURL` & `signOutRedirectURL` to the `auth.initialize()` function.
 
-1. On the Asgardeo console, click **Develop > Applications**. 
+```
+<script>
+// This client is a class and can be instantiated as follows.
+var auth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 
-2. Click **New Application**.
+// Once instantiated, the  client can be initialized by passing the relevant parameters such as the server origin, redirect URL, client ID, etc.
+auth.initialize({
+    signInRedirectURL: "https://localhost:5000",
+    signOutRedirectURL: "https://localhost:5000",
+    clientID: "<clientId>",
+    serverOrigin: "https://accounts.asgardeo.io/t/<yourTenantDomain>"
+});
+</script>
+```
 
-3. Select **Single Page Application**. 
+<br>
 
-    > At this point, you can decide whether to integrate your own Javascript application or download an Javascript Asgardeo sample application and try out the flow. 
+**Add login**
 
-4. Fill in the following details. 
+The `sign-in` hook is used to fire a callback function after successful sign-in.
 
-    - Name: A unique name to identify your application.
-    E.g., MyApp
+To sign in, simply call the `signIn()` function using the created instance. Similarly, call the `signOut()` function for application sign-out.
 
-    - Authorized Redirect URLs: The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated, and where the user is redirected to once the logout is complete.
-    E.g., https://myapp.io/login
+```
+<script>
+// The `sign-in` hook is used to fire a callback function after signing in is successful.
+auth.on("sign-in", (response) => {
+    sessionStorage.setItem("initSignIn", "false");
+    alert("You have successfully signed in!");
+});
 
-    ::: tip
-    If you want to use a sample application to try out the Javascript SPA flow, click **Add Now** to use the authorized redirect URL for the sample app. 
-    :::
+// Use this function in a login button to simply sign-in.
+function handleLogin() {
+    sessionStorage.setItem("initSignIn", "true");
+    // To sign in, simply call the `signIn()` method.
+    auth.signIn();
+}
 
-5. Click **Register**. 
+// Use this function in a logout button to simply sign-out.
+function handleLogout() {
+    auth.signOut();
+}
 
-6. On the **Quick Start** tab, click **Javascript**.
+if(JSON.parse(sessionStorage.getItem("initSignIn"))){
+    auth.signIn();
+}
 
-7. Select the path you want to follow and follow the steps given on the console to get started. 
-    - **Integrate your application**: If you have an existing Javascript application that you want to integrate with Asgardeo, select this option. 
-    - **Try out a sample**: If you want to try out the flow and see how it works with a sample Javascript application, select this option. 
-
-You have successfully set up a single page Javascript application with basic configurations! 
-
-
-## What's next?
-
-See [configure a single page application](docs/guides/applications/configure-spa.md) to configure more settings for your application. 
+</script>
+```
