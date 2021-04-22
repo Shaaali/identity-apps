@@ -1,4 +1,4 @@
-# Quickstart: Single page application sample
+# Single page application sample
 
 This quick start guide will deploy the sample application in your local environment and secure it with Asgadeo using OpenID Connect.
 
@@ -12,9 +12,25 @@ This quick start guide will deploy the sample application in your local environm
 
 ## Configure an application in Asgardeo
 
-You need to first create an application in Asgardeo that represents your single-page application.
+You need to first create an application in Asgardeo that represents your single page application.
 
-<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo.md'/>
+1. On the Asgardeo console, click **Develop > Applications**.
+
+2. Click **New Application**.
+
+3. Select **Single Page Application**.
+
+4. Fill in the following details.
+
+    - Name: A unique name to identify your application.
+
+    - Authorized Redirect URLs: The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated, and where the user is redirected to once the logout is complete.
+
+   ::: tip
+   Click **Add Now** to use the authorized redirect URL for the sample app.
+   :::
+
+5. Click **Register**.
 
 ## Configure the sample application
 
@@ -100,7 +116,7 @@ Change the `config.json` file found in the `asgardeo-angular-app/sr` sample fold
 - **clientID** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
 - **serverOrigin** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>"
 
-```HTML{2,4}
+``` HTML{2,4}
 const authConfig = {
     clientID: "<client_id>",
     signInRedirectURL: "https://localhost:5000",

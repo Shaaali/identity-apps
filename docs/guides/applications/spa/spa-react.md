@@ -10,7 +10,7 @@ This guide provides steps to authenticate users to your React SPA with OIDC prot
 
 :::
 
-<ToggleButton buttonText='Try out the Sample App' buttonPath='/guides/applications/spa-sample-app' />
+<ToggleButton buttonText='Try out the Sample App' buttonPath='/guides/applications/spa/spa-sample-app' />
 
 ## Configure an application in Asgardeo
 

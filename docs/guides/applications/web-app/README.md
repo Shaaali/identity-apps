@@ -12,3 +12,20 @@ A small introduction to Web Application.
 * Integrate with OIDC
 * Integrate with SAML
 
+
+
+:::::: col-wrapper
+
+::: col-third
+Third column
+:::
+
+::: col-third
+Third column
+:::
+
+::: col-third
+Third column
+:::
+
+::::::

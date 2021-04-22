@@ -8,7 +8,7 @@ actionLink: /guide/
 features:
   - title: Manage applications
     details: 
-    link: /guides/applications/app-overview
+    link: /guides/applications/README
 
   - title: Add Social Login 💡
     details: 

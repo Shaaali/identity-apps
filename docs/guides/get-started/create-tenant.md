@@ -30,8 +30,8 @@ Now that you've set up your own tenant and created your first user, you can:
 - [Onboard more consumer users](../users/consumer-users.md)
 - [Invite a guest user](../users/guest-users.md)
 - [Create roles](../users/create-role.md)
-- [Register an application](../applications/app-overview.md)
-- [Explore Asgardeo with a sample application](../applications/app-overview.md)
+- [Register an application](../applications/README.md)
+- [Explore Asgardeo with a sample application](../applications/README.md)
 
 ----
 
