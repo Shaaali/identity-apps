@@ -2,6 +2,8 @@
 
 This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React SDK 
 
+<ToggleButton buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-sample'/>
+
 ::: tip Before you begin
 
 1. Create a tenant in Asgardeo
@@ -9,8 +11,6 @@ This guide provides steps to authenticate users to your React SPA with OIDC prot
 3. Install npm and node in your local environment
 
 :::
-
-<ToggleButton buttonText='Try out the Sample App' buttonPath='/guides/applications/spa/spa-sample-app' />
 
 ## Configure an application in Asgardeo
 
@@ -27,6 +27,9 @@ Run the following command to install the React SDK and the necessary dependencie
 ```
 npm install @asgardeo/auth-react react-router-dom --save
 ```
+
+<br>
+
 **Configure AuthProvider**
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
@@ -49,19 +52,22 @@ const App = () => (
         config={ {
             signInRedirectURL: "https://localhost:5000",
             signOutRedirectURL: "https://localhost:5000",
-            clientID: "<clientID>",
-            serverOrigin: "https://dev.accounts.asgardeo.io/t/<tenantDomain>"
+            clientID: "<clientId>",
+            serverOrigin: "https://accounts.asgardeo.io/t/<yourTenantDomain>"
         } }
     >
         { /* Use your own component tree here instead of HomePage.  */ }
         <HomePage />
     </AuthProvider>
 );
-​
+
 render((<App />), document.getElementById("root"));
 ```
 
+<br>
+
 **Add login**
+
 The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button** using the `signIn()` function in the `useAuthContext` hook. Similarly, you can also implement a **Logout button** using the `signOut()` function.\
 If you wish to access the authenticated user's details, use the `state` object from the `useAuthContext` hook.
 
