@@ -6,7 +6,7 @@ Once you have registered a [single page application](TODO:link-to-concept) with 
 
 Register a single page application:
 - [Angular](../spa/spa-angular.md)
-- [React](../spa/spa-new-react-app.md)
+- [React](../spa/spa-react.md)
 - [Javascript](../spa/spa-javascript.md)
 
 :::

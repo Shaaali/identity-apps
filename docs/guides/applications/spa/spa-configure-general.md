@@ -1,6 +1,6 @@
 # Add authentication to SPA 
 
-This guide provides steps to authenticate users to any SPA with OIDC protocol.
+This guide provides steps to authenticate users with OIDC protocol to a SPA written using any framework in general.
 
 ## Configure an application in Asgardeo
 
@@ -255,7 +255,7 @@ _Default sample response_
 
 By default, only the username (sub) information will be available in the response. You can customize the user information returned by configuring the user attributes of the application registered in the Asgardeo console.
 
-More details on configuring the user attributes can be found in the [User attributes](docs/guides/applications/configure-user-attribute.md) section in application settings. 
+More details on configuring the user attributes can be found in the [User attributes](../application-settings/configure-user-attribute.md) section in application settings. 
 
 <br>
 
