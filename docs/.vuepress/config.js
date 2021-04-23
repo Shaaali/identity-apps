@@ -38,6 +38,9 @@ module.exports = config({
         search: true,
         Navbar: true,
         blog: false,
+        git: {
+            contributor:false
+        },
         pageInfo: false,
         nav: [
           {
@@ -46,7 +49,7 @@ module.exports = config({
           },
           {
             text: 'Quick Starts',
-            link: '/quickstart/',
+            link: '/quickstarts/',
           },
           {
             text: 'APIs',
@@ -73,23 +76,29 @@ module.exports = config({
             {
                 title: 'Manage applications',
                 children: [
-                ['applications/app-overview.md', 'Overview'],
+                ['applications/', 'Overview'],
                 {
-                    title: 'Application types',
+                    title: 'Single page application',
+                    path: '/guides/applications/spa/',
+                    collapsable: false,
                     children: [
-                        ['/guides/applications/spa-overview.md', 'Single page application'],
-                        ['/guides/applications/web-app-overview.md', 'Web application']
+                        ['/guides/applications/spa/spa-react', 'React SDK'],
+                        ['/guides/applications/spa/spa-angular', 'Angular SDK'],
+                        ['/guides/applications/spa/spa-javascript', 'Javascript SDK'],
+                        ['/guides/applications/spa/spa-configure-general', 'Integrate a SPA directly']
                     ]
                 },
+                ['/guides/applications/web-app/', 'Web application'],
                 {
                     title: 'Application settings',
+                    prefix: '/guides/applications/application-settings/',
+                    collapsable: false,
                     children: [
-                        ['/guides/applications/configure-general.md', 'Configure general details'],
-                        ['/guides/applications/configure-protocol.md', 'Define authorization protocol'],
-                        ['/guides/applications/configure-user-attribute.md', 'Select user attributes'],
-                        ['/guides/applications/configure-sign-on.md', 'Configure sign-on method'],
-                        ['/guides/applications/configure-advanced.md', 'Configure advanced settings']
-
+                        ['configure-general.md', 'Configure general details'],
+                        ['configure-protocol.md', 'Define authorization protocol'],
+                        ['configure-user-attribute.md', 'Select user attributes'],
+                        ['configure-sign-on.md', 'Configure sign-on method'],
+                        ['configure-advanced.md', 'Configure advanced settings']
                     ]
                 },
               ]
@@ -156,7 +165,9 @@ module.exports = config({
                     ['/concepts/authentication/oidc', 'OpenID Connect'],
                 ]
             },
-            ]
+            ],
+            '/quickstarts/' : [
+                '']
         },
         mdEnhance: {
             align : true
