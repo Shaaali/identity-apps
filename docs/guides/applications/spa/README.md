@@ -39,6 +39,6 @@ The following guides provide the steps that are required to ensure the security 
 
 <br>
 
-## What's next
+## Related Links
 
 * [Quickstart: Single page application sample](../../../quickstarts/qsg-spa-sample)

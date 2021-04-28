@@ -1,6 +1,6 @@
 # Add authentication to SPA 
 
-This guide provides steps to authenticate users with OIDC protocol to a SPA written using any framework in general.
+If you have your own single page application, you can refer this guide to learn how to authenticate users to the application using Asgardeo with OpenID Connect.
 
 ## Configure an application in Asgardeo
 
@@ -8,154 +8,51 @@ You need to first create an application in Asgardeo that represents your SPA.
 
 <CommonGuide guide='guides/fragments/configure-spa-in-asgardeo.md'/>
 
-## Configure the SPA
+## Implement authentication in SPA
 
-The following server endpoints will be useful when implementing authentication in your application.
+The SPA should communicate with Asgardeo to authenticate the users who access the application. Authenticating a user to the SPA requires the following steps.
+
+1. Discover the OAuth 2.0 endpoints
+2. Make an authorization request to obtain a code
+3. Do a token request to obtain an ID token
+4. Validate the ID token
+5. Retrieve the user information
 
 ### Discover the endpoints
 
-Asgardeo supports OpenID Connect Discovery to obtain information required to interact with, including its OAuth 2.0 endpoint locations. 
+SPA can know of the endpoints of Asgardeo that it should call by using two methods
+1. By using the discovery endpoint of Asgardeo
+2. By manually defining the required endpoints.
 
-The discovery endpoint offers a JSON document under `/.well-known/openid-configuration` which contains the issuer name, endpoint URLs and information such as supported scopes or response types.
+**1. Use the discovery endpoint of Asgardeo**
 
-**Discovery endpoint:**
+SPA can dynamically discover the OAuth 2.0 endpoints of Asgardeo by calling the discovery endpoint under `<issuer>/.well-known/openid-configuration`. It contains the issuer name, endpoint URLs and information such as supported scopes or response types as a JSON document.
+
+_Issuer name of Asgardeo:_
+`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token`
+
+_Discovery endpoint:_
 
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token/.well-known/openid-configuration`
 
-**Sample response:**
-```json
-{
-  "request_parameter_supported": true,
-  "claims_parameter_supported": true,
-  "introspection_endpoint": "https://accounts.asgardeo.io/t/bifrost/oauth2/introspect",
-  "Response_modes_supported": [
-    "query",
-    "fragment",
-    "form_post"
-  ],
-  "scopes_supported": [
-    "openid",
-    "email",
-    "profile",
-    "phone",
-    "address"
-  ],
-  "check_session_iframe": "https://accounts.asgardeo.io/t/bifrost/oidc/checksession",
-  "backchannel_logout_supported": true,
-  "issuer": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
-  "authorization_endpoint": "https://accounts.asgardeo.io/t/bifrost/oauth2/authorize",
-  "introspection_endpoint_auth_methods_supported": [
-    "client_secret_basic",
-    "client_secret_post"
-  ],
-  "claims_supported": [
-    "postal_code",
-    "groups",
-    "name",
-    "address",
-    "locale",
-    "preferred_username",
-    "middle_name",
-    "country",
-    "street_address",
-    "website",
-    "gender",
-    "phone_number",
-    "formatted",
-    "sub",
-    "nickname",
-    "email",
-    "upn",
-    "birthdate",
-    "given_name",
-    "locality",
-    "updated_at",
-    "email_verified",
-    "region",
-    "family_name",
-    "zoneinfo",
-    "profile",
-    "phone_number_verified",
-    "picture",
-    "iss",
-    "acr"
-  ],
-  "userinfo_signing_alg_values_supported": [
-    "RS256"
-  ],
-  "token_endpoint_auth_methods_supported": [
-    "client_secret_basic",
-    "client_secret_post"
-  ],
-  "response_modes_supported": [
-    "query",
-    "fragment",
-    "form_post"
-  ],
-  "backchannel_logout_session_supported": true,
-  "token_endpoint": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
-  "response_types_supported": [
-    "id_token token",
-    "code",
-    "code id_token token",
-    "code id_token",
-    "id_token",
-    "code token",
-    "none",
-    "token"
-  ],
-  "revocation_endpoint_auth_methods_supported": [
-    "client_secret_basic",
-    "client_secret_post"
-  ],
-  "grant_types_supported": [
-    "refresh_token",
-    "urn:ietf:params:oauth:grant-type:saml2-bearer",
-    "asg_api",
-    "password",
-    "client_credentials",
-    "iwa:ntlm",
-    "authorization_code",
-    "urn:ietf:params:oauth:grant-type:uma-ticket",
-    "account_switch",
-    "urn:ietf:params:oauth:grant-type:jwt-bearer"
-  ],
-  "end_session_endpoint": "https://accounts.asgardeo.io/t/bifrost/oidc/logout",
-  "revocation_endpoint": "https://accounts.asgardeo.io/t/bifrost/oauth2/revoke",
-  "userinfo_endpoint": "https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo",
-  "code_challenge_methods_supported": [
-    "S256",
-    "plain"
-  ],
-  "jwks_uri": "https://accounts.asgardeo.io/t/bifrost/oauth2/jwks",
-  "subject_types_supported": [
-    "public"
-  ],
-  "id_token_signing_alg_values_supported": [
-    "RS256"
-  ],
-  "registration_endpoint": "https://accounts.asgardeo.io/t/bifrost/api/identity/oauth2/dcr/v1.0/register",
-  "request_object_signing_alg_values_supported": [
-    "RS256",
-    "RS384",
-    "RS512",
-    "PS256",
-    "none"
-  ]
-}
-```
-
-<br>
+**2. Configure the endpoints manually**
 
 You can also find the server endpoints corresponding to your tenant domain from the **Help** panel of the application view in the Console.
 
-### Obtain a token for the app
+
+### Configure the client id
+
+SPAs are considered as OAuth 2.0 public client since they cannot maintain a secret. Therefore, the usual client id and client secret based authentication to the token endpoint does not make sense.
+
+Even though the client secret is not validated, client id is required to be sent as a POST body parameter in the token request to identify the application making the request. 
+
+### Login to the application
 
 It is recommended to use authorization code grant with PKCE to secure SPAs. This section describes the endpoints that are used to obtain an access token for your SPA from Asgardeo using authorization code grant.
 
 **Requesting an authorization code**
 
-First, generate the authorization code to get an access token. Since this uses browser redirection, this will be a simple browser call.
+First, call authorize endpoint of Asgardeo to generate the authorization code. Since this uses browser redirection, this will be a simple HTTP GET request.
 
 Once the authorization request is validated from Asgradeo, the browser will be redirected to the Asgardeo login page. When the user is successfully authenticated, the authorization code is returned to the browser.
 
@@ -166,16 +63,16 @@ _Authorization endpoint_
 _Sample url_
 
 ```  
-https://dev.accounts.asgardeo.io/t/pamz.com/oauth2/authorize?scope=openid&response_type=code&redirect_uri=https://localhost:5000&client_id=KLGA7L8vzjuF_TTkn2hLL1V6ARoa&code_challenge=LCxMdKmPoz-HfEnl21-Mjgsay_iy6AmFbwo0qivPZK0&code_challenge_method=S256
+https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=https://localhost:5000&client_id=KLGA7L8vzjuF_TTkn2hLL1V6ARoa&code_challenge=LCxMdKmPoz-HfEnl21-Mjgsay_iy6AmFbwo0qivPZK0&code_challenge_method=S256
 ```
 _Request parameters_
 
-* response_type: the required grant type.
+* response_type: the required grant type. Here, it will be **code** since we are using authorization code grant type
 * redirect_uri: where the response is redirected to at the end of the process. This should match the registered callback URL.
 * client_id: client id obtained when registering the application in Asgardeo.
-* scope:optional parameter to define the scope of the access token.
+* scope:optional parameter to define the scope of the access token. For the OpenId Connect flow, the scope is **openid**.
 * code_challenge: PKCE code challenge.
-* &code_challenge_method: PKCE code challenge method.
+* code_challenge_method: PKCE code challenge method.
 
 _Sample response_
 ```
@@ -185,7 +82,7 @@ https://localhost:5000/?code=210a4f11-4928-3d91-9c97-00d45d71eb3a&session_state=
 
 **Requesting an access token**
 
-To obtain the access token, you need to send token request to the token endpoint of Asgardeo with the authorization code retrieved in the above step.  For the PKCE validation, you are required to send the code_verifier along with the request.
+To obtain the access token, you need to do a POST request to the token endpoint of Asgardeo with the authorization code retrieved in the above step. 
 
 _Token endpoint_
 
@@ -212,9 +109,11 @@ _Sample response_
 ```
 <br>
 
-### Validate JWT based on JWKS
+### Validate ID token based on JWKS
 
-The JSON Web Key Set (JWKS) endpoint is a read-only endpoint that returns the Asgardeo's public key set in the JWKS format. This contains the signing key(s) that the Relying Party (RP) uses to validate signatures from Asgardeo. 
+In order to validate the signature on the obtained ID token, you need the public key of Asgardeo. Asgardeo exposes the public key information through the standard JWKS endpoint.
+
+By using a signature validation library, you can validate the signature of the ID token using the JWKS endpoint.
 
 _JWKS endpoint_
 
@@ -264,4 +163,4 @@ More details on configuring the user attributes can be found in the [User attrib
 The logout endpoint is used to terminate the user session at Asgardeo and log the user out. When the user is successfully logged out, he will be redirected to the registered authorized redirect URL.
 
 _Logout endpoint_
-`https://dev.accounts.asgardeo.io/t/<yourTenantDomain>/oidc/logout`
+`https://accounts.asgardeo.io/t/<yourTenantDomain>/oidc/logout`
