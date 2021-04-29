@@ -29,11 +29,11 @@ module.exports = config({
      */
 
     themeConfig: {
+        displayAllHeaders: true,
         repo: '',
         editLinks: true,
         docsDir: '',
         editLinkText: 'Edit this page on Github',
-        lastUpdated: false,
         logo: '/assets/img/asgardeo-logo.png',
         search: true,
         Navbar: true,
@@ -80,12 +80,14 @@ module.exports = config({
                 {
                     title: 'Single page application',
                     path: '/guides/applications/spa/',
+                    prefix: '/guides/applications/spa/',
                     collapsable: false,
+                    sidebarDepth: 2,
                     children: [
-                        ['/guides/applications/spa/spa-react', 'React SDK'],
-                        ['/guides/applications/spa/spa-angular', 'Angular SDK'],
-                        ['/guides/applications/spa/spa-javascript', 'Javascript SDK'],
-                        ['/guides/applications/spa/spa-configure-general', 'Integrate a SPA directly']
+                        ['spa-react', 'React SDK'],
+                        ['spa-angular', 'Angular SDK'],
+                        ['spa-javascript', 'Javascript SDK'],
+                        ['spa-configure-general', 'Integrate a SPA directly']
                     ]
                 },
                 ['/guides/applications/web-app/', 'Web application'],
