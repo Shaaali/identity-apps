@@ -70,7 +70,7 @@ _Request parameters_
 * response_type: the required grant type. Here, it will be **code** since we are using authorization code grant type
 * redirect_uri: where the response is redirected to at the end of the process. This should match the registered callback URL.
 * client_id: client id obtained when registering the application in Asgardeo.
-* scope:optional parameter to define the scope of the access token. For the OpenId Connect flow, the scope is **openid**.
+* scope: For the OpenId Connect flow, the scope should contain **openid** as one of the scopes. There can be additional scopes as well.
 * code_challenge: PKCE code challenge.
 * code_challenge_method: PKCE code challenge method.
 
