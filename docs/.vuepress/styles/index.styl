@@ -1,0 +1,27 @@
+/**
+ * Custom Styles here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ */
+
+@require '~vuepress-plugin-tabs/dist/themes/default.styl'
+
+.home .hero img
+  max-width 450px!important
+
+.theme-default-content:not(.custom) img {
+    max-width: 100%;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+}
+.search-box {
+  order: 1;
+  margin-right: 0;
+  margin-left: 1rem;
+
+  .suggestions {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
