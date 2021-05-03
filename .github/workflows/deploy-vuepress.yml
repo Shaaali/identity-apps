@@ -1,7 +1,7 @@
 name: Deploy VuePress
 on:
   push:
-    branches: [ vue-playground ]
+    branches: [ main ]
 
   # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
