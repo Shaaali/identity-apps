@@ -40,7 +40,7 @@ Pick the technology that you want to try out the sample and follow the given ste
 
 :::: tabs
 
-::: tab React id="tab-react"
+::: tab React id="react"
 
 Click the button to download the sample or to view the github source code
 
@@ -50,7 +50,7 @@ Click the button to download the sample or to view the github source code
 
 :::
 
-::: tab Angular id="tab-angular"
+::: tab Angular id="angular"
 
 Click the button to download the sample or to view the github source code
 
@@ -60,7 +60,7 @@ Click the button to download the sample or to view the github source code
  
 :::
 
-::: tab Javascript id="tab-javascript"
+::: tab Javascript id="javascript"
 
 Click the button to download the sample or to view the github source code
 
@@ -77,7 +77,7 @@ Click the button to download the sample or to view the github source code
 
 :::: tabs
 
-::: tab React id="tab-react"
+::: tab React id="react"
 Change the `config.json` file found in the `asgardeo-react-app/src` sample folder with the relevant values.
 
 - **clientID** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
@@ -93,7 +93,7 @@ Change the `config.json` file found in the `asgardeo-react-app/src` sample folde
 ```
 :::
 
-::: tab Angular id="tab-angular"
+::: tab Angular id="angular"
 Change the `config.json` file found in the `asgardeo-angular-app/sr` sample folder with the relevant values.
 
 - **clientID** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
@@ -109,7 +109,7 @@ Change the `config.json` file found in the `asgardeo-angular-app/sr` sample fold
 ```
 :::
 
-::: tab Javascript id="tab-javascript"
+::: tab Javascript id="javascript"
 1. Open the `index.html` file located at the root of the project 
 2. Scroll down to the `<script>` tag at the end of the body tag and find `authConfig` object and change the configurations with the relevant values.
 
