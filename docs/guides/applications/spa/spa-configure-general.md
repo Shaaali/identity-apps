@@ -29,11 +29,61 @@ SPA can know of the endpoints of Asgardeo that it should call by using two metho
 SPA can dynamically discover the OAuth 2.0 endpoints of Asgardeo by calling the discovery endpoint under `<issuer>/.well-known/openid-configuration`. It contains the issuer name, endpoint URLs and information such as supported scopes or response types as a JSON document.
 
 _Issuer name of Asgardeo:_
+
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token`
 
 _Discovery endpoint:_
 
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token/.well-known/openid-configuration`
+
+_Sample request:_
+
+<CodeGroup>
+
+<CodeGroupItem title="cURL">
+
+``` 
+curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration'
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="JavaScript - jQuery" active>
+
+```js
+var settings = {
+  "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration",
+  "method": "GET",
+  "timeout": 0,
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="Nodejs - Axios" active>
+
+```js
+var axios = require('axios');
+
+var config = {
+    method: 'get',
+    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration',
+    headers: { }
+};
+
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+```
+</CodeGroupItem>
+
+</CodeGroup>
 
 **2. Configure the endpoints manually**
 
@@ -56,25 +106,27 @@ First, call authorize endpoint of Asgardeo to generate the authorization code. S
 
 Once the authorization request is validated from Asgradeo, the browser will be redirected to the Asgardeo login page. When the user is successfully authenticated, the authorization code is returned to the browser.
 
-_Authorization endpoint_
+_Authorization endpoint:_
 
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/authorize`
 
-_Sample url_
+_Sample url:_
 
 ```  
-https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=https://localhost:5000&client_id=KLGA7L8vzjuF_TTkn2hLL1V6ARoa&code_challenge=LCxMdKmPoz-HfEnl21-Mjgsay_iy6AmFbwo0qivPZK0&code_challenge_method=S256
+https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>&code_challenge=<code_challenge>&code_challenge_method=<code_challenge_method>
 ```
-_Request parameters_
 
-* response_type: the required grant type. Here, it will be **code** since we are using authorization code grant type
-* redirect_uri: where the response is redirected to at the end of the process. This should match the registered callback URL.
-* client_id: client id obtained when registering the application in Asgardeo.
-* scope: For the OpenId Connect flow, the scope should contain **openid** as one of the scopes. There can be additional scopes as well.
-* code_challenge: PKCE code challenge.
-* code_challenge_method: PKCE code challenge method.
+_Request parameters:_
 
-_Sample response_
+* response_type: [Required] the required grant type. Here, it will be **code** since we are using authorization code grant type
+* redirect_uri: [Required] where the response is redirected to at the end of the process. This should match the registered callback URL.
+* client_id: [Required] client id obtained when registering the application in Asgardeo.
+* scope: [Optional] For the OpenId Connect flow, the scope should contain **openid** as one of the scopes. There can be additional scopes as well.
+* code_challenge: [Optional] PKCE code challenge.
+* code_challenge_method: [Optional] PKCE code challenge method.
+
+_Sample response:_
+
 ```
 https://localhost:5000/?code=210a4f11-4928-3d91-9c97-00d45d71eb3a&session_state=a0c3bc89849ba0f236791f7fe76a837b7b4422fdc9aca16db394d19a28724a29.wQc7eSHSRrGNfECJRMhSAw
 ```
@@ -84,9 +136,9 @@ https://localhost:5000/?code=210a4f11-4928-3d91-9c97-00d45d71eb3a&session_state=
 
 To obtain the access token, you need to do a POST request to the token endpoint of Asgardeo with the authorization code retrieved in the above step. 
 
-_Token endpoint_
+_Token endpoint:_
 
-`https://dev.accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token`
+`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token`
 
 _Request parameters_
 * grant_type: the grant type. Here we are using *authorization_code* grant.
@@ -95,7 +147,80 @@ _Request parameters_
 * code_verifier: PKCE code verifier
 * client_id: client id obtained when registering the application in Asgardeo.
 
-_Sample response_
+_Sample request:_
+
+<CodeGroup>
+<CodeGroupItem title="cURL" active>
+
+``` 
+curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d' \
+--data-urlencode 'grant_type=authorization_code' \
+--data-urlencode 'redirect_uri=https://localhost:5000' \
+--data-urlencode 'code_verifier=WAOqjmxMpCnjME0mRpd8pDZNT8bEIpCdHgMKFqxoAVtEb4LhJ0KSg8Rl0z0O3pySx4HGp53R87bckxOxrXk2oNav0fgWzFdOyBRrvA8ZTgCG7MlQcY9mfamCM8SWnGgO' \
+--data-urlencode 'client_id=fv_LScHaB83PN4VPX1cHufphtHQa'
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="JavaScript - jQuery">
+
+```js
+var settings = {
+    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
+    "method": "POST",
+    "timeout": 0,
+    "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "data": {
+        "code": "60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d",
+        "grant_type": "authorization_code",
+        "redirect_uri": "https://localhost:5000",
+        "code_verifier": "WAOqjmxMpCnjME0mRpd8pDZNT8bEIpCdHgMKFqxoAVtEb4LhJ0KSg8Rl0z0O3pySx4HGp53R87bckxOxrXk2oNav0fgWzFdOyBRrvA8ZTgCG7MlQcY9mfamCM8SWnGgO",
+        "client_id": "fv_LScHaB83PN4VPX1cHufphtHQa"
+    }
+};
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="Nodejs - Axios">
+
+```js
+var axios = require('axios');
+var qs = require('qs');
+var data = qs.stringify({
+ 'code': '60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d',
+'grant_type': 'authorization_code',
+'redirect_uri': 'https://localhost:5000',
+'code_verifier': 'WAOqjmxMpCnjME0mRpd8pDZNT8bEIpCdHgMKFqxoAVtEb4LhJ0KSg8Rl0z0O3pySx4HGp53R87bckxOxrXk2oNav0fgWzFdOyBRrvA8ZTgCG7MlQcY9mfamCM8SWnGgO',
+'client_id': 'fv_LScHaB83PN4VPX1cHufphtHQa' 
+});
+var config = {
+  method: 'post',
+  url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/token',
+  headers: { 
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+```
+</CodeGroupItem>
+</CodeGroup>
+
+_Sample response:_
 
 ```json
 {
@@ -115,11 +240,58 @@ In order to validate the signature on the obtained ID token, you need the public
 
 By using a signature validation library, you can validate the signature of the ID token using the JWKS endpoint.
 
-_JWKS endpoint_
+_JWKS endpoint:_
 
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/jwks`
 
-_Sample response_
+_Sample request:_
+
+<CodeGroup>
+<CodeGroupItem title="cURL" active>
+
+``` 
+curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/jwks'
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="JavaScript - jQuery">
+
+```js
+var settings = {
+    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/jwks",
+    "method": "GET",
+    "timeout": 0,
+};
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="Nodejs - Axios">
+
+```js
+var axios = require('axios');
+
+var config = {
+    method: 'get',
+    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/jwks',
+    headers: { }
+};
+
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+```
+</CodeGroupItem>
+</CodeGroup>
+
+_Sample response:_
 ```json
 {
     "keys": [
@@ -140,9 +312,62 @@ _Sample response_
 
 User information is encoded inside the ID token returned along with the access token. You can also obtain user information as a payload by invoking the userinfo endpoint with the access token obtained.
 
-_Userinfo endpoint_
+_Userinfo endpoint:_
 
-`https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo`
+`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/userinfo`
+
+_Sample request:_
+
+<CodeGroup>
+<CodeGroupItem title="cURL" active>
+
+``` 
+curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo' \
+--header 'Authorization: Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="JavaScript - jQuery">
+
+```js
+var settings = {
+    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo",
+    "method": "GET",
+    "timeout": 0,
+    "headers": {
+        "Authorization": "Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805"
+    },
+};
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+</CodeGroupItem>
+
+<CodeGroupItem title="Nodejs - Axios">
+
+```js
+var axios = require('axios');
+
+var config = {
+    method: 'get',
+    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo',
+    headers: {
+        'Authorization': 'Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
+    }
+};
+
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+```
+</CodeGroupItem>
+</CodeGroup>
 
 _Default sample response_
 
@@ -163,4 +388,15 @@ More details on configuring the user attributes can be found in the [User attrib
 The logout endpoint is used to terminate the user session at Asgardeo and log the user out. When the user is successfully logged out, he will be redirected to the registered authorized redirect URL.
 
 _Logout endpoint_
+
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oidc/logout`
+
+_Sample url:_
+
+`https://accounts.asgardeo.io/t/bifrost/oidc/logout?id_token_hint=<id_token>&post_logout_redirect_uri=<redirect URI>&state=<state>`
+
+_Request parameters:_
+
+* id_token_hint: [Required]	The id_token returned by the identity provider.
+* post_logout_redirect_uri: [Required ]The URL to be redirected to when logging out. The value defined here should be the same as the callbackURI of the client application.
+* state: [Optional]	The parameter passed from the application to the identity provider to maintain any state information. This is used to correlate the logout requests and responses.
