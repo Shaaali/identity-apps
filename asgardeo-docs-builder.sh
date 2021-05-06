@@ -22,7 +22,6 @@ cp -r docs/.vuepress/dist out
 zip -r $ASGARDEO_DOCS_NAME.zip out
 
 # Release the version
-
 echo $GIT_TOKEN | gh auth login --with-token
 gh release create v$VERSION $ASGARDEO_DOCS_NAME.zip
 
