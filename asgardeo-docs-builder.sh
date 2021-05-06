@@ -44,7 +44,6 @@ incrementPackVersion() {
 }
 
 # Update version in package.json
-
 NEW_ASGARDEO_DOCS_VERSION=$(incrementPackVersion $VERSION)
 sed -ie "s/$VERSION/$NEW_ASGARDEO_DOCS_VERSION/g" $DOCS_INFO_JSON_PATH
 
