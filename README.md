@@ -59,4 +59,4 @@ To stop running the server, press `CTRL+C` on the keyboard.
   npm run build
   ```
 
-2. The built website files can be found in `docs/.vuepress/dist` path.
+2. The built website files can be found in `docs/.vuepress/dist` directory.
