@@ -19,4 +19,4 @@ jobs:
       - name: Build and Release version
         env:
           ACCESS_TOKEN: ${{ secrets.ASGARDEO_DOCS_GITHUB_BOT_TOKEN }}
-        run: bash asgardeo-doc-builder.sh $GITHUB_WORKSPACE $ACCESS_TOKEN
+        run: bash asgardeo-docs-builder.sh $GITHUB_WORKSPACE $ACCESS_TOKEN
