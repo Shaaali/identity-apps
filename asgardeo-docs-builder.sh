@@ -23,7 +23,7 @@ zip -r $ASGARDEO_DOCS_NAME.zip out
 
 # Release the version
 echo $GIT_TOKEN | gh auth login --with-token
-gh release create v$VERSION $ASGARDEO_DOCS_NAME.zip
+gh release create --title "Asgardeo Docs - v$VERSION" v$VERSION $ASGARDEO_DOCS_NAME.zip
 
 # Create new version
 incrementPackVersion() {
