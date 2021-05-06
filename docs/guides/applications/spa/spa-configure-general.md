@@ -115,15 +115,47 @@ _Sample url:_
 ```  
 https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>&code_challenge=<code_challenge>&code_challenge_method=<code_challenge_method>
 ```
+<br>
 
 _Request parameters:_
 
-* response_type: [Required] the required grant type. Here, it will be **code** since we are using authorization code grant type
-* redirect_uri: [Required] where the response is redirected to at the end of the process. This should match the registered callback URL.
-* client_id: [Required] client id obtained when registering the application in Asgardeo.
-* scope: [Optional] For the OpenId Connect flow, the scope should contain **openid** as one of the scopes. There can be additional scopes as well.
-* code_challenge: [Optional] PKCE code challenge.
-* code_challenge_method: [Optional] PKCE code challenge method.
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th> 
+    <th>Mandatory</th>
+  </tr>
+  <tr>
+    <td>response_type</td>
+    <td>required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>redirect_uri</td>
+    <td>This is where the response is redirected to at the end of the process. This should match the registered callback URL.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>client_id</td>
+    <td>Client id obtained when registering the application in Asgardeo.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>scope</td>
+    <td>For the OpenId Connect flow, the scope should contain <code>openid</code> as one of the scopes. There can be additional scopes as well.</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>code_challenge</td>
+    <td>The client creates and records a secret cryptographically random string (<code>code_verifier</code>), which is then encoded using URL safe base64 encoding to transform it into the <code>code_challenge</code>.</td>
+    <td>Yes, since PKCE is mandatory</td>
+  </tr>
+  <tr>
+    <td>code_challenge_method</td>
+    <td>This is the method used to transform the <code>code_verifier</code> into the <code>code_challenge</code>. It is sent as the hash algorithm name that was used for the hashing. When the authorization code is being issued, this method is used by the token endpoint to verify the <code>code_verifier</code> value.</td>
+    <td>Yes, since PKCE is mandatory</td>
+  </tr>
+</table>
 
 _Sample response:_
 
@@ -141,11 +173,39 @@ _Token endpoint:_
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token`
 
 _Request parameters_
-* grant_type: the grant type. Here we are using *authorization_code* grant.
-* redirect_uri: where the response is redirected to at the end of the process.
-* code: the code received from authorization request
-* code_verifier: PKCE code verifier
-* client_id: client id obtained when registering the application in Asgardeo.
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th> 
+    <th>Mandatory</th>
+  </tr>
+  <tr>
+    <td>grant_type</td>
+    <td>the grant type. Here we are using <code>authorization_code</code> grant.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>redirect_uri</td>
+    <td>where the response is redirected to at the end of the process.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>code</td>
+    <td>the code received from authorization request.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>code_verifier</td>
+    <td>the plain text cryptographically random string that was used to generate the code_challenge.</td>
+    <td>Yes, since PKCE is mandatory</td>
+  </tr>
+  <tr>
+    <td>client_id</td>
+    <td>client id obtained when registering the application in Asgardeo.</td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 _Sample request:_
 
@@ -369,7 +429,7 @@ axios(config)
 </CodeGroupItem>
 </CodeGroup>
 
-_Default sample response_
+_Default sample response:_
 
 ```json
 {
@@ -387,7 +447,7 @@ More details on configuring the user attributes can be found in the [User attrib
 
 The logout endpoint is used to terminate the user session at Asgardeo and log the user out. When the user is successfully logged out, he will be redirected to the registered authorized redirect URL.
 
-_Logout endpoint_
+_Logout endpoint:_
 
 `https://accounts.asgardeo.io/t/<yourTenantDomain>/oidc/logout`
 
@@ -397,6 +457,25 @@ _Sample url:_
 
 _Request parameters:_
 
-* id_token_hint: [Required]	The id_token returned by the identity provider.
-* post_logout_redirect_uri: [Required ]The URL to be redirected to when logging out. The value defined here should be the same as the callbackURI of the client application.
-* state: [Optional]	The parameter passed from the application to the identity provider to maintain any state information. This is used to correlate the logout requests and responses.
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th> 
+    <th>Mandatory</th>
+  </tr>
+  <tr>
+    <td>id_token_hint</td>
+    <td>The id_token returned by the identity provider.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>post_logout_redirect_uri</td>
+    <td>The URL to be redirected to when logging out. The value defined here should be the same as the callbackURI of the client application.</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>state</td>
+    <td>The parameter passed from the application to the identity provider to maintain any state information. This is used to correlate the logout requests and responses.</td>
+    <td>No</td>
+  </tr>
+</table>
