@@ -10,7 +10,6 @@ command -v npm >/dev/null 2>&1 || { echo >&2 "Error: $0 script requires 'npm' fo
 command -v jq >/dev/null 2>&1 || { echo >&2 "Error: $0 script requires 'jq' for JSON Processing.  Aborting as not found."; exit 1; }
 command -v gh >/dev/null 2>&1 || { echo >&2 "Error: $0 script requires 'gh' to call GitHub APIs.  Aborting as not found."; exit 1; } 
 
-
 # Build asgardeo docs
 echo Building asgardeo-docs
 npm ci
