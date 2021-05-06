@@ -26,7 +26,6 @@ echo $GIT_TOKEN | gh auth login --with-token
 gh release create v$VERSION $ASGARDEO_DOCS_NAME.zip
 
 # Create new version
-
 incrementPackVersion() {
     old_version=$1
 
