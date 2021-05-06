@@ -46,7 +46,7 @@ incrementPackVersion() {
 # Update version in package.json
 NEW_ASGARDEO_DOCS_VERSION=$(incrementPackVersion $VERSION)
 tmp=$(mktemp)
-jq --arg variable "$NEW_ASGARDEO_DOCS_VERSION" '.version = $NEW_ASGARDEO_DOCS_VERSION' package.json > "$tmp" && mv "$tmp" package.json
+jq --arg variable "$NEW_ASGARDEO_DOCS_VERSION" '.version = $variable' package.json > "$tmp" && mv "$tmp" package.json
 
 git -C $REPO_DIR config user.name "wso2-iam-cloud-bot"
 git -C $REPO_DIR config user.email "iam-cloud@wso2.com"
