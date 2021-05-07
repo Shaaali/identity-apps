@@ -23,7 +23,7 @@ zip -r $ASGARDEO_DOCS_NAME.zip out
 
 # Release the version
 echo $GIT_TOKEN | gh auth login --with-token
-gh release create v$VERSION $ASGARDEO_DOCS_NAME.zip
+gh release create --title "Asgardeo Docs - v$VERSION" v$VERSION $ASGARDEO_DOCS_NAME.zip
 
 # Create new version
 incrementPackVersion() {
@@ -45,7 +45,8 @@ incrementPackVersion() {
 
 # Update version in package.json
 NEW_ASGARDEO_DOCS_VERSION=$(incrementPackVersion $VERSION)
-sed -ie "s/$VERSION/$NEW_ASGARDEO_DOCS_VERSION/g" $DOCS_INFO_JSON_PATH
+tmp=$(mktemp)
+jq --arg variable "$NEW_ASGARDEO_DOCS_VERSION" '.version = $variable' package.json > "$tmp" && mv "$tmp" package.json
 
 git -C $REPO_DIR config user.name "wso2-iam-cloud-bot"
 git -C $REPO_DIR config user.email "iam-cloud@wso2.com"
