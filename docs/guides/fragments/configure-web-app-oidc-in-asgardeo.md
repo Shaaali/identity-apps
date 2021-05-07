@@ -23,11 +23,3 @@
   This is where your app is running and you can change this later also.
 
 6. Select OpenID Connect as the protocol to enable since we need to secure the app with OIDC.
-
-**Enable CORS for the authorized URL**
-
-To avoid possible security attacks, Asgardeo restricts the cross-origin HTTP requests. Therefore [Cross Origin Resource Sharing(CORS)](TODO:link-to-concept) should be enabled to allow the JavaScripts of your application to access Asgardeo.
-
-7. Click on the **Allow** button with the warning message *“CORS not allowed for origin of this URL."* right after the newly added URL to enable CORS to that URL
-
-<img :src="$withBase('/assets/img/guides/applications/add-web-app-cors.png')" alt="web-app-add-cors-ui">
