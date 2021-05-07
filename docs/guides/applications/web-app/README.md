@@ -2,30 +2,29 @@
 
 A small introduction to Web Application.
 
-## Pick the technology and the protocol you want
+## How to secure a web application
 
-### Java EE
-* Integrate with OIDC
-* Integrate with SAML
+## Secure your web app with Asgardeo
 
-### .NET
-* Integrate with OIDC
-* Integrate with SAML
+Following guides provide the steps that are required to ensure the security of your web application with Asgradeo
 
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align:center" colspan="2"><h4><b>Using OIDC</b></h4></td>
+      <td rowspan="3" ><h4>or</h4></td>
+      <td style="text-align:center" colspan="2"><h4><b>Using SAML</b></h4></td>
+    </tr>
+    <tr>
+      <td style="text-align:center"><a href="./web-app-oidc-java-ee">Java EE</a></td>
+      <td style="text-align:center" rowspan="2">General guide</td>
+      <td style="text-align:center">Java EE</td>
+      <td style="text-align:center" rowspan="2">General guide</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">.Net</td>
+      <td style="text-align:center">.Net</td>
+    </tr>
+  </tbody>
+</table>
 
-
-:::::: col-wrapper
-
-::: col-third
-Third column
-:::
-
-::: col-third
-Third column
-:::
-
-::: col-third
-Third column
-:::
-
-::::::
