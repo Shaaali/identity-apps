@@ -13,7 +13,7 @@
 By default, this template configures the protocol as OIDC Authorization Code Grant and the Sign-on-method with basic authentication.
 :::
 
-<img :src="$withBase('/assets/img/guides/applications/spa-app-type.png')" alt="spa-app-type-selection-ui">
+<img :src="$withBase('/assets/img/guides/applications/app-type-selection.png')" alt="spa-app-type-selection-ui">
    
 5. Provide the following details.
 
@@ -22,7 +22,7 @@ By default, this template configures the protocol as OIDC Authorization Code Gra
 - **Name:** A unique name to identify your application.
 - **Authorized Redirect URLs:** The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated, and where the user is redirected to once the logout is complete. 
 <br>
-This is where your app will be running as the “Authorized URL”. You can change this later also once the application is up and running.
+This is where your app is running and you can change this later also.
 
 **Enable CORS for the authorized URL**
 
