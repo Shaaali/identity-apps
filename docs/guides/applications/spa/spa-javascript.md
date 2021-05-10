@@ -20,7 +20,7 @@ You need to first create an application in Asgardeo that represents your SPA.
 
 ## Add authentication to your app
 
-**Install SDK**
+**1. Install SDK**
 
 Add the following script to the `index.html` of your application.
 
@@ -30,12 +30,16 @@ Add the following script to the `index.html` of your application.
 
 <br>
 
-**Configure AsgardeoSPAClient**
+**2. Configure AsgardeoSPAClient**
 
 Copy and use the following code within your root component to configure `AsgardeoSPAClient` for your application.
 
 
 To initialize the SDK, use the `getInstance()` function in the SDK and pass in the required `clientID`, `serverOrigin`, `signInRedirectURL` & `signOutRedirectURL` to the `auth.initialize()` function.
+
+::: tip Find app information
+These details can be found in the **Protocol** tab of the application details view.
+:::
 
 ```
 <script>
@@ -54,7 +58,7 @@ auth.initialize({
 
 <br>
 
-**Add login**
+**3. Add login**
 
 The `sign-in` hook is used to fire a callback function after successful sign-in.
 

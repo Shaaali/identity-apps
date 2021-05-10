@@ -20,7 +20,7 @@ You need to first create an application in Asgardeo that represents your SPA.
 
 ## Add authentication to your app
 
-**Install SDK**
+**1. Install SDK**
 
 Run the following command to install the React SDK and the necessary dependencies from the npm registry.
 
@@ -30,7 +30,7 @@ npm install @asgardeo/auth-react react-router-dom --save
 
 <br>
 
-**Configure AuthProvider**
+**2. Configure AuthProvider**
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
@@ -40,6 +40,10 @@ Make sure to replace `HomePage` component with your own component tree.
 
 Asagrdeo uses [React Context API](https://reactjs.org/docs/context.html) under the hood to manage state. You can easily integrate Asgardeo to your application by wrapping your application with the `AuthProvider`.\
 `AuthProvider` takes a config object as a prop that can be used to initialize the SDK instance. Pass the relevant `clientID`, `serverOrigin`,`signInRedirectURL` & `signOutRedirectURL` to the config to get the SDK to work with your application.
+
+::: tip Find app information
+These details can be found in the **Protocol** tab of the application details view.
+:::
 
 ```
 import { AuthProvider } from "@asgardeo/auth-react";
@@ -66,7 +70,7 @@ render((<App />), document.getElementById("root"));
 
 <br>
 
-**Add login**
+**3. Add login**
 
 The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button** using the `signIn()` function in the `useAuthContext` hook. Similarly, you can also implement a **Logout button** using the `signOut()` function.\
 If you wish to access the authenticated user's details, use the `state` object from the `useAuthContext` hook.
