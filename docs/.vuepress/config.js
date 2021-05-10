@@ -29,6 +29,7 @@ module.exports = config({
      */
 
     themeConfig: {
+        hostname : 'https://docs.asgardeo.io',
         displayAllHeaders: true,
         repo: '',
         editLinks: true,
