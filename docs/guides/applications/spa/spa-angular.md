@@ -20,7 +20,7 @@ You need to first create an application in Asgardeo that represents your SPA.
 
 ## Add authentication to your app
 
-**Install SDK**
+**1. Install SDK**
 
 Run the following command to install the Angular SDK and the necessary dependencies from the npm registry.
 
@@ -30,12 +30,16 @@ npm install @asgardeo/auth-angular --save
 
 <br>
 
-**Configure AsgardeoAuthModule**
+**2. Configure AsgardeoAuthModule**
 
 Copy and use the following code within your root component to configure `AsgardeoAuthModule` for your application.
 
 
 Pass the relevant `clientID`, `serverOrigin`, `signInRedirectURL` & `signOutRedirectURL` to the `forRoot()` function of `AsgardeoAuthModule` to get the SDK to work with your application.
+
+::: tip Find app information
+These details can be found in the **Protocol** tab of the application details view.
+:::
 
 ```
 // Import AsgardeoAuthModule and Provide Configuration Parameters.
@@ -70,7 +74,7 @@ export class AppModule { }
 
 <br>
 
-**Add login**
+**3. Add login**
 
 Inject `AsgardeoAuthService` to your components to access the authenticated state and sign-in and sign-out functionalities.
 
