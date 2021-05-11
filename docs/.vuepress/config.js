@@ -87,7 +87,7 @@ module.exports = config({
                         ['spa-react', 'React SDK'],
                         ['spa-angular', 'Angular SDK'],
                         ['spa-javascript', 'Javascript SDK'],
-                        ['spa-configure-general', 'Integrate a SPA directly']
+                        ['spa-configure-general', 'Integrate OpenID Connect directly']
                     ]
                 },
                 {
@@ -98,7 +98,7 @@ module.exports = config({
                     sidebarDepth: 2,
                     children: [
                         ['web-app-oidc-java-ee', 'Java EE using Asgardeo OIDC Agent'],
-                        ['web-app-oidc-general.md', 'Integrate OIDC directly']
+                        ['web-app-oidc-general.md', 'Integrate OpenID Connect directly']
                     ]
                 },
                 {

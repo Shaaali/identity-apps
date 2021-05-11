@@ -18,7 +18,7 @@ By following this guide, you will
 4. Add login and logout functionality in your web application
 
 
-## Configure an application in Asgardeo
+## Configure your application in Asgardeo
 
 Let's start with creating an application in Asgardeo that represents your web application.
 

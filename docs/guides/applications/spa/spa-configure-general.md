@@ -2,7 +2,7 @@
 
 If you have your own single page application, you can refer this guide to learn how to authenticate users to the application using Asgardeo with OpenID Connect.
 
-## Configure an application in Asgardeo
+## Configure your application in Asgardeo
 
 You need to first create an application in Asgardeo that represents your SPA.
 
