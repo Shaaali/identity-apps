@@ -10,7 +10,7 @@ Create an application in Asgardeo that represents your web application.
 
 ## Implement authentication in web application
 
-The web application should communicate with Asgardeo to authenticate the users who access the application. Authenticating a user to the application requires the following steps.
+The web application needs to communicate with Asgardeo to authenticate the users who access the application. Authenticating a user to the application requires the following steps.
 
 1. Discover the OAuth 2.0 endpoints
 2. Make an authorization request to obtain a code
