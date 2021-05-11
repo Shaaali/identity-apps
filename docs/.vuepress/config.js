@@ -146,7 +146,8 @@ module.exports = config({
                 {
                     title: 'Adaptive authentication',
                     children: [
-                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure adaptive authentication']
+                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure adaptive authentication'],
+                        ['/guides/strong-authentication/adaptive-auth/adaptive-auth-js-api-reference.md', 'JS API Reference']
                     ]
                 },
               ]
