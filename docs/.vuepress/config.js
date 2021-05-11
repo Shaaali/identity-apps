@@ -90,7 +90,17 @@ module.exports = config({
                         ['spa-configure-general', 'Integrate a SPA directly']
                     ]
                 },
-                ['/guides/applications/web-app/', 'Web application'],
+                {
+                    title: 'Web application',
+                    path: '/guides/applications/web-app/',
+                    prefix: '/guides/applications/web-app/',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        ['web-app-oidc-java-ee', 'Java EE using Asgardeo OIDC Agent'],
+                        ['web-app-oidc-general.md', 'Integrate OIDC directly']
+                    ]
+                },
                 {
                     title: 'Application settings',
                     prefix: '/guides/applications/application-settings/',
