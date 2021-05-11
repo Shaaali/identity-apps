@@ -2,7 +2,7 @@
 
 If you have your own single page application, you can refer this guide to learn how to authenticate users to the application using Asgardeo with OpenID Connect.
 
-## Configure an application in Asgardeo
+## Configure your application in Asgardeo
 
 You need to first create an application in Asgardeo that represents your SPA.
 
@@ -20,7 +20,7 @@ The SPA should communicate with Asgardeo to authenticate the users who access th
 
 ### Discover the endpoints
 
-<CommonGuide guide='guides/fragments/discover-oidc-endpoints.md'/>
+<CommonGuide guide='guides/fragments/discover-oidc-endpoints-for-apps.md'/>
 
 ### Configure the client id
 
@@ -236,186 +236,18 @@ _Sample response:_
 
 ### Validate ID token based on JWKS
 
-In order to validate the signature on the obtained ID token, you need the public key of Asgardeo. Asgardeo exposes the public key information through the standard JWKS endpoint.
+<CommonGuide guide='guides/fragments/validate-id-token-jwks-for-apps.md'/>
 
-By using a signature validation library, you can validate the signature of the ID token using the JWKS endpoint.
-
-_JWKS endpoint:_
-
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/jwks`
-
-_Sample request:_
-
-<CodeGroup>
-<CodeGroupItem title="cURL" active>
-
-``` 
-curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/jwks'
-```
-</CodeGroupItem>
-
-<CodeGroupItem title="JavaScript - jQuery">
-
-```js
-var settings = {
-    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/jwks",
-    "method": "GET",
-    "timeout": 0,
-};
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-</CodeGroupItem>
-
-<CodeGroupItem title="Nodejs - Axios">
-
-```js
-var axios = require('axios');
-
-var config = {
-    method: 'get',
-    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/jwks',
-    headers: { }
-};
-
-axios(config)
-    .then(function (response) {
-        console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-```
-</CodeGroupItem>
-</CodeGroup>
-
-_Sample response:_
-```json
-{
-    "keys": [
-        {
-            "kty": "RSA",
-            "e": "AQAB",
-            "use": "sig",
-            "kid": "Yzc5OTgwZTE3MWQzMWEzNDFmNzVhM2NiOTBlNjcwNTI5OGM0MmQ1YjkwYjg2MTIwZWMwNzM4Mzg1ZGIyZDg3ZA_RS256",
-            "alg": "RS256",
-            "n": "i_i34CgF8IZd8e27sY3lJkX6MyW7e2oIH0f_OlnwftTdS-SAmmIMm06QdyhDr0fycTuNR9hjsEhSm9ecS5kZh9qsuffLb1N041Ml37VE6qeOKP4AocvYmr0rtpH0TUgqXndDeFAAF3oLVhUTokw9Ik-T23cEPDA8gMCmQf7Nje7fNsQ6aCuzzvfUekXvRnDl_7ZAHgbw_0gyujIJ11NlKiNbmCdKMATn68TwQ4U5RJD9-IT0zizWm1ciV-ZOc12L8AsUI-QFjLnUlM4S42X1oj0Tao1oL9V8QGASHHIGKqJ9YxvvnuxaHd42NFFHJcwB4oLlirjOyI5HfKZRFE4FzQ"
-        }
-    ]
-}
-```
-<br>
+<br/>
 
 ### Retrieve user details
 
-User information is encoded inside the ID token returned along with the access token. You can also obtain user information as a payload by invoking the userinfo endpoint with the access token obtained.
+<CommonGuide guide='guides/fragments/retrieve-user-info-for-apps.md'/>
 
-_Userinfo endpoint:_
-
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/userinfo`
-
-_Sample request:_
-
-<CodeGroup>
-<CodeGroupItem title="cURL" active>
-
-``` 
-curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo' \
---header 'Authorization: Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
-```
-</CodeGroupItem>
-
-<CodeGroupItem title="JavaScript - jQuery">
-
-```js
-var settings = {
-    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo",
-    "method": "GET",
-    "timeout": 0,
-    "headers": {
-        "Authorization": "Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805"
-    },
-};
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-</CodeGroupItem>
-
-<CodeGroupItem title="Nodejs - Axios">
-
-```js
-var axios = require('axios');
-
-var config = {
-    method: 'get',
-    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo',
-    headers: {
-        'Authorization': 'Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
-    }
-};
-
-axios(config)
-    .then(function (response) {
-        console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-```
-</CodeGroupItem>
-</CodeGroup>
-
-_Default sample response:_
-
-```json
-{
-    "sub": "user1@bifrost.com"
-}
-```
-
-By default, only the username (sub) information will be available in the response. You can customize the user information returned by configuring the user attributes of the application registered in the Asgardeo console.
-
-More details on configuring the user attributes can be found in the [User attributes](../application-settings/configure-user-attribute.md) section in application settings. 
-
-<br>
+<br/>
 
 ### Logout the application
 
-The logout endpoint is used to terminate the user session at Asgardeo and log the user out. When the user is successfully logged out, he will be redirected to the registered authorized redirect URL.
+<CommonGuide guide='guides/fragments/oidc-logout-for-apps.md'/>
 
-_Logout endpoint:_
-
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oidc/logout`
-
-_Sample url:_
-
-`https://accounts.asgardeo.io/t/bifrost/oidc/logout?id_token_hint=<id_token>&post_logout_redirect_uri=<redirect URI>&state=<state>`
-
-_Request parameters:_
-
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Description</th> 
-    <th>Mandatory</th>
-  </tr>
-  <tr>
-    <td>id_token_hint</td>
-    <td>The id_token returned by the identity provider.</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>post_logout_redirect_uri</td>
-    <td>The URL to be redirected to when logging out. The value defined here should be the same as the callbackURI of the client application.</td>
-    <td>Yes</td>
-  </tr>
-  <tr>
-    <td>state</td>
-    <td>The parameter passed from the application to the identity provider to maintain any state information. This is used to correlate the logout requests and responses.</td>
-    <td>No</td>
-  </tr>
-</table>
+<br/>

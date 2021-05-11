@@ -12,7 +12,7 @@ This guide provides steps to authenticate users to your React SPA with OIDC prot
 
 :::
 
-## Configure an application in Asgardeo
+## Configure your application in Asgardeo
 
 You need to first create an application in Asgardeo that represents your SPA.
 

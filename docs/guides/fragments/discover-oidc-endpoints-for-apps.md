@@ -1,4 +1,4 @@
-An OIDC application can know of the endpoints of Asgardeo that it should call by using two methods
+There are two options for an OIDC application to identify the endpoints of Asgardeo that it should call.
 1. By using the discovery endpoint of Asgardeo
 2. By manually defining the required endpoints.
 

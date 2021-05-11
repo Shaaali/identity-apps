@@ -85,13 +85,23 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['spa-react', 'React SDK'],
-                        ['spa-angular', 'Angular SDK'],
-                        ['spa-javascript', 'Javascript SDK'],
-                        ['spa-configure-general', 'Integrate a SPA directly']
+                        ['spa-react', 'React SDK for OpenID Connect'],
+                        ['spa-angular', 'Angular SDK for OpenID Connect'],
+                        ['spa-javascript', 'Javascript SDK for OpenID Connect'],
+                        ['spa-configure-general', 'Direct OpenID Connect integration']
                     ]
                 },
-                ['/guides/applications/web-app/', 'Web application'],
+                {
+                    title: 'Web application',
+                    path: '/guides/applications/web-app/',
+                    prefix: '/guides/applications/web-app/',
+                    collapsable: false,
+                    sidebarDepth: 2,
+                    children: [
+                        ['web-app-oidc-java-ee', 'Asgardeo OIDC Agent for Java EE'],
+                        ['web-app-oidc-general.md', 'Direct OpenID Connect integration']
+                    ]
+                },
                 {
                     title: 'Application settings',
                     prefix: '/guides/applications/application-settings/',
