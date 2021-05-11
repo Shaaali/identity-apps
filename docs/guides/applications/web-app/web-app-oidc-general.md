@@ -4,7 +4,7 @@ If you have your own traditional web application, you can refer this guide to le
 
 ## Configure an application in Asgardeo
 
-You need to first create an application in Asgardeo that represents your web application.
+Create an application in Asgardeo that represents your web application.
 
 <CommonGuide guide='guides/fragments/configure-web-app-oidc-in-asgardeo.md'/>
 
