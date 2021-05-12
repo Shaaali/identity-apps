@@ -146,7 +146,7 @@ module.exports = config({
                 {
                     title: 'Conditional authentication',
                     children: [
-                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure conditional authentication'],
+                        ['/guides/strong-authentication/conditional-auth/configure-conditional-auth.md', 'Configure conditional authentication'],
                         ['/guides/strong-authentication/conditional-auth/conditional-auth-js-api-reference.md', 'JS API Reference']
                     ]
                 },
