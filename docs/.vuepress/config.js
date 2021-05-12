@@ -144,10 +144,10 @@ module.exports = config({
                     ]
                 },
                 {
-                    title: 'Adaptive authentication',
+                    title: 'Conditional authentication',
                     children: [
-                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure adaptive authentication'],
-                        ['/guides/strong-authentication/adaptive-auth/adaptive-auth-js-api-reference.md', 'JS API Reference']
+                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure conditional authentication'],
+                        ['/guides/strong-authentication/conditional-auth/conditional-auth-js-api-reference.md', 'JS API Reference']
                     ]
                 },
               ]

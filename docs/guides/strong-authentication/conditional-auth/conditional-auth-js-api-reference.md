@@ -1,6 +1,6 @@
-# Adaptive Authentication JS API Reference
+# Conditional Authentication JS API Reference
 
-With adaptive authentication, it is possible to configure dynamic sequences based on runtime parameters such as the
+With conditional authentication, it is possible to configure dynamic sequences based on runtime parameters such as the
 user’s IP address, user role, etc. WSO2 Identity Server allows you to define a dynamic authentication sequence using
 authentication scripts written in JavaScript.
 
