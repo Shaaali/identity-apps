@@ -30,7 +30,7 @@ module.exports = config({
 
     themeConfig: {
         hostname : 'https://docs.asgardeo.io',
-        displayAllHeaders: true,
+        displayAllHeaders: false,
         repo: '',
         editLinks: true,
         docsDir: '',
@@ -69,6 +69,7 @@ module.exports = config({
             '/guides/' : [
             {
                 title: 'Get started',
+                icon:  'gettingStartedIcon',
                 children: [
                 '',
                 ['get-started/create-tenant.md', 'Create tenant']
@@ -76,6 +77,7 @@ module.exports = config({
             },
             {
                 title: 'Manage applications',
+                icon:  'applicationsIcon',
                 children: [
                 ['applications/', 'Overview'],
                 {
@@ -118,6 +120,7 @@ module.exports = config({
             },
             {
                 title: 'Add login',
+                icon: 'addLoginIcon',
                 children: [
                 ['social-login/overview.md', 'Overview'],
                 {
@@ -136,6 +139,7 @@ module.exports = config({
             },
             {
                 title: 'Add strong authentication',
+                icon: 'addAuthnIcon',
                 children: [
                 ['strong-authentication/overview.md', 'Overview'],
                 {

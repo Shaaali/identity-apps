@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: "ToggleButton",
+  name: "Button",
   props:  {
     buttonType: String,
     buttonText: String,
