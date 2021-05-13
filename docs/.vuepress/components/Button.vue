@@ -11,17 +11,26 @@ export default {
   props:  {
     buttonType: String,
     buttonText: String,
-    buttonPath: String
+    buttonPath: String,
+    externalLink: String
   },
   data() {
     return {
         buttonText: this.buttonText,
-        buttonPath: this.buttonPath
+        buttonPath: this.buttonPath,
+        externalLink: this.externalLink
       }
   },
   methods: {
   	handleClick: function(){
-       this.$router.push(this.buttonPath)
+
+  	  if (this.buttonPath) {
+        this.$router.push(this.buttonPath);
+      }
+
+      if (this.externalLink) {
+        window.location.href = this.externalLink;
+      }
     }
   }
 };
@@ -30,7 +39,7 @@ export default {
 <style lang="stylus">
 .button
   border: none
-  padding: 15px 32px
+  padding: 15px 30px
   text-align: center
   text-decoration: none
   display: inline-block
@@ -62,9 +71,9 @@ export default {
 
   &.default-outlined
     background-color: transparent
-    color: #888888
+    color: #ff7300
     border-style solid
-    border-width: thin
-    border-color #cccccc
+    border-width: 0.124em
+    border-color #ff7300
 
 </style>
