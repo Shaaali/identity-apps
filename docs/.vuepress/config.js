@@ -20,7 +20,7 @@ module.exports = config({
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}]
     ],
 
-    base: "/asgardeo-docs/",
+    base: "/",
 
     /**
      * Theme configuration, here is the default theme configuration for VuePress.
