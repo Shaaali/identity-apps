@@ -64,11 +64,11 @@ git -C asgardeo-deployment-pipeline config user.email "iam-cloud@wso2.com"
 git -C asgardeo-deployment-pipeline checkout dev
 
 REF_IN_DEV=$(grep 'GITHUB_RELEASE_TAG:' $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/asgardeo-docs/dev-setup-variables.yaml)
-sed -i 's|'"${REF_IN_DEV}"'|  GITHUB_RELEASE_TAG: '"${NEW_ASGARDEO_DOCS_VERSION}"'|' $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/asgardeo-docs/dev-setup-variables.yaml
+sed -i 's|'"${REF_IN_DEV}"'|  GITHUB_RELEASE_TAG: '"${VERSION}"'|' $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/asgardeo-docs/dev-setup-variables.yaml
 
 # Push new release version to dev-deploy.yaml.
 git -C asgardeo-deployment-pipeline add $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/asgardeo-docs/dev-setup-variables.yaml
-git -C asgardeo-deployment-pipeline commit -m "[Dev] Update asgardeo-docs release version to - $NEW_ASGARDEO_DOCS_VERSION"
+git -C asgardeo-deployment-pipeline commit -m "[Dev] Update asgardeo-docs release version to - $VERSION"
 git -C asgardeo-deployment-pipeline push origin dev
 
 echo "Release builder execution is completed."
