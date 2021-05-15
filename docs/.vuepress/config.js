@@ -145,9 +145,11 @@ module.exports = config({
                 },
                 {
                     title: 'Conditional authentication',
+                    prefix: '/guides/strong-authentication/conditional-auth/',
                     children: [
-                        ['/guides/strong-authentication/conditional-auth/configure-conditional-auth.md', 'Configure conditional authentication'],
-                        ['/guides/strong-authentication/conditional-auth/conditional-auth-js-api-reference.md', 'JS API Reference']
+                        ['configure-conditional-auth.md', 'Configure conditional authentication'],
+                        ['conditional-auth-templates.md', 'Common scenarios'],
+                        ['conditional-auth-js-api-reference.md', 'JS API Reference']
                     ]
                 },
               ]
