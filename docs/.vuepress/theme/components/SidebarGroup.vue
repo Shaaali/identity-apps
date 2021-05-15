@@ -33,10 +33,10 @@
       class="sidebar-heading"
       @click="$emit('toggle')"
     >
-      <img v-if="item.icon === 'gettingStartedIcon'" src="../assets/icons/gettingStartedIcon.svg" />
-      <img v-else-if="item.icon === 'applicationsIcon'" src="../assets/icons/applicationsIcon.svg" />
-      <img v-else-if="item.icon === 'addLoginIcon'" src="../assets/icons/addLoginIcon.svg" />
-      <img v-else-if="item.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" />
+      <img v-if="item.icon === 'gettingStartedIcon'" src="../assets/icons/gettingStartedIcon.svg" width="15" height="15" />
+      <img v-else-if="item.icon === 'applicationsIcon'" src="../assets/icons/applicationsIcon.svg" width="15" height="15" />
+      <img v-else-if="item.icon === 'addLoginIcon'" src="../assets/icons/addLoginIcon.svg" width="15" height="15" />
+      <img v-else-if="item.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="16" height="16" />
       <span>{{ item.title }}</span>
       <span
         v-if="item.collapsable"
