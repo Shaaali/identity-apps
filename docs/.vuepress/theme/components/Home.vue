@@ -88,13 +88,12 @@
               v-for="(service, index) in $frontmatter.services"
               :key="index"
               class="service"
-              @click="service.link ? navigate(service.link) : ''"
           >
-            <div style="{ display: flex !important; align-items: center; flex-direction: row; }">
+            <div class="img-header-container">
               <img v-if="service.icon === 'supportedPluginsIcon'" src="../assets/icons/supportedPluginsIcon.svg" width="20" height="20" />
               <img v-if="service.icon === 'securityComplianceIcon'" src="../assets/icons/securityComplianceIcon.svg" width="20" height="20" />
               <img v-if="service.icon === 'solutionsIcon'" src="../assets/icons/solutionsIcon.svg" width="22" height="22" />
-              <h4><a>{{ service.title }}</a></h4>
+              <a @click="service.link ? navigate(service.link) : ''">{{ service.title }}</a>
             </div>
             <p>{{ service.details }}</p>
           </div>
@@ -118,6 +117,11 @@
   padding $navbarHeight 2rem 0
   margin 80px auto 0
 
+  .img-header-container
+    display: flex
+    align-items: center
+    flex-direction: row
+
   @media (max-width $MQNarrow)
     min-height 100vh - $navbarMobileHeight
     padding-top $navbarMobileHeight
@@ -128,6 +132,7 @@
 
   .hero
     text-align center
+    margin-bottom 3.5rem
 
     @media (min-width $MQNarrow)
       display flex
@@ -184,7 +189,7 @@
         font-size 2rem
 
     h1, .description, .action
-      margin 1.8rem auto
+      margin 1.5rem auto
 
       @media (max-width $MQMobile)
         margin 1.5rem auto
@@ -244,7 +249,7 @@
 
   .features-section
     margin 2em -2rem
-    padding 1.5rem 2.5rem
+    padding 2.2rem 2.5rem
     background-color #eeeeee
 
     h2
@@ -346,7 +351,7 @@
           font-size 1.2rem
 
   .explore-section
-    margin 2em -2rem
+    margin 2.2em -2rem
     padding 0 2.5rem
 
     h1
@@ -374,29 +379,19 @@
     .service
       display flex
       flex-direction column
-      justify-content center
+      justify-content left
       flex-basis calc(33% - 4rem)
       margin 0.5rem
       padding  1.5rem 1.5rem
       border-radius 0.1rem
       overflow hidden
-      background #eee
-      border-style solid
-      border-width: 0.124em
-      border-color #eee
-      transition transform 0.3s, box-shadow 0.3s
-
-      &:hover
-        box-shadow 0 2px 12px 0 #aaaaaa
-
-      h4
-        margin 0.4rem 0
-        font-weight 700
 
       a
         font-size 16px
         line-height 1.5rem
         font-weight 700
+        padding-left 0.5rem
+        cursor: pointer
 
         &:hover
           color #ff9100
@@ -407,6 +402,7 @@
         font-size 14px
         font-weight 460
         line-height 1.7
+        padding-left 1.8rem
 
       @media (max-width $MQNarrow)
         flex-basis calc(50% - 4rem)
@@ -419,21 +415,6 @@
         font-size 0.9rem
         margin 0.5rem 0
         border-radius 0
-
-      &.link
-        cursor pointer
-
-      &.img-header-container
-        display: flex !important
-        align-items: center !important
-        flex-direction: row !important
-
-      h2
-        margin-bottom 0.25rem
-        border-bottom none
-        color var(--text-color-l10)
-        font-size 1.25rem
-        font-weight 500
 
         @media (max-width $MQMobileNarrow)
           font-size 1.2rem
