@@ -102,7 +102,7 @@ var getAge = function (birthDate) {
    </tbody>
 </table>
 
-## Logic of the script
+## Script walkthrough
 
 **validateDOB** function validates whether the provided data of birth is correct.
 
