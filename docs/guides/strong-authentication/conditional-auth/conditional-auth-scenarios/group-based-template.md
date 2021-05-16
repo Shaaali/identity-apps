@@ -83,4 +83,4 @@ If the logged-in user belongs to any of the configured groups, then he is prompt
 
 3. Logout and login with a user who belongs to manager or employee group or both. Then the user is prompted with the TOTP authentication
 
-   <img :src="$withBase('/assets/img/guides/conditional-auth/group-based-2fa.png')" alt="group-based-2fa-conditional-auth-totp-page">
+   <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="group-based-2fa-conditional-auth-totp-page">
