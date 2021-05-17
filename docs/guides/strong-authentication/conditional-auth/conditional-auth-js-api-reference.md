@@ -1,7 +1,7 @@
 # Conditional Authentication JS API Reference
 
 With conditional authentication, it is possible to configure dynamic sequences based on runtime parameters such as the
-user’s IP address, user role, etc. WSO2 Identity Server allows you to define a dynamic authentication sequence using
+user’s IP address, user role, etc. Asgardeo allows you to define a dynamic authentication sequence using
 authentication scripts written in JavaScript.
 
 The following sections present the core API reference for the JavaScript-based conditional authentication functions and
@@ -20,7 +20,7 @@ on JavaScript may help you to compose effective authentication scripts.
 
 ### onLoginRequest(context)
 
-This function is called when the initial authentication request is received by the framework. It includes the following
+This function is called when the initial authentication request is received by Asgardeo. It includes the following
 parameters.
 
 <table>
@@ -139,6 +139,91 @@ executeStep(1,{
            // Do something on success
 };
 ```
+
+<br/>
+
+### fail()
+
+This function redirects the user to the redirect URI provided in the authorization request failing the authorization
+flow.
+
+This function takes a map as an optional parameter. When a map is provided as the parameter, the redirect URL will be
+appended with following properties which should be contained in the map, otherwise the default parameters will be
+passed. All the properties passed in the map are also optional.
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>errorCode </td>
+      <td>error code to be appended in the redirect URL</td>
+    </tr>
+    <tr>
+      <td>errorMessage </td>
+      <td>error message to be appended in the redirect URL</td>
+    </tr>
+    <tr>
+      <td>errorURI </td>
+      <td>URI of a web page that includes additional information about the error</td>
+    </tr>
+  </tbody>
+</table>
+
+**Example code**
+
+``` js
+var parameterMap = {'errorCode': 'access_denied', 'errorMessage': 'login could not be completed', "errorURI":'http://www.example.com/error'};
+if (!isAuthenticated) {
+    fail(parameterMap);
+}
+```
+
+<br/>
+
+### sendError(url,parameters)
+
+This function redirects the user to an error page. It includes the following parameters.
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>The URL of the error page that the user is redirected to. If the value is null, the user is redirected by default to the ' <strong>retry.do'</strong> error page.<br />
+  Note that any relative URL is assumed as the relative to host’s root.</td>
+    </tr>
+    <tr>
+      <td>parameters</td>
+      <td>Key value map passed as parameters. These are converted to query parameters in the URL.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Example code**
+
+``` js
+var user = context.steps[1].subject;
+var isAdmin = hasRole(user, 'admin');
+if (!isAdmin) {
+    sendError('http://www.example.com/error',{'errorcode':'000403','errorMsg':'You are not allowed to login to this app.'});
+}
+```
+
+::: tip
+
+When passing error messages to the error page, it is recommended to use the i18n key so that it can be
+internationalized easily at the page.
+:::
 
 <br/>
 
@@ -296,91 +381,6 @@ sendEmail(user, 'myTemplate', {'firstName':firstName});
 
 <br/>
 
-### sendError(url,parameters)
-
-This function redirects the user to an error page. It includes the following parameters.
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>url</td>
-      <td>The URL of the error page that the user is redirected to. If the value is null, the user is redirected by default to the ' <strong>retry.do'</strong> error page.<br />
-  Note that any relative URL is assumed as the relative to host’s root.</td>
-    </tr>
-    <tr>
-      <td>parameters</td>
-      <td>Key value map passed as parameters. These are converted to query parameters in the URL.</td>
-    </tr>
-  </tbody>
-</table>
-
-**Example code**
-
-``` js
-var user = context.steps[1].subject;
-var isAdmin = hasRole(user, 'admin');
-if (!isAdmin) {
-    sendError('http://www.example.com/error',{'errorcode':'000403','errorMsg':'You are not allowed to login to this app.'});
-}
-```
-
-::: tip 
-
-When passing error messages to the error page, it is recommended to use the i18n key so that it can be
-internationalized easily at the page.
-:::
-
-<br/>
-
-### fail()
-
-This function redirects the user to the redirect URI provided in the authorization request failing the authorization
-flow.
-
-This function takes a map as an optional parameter. When a map is provided as the parameter, the redirect URL will be
-appended with following properties which should be contained in the map, otherwise the default parameters will be
-passed. All the properties passed in the map are also optional.
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>errorCode </td>
-      <td>error code to be appended in the redirect URL</td>
-    </tr>
-    <tr>
-      <td>errorMessage </td>
-      <td>error message to be appended in the redirect URL</td>
-    </tr>
-    <tr>
-      <td>errorURI </td>
-      <td>URI of a web page that includes additional information about the error</td>
-    </tr>
-  </tbody>
-</table>
-
-**Example code**
-
-``` js
-var parameterMap = {'errorCode': 'access_denied', 'errorMessage': 'login could not be completed', "errorURI":'http://www.example.com/error'};
-if (!isAuthenticated) {
-    fail(parameterMap);
-}
-```
-
-<br/>
-
 ### setCookie(response, name, value, properties)
 
 This functions sets a new cookie. It includes the following parameters.
@@ -424,6 +424,7 @@ setCookie(context.response, "name", "test", {"max-age" : 4000,
                                             "domain" : "localhost",
                                             "httpOnly" : true,
                                             "secure" : true,
+                                            'sameSite': 'LAX',
                                             "version" : 1,
                                             "comment" : "some comments",
                                             "encrypt" : true,
