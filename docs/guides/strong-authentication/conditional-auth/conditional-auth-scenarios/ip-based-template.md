@@ -3,6 +3,17 @@
 The IP based conditional authentication script prompts two factor authentication to the users who are logging outside of
 the given ip range.
 
+## Scenario
+
+Consider a scenario where you wish to add security for users logging in from external networks or other geographic
+locations. Using the IP-based adaptive authentication template, you can specify network ranges using the ip address so
+that users logging in from an external network that is not listed in the authentication script are prompted to perform
+an additional level of authentication.
+
+If the user's IP address is not in the configured range (i.e. 192.168.1.0/24, 10.100.0.0/16), he will be prompted with
+TOTP authentication as the step 2 of the login flow. Users logging in from the internally configured network specified
+on the script, can simply provide their credentials (basic authentication) to access a resource.
+
 ## Before you begin
 
 1. Your application should be registered in Asgardeo.
@@ -21,17 +32,6 @@ the given ip range.
 
 * **Step 1:** Basic (Password) authenticator
 * **Step 2:** TOTP
-
-## Scenario
-
-Consider a scenario where you wish to add security for users logging in from external networks or other geographic
-locations. Using the IP-based adaptive authentication template, you can specify network ranges using the ip address so
-that users logging in from an external network that is not listed in the authentication script are prompted to perform
-an additional level of authentication.
-
-If the user's IP address is not in the configured range (i.e. 192.168.1.0/24, 10.100.0.0/16), he will be prompted with
-TOTP authentication as the step 2 of the login flow. Users logging in from the internally configured network specified
-on the script, can simply provide their credentials (basic authentication) to access a resource.
 
 ## Script
 

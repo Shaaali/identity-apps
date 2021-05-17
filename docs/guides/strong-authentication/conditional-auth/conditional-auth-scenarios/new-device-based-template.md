@@ -3,6 +3,12 @@
 Sends an email notification and/or prompts two factor authentication to the users who log in from a previously unused
 device. A cookie is used to identify whether the device has been used before.
 
+## Scenario
+
+If the user uses a new device or a new browser to log in to the application, the user is prompted for a second step of
+authentication. The new device or browser is identified by a cookie, therefore, once the cookie expires (this expiry
+time is specified in the authentication script), the same browser or device is considered as a new device.
+
 ## Before you begin
 
 1. Your application should be registered in Asgardeo.
@@ -21,12 +27,6 @@ device. A cookie is used to identify whether the device has been used before.
 
 * **Step 1:** Basic (Password) authenticator
 * **Step 2:** TOTP
-
-## Scenario
-
-If the user uses a new device or a new browser to log in to the application, the user is prompted for a second step of
-authentication. The new device or browser is identified by a cookie, therefore, once the cookie expires (this expiry
-time is specified in the authentication script), the same browser or device is considered as a new device.
 
 ## Script
 
