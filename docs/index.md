@@ -7,7 +7,7 @@ actionText: Quick Start →
 actionLink: /guide/
 
 features:
-  - title: Add Login to Your App
+  - title: Manage Your Applications
     details: Secure your applications using your preferred protocol.
     link: /guides/applications/
     icon: padlockIcon
@@ -73,5 +73,5 @@ services:
       link: /quickstarts/
       icon: solutionsIcon
 
-footer: Asgardeo Documentation
+footer: Asgardeo Docs
 copyrightText: © 2021 WSO2

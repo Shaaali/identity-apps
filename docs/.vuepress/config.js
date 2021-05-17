@@ -119,7 +119,7 @@ module.exports = config({
               ]
             },
             {
-                title: 'Add login',
+                title: 'Configure federated login',
                 icon: 'addLoginIcon',
                 children: [
                 ['social-login/overview.md', 'Overview'],

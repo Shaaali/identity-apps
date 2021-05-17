@@ -4,6 +4,9 @@
     class="home"
   >
     <header class="hero">
+      <MyTransition :delay="0.04">
+        <img class="hero-image" src="../assets/asgardeoTrifactor.svg" width="150" length="300"/>
+      </MyTransition>
       <div class="hero-info">
         <MyTransition :delay="0.04">
           <h1
@@ -121,6 +124,11 @@
     display: flex
     align-items: center
     flex-direction: row
+
+  .hero-image
+    position absolute
+    left 0
+    margin-top 29px !important
 
   @media (max-width $MQNarrow)
     min-height 100vh - $navbarMobileHeight
@@ -318,7 +326,7 @@
             margin-left 10px !important
             margin-top 10px !important
             vertical-align middle !important
-            content url("../assets/icons/rightArrow.svg")
+            content url("../assets/icons/rightArrowIcon.svg")
 
       @media (max-width $MQNarrow)
         flex-basis calc(50% - 4rem)
