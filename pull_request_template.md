@@ -2,7 +2,7 @@
 > Describe the problem, feature, improvement or the change introduces by the PR briefly. Add screenshots/GIFs if UI/UX changes are introduced. Remove this placeholder when you're editing.
 
 ### Related Issues
-- Issue #1
+- Issue (Add Issue Link)
 
 ### Checklist
 - [ ] e2e cypress tests locally verified.
@@ -13,7 +13,7 @@
 - [ ] Integration tests provided. (Add links if any)
 
 ### Related PRs
-- Related PR #1
+- Related PR (Add PR link)
 
 ### Security checks
 - [ ] Followed secure coding standards in http://wso2.com/technical-reports/wso2-secure-engineering-guidelines?
