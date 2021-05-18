@@ -26,7 +26,7 @@
           />
         </MyTransition>
         <MyTransition :delay="0.08">
-          <Button buttonType='primary' buttonText='Get Started' buttonPath='/quickstarts/qsg-spa-sample'/>
+          <Button buttonType='primary' buttonText='Get Started' buttonPath='/guides/get-started/asgardeo-overview'/>
         </MyTransition>
         <MyTransition :delay="0.12">
           <p v-if="$frontmatter.action" class="action">
