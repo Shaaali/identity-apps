@@ -56,7 +56,6 @@
               :key="index"
               :class="{ link: feature.link, [`feature${index % 9}`]: true }"
               class="feature"
-              @click="feature.link ? navigate(feature.link) : ''"
           >
             <img v-if="feature.icon === 'padlockIcon'" src="../assets/icons/padlockIcon.svg" width="22" height="22" />
             <img v-else-if="feature.icon === 'federatedLoginIcon'" src="../assets/icons/federatedLoginIcon.svg" width="26" height="26" />
