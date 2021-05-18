@@ -1,6 +1,7 @@
 # Web application with OIDC: Java EE
 
-This guide provides steps to authenticate users to your own Java EE web application with OIDC protocol. We will use the Asgardeo OIDC Agent to implement authentication in the web app.
+This guide provides steps to authenticate users to your own Java EE web application with OIDC protocol. We will use the
+Asgardeo OIDC Agent to implement authentication in the web app.
 
 ::: tip Before you begin
 
@@ -11,12 +12,12 @@ This guide provides steps to authenticate users to your own Java EE web applicat
 
 :::
 
-By following this guide, you will 
+By following this guide, you will
+
 1. Register your application as an OIDC app in Asgardeo
 2. Embed Asgardeo OIDC Agent in your web application project
 3. Configure your web application to communicate with Asgardeo
 4. Add login and logout functionality in your web application
-
 
 ## Configure your application in Asgardeo
 
@@ -24,10 +25,11 @@ Let's start with creating an application in Asgardeo that represents your web ap
 
 <CommonGuide guide='guides/fragments/configure-web-app-oidc-in-asgardeo.md'/>
 
-
 ## Add authentication to your app
 
-To ease development, we have introduced the **[Asgardeo OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)** which enables adding OIDC-based login and logout in the web application. All you need to do is configure the app to talk to Asgardeo.  
+To ease development, we have introduced
+the **[Asgardeo OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)** which enables adding OIDC-based
+login and logout in the web application. All you need to do is configure the app to talk to Asgardeo.
 
 > Refer the [documetation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) of Asgardeo Tomcat OIDC Agent for more information on how it works.
 
@@ -43,7 +45,8 @@ You can use Asgardeo OIDC Agent in your project by updating the `pom.xml` file w
 </dependency>
 ```
 
-The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency mentioned above, point to the repository as follows.
+The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency mentioned above, point to the repository
+as follows.
 
 ```xml
 <repositories>
@@ -59,20 +62,23 @@ The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency m
     </repository>
 </repositories>
 ```
+
 <br>
 
 **2. Configure**
 
 We provide the Asgardeo endpoints to the application using a property file, which is read by the Asgardeo OIDC Agent.
 
-Create a file named `oidc-sample-app.properties` inside the _<YOUR_APP>/src/main/resources_ directory, using the content below.
+Create a file named `oidc-sample-app.properties` inside the _<YOUR_APP>/src/main/resources_ directory, using the content
+below.
 
 ::: tip Note
-The `skipURIs` property defines the web pages in your application that should not be secured, and do not require authentication.
+
+The `skipURIs` property defines the web pages in your application that should not be secured, and do not require
+authentication.
 :::
 
 _Few of the configurations such as `callBackURL` and `skipURIs` depends on the context path of your application._
-
 
 ```
 consumerKey=<consumerKey>
@@ -88,7 +94,9 @@ jwksEndpoint=https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/jwks
 skipURIs=<YOUR_APP_PATH>/index.html
 ```
 
-A comprehensive list of the properties used above can be found in the [Configuration Catalog](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/blob/master/io.asgardeo.tomcat.oidc.sample/src/main/resources/configuration-catalog.md).
+A comprehensive list of the properties used above can be found in
+the [Configuration Catalog](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/blob/master/io.asgardeo.tomcat.oidc.sample/src/main/resources/configuration-catalog.md)
+.
 
 Finally, copy and paste the following configuration to the _<YOUR_APP>/src/main/webapp/WEB-INF/web.xml_ file.
 
@@ -124,26 +132,30 @@ Finally, copy and paste the following configuration to the _<YOUR_APP>/src/main/
     <listener-class>io.asgardeo.tomcat.oidc.agent.JKSLoader</listener-class>
 </listener>
 ```
+
 <br>
 
 **3. Add login**
 
 In the `index.html` file, add a login button to forward the user to secure pages upon successful login.
 
-Once the user clicks on the button, the request will be intercepted by the OIDC agent and will initiate the OIDC Login flow if it does not find an authenticated application session.
+Once the user clicks on the button, the request will be intercepted by the OIDC agent and will initiate the OIDC Login
+flow if it does not find an authenticated application session.
 
 ```html
 <form action="<HOME_PAGE>" method="post">
     <input type="submit" value="Log In">
 </form>
 ```
+
 <br>
 
 **4. Add logout**
 
 Add the following snippet to enable logout.
 
-When the user initiates the logout, the local authenticated application session is cleared and the session in Asgardeo is terminated.
+When the user initiates the logout, the local authenticated application session is cleared and the session in Asgardeo
+is terminated.
 
 ```html
 <form action="logout" method="get">

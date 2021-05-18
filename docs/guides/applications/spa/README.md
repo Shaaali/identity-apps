@@ -1,6 +1,8 @@
 # Single page application
 
-A Single Page Application (SPA) is a web application that loads a single HTML page initially and dynamically update that page as the user interacts with the application. A SPA works inside a browser and does not require page reloading during use. The apps you use on a daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
+A Single Page Application (SPA) is a web application that loads a single HTML page initially and dynamically update that
+page as the user interacts with the application. A SPA works inside a browser and does not require page reloading during
+use. The apps you use on a daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
 https://www.youtube.com/watch?v=tmKD2famPJc&t=129s
 
 ## SPA with OIDC

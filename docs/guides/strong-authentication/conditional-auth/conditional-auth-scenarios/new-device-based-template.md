@@ -13,8 +13,8 @@ time is specified in the authentication script), the same browser or device is c
 
 1. Your application should be registered in Asgardeo.
 
-   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if not
-   done already.
+   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if
+   not done already.
 
 2. Configure conditional authentication and deploy the **New-Device-Based Authentication Template** for the application.
 

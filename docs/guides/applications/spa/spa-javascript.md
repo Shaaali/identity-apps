@@ -1,6 +1,7 @@
 # Single page application: Javascript
 
-This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React SDK
+This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React
+SDK
 
 <Button buttonType='primary' buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-sample'/>
 
@@ -34,10 +35,11 @@ Add the following script to the `index.html` of your application.
 
 Copy and use the following code within your root component to configure `AsgardeoSPAClient` for your application.
 
-
-To initialize the SDK, use the `getInstance()` function in the SDK and pass in the required `clientID`, `serverOrigin`, `signInRedirectURL` & `signOutRedirectURL` to the `auth.initialize()` function.
+To initialize the SDK, use the `getInstance()` function in the SDK and pass in the required `clientID`, `serverOrigin`
+, `signInRedirectURL` & `signOutRedirectURL` to the `auth.initialize()` function.
 
 ::: tip Find app information
+
 These details can be found in the **Protocol** tab of the application details view.
 :::
 
@@ -62,7 +64,8 @@ auth.initialize({
 
 The `sign-in` hook is used to fire a callback function after successful sign-in.
 
-To sign in, simply call the `signIn()` function using the created instance. Similarly, call the `signOut()` function for application sign-out.
+To sign in, simply call the `signIn()` function using the created instance. Similarly, call the `signOut()` function for
+application sign-out.
 
 ```
 <script>

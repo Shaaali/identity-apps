@@ -1,8 +1,8 @@
 # Conditional Authentication JS API Reference
 
 With conditional authentication, it is possible to configure dynamic sequences based on runtime parameters such as the
-user’s IP address, user role, etc. Asgardeo allows you to define a dynamic authentication sequence using
-authentication scripts written in JavaScript.
+user’s IP address, user role, etc. Asgardeo allows you to define a dynamic authentication sequence using authentication
+scripts written in JavaScript.
 
 The following sections present the core API reference for the JavaScript-based conditional authentication functions and
 fields.
@@ -221,8 +221,8 @@ if (!isAdmin) {
 
 ::: tip
 
-When passing error messages to the error page, it is recommended to use the i18n key so that it can be
-internationalized easily at the page.
+When passing error messages to the error page, it is recommended to use the i18n key so that it can be internationalized
+easily at the page.
 :::
 
 <br/>
@@ -413,7 +413,7 @@ This functions sets a new cookie. It includes the following parameters.
   </tbody>
 </table>
 
-::: tip 
+::: tip
 
 The size of the value has to be less than the RSA key pair length if '`encrypt`' is enabled (set to true).
 :::
@@ -692,9 +692,9 @@ Contains the authentication context information. The information can be accessed
 * `context.steps[<n>]` :  Access the authentication step information, where \<n\> is the step number (1-based).
   See [step Object](#step-object) for more information.
 
-  :::tip Note 
-  The step number is the one configured at the step configuration, not the actual order in which they get
-  executed.
+  :::tip Note
+
+  The step number is the one configured at the step configuration, not the actual order in which they get executed.
   :::
 
 * `context.request` :  Access the HTTP authentication request information. See [request Object](#request-object) for
@@ -727,6 +727,7 @@ Contains the authentication step information. May be null or invalid step number
 * `user.claims[“<local_claim_url>”]`: (Read/Write) Sets a temporary claim value for the session.
 
   ::: tip Note
+
   `user.localClaims[“<local_claim_url>”]` updates the claim value in the user store as
   well. `user.claims[“<local_claim_url>”]` is an alternative to set a claim for temporary basis.
 
