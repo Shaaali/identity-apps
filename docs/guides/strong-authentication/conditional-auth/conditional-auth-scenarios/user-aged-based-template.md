@@ -3,7 +3,6 @@
 The user age based conditional authentication script allows log in to application if the user's age is over the
 configured value. The age of the user is calculated using the user's date of birth attribute.
 
-
 ## Scenario
 
 Any user who is below the specified age limit (i.e., under the age of 18 years) is restricted access and prevented from
@@ -14,8 +13,8 @@ is below configured value.
 
 1. Your application should be registered in Asgardeo.
 
-   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if not
-   done already.
+   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if
+   not done already.
 
 2. Configure conditional authentication and deploy the **User-Age-Based Authentication Template** for the application.
 

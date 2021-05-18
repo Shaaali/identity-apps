@@ -18,7 +18,8 @@
 
 - **Name:** A unique name to identify your application.
 - **Protocol:** The access configuration protocol which will be used to log in to the application using SSO.
-- **Authorized Redirect URLs:** The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated, and where the user is redirected to once the logout is complete.
+- **Authorized Redirect URLs:** The authorized redirect URLs determine where the authorization code is sent to once the
+  user is authenticated, and where the user is redirected to once the logout is complete.
   <br>
   This is where your app is running and you can change this later also.
 

@@ -13,8 +13,8 @@ the step 2.
 
 1. Your application should be registered in Asgardeo.
 
-   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if not
-   done already.
+   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if
+   not done already.
 
 2. Configure conditional authentication and deploy the **Group-Based 2FA Template** for the application.
 
