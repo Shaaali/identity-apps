@@ -4,11 +4,11 @@ module.exports = config({
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#title
      */
-    title: "Docs",
+    title: "Asgardeo Docs",
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#description
      */
-    description: " ",
+    description: "Get started with Asgardeo. Fully integrated developer experience to create seamless login experiences in minutes.",
     /**
      * Extra tags to be injected to the page HTML `<head>`
      *
