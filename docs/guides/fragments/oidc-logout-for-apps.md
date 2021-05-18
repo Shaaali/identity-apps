@@ -1,4 +1,5 @@
-The logout endpoint is used to terminate the user session at Asgardeo and log the user out. When the user is successfully logged out, he will be redirected to the registered authorized redirect URL.
+The logout endpoint is used to terminate the user session at Asgardeo and log the user out. When the user is
+successfully logged out, he will be redirected to the registered authorized redirect URL.
 
 _Logout endpoint:_
 

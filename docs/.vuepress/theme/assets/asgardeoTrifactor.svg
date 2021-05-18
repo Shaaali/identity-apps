@@ -1,0 +1,15 @@
+<!--
+ * Copyright (c) 2021, WSO2 Inc. (http://www.wso2.com). All Rights Reserved.
+ *
+ * This software is the property of WSO2 Inc. and its suppliers, if any.
+ * Dissemination of any information or reproduction of any material contained
+ * herein in any form is strictly forbidden, unless permitted by WSO2 expressly.
+ * You may not alter or remove any copyright or other notice from copies of this content."
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="149.104" height="257.501" viewBox="0 0 149.104 257.501">
+    <g id="Group_1261" data-name="Group 1261" transform="translate(1.477 -73.133)">
+        <path id="Path_321" data-name="Path 321" d="M816.483,178.71l27.1,47.043-30.053,52.239h60.1l27.242,47.043H753.416l-.206-36.807Z" transform="translate(-754.12 -104.576)" fill="none" stroke="rgba(179,179,179,0.75)" stroke-width="1.1"/>
+        <path id="Path_320" data-name="Path 320" d="M892.537,332.845l-30.053-52.1V186.52l84.4,146.325Z" transform="translate(-863.461 -2.711)" fill="none" stroke="rgba(179,179,179,0.75)" stroke-width="1.1"/>
+    </g>
+</svg>

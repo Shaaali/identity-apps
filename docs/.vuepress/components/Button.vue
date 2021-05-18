@@ -72,8 +72,14 @@ export default {
   &.default-outlined
     background-color: transparent
     color: #ff7300
-    border-style solid
+    border-style: solid
     border-width: 0.124em
-    border-color #ff7300
+    border-color: #ff7300
 
+  &.grey-outlined
+    background-color: transparent
+    color: #5a5a5a
+    border-style: solid
+    border-width: 0.145em
+    border-color: #e0e1e2
 </style>

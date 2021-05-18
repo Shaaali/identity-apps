@@ -1,6 +1,7 @@
 # Web application with OIDC
 
-If you have your own traditional web application, you can refer this guide to learn how to authenticate users to the application using Asgardeo with OpenID Connect.
+If you have your own traditional web application, you can refer this guide to learn how to authenticate users to the
+application using Asgardeo with OpenID Connect.
 
 ## Configure your application in Asgardeo
 
@@ -10,7 +11,8 @@ Create an application in Asgardeo that represents your web application.
 
 ## Implement authentication in web application
 
-The web application needs to communicate with Asgardeo to authenticate the users who access the application. Authenticating a user to the application requires the following steps.
+The web application needs to communicate with Asgardeo to authenticate the users who access the application.
+Authenticating a user to the application requires the following steps.
 
 1. Discover the OAuth 2.0 endpoints
 2. Make an authorization request to obtain a code
@@ -26,9 +28,11 @@ The web application needs to communicate with Asgardeo to authenticate the users
 
 **Requesting an authorization code**
 
-First, call authorize endpoint of Asgardeo to generate the authorization code. Since this uses browser redirection, this will be a simple HTTP GET request.
+First, call authorize endpoint of Asgardeo to generate the authorization code. Since this uses browser redirection, this
+will be a simple HTTP GET request.
 
-Once the authorization request is validated from Asgradeo, the browser will be redirected to the Asgardeo login page. When the user is successfully authenticated, the authorization code is returned to the browser.
+Once the authorization request is validated from Asgradeo, the browser will be redirected to the Asgardeo login page.
+When the user is successfully authenticated, the authorization code is returned to the browser.
 
 _Authorization endpoint:_
 
@@ -39,6 +43,7 @@ _Sample url:_
 ```  
 https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>
 ```
+
 <br>
 
 _Request parameters:_
@@ -76,9 +81,11 @@ _Sample response:_
 ```
 https://localhost:5000/?code=210a4f11-4928-3d91-9c97-00d45d71eb3a&session_state=a0c3bc89849ba0f236791f7fe76a837b7b4422fdc9aca16db394d19a28724a29.wQc7eSHSRrGNfECJRMhSAw
 ```
+
 ::: tip Find app information
 
-Information required to configure OIDC in the web application can be found in the **Protocol** tab of the application details view.
+Information required to configure OIDC in the web application can be found in the **Protocol** tab of the application
+details view.
 
 <img :src="$withBase('/assets/img/guides/applications/web-app-protocol-tab.png')" alt="web-app-protocol-tab-view">
 
@@ -88,7 +95,9 @@ Information required to configure OIDC in the web application can be found in th
 
 **Requesting an access token**
 
-To obtain the access token, you need to do a POST request to the token endpoint of Asgardeo with the authorization code retrieved in the above step and the `client id` and `client secret` obtained when registering the application in the authorization header.
+To obtain the access token, you need to do a POST request to the token endpoint of Asgardeo with the authorization code
+retrieved in the above step and the `client id` and `client secret` obtained when registering the application in the
+authorization header.
 
 _Token endpoint:_
 
@@ -132,6 +141,7 @@ curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/to
 --data-urlencode 'grant_type=authorization_code' \
 --data-urlencode 'redirect_uri=https://myfirstwebapp.io/login'
 ```
+
 </CodeGroupItem>
 
 <CodeGroupItem title="JavaScript - jQuery">
@@ -156,6 +166,7 @@ $.ajax(settings).done(function (response) {
     console.log(response);
 });
 ```
+
 </CodeGroupItem>
 
 <CodeGroupItem title="Nodejs - Axios">
@@ -186,6 +197,7 @@ axios(config)
         console.log(error);
     });
 ```
+
 </CodeGroupItem>
 </CodeGroup>
 
@@ -200,6 +212,7 @@ _Sample response:_
   "expires_in": 3600
 }
 ```
+
 <br>
 
 ### Validate ID token based on JWKS

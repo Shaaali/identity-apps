@@ -12,15 +12,10 @@
 
 <style lang="stylus">
 .footer-wrapper
-  display flex
-  flex-wrap wrap
-  justify-content space-evenly
-  align-items center
   padding 12px 30px
   border-top 1px solid var(--border-color)
   background var(--bgcolor)
   color var(--dark-color, #666)
-  text-align center
 
   @media (min-width $MQMobile)
     .has-sidebar &
@@ -37,9 +32,12 @@
   .footer
     margin 8px 16px
     font-size 14px
+    text-align left
+    float left
 
   .copyright
     margin 6px 0
+    text-align right
     font-size 13px
 
 .page:not(.not-found) + .footer-wrapper

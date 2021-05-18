@@ -87,10 +87,10 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['spa-react', 'React SDK for OpenID Connect'],
-                        ['spa-angular', 'Angular SDK for OpenID Connect'],
-                        ['spa-javascript', 'Javascript SDK for OpenID Connect'],
-                        ['spa-configure-general', 'Direct OpenID Connect integration']
+                        ['spa-react', 'React SDK for OIDC'],
+                        ['spa-angular', 'Angular SDK for OIDC'],
+                        ['spa-javascript', 'Javascript SDK for OIDC'],
+                        ['spa-configure-general', 'Direct OIDC integration']
                     ]
                 },
                 {
@@ -101,7 +101,7 @@ module.exports = config({
                     sidebarDepth: 2,
                     children: [
                         ['web-app-oidc-java-ee', 'Asgardeo OIDC Agent for Java EE'],
-                        ['web-app-oidc-general.md', 'Direct OpenID Connect integration']
+                        ['web-app-oidc-general.md', 'Direct OIDC integration']
                     ]
                 },
                 {
@@ -118,40 +118,45 @@ module.exports = config({
                 },
               ]
             },
-            {
-                title: 'Add login',
-                icon: 'addLoginIcon',
-                children: [
-                ['social-login/overview.md', 'Overview'],
-                {
-                    title: 'Social login',
-                    children: [
-                        ['/guides/social-login/google-qsg.md', 'Enable Google authentication']
-                    ]
-                },
-                {
-                    title: 'Enterprise login',
-                    children: [
-                        ['/guides/social-login/google-qsg.md', 'Enable OIDC authentication']
-                    ]
-                },
-              ]
-            },
+                // Guides for the login is not yet completed.
+            // {
+            //     title: 'Configure federated login',
+            //     icon: 'addLoginIcon',
+            //     children: [
+            //     ['social-login/overview.md', 'Overview'],
+            //     {
+            //         title: 'Social login',
+            //         children: [
+            //             ['/guides/social-login/google-qsg.md', 'Enable Google authentication']
+            //         ]
+            //     },
+            //     {
+            //         title: 'Enterprise login',
+            //         children: [
+            //             ['/guides/social-login/google-qsg.md', 'Enable OIDC authentication']
+            //         ]
+            //     },
+            //   ]
+            // },
             {
                 title: 'Add strong authentication',
                 icon: 'addAuthnIcon',
                 children: [
-                ['strong-authentication/overview.md', 'Overview'],
+                    // Guides for the multi factor authentication is not yet completed.
+                // ['strong-authentication/overview.md', 'Overview'],
+                // {
+                //     title: 'Multi factor authentication',
+                //     children: [
+                //         ['/guides/strong-authentication/mfa-qsg.md', 'Configure multi factor authentication']
+                //     ]
+                // },
                 {
-                    title: 'Multi factor authentication',
+                    title: 'Conditional authentication',
+                    prefix: '/guides/strong-authentication/conditional-auth/',
                     children: [
-                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure multi factor authentication']
-                    ]
-                },
-                {
-                    title: 'Adaptive authentication',
-                    children: [
-                        ['/guides/strong-authentication/mfa-qsg.md', 'Configure adaptive authentication']
+                        ['configure-conditional-auth.md', 'Configure conditional authentication'],
+                        ['conditional-auth-templates.md', 'Predefined templates'],
+                        ['conditional-auth-js-api-reference.md', 'JS API Reference']
                     ]
                 },
               ]

@@ -31,7 +31,7 @@
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <Button buttonType='default-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/'/>
+      <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/>
     </div>
   </div>
 </template>
@@ -98,10 +98,9 @@ function css (el, property) {
   right 0
   height $navbarHeight
   padding $navbarVerticalPadding $navbarHorizontalPadding
-  background var(--bgcolor-blur)
+  background #ffffff
   box-sizing border-box
   box-shadow 0 2px 8px var(--card-shadow-color)
-  backdrop-filter saturate(200%) blur(20px)
   line-height $navbarHeight - $navbarVerticalPadding * 2
   transition transform 0.3s ease-in-out
 

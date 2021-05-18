@@ -1,6 +1,7 @@
 # Single page application: Angular
 
-This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React SDK
+This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React
+SDK
 
 <Button buttonType='primary' buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-sample'/>
 
@@ -34,10 +35,11 @@ npm install @asgardeo/auth-angular --save
 
 Copy and use the following code within your root component to configure `AsgardeoAuthModule` for your application.
 
-
-Pass the relevant `clientID`, `serverOrigin`, `signInRedirectURL` & `signOutRedirectURL` to the `forRoot()` function of `AsgardeoAuthModule` to get the SDK to work with your application.
+Pass the relevant `clientID`, `serverOrigin`, `signInRedirectURL` & `signOutRedirectURL` to the `forRoot()` function
+of `AsgardeoAuthModule` to get the SDK to work with your application.
 
 ::: tip Find app information
+
 These details can be found in the **Protocol** tab of the application details view.
 :::
 
@@ -76,7 +78,8 @@ export class AppModule { }
 
 **3. Add login**
 
-Inject `AsgardeoAuthService` to your components to access the authenticated state and sign-in and sign-out functionalities.
+Inject `AsgardeoAuthService` to your components to access the authenticated state and sign-in and sign-out
+functionalities.
 
 ```
 import { Component } from "@angular/core";
