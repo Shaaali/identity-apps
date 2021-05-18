@@ -172,7 +172,6 @@
     .feature
       display flex
       flex-direction column
-      justify-content center
       flex-basis calc(25% - 4rem)
       margin 0.5rem
       padding  1.5rem 1.5rem
@@ -200,7 +199,20 @@
         font-size 14px
         font-weight 460
 
-        &.learn-more
+        &.learn-more-2
+          margin-top 1.80rem
+          margin-bottom 0
+
+          &:hover
+            color #ff7300
+
+          &::after
+            margin-left 10px !important
+            margin-top 10px !important
+            vertical-align middle !important
+            content url("../../assets/icons/rightArrowIcon.svg")
+
+        &.learn-more-4
           margin-top 2rem
           margin-bottom 0
 

@@ -58,10 +58,10 @@
               class="feature"
               @click="feature.link ? navigate(feature.link) : ''"
           >
-            <img v-if="feature.icon === 'padlockIcon'" src="../assets/icons/padlockIcon.svg" width="18" height="18" />
-            <img v-else-if="feature.icon === 'federatedLoginIcon'" src="../assets/icons/federatedLoginIcon.svg" width="22" height="22" />
-            <img v-else-if="feature.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="20" height="20" />
-            <img v-else-if="feature.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="20" height="20" />
+            <img v-if="feature.icon === 'padlockIcon'" src="../assets/icons/padlockIcon.svg" width="22" height="22" />
+            <img v-else-if="feature.icon === 'federatedLoginIcon'" src="../assets/icons/federatedLoginIcon.svg" width="26" height="26" />
+            <img v-else-if="feature.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="24" height="24" />
+            <img v-else-if="feature.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="24" height="24" />
             <h4>{{ feature.title }}</h4>
             <p>{{ feature.details }}</p>
             <div
@@ -72,7 +72,8 @@
             >
               <a class="sub-link">{{ subLink.name }}</a>
             </div>
-            <p class="learn-more" @click="feature.link ? navigate(feature.link) : ''">Learn more</p>
+            <p v-if="feature.icon === 'padlockIcon' || feature.icon === 'usersIcon'" class="learn-more-2" @click="feature.link ? navigate(feature.link) : ''">Learn more</p>
+            <p v-if="feature.icon === 'addAuthnIcon' || feature.icon === 'federatedLoginIcon'" class="learn-more-4" @click="feature.link ? navigate(feature.link) : ''">Learn more</p>
           </div>
         </div>
       </div>
@@ -93,9 +94,9 @@
               class="service"
           >
             <div class="img-header-container">
-              <img v-if="service.icon === 'supportedPluginsIcon'" src="../assets/icons/supportedPluginsIcon.svg" width="20" height="20" />
-              <img v-if="service.icon === 'securityComplianceIcon'" src="../assets/icons/securityComplianceIcon.svg" width="20" height="20" />
-              <img v-if="service.icon === 'solutionsIcon'" src="../assets/icons/solutionsIcon.svg" width="22" height="22" />
+              <img v-if="service.icon === 'supportedPluginsIcon'" src="../assets/icons/supportedPluginsIcon.svg" width="22" height="22" />
+              <img v-if="service.icon === 'securityComplianceIcon'" src="../assets/icons/securityComplianceIcon.svg" width="22" height="22" />
+              <img v-if="service.icon === 'solutionsIcon'" src="../assets/icons/solutionsIcon.svg" width="24" height="24" />
               <a @click="service.link ? navigate(service.link) : ''">{{ service.title }}</a>
             </div>
             <p>{{ service.details }}</p>

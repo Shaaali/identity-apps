@@ -73,5 +73,5 @@ services:
       link: /quickstarts/
       icon: solutionsIcon
 
-footer: Asgardeo Docs
-copyrightText: © 2021 WSO2
+footer: Asgardeo Docs | © 2021 WSO2
+copyrightText: false
