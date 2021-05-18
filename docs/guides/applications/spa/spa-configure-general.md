@@ -1,4 +1,4 @@
-# Add authentication to SPA
+# SPA with OIDC
 
 If you have your own single page application, you can refer this guide to learn how to authenticate users to the
 application using Asgardeo with OpenID Connect.
