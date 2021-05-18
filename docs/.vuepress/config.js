@@ -52,18 +52,19 @@ module.exports = config({
             text: 'Quick Starts',
             link: '/quickstarts/',
           },
-          {
-            text: 'APIs',
-            link: '/apis/',
-          },
-          {
-            text: 'SDKs',
-            link: '/sdks/'
-          },
-          {
-            text: 'Concepts',
-            link: '/concepts/'
-          }
+        //  These sections are yet not completed. Uncomment as they are implemented
+//          {
+//            text: 'APIs',
+//            link: '/apis/',
+//          },
+//          {
+//            text: 'SDKs',
+//            link: '/sdks/'
+//          },
+//          {
+//            text: 'Concepts',
+//            link: '/concepts/'
+//          }
         ],
         sidebar: {
             '/guides/' : [
@@ -100,22 +101,23 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['web-app-oidc-java-ee', 'Asgardeo OIDC Agent for Java EE'],
+                        ['web-app-oidc-java-ee', 'OIDC Agent for Java EE'],
                         ['web-app-oidc-general.md', 'Direct OIDC integration']
                     ]
                 },
-                {
-                    title: 'Application settings',
-                    prefix: '/guides/applications/application-settings/',
-                    collapsable: false,
-                    children: [
-                        ['configure-general.md', 'Configure general details'],
-                        ['configure-protocol.md', 'Define authorization protocol'],
-                        ['configure-user-attribute.md', 'Select user attributes'],
-                        ['configure-sign-on.md', 'Configure sign-on method'],
-                        ['configure-advanced.md', 'Configure advanced settings']
-                    ]
-                },
+                // Uncomment as each section is implemented
+//                {
+//                    title: 'Application settings',
+//                    prefix: '/guides/applications/application-settings/',
+//                    collapsable: false,
+//                    children: [
+//                        ['configure-general.md', 'Configure general details'],
+//                        ['configure-protocol.md', 'Define authorization protocol'],
+//                        ['configure-user-attribute.md', 'Select user attributes'],
+//                        ['configure-sign-on.md', 'Configure sign-on method'],
+//                        ['configure-advanced.md', 'Configure advanced settings']
+//                    ]
+//                },
               ]
             },
                 // Guides for the login is not yet completed.

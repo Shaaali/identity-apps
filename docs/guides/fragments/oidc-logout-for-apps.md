@@ -7,7 +7,9 @@ _Logout endpoint:_
 
 _Sample url:_
 
-`https://accounts.asgardeo.io/t/bifrost/oidc/logout?id_token_hint=<id_token>&post_logout_redirect_uri=<redirect URI>&state=<state>`
+```
+https://accounts.asgardeo.io/t/bifrost/oidc/logout?id_token_hint=<id_token>&post_logout_redirect_uri=<redirect URI>&state=<state>
+```
 
 _Request parameters:_
 
