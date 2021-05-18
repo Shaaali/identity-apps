@@ -31,7 +31,7 @@
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <Button buttonType='default-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/'/>
+      <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/'/>
     </div>
   </div>
 </template>
