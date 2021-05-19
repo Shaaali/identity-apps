@@ -7,17 +7,17 @@
         class="home-link"
     >
       <img
-          v-if="$site.themeConfig.logo"
+          v-if="$site.themeConfig.productTitle"
           class="logo"
           :src="$withBase($site.themeConfig.logo)"
-          :alt="$siteTitle"
+          :alt="$site.themeConfig.productTitle"
       >
       <span
-          v-if="$siteTitle"
+          v-if="$site.themeConfig.productTitle"
           ref="siteName"
           class="site-name"
           :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
+      >{{ $site.themeConfig.productTitle }}</span>
     </RouterLink>
 
     <div

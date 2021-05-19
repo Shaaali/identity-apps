@@ -4,7 +4,7 @@ module.exports = config({
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#title
      */
-    title: "Docs",
+    title: "Asgardeo Docs",
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#description
      */
@@ -34,6 +34,7 @@ module.exports = config({
         repo: '',
         editLinks: true,
         docsDir: '',
+        productTitle: "Docs",
         editLinkText: 'Edit this page on Github',
         logo: '/assets/img/asgardeo-logo.png',
         search: true,

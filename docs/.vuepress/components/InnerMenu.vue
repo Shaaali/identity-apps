@@ -58,7 +58,7 @@ function css (el, property) {
 <style lang="stylus">
 .innerMenu
   position fixed
-  z-index 20
+  z-index 5
   top 0
   left 0
   right 0
@@ -70,9 +70,10 @@ function css (el, property) {
   backdrop-filter saturate(200%) blur(20px)
   line-height $navbarHeight - $navbarVerticalPadding * 2
   transition transform 0.3s ease-in-out
-  margin-top 59px
+  margin-top 58px
 
   @media (max-width $MQMobile)
+    margin-top 52px !important
     height $navbarMobileHeight
     padding $navbarMobileVerticalPadding $navbarMobileHorizontalPadding
     padding-left $navbarMobileHorizontalPadding + 2.4rem
