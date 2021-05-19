@@ -39,6 +39,7 @@ module.exports = config({
         search: true,
         Navbar: true,
         blog: false,
+        feed: false,
         pwa: false,
         git: {
             contributor:false
