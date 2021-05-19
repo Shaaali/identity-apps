@@ -191,9 +191,7 @@ module.exports = config({
                     ['/concepts/authentication/oidc', 'OpenID Connect'],
                 ]
             },
-            ],
-            '/quickstarts/' : [
-                '']
+            ]
         },
         mdEnhance: {
             align : true
