@@ -46,7 +46,7 @@ You need to first create an application in Asgardeo that represents your single 
 
 ### Configure the sample
 
-Change the `config.json` file found in the `asgardeo-angular-app/sr` sample folder with the relevant values.
+Change the `config.json` file found in the `asgardeo-angular-app/src` sample folder with the relevant values.
 
 - **clientID** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
 - **serverOrigin** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>"
