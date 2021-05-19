@@ -69,6 +69,6 @@ sed -i 's|'"${REF_IN_DEV}"'|  GITHUB_RELEASE_TAG: v'"${VERSION}"'|' $REPO_DIR/as
 # Push new release version to dev-deploy.yaml.
 git -C asgardeo-deployment-pipeline add $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/docs/dev-setup-variables.yaml
 git -C asgardeo-deployment-pipeline commit -m "[Dev] Update asgardeo-docs release version to - $VERSION"
-git -C asgardeo-deployment-pipeline push origin dev
+git -C asgardeo-deployment-pipeline push origin dev-001
 
 echo "Release builder execution is completed."
