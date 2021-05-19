@@ -9,7 +9,7 @@ This quick start guide will deploy a sample React single page application in you
 ::: tip Before you begin
 
 1. Create an organization in Asgardeo
-2. Create a consumer user for your organization
+2. Create a customer account in your organization
 3. Install npm and node in your local environment
 
 :::

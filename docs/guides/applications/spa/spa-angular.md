@@ -7,8 +7,8 @@ SDK
 
 ::: tip Before you begin
 
-1. Create a tenant in Asgardeo
-2. Create a consumer user for your organization
+1. Create an organization in Asgardeo
+2. Create a customer account in your organization
 3. Install npm and node in your local environment
 
 :::
