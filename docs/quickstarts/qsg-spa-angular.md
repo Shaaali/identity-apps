@@ -1,10 +1,10 @@
 ---
-sidebar: false
+sidebar: auto
 ---
 
 # Angular SPA Sample
 
-This quick start guide will deploy a sample Angular single page application in your local environment and secure it with Asgadeo using OpenID Connect.
+Following this guide your will be able to deploy a sample Angular single page application in your local environment and secure it with Asgadeo using OpenID Connect.
 
 ::: tip Before you begin
 
@@ -18,27 +18,13 @@ This quick start guide will deploy a sample Angular single page application in y
 
 You need to first create an application in Asgardeo that represents your single page application.
 
-1. On the Asgardeo console, click **Develop > Applications**.
-
-2. Click **New Application**.
-
-3. Select **Single Page Application**.
-
-4. Fill in the following details.
-
-    - Name: A unique name to identify your application.
-
-    - Authorized Redirect URLs: The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated, and where the user is redirected to once the logout is complete.
-
-   ::: tip
-   Click **Add Now** to use the authorized redirect URL for the sample app.
-   :::
-
-5. Click **Register**.
+<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo-for-sample.md'/>
 
 ## Configure the sample application
 
 ### Download the sample
+
+Click on the button below to download the sample.
 
 [Download Angular Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip)
 
@@ -60,7 +46,7 @@ Change the `config.json` file found in the `asgardeo-angular-app/src` sample fol
 }
 ```
 
-**Run the sample locally**
+### Run the sample
 
 Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000` 
 
