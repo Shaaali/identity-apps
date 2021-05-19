@@ -63,7 +63,7 @@ git -C asgardeo-deployment-pipeline config user.name "$GIT_USERNAME"
 git -C asgardeo-deployment-pipeline config user.email "iam-cloud@wso2.com"
 git -C asgardeo-deployment-pipeline checkout dev-001
 
-REF_IN_DEV=$(grep 'GITHUB_RELEASE_TAG:' $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/asgardeo-docs/dev-setup-variables.yaml)
+REF_IN_DEV=$(grep 'GITHUB_RELEASE_TAG:' $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/docs/dev-setup-variables.yaml)
 sed -i 's|'"${REF_IN_DEV}"'|  GITHUB_RELEASE_TAG: v'"${VERSION}"'|' $REPO_DIR/asgardeo-deployment-pipeline/cd-pipelines/docs/dev-setup-variables.yaml
 
 # Push new release version to dev-deploy.yaml.
