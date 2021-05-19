@@ -75,7 +75,7 @@ module.exports = config({
                 icon:  'gettingStartedIcon',
                 children: [
                 '',
-                ['get-started/create-tenant.md', 'Create tenant']
+                ['get-started/create-organization.md', 'Create organization']
               ]
             },
             {

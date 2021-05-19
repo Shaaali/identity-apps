@@ -1,6 +1,6 @@
 1. On the Asgardeo Console, click **Manage > Users**.
 
-2. Click **New User** and select **Consumer account**.
+2. Click **New User** and select **Customer**.
    > For more information, see [types of user accounts in Asgardeo](../../concepts/user-mgt/user-types.md).
 
 3. Fill in the user's details.
@@ -16,8 +16,6 @@
    :::
 
 6. Click **Next**.
-
-6. Click on the camera icon if you want to update the user picture.
 
 7. Click **Finish**.
 
