@@ -3,12 +3,12 @@
 This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React
 SDK
 
-<Button buttonType='primary' buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-sample'/>
+<Button buttonType='primary' buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-javascript'/>
 
 ::: tip Before you begin
 
-1. Create a tenant in Asgardeo
-2. Create a consumer user for your organization
+1. Create an organization in Asgardeo
+2. Create a customer account in your organization
 3. Install npm and node in your local environment
 
 :::
