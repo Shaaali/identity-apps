@@ -1,6 +1,6 @@
 **Create a new application in Asgardeo**
 
-1. Select the **Develop** in the Console
+1. Select the **Develop** tab in the Console
 2. Move to the **Application** section from the left navigation
 3. Click on “New Application” button
 
