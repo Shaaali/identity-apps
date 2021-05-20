@@ -45,11 +45,11 @@ features:
 
   - title: Manage users
     details: Onboard users and collectively manage their access
-    link: /concepts/user-mgt/users-groups-roles/
+    link: /guides/user-management/
     icon: usersIcon
     subLinks:
       - name: "Users"
-        link: /concepts/user-mgt/users-groups-roles/
+        link: /guides/user-management/
 
       - name: "Roles"
         link: /concepts/user-mgt/users-groups-roles/

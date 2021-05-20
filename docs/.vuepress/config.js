@@ -164,6 +164,12 @@ module.exports = config({
                     ]
                 },
               ]
+            },{
+                title: 'Manage Users',
+                    icon:  'usersIcon',
+                    children: [
+                        ['user-management/', 'Users'],
+              ]
             },
             ],
 
