@@ -1,23 +1,22 @@
 # Single page application
 
-A Single Page Application (SPA) is a web application that loads a single HTML page initially and dynamically update that
-page as the user interacts with the application. A SPA works inside a browser and does not require page reloading during
-use. The apps you use on a daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
-https://www.youtube.com/watch?v=tmKD2famPJc&t=129s
+Single-page applications (SPAs) are web applications that do not have a back end. They load a single HTML page and 
+dynamically updates the content based on the user interaction. Since SPAs run their logic entirely on the browser they 
+are also known as browser-based apps.
 
-## SPA with OIDC
-
-<img :src="$withBase('/assets/img/guides/spa-oidc.png')" alt="spa-with-oidc-diagram">
-
-Describes the diagram
-
-Callback URL in the app, how Asgardeo provides OIDC security to the application.
-
-<br>
+The apps you use on a daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
 
 ## Secure your SPA using Asgardeo
 
-The following guides provide the steps that are required to ensure the security of your SPAs with Asgradeo
+SPA by design run with the source code exposed in the end user’s browser. So they become incapable of maintaining any secrets. 
+SPAs are known as public clients for this reason. 
+
+Based on the [OAuth 2.0 best practices for browser-based apps](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-browser-based-apps-08)
+Asgardeo recommends securing your SPAs using the OpenID Connect Authorization Code Flow for public clients 
+with the PKCE ([Proof Key for Code Exchange](https://datatracker.ietf.org/doc/html/rfc7636)) extension.
+
+The following guides provide the detailed steps needed to secure your SPAs with Asgradeo using the OpenID Connect 
+Authorization Code Flow for public clients with the PKCE. 
 
 <table>
   <tbody>
@@ -43,4 +42,6 @@ The following guides provide the steps that are required to ensure the security 
 
 ## Related Links
 
-* [Quickstart: Single page application sample](../../../quickstarts/qsg-spa-sample)
+* [Tryout React SPA Sample](../../../quickstarts/spa-react.md)
+* [Tryout Angular SPA Sample](../../../quickstarts/spa-angular.md)
+* [Tryout JavaScript SPA Sample](../../../quickstarts/spa-javascript.md)
