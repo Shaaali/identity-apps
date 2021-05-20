@@ -42,6 +42,6 @@ Authorization Code Flow for public clients with the PKCE.
 
 ## Related Links
 
-* [Tryout React SPA Sample](../../../quickstarts/spa-react.md)
-* [Tryout Angular SPA Sample](../../../quickstarts/spa-angular.md)
-* [Tryout JavaScript SPA Sample](../../../quickstarts/spa-javascript.md)
+* [Tryout React SPA Sample](/quickstarts/qsg-spa-react.md)
+* [Tryout Angular SPA Sample](/quickstarts/qsg-spa-angular.md)
+* [Tryout JavaScript SPA Sample](/quickstarts/qsg-spa-javascript.md)
