@@ -4,7 +4,7 @@ sidebar: auto
 
 # JavaScript SPA Sample
 
-Following this guide your will be able to deploy a sample JavaScript single page application in your local environment and secure it with Asgadeo using OpenID Connect.
+Following this guide, you will be able to deploy a sample JavaScript single page application in your local environment and secure it with Asgadeo using OpenID Connect.
 
 ::: tip Before you begin
 
