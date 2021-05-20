@@ -1,7 +1,7 @@
 # Single page application: Javascript
 
-This guide provides steps to authenticate users to your React SPA with OIDC protocol by using the Asgardeo Auth React
-SDK
+This guide provides steps to authenticate users to your JavaScript SPA with OpenID Connect using the [Asgardeo JavaScript SDK](https://github.com/asgardeo/asgardeo-auth-spa-sdk/blob/main/README.md)
+
 
 <Button buttonType='primary' buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-javascript'/>
 
