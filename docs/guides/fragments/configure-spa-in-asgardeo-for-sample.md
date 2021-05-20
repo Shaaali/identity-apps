@@ -1,5 +1,3 @@
-**Create a new application in Asgardeo**
-
 1. Select the **Develop** tab in the Console
 2. Move to the **Application** section from the left navigation
 3. Click on “New Application” button
@@ -26,16 +24,8 @@
 - **Authorized Redirect URLs:** The authorized redirect URLs determine where the authorization code is sent to once the
   user is authenticated, and where the user is redirected to once the logout is complete.
   <br>
-  This is where your app is running and you can change this later also.
 
-**Enable CORS for the authorized URL**
+  Click **Add Now** to use add the default authorized redirect url (https://localhost:5000) of the sample.
 
-For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts.
+6. Click **Register**.
 
-[Cross Origin Resource Sharing(CORS)](TODO:link-to-concept) allows your SPA to do cross-origin HTTP requests to complete
-the login flow by pre-registering your SPA origin as an allowed one.
-
-6. Click on the **Allow** button with the warning message *“CORS not allowed for origin of this URL."* right after the
-   newly added URL to mark the origin of your SPA as an allowed one
-
-<img :src="$withBase('/assets/img/guides/applications/add-cors-spa.png')" alt="add-cors-spa-ui">

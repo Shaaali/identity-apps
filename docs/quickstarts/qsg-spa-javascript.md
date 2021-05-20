@@ -1,10 +1,10 @@
 ---
-sidebar: false
+sidebar: auto
 ---
 
 # JavaScript SPA Sample
 
-This quick start guide will deploy a sample JavaScript single page application in your local environment and secure it with Asgadeo using OpenID Connect.
+Following this guide, you will be able to deploy a sample JavaScript single page application in your local environment and secure it with Asgadeo using OpenID Connect.
 
 ::: tip Before you begin
 
@@ -18,27 +18,13 @@ This quick start guide will deploy a sample JavaScript single page application i
 
 You need to first create an application in Asgardeo that represents your single page application.
 
-1. On the Asgardeo console, click **Develop > Applications**.
-
-2. Click **New Application**.
-
-3. Select **Single Page Application**.
-
-4. Fill in the following details.
-
-    - Name: A unique name to identify your application.
-
-    - Authorized Redirect URLs: The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated, and where the user is redirected to once the logout is complete.
-
-   ::: tip
-   Click **Add Now** to use the authorized redirect URL for the sample app.
-   :::
-
-5. Click **Register**.
+<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo-for-sample.md'/>
 
 ## Configure the sample application
 
 ### Download the sample
+
+Click on the button below to download the sample.
 
 [Download Javascript Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/download/v0.1.2/asgardeo-html-js-app.zip)
 
@@ -60,7 +46,7 @@ const authConfig = {
 };
 ```
 
-### Run the sample locally
+### Run the sample
 
 Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000` 
 
