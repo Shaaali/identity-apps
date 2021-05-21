@@ -1,14 +1,15 @@
-# Single page application
+# Single page applications
 
-Single-page applications (SPAs) are web applications that do not have a back end. They load a single HTML page and 
-dynamically updates the content based on the user interaction. Since SPAs run their logic entirely on the browser they 
-are also known as browser-based apps.
+Single-page applications (SPAs) are JavaScript apps that run on the browser. They load a single HTML page and 
+dynamically update the content based on the user interaction. SPAs do API calls directly from the browser to fetch 
+information to update its content.
 
-The apps you use on a daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
+Since SPAs run their logic entirely on the browser they are also known as browser-based apps. The apps you use on a 
+daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
 
-## Secure your SPA using Asgardeo
+## Secure your SPA with Asgardeo
 
-SPA by design run with the source code exposed in the end user’s browser. So they become incapable of maintaining any secrets. 
+SPAs by design run with the source code exposed in the browser. So they become incapable of maintaining any secrets. 
 SPAs are known as public clients for this reason. 
 
 Based on the [OAuth 2.0 best practices for browser-based apps](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-browser-based-apps-08)

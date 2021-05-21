@@ -1,4 +1,4 @@
-# Single page application: React
+# SPA with OIDC: React
 
 This guide provides steps to authenticate users to your React SPA with OpenID Connect using the [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk/blob/main/README.md).
 
