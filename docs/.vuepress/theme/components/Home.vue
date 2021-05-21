@@ -3,6 +3,7 @@
     :aria-labelledby="$frontmatter.heroText !== null ? 'main-title' : null"
     class="home"
   >
+    <Banner v-if="$frontmatter.homeBannerText" :bannerText="$frontmatter.homeBannerText"/>
     <header class="hero">
       <MyTransition :delay="0.04">
         <img class="hero-image" src="../assets/asgardeoTrifactor.svg" width="150" length="300"/>

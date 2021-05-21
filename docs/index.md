@@ -3,6 +3,7 @@ home: true
 heroText: Asgardeo Documentation
 heroImage: /assets/img/asgardeo-logo.png
 tagline: A developer-first IAM solution, Asgardeo provides simplicity by integrating easily to any application, supporting even the unique and complex requirements.
+homeBannerText: Work In Progress! Bear with us while we perfect our documentation for you.
 actionText: Quick Start →
 actionLink: /guide/
 

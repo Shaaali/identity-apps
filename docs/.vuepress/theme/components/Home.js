@@ -2,9 +2,10 @@ import Vue from "vue";
 import MyTransition from "@theme/components/MyTransition.vue";
 import NavLink from "@theme/components/NavLink.vue";
 import { navigate } from "@theme/util/navigate";
+import Banner from "../../components/Banner";
 export default Vue.extend({
     name: "Home",
-    components: { MyTransition, NavLink },
+    components: { MyTransition, NavLink, Banner },
     computed: {
         actionLinks() {
             const { action } = this.$frontmatter;
