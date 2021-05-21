@@ -1,6 +1,6 @@
 # Web Applications
 
-Web applications are the most the common type of applications in use. Web applications are usually hosted in a web server
+Web applications are the most common type of applications in use. They are usually hosted on a web server
 and accessed by the browser. Web applications need authentication as they offer functionality dependent on the 
 logged-in user.
 
@@ -13,4 +13,3 @@ Following guides provide detailed steps to integrating login to your web applica
 
 * [Login to Java EE web app using Asgardeo OpenID Connect Agent](./web-app-oidc-java-ee.md)
 * [Login to any web app using OpenID Connect](./web-app-oidc-general.md)
-
