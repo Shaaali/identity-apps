@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+breadcrumb: false
 ---
 
 # React SPA Sample
