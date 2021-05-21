@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+breadcrumb: false
 ---
 
 # JavaScript SPA Sample

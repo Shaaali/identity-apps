@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+breadcrumb: false
 ---
 
 # Angular SPA Sample
