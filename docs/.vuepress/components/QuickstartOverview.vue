@@ -23,27 +23,14 @@
             <img class="tech-icon" src="../theme/assets/images/technologies/react-logo.svg" width="100" height="100"/>
           </a>
         </div>
-        <div class="tech-item disabled">
-          <img class="tech-icon" src="../theme/assets/images/technologies/android-logo.svg" width="100" height="100"/>
+        <div class="tech-item">
+          <img class="tech-icon disabled" src="../theme/assets/images/technologies/android-logo.svg" width="100" height="100"/>
         </div>
         <div class="tech-item">
-          <img class="tech-icon" src="../theme/assets/images/technologies/java-logo.svg" width="100" height="100"/>
+          <img class="tech-icon disabled" src="../theme/assets/images/technologies/java-logo.svg" width="100" height="100"/>
         </div>
         <div class="tech-item">
-          <img class="tech-icon" src="../theme/assets/images/technologies/dotnet-logo.svg" width="100" height="100"/>
-        </div>
-      </div>
-      <div class="container">
-        <h3 class="title">Text fadeIn top</h3>
-        <div class="content">
-          <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1055&q=80">
-            <div class="content-details fadeIn-top">
-              <h3>This is a title</h3>
-              <p>This is a short description</p>
-            </div>
-          </a>
+          <img class="tech-icon disabled" src="../theme/assets/images/technologies/dotnet-logo.svg" width="100" height="100"/>
         </div>
       </div>
     </MyTransition>

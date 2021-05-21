@@ -31,6 +31,10 @@
     flex-grow: 1
     margin 0.5em 3.5em
 
+  img.tech-icon.disabled
+      opacity 0.5
+      pointer-events: none !important
+
     img.tech-icon
       padding 2em
       border-radius 0.7em
@@ -41,7 +45,7 @@
       -ms-filter: grayscale(100%)
       filter: grayscale(100%)
 
-  .tech-item:hover .tech-icon
+  .tech-item:hover .tech-icon:not(.disabled)
     -webkit-filter: grayscale(0%)
     -moz-filter: grayscale(0%)
     -o-filter: grayscale(0%)
