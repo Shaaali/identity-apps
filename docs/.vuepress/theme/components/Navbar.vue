@@ -18,6 +18,10 @@
           class="site-name"
           :class="{ 'can-hide': $site.themeConfig.logo }"
       >{{ $site.themeConfig.productTitle }}</span>
+      <span
+          v-if="$site.themeConfig.docVersion"
+          class="site-version"
+      >{{ $site.themeConfig.docVersion }}</span>
     </RouterLink>
 
     <div
@@ -152,6 +156,24 @@ function css (el, property) {
     font-weight 600
     color var(--text-color)
     position relative
+
+    @media (max-width $MQMobile)
+      width calc(100vw - 9.4rem)
+      overflow hidden
+      white-space nowrap
+      text-overflow ellipsis
+
+  .site-version
+    font-size 0.6em
+    font-weight 600
+    color white
+    position absolute
+    background-color #f77301
+    padding 0 0.5rem
+    border-radius 4px
+    line-height 1rem !important
+    margin-left -0.8rem
+    margin-top -0.4rem
 
     @media (max-width $MQMobile)
       width calc(100vw - 9.4rem)

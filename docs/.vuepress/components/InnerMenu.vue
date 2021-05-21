@@ -4,8 +4,6 @@
   </div>
 </template>
 
-<!--<script src="./Navbar" />-->
-
 <script>
 import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
