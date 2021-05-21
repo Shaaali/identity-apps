@@ -1,17 +1,23 @@
 # Manage applications
 
-Authentication is the best way to provide security to your application. Password-based login systems is an additional
-burden to the application developer. Asgardeo provides a cloud based platform to store digital identities of the users.
-You can configure your applications to manage the user authentication via Asgardeo.
+Regardless of the application type or the development technology, you can use Asgardeo to simply add authentication 
+to your application by picking one of the supported standard protocols.
 
-<img :src="$withBase('/assets/img/guides/authentication-flow.png')" alt="authentication-flow-diagram">
-
-Select the application type that you want to integrate with Asgardeo.
-
+Currently, Asgardeo supports integrating two application types.
 * [Single page applications](./spa/README.md)
-* [Web application](./web-app/README.md)
+* [Web applications](./web-app/README.md)
 
-If you want to checkout a generic guide on configuring an application in Asgardeo, please follow
-the [Application Settings](./application-settings/configure-general) section. These guides describe all the
-configurations related to authorization protocol definition, user attribute selection and sign on methods of the
-applications.
+When you register an application in Asgardeo you can, 
+
+* **Enable login with a standard authentication protocol**: To add authentication for your applications, Asgardeo 
+provides standard open specifications and identity protocols like OpenID Connect and SAML.
+  
+* **Decide user attributes to be shared with your application**: With Asgardeo you can manage the user attributes you 
+want to share with an application. This means, without sharing all the user attributes, you can decide to share only 
+the user attributes required for the application.
+  
+* **Design the login flow**: You can decide which factor to be used as the second layer of authentication or the 
+number of factors to be used as additional authentication layers or factors like social login.
+  
+* **Enforce conditional authentication**: You are given the choice to dynamically modify the login flow of a user 
+based on the user’s devices, networks, locations, or usage contexts.
