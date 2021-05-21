@@ -3,7 +3,7 @@
     <MyTransition :delay="0.1">
       <header class="title-container">
         <h1>Quickstarts</h1>
-        <p class="description">Tryout our samples to learn how to manage your applications with Asgardeo</p>
+        <p class="description">Tryout our samples to learn how to enable login to your applications with Asgardeo</p>
       </header>
     </MyTransition>
     <MyTransition :delay="0.1">
