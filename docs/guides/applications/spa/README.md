@@ -1,8 +1,8 @@
 # Single page applications
 
-Single-page applications (SPAs) are JavaScript apps that run on the browser. They load a single HTML page and 
-dynamically update the content based on the user interaction. SPAs do API calls directly from the browser to fetch 
-information to update its content.
+Single-page applications (SPAs) are apps that run on the browser and do not require a page reload with change 
+in content. SPAs load a single HTML page initially and dynamically update the content as a user interacts with it. 
+They fetch content by doing API calls to a web server directly from the browser.
 
 Since SPAs run their logic entirely on the browser they are also known as browser-based apps. The apps you use on a 
 daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
