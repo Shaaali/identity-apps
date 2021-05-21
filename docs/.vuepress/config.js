@@ -4,7 +4,7 @@ module.exports = config({
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#title
      */
-    title: "Docs",
+    title: "Asgardeo Docs",
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#description
      */
@@ -34,6 +34,8 @@ module.exports = config({
         repo: '',
         editLinks: true,
         docsDir: '',
+        docVersion: "BETA",
+        productTitle: "Docs",
         editLinkText: 'Edit this page on Github',
         logo: '/assets/img/asgardeo-logo.png',
         search: true,
@@ -51,7 +53,7 @@ module.exports = config({
             link: "/guides/",
           },
           {
-            text: 'Quick Starts',
+            text: 'Quickstarts',
             link: '/quickstarts/',
           },
         //  These sections are yet not completed. Uncomment as they are implemented

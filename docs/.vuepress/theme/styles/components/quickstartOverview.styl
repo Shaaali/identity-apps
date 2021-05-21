@@ -1,0 +1,86 @@
+.quickstarts-page
+  display block
+  max-width 100%
+  min-height 100vh - $navbarHeight
+  padding 0 2rem 0
+  margin 0 auto 0
+
+  hr
+    display none
+
+  .title-container
+    justify-content center
+    text-align center
+    border-bottom 1px solid
+    border-bottom-color #ececec
+
+    h1
+      padding-top 0
+      margin-bottom -0.8rem !important
+
+  .tech-container
+    display flex
+    justify-content center
+    margin-top 1rem
+
+    p
+      margin-top -18px !important
+
+  .tech-item
+    display flex
+    flex-grow: 1
+    margin 0.5em 3.5em
+
+    img.tech-icon
+      padding 2em
+      border-radius 0.7em
+      cursor: pointer !important
+      -webkit-filter: grayscale(100%)
+      -moz-filter: grayscale(100%)
+      -o-filter: grayscale(100%)
+      -ms-filter: grayscale(100%)
+      filter: grayscale(100%)
+
+  .tech-item:hover .tech-icon
+    -webkit-filter: grayscale(0%)
+    -moz-filter: grayscale(0%)
+    -o-filter: grayscale(0%)
+    -ms-filter: grayscale(0%)
+    filter: grayscale(0%)
+
+  .header-container
+    display: flex
+    align-items: center
+    flex-direction: row
+
+  .title-section
+    text-align center
+    margin-bottom 3.5rem
+
+    @media (min-width $MQNarrow)
+      display flex
+      justify-content space-evenly
+      align-items center
+      text-align left
+
+    @media (max-width $MQNarrow)
+      min-height 100vh - $navbarMobileHeight
+      padding-top $navbarMobileHeight
+
+    @media (max-width $MQMobileNarrow)
+      padding-left 1.5rem
+      padding-right 1.5rem
+
+  .description
+    color #656565
+    font-size 1rem
+    line-height 1.5
+    text-align center
+    font-weight 500
+    margin 1rem 1.5rem 1.5rem
+
+    @media (max-width $MQMobile)
+      font-size 1.4rem
+
+    @media (max-width $MQMobileNarrow)
+      font-size 1.2rem

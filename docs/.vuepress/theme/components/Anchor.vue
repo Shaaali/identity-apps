@@ -4,14 +4,20 @@
 $headings = 2 3 4 5 6
 
 .anchor-place-holder
-  position sticky
-  top ($navbarHeight + 2rem)
+  position fixed
+  top ($navbarHeight + 8rem)
   max-width $contentWidth
-  margin 0 auto
+  margin 0 910px
   padding 0 2.5rem
 
   @media (max-width $MQNarrow)
     padding 0 1.5rem
+
+  @media (min-width $MQNormal + 1)
+    margin 0 1050px
+
+  @media (max-width $MQNormal)
+    margin 0 910px
 
   & + .theme-default-content:not(.custom)
     padding-top 0

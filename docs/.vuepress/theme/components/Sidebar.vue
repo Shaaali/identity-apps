@@ -23,7 +23,7 @@
 .sidebar
   position fixed
   z-index 10
-  top $navbarHeight
+  top 4.8rem
   left 0
   bottom 0
   box-sizing border-box
@@ -77,7 +77,7 @@
       padding 0.5rem 0 0.5rem 1.5rem
 
   & > .sidebar-links
-    padding 1.5rem 0
+    padding 0.5rem 0
 
     & > li > a.sidebar-link
       font-size 0.9em
