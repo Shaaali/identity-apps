@@ -9,8 +9,7 @@ daily basis including Gmail, Facebook, Google Docs, and Google Maps are SPAs.
 
 ## Secure your SPA with Asgardeo
 
-SPAs by design run with the source code exposed in the browser. So they become incapable of maintaining any secrets. 
-SPAs are known as public clients for this reason. 
+SPAs by design run with the source code exposed in the browser. So they become incapable of maintaining any secrets.
 
 Based on the [OAuth 2.0 best practices for browser-based apps](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-browser-based-apps-08)
 Asgardeo recommends securing your SPAs using the OpenID Connect Authorization Code Flow for public clients 
