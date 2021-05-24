@@ -51,11 +51,11 @@ features:
     subLinks:
       - name: "Users"
         link: /guides/user-management/
-
-      - name: "Roles"
-        link: 
-
+      
       - name: "Groups"
+        link: /guides/user-management/groups/groups
+        
+      - name: "Roles"
         link: 
 
 services:
