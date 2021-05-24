@@ -53,10 +53,10 @@ features:
         link: /guides/user-management/
 
       - name: "Roles"
-        link: /concepts/user-mgt/users-groups-roles/
+        link: 
 
       - name: "Groups"
-        link: /concepts/user-mgt/users-groups-roles/
+        link: 
 
 services:
     - title: Supported Integrations
