@@ -28,10 +28,8 @@ features:
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
-        link: /guides/social-login/overview/
-
+      
       - name: "Enterprise login"
-        link: /guides/social-login/overview/
 
   - title: Add Strong Authentication
     details: Protect your user login using multi-factor and adaptive authentication.
@@ -61,17 +59,14 @@ features:
 services:
     - title: Supported Integrations
       details: Checkout the supported integrations with third-party systems to customize your identity flows.
-      link: /quickstarts/
       icon: supportedPluginsIcon
 
     - title: Security and Compliance
       details: Learn how Asgardeo Facilitate the security and privacy aspects of consumer identity and access management (CIAM).
-      link: /quickstarts/
       icon: securityComplianceIcon
 
     - title: Solution Patterns 
       details: Learn how common IAM challenges can be solved by Asgardeo and how you can meet your identity management needs.
-      link: /quickstarts/
       icon: solutionsIcon
 
 footer: Asgardeo Docs | © 2021 WSO2
