@@ -20,11 +20,11 @@ features:
         link: /guides/applications/spa/
       
       - name: "Native applications"
-        link: /guides/applications/
+        link: 
 
   - title: Configure Federated Login
     details: Let users log in to applications with an Identity Provider of their choice.
-    link: /guides/social-login/overview/
+    link: 
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
@@ -35,14 +35,14 @@ features:
 
   - title: Add Strong Authentication
     details: Protect your user login using multi-factor and adaptive authentication.
-    link: /guides/strong-authentication/overview/
+    link: 
     icon: addAuthnIcon
     subLinks:
       - name: "Multi-factor authentication"
-        link: /guides/strong-authentication/mfa-qsg/
+        link: 
 
       - name: "Adaptive authentication"
-        link: /guides/strong-authentication/overview/
+        link: 
 
   - title: Manage users
     details: Onboard users and collectively manage their access
@@ -76,3 +76,5 @@ services:
 
 footer: Asgardeo Docs | © 2021 WSO2
 copyrightText: false
+---
+
