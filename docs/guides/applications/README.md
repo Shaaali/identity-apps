@@ -19,5 +19,5 @@ the user attributes required for the application.
 * **Design the login flow**: You can decide which factor to be used as the second layer of authentication or the 
 number of factors to be used as additional authentication layers or factors like social login.
   
-* **Enforce conditional authentication**: You are given the choice to dynamically modify the login flow of a user 
+* **Enforce conditional authentication**: You can dynamically change the login flow of a user 
 based on the user’s devices, networks, locations, or usage contexts.
