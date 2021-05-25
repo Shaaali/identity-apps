@@ -162,3 +162,7 @@ is terminated.
     <input type="submit" value="Log Out">
 </form>
 ```
+
+## Related Links
+
+* [Tryout JAVA EE OIDC Webapp Sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
