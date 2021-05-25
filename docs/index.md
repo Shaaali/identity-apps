@@ -41,8 +41,8 @@ features:
       - name: "Multi-factor authentication"
         link: 
 
-      - name: "Adaptive authentication"
-        link: 
+      - name: "Conditional authentication"
+        link: /guides/strong-authentication/conditional-auth/
 
   - title: Manage users
     details: Onboard users and collectively manage their access
