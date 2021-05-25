@@ -10,7 +10,7 @@ Currently, Asgardeo supports integrating two application types.
 When you register an application in Asgardeo you can, 
 
 * **Enable login with a standard authentication protocol**: To add authentication for your applications, Asgardeo 
-provides standard open specifications and identity protocols like OpenID Connect and SAML.
+provides support for standard identity protocols like OpenID Connect and SAML.
   
 * **Decide user attributes to be shared with your application**: With Asgardeo you can manage the user attributes you 
 want to share with an application. This means, without sharing all the user attributes, you can decide to share only 
