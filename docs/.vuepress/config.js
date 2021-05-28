@@ -160,7 +160,10 @@ module.exports = config({
                 // },
                 {
                     title: 'Conditional authentication',
+                    path:'/guides/strong-authentication/conditional-auth/',
                     prefix: '/guides/strong-authentication/conditional-auth/',
+                    collapsable: false,
+                    sidebarDepth: 2,
                     children: [
                         ['configure-conditional-auth.md', 'Configure conditional authentication'],
                         ['conditional-auth-templates.md', 'Predefined templates'],
