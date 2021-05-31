@@ -471,71 +471,6 @@ getCookieValue(context.request,"name", {"decrypt" : true,"validateSignature" : t
 
 <br/>
 
-### callAnalytics( metadata, payloadData, eventHandlers )
-
-This function calls the analytics engine (i.e., WSO2 Stream Processor) to get a decision. It includes the following
-parameters.
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>metadata</td>
-      <td><p>A JSON object that contain the following attributes:</p>
-        <ul>
-          <li><p><code>Application:</code> Siddhi application name (mandatory)</p></li>
-          <li><p><code>InputStream:</code> Input stream name (mandatory)</p></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>payloadData</td>
-      <td>The data that needs to be sent to the analytics engine.</td>
-    </tr>
-    <tr>
-      <td>eventHandlers</td>
-      <td>The callback event handlers.</td>
-    </tr>
-  </tbody>
-</table>
-
-<br/>
-
-### publishToAnalytics( metadata, payloadData )
-
-This function publishes data to the analytics engine (WSO2 Stream Processor). It includes the following parameters.
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>metadata</td>
-      <td><p>A JSON object that contain the following attributes:</p>
-        <ul>
-          <li><p><code>Application:</code> Siddhi application name (mandatory)</p></li>
-          <li><p><code>InputStream:</code> Input stream name (mandatory)</p></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>payloadData</td>
-      <td>The data that needs to be sent to the analytics engine.</td>
-    </tr>
-  </tbody>
-</table>
-
-<br/>
-
 ### prompt(templateId, data, eventHandlers)
 
 This function prompts for user input. It includes the following parameters.
@@ -648,40 +583,6 @@ if (sessions.length > 0) {
 ```
 
 <br/>
-
-### getValueFromDecodedAssertion(String jwt, String parameterName,boolean isParameterInPayload)
-
-This function returns a string which contains the value of the parameter in a decoded JWT. It includes the following
-parameters:
-
-<table>
-  <thead>
-    <tr class="header">
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>jwt</td>
-      <td>The jwt to be decoded. </td>
-    </tr>
-    <tr>
-      <td>parameterName</td>
-      <td>The name of the parameter in the jwt for which the value should be retrieved.</td>
-    </tr>
-    <tr>
-      <td>isParameterInPayload</td>
-      <td>Indicates whether the parameter to be retrieved is in the jwt header or body.<br> Value should be true if the parameter to be retrieved is in the body.</td>
-    </tr>
-  </tbody>
-</table>
-
-The following example shows how to obtain a parameter from the request object, which is a signed jwt.
-
-``` js
-var state = getValueFromDecodedAssertion(context.request.params.request[0],"state",true);
-```
 
 ## Object Reference
 
