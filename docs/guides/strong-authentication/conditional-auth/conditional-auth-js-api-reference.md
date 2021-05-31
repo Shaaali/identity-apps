@@ -232,44 +232,6 @@ easily at the page.
 The implementation of utility functions can be found in
 the [WSO2 extensions code repository](https://github.com/wso2-extensions/identity-conditional-auth-functions).
 
-### hasRole(user, role)
-
-This function returns true if the specified '**`user`**' belongs to the specified '**`role`**', and returns false if the
-user does not. It includes the following parameters.
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user</td>
-      <td>A user object representing the user details.</td>
-    </tr>
-      <tr>
-      <td>role</td>
-      <td>A string representing the role name.</td>
-    </tr>
-  </tbody>  
-</table>
-
-
-**Example code**
-
-``` js
-var user = context.steps[1].subject;
-var isAdmin = hasRole(user, 'admin');
-Log.info('--------------- Has Admin ' + isAdmin);
-if (isAdmin) {
-    executeStep(2);
-}
-```
-
-<br/>
-
 ### setCookie(response, name, value, properties)
 
 This functions sets a new cookie. It includes the following parameters.
