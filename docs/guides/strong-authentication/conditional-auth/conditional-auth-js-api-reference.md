@@ -232,6 +232,44 @@ easily at the page.
 The implementation of utility functions can be found in
 the [WSO2 extensions code repository](https://github.com/wso2-extensions/identity-conditional-auth-functions).
 
+### isMemberOfAnyOfGroups(user, groups)
+
+This function returns true if the specified '**`user`**' belongs to at least one of the given '**`groups`**' , and returns false if the
+user does not. It includes the following parameters.
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user</td>
+      <td>A user object representing the user details.</td>
+    </tr>
+      <tr>
+      <td>groups</td>
+      <td>A list of strings that contains groups where each string is a group name.</td>
+    </tr>
+  </tbody>  
+</table>
+
+
+**Example code**
+
+``` js
+var groups = ['admin', 'manager'];
+var user = context.steps[1].subject;
+var isMember = isMemberOfAnyOfGroups(user, groups);
+if (isMember) {
+    executeStep(2);
+}
+```
+<br/>
+
+
 ### setCookie(response, name, value, properties)
 
 This functions sets a new cookie. It includes the following parameters.
