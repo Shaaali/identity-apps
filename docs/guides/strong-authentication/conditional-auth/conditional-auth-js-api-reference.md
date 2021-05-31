@@ -60,12 +60,12 @@ this function. This method accepts an object as a parameter and should include t
     <tr>
       <td>options</td>
       <td>An optional map that can configure step execution. Authentication option filtering is supported.<br />
-  For more information, see <a href="#step-filtering">authentication step filtering</a> .</td>
+  For more information, see <a href="./#authentication-step-filtering">authentication step filtering</a> .</td>
     </tr>
     <tr>
       <td>eventCallbacks</td>
   <td>The object that contains the callback functions that are to be called based on the result of the step execution.<br />
-  Supported results are “<code>onSuccess</code>” and “<code>onFail</code>”, which can have their own optional callbacks as anonymous functions (optional).</td>
+  Supported results are <code>onSuccess</code> and <code>onFail</code>, which can have their own optional callbacks as anonymous functions (optional).</td>
     </tr>
   </tbody>
 </table>
@@ -123,9 +123,9 @@ The API can be called in either of the following ways:
 
   :::
 
-**Authentication step filtering**
+#### Authentication step filtering
 
-Filters out some of the authentication options of a step based on a condition. This can be achieved by specifying an
+Filters out authentication options of a step based on a condition. This can be achieved by specifying an
 array named '`authenticationOptions`' to the `options` map. Each array item will require an '**`idp`**' for federated
 IdPs or an '**`authenticator`**' for local authenticators.
 
@@ -266,117 +266,6 @@ Log.info('--------------- Has Admin ' + isAdmin);
 if (isAdmin) {
     executeStep(2);
 }
-```
-
-<br/>
-
-### assignUserRoles(user, assigningRoles)
-
-This function assigns each of the roles specified in the '`assigningRoles`' parameter to the specified '`user`' object.
-It returns true if all the roles are successfully assigned and returns false if not. It includes the following
-parameters.
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user</td>
-      <td>A user object representing the user details.</td>
-    </tr>
-      <tr>
-      <td>assigningRoles</td>
-      <td>A list of strings containing roles that are to be assigned where each string is a role name.</td>
-    </tr>
-  </tbody>
-</table>
-
-``` js
-executeStep(1, {
-    onSuccess: function (context) {
-        // Extracting authenticated subject from the first step.
-        let user = context.currentKnownSubject;
-        assignUserRoles(user, ['exampleRole1', 'exampleRole2']);
-    }
-});
-```
-
-<br/>
-
-### removeUserRoles(user, removingRoles)
-
-This function removes each of the roles specified in the '`removingRoles`' parameter to the given '`user`' object. It
-returns true if all the roles are successfully removed and returns false if not. It includes the following parameters.
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user</td>
-      <td>An object representing the user details.</td>
-    </tr>
-    <tr>
-      <td>removingRoles</td>
-      <td>A list of strings that contains roles that are to be removed where each string is a role name.</td>
-    </tr>
-  </tbody>
-</table>
-
-``` js
-executeStep(1, {
-    onSuccess: function (context) {
-        // Extracting authenticated subject from the first step.
-        let user = context.currentKnownSubject;
-        removeUserRoles(user, ['exampleRole1', 'exampleRole2']);
-    }
-});
-```
-
-<br/>
-
-### sendEmail(user, templateId, placeholderParameters)
-
-This function sends an email to the specified user. It includes the following parameters.
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>user</td>
-      <td>An object representing the user details.</td>
-    </tr>
-    <tr>
-      <td>templateId</td>
-      <td>Identifier of the email template. The email template specifies the body of the email that is sent out.</td>
-    </tr>
-    <tr>
-      <td>placeholderParameters</td>
-      <td>Used to replace any placeholders in the template.</td>
-    </tr>
-  </tbody>
-</table>
-
-**Example code**
-
-``` js
-var user = context.steps[1].subject;
-var firstName = user.localClaims['http://wso2.org/claims/givenname'];
-sendEmail(user, 'myTemplate', {'firstName':firstName});
 ```
 
 <br/>
@@ -580,6 +469,43 @@ if (sessions.length > 0) {
     Log.info(“Terminate Operation Successful?: ” + result);
 }
 
+```
+
+<br/>
+
+### sendEmail(user, templateId, placeholderParameters)
+
+This function sends an email to the specified user. It includes the following parameters.
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user</td>
+      <td>An object representing the user details.</td>
+    </tr>
+    <tr>
+      <td>templateId</td>
+      <td>Identifier of the email template. The email template specifies the body of the email that is sent out.</td>
+    </tr>
+    <tr>
+      <td>placeholderParameters</td>
+      <td>Used to replace any placeholders in the template.</td>
+    </tr>
+  </tbody>
+</table>
+
+**Example code**
+
+``` js
+var user = context.steps[1].subject;
+var firstName = user.localClaims['http://wso2.org/claims/givenname'];
+sendEmail(user, 'myTemplate', {'firstName':firstName});
 ```
 
 <br/>
