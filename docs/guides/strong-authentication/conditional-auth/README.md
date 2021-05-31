@@ -1,11 +1,12 @@
 # Conditional authentication
 
 ## What is conditional authentication?
-Conditional authentication flexible form of authentication that tightens security and provides flexible form of authentication. This enables adjusting the authentication strength based on the context at hand.
+
+Conditional authentication is a secure and flexible form of authentication. It enables validating multiple factors to determine the authenticity of a login attempt before granting access to a resource. The factors that are used for validation can depend on the risk probability associated with the particular user access request. This enables adjusting the authentication strength based on the context at hand.
 
 ## Conditional Authentication with Asgardeo
 
-Asgardeo supports script-based conditional authentication, which allows using a provided script editor to set up appropriate authentication factors depending on the requirement. 
+Asgardeo supports script-based conditional authentication. You can use the provided script editor to define dynamic authentication flows depending on your requirements. 
 
 The script editor comes with a set of [predefined templates](conditional-auth-templates) that will help you to get you started for some of the most common authentication scenarios.
 
@@ -22,18 +23,18 @@ You can define dynamic authentication flows that can perform actions similar to 
 - Send email notifications
 - Redirect users to an error page etc.
 
-If necessary, the script editor can also be used to introduce new [functions and fields](conditional-auth-js-api-reference) to an authentication script based on specific requirements.
+Asgardeo supports a set of inbuilt [functions](conditional-auth-js-api-reference#utility-functions) and [objects](conditional-auth-js-api-reference#object-reference) that you can refer when writing your conditional authentication script. A simple conditional authentication script will look like the example below.
 
 ```js
 var onLoginRequest = function(context) {
     // Some possible initializations...
     executeStep(1);
-        if (doStep(context) === true) { 
+        if (doStepUp(context) === true) { 
         	executeStep(2);
         }
 }
 
-function doStep(context) {
+function doStepUp(context) {
     // A function that decides whether to enforce second step based on the request context.
     return true;
 }
