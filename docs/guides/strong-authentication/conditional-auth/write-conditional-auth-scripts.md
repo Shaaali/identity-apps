@@ -1,4 +1,4 @@
-# Write conditional authentication script
+# Write conditional authentication scripts
 
 By following this guide, you will be able to write your own conditional authentication script from scratch and understand its internals.
 
