@@ -1,25 +1,45 @@
 # Conditional authentication
 
 ## What is conditional authentication?
-Conditional authentication, also known as step-up authentication, is an evolved and flexible form of multi-factor authentication that tightens security when the possibility of a security breach is higher. Additional authentication steps such as SMS OTP, FIDO, fingerprint authentication etc., can be configured and deployed in such a way that the system is able to decide which steps to prompt during the authentication process depending on the user’s risk profile and their behaviour.
+Conditional authentication flexible form of authentication that tightens security and provides flexible form of authentication. This enables adjusting the authentication strength based on the context at hand.
 
-## Why is it needed?
-With conditional authentication, the authentication strength is adjusted in real-time based on the context at hand, before granting access to a resource.
-
-Organisations can apply precisely the right level of security to each and every login request, instead of issuing static procedures for everyone to follow under all circumstances. 
-
-It improves convenience for the user while still tightening the security around authentication.
-
-## Using conditional authentication with Asgardeo
+## Conditional Authentication with Asgardeo
 
 Asgardeo supports script-based conditional authentication, which allows using a provided script editor to set up appropriate authentication factors depending on the requirement. 
 
-The script editor provides [a set of predefined templates](conditional-auth-templates.md) that can be used to easily set up conditional authentication for some of the most common authentication scenarios. 
+The script editor comes with a set of [predefined templates](conditional-auth-templates) that will help you to get you started for some of the most common authentication scenarios.
 
-If necessary, the script editor can also be used to introduce new [functions and fields](conditional-auth-js-api-reference.md) to an authentication script based on specific requirements, and the script can then be engaged to the service provider’s authentication step configuration.
+You can define scripts that can consider the following evaluation criteria:
 
-## Related Links
-* [Try out conditional authentication](configure-conditional-auth.md)
-* [Set up common authentication scenarios](conditional-auth-templates.md)
-* [Learn about the functions and fields related to authentication scripts](conditional-auth-js-api-reference.md)
-* [Multi Factor authentication](../mfa-qsg.md)
+- User attributes
+- User behaviour
+- Authentication Request Attributes
+- Application attributes
+
+You can define dynamic authentication flows that can perform actions similar to the following:
+- Control the authentication step selection
+- Change user attributes
+- Send email notifications
+- Redirect users to an error page etc.
+
+If necessary, the script editor can also be used to introduce new [functions and fields](conditional-auth-js-api-reference) to an authentication script based on specific requirements.
+
+```js
+var onLoginRequest = function(context) {
+    // Some possible initializations...
+    executeStep(1);
+        if (doStep(context) === true) { 
+        	executeStep(2);
+        }
+}
+
+function doStep(context) {
+    // A function that decides whether to enforce second step based on the request context.
+    return true;
+}
+```
+
+## What's next
+* [Learn how to enable conditional authentication to your application](configure-conditional-auth)
+* [Try our predefined conditional authentication templates](conditional-auth-templates)
+* [Checkout the JS API reference](conditional-auth-js-api-reference)
