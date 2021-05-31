@@ -41,7 +41,7 @@ We will start from the scratch and see how can we build our conditional auth scr
 
 ## Start writing your conditional auth script
 
-### 1. Configure conditional authentication
+### 1. Start with the default script
 
 To start off, let's [configure the conditional authentication](configure-conditional-auth.md) to your application and check the default script once you enable the two steps authentication.
 
