@@ -106,9 +106,11 @@ var onLoginRequest = function (context) {
 };
 ```
 
-**5. Check whether the user is a member of some group**
+**5. Check whether the user is a member of some group using an inbuilt function**
 
-Now check whether user is a member of any of the group `admin` or `manager`. We have this utility function [isMemberOfAnyOfGroups(user, groups)](conditional-auth-js-api-reference/#ismemberofanyofgroups-user-groups) to check whether the use is a member of any of the groups in the list.
+Now check whether user is a member of any of the group `admin` or `manager`. We have this utility function [isMemberOfAnyOfGroups(user, groups)](conditional-auth-js-api-reference/#ismemberofanyofgroups-user-groups) to check whether the use is a member of any of the groups in the list. 
+
+Refer the [inbuilt functions](conditional-auth-js-api-reference.md) to get to know more existing functions.
 
 ```js
 var groupsToStepUp = ['admin', 'manager'];
@@ -155,7 +157,7 @@ var onLoginRequest = function (context) {
 };
 ```
 
-Now you have setup authentication script for successful journey. If a user belongs to group `admin` or `manager`, he needs to login with both `Username and Password` and `TOTP` authentication. Other users who don't belong to any group, and the users who belong to `developer` group will be prompted only with `username and password` authentication.
+Now you have setup authentication script for the happy path. If a user belongs to group `admin` or `manager`, he needs to login with both `Username and Password` and `TOTP` authentication. Other users who don't belong to any group, and the users who belong to `developer` group will be prompted only with `username and password` authentication.
 
 **7. Redirect to error page on login failure***
 
@@ -189,5 +191,5 @@ var onLoginRequest = function (context) {
 
 Now you have completed writing a conditional auth script from scratch. 
 
- Similarly you can build your own scripts to handle many scenarios using the [JS-API references](conditional-auth-js-api-reference.md) and [pre-defined templates](conditional-auth-templates.md).
+Similarly you can build your own scripts to handle many scenarios using the [JS-API references](conditional-auth-js-api-reference.md) and [pre-defined templates](conditional-auth-templates.md).
 
