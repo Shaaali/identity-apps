@@ -173,6 +173,7 @@ module.exports = config({
                     icon:  'usersIcon',
                     children: [
                         ['user-management/', 'Users'],
+                        ['user-management/groups/groups.md', 'Groups'],
               ]
             },
             ],
