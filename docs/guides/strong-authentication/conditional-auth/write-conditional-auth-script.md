@@ -4,7 +4,7 @@ By following this guide, you will be able to write your own conditional authenti
 
 Let's take the following simplified set of requirements, your business may want you to implement. 
 
-- An application has two authentication steps at maximum.
+- An application has two authentication steps.
     - **Username and Password** as the first step.
     - Google **TOTP** as the second step.
 
