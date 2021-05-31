@@ -11,10 +11,12 @@ Let's take the following simplified set of requirements, your business may want 
 Now you have configured 2 steps authentication. It would be as 
 <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-liner-flow.png')" alt="conditional-auth-flow-diagram-liner-flow">
  
-We will start from the scratch and see how can we build our conditional authentication. We want to setup the below conditional authentication.
+We will start from the scratch and see how can we build our conditional auth script. We want to achieve the below conditional login flow.
 
-- If user belongs to **Developer** group or does not belong to any group, then login with `Username and Password` is sufficient. If user belongs to **Manager**, or **Admin** group, they will be prompted with `TOTP` authentication in addition to `Username and Password` authentication.
-                                                          
+- If the user belongs to **Manager**, or **Admin** group, they will be prompted with `TOTP` authentication in addition to `Username and Password` authentication.  
+
+- If user belongs to **Developer** group or does not belong to any group, then login with `Username and Password` is sufficient.                                                           
+
 <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="conditional-authentication-flow">
 
 ## Before you begin
@@ -37,9 +39,9 @@ We will start from the scratch and see how can we build our conditional authenti
 * Developer
 
 
-## Follow the steps to write your conditional authentication script
+## Start writing your conditional auth script
 
-**1. Configure conditional authentication script and check the default script**
+**1. Configure conditional authentication and check the default script**
 
 To start off, let's [configure the conditional authentication](configure-conditional-auth.md) to your application and check the default script once you enable the two steps authentication.
 
@@ -50,9 +52,9 @@ var onLoginRequest = function(context) {
 };
 
 ```
-The above scripts does not have any conditional authentication. It will execute `Step1` and then `Step 2`.
+The above scripts does not have any conditional authentication. It will execute `Step 1` and then `Step 2`.
 
-**2. Add what to do on success**
+**2. Implement onSuccess callback**
 
 Now, we will implement what to do, if  **username and password based authentication** (Step 1) is success. You can use [onSuccess](conditional-auth-js-api-reference/#executestep-stepid-options-eventcallbacks) eventCallback.
 
@@ -67,7 +69,7 @@ var onLoginRequest = function (context) {
 ```
 
 
-**3. Add what to do on failure**
+**3. Implement onFail callback**
 
 Now, We will implement what to do, if  **username and password based authentication** (Step 1) is failed.
 
@@ -84,7 +86,7 @@ var onLoginRequest = function (context) {
 };
 ```
 
-**4. Get the authenticated user**
+**4. Using the authenticated user object reference**
 
 If **username and password based authentication** (Step 1) is success, let's try to get the [user](conditional-auth-js-api-reference/#user-object) from the [context](conditional-auth-js-api-reference/#context-object). We can use `context.currentKnownSubject` to get the authenticated user.
 
@@ -155,7 +157,7 @@ var onLoginRequest = function (context) {
 
 Now you have setup authentication script for successful journey. If a user belongs to group `admin` or `manager`, he needs to login with both `Username and Password` and `TOTP` authentication. Other users who don't belong to any group, and the users who belong to `developer` group will be prompted only with `username and password` authentication.
 
-**7. Redirect to error page if the authentication is not successful**
+**7. Redirect to error page on login failure***
 
 If the `Username and Password` authentication is not successful, let's redirect the user to some error page(`http://localhost:8080/error`). 
 
