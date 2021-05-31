@@ -41,7 +41,7 @@ We will start from the scratch and see how can we build our conditional auth scr
 
 ## Start writing your conditional auth script
 
-**1. Configure conditional authentication and check the default script**
+### 1. Start with the default script
 
 To start off, let's [configure the conditional authentication](configure-conditional-auth.md) to your application and check the default script once you enable the two steps authentication.
 
@@ -54,7 +54,7 @@ var onLoginRequest = function(context) {
 ```
 The above scripts does not have any conditional authentication. It will execute `Step 1` and then `Step 2`.
 
-**2. Implement onSuccess callback**
+### 2. Implement onSuccess callback
 
 Now, we will implement what to do, if  **username and password based authentication** (Step 1) is success. You can use [onSuccess](conditional-auth-js-api-reference/#executestep-stepid-options-eventcallbacks) eventCallback.
 
@@ -69,7 +69,7 @@ var onLoginRequest = function (context) {
 ```
 
 
-**3. Implement onFail callback**
+### 3. Implement onFail callback
 
 Now, We will implement what to do, if  **username and password based authentication** (Step 1) is failed.
 
@@ -86,7 +86,7 @@ var onLoginRequest = function (context) {
 };
 ```
 
-**4. Using the authenticated user object reference**
+### 4. Use the authenticated user object reference
 
 If **username and password based authentication** (Step 1) is success, let's try to get the [user](conditional-auth-js-api-reference/#user-object) from the [context](conditional-auth-js-api-reference/#context-object). We can use `context.currentKnownSubject` to get the authenticated user.
 
@@ -106,7 +106,7 @@ var onLoginRequest = function (context) {
 };
 ```
 
-**5. Check whether the user is a member of some group using an inbuilt function**
+### 5. Use an inbuilt function check group membership
 
 Now check whether user is a member of any of the group `admin` or `manager`. We have this utility function [isMemberOfAnyOfGroups(user, groups)](conditional-auth-js-api-reference/#ismemberofanyofgroups-user-groups) to check whether the use is a member of any of the groups in the list. 
 
@@ -130,7 +130,7 @@ var onLoginRequest = function (context) {
     });
 };
 ```
-**6. Prompt for TOTP authentication**
+### 6. Prompt for TOTP authentication
 
 If the user is not a member, then prompt for `TOTP` (Step 2) authentication. If user is a member of the allowed groups, prompt for `TOTP` authentication.
 
@@ -159,7 +159,7 @@ var onLoginRequest = function (context) {
 
 Now you have setup authentication script for the happy path. If a user belongs to group `admin` or `manager`, he needs to login with both `Username and Password` and `TOTP` authentication. Other users who don't belong to any group, and the users who belong to `developer` group will be prompted only with `username and password` authentication.
 
-**7. Redirect to error page on login failure***
+### 7. Redirect to error page on login failure
 
 If the `Username and Password` authentication is not successful, let's redirect the user to some error page(`http://localhost:8080/error`). 
 
@@ -191,5 +191,5 @@ var onLoginRequest = function (context) {
 
 Now you have completed writing a conditional auth script from scratch. 
 
-Similarly you can build your own scripts to handle many scenarios using the [JS-API references](conditional-auth-js-api-reference.md) and [pre-defined templates](conditional-auth-templates.md).
+Similarly, you can build your own scripts to handle many scenarios using the [JS-API references](conditional-auth-js-api-reference.md) and [pre-defined templates](conditional-auth-templates.md).
 
