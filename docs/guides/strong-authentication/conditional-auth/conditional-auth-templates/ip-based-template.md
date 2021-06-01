@@ -23,7 +23,7 @@ on the script, can simply provide their credentials (basic authentication) to ac
 
 2. Configure conditional authentication and deploy the **IP-Based Authentication Template** for the application.
 
-   Refer the [Configure conditional authentication for an application](../configure-conditional-auth.md) guide on
+   Refer the [Configure conditional authentication for an application](../configure-conditional-auth) guide on
    configuring conditional authentication with the template.
 
 3. Customize the login flow and enable TOTP as the step 2.
