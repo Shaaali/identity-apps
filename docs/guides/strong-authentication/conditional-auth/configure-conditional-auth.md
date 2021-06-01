@@ -32,7 +32,7 @@ done already.
 You can add authentication steps or use a template to configure conditional authentication depending on your
 requirement.
 
-**Use a template**
+### Use a predefined template
 
 Asgardeo provides a set of conditional authentication script templates based on common scenarios.
 
@@ -47,7 +47,7 @@ information icon(:information_source:).
 Refer the [Conditional authentication scenarios section](./conditional-auth-templates.md) for detailed guide on each
 template.
 
-**Writing a new script**
+### Write a conditional auth script
 
 If required, you can also use the script editor to introduce new functions and fields to an authentication script based
 on your requirement, and then engage the script to the application’s authentication configuration.
