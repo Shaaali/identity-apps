@@ -18,7 +18,7 @@ is below configured value.
 
 2. Configure conditional authentication and deploy the **User-Age-Based Authentication Template** for the application.
 
-   Refer the [Configure conditional authentication for an application](../configure-conditional-auth.md) guide on
+   Refer the [Configure conditional authentication for an application](../configure-conditional-auth) guide on
    configuring conditional authentication with the template.
 
 3. Birth Date of the user trying to login needs to be updated using the Asgardeo Myaccount portal.

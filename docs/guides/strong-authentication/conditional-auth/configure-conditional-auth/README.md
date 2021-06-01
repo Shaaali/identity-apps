@@ -3,7 +3,7 @@
 This guide gives you the steps to define conditional authentication to your application. We assume that you have already
 configured an application in Asgardeo to represent your app.
 
-Refer the [Manage applications](../../applications/README.md) section to register your application in Asgardeo if not
+Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if not
 done already.
 
 ## Enable conditional authentication
@@ -44,7 +44,7 @@ information icon(:information_source:).
 
 <br>
 
-Refer the [Conditional authentication scenarios section](./conditional-auth-templates) for detailed guide on each
+Refer the [Conditional authentication scenarios section](../conditional-auth-templates) for detailed guide on each
 template.
 
 ### Write a conditional auth script
@@ -68,7 +68,7 @@ A sample authentication script is shown below.
                     // Logic to execute if step 2 failed
                 }
             });
-        }
+        },
         onFail: function (context) {
             // Logic to execute if step 1 failed
             executeStep(3);
