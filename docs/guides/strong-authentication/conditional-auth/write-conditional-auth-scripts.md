@@ -43,7 +43,7 @@ We will start from the scratch and see how can we build our conditional auth scr
 
 ### 1. Start with the default script
 
-To start off, let's [configure the conditional authentication](configure-conditional-auth.md) to your application and check the default script once you enable the two steps authentication.
+To start off, let's [configure the conditional authentication](./configure-conditional-auth.md) to your application and check the default script once you enable the two steps authentication.
 
 ```js
 var onLoginRequest = function(context) {
@@ -87,7 +87,7 @@ var onLoginRequest = function (context) {
 
 ### 4. Use the authenticated user object reference
 
-If **username and password based authentication** (Step 1) is success, let's try to get the [user](conditional-auth-js-api-reference/#user-object) from the [context](conditional-auth-js-api-reference/#context-object). We can use `context.currentKnownSubject` to get the authenticated user.
+If **username and password based authentication** (Step 1) is success, let's try to get the [user](./conditional-auth-js-api-reference/#user-object) from the [context](./conditional-auth-js-api-reference/#context-object). We can use `context.currentKnownSubject` to get the authenticated user.
 
 ```js
 var groupsToStepUp = ['admin', 'manager'];
@@ -109,7 +109,7 @@ var onLoginRequest = function (context) {
 
 Now check whether user is a member of any of the group `admin` or `manager`. We have this utility function [isMemberOfAnyOfGroups(user, groups)](conditional-auth-js-api-reference/#ismemberofanyofgroups-user-groups) to check whether the use is a member of any of the groups in the list. 
 
-Refer the [inbuilt functions](conditional-auth-js-api-reference.md) to get to know more existing functions.
+Refer the [inbuilt functions](./conditional-auth-js-api-reference.md) to get to know more existing functions.
 
 ```js
 var groupsToStepUp = ['admin', 'manager'];
@@ -190,5 +190,4 @@ var onLoginRequest = function (context) {
 
 Now you have completed writing a conditional auth script from scratch. 
 
-Similarly, you can build your own scripts to handle many scenarios using the [JS-API references](conditional-auth-js-api-reference.md) and [pre-defined templates](conditional-auth-templates.md).
-
+Similarly, you can build your own scripts to handle many scenarios using the [JS-API references](./conditional-auth-js-api-reference.md) and [pre-defined templates](./conditional-auth-templates.md).
