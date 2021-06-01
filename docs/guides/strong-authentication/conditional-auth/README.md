@@ -2,11 +2,13 @@
 
 ## What is conditional authentication?
 
-Conditional authentication is a secure and flexible form of authentication. It enables validating multiple factors to determine the authenticity of a login attempt before granting access to a resource. The factors that are used for validation can depend on the risk probability associated with the particular user access request. This enables adjusting the authentication strength based on the context at hand.
+Conditional authentication provides dynamic login capabilities based on the risk factors associated with the user's authentication request. The goal of the conditional authentication is to provide a secure and flexible form of login mechanism.
+
+<img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-intro.png')" alt="conditional-authentication">
 
 ## Conditional Authentication with Asgardeo
 
-Asgardeo supports script-based conditional authentication. You can use the provided script editor to define dynamic authentication flows depending on your requirements. 
+Asgardeo supports [script-based conditional authentication](configure-conditional-auth). You can use the provided script editor to define dynamic authentication flows depending on your requirements. 
 
 The script editor comes with a set of [predefined templates](conditional-auth-templates) that will help you to get you started for some of the most common authentication scenarios.
 

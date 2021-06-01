@@ -50,7 +50,6 @@ var onLoginRequest = function(context) {
     executeStep(1);
     executeStep(2);
 };
-
 ```
 The above scripts does not have any conditional authentication. It will execute `Step 1` and then `Step 2`.
 
