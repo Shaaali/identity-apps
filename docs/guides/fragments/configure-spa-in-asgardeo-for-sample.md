@@ -1,5 +1,5 @@
 1. Select the **Develop** tab in the Console
-2. Move to the **Application** section from the left navigation
+2. Move to the **Applications** section from the left navigation
 3. Click on “New Application” button
 
 <img :src="$withBase('/assets/img/guides/applications/create-new-app.png')" alt="new-application-create-ui">
