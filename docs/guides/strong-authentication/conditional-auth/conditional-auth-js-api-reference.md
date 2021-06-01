@@ -545,10 +545,6 @@ Contains the authentication step information. May be null or invalid step number
 ### user Object
 
 * `user.username` : The user’s username.
-* `user.tenantDomain` : The user’s tenant domain (only for local users; federated users will have this
-  as `carbon.super`).
-* `user.userStoreDomain` : The user’s user store domain (only for local users).
-* `user.roles` : List of user’s roles.
 * `user.localClaims[“<local_claim_url>”]` : (Read/Write) User’s attribute (claim) value for the given “local_claim_url”.
   If the user is a federated user, this will be the value of the mapped remote claim from the IdP.
 * `user.claims[“<local_claim_url>”]`: (Read/Write) Sets a temporary claim value for the session.

@@ -181,32 +181,32 @@ module.exports = config({
               ]
             },
             ],
-
-            '/concepts/' : [
-            '',
-            {
-                title: 'Users, groups, and roles',
-                children: [
-                    ['/concepts/user-mgt/users-groups-roles', 'Users, groups, and roles'],
-                    ['/concepts/user-mgt/user-types', 'Types of user accounts'],
-                ]
-            },
-            {
-                title: 'Authentication',
-                children: [
-                    ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-                    ['/concepts/authentication/saml', 'SAML'],
-                    ['/concepts/authentication/oidc', 'OpenID Connect'],
-                ]
-            },
-            {
-                title: 'Authorization',
-                children: [
-                    ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
-                    ['/concepts/authentication/oidc', 'OpenID Connect'],
-                ]
-            },
-            ]
+//
+//            '/concepts/' : [
+//            '',
+//            {
+//                title: 'Users, groups, and roles',
+//                children: [
+//                    ['/concepts/user-mgt/users-groups-roles', 'Users, groups, and roles'],
+//                    ['/concepts/user-mgt/user-types', 'Types of user accounts'],
+//                ]
+//            },
+//            {
+//                title: 'Authentication',
+//                children: [
+//                    ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
+//                    ['/concepts/authentication/saml', 'SAML'],
+//                    ['/concepts/authentication/oidc', 'OpenID Connect'],
+//                ]
+//            },
+//            {
+//                title: 'Authorization',
+//                children: [
+//                    ['/concepts/authentication/authentication-protocols', 'Overview of authentication protocols'],
+//                    ['/concepts/authentication/oidc', 'OpenID Connect'],
+//                ]
+//            },
+//            ]
         },
         mdEnhance: {
             align : true

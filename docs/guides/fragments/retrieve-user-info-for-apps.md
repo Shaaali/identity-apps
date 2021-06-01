@@ -3,7 +3,7 @@ information as a payload by invoking the userinfo endpoint with the access token
 
 _Userinfo endpoint:_
 
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/userinfo`
+`https://accounts.asgardeo.io/t/<organization_name>/oauth2/userinfo`
 
 _Sample request:_
 

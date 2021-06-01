@@ -41,11 +41,11 @@ Update the `oidc-sample-app.properties` file located in `<TOMCAT_HOME>/webapps/o
 
 - **consumerKey** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
 - **consumerSecret** = the client secret obtained for the application registered above. _(You can check the client Secret of the application in the `Protocol` tab of the application details view)_
-- **authorizeEndpoint** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/authorize"
-- **logoutEndpoint** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oidc/logout"
-- **tokenEndpoint** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/token"
-- **issuer** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/token
-- **jwksEndpoint** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/jwks"
+- **authorizeEndpoint** = "https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/authorize"
+- **logoutEndpoint** = "https://dev.accounts.asgardeo.io/t/<organization_name>/oidc/logout"
+- **tokenEndpoint** = "https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/token"
+- **issuer** = "https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/token
+- **jwksEndpoint** = "https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/jwks"
 
 
 ``` 
@@ -56,12 +56,12 @@ Update the `oidc-sample-app.properties` file located in `<TOMCAT_HOME>/webapps/o
    logoutURL=logout
    callBackURL=http://localhost:8080/oidc-sample-app/oauth2client
    scope=openid,internal_application_mgt_view
-   authorizeEndpoint=https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/authorize
-   logoutEndpoint=https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oidc/logout
-   #sessionIFrameEndpoint=https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oidc/checksession
-   tokenEndpoint=https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/token
-   issuer=https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/token
-   jwksEndpoint=https://dev.accounts.asgardeo.io/t/<your_tenant_domain>/oauth2/jwks
+   authorizeEndpoint=https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/authorize
+   logoutEndpoint=https://dev.accounts.asgardeo.io/t/<organization_name>/oidc/logout
+   #sessionIFrameEndpoint=https://dev.accounts.asgardeo.io/t/<organization_name>/oidc/checksession
+   tokenEndpoint=https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/token
+   issuer=https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/token
+   jwksEndpoint=https://dev.accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
    postLogoutRedirectURI=http://localhost:8080/oidc-sample-app/index.html
    trustedAudience=http://localhost:8080/oidc-sample-app
 ```

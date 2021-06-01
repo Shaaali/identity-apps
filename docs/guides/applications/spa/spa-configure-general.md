@@ -55,7 +55,7 @@ When the user is successfully authenticated, the authorization code is returned 
 
 _Authorization endpoint:_
 
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/authorize`
+`https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize`
 
 _Sample url:_
 
@@ -120,7 +120,7 @@ retrieved in the above step.
 
 _Token endpoint:_
 
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token`
+`https://accounts.asgardeo.io/t/<organization_name>/oauth2/token`
 
 _Request parameters_
 

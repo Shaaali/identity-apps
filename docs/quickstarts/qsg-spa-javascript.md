@@ -37,13 +37,13 @@ Click on the button below to download the sample.
 2. Scroll down to the `<script>` tag at the end of the body tag and find `authConfig` object and change the configurations with the relevant values.
 
 - **clientID** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
-- **serverOrigin** = "https://dev.accounts.asgardeo.io/t/<your_tenant_domain>"
+- **serverOrigin** = "https://dev.accounts.asgardeo.io/t/<organization_name>"
 
 ``` HTML{2,4}
 const authConfig = {
     clientID: "<client_id>",
     signInRedirectURL: "https://localhost:5000",
-    serverOrigin: "https://dev.accounts.asgardeo.io/<your_tenant_domain>"
+    serverOrigin: "https://dev.accounts.asgardeo.io/<organization_name>"
 };
 ```
 

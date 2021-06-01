@@ -3,7 +3,7 @@ successfully logged out, he will be redirected to the registered authorized redi
 
 _Logout endpoint:_
 
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oidc/logout`
+`https://accounts.asgardeo.io/t/<organization_name>/oidc/logout`
 
 _Sample url:_
 
