@@ -44,7 +44,7 @@ information icon(:information_source:).
 
 <br>
 
-Refer the [Conditional authentication scenarios section](./conditional-auth-templates.md) for detailed guide on each
+Refer the [Conditional authentication scenarios section](./conditional-auth-templates) for detailed guide on each
 template.
 
 ### Write a conditional auth script

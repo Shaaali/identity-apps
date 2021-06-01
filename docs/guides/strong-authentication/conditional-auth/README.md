@@ -8,9 +8,9 @@ Conditional authentication provides dynamic login capabilities based on the risk
 
 ## Conditional Authentication with Asgardeo
 
-Asgardeo supports [script-based conditional authentication](./configure-conditional-auth.md). You can use the provided script editor to define dynamic authentication flows depending on your requirements. 
+Asgardeo supports [script-based conditional authentication](./configure-conditional-auth). You can use the provided script editor to define dynamic authentication flows depending on your requirements. 
 
-The script editor comes with a set of [predefined templates](./conditional-auth-templates.md) that will help you to get you started for some of the most common authentication scenarios.
+The script editor comes with a set of [predefined templates](./conditional-auth-templates) that will help you to get you started for some of the most common authentication scenarios.
 
 You can define scripts that can consider the following evaluation criteria:
 
@@ -43,6 +43,6 @@ function doStepUp(context) {
 ```
 
 ## What's next
-* [Learn how to enable conditional authentication to your application](./configure-conditional-auth.md)
-* [Try our predefined conditional authentication templates](./conditional-auth-templates.md)
-* [Checkout the JS API reference](./conditional-auth-js-api-reference.md)
+* [Learn how to enable conditional authentication to your application](./configure-conditional-auth)
+* [Try our predefined conditional authentication templates](./conditional-auth-templates)
+* [Checkout the JS API reference](./conditional-auth-js-api-reference)
