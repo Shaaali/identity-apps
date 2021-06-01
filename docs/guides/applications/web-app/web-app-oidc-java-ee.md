@@ -5,8 +5,8 @@ Asgardeo OIDC Agent to implement authentication in the web app.
 
 ::: tip Before you begin
 
-1. Create a tenant in Asgardeo
-2. Create a consumer user for your organization
+1. Create an organization in Asgardeo
+2. Create a customer account in your organization
 3. Install Apache Maven (3.6.x or higher) as the package manager
 4. Install Apache Tomcat (8.x or 9.x) as the deployment engine
 
@@ -86,11 +86,11 @@ consumerSecret=<consumerSecret>
 callBackURL=<YOUR_APP_PATH>/oauth2client
 scope=openid
 logoutURL=logout
-authorizeEndpoint=https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/authorize
-logoutEndpoint=https://accounts.asgardeo.io/t/<yourTenantDomain>/oidc/logout
-tokenEndpoint=https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token
-issuer=https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token
-jwksEndpoint=https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/jwks
+authorizeEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize
+logoutEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oidc/logout
+tokenEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
+issuer=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
+jwksEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
 skipURIs=<YOUR_APP_PATH>/index.html
 ```
 

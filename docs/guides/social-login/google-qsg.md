@@ -13,7 +13,7 @@ OAuth Credential on the Google developer console and obtain a client ID & secret
 You can use the following URL as the Authorized Redirect URI.
 
 ```
-https://dev.accounts.asgardeo.io/t/<tenant-name>/commonauth
+https://dev.accounts.asgardeo.io/t/<organization_name>/commonauth
 ```
 
 :::

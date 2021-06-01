@@ -11,11 +11,11 @@ supported scopes or response types as a JSON document.
 
 _Issuer name of Asgardeo:_
 
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token`
+`https://accounts.asgardeo.io/t/<organization_name>/oauth2/token`
 
 _Discovery endpoint:_
 
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/token/.well-known/openid-configuration`
+`https://accounts.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-configuration`
 
 _Sample request:_
 
@@ -71,7 +71,7 @@ axios(config)
 
 **2. Configure the endpoints manually**
 
-You can also find the server endpoints corresponding to your tenant domain from the **Help** panel of the application
+You can also find the server endpoints corresponding to your organization from the **Help** panel of the application
 view in the Console.
 
 <img :src="$withBase('/assets/img/guides/applications/app-endpoint-help.png')" alt="app-help-panel-for-endpoints">

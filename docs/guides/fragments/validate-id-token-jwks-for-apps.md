@@ -5,7 +5,7 @@ By using a signature validation library, you can validate the signature of the I
 
 _JWKS endpoint:_
 
-`https://accounts.asgardeo.io/t/<yourTenantDomain>/oauth2/jwks`
+`https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks`
 
 _Sample request:_
 
