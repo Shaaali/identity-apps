@@ -55,7 +55,7 @@ The above scripts does not have any conditional authentication. It will execute 
 
 ### 2. Implement onSuccess callback
 
-Now, we will implement what to do, if  **username and password based authentication** (Step 1) is success. You can use [onSuccess](../conditional-auth-js-api-reference#executestep) eventCallback.
+Now, we will implement what to do, if  **username and password based authentication** (Step 1) is success. You can use [onSuccess](../conditional-auth-js-api-reference#executestep-stepid-options-eventcallbacks) eventCallback.
 
 ```js
 var onLoginRequest = function (context) {
