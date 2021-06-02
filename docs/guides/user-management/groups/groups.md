@@ -1,12 +1,17 @@
 # Groups
 
 ## What's a group
-In simple terms, a group is called a collection of users who have same access level to access resources in an organization. A 
+In simple terms, a group is a collection of users who have same access level to access resources in an organization. A 
 group can contain many users. 
 
 ## Groups in Asgardeo
 
-Asgardeo Console  provides you the support to create and manage groups, add users to groups, and remove users from groups. You can use groups to manage different types of users. There is no restriction to assign users to any number of groups.
+Asgardeo Console provides you the support to,
+- create and manage groups
+- add users to groups
+- remove users from groups. 
+    
+There is no restriction to assign users to any number of groups.
 
 ::: tip
 Only customer users can be assigned to a group.
