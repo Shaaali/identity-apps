@@ -165,10 +165,10 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['configure-conditional-auth/', 'Configure conditional auth'],
-                        ['write-conditional-auth-scripts/', 'Write conditional auth scripts'],
-                        ['conditional-auth-templates/', 'Predefined templates'],
-                        ['conditional-auth-js-api-reference/', 'JS API Reference'],
+                        ['configure-conditional-auth.md', 'Configure conditional auth'],
+                        ['write-conditional-auth-scripts.md', 'Write conditional auth scripts'],
+                        ['conditional-auth-templates.md', 'Predefined templates'],
+                        ['conditional-auth-js-api-reference.md', 'JS API Reference'],
                     ]
                 },
               ]
