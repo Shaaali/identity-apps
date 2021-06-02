@@ -8,24 +8,24 @@ Following is the list of conditional authentication templates available in Asgar
 
 **User**
 
-* <a href="../conditional-auth-scenarios/user-aged-based-template" target="_blank">User-Aged-Based</a>
+* <a href="../conditional-auth-scenarios/user-aged-based-template">User-Aged-Based</a>
 
   Allows log in to application if the user's age is over the configured value. User's age is calculated using the user's
   date of birth attribute.
 
-* <a href="../conditional-auth-scenarios/group-based-template" target="_blank">Group-Based</a>
+* <a href="../conditional-auth-scenarios/group-based-template">Group-Based</a>
 
   Prompts 2FA to the users who belong to any of the given sets of groups.
 
 **Request**
 
-* <a href="../conditional-auth-scenarios/new-device-based-template" target="_blank">New-Device-Based</a>
+* <a href="../conditional-auth-scenarios/new-device-based-template">New-Device-Based</a>
 
   Sends an email notification and/or prompts 2FA to the users who are logging in from a previously unused device. A
   cookie is used to identify whether the device has been used before.
 
 **Environment**
 
-* <a href="../conditional-auth-scenarios/ip-based-template" target="_blank">IP-Based</a>
+* <a href="../conditional-auth-scenarios/ip-based-template">IP-Based</a>
 
   Prompts 2FA to the users who are logging outside of the given ip range.

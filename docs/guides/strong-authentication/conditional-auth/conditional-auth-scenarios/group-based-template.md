@@ -18,7 +18,7 @@ the step 2.
 
 2. Configure conditional authentication and deploy the **Group-Based 2FA Template** for the application.
 
-   Refer the [Configure conditional authentication for an application](../configure-conditional-auth) guide on
+   Refer the <a href="../../configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
 
 3. Customize the login flow and enable TOTP as the step 2.

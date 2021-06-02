@@ -21,7 +21,7 @@ We will start from the scratch and see how can we build our conditional auth scr
 
 ## Before you begin
 
-1. Your application should be registered in Asgardeo. Refer the <a href="../../../applications" target="_blank">Manage applications</a> section to register your application in Asgardeo if
+1. Your application should be registered in Asgardeo. Refer the <a href="../../../applications">Manage applications</a> section to register your application in Asgardeo if
    not done already.
 
 2. Customize the login flow and enable `Username and Password authentication` as `Step 1` and the `TOTP` as the `Step 2`.
@@ -43,7 +43,7 @@ We will start from the scratch and see how can we build our conditional auth scr
 
 ### 1. Start with the default script
 
-To start off, let's <a href="../configure-conditional-auth" target="_blank">configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
+To start off, let's <a href="../configure-conditional-auth">configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
 
 
 ```js
@@ -56,7 +56,7 @@ The above scripts does not have any conditional authentication. It will execute 
 
 ### 2. Implement onSuccess callback
 
-Now, we will implement what to do, if  **username and password based authentication** (Step 1) is success. You can use <a href="../conditional-auth-js-api-reference/#executestep-stepid-options-eventcallbacks" target="_blank">onSuccess</a> eventCallback.
+Now, we will implement what to do, if  **username and password based authentication** (Step 1) is success. You can use <a href="../conditional-auth-js-api-reference/#executestep-stepid-options-eventcallbacks">onSuccess</a> eventCallback.
 
 ```js
 var onLoginRequest = function (context) {
@@ -88,7 +88,7 @@ var onLoginRequest = function (context) {
 
 ### 4. Use the authenticated user object reference
 
-If **username and password based authentication** (Step 1) is success, let's try to get the <a href="../conditional-auth-js-api-reference/#user-object" target="_blank">user</a> from the <a href="../conditional-auth-js-api-reference/#context-object" target="_blank">context</a>. We can use `context.currentKnownSubject` to get the authenticated user.
+If **username and password based authentication** (Step 1) is success, let's try to get the <a href="../conditional-auth-js-api-reference/#user-object">user</a> from the <a href="../conditional-auth-js-api-reference/#context-object">context</a>. We can use `context.currentKnownSubject` to get the authenticated user.
 
 ```js
 var groupsToStepUp = ['admin', 'manager'];
@@ -108,9 +108,9 @@ var onLoginRequest = function (context) {
 
 ### 5. Use an inbuilt function check group membership
 
-Now check whether user is a member of any of the group `admin` or `manager`. We have this utility function <a href="../conditional-auth-js-api-reference/#ismemberofanyofgroups-user-groups" target="_blank">isMemberOfAnyOfGroups(user, groups)</a> to check whether the user is a member of any of the groups in the list. 
+Now check whether user is a member of any of the group `admin` or `manager`. We have this utility function <a href="../conditional-auth-js-api-reference/#ismemberofanyofgroups-user-groups">isMemberOfAnyOfGroups(user, groups)</a> to check whether the user is a member of any of the groups in the list. 
 
-Refer the <a href="../conditional-auth-js-api-reference" target="_blank"> inbuilt functions </a> to get to know more existing functions.
+Refer the <a href="../conditional-auth-js-api-reference"> inbuilt functions </a> to get to know more existing functions.
 
 ```js
 var groupsToStepUp = ['admin', 'manager'];
@@ -191,5 +191,5 @@ var onLoginRequest = function (context) {
 
 Now you have completed writing a conditional auth script from scratch. 
 
-Similarly, you can build your own scripts to handle many scenarios using the <a href="../conditional-auth-js-api-reference" target="_blank">JS-API references</a> and <a href="../conditional-auth-templates" target="_blank">pre-defined templates</a>.
+Similarly, you can build your own scripts to handle many scenarios using the <a href="../conditional-auth-js-api-reference" >JS-API references</a> and <a href="../conditional-auth-templates">pre-defined templates</a>.
 
