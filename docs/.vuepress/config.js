@@ -172,7 +172,19 @@ module.exports = config({
                 title: 'Manage Users',
                     icon:  'usersIcon',
                     children: [
-                        ['user-management/', 'Users'],
+                        {
+                            title: 'Users',
+                            prefix: '/guides/user-management/',
+                            path: '/guides/user-management/',
+                            collapsable: false,
+                            sidebarDepth: 2,
+                            children: [
+                               ['manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
+                               ['manage-customer-accounts.md', 'Manage Customer Accounts']
+                            ]
+                       },
+                        ['user-management/user-profiles.md', 'User profiles'],
+                        ['user-management/sessions.md', 'Sessions'],
                         ['user-management/groups/groups.md', 'Groups'],
               ]
             },
