@@ -53,7 +53,7 @@ features:
         link: /guides/user-management/
       
       - name: "Groups"
-        link:
+        link: /guides/user-management/groups/groups
         
       - name: "Roles"
         link: 
