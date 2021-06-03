@@ -4,7 +4,7 @@
 
 3. Fill in the user's details.
 
-<img :src="$withBase('/assets/img/guides/get-started/create-customer-account.png')" alt="customer-account-create-ui">
+    <img :src="$withBase('/assets/img/guides/get-started/create-customer-account.png')" alt="customer-account-create-ui">
 
 4. Select **Set a temporary password for the user**.
 

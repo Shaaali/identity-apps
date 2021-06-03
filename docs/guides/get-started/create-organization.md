@@ -15,7 +15,7 @@ Let's get you started with Asgardeo!
 
 3. Enter a unique organization name that describes the workspace.
 
-<img :src="$withBase('/assets/img/guides/get-started/create-organization.png')" alt="new-organization-create-ui">
+    <img :src="$withBase('/assets/img/guides/get-started/create-organization.png')" alt="new-organization-create-ui">
 
 ## Create a user
 
