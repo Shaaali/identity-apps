@@ -1,3 +1,8 @@
+---
+sidebar: auto
+breadcrumb: false
+---
+
 # Web application with OIDC: Java EE
 
 This guide provides steps to authenticate users to your own Java EE web application with OIDC protocol. We will use the

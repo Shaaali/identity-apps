@@ -7,9 +7,9 @@ more settings for it to define how you want the app to work with Asgardeo.
 
 Register a single page application:
 
-- [Angular](../spa/spa-angular.md)
-- [React](../spa/spa-react.md)
-- [Javascript](../spa/spa-javascript.md)
+- Angular]
+- React]
+- Javascript
 
 :::
 

@@ -26,14 +26,14 @@ Authorization Code Flow for public clients with the PKCE.
       <td><h4><b>Use your own framework</b></h4></td>
     </tr>
     <tr>
-      <td style="text-align:center"><a href="./spa-react">React</a></td>
+      <td style="text-align:center"><a href="../../../sdks/react">React</a></td>
       <td rowspan="3" colspan="3" style="text-align:center"><a href="./spa-configure-general">General guide</a></td>
     </tr>
     <tr>
-      <td style="text-align:center"><a href="./spa-angular">Angular</a></td>
+      <td style="text-align:center"><a href="../../../sdks/angular">Angular</a></td>
     </tr>
     <tr>
-      <td style="text-align:center"><a href="./spa-javascript">Javascript</a></td>
+      <td style="text-align:center"><a href="../../../sdks/javascript">Javascript</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,3 +1,8 @@
+---
+sidebar: auto
+breadcrumb: false
+---
+
 # SPA with OIDC: Angular
 
 This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md)
