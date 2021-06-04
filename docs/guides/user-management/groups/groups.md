@@ -7,7 +7,7 @@ The Asgardeo Console allows you to:
 - Add users to groups.
 - Remove users from groups. 
     
-One user can be assigned users to any number of groups. Applications can get details about a user's group in 
+One user can be assigned to any number of groups. Applications can get details about a user's group in 
 the authentication response (e.g., id_token) from Asgardeo as a user attribute.                                                          
 
 ::: tip
@@ -25,7 +25,7 @@ For example, you can create the following user groups: `Admin`, `Manager`, and `
 3. Click **New Group**.
     <img :src="$withBase('/assets/img/guides/groups/create-new-group-view.png')" alt="create-new-group-view">
 
-4. Provide the following details..
+4. Provide the following details.
     <img :src="$withBase('/assets/img/guides/groups/create-new-group-form.png')" alt="create-new-group-form">
     
     - **Group Name:** A unique name to identify the group.   
