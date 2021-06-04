@@ -7,7 +7,7 @@ The Asgardeo Console allows you to:
 - Add users to groups.
 - Remove users from groups. 
     
-One user can be assigned users to any number of groups. Applications can get details about a user's group in 
+One user can be assigned to any number of groups. Applications can get details about a user's group in 
 the authentication response (e.g., id_token) from Asgardeo as a user attribute.                                                          
 
 ::: tip
