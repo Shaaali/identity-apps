@@ -6,6 +6,10 @@ Asgardeo provides different ways to manage user profiles such as the Asgardeo co
 
 Owner or collaborator user can customize the user profiles via claim management based on organization's requirements.
 
+This guide will give you an overview of:
+- [How an administrator can manage the user profile.](#administrator-updates-user-profile-via-asgardeo-console)
+- [How a user can manage their own profile.](#user-updates-user-profile-via-myaccount)
+
 ## Administrator updates user profile via Asgardeo Console
 
 From the user's profile in Asgardeo console, admin can perform following options:
@@ -14,14 +18,8 @@ From the user's profile in Asgardeo console, admin can perform following options
  - [Reset the password of a user.](#reset-the-password-of-a-user)
  
 Let's see how an administrator can access user profile.
- 1. Login to Asgardeo Console. 
-
- 2. Select **Manage** tab in the Console.
-
- 3. Move to the **Users** section from the left navigation.
-
- 4. Select the user to update.
-
+ 1. In the Asgardeo Console, Select **Manage > Users** tab in the Console.
+ 2. Select the user to update.
  5. Click on **Edit**.
      <img :src="$withBase('/assets/img/guides/users/update-user-profile.png')" alt="update-user-profile">
     
@@ -34,29 +32,21 @@ Administrator(Owner/Collaborator) can update the user profile of the **customer*
 Profiles of **Collaborator** and the **Owner** can be updated only via MyAccount.
 :::
 
-1. Update the user profile.
+1. Update the user profile attributes.
 2. Click **Update**.
 
 ### Delete a user
-
 1. Click **Delete** button.
-
 2. Type the user's username to confirm deleting the user.
-
-3. Click **Confirm**.
-         
+3. Click **Confirm**.     
      ::: danger
-     This action is irreversible. Once you delete a user, the user will no longer access Asgardeo.
+     This action is irreversible. Once you delete a user, the user will no longer access Asgardeo. Please proceed with caution.
      :::
 
 ### Reset the password of a user.
 
 Administrator(Owner/Collaborator) can reset the password of a customer user and request the customer user to reset his password.
-
-<img :src="$withBase('/assets/img/guides/users/reset-password-of-user.png')" alt="reset-password-of-user">
-
-- **Select the method to set the user password:**
-      
+- **Select the method to set the user password:**     
   - **Invite user to set their own password:**
     If owner/collaborator user selects this option, a password reset email will be sent to the customer user to reset their password
       
@@ -71,8 +61,5 @@ Administrator(Owner/Collaborator) can reset the password of a customer user and 
 
 All users can update their profile via MyAccount.
 
-1. Login to Asgardeo MyAccount
-
-2. Select **Personal Info** tab in the MyAccount.
-
+1. In the Asgardeo MyAccount, Select **Personal Info**.
 3. Update profile information.
