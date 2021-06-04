@@ -63,10 +63,10 @@ module.exports = config({
 //            text: 'APIs',
 //            link: '/apis/',
 //          },
-//          {
-//            text: 'SDKs',
-//            link: '/sdks/'
-//          },
+         {
+           text: 'SDKs',
+           link: '/sdks/'
+         },
 //          {
 //            text: 'Concepts',
 //            link: '/concepts/'
@@ -94,9 +94,6 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['spa-react', 'React SDK for OIDC'],
-                        ['spa-angular', 'Angular SDK for OIDC'],
-                        ['spa-javascript', 'Javascript SDK for OIDC'],
                         ['spa-configure-general', 'Direct OIDC integration']
                     ]
                 },
@@ -107,7 +104,6 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['web-app-oidc-java-ee', 'OIDC Agent for Java EE'],
                         ['web-app-oidc-general.md', 'Direct OIDC integration']
                     ]
                 },
