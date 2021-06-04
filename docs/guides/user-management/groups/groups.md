@@ -2,8 +2,6 @@
 
 A group is a collection of users who have the same privileges to access resources in an organization. 
 
-## Groups in Asgardeo
-
 The Asgardeo Console allows you to:
 - Create and manage groups.
 - Add users to groups.

@@ -1,7 +1,5 @@
 # Asgardeo Overview
 
-## What is Asgardeo?
-
 Asgardeo is an identity as a service (IDaaS) solution that provides a fully integrated developer experience to create
  seamless login experiences in minutes. You can get started with common IAM use cases with no installation or 
  maintenance hassles. 
