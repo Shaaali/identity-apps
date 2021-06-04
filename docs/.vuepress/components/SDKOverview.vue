@@ -2,8 +2,8 @@
   <main class="quickstarts-page">
     <MyTransition :delay="0.1">
       <header class="title-container">
-        <h1>Quickstarts</h1>
-        <p class="description">Tryout our samples to learn how to enable login to your applications with Asgardeo</p>
+        <h1>SDK Libraries</h1>
+        <p class="description">Tryout our SDKs to integrate your applications with Asgardeo</p>
       </header>
     </MyTransition>
     <MyTransition :delay="0.1">
@@ -28,12 +28,12 @@
             <img class="tech-icon" src="../theme/assets/images/technologies/java-logo.svg" width="100" height="100"/>
           </a>
         </div>
-        <div class="tech-item">
-          <img class="tech-icon disabled" src="../theme/assets/images/technologies/android-logo.svg" width="100" height="100"/>
-        </div>
-        <div class="tech-item">
-          <img class="tech-icon disabled" src="../theme/assets/images/technologies/dotnet-logo.svg" width="100" height="100"/>
-        </div>
+<!--        <div class="tech-item">-->
+<!--          <img class="tech-icon disabled" src="../theme/assets/images/technologies/android-logo.svg" width="100" height="100"/>-->
+<!--        </div>-->
+<!--        <div class="tech-item">-->
+<!--          <img class="tech-icon disabled" src="../theme/assets/images/technologies/dotnet-logo.svg" width="100" height="100"/>-->
+<!--        </div>-->
       </div>
     </MyTransition>
   </main>
