@@ -41,7 +41,7 @@ Authorization Code Flow for public clients with the PKCE.
 <br>
 
 ## Related Links
-
+* [Integrate your OIDC SPA with Asgardeo](./spa-integrate-with-oidc.md)
 * [Tryout React SPA Sample](/quickstarts/qsg-spa-react.md)
 * [Tryout Angular SPA Sample](/quickstarts/qsg-spa-angular.md)
 * [Tryout JavaScript SPA Sample](/quickstarts/qsg-spa-javascript.md)

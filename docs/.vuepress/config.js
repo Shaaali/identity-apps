@@ -94,7 +94,7 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['spa-configure-general', 'Direct OIDC integration']
+                        ['spa-integrate-with-oidc', 'Integrate with OIDC']
                     ]
                 },
                 {
@@ -104,7 +104,7 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['web-app-oidc-general.md', 'Direct OIDC integration']
+                        ['web-app-integrate-with-oidc.md', 'Integrate with OIDC']
                     ]
                 },
                 // Uncomment as each section is implemented

@@ -12,4 +12,4 @@ to enable login to web applications.
 Following guides provide detailed steps to integrating login to your web applications with Asgradeo using OpenID Connect.
 
 * [Login to Java EE web app using Asgardeo OpenID Connect Agent](../../../sdks/java-ee)
-* [Login to any web app using OpenID Connect](./web-app-oidc-general.md)
+* [Login to any web app using OpenID Connect](./web-app-integrate-with-oidc)
