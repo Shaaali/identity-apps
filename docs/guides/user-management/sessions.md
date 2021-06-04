@@ -20,9 +20,9 @@ We will guide you:
 
 ## Administrator manages active sessions of users
 
-**Administrator views active sessions of users**
+ Administrator(owner/collaborator) can view and terminate the active session(s) of users of via Asgardeo Console
 
- Administrator(owner/collaborator) can view the active sessions of users of via Asgardeo Console.
+**Administrator views active sessions of users**
 
  1. In Asgardeo Console, Select **Manage > Users**.
  2. Select a user and Click **Edit**.
@@ -31,8 +31,6 @@ We will guide you:
     
     
 **Administrator terminates active session/sessions**
-
- Administrator(owner/collaborator) can terminate the active session(s) of users of via Asgardeo Console.
 
  4. Click  **Termination Sessions** under the selected session. This will terminate that respective session only.
  5. Click **Termination All**. This will terminate all the sessions of that user.
