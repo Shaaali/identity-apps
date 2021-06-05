@@ -6,47 +6,40 @@ This guide contains following topics:
 - [Assign groups to a customer user](#assign-groups)
 
 ## Create customer user
-
-1. In Asgardeo Console, Select **Manage > Users**.  section from the left navigation.
-2. Click  **New User** and Select **Customer** user.
+1. In the Asgardeo Console, Select **Manage > Users**.
+2. Click  **New User** and Select **Customer** user from the list.
 3. Provide the following details.
     - **Email (username):** A unique email address to identify the user. 
         <br>
-        ::: danger
-        This emailaddress will be used as the username in Asgardeo. Hence, you can't change this username once the user is created. Also you can't create a user with the existing username in the organization.
+        ::: warning
+        This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization and you can't change the username once it is created.
         :::
-       
     - **First Name:** First name of the user. You can add/change this later.
     - **Last Name:** Last name of the user. You can add/change this later.
 
     - **Select the method to set the user password:**
-      - **Invite user to set their own password**
-            If owner/collaborator user selects this option, an email with confirmation link will be sent to the provided email (username) to set their own password
-      - **Set a temporary password for the user**
-            If owner/collaborator user selects this option, he/she can set password of the user.<br>
-            
-        ::: warning
-        User's password must contain a minimum of 8 characters including at least one uppercase letter, one lowercase letter, one number, and one special character from !, @, #, $, %, *, &
-        :::
-6. Click **Next**.
-7. You can assign the user to some groups. 
-8. Click **Finish**.
+      - **Invite user to set their own password:**
+            If administrator selects this option, an email with confirmation link will be sent to the provided email (username) to set their own password
+      - **Set a temporary password for the user:**
+            If administrator selects this option, he/she can set password of the user.<br>            
+4. Click **Next**.
+5. You can assign the user to some groups. 
+6. Click **Finish**.
 
 ## Delete customer user
 
-1. In Asgardeo Console, Select **Manage** tab in the Console.
-2. Move to the **Users** section from the left navigation.
-3. Click on **Delete** on the user who needs to be removed.
-4. Type the user's username to confirm deleting the user.     
+1. In the Asgardeo Console, Select **Manage > Users**.
+2. Click on **Delete** on the user who needs to be removed.
+3. Type the user's username to confirm deleting the user.     
      ::: danger
-     This action is irreversible. Once you delete a user, the user will no longer access Asgardeo. Please proceed with caution.
+     Note that deleted users cannot be retrieved again. Therefore, proceed with caution.
      :::
-5. Click **Confirm**.
+4. Click **Confirm**.
      
 ## Assign groups
 
-1. In Asgardeo Console, Select **Manage > **Users** tab in the Console.. 
-2. Click on **Edit** on the user to assign roles.
+1. In the Asgardeo Console, Select **Manage > Users**. 
+2. Click **Edit** on the user to assign roles.
 3. Navigate to **Groups** and assign roles.
     <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" alt="assign-groups">
     

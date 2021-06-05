@@ -35,7 +35,7 @@ features:
 
   - title: Add Strong Authentication
     details: Protect your user login using multi-factor and adaptive authentication.
-    link: /guides/strong-authentication/
+    link: 
     icon: addAuthnIcon
     subLinks:
       - name: "Multi-factor authentication"

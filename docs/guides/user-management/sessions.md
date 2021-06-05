@@ -20,7 +20,7 @@ We will guide you:
 
 ## Administrator manages active sessions of users
 
- Administrator(owner/collaborator) can view and terminate the active session(s) of users of via Asgardeo Console
+Administrator(owner/collaborator) can view and terminate the active session(s) of users of via Asgardeo Console
 
 **Administrator views active sessions of users**
 

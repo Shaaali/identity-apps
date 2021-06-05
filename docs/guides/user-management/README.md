@@ -25,10 +25,17 @@ the administrative rights to the organization.
 ### Collaborator
 
 A user who can manage the organization and has access to the organization’s administrative operations such as 
-application onboarding and user management. A collaborator user can be invited to the organization and assigned with 
+application onboarding and user management based on the assigned roles. A collaborator user can be invited to the organization and assigned with 
 permissions by its admins.
 
 ### Customer
 
 A user that is registered within the organization, and consumes and accesses applications in that organization. A 
 customer can self-register or can be onboarded to an organization by its admins.
+
+:::tip Note
+
+  An owner or collaborator with Administrator role can act as an **administrator**. They can perform the administrative operations of the organization. <br>
+  
+  Only Owner and collaborator can access Asgardeo console. 
+:::

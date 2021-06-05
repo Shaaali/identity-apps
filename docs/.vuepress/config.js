@@ -176,8 +176,6 @@ module.exports = config({
                             title: 'Users',
                             prefix: '/guides/user-management/',
                             path: '/guides/user-management/',
-                            collapsable: false,
-                            sidebarDepth: 2,
                             children: [
                                ['manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
                                ['manage-customer-accounts.md', 'Manage Customer Accounts']
