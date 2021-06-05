@@ -42,6 +42,6 @@ For example, you can create the following user groups: `Admin`, `Manager`, and `
 2. Select the group to remove the user.
 3. Click **Edit** and navigate to **Users**.
     <img :src="$withBase('/assets/img/guides/groups/remove-user-from-group-view.png')" alt="remove-user-from-group-view">
-4. Click **Edit**.
-5. Clear the checkbox for the user you want to remove.
+4. Click **Edit** icon.
+5. Clear the checkbox for the user(s) you want to remove.
 6. Click **Save**.

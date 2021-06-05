@@ -45,5 +45,5 @@ All users can login to MyAccount and manage their sessions.
 
 **Users terminate their session**
  
- 3. Click  **Terminate All**. This will terminate all the sessions of that user.
- 4. Select the respective session and click **Termination Session**. This will terminate the corresponding sessions of that user.
+ 2. Click  **Terminate All**. This will terminate all the sessions of that user.
+ 3. Select the respective session and click **Termination Session**. This will terminate the corresponding sessions of that user.

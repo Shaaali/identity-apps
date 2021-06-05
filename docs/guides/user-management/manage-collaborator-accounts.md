@@ -31,5 +31,5 @@ This guide contains the following topics:
 ## Assign roles
 1. In the Asgardeo Console, Select **Manage > Users**.
 2. Click on **Edit** of the user you want to edit.
-3. Navigate to **Roles**.
+3. Navigate to **Roles** and assign the roles.
 4. Click **Update**.

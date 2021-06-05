@@ -1,6 +1,6 @@
 # Manage customer user accounts
 
-This guide contains following topics:
+This guide contains the following topics:
 - [Create a customer user](#create-customer-user)
 - [Delete a customer user](#delete-customer-user)
 - [Assign groups to a customer user](#assign-groups)
@@ -16,7 +16,6 @@ This guide contains following topics:
         :::
     - **First Name:** First name of the user. You can add/change this later.
     - **Last Name:** Last name of the user. You can add/change this later.
-
     - **Select the method to set the user password:**
       - **Invite user to set their own password:**
             If administrator selects this option, an email with confirmation link will be sent to the provided email (username) to set their own password
@@ -39,7 +38,7 @@ This guide contains following topics:
 ## Assign groups
 
 1. In the Asgardeo Console, Select **Manage > Users**. 
-2. Click **Edit** on the user to assign roles.
-3. Navigate to **Groups** and assign roles.
+2. Click **Edit** on the user to assign groups.
+3. Navigate to **Groups** and assign groups.
     <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" alt="assign-groups">
     
