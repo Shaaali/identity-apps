@@ -5,8 +5,8 @@ breadcrumb: false
 
 # Web application with OIDC: Java EE
 
-This guide provides steps to authenticate users to your own Java EE web application with OIDC protocol. We will use the
-Asgardeo OIDC Agent to implement authentication in the web app.
+This guide provides steps to authenticate users to your Java EE web application with OpenID Connect using the
+[Asgardeo OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)
 
 ::: tip Before you begin
 
@@ -36,7 +36,7 @@ To ease development, we have introduced
 the **[Asgardeo OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)** which enables adding OIDC-based
 login and logout in the web application. All you need to do is configure the app to talk to Asgardeo.
 
-> Refer the [documetation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) of Asgardeo Tomcat OIDC Agent for more information on how it works.
+> Refer the [documentation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) of Asgardeo Tomcat OIDC Agent for more information on how it works.
 
 **1. Add dependencies**
 
