@@ -39,7 +39,7 @@ features:
     icon: addAuthnIcon
     subLinks:
       - name: "Multi-factor authentication"
-        link: 
+        link: /guides/mfa/
 
       - name: "Conditional authentication"
         link: /guides/conditional-auth/

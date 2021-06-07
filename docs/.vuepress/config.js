@@ -164,19 +164,15 @@ module.exports = config({
                         ['/guides/conditional-auth/api-reference.md', 'API Reference'],
                     ]
                 },
+
+
             {
-                title: 'Add strong authentication',
+                title: 'Multi Factor authentication',
                 icon: 'addAuthnIcon',
                 children: [
                     // Guides for the multi factor authentication is not yet completed.
-                // ['strong-authentication/overview.md', 'Overview'],
-                // {
-                //     title: 'Multi factor authentication',
-                //     children: [
-                //         ['/guides/strong-authentication/mfa-qsg.md', 'Configure multi factor authentication']
-                //     ]
-                // }
-
+                ['mfa/', 'Overview'],
+                ['mfa/totp.md', 'TOTP']
               ]
             },{
                 title: 'Manage users',

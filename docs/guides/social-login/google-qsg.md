@@ -42,14 +42,5 @@ The identity provider in Asgardeo represents the connection to Google.
 
     <img :src="$withBase('/assets/img/guides/google-social-login.png')" alt="foo">
 
-## What's next?
-
-- See [manage identity providers](../social-login/manage-identity-providers.md) to manage your identity provider
-  settings.
-- See [multi-factor authentication](../strong-authentication/mfa-qsg.md) for more guidance on MFA.
-
-
-
-
 
 

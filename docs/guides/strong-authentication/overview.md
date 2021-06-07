@@ -1,1 +1,0 @@
-# Enable stron authentication introduction
