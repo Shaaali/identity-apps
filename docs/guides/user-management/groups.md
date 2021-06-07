@@ -11,7 +11,7 @@ One user can be assigned users to any number of groups. Applications can get det
 the authentication response (e.g., id_token) from Asgardeo as a user attribute.                                                          
 
 ::: tip
-Only [customer users](../#customer) can be assigned to a group.
+Only [customer users](./#customer) can be assigned to a group.
 :::
 
 For example, you can create the following user groups: `Admin`, `Manager`, and `Developer`. When one user group is granted access to a resource, it applies to all users in the group.
