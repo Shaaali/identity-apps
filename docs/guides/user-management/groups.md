@@ -11,12 +11,12 @@ One user can be assigned users to any number of groups. Applications can get det
 the authentication response (e.g., id_token) from Asgardeo as a user attribute.                                                          
 
 ::: tip
-Only [customer users](../#customer) can be assigned to a group.
+Only [customer users](./#customer) can be assigned to a group.
 :::
 
 For example, you can create the following user groups: `Admin`, `Manager`, and `Developer`. When one user group is granted access to a resource, it applies to all users in the group.
 
-### Creating a new group
+## Creating a new group
 
 1. In the Asgardeo console, Click **Manage > Groups**.
 2. Click **New Group**.
@@ -26,7 +26,7 @@ For example, you can create the following user groups: `Admin`, `Manager`, and `
     - **Add Users:** If you already have existing customer users, you can search and add them.
 4. Click **Finish**.
 
-### Assigning users to a group
+## Assigning users to a group
 
 1. In the Asgardeo console, Click **Manage > Groups**.
 2. Select the group to assign the user.
@@ -36,7 +36,7 @@ For example, you can create the following user groups: `Admin`, `Manager`, and `
 5. Select users to add to the group.
 6. Click **Save**.
 
-### Removing users from a group
+## Removing users from a group
 
 1. In the Asgardeo Console, Click **Manage > Groups**.
 2. Select the group to remove the user.

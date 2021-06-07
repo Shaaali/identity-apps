@@ -169,7 +169,7 @@ module.exports = config({
                 },
               ]
             },{
-                title: 'Manage Users',
+                title: 'Manage users',
                     icon:  'usersIcon',
                     children: [
                         {
@@ -185,7 +185,7 @@ module.exports = config({
                        },
                         ['user-management/user-profiles.md', 'User profiles'],
                         ['user-management/sessions.md', 'Sessions'],
-                        ['user-management/groups/groups.md', 'Groups'],
+                        ['user-management/groups.md', 'Groups'],
               ]
             },
             ],
