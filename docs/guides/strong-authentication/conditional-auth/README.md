@@ -1,8 +1,8 @@
 # Conditional authentication
 
-Conditional authentication provides dynamic login capabilities based on the risk factors associated with the user's authentication request. The goal of the conditional authentication is to provide a secure and flexible form of login mechanism.
+Conditional authentication provides dynamic login capabilities based on the risk factors associated with the user's authentication request. The goal of conditional authentication is to provide a secure and flexible login mechanism.
 
-<img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-intro.png')" alt="conditional-authentication">
+   <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-intro.png')" alt="what is conditional authentication">
 
 Asgardeo supports [script-based conditional authentication](./configure-conditional-auth). You can use the provided script editor to define dynamic authentication flows depending on your requirements. 
 

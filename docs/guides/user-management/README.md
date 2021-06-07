@@ -12,6 +12,10 @@ User management is a vital requirement for any organization. Asgardeo provides a
 
 Asgardeo supports a set of user account types based on their relationship to the organization. Given below are the 
 user account categories supported by Asgardeo.
+ - **Owner**
+ - **Collaborator**
+ - **Customer**
+  
   
 ### Owner
 
@@ -21,7 +25,7 @@ the administrative rights to the organization.
 ### Collaborator
 
 A user who can manage the organization and has access to the organization’s administrative operations such as 
-application onboarding and user management. A collaborator user can be invited to the organization and assigned with 
+application onboarding and user management based on the assigned roles. A collaborator user can be invited to the organization and assigned with 
 permissions by its admins.
 
 ### Customer
@@ -29,13 +33,9 @@ permissions by its admins.
 A user that is registered within the organization, and consumes and accesses applications in that organization. A 
 customer can self-register or can be onboarded to an organization by its admins.
 
-## Source
+:::tip Note
 
-The source determines where the user's credentials and details are stored and managed. A user account can reside in 
-one of the following sources:
-
-* **Asgardeo**: This is the global user store where organization owner and collaborator users are stored.
+  An owner or collaborator with Administrator role can act as an **administrator**. They can perform the administrative operations of the organization. <br>
   
-* **Local/Customer**: This is the default user store where details of the customer accounts of the organization are 
-stored.
-
+  Only Owner and collaborator can access Asgardeo console. 
+:::
