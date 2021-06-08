@@ -143,6 +143,28 @@ module.exports = config({
               ]
             },
             {
+                title: 'Manage identity providers',
+                icon: 'addLoginIcon',
+                children: [
+                    ['/guides/identity-providers/', 'Overview'],
+                    {
+                        title: 'Social login',
+                        children: [
+                            ['/guides/identity-providers/social-login/google.md', 'Google'],
+                            // ['/guides/identity-providers/social-login/github.md', 'Github']
+                        ]
+                    },
+                    {
+                        title: 'Enterprise login',
+                        children: [
+                            ['/guides/identity-providers/enterprise-login/oidc.md', 'OpenID Connect'],
+                            // ['/guides/identity-providers/enterprise-login/saml.md', 'SAML'],
+
+                        ]
+                    },
+                ]
+            },
+            {
                 title: 'Add MFA',
                 icon: 'addAuthnIcon',
                 children: [
@@ -150,29 +172,10 @@ module.exports = config({
                     ['mfa/totp.md', 'TOTP']
                 ]
             },
-                // Guides for the login is not yet completed.
-            // {
-            //     title: 'Configure federated login',
-            //     icon: 'addLoginIcon',
-            //     children: [
-            //     ['social-login/overview.md', 'Overview'],
-            //     {
-            //         title: 'Social login',
-            //         children: [
-            //             ['/guides/social-login/google-qsg.md', 'Enable Google authentication']
-            //         ]
-            //     },
-            //     {
-            //         title: 'Enterprise login',
-            //         children: [
-            //             ['/guides/social-login/google-qsg.md', 'Enable OIDC authentication']
-            //         ]
-            //     },
-            //   ]
-            // },
             {
                 title: 'Add conditional authentication',
                 icon: 'addLoginIcon',
+
                 children: [
                     ['conditional-auth/', 'Overview'],
                     ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
