@@ -5,25 +5,21 @@ the given sets of groups.
 
 ## Scenario
 
-If the user is a member of one of the configured groups (i.e.,manager or employee) authentication will be stepped up. He
-will have to go through two steps during the login flow. Basic authentication as the step 1 and TOTP authentication as
-the step 2.
+If the user is a member of one of the configured groups (i.e.,manager or employee), authentication will be stepped up. He
+will have to go through two steps during the login flow. Basic authentication as the `Step 1` and TOTP authentication as
+the `Step 2`.
 
-## Before you begin
 
+::: tip Before you begin
 1. Your application should be registered in Asgardeo.
-
    Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if
    not done already.
-
 2. Configure conditional authentication and deploy the **Group-Based 2FA Template** for the application.
-
    Refer the <a href="../../configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
-
 3. Customize the login flow and enable TOTP as the step 2.
-
 4. Create the groups and assign users as necessary to try out the flow.
+:::
 
 ## Configured authentication steps
 
@@ -82,11 +78,8 @@ authentication.
 ## Try it out
 
 1. Access the application URL.
-
 2. Try to login with a user who does not belong to any of the configured groups(manager or employee). User will be
    successfully logged in to the application.
-
 3. Logout and login with a user who belongs to manager or employee group or both. Then the user is prompted with the
    TOTP authentication
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="group-based-2fa-conditional-auth-totp-page">
+    <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="group-based-2fa-conditional-auth-totp-page">

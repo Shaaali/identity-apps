@@ -1,4 +1,4 @@
-# Configure conditional authentication for an application
+# Configure conditional authentication
 
 This guide gives you the steps to define conditional authentication to your application. We assume that you have already
 configured an application in Asgardeo to represent your app.
@@ -9,46 +9,28 @@ done already.
 ## Enable conditional authentication
 
 1. On the Asgardeo console, click **Develop > Applications**.
+2. Select the application for which the conditional authentication should be defined, and select **Sign-in Method**" .
+3. Click on "**Start with default configuration**" button to customize the login flow starting with the `username and
+   password` login.
+4. Enable the "**Conditional Authentication**" radio button.
+   <img :src="$withBase('/assets/img/guides/conditional-auth/enable-conditional-auth.png')" alt="Enable conditional auth in Asgardeo">
 
-2. Select **Applications** from the side panel.
-
-3. Select the application for which the conditional authentication should be defined.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/app-list-view.png')" alt="list-configured-applications-view">
-
-4. Select the "**Sign-in Method**" tab in the application details view.
-
-5. Click on "**Start with default configuration**" button to customize the login flow starting with the username and
-   password login.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/sign-in-method.png')" alt="sign-in-method-tab-view">
-
-6. Enable the "**Conditional Authentication**" radio button.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/sign-in-method-start-default.png')" alt="sign-in-method-start-default-view">
-
-## Add a conditional authentication script
-
-You can add authentication steps or use a template to configure conditional authentication depending on your
-requirement.
+## Add conditional authentication script
+There are two ways to add conditional authentication script:
+1. [Use a predefined template ](#use-a-predefined-template)
+2. [Write conditional authentication script](#write-a-conditional-auth-script)
 
 ### Use a predefined template
-
-Asgardeo provides a set of conditional authentication script templates based on common scenarios.
+Asgardeo provides a set of conditional authentication script templates based on common scenarios. You can use these templates to configure conditional authentication depending on your requirements.
 
 These scripts contain inline comments explaining the logic on how the conditional authentication happens. You can also
 find details such as prerequisites, the required parameters and the default authentication steps by clicking on the
 information icon(:information_source:).
 
-<img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-templates.png')" alt="conditional-auth-templates-view">
-
-<br>
-
-Refer the <a href="../conditional-auth-templates">Conditional authentication scenarios section</a> for detailed guide on each
+Refer the <a href="../conditional-auth-templates">Conditional authentication scenarios section</a> for the detailed guide on each
 template.
 
 ### Write a conditional auth script
-
 If required, you can also use the script editor to introduce new functions and fields to an authentication script based
 on your requirement, and then engage the script to the application’s authentication configuration.
 

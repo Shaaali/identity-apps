@@ -9,9 +9,7 @@ fields.
 
 ::: tip Tip
 
-As the authentication script is designed as a loosely typed, functional language similar to JavaScript, common knowledge
-on JavaScript may help you to compose effective authentication scripts.
-
+As the authentication script is designed as a loosely typed, functional language similar to JavaScript, common knowledge on JavaScript may help you to compose effective authentication scripts.
 :::
 
 ---

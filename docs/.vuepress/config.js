@@ -163,7 +163,20 @@ module.exports = config({
                     children: [
                         ['configure-conditional-auth.md', 'Configure conditional auth'],
                         ['write-conditional-auth-scripts.md', 'Write conditional auth scripts'],
-                        ['conditional-auth-templates.md', 'Predefined templates'],
+                        {
+
+                            title: 'Conditional auth scenarios',
+                            // path:'conditional-auth-scenarios/',
+                            // prefix: 'conditional-auth-scenarios/',
+                            children: [
+                                ['conditional-auth-scenarios/Overview.md', 'Overview'],
+                                ['conditional-auth-scenarios/group-based-template.md', 'Group-Based'],
+                                ['conditional-auth-scenarios/ip-based-template.md', 'IP-Based'],
+                                ['conditional-auth-scenarios/new-device-based-template.md', 'New-Device-Based'],
+                                ['conditional-auth-scenarios/user-aged-based-template.md', 'User-Aged-Based'],
+                                // ['/guides/identity-providers/enterprise-login/saml.md', 'SAML'],
+                            ]
+                        },
                         ['conditional-auth-js-api-reference.md', 'JS API Reference'],
                     ]
                 },
