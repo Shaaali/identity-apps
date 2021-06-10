@@ -23,10 +23,6 @@ There are two ways to add conditional authentication script:
 ### Use a predefined template
 Asgardeo provides a set of conditional authentication script templates based on common scenarios. You can use these templates to configure conditional authentication depending on your requirements.
 
-These scripts contain inline comments explaining the logic on how the conditional authentication happens. You can also
-find details such as prerequisites, the required parameters and the default authentication steps by clicking on the
-information icon(:information_source:).
-
 Refer the <a href="../conditional-auth-templates">Conditional authentication scenarios section</a> for the detailed guide on each
 template.
 
@@ -34,31 +30,4 @@ template.
 If required, you can also use the script editor to introduce new functions and fields to an authentication script based
 on your requirement, and then engage the script to the application’s authentication configuration.
 
-A sample authentication script is shown below.
-
-```js
-   var onLoginRequest = function (context) {
-    // Some possible initializations...
-    executeStep(1, {
-        onSuccess: function (context) {
-            // Logic to execute if step 1 succeeded
-            executeStep(2, {
-                onSuccess: function (context) {
-                    // Logic to execute if step 2 succeeded
-                },
-                onFail: function (context) {
-                    // Logic to execute if step 2 failed
-                }
-            });
-        },
-        onFail: function (context) {
-            // Logic to execute if step 1 failed
-            executeStep(3);
-        }
-    });
-}
-
-function someCommonFunction(context) {
-    // Do some common things
-}
-```
+You can refer this <a href="../write-your-first-script">documentation</a> on how to get started with writing a very basic conditional authentication script. 

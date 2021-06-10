@@ -161,23 +161,19 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['configure-conditional-auth.md', 'Configure conditional auth'],
-                        ['write-conditional-auth-scripts.md', 'Write conditional auth scripts'],
+                        ['configure-conditional-auth.md', 'Configure script'],
+                        ['write-your-first-script.md', 'Guide to write'],
                         {
-
-                            title: 'Conditional auth scenarios',
-                            // path:'conditional-auth-scenarios/',
-                            // prefix: 'conditional-auth-scenarios/',
+                            title: 'Predefined templates',
                             children: [
-                                ['conditional-auth-scenarios/Overview.md', 'Overview'],
-                                ['conditional-auth-scenarios/group-based-template.md', 'Group-Based'],
-                                ['conditional-auth-scenarios/ip-based-template.md', 'IP-Based'],
-                                ['conditional-auth-scenarios/new-device-based-template.md', 'New-Device-Based'],
-                                ['conditional-auth-scenarios/user-aged-based-template.md', 'User-Aged-Based'],
-                                // ['/guides/identity-providers/enterprise-login/saml.md', 'SAML'],
+                                ['conditional-auth-scenarios/overview.md', 'Overview'],
+                                ['conditional-auth-scenarios/group-based-template.md', 'Group'],
+                                ['conditional-auth-scenarios/ip-based-template.md', 'IP'],
+                                ['conditional-auth-scenarios/new-device-based-template.md', 'New Device'],
+                                ['conditional-auth-scenarios/user-age-based-template.md', 'User Age'],
                             ]
                         },
-                        ['conditional-auth-js-api-reference.md', 'JS API Reference'],
+                        ['api-reference.md', 'API Reference'],
                     ]
                 },
               ]

@@ -4,9 +4,11 @@ Conditional authentication provides dynamic login capabilities based on the risk
 
    <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-intro.png')" alt="what is conditional authentication">
 
-Asgardeo supports [script-based conditional authentication](./configure-conditional-auth). You can use the provided script editor to define dynamic authentication flows depending on your requirements. 
+Asgardeo supports [script-based conditional authentication](./configure-conditional-auth). You can use the provided script editor to define dynamic authentication flows depending on your requirements.   
 
-The script editor comes with a set of [predefined templates](./conditional-auth-templates) that will help you to get you started for some of the most common authentication scenarios.
+The script editor comes with a set of [predefined templates](./conditional-auth-templates) that will help you to get you started for some of the most common authentication scenarios.  
+
+As the authentication script is designed as a loosely typed, functional language similar to JavaScript. If you have common knowledge on **JavaScript**, that may help you to compose effective authentication scripts.
 
 You can define scripts that can consider the following evaluation criteria:
 

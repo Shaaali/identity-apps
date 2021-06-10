@@ -1,8 +1,12 @@
-# Conditional authentication scenarios
+# Predefined templates
 
 Asgardeo provides a set of pre-defined templates for common conditional authentication scenarios. This section guides
 you through each of these templates. We will discuss the scenario that the template covers, the prerequisites, the
 required parameters, the default authentication steps and how you can try out the behaviour of this template.
+
+These scripts contain inline comments explaining the logic on how the conditional authentication happens. You can also
+find details such as prerequisites, the required parameters and the default authentication steps by clicking on the
+information icon(:information_source:).
 
 <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-templates.png')" alt="conditional-auth-templates-view"><br>
 
@@ -10,7 +14,7 @@ Following is the list of conditional authentication templates available in Asgar
 
 **User**
 
-* <a href="../user-aged-based-template">User-Aged-Based</a>
+* <a href="../user-aged-based-template">User-Age-Based</a>
 
   Allows log in to application if the user's age is over the configured value. User's age is calculated using the user's
   date of birth attribute.
