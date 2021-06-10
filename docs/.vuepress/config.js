@@ -161,7 +161,7 @@ module.exports = config({
                     collapsable: false,
                     sidebarDepth: 2,
                     children: [
-                        ['configure-conditional-auth.md', 'Configure script'],
+                        ['configure-conditional-auth.md', 'Configure'],
                         ['write-your-first-script.md', 'Guide to write'],
                         {
                             title: 'Predefined templates',
