@@ -166,11 +166,11 @@ module.exports = config({
                         {
                             title: 'Predefined templates',
                             children: [
-                                ['conditional-auth-scenarios/overview.md', 'Overview'],
-                                ['conditional-auth-scenarios/group-based-template.md', 'Group'],
-                                ['conditional-auth-scenarios/ip-based-template.md', 'IP'],
-                                ['conditional-auth-scenarios/new-device-based-template.md', 'New Device'],
-                                ['conditional-auth-scenarios/user-age-based-template.md', 'User Age'],
+                                ['predefined-templates/overview.md', 'Overview'],
+                                ['predefined-templates/group-based-template.md', 'Group'],
+                                ['predefined-templates/ip-based-template.md', 'IP'],
+                                ['predefined-templates/new-device-based-template.md', 'New Device'],
+                                ['predefined-templates/user-age-based-template.md', 'User Age'],
                             ]
                         },
                         ['api-reference.md', 'API Reference'],

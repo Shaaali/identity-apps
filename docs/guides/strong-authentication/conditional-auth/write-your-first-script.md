@@ -33,7 +33,7 @@ The above scripts does not have any conditional authentication. It allow all use
 
 ### 2. Implement onSuccess callback
 
-Now, we will implement what to do, if  **username and password based authentication** is success. You can use <a href="../conditional-auth-js-api-reference/#executestep-stepid-options-eventcallbacks">onSuccess</a> eventCallback.
+Now, we will implement what to do, if  **username and password based authentication** is success. You can use <a href="../api-reference/#executestep-stepid-options-eventcallbacks">onSuccess</a> eventCallback.
 
 ```js
 var onLoginRequest = function (context) {
@@ -47,7 +47,7 @@ var onLoginRequest = function (context) {
 
 ### 3. Get user object
 
-If **username and password based authentication** is success, let's try to get the <a href="../conditional-auth-js-api-reference/#user-object">user</a> from the <a href="../conditional-auth-js-api-reference/#context-object">context</a>. You can use `context.currentKnownSubject` to get the authenticated user.
+If **username and password based authentication** is success, let's try to get the <a href="../api-reference/#user-object">user</a> from the <a href="../conditional-auth-js-api-reference/#context-object">context</a>. You can use `context.currentKnownSubject` to get the authenticated user.
 
 ```js
 var groups = ['employee', 'manager'];
@@ -64,9 +64,9 @@ var onLoginRequest = function (context) {
 
 ### 4. Check membership of user
 
-Now check whether user is a member of `admin` or `manager`. You can use the utility function <a href="../conditional-auth-js-api-reference/#ismemberofanyofgroups-user-groups">isMemberOfAnyOfGroups(user, groups)</a>. 
+Now check whether user is a member of `admin` or `manager`. You can use the utility function <a href="../api-reference/#ismemberofanyofgroups-user-groups">isMemberOfAnyOfGroups(user, groups)</a>. 
 
-Refer the <a href="../conditional-auth-js-api-reference"> inbuilt functions </a> to get to know more existing functions.
+Refer the <a href="../api-reference"> inbuilt functions </a> to get to know more existing functions.
 
 ```js
 var groups = ['employee', 'manager'];
@@ -110,4 +110,4 @@ var onLoginRequest = function (context) {
 
 Now you have completed writing a conditional auth script for group-based access control scenario.
 
-Similarly, you can build your own scripts to handle many scenarios using the <a href="../conditional-auth-js-api-reference" >JS-API references</a> and <a href="../conditional-auth-templates">pre-defined templates</a>.
+Similarly, you can build your own scripts to handle many scenarios using the <a href="../api-reference" >JS-API references</a> and <a href="../predefined-templates">pre-defined templates</a>.

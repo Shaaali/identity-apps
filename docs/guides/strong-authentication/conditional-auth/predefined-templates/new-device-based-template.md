@@ -118,15 +118,15 @@ var validateCookie = function (context, subject) {
 </table>
 
 ## Script walkthrough
-**validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function, [getCookieValue(request, name, properties)](../conditional-auth-js-api-reference/#getcookievalue-request-name-properties). The cookie name configured in _cookieName_ parameter.
+**validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function, [getCookieValue(request, name, properties)](../api-reference/#get-cookie-value). The cookie name configured in _cookieName_ parameter.
 
 Upon the successful execution of the _Step 1_ of the authentication flow, **onLoginRequest** function validates the **deviceAuth** cookie. If there is no valid cookie found, the function checks whether the _sendNotification_ and _stepUpAuthentication_ properties are enabled.
 
-If _sendNotification_ property is enabled, the JavaScript conditional authentication function [sendEmail(user, templateId, placeholderParameters)](../conditional-auth-js-api-reference/#sendemail-user-templateid-placeholderparameters) is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the variable _emailTemplate_.
+If _sendNotification_ property is enabled, the JavaScript conditional authentication function [sendEmail(user, templateId, placeholderParameters)](../api-reference/#send-email) is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the variable _emailTemplate_.
 
 If _stepUpAuthentication_ property is enabled, the _Step 2_ of the authentication flow is executed.
 
-On the successful execution of step 2 of the authentication flow, [setCookie(response, name, value, properties)](../conditional-auth-js-api-reference/#setcookie-response-name-value-properties) is called to set a **deviceAuth** cookie.
+On the successful execution of step 2 of the authentication flow, [setCookie(response, name, value, properties)](../api-reference/#set-cookie) is called to set a **deviceAuth** cookie.
 
 ## Try it out
 

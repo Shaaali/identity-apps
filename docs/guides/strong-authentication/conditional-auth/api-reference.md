@@ -430,14 +430,14 @@ sendEmail(user, 'myTemplate', {'firstName':firstName});
 Contains the authentication context information. The information can be accessed as follows.
 
 * `context.steps[<n>]` :  Access the authentication step information, where \<n\> is the step number (1-based).
-  See [step Object](#step-object) for more information.
+  See [step Object](#step) for more information.
 
 The step number is the one configured at the step configuration, not the actual order in which they get executed.
 
-* `context.request` :  Access the HTTP authentication request information. See [request Object](#request-object) for
+* `context.request` :  Access the HTTP authentication request information. See [request Object](#request) for
   more information.
 * `context.response` :  Access the HTTP response which will be sent back to the client.
-  See [response Object](#response-object) for more information.
+  See [response Object](#response) for more information.
 * `context.serviceProviderName` :  Get the application name.
 
 ### Step
@@ -445,7 +445,7 @@ The step number is the one configured at the step configuration, not the actual 
 Contains the authentication step information. May be null or invalid step number.
 
 - `step.subject` :  Contains the authenticated user’s information from this step. May be null if the step is not yet
-  executed. See [user Object](#user-object) for more information.
+  executed. See [user Object](#user) for more information.
 - `step.idp` :  Gives the Idp name which was used to authenticate this user.
 
 ### User
@@ -475,14 +475,14 @@ Contains the authentication step information. May be null or invalid step number
 
 ### Session
 
-* `session.userAgent` :  This is userAgent object of the user session. See [userAgent Object](#useragent-object) for
+* `session.userAgent` :  This is userAgent object of the user session. See [userAgent Object](#user-agent) for
   more information.
 * `session.ip` :  This is the session’s IP address.
 * `session.loginTime` :  This is the session’s last login time.
 * `session.lastAccessTime` :  This is the session’s last accessed time.
 * `session.id` :  This is the session’s id.
 * `session.applications` :  This is the list of application objects in the session.
-  See [application Object](#application-object) for more information.
+  See [application Object](#application) for more information.
 
 ### Application
 * `application.subject` :  This is the subject of the application.

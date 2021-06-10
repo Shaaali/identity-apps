@@ -14,7 +14,7 @@ Following is the list of conditional authentication templates available in Asgar
 
 **User**
 
-* <a href="../user-aged-based-template">User-Age-Based</a>
+* <a href="../user-age-based-template">User-Age-Based</a>
 
   Allows log in to application if the user's age is over the configured value. User's age is calculated using the user's
   date of birth attribute.

@@ -23,7 +23,7 @@ There are two ways to add conditional authentication script:
 ### Use a predefined template
 Asgardeo provides a set of conditional authentication script templates based on common scenarios. You can use these templates to configure conditional authentication depending on your requirements.
 
-Refer the <a href="../conditional-auth-templates">Conditional authentication scenarios section</a> for the detailed guide on each
+Refer the <a href="../predefined-templates/overview">Conditional authentication scenarios section</a> for the detailed guide on each
 template.
 
 ### Write a conditional auth script

@@ -6,7 +6,7 @@ Conditional authentication provides dynamic login capabilities based on the risk
 
 Asgardeo supports [script-based conditional authentication](./configure-conditional-auth). You can use the provided script editor to define dynamic authentication flows depending on your requirements.   
 
-The script editor comes with a set of [predefined templates](./conditional-auth-templates) that will help you to get you started for some of the most common authentication scenarios.  
+The script editor comes with a set of [predefined templates](./predefined-templates/overview) that will help you to get you started for some of the most common authentication scenarios.  
 
 As the authentication script is designed as a loosely typed, functional language similar to JavaScript. If you have common knowledge on **JavaScript**, that may help you to compose effective authentication scripts.
 
@@ -23,7 +23,7 @@ You can define dynamic authentication flows that can perform actions similar to 
 - Send email notifications
 - Redirect users to an error page etc.
 
-Asgardeo supports a set of inbuilt [functions](./conditional-auth-js-api-reference#utility-functions) and [objects](./conditional-auth-js-api-reference#object-reference) that you can refer when writing your conditional authentication script. A simple conditional authentication script will look like the example below.
+Asgardeo supports a set of inbuilt [functions](./api-reference#utility-functions) and [objects](./api-reference#object-reference) that you can refer when writing your conditional authentication script. A simple conditional authentication script will look like the example below.
 
 ```js
 var onLoginRequest = function(context) {
@@ -42,5 +42,5 @@ function doStepUp(context) {
 
 ## What's next
 * [Learn how to enable conditional authentication to your application](./configure-conditional-auth)
-* [Try our predefined conditional authentication templates](./conditional-auth-templates)
-* [Checkout the JS API reference](./conditional-auth-js-api-reference)
+* [Try our predefined conditional authentication templates](./predefined-templates/overview)
+* [Checkout the JS API reference](./api-reference)
