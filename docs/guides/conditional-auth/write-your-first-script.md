@@ -12,7 +12,7 @@ We will start from the scratch and see how can we build our first conditional au
 <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="conditional-authentication-flow">
 
 ::: tip Before you begin
-1. Your application should be registered in Asgardeo. Refer the <a href="../../../applications">Manage applications</a> section to register your application in Asgardeo if
+1. Your application should be registered in Asgardeo. Refer the <a href="../applications">Manage applications</a> section to register your application in Asgardeo if
    not done already.
 2. Customize the login flow and enable `Username and Password authentication` authentication.
 3. Create relevant <a href="../../../user-management/groups">groups</a> and assign users as necessary to try out the flow.

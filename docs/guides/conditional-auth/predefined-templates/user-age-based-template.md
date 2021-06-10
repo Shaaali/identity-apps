@@ -11,7 +11,7 @@ is below configured value.
 
 ::: tip Before you begin
 1. Your application should be registered in Asgardeo.
-   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if
+   Refer the [Manage applications](../../applications/README.md) section to register your application in Asgardeo if
    not done already.
 2. Configure conditional authentication and deploy the **User-Age-Based Authentication Template** for the application.
    Refer the <a href="../../configure-conditional-auth/">Configure conditional authentication for an application</a> guide on

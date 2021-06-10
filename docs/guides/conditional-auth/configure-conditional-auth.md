@@ -3,7 +3,7 @@
 This guide gives you the steps to define conditional authentication to your application. We assume that you have already
 configured an application in Asgardeo to represent your app.
 
-Refer the <a href="../../../applications">Manage applications</a> section to register your application in Asgardeo if not
+Refer the <a href="../../applications">Manage applications</a> section to register your application in Asgardeo if not
 done already.
 
 ## Enable conditional authentication
@@ -23,7 +23,7 @@ There are two ways to add conditional authentication script:
 ### Use a predefined template
 Asgardeo provides a set of conditional authentication script templates based on common scenarios. You can use these templates to configure conditional authentication depending on your requirements.
 
-Refer the <a href="../predefined-templates/overview">Conditional authentication scenarios section</a> for the detailed guide on each
+Refer the <a href="../predefined-templates">Conditional authentication scenarios section</a> for the detailed guide on each
 template.
 
 ### Write a conditional auth script

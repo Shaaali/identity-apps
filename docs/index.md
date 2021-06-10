@@ -42,7 +42,7 @@ features:
         link: 
 
       - name: "Conditional authentication"
-        link: /guides/strong-authentication/conditional-auth/
+        link: /guides/conditional-auth/
 
   - title: Manage users
     details: Onboard users and collectively manage their access
