@@ -32,13 +32,7 @@ client secret based authentication to the token endpoint does not make sense.
 Even though the client secret is not validated, client id is required to be sent as a POST body parameter in the token
 request to identify the application making the request.
 
-::: tip Find app information
-
 Information required to configure OIDC in the SPA can be found in the **Protocol** tab of the application details view.
-
-<img :src="$withBase('/assets/img/guides/applications/spa-protocol-tab.png')" alt="spa-protocol-tab-view">
-
-:::
 
 ### Login to the application
 

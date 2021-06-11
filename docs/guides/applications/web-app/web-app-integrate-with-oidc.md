@@ -82,14 +82,8 @@ _Sample response:_
 https://localhost:5000/?code=210a4f11-4928-3d91-9c97-00d45d71eb3a&session_state=a0c3bc89849ba0f236791f7fe76a837b7b4422fdc9aca16db394d19a28724a29.wQc7eSHSRrGNfECJRMhSAw
 ```
 
-::: tip Find app information
-
 Information required to configure OIDC in the web application can be found in the **Protocol** tab of the application
 details view.
-
-<img :src="$withBase('/assets/img/guides/applications/web-app-protocol-tab.png')" alt="web-app-protocol-tab-view">
-
-:::
 
 <br>
 
