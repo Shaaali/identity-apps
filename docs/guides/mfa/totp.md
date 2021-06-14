@@ -25,10 +25,10 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
  :::
 
 
-## Enrolling TOTP notification
+## Enrolling TOTP
 1. Download authenticator.
 2. Login to your application.
-3. User is prompted with QR code, scan the code and click continue. (This step will happen only for the first time)
+3. User is prompted with QR code , scan the code and click continue. (This step will happen only for the first time for a user after enabling TOTP by the administrator)
     <img :src="$withBase('/assets/img/guides/mfa/scan-qr-code-totp.png')" alt="QR code for TOTP authenticator in Asgardeo">
 4. Check your authenticator which you used to scan the code.
     <img :src="$withBase('/assets/img/guides/mfa/google-authenticator.png')" alt="OTP token from the authenticator">
@@ -38,11 +38,10 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 
 
 ## Enrolling TOTP via MyAccount after first login attempt
-After the first time login, user will not be prompted with QR code in the login flow. In case, if the user wants to use another authenticator app for getting otp notifications, user can configure it via Asgardeo MyAccount.
+After the first time login, user will not be prompted with QR code in the login flow. In case, if the user wants to use another authenticator app for getting otp, user can configure it via Asgardeo MyAccount. The QR code via MyAccount is same the code prompted in the first time login flow.
 
- ::: tip Note
- Enrolling TOTP via MyAccount can be done only after first login attempt using totp authentication.
- :::
+Note that, enrolling TOTP via MyAccount can be done only after first login attempt using totp authentication.
+ 
 1. In the Asgardeo MyAccount, navigate to **Security > Multi-Factor Authentication**.
     <img :src="$withBase('/assets/img/guides/mfa/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount">
 2. Click TOTP edit icon and scan the prompted QR code using your authenticator.

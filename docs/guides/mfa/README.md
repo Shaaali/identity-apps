@@ -1,6 +1,6 @@
 # Multi-Factor Authentication
 
-Multi-Factor Authentication (MFA) allows you to grant access to your resources by using two (2-Factor) or more (Multi-Factor) factors to authenticate the identity of users. If one factor is compromised or broken, an attacker still has at least one more barrier to breach before successfully breaking into the resource. Hence, MFA provides an additional layer of security to the resource.
+Multi-Factor Authentication (MFA) allows you to grant access to your resources by using two (2-Factor) or more (Multi-Factor) factors to authenticate users. If one factor is compromised or broken, an attacker still has at least one more barrier to breach before successfully breaking into the resource. Hence, MFA provides an additional layer of security to the resource.
 
 Authentication factors in MFA relies on two or more independent credentials of the below three categories.
 
@@ -11,7 +11,7 @@ Authentication factors in MFA relies on two or more independent credentials of t
 In Asgardeo, the default authentication mechanism is **username and password**. 
 <img :src="$withBase('/assets/img/guides/mfa/one-factor-auth.png')" alt="Configuring only username and password authentication">
 
-The Asgardeo Console allows configuring multi-step authentication where you can define an authentication chain containing different authenticators in different steps. By adding different authenticators, you can achieve a MFA login flow. 
+The Asgardeo Console allows configuring multi-step authentication where you can define an authentication chain containing different authenticators in each steps. By adding different authenticators, you can achieve a MFA login flow. 
 
 <img :src="$withBase('/assets/img/guides/mfa/mfa.png')" alt="Configuring MFA with username and password authentication">
 
