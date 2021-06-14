@@ -143,13 +143,13 @@ module.exports = config({
             //   ]
             // },
                 {
-                    title: 'Conditional authentication',
+                    title: 'Add conditional authentication',
                     icon: 'addLoginIcon',
 
                     children: [
                         ['conditional-auth/', 'Overview'],
                         ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
-                        ['conditional-auth/write-your-first-script.md', 'Write a conditional authentication'],
+                        ['conditional-auth/write-your-first-script.md', 'Write your first script'],
                         {
                             title: 'Predefined templates',
                             prefix: 'conditional-auth/',
@@ -164,17 +164,15 @@ module.exports = config({
                         ['/guides/conditional-auth/api-reference.md', 'API Reference'],
                     ]
                 },
-
-
-            {
-                title: 'Multi Factor authentication',
-                icon: 'addAuthnIcon',
-                children: [
-                    // Guides for the multi factor authentication is not yet completed.
-                ['mfa/', 'Overview'],
-                ['mfa/totp.md', 'TOTP']
-              ]
-            },{
+                {
+                    title: 'Add MFA',
+                    icon: 'addAuthnIcon',
+                    children: [
+                    ['mfa/', 'Overview'],
+                    ['mfa/totp.md', 'TOTP']
+                  ]
+                },
+                {
                 title: 'Manage users',
                     icon:  'usersIcon',
                     children: [
