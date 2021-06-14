@@ -9,19 +9,15 @@ If the user uses a new device or a new browser to log in to the application, the
 authentication. The new device or browser is identified by a cookie, therefore, once the cookie expires (this expiry
 time is specified in the authentication script), the same browser or device is considered as a new device.
 
-## Before you begin
-
+::: tip Before you begin
 1. Your application should be registered in Asgardeo.
-
-   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if
+   Refer the [Manage applications](../../applications/README.md) section to register your application in Asgardeo if
    not done already.
-
 2. Configure conditional authentication and deploy the **New-Device-Based Authentication Template** for the application.
-
    Refer the <a href="../../configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
-
-3. Customize the login flow and enable TOTP as the step 2.
+3. Customize the login flow and enable TOTP as the `Step 2`.
+:::
 
 ## Configured authentication steps
 
@@ -122,36 +118,22 @@ var validateCookie = function (context, subject) {
 </table>
 
 ## Script walkthrough
+**validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function, [getCookieValue(request, name, properties)](../api-reference/#get-cookie-value). The cookie name configured in _cookieName_ parameter.
 
-**validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the
-conditional authentication JavaScript
-function, [getCookieValue(request, name, properties)](../conditional-auth-js-api-reference/#getcookievalue-request-name-properties)
-. The cookie name configured in `cookieName` parameter.
+Upon the successful execution of the _Step 1_ of the authentication flow, **onLoginRequest** function validates the **deviceAuth** cookie. If there is no valid cookie found, the function checks whether the _sendNotification_ and _stepUpAuthentication_ properties are enabled.
 
-Upon the successful execution of the step 1 of the authentication flow, **onLoginRequest** function validates the **
-deviceAuth** cookie. If there is no valid cookie found, the function checks whether the `sendNotification`
-and `stepUpAuthentication` properties are enabled.
+If _sendNotification_ property is enabled, the JavaScript conditional authentication function [sendEmail(user, templateId, placeholderParameters)](../api-reference/#send-email) is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the variable _emailTemplate_.
 
-If `sendNotification` property is enabled, the JavaScript conditional authentication
-function [sendEmail(user, templateId, placeholderParameters)](../conditional-auth-js-api-reference/#sendemail-user-templateid-placeholderparameters)
-is called to send the notification email with the logged in timestamp. The email template is set as **
-UnseenDeviceLogin** in the variable `emailTemplate`.
+If _stepUpAuthentication_ property is enabled, the _Step 2_ of the authentication flow is executed.
 
-If `stepUpAuthentication` property is enabled, the step 2 of the authentication flow is executed.
-
-On the successful execution of step 2 of the authenticaiton
-flow, [setCookie(response, name, value, properties)](../conditional-auth-js-api-reference/#setcookie-response-name-value-properties)
-is called to set a **deviceAuth** cookie.
+On the successful execution of step 2 of the authentication flow, [setCookie(response, name, value, properties)](../api-reference/#set-cookie) is called to set a **deviceAuth** cookie.
 
 ## Try it out
 
 1. Access the application URL from a new device/browser.
-
 2. Try to login to the application. The user is prompted with the TOTP authentication. The configured email of the user
    will receive the email notification.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
-
+    <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
 3. Logout and login with the same user from the same device/browser. User will be successfully logged in to the
    application with only the basic authentication.
    

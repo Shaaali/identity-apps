@@ -9,19 +9,15 @@ Any user who is below the specified age limit (i.e., under the age of 18 years) 
 logging in to the application. The user will be redirected to an error page if the date of birth is not present or user
 is below configured value.
 
-## Before you begin
-
+::: tip Before you begin
 1. Your application should be registered in Asgardeo.
-
-   Refer the [Manage applications](../../../applications/README.md) section to register your application in Asgardeo if
+   Refer the [Manage applications](../../applications/README.md) section to register your application in Asgardeo if
    not done already.
-
 2. Configure conditional authentication and deploy the **User-Age-Based Authentication Template** for the application.
-
    Refer the <a href="../../configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
-
-3. Birth Date of the user trying to login needs to be updated using the Asgardeo Myaccount portal.
+3. Birth Date of the user trying to login needs to be updated using Asgardeo Myaccount.
+:::
 
 ## Configured authentication steps
 
@@ -115,9 +111,6 @@ configured error page.
 ## Try it out
 
 1. Access the application URL.
-
 2. Try to login with a user above 18 years. User will be successfully logged in to the application.
-
 3. Logout and login a user below 18 years. User is now restricted from logging in because he is underage.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">
+    <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">

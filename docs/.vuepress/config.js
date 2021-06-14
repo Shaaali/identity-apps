@@ -142,6 +142,28 @@ module.exports = config({
             //     },
             //   ]
             // },
+                {
+                    title: 'Conditional authentication',
+                    icon: 'addLoginIcon',
+
+                    children: [
+                        ['conditional-auth/', 'Overview'],
+                        ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
+                        ['conditional-auth/write-your-first-script.md', 'Write a conditional authentication'],
+                        {
+                            title: 'Predefined templates',
+                            prefix: 'conditional-auth/',
+                            children: [
+                                ['predefined-templates/', 'Introduction'],
+                                ['predefined-templates/group-based-template.md', 'Group based access control'],
+                                ['predefined-templates/ip-based-template.md', 'IP based access control'],
+                                ['predefined-templates/new-device-based-template.md', 'Device based access control'],
+                                ['predefined-templates/user-age-based-template.md', 'Age based access control'],
+                            ]
+                        },
+                        ['/guides/conditional-auth/api-reference.md', 'API Reference'],
+                    ]
+                },
             {
                 title: 'Add strong authentication',
                 icon: 'addAuthnIcon',
@@ -153,20 +175,8 @@ module.exports = config({
                 //     children: [
                 //         ['/guides/strong-authentication/mfa-qsg.md', 'Configure multi factor authentication']
                 //     ]
-                // },
-                {
-                    title: 'Conditional authentication',
-                    path:'/guides/strong-authentication/conditional-auth/',
-                    prefix: '/guides/strong-authentication/conditional-auth/',
-                    collapsable: false,
-                    sidebarDepth: 2,
-                    children: [
-                        ['configure-conditional-auth.md', 'Configure conditional auth'],
-                        ['write-conditional-auth-scripts.md', 'Write conditional auth scripts'],
-                        ['conditional-auth-templates.md', 'Predefined templates'],
-                        ['conditional-auth-js-api-reference.md', 'JS API Reference'],
-                    ]
-                },
+                // }
+
               ]
             },{
                 title: 'Manage users',

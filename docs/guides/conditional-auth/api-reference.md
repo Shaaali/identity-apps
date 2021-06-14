@@ -1,35 +1,23 @@
-# Conditional Authentication JS API Reference
+# API Reference
 
-With conditional authentication, it is possible to configure dynamic sequences based on runtime parameters such as the
-user’s IP address, user role, etc. Asgardeo allows you to define a dynamic authentication sequence using authentication
-scripts written in JavaScript.
-
-The following sections present the core API reference for the JavaScript-based conditional authentication functions and
-fields.
-
-::: tip Tip
-
-As the authentication script is designed as a loosely typed, functional language similar to JavaScript, common knowledge
-on JavaScript may help you to compose effective authentication scripts.
-
-:::
+Asgardeo provides a set of defined functions and objects to write your conditional authentication script.  
+There are three groups of API references:
+1. [Core functions](#core-functions): These are the functions that needed to write an adaptive script. 
+2. [Utility functions](#utility-functions): These utility functions helps you to achieve some usecases. For an example, there is a utility function to check whether a user exists in a group.
+3. [Object references](#object-reference): Objects that you can use to get behaviours and attributes and based on them, you can take decisions. For an example, you can use **user** object or **request** object and based on the attributes and behaviours you can go write your conditions.
 
 ---
 
 ## Core functions
 
-### onLoginRequest(context)
+### Initial authentication request
+
+**onLoginRequest(context)**
 
 This function is called when the initial authentication request is received by Asgardeo. It includes the following
 parameters.
 
 <table>
-  <thead>
-    <tr>  
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>context</td>
@@ -40,18 +28,14 @@ parameters.
 
 <br/>
 
-### executeStep(stepId, options, eventCallbacks)
+### executeStep
+
+**executeStep(stepId, options, eventCallbacks)**
 
 This function is called to execute an authentication step. Authentication steps need to be configured prior to using
 this function. This method accepts an object as a parameter and should include the following.
 
 <table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>stepId</td>
@@ -71,20 +55,14 @@ this function. This method accepts an object as a parameter and should include t
 </table>
 
 
-The API can be called in either of the following ways:
+The API can be called in either of the following ways. 
 
 * With only the `stepId`.
-
-  Example:
-
     ``` js
     executeStep(1)
     ```
 
 * With only the `stepId` and `eventCallbacks`.
-
-  Example:
-
     ``` js
     executeStep(1, {
         onSuccess: function(context) {
@@ -93,8 +71,7 @@ The API can be called in either of the following ways:
     });
     ```
 
-* With the `stepId`, `options`, and an empty `eventCallbacks` array. Different properties can be defined in
-  the `options` object such as `authenticationOptions`, `authenticatorParams`.
+* With the `stepId`, `options`, and an empty `eventCallbacks` array. Different properties can be defined in the `options` object such as `authenticationOptions`, `authenticatorParams`. But The API **cannot** be called with only the `stepId` and `options`.
 
   See the following two examples:
 
@@ -117,19 +94,11 @@ The API can be called in either of the following ways:
     });
     ```
 
-  ::: tip Note
-
-  The API cannot be called with only the `stepId` and `options`.
-
-  :::
-
 #### Authentication step filtering
 
 Filters out authentication options of a step based on a condition. This can be achieved by specifying an
 array named '`authenticationOptions`' to the `options` map. Each array item will require an '**`idp`**' for federated
 IdPs or an '**`authenticator`**' for local authenticators.
-
-**Example code**
 
 ``` js
 executeStep(1,{
@@ -140,9 +109,9 @@ executeStep(1,{
 };
 ```
 
-<br/>
+### Fail the authentication flow and redirect with some error code
 
-### fail()
+**fail()**  
 
 This function redirects the user to the redirect URI provided in the authorization request failing the authorization
 flow.
@@ -152,12 +121,6 @@ appended with following properties which should be contained in the map, otherwi
 passed. All the properties passed in the map are also optional.
 
 <table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>errorCode </td>
@@ -174,8 +137,6 @@ passed. All the properties passed in the map are also optional.
   </tbody>
 </table>
 
-**Example code**
-
 ``` js
 var parameterMap = {'errorCode': 'access_denied', 'errorMessage': 'login could not be completed', "errorURI":'http://www.example.com/error'};
 if (!isAuthenticated) {
@@ -183,19 +144,13 @@ if (!isAuthenticated) {
 }
 ```
 
-<br/>
+### Redirects to an error page
 
-### sendError(url,parameters)
+**sendError(url,parameters)**
 
 This function redirects the user to an error page. It includes the following parameters.
 
 <table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>url</td>
@@ -209,8 +164,8 @@ This function redirects the user to an error page. It includes the following par
   </tbody>
 </table>
 
-**Example code**
-
+When passing error messages to the error page, it is recommended to use the **i18n key** so that it can be internationalized
+easily at the page.
 ``` js
 var user = context.steps[1].subject;
 var isAdmin = hasRole(user, 'admin');
@@ -219,31 +174,19 @@ if (!isAdmin) {
 }
 ```
 
-::: tip
-
-When passing error messages to the error page, it is recommended to use the i18n key so that it can be internationalized
-easily at the page.
-:::
-
-<br/>
-
 ## Utility functions
 
 The implementation of utility functions can be found in
 the [WSO2 extensions code repository](https://github.com/wso2-extensions/identity-conditional-auth-functions).
 
-### isMemberOfAnyOfGroups(user, groups)
+### Check group membership
+
+**isMemberOfAnyOfGroups(user, groups)**
 
 This function returns true if the specified '**`user`**' belongs to at least one of the given '**`groups`**' , and returns false if the
 user does not. It includes the following parameters.
 
 <table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>user</td>
@@ -256,9 +199,6 @@ user does not. It includes the following parameters.
   </tbody>  
 </table>
 
-
-**Example code**
-
 ``` js
 var groups = ['admin', 'manager'];
 var user = context.steps[1].subject;
@@ -270,7 +210,9 @@ if (isMember) {
 <br/>
 
 
-### setCookie(response, name, value, properties)
+### Set cookie
+
+**setCookie(response, name, value, properties)**
 
 This functions sets a new cookie. It includes the following parameters.
 
@@ -302,10 +244,8 @@ This functions sets a new cookie. It includes the following parameters.
   </tbody>
 </table>
 
-::: tip
 
 The size of the value has to be less than the RSA key pair length if '`encrypt`' is enabled (set to true).
-:::
 
 ``` js
 setCookie(context.response, "name", "test", {"max-age" : 4000,
@@ -322,17 +262,13 @@ setCookie(context.response, "name", "test", {"max-age" : 4000,
 
 <br/>
 
-### getCookieValue(request, name, properties)
+### Get cookie value
+
+**getCookieValue(request, name, properties)**
 
 This function gets the plain-text cookie value for the cookie ‘`name`’ if present. It includes the following parameters.
 
 <table>
-  <thead>
-    <tr class="header">
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr class="odd">
       <td>name</td>
@@ -360,17 +296,13 @@ getCookieValue(context.request,"name", {"decrypt" : true,"validateSignature" : t
 
 <br/>
 
-### prompt(templateId, data, eventHandlers)
+### Prompt for user input
+
+**prompt(templateId, data, eventHandlers)**
 
 This function prompts for user input. It includes the following parameters.
 
 <table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>templateId</td>
@@ -407,18 +339,14 @@ var onLoginRequest = function(context) {
 
 <br/>
 
-### getUserSessions(user)
+### Get user sessions
+
+**getUserSessions(user)**
 
 This function returns a session object  (i.e. all the active user sessions of the specified user and returns an empty
 array if there are no sessions). It includes the following parameters.
 
 <table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>user</td>
@@ -437,18 +365,14 @@ for (var key in sessions) {
 
 <br/>
 
-### terminateUserSession(user, sessionId)
+### Terminate user session
+
+**terminateUserSession(user, sessionId)**
 
 This function returns a session object  (i.e. all the active user sessions of the specified user and returns an empty
 array if there are no sessions). It includes the following parameters.
 
 <table>
-  <thead>
-    <tr class="header">
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>user</td>
@@ -468,22 +392,15 @@ if (sessions.length > 0) {
     var result = terminateUserSession(user, sessions[0]);
     Log.info(“Terminate Operation Successful?: ” + result);
 }
-
 ```
 
-<br/>
+### Send email
 
-### sendEmail(user, templateId, placeholderParameters)
+**sendEmail(user, templateId, placeholderParameters)**
 
 This function sends an email to the specified user. It includes the following parameters.
 
 <table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>user</td>
@@ -500,68 +417,50 @@ This function sends an email to the specified user. It includes the following pa
   </tbody>
 </table>
 
-**Example code**
-
 ``` js
 var user = context.steps[1].subject;
 var firstName = user.localClaims['http://wso2.org/claims/givenname'];
 sendEmail(user, 'myTemplate', {'firstName':firstName});
 ```
 
-<br/>
-
 ## Object Reference
 
-### context Object
+### Context
 
 Contains the authentication context information. The information can be accessed as follows.
 
 * `context.steps[<n>]` :  Access the authentication step information, where \<n\> is the step number (1-based).
-  See [step Object](#step-object) for more information.
+  See [step Object](#step) for more information.
 
-  :::tip Note
+The step number is the one configured at the step configuration, not the actual order in which they get executed.
 
-  The step number is the one configured at the step configuration, not the actual order in which they get executed.
-  :::
-
-* `context.request` :  Access the HTTP authentication request information. See [request Object](#request-object) for
+* `context.request` :  Access the HTTP authentication request information. See [request Object](#request) for
   more information.
 * `context.response` :  Access the HTTP response which will be sent back to the client.
-  See [response Object](#response-object) for more information.
+  See [response Object](#response) for more information.
 * `context.serviceProviderName` :  Get the application name.
 
-<br/>
-
-### step Object
+### Step
 
 Contains the authentication step information. May be null or invalid step number.
 
 - `step.subject` :  Contains the authenticated user’s information from this step. May be null if the step is not yet
-  executed. See [user Object](#user-object) for more information.
+  executed. See [user Object](#user) for more information.
 - `step.idp` :  Gives the Idp name which was used to authenticate this user.
 
-<br/>
-
-### user Object
+### User
 
 * `user.username` : The user’s username.
 * `user.localClaims[“<local_claim_url>”]` : (Read/Write) User’s attribute (claim) value for the given “local_claim_url”.
   If the user is a federated user, this will be the value of the mapped remote claim from the IdP.
 * `user.claims[“<local_claim_url>”]`: (Read/Write) Sets a temporary claim value for the session.
 
-  ::: tip Note
-
-  `user.localClaims[“<local_claim_url>”]` updates the claim value in the user store as
-  well. `user.claims[“<local_claim_url>”]` is an alternative to set a claim for temporary basis.
-
-  :::
+`user.localClaims[“<local_claim_url>”]` updates the claim value in the user store as well. `user.claims[“<local_claim_url>”]` is an alternative to set a claim for temporary basis.
 
 * `user.remoteClaims[“<remote_claim_url”]` : (Read/Write) User’s attribute (claim) as returned by IdP for the given
   “remote_claim_url”. Applicable only for federated users.
 
-<br/>
-
-### request Object
+### Request
 
 * `request.headers[“<header_name>”]` : Request’s header value for the given header name by \<header_name\>
 * `request.params.param_name[0]` : Request’s parameter value for the given parameter name by the \<param_name\>
@@ -570,36 +469,27 @@ Contains the authentication step information. May be null or invalid step number
 * `request.ip` : The client IP address of the user who initiated the request. If there are any load balancers (eg.
   Nginx) with connection termination, the ip is retrieved from the headers set by the load balancer.
 
-<br/>
-
-### response Object
+### Response
 
 * `response.headers[“<header_name>”]` : (Write) Response header value for the given header name by \<header_name\>.
 
-<br/>
+### Session
 
-### session Object
-
-* `session.userAgent` :  This is userAgent object of the user session. See [userAgent Object](#useragent-object) for
+* `session.userAgent` :  This is userAgent object of the user session. See [userAgent Object](#user-agent) for
   more information.
 * `session.ip` :  This is the session’s IP address.
 * `session.loginTime` :  This is the session’s last login time.
 * `session.lastAccessTime` :  This is the session’s last accessed time.
 * `session.id` :  This is the session’s id.
 * `session.applications` :  This is the list of application objects in the session.
-  See [application Object](#application-object) for more information.
+  See [application Object](#application) for more information.
 
-<br/>
-
-### application Object
-
+### Application
 * `application.subject` :  This is the subject of the application.
 * `application.appName` :  This is the name of the application.
 * `application.appId` :  This is the id of the application.
 
-<br/>
-
-### userAgent Object
+### User agent
 
 * `userAgent.raw` :  This is the raw userAgent string.
 * `userAgent.browser` :  This is the Web Browser property that is extracted from the raw userAgent string.
