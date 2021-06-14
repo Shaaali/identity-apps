@@ -46,5 +46,18 @@ export default Vue.extend({
             return this.password === this.pagePassword;
         },
     },
+    mounted() {
+        // Adding event listener to fix offset scroll on-click.
+        const tableOfContents = document.querySelector(".anchor-wrapper");
+        if(tableOfContents) {
+            tableOfContents.addEventListener("click", function(e) {
+                // Setting scroll height accounting for the fixed navbar.
+                let scrollHeight = document.querySelector(window.location.hash).offsetTop + 200;
+                // Properly updating the window location.
+                window.scroll(0, scrollHeight);
+                e.preventDefault();
+            });
+        }
+    }
 });
 //# sourceMappingURL=Page.js.map
