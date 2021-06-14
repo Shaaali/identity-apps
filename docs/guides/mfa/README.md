@@ -9,11 +9,10 @@ Authentication factors in MFA relies on two or more independent credentials of t
 - **Inherence factor**  - Something you are, such as a fingerprint or iris pattern.
 
 In Asgardeo, the default authentication mechanism is **username and password**. 
-<img :src="$withBase('/assets/img/guides/mfa/one-factor-auth.png')" alt="Configuring only username and password authentication">
+ <img :src="$withBase('/assets/img/guides/mfa/one-factor-auth.png')" alt="Configuring only username and password authentication">
 
 The Asgardeo Console allows configuring multi-step authentication where you can define an authentication chain containing different authenticators in each steps. By adding different authenticators, you can achieve a MFA login flow. 
-
-<img :src="$withBase('/assets/img/guides/mfa/mfa.png')" alt="Configuring MFA with username and password authentication">
+ <img :src="$withBase('/assets/img/guides/mfa/mfa.png')" alt="Configuring MFA with username and password authentication">
 
 You can replace **username and password** authentication with some social or enterprise logins and add some multi-factor authenticators to build your authentication chain.
 
