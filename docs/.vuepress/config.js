@@ -175,29 +175,8 @@ module.exports = config({
                 //     children: [
                 //         ['/guides/strong-authentication/mfa-qsg.md', 'Configure multi factor authentication']
                 //     ]
-                // },
-                {
-                    title: 'Conditional authentication',
-                    path:'/guides/strong-authentication/conditional-auth/',
-                    prefix: '/guides/strong-authentication/conditional-auth/',
-                    collapsable: false,
-                    sidebarDepth: 2,
-                    children: [
-                        ['configure-conditional-auth.md', 'Enable'],
-                        ['write-your-first-script.md', 'Guide'],
-                        {
-                            title: 'Predefined templates',
-                            children: [
-                                ['predefined-templates/overview.md', 'Overview'],
-                                ['predefined-templates/group-based-template.md', 'Group'],
-                                ['predefined-templates/ip-based-template.md', 'IP'],
-                                ['predefined-templates/new-device-based-template.md', 'New Device'],
-                                ['predefined-templates/user-age-based-template.md', 'User Age'],
-                            ]
-                        },
-                        ['api-reference.md', 'API Reference'],
-                    ]
-                },
+                // }
+
               ]
             },{
                 title: 'Manage users',

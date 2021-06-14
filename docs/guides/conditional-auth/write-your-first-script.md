@@ -77,8 +77,7 @@ var onLoginRequest = function (context) {
             // Extracting authenticated user from the first step.
             var user = context.currentKnownSubject;
             // Checking if the user is assigned to one of the given groups.
-            var isMember = isMemberOfAnyOfGroups(user, groups);
-            
+            var isMember = isMemberOfAnyOfGroups(user, groups);           
         }
     });
 };
