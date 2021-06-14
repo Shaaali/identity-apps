@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ### Detects any broken links in the generated HTML site
 ### Script based on the idea in https://matthewsetter.com/writing-tools/npm-broken-link-checker/
 ### Broken Link Checker NPM library: https://github.com/stevenvachon/broken-link-checker
