@@ -109,4 +109,6 @@ var onLoginRequest = function (context) {
 
 Now you have completed writing a conditional auth script for group-based access control scenario.
 
-Similarly, you can build your own scripts to handle many scenarios using the <a href="../api-reference" >JS-API references</a> and <a href="../predefined-templates">pre-defined templates</a>.
+Similarly, you can build your own scripts to handle many scenarios using:
+ - <a href="../api-reference" >API references</a>
+ - <a href="../predefined-templates">pre-defined templates</a>.
