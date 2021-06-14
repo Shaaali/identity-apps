@@ -7,6 +7,8 @@ import PageFooter from "@theme/components/PageFooter.vue";
 import Password from "@theme/components/Password.vue";
 import Sidebar from "@theme/components/Sidebar.vue";
 import throttle from "lodash.throttle";
+import scrollHeaderOffset from "../../public/js/scrollHeaderOffset.js";
+
 let Common = class Common extends Mixins(GlobalEncryptMixin) {
     constructor() {
         super(...arguments);
@@ -84,6 +86,7 @@ let Common = class Common extends Mixins(GlobalEncryptMixin) {
                 this.hideNavbar = false;
             lastDistance = distance;
         }, 300));
+        scrollHeaderOffset();
     }
     toggleSidebar(to) {
         this.isSidebarOpen = typeof to === "boolean" ? to : !this.isSidebarOpen;
