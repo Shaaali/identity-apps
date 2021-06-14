@@ -1,6 +1,7 @@
 import Vue from "vue";
 import { groupSidebarHeaders } from "@theme/util/sidebar";
 import { isActive } from "@theme/util/path";
+import scrollHeaderOffset from "../../public/js/scrollHeaderOffset.js";
 const renderLink = (h, { text, link, active }) => h("RouterLink", {
     props: {
         to: link,
@@ -49,6 +50,7 @@ export default Vue.extend({
             $themeConfig.sidebarDepth ||
             2) + 1;
         const children = groupSidebarHeaders(header);
+        scrollHeaderOffset();
         return h("div", { attrs: { class: "anchor-place-holder" } }, [
             h("aside", { attrs: { id: "anchor" } }, [
                 h("div", { class: "anchor-wrapper" }, [
