@@ -10,7 +10,7 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 - [Authy](https://play.google.com/store/apps/details?id=com.authy.authy)
 
 
-## Enabling TOTP for an application
+## Enable TOTP for an application
 1. In the Asgardeo Console, navigate to **Develop > Applications**.
 2. Select the application to add the multi-factor authentication.
 3. Go to the **Sign-in Method** tab of the selected application.
@@ -25,7 +25,7 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
  :::
 
 
-## Enrolling TOTP
+## Enroll TOTP
 1. Download authenticator.
 2. Login to your application.
 3. User is prompted with QR code , scan the code and click continue. (This step will happen only for the first time for a user after enabling TOTP by the administrator)
@@ -37,7 +37,7 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 6. Click **Continue**.
 
 
-## Enrolling TOTP via MyAccount after first login attempt
+## Enroll TOTP via MyAccount
 After the first time login, user will not be prompted with QR code in the login flow. In case, if the user wants to use another authenticator app for getting otp, user can configure it via Asgardeo MyAccount. The QR code via MyAccount is same the code prompted in the first time login flow.
 
 Note that, enrolling TOTP via MyAccount can be done only after first login attempt using totp authentication.
