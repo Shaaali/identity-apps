@@ -83,6 +83,26 @@ module.exports = config({
               ]
             },
             {
+                title: 'Manage users',
+                icon:  'usersIcon',
+                children: [
+                    {
+                        title: 'Users',
+                        prefix: '/guides/user-management/',
+                        path: '/guides/user-management/',
+                        collapsable: false,
+                        sidebarDepth: 2,
+                        children: [
+                            ['manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
+                            ['manage-customer-accounts.md', 'Manage Customer Accounts']
+                        ]
+                    },
+                    ['user-management/user-profiles.md', 'User profiles'],
+                    ['user-management/sessions.md', 'Sessions'],
+                    ['user-management/groups.md', 'Groups'],
+                ]
+            },
+            {
                 title: 'Manage applications',
                 icon:  'applicationsIcon',
                 children: [
@@ -122,6 +142,14 @@ module.exports = config({
 //                },
               ]
             },
+                {
+                    title: 'Add MFA',
+                    icon: 'addAuthnIcon',
+                    children: [
+                        ['mfa/', 'Overview'],
+                        ['mfa/totp.md', 'TOTP']
+                    ]
+                },
                 // Guides for the login is not yet completed.
             // {
             //     title: 'Configure federated login',
@@ -164,34 +192,6 @@ module.exports = config({
                         ['/guides/conditional-auth/api-reference.md', 'API Reference'],
                     ]
                 },
-                {
-                    title: 'Add MFA',
-                    icon: 'addAuthnIcon',
-                    children: [
-                    ['mfa/', 'Overview'],
-                    ['mfa/totp.md', 'TOTP']
-                  ]
-                },
-                {
-                title: 'Manage users',
-                    icon:  'usersIcon',
-                    children: [
-                        {
-                            title: 'Users',
-                            prefix: '/guides/user-management/',
-                            path: '/guides/user-management/',
-                            collapsable: false,
-                            sidebarDepth: 2,
-                            children: [
-                               ['manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
-                               ['manage-customer-accounts.md', 'Manage Customer Accounts']
-                            ]
-                       },
-                        ['user-management/user-profiles.md', 'User profiles'],
-                        ['user-management/sessions.md', 'Sessions'],
-                        ['user-management/groups.md', 'Groups'],
-              ]
-            },
             ],
 //
 //            '/concepts/' : [
