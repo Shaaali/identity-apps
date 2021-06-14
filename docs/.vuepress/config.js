@@ -149,7 +149,7 @@ module.exports = config({
                     children: [
                         ['conditional-auth/', 'Overview'],
                         ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
-                        ['conditional-auth/write-your-first-script.md', 'Write your first script'],
+                        ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
                         {
                             title: 'Predefined templates',
                             prefix: 'conditional-auth/',
