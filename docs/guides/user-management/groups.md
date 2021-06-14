@@ -3,9 +3,9 @@
 A group is a collection of users who have the same privileges to access resources in an organization. 
 
 The Asgardeo Console allows you to:
-- Create and manage groups.
-- Add users to groups.
-- Remove users from groups. 
+- [Create and manage groups](#create-new-group)
+- [Assign users to groups](#assign-users-to-groups)
+- [Remove users from groups](#remove-users-from-groups) 
     
 One user can be assigned users to any number of groups. Applications can get details about a user's group in 
 the authentication response (e.g., id_token) from Asgardeo as a user attribute.                                                          
@@ -16,7 +16,7 @@ Only [customer users](./#customer) can be assigned to a group.
 
 For example, you can create the following user groups: `Admin`, `Manager`, and `Developer`. When one user group is granted access to a resource, it applies to all users in the group.
 
-## Creating a new group
+## Create new group
 
 1. In the Asgardeo console, Click **Manage > Groups**.
 2. Click **New Group**.
@@ -26,7 +26,7 @@ For example, you can create the following user groups: `Admin`, `Manager`, and `
     - **Add Users:** If you already have existing customer users, you can search and add them.
 4. Click **Finish**.
 
-## Assigning users to a group
+## Assign users to groups
 
 1. In the Asgardeo console, Click **Manage > Groups**.
 2. Select the group to assign the user.
@@ -36,7 +36,7 @@ For example, you can create the following user groups: `Admin`, `Manager`, and `
 5. Select users to add to the group.
 6. Click **Save**.
 
-## Removing users from a group
+## Remove users from groups
 
 1. In the Asgardeo Console, Click **Manage > Groups**.
 2. Select the group to remove the user.
