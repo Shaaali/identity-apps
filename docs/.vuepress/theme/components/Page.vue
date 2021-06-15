@@ -74,6 +74,21 @@
     padding-left 0
 
   @media (min-width $MQWide)
+    padding-right 10rem
+
     .has-anchor &
       padding-right 24rem
+  
+  .page-title
+    max-width $contentWidth + 200rem
+
+    .has-anchor &
+      max-width $contentWidth
+
+  .breadcrumb
+    max-width $contentWidth + 200rem
+
+    .has-anchor &
+      max-width $contentWidth
+
 </style>
