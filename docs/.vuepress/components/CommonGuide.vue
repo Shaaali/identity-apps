@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fragment-line-height-fix">
    <Content :pageKey="getPageKey()" />
   </div>
 </template>
