@@ -74,7 +74,7 @@
     padding-left 0
 
   @media (min-width $MQWide)
-    padding-right 10rem
+    padding-right 12rem
 
     .has-anchor &
       padding-right 24rem
