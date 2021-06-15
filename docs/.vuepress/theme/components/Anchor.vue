@@ -7,17 +7,7 @@ $headings = 2 3 4 5 6
   position fixed
   top ($navbarHeight + 8rem)
   max-width $contentWidth
-  margin 0 910px
-  padding 0 2.5rem
-
-  @media (max-width $MQNarrow)
-    padding 0 1.5rem
-
-  @media (min-width $MQNormal + 1)
-    margin 0 1050px
-
-  @media (max-width $MQNormal)
-    margin 0 910px
+  right 20rem
 
   & + .theme-default-content:not(.custom)
     padding-top 0
@@ -25,9 +15,7 @@ $headings = 2 3 4 5 6
 #anchor
   display none
   position absolute
-  left calc(100% + 3.5rem)
-  min-width 10rem
-  max-width 15rem
+  width 18rem
   max-height 80vh
   //overflow-y scroll
 
@@ -54,10 +42,10 @@ $headings = 2 3 4 5 6
     &::after
       content ' '
       position absolute
-      top 15px
-      left 4px
-      bottom 15px
-      width 4px
+      top 12px
+      left 5px
+      bottom 26px
+      width 3px
       margin-left -2px
       background var(--border-color)
       z-index -1

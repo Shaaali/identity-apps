@@ -75,5 +75,5 @@
 
   @media (min-width $MQWide)
     .has-anchor &
-      padding-right 16rem
+      padding-right 24rem
 </style>
