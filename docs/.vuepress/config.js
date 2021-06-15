@@ -150,8 +150,9 @@ module.exports = config({
                     {
                         title: 'Social login',
                         children: [
+                            ['/guides/identity-providers/social-login/facebook.md', 'Facebook'],
+                            ['/guides/identity-providers/social-login/github.md', 'Github'],
                             ['/guides/identity-providers/social-login/google.md', 'Google'],
-                            // ['/guides/identity-providers/social-login/github.md', 'Github']
                         ]
                     },
                     {
