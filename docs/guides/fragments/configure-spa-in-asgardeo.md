@@ -32,7 +32,7 @@
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts.
 
-[Cross Origin Resource Sharing(CORS)](TODO:link-to-concept) allows your SPA to do cross-origin HTTP requests to complete
+Cross Origin Resource Sharing(CORS) allows your SPA to do cross-origin HTTP requests to complete
 the login flow by pre-registering your SPA origin as an allowed one.
 
 6. Click on the **Allow** button with the warning message *“CORS not allowed for origin of this URL."* right after the

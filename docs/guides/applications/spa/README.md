@@ -27,7 +27,7 @@ Authorization Code Flow for public clients with the PKCE.
     </tr>
     <tr>
       <td style="text-align:center"><a href="../../../sdks/react">React</a></td>
-      <td rowspan="3" colspan="3" style="text-align:center"><a href="./spa-configure-general">General guide</a></td>
+      <td rowspan="3" colspan="3" style="text-align:center"><a href="./spa-integrate-with-oidc">General guide</a></td>
     </tr>
     <tr>
       <td style="text-align:center"><a href="../../../sdks/angular">Angular</a></td>
