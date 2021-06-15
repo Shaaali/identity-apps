@@ -90,5 +90,4 @@
 
     .has-anchor &
       max-width $contentWidth
-
 </style>
