@@ -1,6 +1,6 @@
 # Configure a single page application
 
-Once you have registered a [single page application](TODO:link-to-concept) with basic configurations, you can configure
+Once you have registered a single page application with basic configurations, you can configure
 more settings for it to define how you want the app to work with Asgardeo.
 
 ::: tip Before you begin
