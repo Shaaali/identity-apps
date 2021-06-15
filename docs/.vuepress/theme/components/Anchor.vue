@@ -37,14 +37,13 @@ $headings = 2 3 4 5 6
 
   .anchor-wrapper
     position relative
-    padding-left 8px
 
     &::after
       content ' '
       position absolute
-      top 12px
+      top 0px
       left 5px
-      bottom 26px
+      bottom 0px
       width 3px
       margin-left -2px
       background var(--border-color)
@@ -54,12 +53,12 @@ $headings = 2 3 4 5 6
       margin 0
 
   .anchor-list
-    padding-left 0
+    padding 0
 
   .anchor
     box-sizing border-box
-    padding 0px 8px
-    line-height 2
+    padding 0px 0px 0px 20px
+    line-height 2.2
     list-style none
 
     .anchor-link
@@ -70,32 +69,33 @@ $headings = 2 3 4 5 6
 
       > div
         //text-overflow ellipsis
-        white-space nowrap
         //overflow hidden
+        line-height 1.2
 
       &::before
         content ' '
         position absolute
         z-index 2
         top 50%
-        width 6px
-        height 6px
-        margin-left -3px
-        margin-top -3px
-        background var(--bgcolor)
-        border 1px solid var(--border-color)
-        border-radius 50%
+        width 3px
+        height 33px
+        margin-left -1px
+        margin-top -16px
 
-      &:hover, &.active
+      &.active
         color var(--accent-color)
 
         &::before
           background var(--accent-color)
+
+      &:hover
+        color var(--accent-color)
 
     for $heading in $headings
       &.anchor{$heading} .anchor-link
         font-size (16 - $heading)px
 
         &::before
-          left (-8 * $heading + 4)px
+          left (-20 * $heading + 24)px
 </style>
+
