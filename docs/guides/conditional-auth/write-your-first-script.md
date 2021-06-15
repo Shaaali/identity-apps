@@ -47,7 +47,7 @@ var onLoginRequest = function (context) {
 
 ### 3. Get user object
 
-If **username and password based authentication** is success, let's try to get the <a href="../api-reference/#user">user</a> from the <a href="../conditional-auth-js-api-reference/#context">context</a>. You can use `context.currentKnownSubject` to get the authenticated user.
+If **username and password based authentication** is success, let's try to get the <a href="../api-reference/#user">user</a> from the <a href="../api-reference/#context">context</a>. You can use `context.currentKnownSubject` to get the authenticated user.
 
 ```js
 var groups = ['employee', 'manager'];
