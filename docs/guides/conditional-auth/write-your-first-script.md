@@ -11,18 +11,16 @@ Let's take the following simplified set of requirements, your business may want 
 We will start from the scratch and see how can we build our first conditional authentication script.
  <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="Authentication flow with Group based Access control">
 
-::: tip Before you begin
-1. Your application should be registered in Asgardeo. Refer the <a href="../../applications">Manage applications</a> section to register your application in Asgardeo if
-   not done already.
+## Prerequisites
+1. You should have registered an application. If you don't have an app registered, <a href ="/guides/applications/">register an application</a> in Asgardeo.
 2. Customize the login flow and enable `Username and Password authentication` authentication.
-3. Create relevant <a href="../../user-management/groups">groups</a> and assign users as necessary to try out the flow.
-:::
+3. Create relevant <a href="/guides/user-management/groups/">groups</a> and assign users as necessary to try out the flow.
 
 ## Let's get started
 
 ### 1. Start with the default script
 
-To start off, <a href="../configure-conditional-auth">Configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
+To start off, <a href="/guides/conditional-auth/configure-conditional-auth/">Configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
 
 ```js
 var onLoginRequest = function(context) {
@@ -110,5 +108,5 @@ var onLoginRequest = function (context) {
 Now you have completed writing a conditional auth script for group-based access control scenario.
 
 Similarly, you can build your own scripts to handle many scenarios using:
- - <a href="../api-reference" >API references</a>
- - <a href="../predefined-templates">pre-defined templates</a>.
+ - <a href="/guides/conditional-auth/api-reference">API references</a>
+ - <a href="/guides/conditional-auth/predefined-templates">Pre-defined templates</a>.

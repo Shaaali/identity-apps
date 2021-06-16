@@ -6,21 +6,16 @@ breadcrumb: false
 
 Following this guide, you will be able to deploy a sample React single page application in your local environment and secure it with Asgadeo using OpenID Connect.
 
-::: tip Before you begin
-
-1. Create an organization in Asgardeo
-2. Create a customer account in your organization
-3. Install npm and node in your local environment
-
-:::
-
-## Configure an application in Asgardeo
-
-You need to first create an application in Asgardeo that represents your single page application.
-
-<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo-for-sample.md'/>
+## Prerequisites
+1. You need to have npm with Node.js. If you don't have it, [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
+2. You should have registered a single-page application. If you don't have an app registered, <a href ="/guides/applications/spa/register-app">register an application</a> in Asgardeo.
+3. Only <a href="/guides/user-management/">customer</a> users can login to applications. <a href ="/guides/user-management/manage-customer-accounts/#create-customer-user">Create customer account</a> if you don't have.
 
 ## Configure the sample application
+In order to try out the sample application:
+1. [Download the sample](#download-the-sample)
+2. [Configure the sample](#configure-the-sample)
+3. [Run the sample](#run-the-sample)
 
 ### Download the sample
 
@@ -32,7 +27,7 @@ Click on the button below to download the sample.
     buttonText='Download Sample'
     startIconPath='images/technologies/react-logo.svg'
     endIconPath='icons/downloadIcon.svg'
-    externalLink='https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/download/v0.1.1/asgardeo-react-app.zip'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip'
     v-bind:openInNewTab='true'
 />
 <Button 
@@ -44,21 +39,23 @@ Click on the button below to download the sample.
     v-bind:openInNewTab='true'
 />
 
+<br>
+
 ### Configure the sample
 
 Change the `config.json` file found in the `asgardeo-react-app/src` sample folder with the relevant values.
+ - **clientID** - You should add the client id of the registered application. Refer <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain client ID</a> from Asgardeo console.
+ - **serverOrigin** - "https://dev.accounts.asgardeo.io/t/<organization_name>"
+    ``` json
+    {
+        "clientID": "<clientID>",
+        "serverOrigin": "https://dev.accounts.asgardeo.io/t/<organization_name>",
+        "signInRedirectURL": "https://localhost:5000",
+        "signOutRedirectURL": "https://localhost:5000"
+    }
+    ```
 
-- **clientID** = the client id obtained for the application registered above. _(You can check the client ID of the application in the `Protocol` tab of the application details view)_
-- **serverOrigin** = "https://dev.accounts.asgardeo.io/t/<organization_name>"
-
-``` json{2,3}
-{
-    "clientID": "<clientID>",
-    "serverOrigin": "https://dev.accounts.asgardeo.io/t/<organization_name>",
-    "signInRedirectURL": "https://localhost:5000",
-    "signOutRedirectURL": "https://localhost:5000"
-}
-```
+<br>
 
 ### Run the sample
 
@@ -67,3 +64,5 @@ Run the following command at the root of the project to start up the sample appl
 ```bash
 npm install && npm start
 ```
+Try login to Asgardeo using <a href="/guides/user-management/">customer</a> account credentials.
+

@@ -11,5 +11,8 @@ to enable login to web applications.
 
 Following guides provide detailed steps to integrating login to your web applications with Asgradeo using OpenID Connect.
 
-* [Login to Java EE web app using Asgardeo Tomcat OIDC Agent](../../../sdks/java-ee)
-* [Login to any web app using OpenID Connect](./web-app-integrate-with-oidc)
+* [Register your web app](./register-app/)
+* [Configure login to your webapp](./configure-login/)
+* [Tryout Java EE sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
+* [Tryout Java EE SDK](/sdks/java-ee/)
+* [Explore OpenID Connect flow in depth](/guides/applications/integrate-confidential-client/)

@@ -1,11 +1,14 @@
-User information is encoded inside the ID token returned along with the access token. You can also obtain user
+
+User information is encoded inside the ID token returned along with the access token. In addition to that, OpenID Connect provides [userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) to obtain user
 information as a payload by invoking the userinfo endpoint with the access token obtained.
 
-_Userinfo endpoint:_
+**Userinfo endpoint:**
 
-`https://accounts.asgardeo.io/t/<organization_name>/oauth2/userinfo`
+```
+https://accounts.asgardeo.io/t/<organization_name>/oauth2/userinfo
+```
 
-_Sample request:_
+**Sample request:**
 
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
@@ -61,7 +64,8 @@ axios(config)
 </CodeGroupItem>
 </CodeGroup>
 
-_Default sample response:_
+**Default sample response:**  
+Asgardeo returns only `sub` claim, if there is no user attributes shared with the application.
 
 ```json
 {
@@ -69,9 +73,5 @@ _Default sample response:_
 }
 ```
 
-By default, only the username (sub) information will be available in the response. You can customize the user
-information returned by configuring the user attributes of the application registered in the Asgardeo console.
-
-More details on configuring the user attributes can be found in
-the [User attributes](../applications/application-settings/configure-user-attribute.md) section in application settings. 
-
+You can customize the user information returned by configuring the user attributes of the application registered in the Asgardeo Console.
+<br>

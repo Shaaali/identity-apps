@@ -18,30 +18,13 @@ with the PKCE ([Proof Key for Code Exchange](https://datatracker.ietf.org/doc/ht
 The following guides provide the detailed steps needed to secure your SPAs with Asgradeo using the OpenID Connect 
 Authorization Code Flow for public clients with the PKCE. 
 
-<table class="border-table">
-  <tbody>
-    <tr>
-      <td><h4><b>Use an Asgardeo SDK</b></h4></td>
-      <td rowspan="4" colspan="4"><h4>or</h4></td>
-      <td><h4><b>Use your own framework</b></h4></td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><a href="../../../sdks/react">React</a></td>
-      <td rowspan="3" colspan="3" style="text-align:center"><a href="./spa-integrate-with-oidc">General guide</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><a href="../../../sdks/angular">Angular</a></td>
-    </tr>
-    <tr>
-      <td style="text-align:center"><a href="../../../sdks/javascript">Javascript</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
 
 ## Related Links
-* [Integrate your OIDC SPA with Asgardeo](./spa-integrate-with-oidc.md)
+* [Configure OpenID Connect login to your Single page application ](./configure-login/)
 * [Tryout React SPA Sample](/quickstarts/qsg-spa-react.md)
 * [Tryout Angular SPA Sample](/quickstarts/qsg-spa-angular.md)
 * [Tryout JavaScript SPA Sample](/quickstarts/qsg-spa-javascript.md)
+* [Explore OpenID Connect flow in depth](/guides/applications/integrate-public-client/)
+* [Try React SDK](/sdks/react/)
+* [Try Angular SDK](/sdks/angular/)
+* [Try Javascript SDK](/sdks/javascript/)

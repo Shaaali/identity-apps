@@ -14,13 +14,13 @@ sdkContent:
       name: Javascript
       sdkPath: /sdks/javascript/
       gitUrl: https://github.com/asgardeo/asgardeo-auth-spa-sdk
-      appUrl: https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/download/v0.1.2/asgardeo-html-js-app.zip
+      appUrl: https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/latest/download/asgardeo-html-js-app.zip
 
     - icon: images/technologies/react-logo.svg
       name: React
       sdkPath: /sdks/react/
       gitUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk
-      appUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/download/v0.1.1/asgardeo-react-app.zip
+      appUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip
 
   - name: Web Application
     technologies:

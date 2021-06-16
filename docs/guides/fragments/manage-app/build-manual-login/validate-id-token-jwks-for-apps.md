@@ -1,13 +1,16 @@
-In order to validate the signature on the obtained ID token, you need the public key of Asgardeo. Asgardeo exposes the
-public key information through the standard JWKS endpoint.
+In order to validate the signature on the obtained ID token, you need the public key of Asgardeo. Signature of ID tokens can be validated using JWKS endpoint. See [ID Token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation).
+
+Asgardeo exposes the public key information through the standard [JWKS](https://datatracker.ietf.org/doc/html/rfc7517) endpoint.
 
 By using a signature validation library, you can validate the signature of the ID token using the JWKS endpoint.
 
-_JWKS endpoint:_
+**JWKS endpoint:**
 
-`https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks`
+```
+https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
+```
 
-_Sample request:_
+**Sample request:**
 
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
@@ -73,3 +76,5 @@ _Sample response:_
   ]
 }
 ```
+
+<br>

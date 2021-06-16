@@ -1,2 +1,0 @@
-# Define the authorization protocol
-

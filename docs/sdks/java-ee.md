@@ -14,36 +14,25 @@ using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomc
     buttonPath='/quickstarts/qsg-oidc-webapp-java-ee'
 />
 
-::: tip Before you begin
-
-1. Create an organization in Asgardeo
-2. Create a customer account in your organization
-3. Install Apache Maven (3.6.x or higher) as the package manager
-4. Install Apache Tomcat (8.x or 9.x) as the deployment engine
-
-:::
+## Prerequisites
+1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
+2. [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
+3. You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/register-app">register an application</a> in Asgardeo.
 
 By following this guide, you will
-
 1. Register your application as an OIDC app in Asgardeo
 2. Embed Asgardeo OIDC Agent in your web application project
 3. Configure your web application to communicate with Asgardeo
 4. Add login and logout functionality in your web application
-
-## Configure your application in Asgardeo
-
-Let's start with creating an application in Asgardeo that represents your web application.
-
-<CommonGuide guide='guides/fragments/configure-web-app-oidc-in-asgardeo.md'/>
 
 ## Add authentication to your app
 
 To ease development, we have introduced the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)
 which enables adding OIDC-based login and logout in the web applications deployed on Tomcat.
 
-> Refer the [documentation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) of Asgardeo Tomcat OIDC Agent for more information on how it works.
+Refer the [Asgardeo Tomcat OIDC Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) for more information on how it works.
 
-**1. Add dependencies**
+### Add dependencies
 
 You can use Asgardeo OIDC Agent in your project by updating the `pom.xml` file with the following dependency.
 
@@ -75,7 +64,7 @@ as follows.
 
 <br>
 
-**2. Configure**
+### Configure
 
 We provide the Asgardeo endpoints to the application using a property file, which is read by the Asgardeo OIDC Agent.
 
@@ -145,7 +134,7 @@ Finally, copy and paste the following configuration to the _<YOUR_APP>/src/main/
 
 <br>
 
-**3. Add login**
+### Add login
 
 In the `index.html` file, add a login button to forward the user to secure pages upon successful login.
 
@@ -160,7 +149,7 @@ flow if it does not find an authenticated application session.
 
 <br>
 
-**4. Add logout**
+### Add logout
 
 Add the following snippet to enable logout.
 
