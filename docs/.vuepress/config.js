@@ -142,14 +142,14 @@ module.exports = config({
 //                },
               ]
             },
-                {
-                    title: 'Add MFA',
-                    icon: 'addAuthnIcon',
-                    children: [
-                        ['mfa/', 'Overview'],
-                        ['mfa/totp.md', 'TOTP']
-                    ]
-                },
+            {
+                title: 'Add MFA',
+                icon: 'addAuthnIcon',
+                children: [
+                    ['mfa/', 'Overview'],
+                    ['mfa/totp.md', 'TOTP']
+                ]
+            },
                 // Guides for the login is not yet completed.
             // {
             //     title: 'Configure federated login',
@@ -170,29 +170,52 @@ module.exports = config({
             //     },
             //   ]
             // },
-                {
-                    title: 'Add conditional authentication',
-                    icon: 'addLoginIcon',
-
-                    children: [
-                        ['conditional-auth/', 'Overview'],
-                        ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
-                        ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
-                        {
-                            title: 'Predefined templates',
-                            prefix: 'conditional-auth/',
-                            children: [
-                                ['predefined-templates/', 'Introduction'],
-                                ['predefined-templates/group-based-template.md', 'Group based access control'],
-                                ['predefined-templates/ip-based-template.md', 'IP based access control'],
-                                ['predefined-templates/new-device-based-template.md', 'Device based access control'],
-                                ['predefined-templates/user-age-based-template.md', 'Age based access control'],
-                            ]
-                        },
-                        ['/guides/conditional-auth/api-reference.md', 'API Reference'],
-                    ]
-                },
+            {
+                title: 'Add conditional authentication',
+                icon: 'addLoginIcon',
+                children: [
+                    ['conditional-auth/', 'Overview'],
+                    ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
+                    ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
+                    {
+                        title: 'Predefined templates',
+                        prefix: 'conditional-auth/',
+                        children: [
+                            ['predefined-templates/', 'Introduction'],
+                            ['predefined-templates/group-based-template.md', 'Group based access control'],
+                            ['predefined-templates/ip-based-template.md', 'IP based access control'],
+                            ['predefined-templates/new-device-based-template.md', 'Device based access control'],
+                            ['predefined-templates/user-age-based-template.md', 'Age based access control'],
+                        ]
+                    },
+                    ['/guides/conditional-auth/api-reference.md', 'API Reference'],
+                ]
+            },
             ],
+            '/quickstarts/' : [
+            {
+                title: 'Angular SPA Sample',
+                path: '/quickstarts/qsg-spa-angular.md',
+                icon:  'gettingStartedIcon',
+        
+            },
+            {
+                title: 'Javascript SPA Sample',
+                path: '/quickstarts/qsg-spa-javascript.md',
+        
+            },
+            {
+                title: 'React SPA Sample',
+                path: '/quickstarts/qsg-spa-react.md',
+        
+            },
+            {
+                title: 'Java SPA Sample',
+                path: '/quickstarts/qsg-oidc-webapp-java-ee.md',
+        
+            },
+            ],
+
 //
 //            '/concepts/' : [
 //            '',
