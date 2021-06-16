@@ -27,7 +27,7 @@ You need to first create an application in Asgardeo that represents your single 
 
 Click on the button below to download the sample.
 
-[Download Angular Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip)
+[Download Angular Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/download/v0.1.3/asgardeo-angular-app.zip)
 
 [View source on Github](https://github.com/asgardeo/asgardeo-auth-angular-sdk/tree/main/samples/asgardeo-angular-app)
 
