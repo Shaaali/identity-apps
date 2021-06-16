@@ -27,7 +27,7 @@ You need to first create an application in Asgardeo that represents your single 
 
 Click on the button below to download the sample.
 
-[Download React Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip)
+[Download React Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/download/v0.1.1/asgardeo-react-app.zip)
 
 [View source on Github](https://github.com/asgardeo/asgardeo-auth-react-sdk/tree/main/samples/asgardeo-react-app)
 
