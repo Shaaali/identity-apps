@@ -194,28 +194,40 @@ module.exports = config({
             ],
             '/quickstarts/' : [
             {
-                title: 'Angular SPA Sample',
-                path: '/quickstarts/qsg-spa-angular.md',
+                title: 'SPA',
                 icon:  'gettingStartedIcon',
-        
+                children: [
+                    ['/quickstarts/qsg-spa-angular.md', 'Angular sample'],
+                    ['/quickstarts/qsg-spa-javascript.md', 'Javascript sample'],
+                    ['/quickstarts/qsg-spa-react.md', 'React sample'],
+                ]
             },
             {
-                title: 'Javascript SPA Sample',
-                path: '/quickstarts/qsg-spa-javascript.md',
-        
-            },
-            {
-                title: 'React SPA Sample',
-                path: '/quickstarts/qsg-spa-react.md',
-        
-            },
-            {
-                title: 'Java SPA Sample',
-                path: '/quickstarts/qsg-oidc-webapp-java-ee.md',
-        
+                title: 'Web App',
+                icon:  'applicationsIcon',
+                children: [
+                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'Java EE sample'],
+                ]
             },
             ],
-
+            '/sdks/' : [
+            {
+                title: 'SPA',
+                icon:  'gettingStartedIcon',
+                children: [
+                    ['/sdks/angular.md', 'Angular'],
+                    ['/sdks/javascript.md', 'Javascript'],
+                    ['/sdks/react.md', 'React'],
+                ]
+            },
+            {
+                title: 'Web App',
+                icon:  'applicationsIcon',
+                children: [
+                    ['/sdks/java-ee', 'Java EE'],
+                ]
+            },
+            ]
 //
 //            '/concepts/' : [
 //            '',

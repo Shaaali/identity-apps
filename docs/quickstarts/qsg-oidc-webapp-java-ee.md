@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# OIDC Java EE webapp sample
+# OIDC Java EE web app sample
 
 This quick start guide will deploy the sample application in your local environment and secure it with Asgardeo using OpenID Connect.
 

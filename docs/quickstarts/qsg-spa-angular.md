@@ -1,5 +1,4 @@
 ---
-sidebar: true
 breadcrumb: false
 ---
 
