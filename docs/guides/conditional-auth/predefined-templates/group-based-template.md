@@ -1,6 +1,6 @@
-# Group based conditional authentication
+# Group based access control
 
-The group based conditional authentication script prompts two factor authentication to the users who belong to any of
+The group based access control template prompts two factor authentication to the users who belong to any of
 the given sets of groups.
 
 ## Scenario

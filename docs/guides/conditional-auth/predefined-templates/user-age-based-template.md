@@ -1,6 +1,6 @@
-# User age based conditional authentication
+# User age based access control
 
-The user age based conditional authentication script allows log in to application if the user's age is over the
+The user age based access control template allows log in to application if the user's age is over the
 configured value. The age of the user is calculated using the user's date of birth attribute.
 
 ## Scenario

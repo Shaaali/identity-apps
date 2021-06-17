@@ -71,7 +71,7 @@ axios(config)
 
 **2. Configure the endpoints manually**
 
-You can also find the server endpoints corresponding to your organization from the **Help** panel of the application
+You can also find the server endpoints corresponding to your organization from the **Info** panel of the application
 view in the Console.
 
 <img :src="$withBase('/assets/img/guides/applications/app-endpoint-help.png')" alt="app-help-panel-for-endpoints">

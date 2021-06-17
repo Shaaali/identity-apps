@@ -1,4 +1,4 @@
-# New device based adaptive authentication
+# New device based access control
 
 Sends an email notification and/or prompts two factor authentication to the users who log in from a previously unused
 device. A cookie is used to identify whether the device has been used before.
