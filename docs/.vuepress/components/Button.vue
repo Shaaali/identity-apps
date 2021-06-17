@@ -108,6 +108,11 @@ export default {
     margin 0 2px 5px 0
     font-weight 500
     font-size 15px
+    transition .3s
+
+    &:hover
+      border-color #2C3E50
+      color #000000
 
     .start-icon-container
       display flex
