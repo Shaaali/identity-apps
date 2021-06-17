@@ -28,9 +28,23 @@ Let's start with creating an application in Asgardeo that represents your web ap
 
 Click on the button below to download the sample.
 
-[Download Tomcat webapplication :arrow_down:](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war)
-
-[View source on Github](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/tree/master/io.asgardeo.tomcat.oidc.sample)
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='Download Sample'
+    startIconPath='images/technologies/java-logo.svg'
+    endIconPath='icons/downloadIcon.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war'
+    v-bind:openInNewTab='true'
+/>
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='View source'
+    endIconPath='images/technologies/github-logo.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/tree/master/io.asgardeo.tomcat.oidc.sample'
+    v-bind:openInNewTab='true'
+/>
 
 ### Configure the sample
 

@@ -1,6 +1,14 @@
 <template>
-  <div>
-  <button :class="`button ${ buttonType }`" @click="handleClick">{{ buttonText }}</button>
+  <div :class="`${ displayType }`">
+  <button :class="`button ${ buttonType }`" @click="handleClick">
+    <div v-if="startIconPath"  class="start-icon-container">
+      <img :src="require(`../theme/assets/${ startIconPath }`)"/>
+    </div>
+    {{ buttonText }}
+    <div v-if="endIconPath"  class="end-icon-container">
+      <img :src="require(`../theme/assets/${ endIconPath }`)"/>
+    </div>
+  </button>
   </div>
 </template>
 
@@ -12,14 +20,11 @@ export default {
     buttonType: String,
     buttonText: String,
     buttonPath: String,
-    externalLink: String
-  },
-  data() {
-    return {
-        buttonText: this.buttonText,
-        buttonPath: this.buttonPath,
-        externalLink: this.externalLink
-      }
+    externalLink: String,
+    displayType: String,
+    openInNewTab: Boolean,
+    startIconPath: String,
+    endIconPath: String
   },
   methods: {
   	handleClick: function(){
@@ -29,7 +34,12 @@ export default {
       }
 
       if (this.externalLink) {
-        window.location.href = this.externalLink;
+        // Allow button to open links in a new tab if preferred.
+        if(this.openInNewTab) {
+          window.open(this.externalLink, "_blank")
+        } else {
+          window.location.href = this.externalLink;
+        }
       }
     }
   }
@@ -48,6 +58,7 @@ export default {
   cursor: pointer
   border-radius: 4px
   font-weight: 600
+  font-family inherit
 
   &.default
     background-color: #e0e1e2
@@ -82,4 +93,44 @@ export default {
     border-style: solid
     border-width: 0.145em
     border-color: #e0e1e2
+  
+  &.grey-outlined-icon
+    display inline-block
+    vertical-align baseline
+    min-height 1em
+    line-height 2.75em
+    background-color: transparent
+    color #5a5a5a
+    border-style solid
+    border-width 2px
+    border-color #e0e1e2
+    padding 5px 25px
+    margin 0 2px 5px 0
+    font-weight 500
+    font-size 15px
+
+    .start-icon-container
+      display flex
+      float left
+
+      img
+        border none !important
+        padding 2px !important
+        margin 0 5px 0 0 !important
+        width auto
+        height 35px
+
+    .end-icon-container
+      display flex
+      float right
+
+      img
+        border none !important
+        padding 12px 5px 8px 5px !important
+        margin 0 !important
+        width 18px
+        height auto
+
+.inline-button
+  display inline
 </style>

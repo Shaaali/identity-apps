@@ -26,10 +26,23 @@ You need to first create an application in Asgardeo that represents your single 
 
 Click on the button below to download the sample.
 
-[Download React Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip)
-
-[View source on Github](https://github.com/asgardeo/asgardeo-auth-react-sdk/tree/main/samples/asgardeo-react-app)
-
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='Download Sample'
+    startIconPath='images/technologies/react-logo.svg'
+    endIconPath='icons/downloadIcon.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip'
+    v-bind:openInNewTab='true'
+/>
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='View source'
+    endIconPath='images/technologies/github-logo.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-react-sdk/tree/main/samples/asgardeo-react-app'
+    v-bind:openInNewTab='true'
+/>
 
 ### Configure the sample
 

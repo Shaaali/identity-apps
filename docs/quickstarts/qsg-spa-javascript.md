@@ -26,9 +26,23 @@ You need to first create an application in Asgardeo that represents your single 
 
 Click on the button below to download the sample.
 
-[Download Javascript Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/download/v0.1.2/asgardeo-html-js-app.zip)
-
-[View source on Github](https://github.com/asgardeo/asgardeo-auth-spa-sdk/tree/main/samples/asgardeo-html-js-app)
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='Download Sample'
+    startIconPath='images/technologies/javascript-logo.svg'
+    endIconPath='icons/downloadIcon.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/download/v0.1.2/asgardeo-html-js-app.zip'
+    v-bind:openInNewTab='true'
+/>
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='View source'
+    endIconPath='images/technologies/github-logo.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-spa-sdk/tree/main/samples/asgardeo-html-js-app'
+    v-bind:openInNewTab='true'
+/>
 
 ### Configure the sample
 

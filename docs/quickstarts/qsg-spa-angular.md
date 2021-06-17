@@ -26,9 +26,23 @@ You need to first create an application in Asgardeo that represents your single 
 
 Click on the button below to download the sample.
 
-[Download Angular Sample :arrow_down:](https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip)
-
-[View source on Github](https://github.com/asgardeo/asgardeo-auth-angular-sdk/tree/main/samples/asgardeo-angular-app)
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='Download Sample'
+    startIconPath='images/technologies/angular-logo.svg'
+    endIconPath='icons/downloadIcon.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip'
+    v-bind:openInNewTab='true'
+/>
+<Button 
+    buttonType='grey-outlined-icon'
+    displayType='inline-button'
+    buttonText='View source'
+    endIconPath='images/technologies/github-logo.svg'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-angular-sdk/tree/main/samples/asgardeo-angular-app'
+    v-bind:openInNewTab='true'
+/>
 
 ### Configure the sample
 
