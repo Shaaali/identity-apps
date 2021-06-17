@@ -7,6 +7,13 @@ breadcrumb: false
 This guide provides steps to authenticate users to your Java EE web application deployed on Tomcat with OpenID Connect 
 using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)
 
+<Button 
+    buttonType='grey-outlined-icon'
+    buttonText='Try out the sample app'
+    startIconPath='images/technologies/java-logo.svg'
+    buttonPath='/quickstarts/qsg-oidc-webapp-java-ee'
+/>
+
 ::: tip Before you begin
 
 1. Create an organization in Asgardeo

@@ -6,7 +6,12 @@ breadcrumb: false
 
 This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md)
 
-<Button buttonType='primary' buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-angular'/>
+<Button 
+    buttonType='grey-outlined-icon'
+    buttonText='Try out the sample app'
+    startIconPath='images/technologies/angular-logo.svg'
+    buttonPath='/quickstarts/qsg-spa-angular'
+/>
 
 ::: tip Before you begin
 
