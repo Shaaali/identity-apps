@@ -32,7 +32,7 @@ Click on the button below to download the sample.
     buttonText='Download Sample'
     startIconPath='images/technologies/react-logo.svg'
     endIconPath='icons/downloadIcon.svg'
-    externalLink='https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/download/v0.1.1/asgardeo-react-app.zip'
     v-bind:openInNewTab='true'
 />
 <Button 
