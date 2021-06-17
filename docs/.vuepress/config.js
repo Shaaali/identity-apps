@@ -142,14 +142,14 @@ module.exports = config({
 //                },
               ]
             },
-                {
-                    title: 'Add MFA',
-                    icon: 'addAuthnIcon',
-                    children: [
-                        ['mfa/', 'Overview'],
-                        ['mfa/totp.md', 'TOTP']
-                    ]
-                },
+            {
+                title: 'Add MFA',
+                icon: 'addAuthnIcon',
+                children: [
+                    ['mfa/', 'Overview'],
+                    ['mfa/totp.md', 'TOTP']
+                ]
+            },
                 // Guides for the login is not yet completed.
             // {
             //     title: 'Configure federated login',
@@ -170,29 +170,64 @@ module.exports = config({
             //     },
             //   ]
             // },
-                {
-                    title: 'Add conditional authentication',
-                    icon: 'addLoginIcon',
-
-                    children: [
-                        ['conditional-auth/', 'Overview'],
-                        ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
-                        ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
-                        {
-                            title: 'Predefined templates',
-                            prefix: 'conditional-auth/',
-                            children: [
-                                ['predefined-templates/', 'Introduction'],
-                                ['predefined-templates/group-based-template.md', 'Group based access control'],
-                                ['predefined-templates/ip-based-template.md', 'IP based access control'],
-                                ['predefined-templates/new-device-based-template.md', 'Device based access control'],
-                                ['predefined-templates/user-age-based-template.md', 'Age based access control'],
-                            ]
-                        },
-                        ['/guides/conditional-auth/api-reference.md', 'API Reference'],
-                    ]
-                },
+            {
+                title: 'Add conditional authentication',
+                icon: 'addLoginIcon',
+                children: [
+                    ['conditional-auth/', 'Overview'],
+                    ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
+                    ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
+                    {
+                        title: 'Predefined templates',
+                        prefix: 'conditional-auth/',
+                        children: [
+                            ['predefined-templates/', 'Introduction'],
+                            ['predefined-templates/group-based-template.md', 'Group based access control'],
+                            ['predefined-templates/ip-based-template.md', 'IP based access control'],
+                            ['predefined-templates/new-device-based-template.md', 'Device based access control'],
+                            ['predefined-templates/user-age-based-template.md', 'Age based access control'],
+                        ]
+                    },
+                    ['/guides/conditional-auth/api-reference.md', 'API Reference'],
+                ]
+            },
             ],
+            '/quickstarts/' : [
+            {
+                title: 'SPA',
+                icon:  'gettingStartedIcon',
+                children: [
+                    ['/quickstarts/qsg-spa-angular.md', 'Angular sample'],
+                    ['/quickstarts/qsg-spa-javascript.md', 'Javascript sample'],
+                    ['/quickstarts/qsg-spa-react.md', 'React sample'],
+                ]
+            },
+            {
+                title: 'Web App',
+                icon:  'applicationsIcon',
+                children: [
+                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'Java EE sample'],
+                ]
+            },
+            ],
+            '/sdks/' : [
+            {
+                title: 'SPA',
+                icon:  'gettingStartedIcon',
+                children: [
+                    ['/sdks/angular.md', 'Angular'],
+                    ['/sdks/javascript.md', 'Javascript'],
+                    ['/sdks/react.md', 'React'],
+                ]
+            },
+            {
+                title: 'Web App',
+                icon:  'applicationsIcon',
+                children: [
+                    ['/sdks/java-ee', 'Java EE'],
+                ]
+            },
+            ]
 //
 //            '/concepts/' : [
 //            '',
