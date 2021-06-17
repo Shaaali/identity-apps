@@ -6,7 +6,12 @@ breadcrumb: false
 
 This guide provides steps to authenticate users to your React SPA with OpenID Connect using the [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk/blob/main/README.md).
 
-<Button buttonType='primary' buttonText='Try out the sample app' buttonPath='/quickstarts/qsg-spa-react'/>
+<Button 
+    buttonType='grey-outlined-icon'
+    buttonText='Try out the sample app'
+    startIconPath='images/technologies/react-logo.svg'
+    buttonPath='/quickstarts/qsg-spa-react'
+/>
 
 ::: tip Before you begin
 
