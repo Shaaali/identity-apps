@@ -115,7 +115,7 @@ export default {
 
       img
         border none !important
-        padding 2px !important
+        padding 2px 5px !important
         margin 0 5px 0 0 !important
         width auto
         height 35px
