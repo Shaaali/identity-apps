@@ -1,6 +1,6 @@
-# IP based conditional authentication
+# IP based access control
 
-The IP based conditional authentication script prompts two factor authentication to the users who are logging outside of
+The IP based access control template prompts two factor authentication to the users who are logging outside of
 the given ip range.
 
 ## Scenario
