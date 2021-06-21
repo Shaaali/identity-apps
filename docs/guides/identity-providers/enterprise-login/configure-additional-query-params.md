@@ -7,7 +7,8 @@ Asgardeo supports sending additional information to your OIDC external IDP in th
 
 You can check below examples when an application developer wants to send _login_hint_ as a query param to external provider.
 
-## Fixed query params        
+## Fixed query params    
+Here Asgardeo sends the fixed query param to the external identity provider in the login request.    
    - **Sample Query Param:**   
     `login_hint=none`
       <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/queryparam/fixed-query-param.png')" alt="Add fixed query param in enterprise IDP config">
@@ -17,7 +18,7 @@ You can check below examples when an application developer wants to send _login_
     - **Sample Query Param:**     
        `login_hint=${login_hint_value}` 
        <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/queryparam/dynamic_query_param_from_app.png')" alt="Add dynamic query param in enterprise IDP config">
-        Here application has to send _login_hint_value_ as a query param in authentication request. You can see a sample OIDC request from an application below.
+        You can see a sample OIDC request from an application below.
        ```  
         https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>&login_hint_value=user@gmail.com
        ``` 
