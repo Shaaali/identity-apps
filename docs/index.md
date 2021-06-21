@@ -24,14 +24,14 @@ features:
 
   - title: Configure Federated Login
     details: Let users log in to applications with an Identity Provider of their choice.
-    link: 
+    link: /guides/identity-providers/
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
-        link:
+        link: /guides/identity-providers/
 
       - name: "Enterprise login"
-        link:
+        link: guides/identity-providers/enterprise-login/oidc/
 
   - title: Add Strong Authentication
     details: Protect your user login using multi-factor and adaptive authentication.
