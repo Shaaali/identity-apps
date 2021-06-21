@@ -28,10 +28,10 @@ features:
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
-        link: /guides/identity-providers/
+        link: /guides/identity-providers/#social-identity-providers
 
       - name: "Enterprise login"
-        link: guides/identity-providers/enterprise-login/oidc/
+        link: /guides/identity-providers/#enterprise-identity-providers
 
   - title: Add Strong Authentication
     details: Protect your user login using multi-factor and adaptive authentication.
