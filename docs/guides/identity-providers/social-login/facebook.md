@@ -3,10 +3,10 @@
 Follow this guide to enable Facebook login to your applications.
 
 ## Prerequisite
-To get started, you should have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Facebook login.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Facebook login.
 
 ## Add Facebook login
-Inorder to add Facebook identity provider, you have to follow below steps in Asgardeo after completing the above prerequisites:
+In order to add Facebook login to your app, follow below steps
  1. [Register app in Facebook](#register-app-in-facebook)
  2. [Create Facebook Identity Provider](#create-facebook-identity-provider)
  3. [Enable Facebook login](#enable-facebook-login)
@@ -39,7 +39,7 @@ You need to register Asgardeo as an app in Facebook. Follow the [Facebook Docume
     - **App ID**: App ID obtained from Facebook.
     - **App Secret**: App secret obtained from Facebook.   
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-idp.png')" alt="Add Facebook IDP in Asgardeo">
-4. You can find more additional configurations once you created Facebook identity provider.
+4. You can find more additional configurations once you create Facebook identity provider.
     - **Permissions**: This is the list of permissions that are requested from Facebook. Asgardeo needs these permissions to get user information and sends this to application based on the attribute configurations in the application. You can read [Facebook Documentation](https://developers.facebook.com/docs/permissions/reference) to know about permissions.
  
 ###  Enable Facebook login

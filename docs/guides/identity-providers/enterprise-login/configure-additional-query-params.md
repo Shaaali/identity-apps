@@ -1,19 +1,19 @@
 # Configure additional query parameters
-Asgardeo supports following use cases reated to additional query parameters:
-- Static query params to external identity provider
-- Dynamic query params to external identity provider.
-  - Application dynamically sends the dynamic query param value in the login request.
-  - Conditional authentication script dynamically resolves the query param value.
+Asgardeo supports sending additional information to your OIDC external IDP in the form of query params in the login request.
+- Fixed query params
+- Dynamic query params
+  - Query param value sent in the application login request
+  - Query param value resolved in a conditional authentication script
 
 You can check below examples when an application developer wants to send _login_hint_ as a query param to external provider.
 
-## Send static query params to external identity provider         
+## Fixed query params        
    - **Sample Query Param:**   
-    `login_hint=fixedValue`
+    `login_hint=none`
       <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/queryparam/fixed-query-param.png')" alt="Add fixed query param in enterprise IDP config">
 
-## Send dynamic query params to external identity provider
-1.  Application dynamically sends the dynamic query param value in the login request   
+## Dynamic query params
+1.  Query param value sent in the application login request
     - **Sample Query Param:**     
        `login_hint=${login_hint_value}` 
        <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/queryparam/dynamic_query_param_from_app.png')" alt="Add dynamic query param in enterprise IDP config">
@@ -23,13 +23,9 @@ You can check below examples when an application developer wants to send _login_
        ``` 
       <br> 
       
-    - If the application sends a login request **without any query param**, then Asgardeo will send the defined `login_hint_value` as the query param value.  
-        <br>
-        **Sample login request to the external identity provider from Asgardeo:** <br>
-        
-        `https://<external_idp>/authorize?scope=openid&response_type=code&redirect_uri=https%3A%2F%2Faccounts.asgardeo.io%2Ft%2Fbifrost%2Fcommonauth&state=39fb14dd-c68e-45bf-abe0-b25697ac86a5%2COIDC&client_id=yq6DFWQiES9cmDOxRspTDC7opxkGH1qU&login_hint=login_hint_value`
-           
-2. Conditional authentication script dynamically resolves the query param value
+    - If the application does not send the query param in the login request, the particular parameterized query param will not be sent to the external OIDC identity provider.
+                   
+2. Query param value resolved in a conditional authentication script
    - **Sample Query Param:**     
     `login_hint=$authparam{login_hint_value}` 
     <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/queryparam/dyamic_query_param_from_conditional_auth.png')" alt="Add dynamic query param in enterprise IDP config"> 
@@ -48,7 +44,7 @@ You can check below examples when an application developer wants to send _login_
                   executeStep(2, {
                       authenticatorParams: {
                           common: {
-                              'login_hint_value': emailAddress  // This is where we define the dynamic query param.
+                              'login_hint_value': emailAddress  // This is where we resolve the dynamic query param.
                           }
                       },
                       authenticationOptions: [{

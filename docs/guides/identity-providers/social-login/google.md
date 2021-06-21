@@ -3,10 +3,10 @@
 Follow this guide to enable Google login to your applications.
 
 ## Prerequisite
-To get started, you should have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Google login.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Google login.
  
 ## Add Google login
-In order to add Google identity provider, you have to follow below steps in Asgardeo after completing the above prerequisites:
+In order to add Google login to your app, follow below steps
  1. [Register app in Google](#register-app-in-google)
  2. [Create Google Identity Provider](#create-google-identity-provider)
  3. [Enable Google login](#enable-google-login)
@@ -33,7 +33,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
     - **Client ID**: client_id obtained from Google.
     - **Client Secret**: client_secret obtained from Google.   
     <img :src="$withBase('/assets/img/guides/idp/google-idp/add-google-idp.png')" alt="Add Google IDP in Asgardeo">
-4. You can find more additional configurations once you created Google identity provider.
+4. You can find more additional configurations once you create Google identity provider.
     - **Scopes**: This is the list of scopes that are requested from Google. Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. Refer [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) on OpenID Connect scope param.
  
 ###  Enable Google login

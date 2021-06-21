@@ -1,15 +1,15 @@
-# OpenID Connect Enterprise Login
+# OpenID Connect Identity Provider Login
 
-Follow this guide to enable OpenID Connect(OIDC) Enterprise login to your applications. 
+Follow this guide to enable login to your application using an external OpenID Connect(OIDC) identity provider. 
 
 For an application, the OpenID Connect login flow with external identity provider works as follows:
  <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-enterprise-login-flow.png')" alt="Add OIDC enterprise login in Asgardeo">
 
 ## Prerequisite
-To get started, you should have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable OpenID Connect enterprise login.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable OpenID Connect enterprise login.
 
-## Add OpenID Connect enterprise login
-In order to add external identity provider, you have to follow below steps in Asgardeo after completing the above prerequisites:
+## Add OpenID Connect Identity Provider Login
+In order to add OpenID Connect identity provider login to your app, follow below steps:
  1. [Register app in the external OIDC identity provider](#register-app-in-the-identity-provider)
  2. [Create OIDC Identity Provider](#create-oidc-identity-provider)
  3. [Enable OIDC login for application](#enable-oidc-login-for-application)
@@ -22,14 +22,14 @@ You can use the following URL as the **callbackURL** of the application.
 https://accounts.asgardeo.io/t/<organization_name>/commonauth
 ```
 Once you register an application, obtain:
-- **client_id**(also known as app_id or  application_id)
-- **client_secret**.    
+- **client_id**(also known as app_id or application_id)
+- **client_secret**(also known as app_secret)
 
 Check the documentation of the OIDC Identity provider and get the following endpoints:
-1. Authorization Endpoint URL
-2. Token Endpoint URL
-3. User Info endpoint (optional)
-4. Logout endpoint (optional)
+- Authorization Endpoint URL
+- Token Endpoint URL
+- User Info endpoint (optional)
+- Logout endpoint (optional)
 
 ### Create OIDC identity provider
 1. In the Asgardeo Console, Click **Develop > Identity Providers**.
@@ -61,7 +61,7 @@ Check the documentation of the OIDC Identity provider and get the following endp
          ```
         :::     
 6. After providing certificate details, click **Finish**.
-7. You can find more additional configurations once you have created OIDC identity provider.
+7. You can find more additional configurations once you create OIDC identity provider.
     - **Authorized redirect URL**: It is a readonly configuration which  denotes the authorization redirect URL of Asgardeo.
     - **User info endpoint URL**: The OIDC userinfo endpoint of the external identity provider. 
     - **Logout URL**: The OIDC logout endpoint of the external identity provider.

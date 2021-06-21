@@ -3,10 +3,10 @@
 Follow this guide to enable Github login to your applications.
 
 ## Prerequisite
-To get started, you should have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Github login.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Github login.
 
 ## Add Github login
-Inorder to add Github identity provider, you have to follow below steps in Asgardeo after completing the above prerequisites:
+In order to add Github login to your app, follow below steps
  1. [Register OAuth app in Github](#register-app-in-github)
  2. [Create Github Identity Provider](#create-github-identity-provider)
  3. [Enable Github login](#enable-github-login)
@@ -33,7 +33,7 @@ Inorder to add Github identity provider, you have to follow below steps in Asgar
     - **Client ID**: Client ID obtained from Github.
     - **Client secret**: Client secret obtained from Github.   
     <img :src="$withBase('/assets/img/guides/idp/github-idp/add-github-idp.png')" alt="Add Github IDP in Asgardeo">
-4. You can find more additional configurations once you created Github identity provider.
+4. You can find more additional configurations once you create Github identity provider.
      - **Scopes**: This is the list of scopes that are requested from Github. Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. You can read [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to know more about scopes.
  
 ###  Enable Github login
