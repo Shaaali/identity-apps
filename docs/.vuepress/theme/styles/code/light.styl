@@ -9,7 +9,7 @@ body:not(.theme-dark), body.theme-light
    * @author Tim  Shedor
    */
   code[class*='language-'], pre[class*='language-']
-    color black
+    color #ccc
     background none
     font-family Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
     font-size 1em
@@ -27,10 +27,10 @@ body:not(.theme-dark), body.theme-light
     hyphens none
 
   pre[class*='language-']::-moz-selection, pre[class*='language-'] ::-moz-selection, code[class*='language-']::-moz-selection, code[class*='language-'] ::-moz-selection
-    background #b3d4fc
+    background #2d2d2d
 
   pre[class*='language-']::selection, pre[class*='language-'] ::selection, code[class*='language-']::selection, code[class*='language-'] ::selection
-    background #b3d4fc
+    background #2d2d2d
 
   /* Code blocks */
   pre[class*='language-']
@@ -52,16 +52,16 @@ body:not(.theme-dark), body.theme-light
     color #5F6364
 
   .token.property, .token.tag, .token.boolean, .token.number, .token.function-name, .token.constant, .token.symbol, .token.deleted
-    color #c92c2c
+    color #C3E88D
 
   .token.selector, .token.attr-name, .token.string, .token.char, .token.function, .token.builtin, .token.inserted
-    color #2f9c0a
+    color #1990b8
 
   .token.operator, .token.entity, .token.url, .token.variable
     color #a67f59
 
   .token.atrule, .token.attr-value, .token.keyword, .token.class-name
-    color #1990b8
+    color #ff7300
 
   .token.regex, .token.important
     color #e90
@@ -91,17 +91,19 @@ body:not(.theme-dark), body.theme-light
         background darken(saturate($codeBgColor, 10%), 5%)
 
     pre, pre[class*='language-']
-      background transparent
+      background #212A32
 
     &::before
-      color rgba(0, 0, 0, 0.4)
+      color #ccc
 
     &.line-numbers-mode
       .highlight-lines .highlighted:before
         background darken(saturate($codeBgColor, 10%), 5%)
 
       .line-numbers-wrapper
-        color rgba(0, 0, 0, 0.3)
+        color #ccc
 
       &::after
         border-right 1px solid darken(saturate($codeBgColor, 20%), 10%)
+        background-color #212A32
+  
