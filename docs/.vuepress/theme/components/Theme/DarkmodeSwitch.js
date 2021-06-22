@@ -7,7 +7,7 @@ export default Vue.extend({
     name: "DarkmodeSwitch",
     components: { AutoIcon, DarkIcon, LightIcon },
     data: () => ({
-        darkmode: "auto",
+        darkmode: "off",
     }),
     computed: {
         darkmodeConfig() {
@@ -17,7 +17,7 @@ export default Vue.extend({
     mounted() {
         this.darkmode =
             localStorage.getItem("darkmode") ||
-                "auto";
+                "off";
         if (this.darkmodeConfig === "auto-switch")
             if (this.darkmode === "auto")
                 this.setDarkmode("auto");
