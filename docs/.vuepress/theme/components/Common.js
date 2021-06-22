@@ -84,6 +84,17 @@ let Common = class Common extends Mixins(GlobalEncryptMixin) {
                 this.hideNavbar = false;
             lastDistance = distance;
         }, 300));
+        // Checks for hash values in external URLs and handle the offset scroll accordingly.
+        window.addEventListener("load", function(e) {
+            const hashValue = window.location.hash;
+            // Checking for hash present in the URL.
+            if (hashValue !== "") {
+                let scrollHeight = document.querySelector(window.location.hash).offsetTop + 200;
+                // Properly updating the window location.
+                window.scroll(0, scrollHeight);
+                e.preventDefault();
+            }
+        })
     }
     toggleSidebar(to) {
         this.isSidebarOpen = typeof to === "boolean" ? to : !this.isSidebarOpen;
