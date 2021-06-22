@@ -157,7 +157,7 @@ function css (el, property) {
   .site-name
     font-size 1.3rem
     font-weight 600
-    color var(--text-color)
+    color #2c3e50
     position relative
 
     @media (max-width $MQMobile)
