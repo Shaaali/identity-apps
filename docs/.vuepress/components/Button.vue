@@ -118,7 +118,7 @@ export default {
       float left
 
       img
-        pointer-events: none
+        pointer-events none
         border none !important
         padding 3px 2px 3px 0 !important
         margin 0 5px 0 0 !important
@@ -130,7 +130,7 @@ export default {
       float right
 
       img
-        pointer-events: none
+        pointer-events none
         border none !important
         padding 12px 5px 8px 5px !important
         margin 0 !important
