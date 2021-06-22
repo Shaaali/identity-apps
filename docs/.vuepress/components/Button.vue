@@ -99,11 +99,11 @@ export default {
     vertical-align baseline
     min-height 1em
     line-height 2.75em
-    background-color: transparent
-    color #5a5a5a
+    background-color var(--bgcolor-light)
+    color var(--text-color)
     border-style solid
     border-width 2px
-    border-color #e0e1e2
+    border-color var(--border-color)
     padding 5px 25px
     margin 0 2px 5px 0
     font-weight 500
@@ -111,14 +111,14 @@ export default {
     transition .3s
 
     &:hover
-      border-color #2C3E50
-      color #000000
+      border-color var(--accent-color-l10)
 
     .start-icon-container
       display flex
       float left
 
       img
+        pointer-events: none
         border none !important
         padding 3px 2px 3px 0 !important
         margin 0 5px 0 0 !important
@@ -130,6 +130,7 @@ export default {
       float right
 
       img
+        pointer-events: none
         border none !important
         padding 12px 5px 8px 5px !important
         margin 0 !important
