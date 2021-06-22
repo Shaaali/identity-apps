@@ -24,16 +24,22 @@
       </div>
     </template>
     <div v-else-if="darkmodeConfig === 'switch'" class="switch">
-      <input
+      <!-- <input
         id="switch"
         class="switch-input"
         type="checkbox"
         :checked="darkmode !== 'on'"
         @click="setDarkmode(darkmode === 'on' ? 'off' : 'on')"
-      />
-      <label class="label" for="switch">
+      /> -->
+      <div class="theme-status-icon" v-if="darkmode === 'on'" @click="setDarkmode(darkmode === 'on' ? 'off' : 'on')">
+        <LightIcon />
+      </div>
+      <div class="theme-status-icon" v-if="darkmode === 'off'" @click="setDarkmode(darkmode === 'on' ? 'off' : 'on')">
+        <DarkIcon />
+      </div>
+      <!-- <label class="label" for="switch">
         <span class="label-content" />
-      </label>
+      </label> -->
     </div>
   </div>
 </template>
@@ -67,7 +73,7 @@
 
 .darkmode-switch
   display flex
-  height 22px
+  height 40px
 
   &:hover
     cursor pointer
@@ -105,6 +111,7 @@
     display block
     text-align center
     user-select none
+    padding 3px 10px 2px 0
 
     .label
       display block
@@ -204,4 +211,17 @@
           &:before
             left 6.25px
             transform rotate(70deg)
+
+  .theme-status-icon
+    width 20px
+    height 20px
+    padding 5px
+    border 1px solid #aaa
+    line-height 1
+    border-radius 20px
+    color #aaa
+
+    &:hover
+      color #212A32
+      border 1px solid #212A32
 </style>

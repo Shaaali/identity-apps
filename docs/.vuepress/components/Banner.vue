@@ -48,7 +48,7 @@ function css (el, property) {
   right 0
   height 3rem
   padding $navbarVerticalPadding $navbarHorizontalPadding
-  background #D7E2DE
+  background var(--banner-bgcolor)
   box-sizing border-box
   box-shadow 0 2px 8px var(--card-shadow-color)
   backdrop-filter saturate(200%) blur(20px)

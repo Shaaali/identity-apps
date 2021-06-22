@@ -27,10 +27,10 @@ body:not(.theme-dark), body.theme-light
     hyphens none
 
   pre[class*='language-']::-moz-selection, pre[class*='language-'] ::-moz-selection, code[class*='language-']::-moz-selection, code[class*='language-'] ::-moz-selection
-    background #2d2d2d
+    background #b3d4fc
 
   pre[class*='language-']::selection, pre[class*='language-'] ::selection, code[class*='language-']::selection, code[class*='language-'] ::selection
-    background #2d2d2d
+    background #b3d4fc
 
   /* Code blocks */
   pre[class*='language-']
@@ -52,16 +52,16 @@ body:not(.theme-dark), body.theme-light
     color #5F6364
 
   .token.property, .token.tag, .token.boolean, .token.number, .token.function-name, .token.constant, .token.symbol, .token.deleted
-    color #C3E88D
+    color #c92c2c
 
   .token.selector, .token.attr-name, .token.string, .token.char, .token.function, .token.builtin, .token.inserted
-    color #1990b8
+    color #2f9c0a
 
   .token.operator, .token.entity, .token.url, .token.variable
     color #a67f59
 
   .token.atrule, .token.attr-value, .token.keyword, .token.class-name
-    color #ff7300
+    color #1990b8
 
   .token.regex, .token.important
     color #e90
@@ -91,10 +91,10 @@ body:not(.theme-dark), body.theme-light
         background darken(saturate($codeBgColor, 10%), 5%)
 
     pre, pre[class*='language-']
-      background #212A32
+      background var(--bgcolor-light)
 
     &::before
-      color #ccc
+      color var(--text-color)
 
     &.line-numbers-mode
       .highlight-lines .highlighted:before
@@ -105,5 +105,48 @@ body:not(.theme-dark), body.theme-light
 
       &::after
         border-right 1px solid darken(saturate($codeBgColor, 20%), 10%)
-        background-color #212A32
-  
+        background-color var(--bgcolor-light)
+
+  // Overriding default CSS in codeblocks UI.
+  .code-group-nav
+    background-color #eee !important
+    padding-left 0px !important
+
+    .code-group-ul
+      padding 0
+
+      .code-group-li
+        padding 5px
+
+      .code-group-nav-tab
+        color #2d2d2d
+        padding 10px 15px 10px 15px
+        font-weight 500
+      
+        &.active
+          border-bottom none
+          color #000
+          font-weight 600
+          background-color #ccc
+          border-radius 6px
+        
+        &.active::before
+          background none
+
+        &.active::after
+          background none
+        
+        &:hover
+          background-color #ccc
+          border-radius 6px
+
+  .copy-code-button
+    top -16px
+    background-color var(--accent-color)
+
+    &:hover
+      background-color #212A32
+
+  .language-text
+    margin-left 5px
+

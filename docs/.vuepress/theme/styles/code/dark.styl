@@ -99,3 +99,47 @@ body.theme-dark
 
       &::after
         border-right 1px solid darken(saturate($darkCodeBgColor, 10%), 35%)
+
+  // Overriding default CSS in codeblocks UI.
+  .code-group-nav
+    background-color var(--bgcolor-light) !important
+    padding-left 0px !important
+
+    .code-group-ul
+      padding 0
+
+      .code-group-li
+        padding 5px
+
+      .code-group-nav-tab
+        color #eee
+        padding 10px 15px 10px 15px
+        font-weight 500
+      
+        &.active
+          border-bottom none
+          color #fff
+          font-weight 600
+          background-color var(--bgcolor)
+          border-radius 6px
+        
+        &.active::before
+          background none
+
+        &.active::after
+          background none
+        
+        &:hover
+          background-color var(--bgcolor)
+          border-radius 6px
+
+  .copy-code-button
+    top -16px
+    background-color var(--accent-color)
+
+    &:hover
+      background-color #212A32
+
+  .language-text
+    margin-left 5px
+
