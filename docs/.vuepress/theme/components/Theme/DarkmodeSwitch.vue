@@ -111,7 +111,7 @@
     display block
     text-align center
     user-select none
-    padding 5px
+    padding 3px 10px 2px 0
 
     .label
       display block
@@ -215,7 +215,7 @@
   .theme-status-icon
     width 20px
     height 20px
-    padding 2px
+    padding 5px
     border 1px solid #aaa
     line-height 1
     border-radius 20px

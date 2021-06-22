@@ -10,6 +10,11 @@
     align-items: center
     flex-direction: row
 
+    // Invert color of the icon in the dark theme
+    img
+      .theme-dark &
+        filter invert(1)
+
   .hero-image
     position absolute
     left 0
@@ -92,7 +97,7 @@
 
     .description
       max-width 50rem
-      color #656565
+      color var(--text-color-light)
       font-size 1rem
       line-height 1.5
       text-align center
@@ -143,7 +148,7 @@
   .features-section
     margin 2em -2rem
     padding 2.2rem 2.5rem
-    background-color #eeeeee
+    background-color var(--feature-bgcolor)
 
     h2
       font-size 1.5rem
@@ -151,7 +156,7 @@
       margin-top 0
 
     p
-      color #656565
+      color var(--text-color-light)
       margin-top 0.1rem
       margin-bottom 1.5rem
       font-weight 500
@@ -177,7 +182,7 @@
       padding  1.5rem 1.5rem
       transition transform 0.35s, box-shadow 0.35s
       overflow hidden
-      background #ffffff
+      background var(--bgcolor)
       border-radius 0.8rem
 
       h4
@@ -195,7 +200,7 @@
 
       p
         padding 0
-        color #666666
+        color var(--text-color-light)
         font-size 14px
         font-weight 460
 
@@ -211,6 +216,8 @@
             margin-top 10px !important
             vertical-align middle !important
             content url("../../assets/icons/rightArrowIcon.svg")
+            .theme-dark &
+              filter invert(1)
 
         &.learn-more-4
           margin-top 2rem
@@ -224,6 +231,8 @@
             margin-top 10px !important
             vertical-align middle !important
             content url("../../assets/icons/rightArrowIcon.svg")
+            .theme-dark &
+              filter invert(1)
 
       @media (max-width $MQNarrow)
         flex-basis calc(50% - 4rem)
@@ -242,8 +251,8 @@
 
       &:hover
         transform scale(1.025)
-        box-shadow 0 2px 12px 0 lightgrey
-        background-color white
+        box-shadow 0 2px 12px 0 var(--bgcolor-light)
+        background-color var(--bgcolor)
 
       h2
         margin-bottom 0.25rem
@@ -254,6 +263,11 @@
 
         @media (max-width $MQMobileNarrow)
           font-size 1.2rem
+      
+      // Invert color of the icon in the dark theme
+      img
+        .theme-dark &
+          filter invert(1)
 
   .explore-section
     margin 2.2em -2rem
@@ -264,7 +278,7 @@
       margin-bottom 0.4rem
 
     p
-      color #656565
+      color var(--text-color-light)
       margin-top 0.1rem
       margin-bottom 1.5rem
 
@@ -303,7 +317,7 @@
 
       p
         padding 0
-        color #666666
+        color var(--text-color-light)
         font-size 14px
         font-weight 460
         line-height 1.7

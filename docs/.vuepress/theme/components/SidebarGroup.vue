@@ -107,6 +107,10 @@
 
   img
     padding-right 0.3em !important
+    
+    // Invert color of the icon in the dark theme
+    .theme-dark &
+      filter invert(1)
 
   &.open, &:hover
     color inherit
