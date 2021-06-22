@@ -44,7 +44,7 @@ module.exports = config({
         blog: false,
         feed: false,
         pwa: false,
-        sitemap: false,
+        sitemap: true,
         git: {
             contributor:false
         },
