@@ -30,6 +30,7 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
     >
+      <DarkmodeSwitch class="darkmode-switch"/>
       <AlgoliaSearchBox
           v-if="isAlgoliaSearch"
           :options="algolia"
@@ -47,7 +48,8 @@ import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
-import Button from "../../components/Button";
+import Button from "../../components/Button"
+import DarkmodeSwitch from "@theme/components/Theme/DarkmodeSwitch.vue"
 export default {
   name: 'Navbar',
   components: {
@@ -55,7 +57,8 @@ export default {
     NavLinks,
     SearchBox,
     AlgoliaSearchBox,
-    Button
+    Button, 
+    DarkmodeSwitch
   },
   data () {
     return {

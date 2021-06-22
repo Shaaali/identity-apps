@@ -45,6 +45,7 @@ module.exports = config({
         feed: false,
         pwa: false,
         sitemap: true,
+        darkmode: 'switch',
         git: {
             contributor:false
         },

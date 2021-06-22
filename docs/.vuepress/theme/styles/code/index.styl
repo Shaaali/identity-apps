@@ -24,14 +24,14 @@
     overflow auto
 
     code
-      color #fff
+      color var(--grey3)
       padding 0
       background transparent !important
       border-radius 0
 
 div[class*='language-']
   position relative
-  background #212A32
+  background var(--code-bgcolor)
   border-radius 6px
 
   .highlight-lines
@@ -106,7 +106,7 @@ div[class*='language-']
       width $lineNumbersWrapperWidth
       height 100%
       border-radius 6px 0 0 6px
-      background #212A32
+      background var(--code-bgcolor)
 
 for lang in $codeLang
   div{'[class~="language-' + lang + '"]'}
@@ -147,46 +147,5 @@ div[class~='language-php']:before
 div[class~='language-stylus']:before
   content 'styl'
 
-// Overriding default CSS in codeblocks UI.
-.code-group-nav
-  background-color #eee !important
-  padding-left 0px !important
 
-  .code-group-ul
-    padding 0
-
-    .code-group-li
-      padding 5px
-
-    .code-group-nav-tab
-      color #2d2d2d
-      padding 10px 15px 10px 15px
-      font-weight 500
-    
-      &.active
-        border-bottom none
-        color #000
-        font-weight 600
-        background-color #ccc
-        border-radius 6px
-      
-      &.active::before
-        background none
-
-      &.active::after
-        background none
-      
-      &:hover
-        background-color #ccc
-        border-radius 6px
-
-.copy-code-button
-  top -16px
-  background-color var(--accent-color)
-
-  &:hover
-    background-color #212A32
-
-.language-text
-  margin-left 5px
 
