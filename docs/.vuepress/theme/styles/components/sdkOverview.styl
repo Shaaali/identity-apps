@@ -1,9 +1,14 @@
+@import "~@mr-hope/vuepress-shared/styles/font-awesome";
+
 .sdks-page
   display block
   max-width 100%
   min-height 100vh - $navbarHeight
   padding 0 2rem 0
   margin 0 auto 0
+
+  @media (max-width $MQNarrow)
+    padding 0
 
   hr
     display none
@@ -21,26 +26,77 @@
     justify-content center
     text-align center
     border-bottom solid 1px var(--bgcolor-light)
+    padding-top 1rem
+
+    h2:first-child
+      padding-top 1rem !important
+      margin-bottom 1rem !important
 
   .tech-container
     display flex
     flex-direction column
     justify-content center
     margin-top 1rem
+    margin-bottom 4rem
 
     p
-      margin-top -18px !important
+      padding 0
+      margin 0
 
   .tech-item
     display flex
     margin 0.5em 3.5em
     background-color var(--feature-bgcolor)
-    height 5em
+    height 4em
+    line-height 4em
     border-radius 6px
     padding 1em
+    text-align center
+    transition .3s
+
+    &:hover    
+      transform: scale(1.025)
+      box-shadow: 0 2px 12px 0 var(--bgcolor-light)
+      background-color: var(--feature-bgcolor)
+
+    @media (max-width $MQNarrow)
+      margin 0.5em 0em
+    
+    @media (max-width $MQMobile)
+      flex-direction column
+      height 10em
+      line-height 2em
 
     .icon-container
       padding 5px
+
+    .tech-name
+      margin-left 20px
+      font-size 20px
+      font-weight 600
+
+      @media (max-width $MQMobile)
+        margin-left 0
+        flex-grow 1
+    
+    .tech-links
+      margin-left auto
+
+      @media (max-width $MQMobile)
+        margin 0
+        align-self bottom 
+
+      .tech-link
+        color var(--text-color)
+        margin 20px
+        text-decoration none
+        cursor pointer
+      
+      .tech-link-icon
+        display inline-block
+        width 16px
+        vertical-align middle
+        padding-top 3px
 
   img.tech-icon.disabled
       opacity 0.5
@@ -48,28 +104,13 @@
 
     img.tech-icon
       margin 0 
-      // padding-top 10px
-      height 4.5em
+      height 3.5em
       width auto
-      cursor: pointer !important
+      cursor pointer !important
+      border none
 
-
-  .tech-item:hover .tech-icon:not(.disabled)
-
-
-    @media (min-width $MQNarrow)
-      display flex
-      justify-content space-evenly
-      align-items center
-      text-align left
-
-    @media (max-width $MQNarrow)
-      min-height 100vh - $navbarMobileHeight
-      padding-top $navbarMobileHeight
-
-    @media (max-width $MQMobileNarrow)
-      padding-left 1.5rem
-      padding-right 1.5rem
+      @media (max-width $MQMobile)
+        margin auto
 
   .description
     color #656565
