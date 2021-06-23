@@ -41,12 +41,12 @@ $headings = 2 3 4 5 6
     &::after
       content ' '
       position absolute
-      top 0px
+      top 4px
       left 5px
       bottom 0px
       width 3px
       margin-left -2px
-      background var(--border-color)
+      background var(--text-color-light)
       z-index -1
 
     > .anchor-list
@@ -65,7 +65,7 @@ $headings = 2 3 4 5 6
       display inline-block
       position relative
       max-width 100%
-      color var(--light-grey)
+      color var(--text-color-light)
 
       > div
         //text-overflow ellipsis
