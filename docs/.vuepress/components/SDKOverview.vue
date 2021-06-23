@@ -1,5 +1,5 @@
 <template>
-  <main class="quickstarts-page">
+  <main class="sdks-page">
     <MyTransition :delay="0.1">
       <header class="title-container">
         <h1>SDK Libraries</h1>
@@ -7,24 +7,29 @@
       </header>
     </MyTransition>
     <MyTransition :delay="0.1">
+      <div class="sub-title-container">
+        <h2>Single Page Applications</h2>
+      </div>
+    </MyTransition>
+    <MyTransition :delay="0.1">
       <div class="tech-container">
         <div class="tech-item">
-          <a @click="navigate('/sdks/angular/')">
+          <a class="icon-container" @click="navigate('/sdks/angular/')">
             <img class="tech-icon" src="../theme/assets/images/technologies/angular-logo.svg" width="100" height="100"/>
           </a>
         </div>
         <div class="tech-item">
-          <a @click="navigate('/sdks/javascript/')">
+          <a class="icon-container" @click="navigate('/sdks/javascript/')">
             <img class="tech-icon" src="../theme/assets/images/technologies/javascript-logo.svg" width="100" height="100"/>
           </a>
         </div>
         <div class="tech-item">
-          <a @click="navigate('/sdks/react/')">
+          <a class="icon-container" @click="navigate('/sdks/react/')">
             <img class="tech-icon" src="../theme/assets/images/technologies/react-logo.svg" width="100" height="100"/>
           </a>
         </div>
         <div class="tech-item">
-          <a @click="navigate('/sdks/java-ee/')">
+          <a class="icon-container" @click="navigate('/sdks/java-ee/')">
             <img class="tech-icon" src="../theme/assets/images/technologies/java-logo.svg" width="100" height="100"/>
           </a>
         </div>
@@ -52,4 +57,4 @@ export default {
   }
 }
 </script>
-<style src="../theme/styles/components/quickstartOverview.styl" lang="stylus"/>
+<style src="../theme/styles/components/sdkOverview.styl" lang="stylus"/>
