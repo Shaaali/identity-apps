@@ -46,6 +46,10 @@ module.exports = config({
         pwa: false,
         sitemap: true,
         darkmode: 'switch',
+        footer: {
+            display: true,
+            content: 'Asgardeo Docs | © 2021 WSO2'
+        },
         git: {
             contributor:false
         },

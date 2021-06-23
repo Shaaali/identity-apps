@@ -73,8 +73,5 @@ services:
       details: Learn how common IAM challenges can be solved by Asgardeo and how you can meet your identity management needs.
       link:
       icon: solutionsIcon
-
-footer: Asgardeo Docs | © 2021 WSO2
-copyrightText: false
 ---
 
