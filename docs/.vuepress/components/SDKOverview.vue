@@ -105,10 +105,9 @@
 
 <script>
 import MyTransition from "@theme/components/MyTransition.vue";
-import Github from "@theme/icons/media/Github.vue";
 export default {
   name: 'QuickstartOverview',
-  components: { MyTransition, Github },
+  components: { MyTransition },
   methods: {
     navigate(url) {
       void this.$router.push(url);

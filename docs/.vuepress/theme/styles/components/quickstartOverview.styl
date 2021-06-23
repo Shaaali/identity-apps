@@ -11,12 +11,12 @@
   .title-container
     justify-content center
     text-align center
-    border-bottom 1px solid
-    border-bottom-color #ececec
+    border-bottom solid 1px var(--bgcolor-light)
+    padding-top 1rem
 
-    h1
-      padding-top 0
-      margin-bottom -0.8rem !important
+    h1:first-child
+      padding-top 1rem !important
+      margin-bottom 1rem !important
 
   .tech-container
     display flex
@@ -28,29 +28,28 @@
 
   .tech-item
     display flex
-    flex-grow: 1
-    margin 0.5em 3.5em
+    flex-grow 1
+    margin 1.5em
+    background-color var(--feature-bgcolor)
+    border-radius 6px
+    padding 1em
+    transition 0.3s
+    text-align center
+    justify-content center
+
+    &:hover    
+      transform: scale(1.025)
+      box-shadow: 0 2px 12px 0 var(--bgcolor-light)
+      background-color: var(--feature-bgcolor)
 
   img.tech-icon.disabled
       opacity 0.5
       pointer-events: none !important
 
     img.tech-icon
-      padding 2em
-      border-radius 0.7em
+      width 75px
+      border none
       cursor: pointer !important
-      -webkit-filter: grayscale(100%)
-      -moz-filter: grayscale(100%)
-      -o-filter: grayscale(100%)
-      -ms-filter: grayscale(100%)
-      filter: grayscale(100%)
-
-  .tech-item:hover .tech-icon:not(.disabled)
-    -webkit-filter: grayscale(0%)
-    -moz-filter: grayscale(0%)
-    -o-filter: grayscale(0%)
-    -ms-filter: grayscale(0%)
-    filter: grayscale(0%)
 
   .header-container
     display: flex
