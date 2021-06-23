@@ -39,7 +39,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 ###  Enable Google login
 1. In the Asgardeo Console, Click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
-3. Click **Start with Default configuration**(If this is the first time).
+3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
 4. Click **Add Authentication** on the step, and select the Google identity provider you added the above.
 5. Click **Update**.
     <img :src="$withBase('/assets/img/guides/idp/google-idp/add-google-federation-with-basic.png')" alt="Add Google login in Asgardeo">
