@@ -38,6 +38,8 @@ In order to add Github login to your app, follow below steps
  
 ###  Enable Github login
 1. In the Asgardeo Console, Click **Develop > Applications**.
-2. Select an application from the application list that appears and navigate to the **Sign-on Method** tab of your application.
-3. Select the Github identity provider you added the above, click **Add Authentication** on the step and click **Update** .
-    <img :src="$withBase('/assets/img/guides/idp/github-idp/add-github-federation.png')" alt="Add Github login in Asgardeo">
+2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
+3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
+4. Click **Add Authentication** on the step, and select the Github identity provider you added the above.
+5. Click **Update**.
+   <img :src="$withBase('/assets/img/guides/idp/github-idp/add-github-federation-with-basic.png')" alt="Add Github login in Asgardeo">
