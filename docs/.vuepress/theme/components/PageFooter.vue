@@ -12,7 +12,7 @@
 
 <style lang="stylus">
 .footer-wrapper
-  padding 12px 30px
+  padding 0px 30px
   border-top 1px solid var(--border-color)
   background var(--bgcolor)
   color var(--dark-color, #666)
