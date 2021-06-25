@@ -75,7 +75,11 @@ ul, ol
   line-height 1.9
 
 strong
-  font-weight 600
+  .theme-light &
+    font-weight 600
+  
+  .theme-dark &
+    font-weight 750
 
 h1, h2, h3, h4, h5, h6
   font-weight 500
@@ -171,4 +175,7 @@ p.custom-block-title
 body.theme-dark
   .is-active
     border-bottom none
+    
+    a
+      color var(--text-color-light) !important
 

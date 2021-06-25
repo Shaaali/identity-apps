@@ -27,6 +27,7 @@ You need to register Asgardeo as an app in Facebook. Follow the [Facebook Docume
    ```
    https://accounts.asgardeo.io/t/<organization_name>/commonauth
    ```
+9. Enable **Client OAuth Login** and **Web OAuth Login** (These configs are enabled by default). 
 8. Click **Save Changes**.
 9. Go to **Settings > Basic** and obtain **App ID** and **App Secret**.
       <img :src="$withBase('/assets/img/guides/idp/facebook-idp/app-id-secret-from-facebook.png')" alt="Get AppID and Secret from Facebook">
@@ -44,6 +45,8 @@ You need to register Asgardeo as an app in Facebook. Follow the [Facebook Docume
  
 ###  Enable Facebook login
 1. In the Asgardeo Console, Click **Develop > Applications**.
-2. Select an application from the application list that appears and navigate to the **Sign-on Method** tab of your application.
-3. Select the Facebook identity provider you added the above, click **Add Authentication** on the step and click **Update** .
-    <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-federation.png')" alt="Add Facebook login in Asgardeo">
+2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
+3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
+4. Click **Add Authentication** on the step, and select the Facebook identity provider you added the above.
+5. Click **Update**.
+    <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-federation-with-basic.png')" alt="Add Facebook login in Asgardeo">
