@@ -15,7 +15,7 @@ In order to add OpenID Connect identity provider login to your app, follow below
  3. [Enable OIDC login for application](#enable-oidc-login-for-application)
 
 ### Register app in the identity provider
-You need to register an OpenID Connect application in the external identity provider. Follow the identity provider's documentation to know how to register a OIDC application.
+You need to register an OpenID Connect application in the external identity provider. Follow the identity provider's documentation to know how to register an OIDC application.
 
 You can use the following URL as the **callbackURL** of the application. 
 ```
