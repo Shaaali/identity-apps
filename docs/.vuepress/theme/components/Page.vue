@@ -68,6 +68,9 @@
   @media (min-width ($MQMobile + 1px))
     .theme-container:not(.has-sidebar) &
       padding-left 0
+    
+    .theme-container:not(.has-anchor) &
+      padding-right 0
 
   // wide mobile
   @media (max-width $MQMobile)

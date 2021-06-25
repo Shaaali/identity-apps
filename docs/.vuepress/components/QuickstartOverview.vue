@@ -28,12 +28,6 @@
             <img class="tech-icon" src="../theme/assets/images/technologies/java-logo.svg" width="100" height="100"/>
           </a>
         </div>
-<!--        <div class="tech-item">-->
-<!--          <img class="tech-icon disabled" src="../theme/assets/images/technologies/android-logo.svg" width="100" height="100"/>-->
-<!--        </div>-->
-<!--        <div class="tech-item">-->
-<!--          <img class="tech-icon disabled" src="../theme/assets/images/technologies/dotnet-logo.svg" width="100" height="100"/>-->
-<!--        </div>-->
       </div>
     </MyTransition>
   </main>
@@ -41,7 +35,6 @@
 
 <script>
 import MyTransition from "@theme/components/MyTransition.vue";
-
 export default {
   name: 'QuickstartOverview',
   components: { MyTransition },
@@ -52,4 +45,5 @@ export default {
   }
 }
 </script>
+
 <style src="../theme/styles/components/quickstartOverview.styl" lang="stylus"/>

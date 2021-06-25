@@ -1,55 +1,39 @@
 <template>
-  <main class="quickstarts-page">
-    <MyTransition :delay="0.1">
-      <header class="title-container">
-        <h1>SDK Libraries</h1>
-        <p class="description">Tryout our SDKs to integrate your applications with Asgardeo</p>
-      </header>
-    </MyTransition>
-    <MyTransition :delay="0.1">
-      <div class="tech-container">
-        <div class="tech-item">
-          <a @click="navigate('/sdks/angular/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/angular-logo.svg" width="100" height="100"/>
-          </a>
+  <!-- This component reads from docs/sdks/README.md and generates UI components dynamically. -->
+  <main class="sdks-page">
+    <div  
+      v-for="(sdkDomain, index) in $frontmatter.sdkContent"
+      :key="index"
+    >
+      <MyTransition :delay="0.1">
+        <div class="sub-title-container">
+          <h2 v-text="sdkDomain.name"></h2>
         </div>
-        <div class="tech-item">
-          <a @click="navigate('/sdks/javascript/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/javascript-logo.svg" width="100" height="100"/>
-          </a>
+      </MyTransition>
+      <MyTransition :delay="0.1">
+        <div class="tech-container">
+          <SDKItemCard
+            v-for="(technology, index) in sdkDomain.technologies"
+            :key="index"
+            :techIconPath="technology.icon"
+            :techName="technology.name"
+            :sdkPath="technology.sdkPath"
+            :gitUrl="technology.gitUrl"
+            :appUrl="technology.appUrl"
+          ></SDKItemCard>
         </div>
-        <div class="tech-item">
-          <a @click="navigate('/sdks/react/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/react-logo.svg" width="100" height="100"/>
-          </a>
-        </div>
-        <div class="tech-item">
-          <a @click="navigate('/sdks/java-ee/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/java-logo.svg" width="100" height="100"/>
-          </a>
-        </div>
-<!--        <div class="tech-item">-->
-<!--          <img class="tech-icon disabled" src="../theme/assets/images/technologies/android-logo.svg" width="100" height="100"/>-->
-<!--        </div>-->
-<!--        <div class="tech-item">-->
-<!--          <img class="tech-icon disabled" src="../theme/assets/images/technologies/dotnet-logo.svg" width="100" height="100"/>-->
-<!--        </div>-->
-      </div>
-    </MyTransition>
+      </MyTransition>
+    </div>
   </main>
 </template>
 
 <script>
 import MyTransition from "@theme/components/MyTransition.vue";
-
+import SDKItemCard from './SDKItemCard.vue';
 export default {
-  name: 'QuickstartOverview',
-  components: { MyTransition },
-  methods: {
-    navigate(url) {
-      void this.$router.push(url);
-    }
-  }
+  name: 'SDKOverview',
+  components: { MyTransition, SDKItemCard },
 }
 </script>
-<style src="../theme/styles/components/quickstartOverview.styl" lang="stylus"/>
+
+<style src="../theme/styles/components/sdkOverview.styl" lang="stylus"/>
