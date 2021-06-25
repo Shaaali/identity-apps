@@ -16,13 +16,15 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 
 1. Go to [Google Developer console](https://console.developers.google.com/apis/credentials)
 2. Create a new project or select an existing project.
-3. Click **Create Credentials**  and select **OAuth client ID**.
-4. Select application type as **Web application**.
-5. Provide following URL as the Authorized Redirect URI of the application.
+3. If the APIs & services page isn't already open, open the console left side menu and select APIs & services.
+4. On the left, click **Credentials**.
+5. Click **Create Credentials**  and select **OAuth client ID**.
+6. Select application type as **Web application**.
+7. Provide following URL as the Authorized Redirect URI of the application.
     ```
     https://accounts.asgardeo.io/t/<organization_name>/commonauth
     ```
-6. Obtain your **Client ID** & **Client Secret**.  
+8. Obtain your **Client ID** & **Client Secret**.  
     
 ### Create Google identity provider
 1. In the Asgardeo Console, Click **Develop > Identity Providers**.
