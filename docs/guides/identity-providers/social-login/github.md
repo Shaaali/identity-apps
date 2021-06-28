@@ -34,7 +34,11 @@ In order to add Github login to your app, follow below steps
     - **Client secret**: Client secret obtained from Github.   
     <img :src="$withBase('/assets/img/guides/idp/github-idp/add-github-idp.png')" alt="Add Github IDP in Asgardeo">
 4. You can find more additional configurations once you create Github identity provider.
-     - **Scopes**: This is the list of scopes that are requested from Github. Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. You can read [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to know more about scopes.
+     - **Scopes**:  Asgardeo requests below scopes from Github:
+       - **user:email** : Grants read access to a user's email addresses.
+       - **read:user** : Grants access to read a user's profile data.  
+     
+       Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. You can read [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to know more about scopes.
  
 ###  Enable Github login
 1. In the Asgardeo Console, Click **Develop > Applications**.

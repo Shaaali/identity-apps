@@ -41,7 +41,11 @@ You need to register Asgardeo as an app in Facebook. Follow the [Facebook Docume
     - **App Secret**: App secret obtained from Facebook.   
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-idp.png')" alt="Add Facebook IDP in Asgardeo">
 4. You can find more additional configurations once you create Facebook identity provider.
-    - **Permissions**: This is the list of permissions that are requested from Facebook. Asgardeo needs these permissions to get user information and sends this to application based on the attribute configurations in the application. You can read [Facebook Documentation](https://developers.facebook.com/docs/permissions/reference) to know about permissions.
+    - **Permissions**: Asgardeo requests below permissions from Facebook:
+      - **email**: Grants read access to a user's primary email address.
+      - **public_profile**: Grants read access to a user's default public profile fields.  
+    
+      Asgardeo needs these permissions to get user information and sends this to application based on the attribute configurations in the application. You can read [Facebook Documentation](https://developers.facebook.com/docs/permissions/reference) to know about permissions.
  
 ###  Enable Facebook login
 1. In the Asgardeo Console, Click **Develop > Applications**.

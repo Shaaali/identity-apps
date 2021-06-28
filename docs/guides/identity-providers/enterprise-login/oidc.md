@@ -66,6 +66,8 @@ Check the documentation of the OIDC Identity provider and get the following endp
     - **User info endpoint URL**: The OIDC userinfo endpoint of the external identity provider. 
     - **Logout URL**: The OIDC logout endpoint of the external identity provider.
     - **Additional query parameters**: If you need to pass any additional query parameters to the external identity provider. For more information, see <a href="../configure-additional-query-params">Configure additional query params</a>.
+8.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a href="../configure-additional-query-params">additional query param</a>.  
+    For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
   
 ### Enable OIDC login for application
 1. In the Asgardeo Console, Click **Develop > Applications**.
