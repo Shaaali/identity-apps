@@ -144,22 +144,26 @@ table
   display block
   overflow-x auto
 
-tr
-  border-top 1px solid #dfe2e5
-
-  &:nth-child(2n)
-    background #f6f8fa
-
-th, td
-  border 1px solid var(--grey14)
-  padding 0.6em 1em
-
-.theme-dark
-  tr:nth-child(2n)
-    background #252322
+  tr
+    th
+      border-bottom  2px solid var(--border-color)
+  
+  .badge
+    &.mandatory
+      width 90px
+      display block !important
+      margin-top 6px !important
+      padding 2px 5px !important
+      font-size 12px !important
+      border 1px solid var(--text-color) !important
+      background transparent !important
+      color var(--text-color) 
+      text-align center
 
   th, td
-    border 1px solid var(--grey12)
+    padding 1em
+    border-bottom  1px solid var(--border-color)
+    vertical-align top
 
 .custom-block
   p
