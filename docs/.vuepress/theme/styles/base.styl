@@ -144,22 +144,32 @@ table
   display block
   overflow-x auto
 
-tr
-  border-top 1px solid #dfe2e5
+  tr
+    th
+      border-bottom  2px solid var(--border-color)
+  
+  .badge
+    width 90px
+    display block !important
+    margin-top 6px !important
+    padding 2px 5px !important
+    font-size 12px !important
+    background transparent !important
+    text-align center
 
-  &:nth-child(2n)
-    background #f6f8fa
+    &.mandatory
+      border 1px solid #ff4141 !important
+      color #ff4141
 
-th, td
-  border 1px solid var(--grey14)
-  padding 0.6em 1em
-
-.theme-dark
-  tr:nth-child(2n)
-    background #252322
+    &.optional
+      border 1px solid #42b983 !important
+      color #42b983
 
   th, td
-    border 1px solid var(--grey12)
+    padding 1em
+    border-bottom  1px solid var(--border-color)
+    vertical-align top
+    text-align left
 
 .custom-block
   p
@@ -170,6 +180,13 @@ p.custom-block-title
 
 .custom-block .custom-block-title
   margin-bottom 0 !important
+
+// This is the default table class from the vuepress theme
+.border-table
+  th, td
+    border 2px solid var(--border-color)
+    padding 0.6em 1em
+    vertical-align middle
 
 // Dark theme base CSS
 body.theme-dark

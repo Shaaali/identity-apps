@@ -65,37 +65,30 @@ _Request parameters:_
   <tr>
     <th>Parameter</th>
     <th>Description</th> 
-    <th>Mandatory</th>
   </tr>
   <tr>
-    <td>response_type</td>
+    <td>response_type<Badge text="Required" type="mandatory"/></td>
     <td>required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>redirect_uri</td>
+    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
     <td>This is where the response is redirected to at the end of the process. This should match the registered callback URL.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>client_id</td>
+    <td>client_id<Badge text="Required" type="mandatory"/></td>
     <td>Client id obtained when registering the application in Asgardeo.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>scope</td>
+    <td>scope<Badge text="Optional" type="optional"/></td>
     <td>For the OpenId Connect flow, the scope should contain <code>openid</code> as one of the scopes. There can be additional scopes as well.</td>
-    <td>No</td>
   </tr>
   <tr>
-    <td>code_challenge</td>
+    <td>code_challenge<Badge text="Required" type="mandatory"/></td>
     <td>The client creates and records a secret cryptographically random string (<code>code_verifier</code>), which is then encoded using URL safe base64 encoding to transform it into the <code>code_challenge</code>.</td>
-    <td>Yes, since PKCE is mandatory</td>
   </tr>
   <tr>
-    <td>code_challenge_method</td>
+    <td>code_challenge_method<Badge text="Required" type="mandatory"/></td>
     <td>This is the method used to transform the <code>code_verifier</code> into the <code>code_challenge</code>. It is sent as the hash algorithm name that was used for the hashing. When the authorization code is being issued, this method is used by the token endpoint to verify the <code>code_verifier</code> value.</td>
-    <td>Yes, since PKCE is mandatory</td>
   </tr>
 </table>
 
@@ -122,32 +115,26 @@ _Request parameters_
   <tr>
     <th>Parameter</th>
     <th>Description</th> 
-    <th>Mandatory</th>
   </tr>
   <tr>
-    <td>grant_type</td>
+    <td>grant_type<Badge text="Required" type="mandatory"/></td>
     <td>the grant type. Here we are using <code>authorization_code</code> grant.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>redirect_uri</td>
+    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
     <td>where the response is redirected to at the end of the process.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>code</td>
+    <td>code<Badge text="Required" type="mandatory"/></td>
     <td>the code received from authorization request.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>code_verifier</td>
+    <td>code_verifier<Badge text="Required" type="mandatory"/></td>
     <td>the plain text cryptographically random string that was used to generate the code_challenge.</td>
-    <td>Yes, since PKCE is mandatory</td>
   </tr>
   <tr>
-    <td>client_id</td>
+    <td>client_id<Badge text="Required" type="mandatory"/></td>
     <td>client id obtained when registering the application in Asgardeo.</td>
-    <td>Yes</td>
   </tr>
 </table>
 
