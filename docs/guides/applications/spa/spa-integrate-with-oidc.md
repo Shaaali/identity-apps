@@ -67,27 +67,27 @@ _Request parameters:_
     <th>Description</th> 
   </tr>
   <tr>
-    <td>response_type<Badge text="Mandatory" type="mandatory"/></td>
+    <td>response_type<Badge text="Required" type="mandatory"/></td>
     <td>required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
   </tr>
   <tr>
-    <td>redirect_uri<Badge text="Mandatory" type="mandatory"/></td>
+    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
     <td>This is where the response is redirected to at the end of the process. This should match the registered callback URL.</td>
   </tr>
   <tr>
-    <td>client_id<Badge text="Mandatory" type="mandatory"/></td>
+    <td>client_id<Badge text="Required" type="mandatory"/></td>
     <td>Client id obtained when registering the application in Asgardeo.</td>
   </tr>
   <tr>
-    <td>scope</td>
+    <td>scope<Badge text="Optional" type="optional"/></td>
     <td>For the OpenId Connect flow, the scope should contain <code>openid</code> as one of the scopes. There can be additional scopes as well.</td>
   </tr>
   <tr>
-    <td>code_challenge<Badge text="Mandatory" type="mandatory"/></td>
+    <td>code_challenge<Badge text="Required" type="mandatory"/></td>
     <td>The client creates and records a secret cryptographically random string (<code>code_verifier</code>), which is then encoded using URL safe base64 encoding to transform it into the <code>code_challenge</code>.</td>
   </tr>
   <tr>
-    <td>code_challenge_method<Badge text="Mandatory" type="mandatory"/></td>
+    <td>code_challenge_method<Badge text="Required" type="mandatory"/></td>
     <td>This is the method used to transform the <code>code_verifier</code> into the <code>code_challenge</code>. It is sent as the hash algorithm name that was used for the hashing. When the authorization code is being issued, this method is used by the token endpoint to verify the <code>code_verifier</code> value.</td>
   </tr>
 </table>
@@ -117,23 +117,23 @@ _Request parameters_
     <th>Description</th> 
   </tr>
   <tr>
-    <td>grant_type<Badge text="Mandatory" type="mandatory"/></td>
+    <td>grant_type<Badge text="Required" type="mandatory"/></td>
     <td>the grant type. Here we are using <code>authorization_code</code> grant.</td>
   </tr>
   <tr>
-    <td>redirect_uri<Badge text="Mandatory" type="mandatory"/></td>
+    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
     <td>where the response is redirected to at the end of the process.</td>
   </tr>
   <tr>
-    <td>code<Badge text="Mandatory" type="mandatory"/></td>
+    <td>code<Badge text="Required" type="mandatory"/></td>
     <td>the code received from authorization request.</td>
   </tr>
   <tr>
-    <td>code_verifier<Badge text="Mandatory" type="mandatory"/></td>
+    <td>code_verifier<Badge text="Required" type="mandatory"/></td>
     <td>the plain text cryptographically random string that was used to generate the code_challenge.</td>
   </tr>
   <tr>
-    <td>client_id<Badge text="Mandatory" type="mandatory"/></td>
+    <td>client_id<Badge text="Required" type="mandatory"/></td>
     <td>client id obtained when registering the application in Asgardeo.</td>
   </tr>
 </table>
