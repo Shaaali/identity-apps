@@ -9,7 +9,7 @@ name: PR builder
 on:
   pull_request:
     types: [labeled]
-    branches: [ main, master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
