@@ -19,32 +19,35 @@
       :to="item.path"
       @click="$emit('toggle')"
     >
-      <i v-if="item.icon" :class="`iconfont ${getIcon(item.icon)}`" />
-      <span>{{ item.title }}</span>
-      <span
-        v-if="item.collapsable"
-        :class="open ? 'down' : 'right'"
-        class="arrow"
-      />
+      <p
+        :class="{ clickable: item.collapsable, open }"
+        class="sidebar-heading"
+        @click="$emit('toggle')"
+      >
+        <img v-if="item.icon === 'gettingStartedIcon'" src="../assets/icons/gettingStartedIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'applicationsIcon'" src="../assets/icons/applicationsIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'addLoginIcon'" src="../assets/icons/addLoginIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="15" height="15" />
+        <span>{{ item.title }}</span>
+        <i v-if="item.collapsable" :class="open ? 'down' : 'right'" class="fas fa-angle-right sidebar-caret"></i>
+      </p>
     </RouterLink>
-    <p
-      v-else
-      :class="{ clickable: item.collapsable, open }"
-      class="sidebar-heading"
-      @click="$emit('toggle')"
-    >
-      <img v-if="item.icon === 'gettingStartedIcon'" src="../assets/icons/gettingStartedIcon.svg" width="15" height="15" />
-      <img v-else-if="item.icon === 'applicationsIcon'" src="../assets/icons/applicationsIcon.svg" width="15" height="15" />
-      <img v-else-if="item.icon === 'addLoginIcon'" src="../assets/icons/addLoginIcon.svg" width="15" height="15" />
-      <img v-else-if="item.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="15" height="15" />
-      <img v-else-if="item.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="15" height="15" />
-      <span>{{ item.title }}</span>
-      <span
-        v-if="item.collapsable"
-        :class="open ? 'down' : 'right'"
-        class="arrow"
-      />
-    </p>
+    <a v-else class="sidebar-heading clickable">
+      <p
+        :class="{ clickable: item.collapsable, open }"
+        class="sidebar-heading"
+        @click="$emit('toggle')"
+      >
+        <img v-if="item.icon === 'gettingStartedIcon'" src="../assets/icons/gettingStartedIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'applicationsIcon'" src="../assets/icons/applicationsIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'addLoginIcon'" src="../assets/icons/addLoginIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="15" height="15" />
+        <img v-else-if="item.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="15" height="15" />
+        <span>{{ item.title }}</span>
+        <i v-if="item.collapsable" :class="open ? 'down' : 'right'" class="fas fa-angle-right sidebar-caret"></i>
+      </p>
+    </a>
 
     <DropdownTransition>
       <SidebarLinks
@@ -61,9 +64,6 @@
 
 <style lang="stylus">
 .sidebar-group
-  .sidebar-group
-    padding-left 0.5em
-
   &:not(.collapsable)
     .sidebar-heading:not(.clickable)
       color inherit
@@ -71,13 +71,10 @@
 
   // refine styles of nested sidebar groups
   &.is-sub-group
-    padding-left 0
-
     & > .sidebar-heading
-      padding-left 2rem
-      font-size 0.95em
+      padding-left 25px
+      font-size 14px
       font-weight normal
-      line-height 1.4
 
       &:not(.clickable)
         opacity 0.8
@@ -87,23 +84,32 @@
 
       & > li > .sidebar-link
         border-left none
-        font-size 0.95em
+        font-size 13px
+  
+  &.depth-1
+    line-height 1.9
 
   &.depth-2
     & > .sidebar-heading
       border-left none
+  
+  &.depth-0
+    padding-bottom 10px
+    padding-top 10px
 
 .sidebar-heading
   box-sizing border-box
   width 100%
   margin 0
-  padding 0.35rem 1.5rem 0 1.25rem
-  border-left 0.25rem solid transparent
   color var(--text-color)
-  font-size 1.0em
+  font-size 15px
   cursor pointer
   transition color 0.15s ease
   user-select none
+
+  .depth-1 &
+    font-size 14px
+    line-height 1.4
 
   img
     padding-right 0.3em !important
@@ -114,14 +120,16 @@
 
   &.open, &:hover
     color inherit
+  
+  &.active
+    .clickable
+      color inherit
 
   .arrow
     position relative
-    top -0.12em
-    left 0.5em
-    float: right
-    margin-top: 1.0em
-    margin-right: 0.9em
+    vertical-align middle
+    float right
+    top 15px
 
   &.clickable
     &.active
@@ -132,8 +140,22 @@
       color var(--accent-color)
 
 .sidebar-group-items
-  font-size 0.95em
   transition height 0.1s ease-out
   overflow hidden
-  padding-left 1.1rem !important
+
+.sidebar-caret
+  float right
+  padding-right 5px
+  transition 0.3s
+
+  .depth-0 &
+    line-height 2.5
+    font-size 12px
+
+  .depth-1 &
+    line-height 2
+    font-size 10px
+
+  &.down
+    transform rotate(90deg) translateY(3px)
 </style>

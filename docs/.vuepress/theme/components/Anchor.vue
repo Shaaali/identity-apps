@@ -7,7 +7,7 @@ $headings = 2 3 4 5 6
   position fixed
   top ($navbarHeight + 8rem)
   max-width $contentWidth
-  right 20rem
+  right 17rem
 
   & + .theme-default-content:not(.custom)
     padding-top 0
@@ -15,7 +15,7 @@ $headings = 2 3 4 5 6
 #anchor
   display none
   position absolute
-  width 18rem
+  width 16rem
   max-height 80vh
   //overflow-y scroll
 
@@ -58,8 +58,16 @@ $headings = 2 3 4 5 6
   .anchor
     box-sizing border-box
     padding 0px 0px 0px 20px
-    line-height 2.2
+    line-height 1.5
     list-style none
+
+    &.anchor2
+      padding-top 8px
+      padding-bottom 8px
+    
+    &.anchor3
+      padding-top 5px
+      padding-bottom 5px
 
     .anchor-link
       display inline-block

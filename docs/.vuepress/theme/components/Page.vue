@@ -56,7 +56,7 @@
   padding-bottom 2rem
   background var(--bgcolor)
   margin-top 130px
-  padding-left 20rem
+  padding-left 24rem
 
   @media (max-width $MQMobile)
     min-height 100vh
@@ -70,7 +70,7 @@
       padding-left 0
     
     .theme-container:not(.has-anchor) &
-      padding-right 0
+      padding-right 2rem
 
   // wide mobile
   @media (max-width $MQMobile)
@@ -80,7 +80,7 @@
     padding-right 12rem
 
     .has-anchor &
-      padding-right 24rem
+      padding-right 20rem
   
   .page-title
     max-width $contentWidth + 200rem

@@ -1,5 +1,6 @@
 @require '~@theme/styles/fonts/crimson.css'
 @require './wrapper'
+@require '~@mr-hope/vuepress-shared/styles/font-awesome';
 
 html, body
   padding 0
@@ -171,11 +172,14 @@ p.custom-block-title
 .custom-block .custom-block-title
   margin-bottom 0 !important
 
+.breadcrumb li + li:before
+  content '\276F' !important
+
 // Dark theme base CSS
 body.theme-dark
   .is-active
     border-bottom none
-    
+
     a
       color var(--text-color-light) !important
 

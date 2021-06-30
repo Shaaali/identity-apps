@@ -29,17 +29,12 @@
   box-sizing border-box
   width $sidebarWidth
   margin 40px 0 0
-  background var(--bgcolor-blur)
+  background var(--bgcolor)
   box-shadow 2px 0 8px var(--card-shadow-color)
-  backdrop-filter saturate(200%) blur(20px)
   font-size 16px
   overflow-y auto
-
-  @media (max-width $MQMobile)
-    top $navbarMobileHeight
-
-    .theme-container.hide-navbar &
-      top 0
+  padding-left 1em
+  padding-right 1em
 
   .theme-container:not(.has-navbar) &
     top 0
@@ -52,6 +47,7 @@
   a
     display inline-block
     color var(--text-color)
+    font-weight 400
 
   .blogger-info.mobile
     display none
@@ -77,14 +73,13 @@
       padding 0.5rem 0 0.5rem 1.5rem
 
   & > .sidebar-links
-    padding 0.5rem 0
+    padding 0
+    margin-top 15px
+    list-style none
 
     & > li > a.sidebar-link
       font-size 0.9em
       line-height 1.7
-
-    & > li:not(:first-child)
-      margin-top 0.75rem
 
   // narrow desktop / iPad
   @media (max-width $MQNarrow)
@@ -100,8 +95,10 @@
     transform translateX(-100%)
     transition transform 0.2s ease
     box-shadow none
+    top 0
 
     .theme-container.sidebar-open &
+      padding-top 20px
       transform translateX(0)
       box-shadow 2px 0 8px var(--card-shadow-color)
 
@@ -120,4 +117,8 @@
 
     & > .sidebar-links
       padding 1rem 0
+      margin-top 0px
+    
+    .theme-container.hide-navbar &
+      top 0
 </style>

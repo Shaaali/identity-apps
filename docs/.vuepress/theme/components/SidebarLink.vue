@@ -5,20 +5,21 @@
   .sidebar-links
     ul.sidebar-sub-headers
       padding-left 1rem
-      font-size 0.95em
+      font-size 14px
 
       .has-anchor &
         @media (min-width $MQWide)
           display none
+    
+    li:first-child
+      margin-top -5px
 
 a.sidebar-link
   display inline-block
   box-sizing border-box
   width 100%
-  padding 0.35rem 1rem 0.35rem 1.25rem
-  border-left 0.25rem solid transparent
   color var(--text-color)
-  font-size 0.9em
+  font-size 14px
   line-height 1.4
   font-weight 400
 
@@ -30,7 +31,7 @@ a.sidebar-link
     border-left-color var(--accent-color)
 
   .sidebar-group &
-    padding-left 2rem
+    padding-left 25px
 
   .sidebar-sub-headers &
     padding-top 0.25rem
