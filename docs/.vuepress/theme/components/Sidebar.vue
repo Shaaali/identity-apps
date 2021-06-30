@@ -33,7 +33,7 @@
   box-shadow 2px 0 8px var(--card-shadow-color)
   font-size 16px
   overflow-y auto
-  padding-left 1em
+  padding-left 1.5em
   padding-right 1em
 
   .theme-container:not(.has-navbar) &
