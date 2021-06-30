@@ -164,6 +164,7 @@ table
     padding 1em
     border-bottom  1px solid var(--border-color)
     vertical-align top
+    text-align left
 
 .custom-block
   p
@@ -174,6 +175,13 @@ p.custom-block-title
 
 .custom-block .custom-block-title
   margin-bottom 0 !important
+
+// This is the default table class from the vuepress theme
+.border-table
+  th, td
+    border 2px solid var(--border-color)
+    padding 0.6em 1em
+    vertical-align middle
 
 // Dark theme base CSS
 body.theme-dark
