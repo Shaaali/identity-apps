@@ -31,7 +31,7 @@
   color white !important
 
   @media (max-width $MQMobile)
-    color var(--text-color)
+    color var(--text-color) !important
 
     &:hover, &.active
       color var(--accent-color) !important

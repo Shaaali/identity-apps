@@ -71,6 +71,7 @@ function css (el, property) {
   margin-top 58px
 
   @media (max-width $MQMobile)
+    display none
     margin-top 52px !important
     height $navbarMobileHeight
     padding $navbarMobileVerticalPadding $navbarMobileHorizontalPadding

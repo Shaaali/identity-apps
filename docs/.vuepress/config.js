@@ -80,43 +80,39 @@ module.exports = config({
         sidebar: {
             '/guides/' : [
             {
-                title: 'Get started',
+                title: 'Get Started',
                 icon:  'gettingStartedIcon',
                 children: [
-                '',
-                ['get-started/create-organization.md', 'Create an organization']
-              ]
+                    ['', 'Asgardeo Overview'],
+                    ['get-started/create-organization.md', 'Create an organization']
+                ]
             },
             {
-                title: 'Manage users',
+                title: 'Users',
                 icon:  'usersIcon',
                 children: [
                     {
-                        title: 'Users',
-                        prefix: '/guides/user-management/',
-                        path: '/guides/user-management/',
-                        collapsable: false,
-                        sidebarDepth: 2,
+                        title: 'Manage Users',
+                        path: 'user-management/',
                         children: [
-                            ['manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
-                            ['manage-customer-accounts.md', 'Manage Customer Accounts']
+                            ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
+                            ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
+                            ['user-management/user-profiles.md', 'User profiles'],
+                            ['user-management/sessions.md', 'Sessions'],
                         ]
                     },
-                    ['user-management/user-profiles.md', 'User profiles'],
-                    ['user-management/sessions.md', 'Sessions'],
                     ['user-management/groups.md', 'Groups'],
                 ]
             },
             {
-                title: 'Manage applications',
+                title: 'Applications',
                 icon:  'applicationsIcon',
                 children: [
                 ['applications/', 'Overview'],
                 {
                     title: 'Single page application',
-                    path: '/guides/applications/spa/',
-                    prefix: '/guides/applications/spa/',
-                    collapsable: false,
+                    path: 'applications/spa/',
+                    prefix: 'applications/spa/',
                     sidebarDepth: 2,
                     children: [
                         ['spa-integrate-with-oidc', 'Integrate with OIDC']
@@ -124,9 +120,8 @@ module.exports = config({
                 },
                 {
                     title: 'Web application',
-                    path: '/guides/applications/web-app/',
-                    prefix: '/guides/applications/web-app/',
-                    collapsable: false,
+                    path: 'applications/web-app/',
+                    prefix: 'applications/web-app/',
                     sidebarDepth: 2,
                     children: [
                         ['web-app-integrate-with-oidc.md', 'Integrate with OIDC']
@@ -148,30 +143,32 @@ module.exports = config({
               ]
             },
             {
-                title: 'Manage identity providers',
+                title: 'Identity Providers',
                 icon: 'addLoginIcon',
                 children: [
-                    ['/guides/identity-providers/', 'Overview'],
-                    {
-                        title: 'Social login',
-                        children: [
-                            ['/guides/identity-providers/social-login/facebook.md', 'Facebook'],
-                            ['/guides/identity-providers/social-login/github.md', 'Github'],
-                            ['/guides/identity-providers/social-login/google.md', 'Google'],
-                        ]
-                    },
-                    {
-                        title: 'Enterprise login',
-                        children: [
-                            ['/guides/identity-providers/enterprise-login/oidc.md', 'OpenID Connect'],
-                            // ['/guides/identity-providers/enterprise-login/saml.md', 'SAML'],
+                ['identity-providers/', 'Overview'],
+                {
+                    title: 'Social login',
+                    prefix: 'identity-providers/social-login/',
+                    children: [
+                        ['facebook.md', 'Facebook'],
+                        ['github.md', 'Github'],
+                        ['google.md', 'Google'],
+                    ]
+                },
+                {
+                    title: 'Enterprise login',
+                    prefix: 'identity-providers/enterprise-login/',
+                    children: [
+                        ['oidc.md', 'OpenID Connect'],
+                        // ['saml.md', 'SAML'],
 
-                        ]
-                    },
+                    ]
+                },
                 ]
             },
             {
-                title: 'Add MFA',
+                title: 'Multi-Factor Authentication',
                 icon: 'addAuthnIcon',
                 children: [
                     ['mfa/', 'Overview'],
@@ -179,25 +176,24 @@ module.exports = config({
                 ]
             },
             {
-                title: 'Add conditional authentication',
+                title: 'Conditional Authentication',
                 icon: 'addLoginIcon',
-
                 children: [
                     ['conditional-auth/', 'Overview'],
                     ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
                     ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
                     {
                         title: 'Predefined templates',
-                        prefix: 'conditional-auth/',
+                        prefix: 'conditional-auth/predefined-templates/',
+                        path: 'conditional-auth/predefined-templates/',
                         children: [
-                            ['predefined-templates/', 'Introduction'],
-                            ['predefined-templates/group-based-template.md', 'Group based access control'],
-                            ['predefined-templates/ip-based-template.md', 'IP based access control'],
-                            ['predefined-templates/new-device-based-template.md', 'Device based access control'],
-                            ['predefined-templates/user-age-based-template.md', 'Age based access control'],
+                            ['group-based-template.md', 'Group based access control'],
+                            ['ip-based-template.md', 'IP based access control'],
+                            ['new-device-based-template.md', 'Device based access control'],
+                            ['user-age-based-template.md', 'Age based access control'],
                         ]
                     },
-                    ['/guides/conditional-auth/api-reference.md', 'API Reference'],
+                    ['conditional-auth/api-reference.md', 'API Reference'],
                 ]
             },
             ],
