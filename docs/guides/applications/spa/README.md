@@ -18,7 +18,7 @@ with the PKCE ([Proof Key for Code Exchange](https://datatracker.ietf.org/doc/ht
 The following guides provide the detailed steps needed to secure your SPAs with Asgradeo using the OpenID Connect 
 Authorization Code Flow for public clients with the PKCE. 
 
-<table>
+<table class="border-table">
   <tbody>
     <tr>
       <td><h4><b>Use an Asgardeo SDK</b></h4></td>

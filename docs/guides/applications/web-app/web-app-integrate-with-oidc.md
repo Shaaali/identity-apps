@@ -52,27 +52,22 @@ _Request parameters:_
   <tr>
     <th>Parameter</th>
     <th>Description</th> 
-    <th>Mandatory</th>
   </tr>
   <tr>
-    <td>response_type</td>
+    <td>response_type<Badge text="Required" type="mandatory"/></td>
     <td>required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>redirect_uri</td>
+    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
     <td>This is where the response is redirected to at the end of the process. This should match the registered callback URL.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>client_id</td>
+    <td>client_id<Badge text="Required" type="mandatory"/></td>
     <td>Client id obtained when registering the application in Asgardeo.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>scope</td>
+    <td>scope<Badge text="Optional" type="optional"/></td>
     <td>For the OpenId Connect flow, the scope should contain <code>openid</code> as one of the scopes. There can be additional scopes as well.</td>
-    <td>No</td>
   </tr>
 </table>
 
@@ -103,22 +98,18 @@ _Request parameters_
   <tr>
     <th>Parameter</th>
     <th>Description</th> 
-    <th>Mandatory</th>
   </tr>
   <tr>
-    <td>grant_type</td>
+    <td>grant_type<Badge text="Required" type="mandatory"/></td>
     <td>the grant type. Here we are using <code>authorization_code</code> grant.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>redirect_uri</td>
+    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
     <td>where the response is redirected to at the end of the process.</td>
-    <td>Yes</td>
   </tr>
   <tr>
-    <td>code</td>
+    <td>code<Badge text="Required" type="mandatory"/></td>
     <td>the code received from authorization request.</td>
-    <td>Yes</td>
   </tr>
 </table>
 
