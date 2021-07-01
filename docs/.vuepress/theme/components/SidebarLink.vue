@@ -10,9 +10,6 @@
       .has-anchor &
         @media (min-width $MQWide)
           display none
-    
-    li:first-child
-      margin-top -5px
 
 a.sidebar-link
   display inline-block
@@ -31,7 +28,7 @@ a.sidebar-link
     border-left-color var(--accent-color)
 
   .sidebar-group &
-    padding-left 25px
+    padding-left 20px
 
   .sidebar-sub-headers &
     padding-top 0.25rem
