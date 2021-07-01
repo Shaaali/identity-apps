@@ -124,7 +124,7 @@ function css (el, property) {
   .home-link
     padding-right 30px
     border-right 1px solid #aaa
-    height 75%
+    height 90%
 
     @media (max-width $MQMobile)
       border-right none
