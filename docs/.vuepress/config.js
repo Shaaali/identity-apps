@@ -81,7 +81,6 @@ module.exports = config({
             '/guides/' : [
             {
                 title: 'Get Started',
-                icon:  'gettingStartedIcon',
                 children: [
                     ['', 'Asgardeo Overview'],
                     ['get-started/create-organization.md', 'Create an organization']
@@ -89,7 +88,6 @@ module.exports = config({
             },
             {
                 title: 'Users',
-                icon:  'usersIcon',
                 children: [
                     {
                         title: 'Manage Users',
@@ -106,25 +104,24 @@ module.exports = config({
             },
             {
                 title: 'Applications',
-                icon:  'applicationsIcon',
                 children: [
                 ['applications/', 'Overview'],
                 {
                     title: 'Single page application',
-                    path: 'applications/spa/',
-                    prefix: 'applications/spa/',
+                    prefix: 'applications/',
                     sidebarDepth: 2,
                     children: [
-                        ['spa-integrate-with-oidc', 'Integrate with OIDC']
+                        ['spa/', 'Overview'],
+                        ['spa/spa-integrate-with-oidc', 'Integrate with OIDC']
                     ]
                 },
                 {
                     title: 'Web application',
-                    path: 'applications/web-app/',
-                    prefix: 'applications/web-app/',
+                    prefix: 'applications/',
                     sidebarDepth: 2,
                     children: [
-                        ['web-app-integrate-with-oidc.md', 'Integrate with OIDC']
+                        ['web-app/', 'Overview'],
+                        ['web-app/web-app-integrate-with-oidc.md', 'Integrate with OIDC']
                     ]
                 },
                 // Uncomment as each section is implemented
@@ -144,7 +141,6 @@ module.exports = config({
             },
             {
                 title: 'Identity Providers',
-                icon: 'addLoginIcon',
                 children: [
                 ['identity-providers/', 'Overview'],
                 {
@@ -169,7 +165,6 @@ module.exports = config({
             },
             {
                 title: 'Multi-Factor Authentication',
-                icon: 'addAuthnIcon',
                 children: [
                     ['mfa/', 'Overview'],
                     ['mfa/totp.md', 'TOTP']
@@ -177,20 +172,19 @@ module.exports = config({
             },
             {
                 title: 'Conditional Authentication',
-                icon: 'addLoginIcon',
                 children: [
                     ['conditional-auth/', 'Overview'],
                     ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
                     ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
                     {
                         title: 'Predefined templates',
-                        prefix: 'conditional-auth/predefined-templates/',
-                        path: 'conditional-auth/predefined-templates/',
+                        prefix: 'conditional-auth/',
                         children: [
-                            ['group-based-template.md', 'Group based access control'],
-                            ['ip-based-template.md', 'IP based access control'],
-                            ['new-device-based-template.md', 'Device based access control'],
-                            ['user-age-based-template.md', 'Age based access control'],
+                            ['predefined-templates/', 'Overview'],
+                            ['predefined-templates/group-based-template.md', 'Group based access control'],
+                            ['predefined-templates/ip-based-template.md', 'IP based access control'],
+                            ['predefined-templates/new-device-based-template.md', 'Device based access control'],
+                            ['predefined-templates/user-age-based-template.md', 'Age based access control'],
                         ]
                     },
                     ['conditional-auth/api-reference.md', 'API Reference'],
