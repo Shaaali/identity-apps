@@ -4,10 +4,13 @@
   min-height 100vh - $navbarHeight
   padding 0 2rem 0
   margin 0 auto 0
-  background var(--feature-bgcolor)
+  background var(--sdk-bgcolor)
+
+  @media (max-width $MQMobile)
+    padding 0
   
   .page
-    background var(--feature-bgcolor)
+    background var(--sdk-bgcolor)
     margin-top 100px
 
     @media (max-width $MQMobile)
@@ -19,7 +22,6 @@
   .title-container
     justify-content center
     text-align center
-    border-bottom solid 1px var(--bgcolor)
     padding-top 1rem
 
     h1:first-child
@@ -28,6 +30,7 @@
 
   .tech-container
     display flex
+    flex-wrap wrap
     justify-content center
     margin-top 1rem
 
@@ -35,28 +38,38 @@
       margin-top -18px !important
 
   .tech-item
-    display flex
-    flex-grow 1
+    display inline-block
+    flex 1 1 15%
+    min-width 139px
+    max-width 140px
     margin 1.5em
-    background-color var(--bgcolor)
+    background-color var(--sdk-card-color)
     border-radius 6px
     padding 1em
-    transition 0.3s
+    transition all 0.3s
     text-align center
-    justify-content center
+    cursor pointer
 
     &:hover    
       transform: scale(1.025)
       box-shadow: 0 2px 12px 0 var(--bgcolor-light)
+  
+  .tech-name
+    padding-top 30px
+    display block
+    font-size 18px
+    font-weight 600
+    margin 0
 
   img.tech-icon.disabled
       opacity 0.5
-      pointer-events: none !important
+      pointer-events none !important
 
     img.tech-icon
-      width 75px
+      height 80px
       border none
       cursor: pointer !important
+      margin 1rem auto
 
   .header-container
     display: flex
@@ -82,7 +95,7 @@
       padding-right 1.5rem
 
   .description
-    color #656565
+    color var(--text-color-light)
     font-size 1rem
     line-height 1.5
     text-align center
@@ -98,3 +111,48 @@
   &.page
     padding-left 0
     padding-right 0
+  
+  .qs-search-container
+    padding-bottom 30px
+    text-align center
+    border-bottom 1px solid var(--bgcolor-light)
+    margin 0 30px 0 30px
+
+    @media (max-width $MQMobile)
+      margin 0
+  
+  .qs-search
+    border none
+    padding 10px 10px 10px 35px
+    border-radius 6px
+    width 200px
+    background var(--sdk-card-color) url(/assets/img/search.83621669.svg) 10px 12px no-repeat
+    transition 0.3s
+    border 1px solid transparent
+
+    &:focus
+      outline none
+      width 300px
+      box-shadow: 0 2px 12px 0 var(--bgcolor-light)
+
+      @media (max-width $MQMobile)
+        width 200px
+
+  .qss-icon
+    position relative
+    right -30px
+    color var(--text-color-light)
+    opacity 0.5
+
+.cardAnim-enter-active, .cardAnim-leave-active
+  transition all 0.3s !important
+
+.cardAnim-enter, .cardAnim-leave-to
+  opacity 0 !important
+
+.cardAnim-leave-active
+  position absolute
+
+.cardAnim-move
+  transition transform 0.3s !important
+

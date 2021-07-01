@@ -1,46 +1,54 @@
 <template>
-  <main class="quickstarts-page">
-    <MyTransition :delay="0.1">
-      <header class="title-container">
-        <h1>Quickstarts</h1>
-        <p class="description">Tryout our samples to learn how to enable login to your applications with Asgardeo</p>
-      </header>
+  <!-- This component reads from docs/quickstarts/README.md and generates UI components dynamically. -->
+  <main class="quickstarts-page" ref="qsPage">
+    <MyTransition :delay="0.3">
+        <header class="title-container">
+          <h1 v-text="$frontmatter.heading"></h1>
+          <p class="description" v-text="$frontmatter.subHeading"></p>
+        </header>
     </MyTransition>
-    <MyTransition :delay="0.1">
-      <div class="tech-container">
-        <div class="tech-item">
-          <a @click="navigate('/quickstarts/qsg-spa-angular/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/angular-logo.svg" width="100" height="100"/>
-          </a>
-        </div>
-        <div class="tech-item">
-          <a @click="navigate('/quickstarts/qsg-spa-javascript/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/javascript-logo.svg" width="100" height="100"/>
-          </a>
-        </div>
-        <div class="tech-item">
-          <a @click="navigate('/quickstarts/qsg-spa-react/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/react-logo.svg" width="100" height="100"/>
-          </a>
-        </div>
-        <div class="tech-item">
-          <a @click="navigate('/quickstarts/qsg-oidc-webapp-java-ee/')">
-            <img class="tech-icon" src="../theme/assets/images/technologies/java-logo.svg" width="100" height="100"/>
-          </a>
-        </div>
+    <MyTransition :delay="0.3">
+      <div class="qs-search-container">
+        <input class="qs-search" v-model="query" type="text" placeholder="What are you looking for?">
       </div>
+    </MyTransition>
+    <MyTransition :delay="0.3">
+      <transition-group class="tech-container" name="cardAnim" mode="out-in">
+        <QuickstartItemCard
+          v-for="technology in getQuickstarts"
+          :key="technology.name"
+          :techIconPath="technology.icon"
+          :techName="technology.name"
+          :qsPath="technology.path"
+        ></QuickstartItemCard>
+      </transition-group>
     </MyTransition>
   </main>
 </template>
 
 <script>
 import MyTransition from "@theme/components/MyTransition.vue";
+import QuickstartItemCard from './QuickstartItemCard.vue';
 export default {
   name: 'QuickstartOverview',
-  components: { MyTransition },
-  methods: {
-    navigate(url) {
-      void this.$router.push(url);
+  components: { MyTransition, QuickstartItemCard },
+  data: () => ({
+    query: "",
+  }),
+  computed: {
+    getQuickstarts() {
+      const { technologies } = this.$frontmatter;
+      if (!this.query) {
+        if (Array.isArray(technologies))
+            return technologies;
+        return [technologies];
+      }
+      else {
+        const search = this.query.toUpperCase();
+        return technologies.filter(function (tech) {
+          return tech.name.toUpperCase().includes(search);
+        });
+      }
     }
   }
 }
