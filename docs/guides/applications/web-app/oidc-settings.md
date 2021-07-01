@@ -14,7 +14,7 @@ This will determine how the application communicates with the token service. Asg
 
 By default, Code(authorization code) is enabled for OIDC web applications. In order to get Refresh tokens, you need to enable `Refresh Token` as well.
 
-[Implicit](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-14#section-2.1.2) and [Password]((https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-14#section-2.4)) grants are **not recommended** due to security reasons.
+[Implicit](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-14#section-2.1.2) and [Password](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-14#section-2.4) grants are **not recommended** due to security reasons.
 
 ### Public client
 <CommonGuide guide='guides/fragments/manage-app/oidc-settings/public-client.md'/>

@@ -14,5 +14,5 @@ Following guides provide detailed steps to integrating login to your web applica
 * [Register your web app](./register-app/)
 * [Configure login to your webapp](./configure-login/)
 * [Tryout Java EE sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
-* [Tryout Java EE SDK](/sdks/java-ee/)
-* [Explore OpenID Connect flow in depth](/guides/applications/integrate-confidential-client/)
+* [Tryout Java EE SDK](/sdks/java-ee.md)
+* [Explore OpenID Connect flow in depth](../integrate-confidential-client/)

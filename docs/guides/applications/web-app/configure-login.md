@@ -13,7 +13,7 @@ When configure login, you need to follow below steps:
 2. [Discover endpoints of Asgardeo](#discover-endpoints)
 
 ## Prerequisite
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](console.asgardeo.io/) to <a href="../register-app">register an application</a>.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="../register-app">register an application</a>.
 
 ## Obtain client ID and client secret
 When your web application login with Asgardeo, application requires client ID and client secret for authentication. To get the client ID, you can follow below steps:
