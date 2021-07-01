@@ -72,7 +72,7 @@
   // refine styles of nested sidebar groups
   &.is-sub-group
     & > .sidebar-heading
-      padding-left 25px
+      padding-left 20px
       font-size 14px
       font-weight normal
 
@@ -84,7 +84,6 @@
 
       & > li > .sidebar-link
         border-left none
-        font-size 13px
   
   &.depth-1
     line-height 1.9
@@ -147,14 +146,13 @@
   float right
   padding-right 5px
   transition 0.3s
+  font-size 12px
 
   .depth-0 &
     line-height 2.5
-    font-size 12px
 
   .depth-1 &
     line-height 2
-    font-size 10px
 
   &.down
     transform rotate(90deg) translateY(3px)
