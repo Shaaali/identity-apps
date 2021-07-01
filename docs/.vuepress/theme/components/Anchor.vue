@@ -5,7 +5,7 @@ $headings = 2 3 4 5 6
 
 .anchor-place-holder
   position fixed
-  top ($navbarHeight + 8rem)
+  top ($navbarHeight + 3rem)
   max-width $contentWidth
   right 17rem
 

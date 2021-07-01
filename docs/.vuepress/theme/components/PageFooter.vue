@@ -15,7 +15,7 @@
   padding 0px 30px
   border-top 1px solid var(--border-color)
   background var(--bgcolor)
-  color var(--dark-color, #666)
+  color var(--text-color-light)
 
   @media (min-width $MQMobile)
     .has-sidebar &
@@ -41,5 +41,5 @@
     font-size 13px
 
 .page:not(.not-found) + .footer-wrapper
-  margin-top -2rem
+  margin-top 0
 </style>

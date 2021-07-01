@@ -23,18 +23,18 @@
 .sidebar
   position fixed
   z-index 10
-  top 4.8rem
+  top $navbarHeight
   left 0
   bottom 0
   box-sizing border-box
   width $sidebarWidth
-  margin 40px 0 0
   background var(--bgcolor)
   box-shadow 2px 0 8px var(--card-shadow-color)
   font-size 16px
   overflow-y auto
   padding-left 1.5em
   padding-right 1em
+  padding 2em 1em 1em 1.5em
 
   .theme-container:not(.has-navbar) &
     top 0
@@ -72,6 +72,9 @@
       font-size 1.1em
       padding 0.5rem 0 0.5rem 1.5rem
 
+      @media (max-width $MQMobile)
+        padding 0.5rem 0 0.5rem 0
+
   & > .sidebar-links
     padding 0
     margin-top 15px
@@ -98,7 +101,7 @@
     top 0
 
     .theme-container.sidebar-open &
-      padding-top 20px
+      padding-top 80px
       transform translateX(0)
       box-shadow 2px 0 8px var(--card-shadow-color)
 

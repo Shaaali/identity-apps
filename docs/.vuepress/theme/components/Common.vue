@@ -10,7 +10,7 @@
     <template v-else>
       <header>
         <Navbar v-if="enableNavbar" @toggle-sidebar="toggleSidebar" />
-        <InnerMenu v-if="enableNavbar" @toggle-sidebar="toggleSidebar" />
+        <!-- <InnerMenu v-if="enableNavbar" @toggle-sidebar="toggleSidebar" /> -->
       </header>
 
       <div class="sidebar-mask" @click="toggleSidebar(false)" />
