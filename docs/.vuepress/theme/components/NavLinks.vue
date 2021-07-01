@@ -49,8 +49,8 @@
         content ' '
         left 0
         right 0
-        bottom 0px
-        height 2px
+        bottom -19px
+        height 4px
         background var(--accent-color-l10)
         border-radius 1px
         visibility hidden
@@ -58,7 +58,7 @@
         transition transform 0.3s ease-in-out
 
       &.active
-        color var(--accent-color) !important
+        font-weight 700
 
       &:hover, &.active
         &::after

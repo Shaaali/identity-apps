@@ -53,7 +53,7 @@ function css (el, property) {
   box-shadow 0 2px 8px var(--card-shadow-color)
   backdrop-filter saturate(200%) blur(20px)
   transition transform 0.3s ease-in-out
-  margin-top 112px
+  margin-top 70px
   text-align center
   vertical-align center
   font-size 0.9em

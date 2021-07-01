@@ -38,7 +38,7 @@ module.exports = config({
         docVersion: "BETA",
         productTitle: "Docs",
         editLinkText: 'Edit this page on Github',
-        logo: '/assets/img/asgardeo-logo.png',
+        logo: '/assets/img/asgardeo-logo-console.svg',
         search: true,
         Navbar: true,
         blog: false,

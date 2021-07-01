@@ -55,7 +55,7 @@
   min-height 100vh
   padding-bottom 2rem
   background var(--bgcolor)
-  margin-top 130px
+  margin-top 100px
   padding-left 24rem
 
   @media (max-width $MQMobile)

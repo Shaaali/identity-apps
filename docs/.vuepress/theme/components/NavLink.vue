@@ -29,13 +29,14 @@
 .nav-link
   line-height 1.4rem
   color white !important
+  margin-right 1rem
+  margin-left 1rem
+  font-size 18px
+  font-weight 400
 
   @media (max-width $MQMobile)
     color var(--text-color) !important
 
     &:hover, &.active
       color var(--accent-color) !important
-
-  &.active
-    color var(--accent-color) !important
 </style>

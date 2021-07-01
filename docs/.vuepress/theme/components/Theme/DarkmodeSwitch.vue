@@ -73,7 +73,6 @@
 
 .darkmode-switch
   display flex
-  height 40px
 
   &:hover
     cursor pointer
@@ -111,7 +110,7 @@
     display block
     text-align center
     user-select none
-    padding 3px 10px 2px 0
+    padding 8px 10px 2px 0
 
     .label
       display block
@@ -216,12 +215,12 @@
     width 20px
     height 20px
     padding 5px
-    border 1px solid #aaa
+    border 2px solid #aaa
     line-height 1
     border-radius 20px
     color #aaa
 
     &:hover
-      color #212A32
-      border 1px solid #212A32
+      color var(--accent-color)
+      border-color var(--accent-color)
 </style>

@@ -16,14 +16,15 @@
           v-if="$site.themeConfig.productTitle"
           ref="siteName"
           class="site-name"
-          :class="{ 'can-hide': $site.themeConfig.logo }"
       >{{ $site.themeConfig.productTitle }}</span>
       <span
           v-if="$site.themeConfig.docVersion"
           class="site-version"
       >{{ $site.themeConfig.docVersion }}</span>
     </RouterLink>
-
+    <div class="site-nav">
+      <NavLinks class="can-hide" />
+    </div>
     <div
         class="links"
         :style="linksWrapMaxWidth ? {
@@ -36,7 +37,7 @@
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/>
+      <!-- <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/> -->
     </div>
   </div>
 </template>
@@ -105,36 +106,37 @@ function css (el, property) {
   right 0
   height $navbarHeight
   padding $navbarVerticalPadding $navbarHorizontalPadding
-  background #ffffff
+  background var(--top-nav-color)
   box-sizing border-box
   box-shadow 0 2px 8px var(--card-shadow-color)
   line-height $navbarHeight - $navbarVerticalPadding * 2
   transition transform 0.3s ease-in-out
 
   @media (max-width $MQMobile)
-    height $navbarMobileHeight
-    padding $navbarMobileVerticalPadding $navbarMobileHorizontalPadding
     padding-left $navbarMobileHorizontalPadding + 2.4rem
-    line-height $navbarMobileHeight - $navbarMobileVerticalPadding * 2
 
   .hide-navbar &.can-hide
     transform translateY(-100%)
 
   a, span, img
     display inline-block
+  
+  .home-link
+    padding-right 30px
+    border-right 1px solid #aaa
+    height 75%
 
-  .home-link:hover .site-name
-    color var(--accent-color)
+    @media (max-width $MQMobile)
+      border-right none
 
   .logo
     min-width $navbarHeight - $navbarVerticalPadding * 2
-    height $navbarHeight - $navbarVerticalPadding * 2
-    margin-right 0.8rem
+    height 20px
+    padding 14px 0px 10px 7px
     vertical-align top
 
     @media (max-width $MQMobile)
-      min-width $navbarMobileHeight - $navbarMobileVerticalPadding * 2
-      height $navbarMobileHeight - $navbarMobileVerticalPadding * 2
+      height 20px
 
     .theme-light &
       &.light
@@ -155,31 +157,30 @@ function css (el, property) {
       display none
 
   .site-name
-    font-size 1.3rem
-    font-weight 600
-    color #2c3e50
+    font-size 1.2rem
+    font-weight 400
+    color #fff
     position relative
+    padding-left 5px
 
     @media (max-width $MQMobile)
-      width calc(100vw - 9.4rem)
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
 
   .site-version
-    font-size 0.6em
+    font-size 0.5em
     font-weight 600
     color white
     position absolute
     background-color #f77301
-    padding 0 0.5rem
+    padding 3px 6px
     border-radius 4px
-    line-height 1rem !important
-    margin-left -0.8rem
-    margin-top -0.4rem
+    line-height 0.5rem !important
+    margin-left -2rem
+    margin-top -2px
 
     @media (max-width $MQMobile)
-      width calc(100vw - 9.4rem)
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
@@ -193,6 +194,7 @@ function css (el, property) {
     padding-left 1.5rem
     font-size 1.0rem
     white-space nowrap
+    height 49px
 
     @media (max-width $MQMobile)
       padding-left 0
@@ -203,4 +205,17 @@ function css (el, property) {
     padding 9px 25px !important
     margin 0 3px !important
     font-size 14px !important
+  
+  .site-nav
+    transition all 0.3s
+    display inline-block
+    margin-left 1.5rem
+    color #fff
+
+    .has-sidebar &
+      margin-left 10.5rem
+
+    @media (max-width 1024px)
+      .has-sidebar &
+        margin-left 1rem
 </style>
