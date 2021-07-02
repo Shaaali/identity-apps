@@ -76,6 +76,10 @@
       @media (max-width $MQMobile)
         padding 0.5rem 0 0.5rem 0
 
+  & > .sidebar-links > li:first-child > div > .sidebar-link
+      font-size 15px
+      padding 15px 0
+
   & > .sidebar-links
     padding 0
     margin-top 15px

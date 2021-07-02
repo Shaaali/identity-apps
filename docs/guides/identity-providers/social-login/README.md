@@ -2,6 +2,7 @@
 breadcrumb: false
 prev: false
 next: false
+pageClass: social-login-index
 heading: Social Login
 subHeading: Add social login to your applications with Asgardeo
 socialLoginIDPs:
@@ -18,5 +19,7 @@ socialLoginIDPs:
       icon: images/technologies/google-idp-illustration.svg
       path: /guides/identity-providers/social-login/facebook/
 ---
+
+# Social Login
 
 <SocialLoginOverview/>
