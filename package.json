@@ -1,6 +1,6 @@
 {
   "name": "asgardeo-docs",
-  "version": "0.0.116",
+  "version": "0.0.117",
   "description": "Asgardeo Documentation",
   "authors": {
     "name": "",
@@ -9,7 +9,6 @@
   "scripts": {
     "predev": "vuepress check-md docs",
     "dev": "vuepress dev docs",
-
     "prebuild": "vuepress check-md docs",
     "build": "vuepress build docs",
     "postbuild": "sh check-links.sh"
