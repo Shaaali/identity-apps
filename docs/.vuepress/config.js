@@ -57,7 +57,7 @@ module.exports = config({
         nav: [
           {
             text: "Guides",
-            link: "/guides/get-started/",
+            link: "/guides/",
           },
           {
             text: 'Quickstarts',
@@ -79,10 +79,10 @@ module.exports = config({
         ],
         sidebar: {
             '/guides/' : [
+                ["", 'Introduction'],
                 {
                     title: 'Get Started',
                     children: [
-                        ['get-started/', 'Asgardeo Overview'],
                         ['get-started/create-organization.md', 'Create an organization']
                     ]
                 },
@@ -92,7 +92,7 @@ module.exports = config({
                         {
                             title: 'Manage Users',
                             children: [
-                                ['/guides/user-management/', 'Users'],
+                                ['user-management/', 'Users'],
                                 ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
                                 ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
                                 ['user-management/user-profiles.md', 'User profiles'],
@@ -144,24 +144,7 @@ module.exports = config({
                     children: [
                     ['identity-providers/', 'Overview'],
                     ['identity-providers/social-login/', 'Social Login'],
-                    // {
-                    //     title: 'Social login',
-                    //     prefix: 'identity-providers/social-login/',
-                    //     children: [
-                    //         ['facebook.md', 'Facebook'],
-                    //         ['github.md', 'Github'],
-                    //         ['google.md', 'Google'],
-                    //     ]
-                    // },
-                    {
-                        title: 'Enterprise login',
-                        prefix: 'identity-providers/enterprise-login/',
-                        children: [
-                            ['oidc.md', 'OpenID Connect'],
-                            // ['saml.md', 'SAML'],
-
-                        ]
-                    },
+                    ['identity-providers/enterprise-login/', 'Enterprise Login'],
                 ]
             },
             {

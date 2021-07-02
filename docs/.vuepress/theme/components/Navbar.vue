@@ -141,6 +141,10 @@ function css (el, property) {
       .has-sidebar &
         border-right none
 
+    @media (min-width $MQWide)
+      .has-sidebar &
+        border-right 1px solid #aaa
+
   .logo
     min-width $navbarHeight - $navbarVerticalPadding * 2
     height 20px
@@ -228,6 +232,10 @@ function css (el, property) {
       margin-left 10.5rem
 
     @media (max-width 1024px)
+      .has-sidebar &
+        margin-left 1rem
+    
+    @media (min-width $MQWide)
       .has-sidebar &
         margin-left 1rem
 </style>

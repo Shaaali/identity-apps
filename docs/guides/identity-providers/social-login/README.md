@@ -3,7 +3,7 @@ breadcrumb: false
 prev: false
 next: false
 heading: Social Login
-subHeading: Sub heading goes here..
+subHeading: Add social login to your applications with Asgardeo
 scIdps:
     - name: Facebook
       icon: images/technologies/facebook-idp-illustration.svg

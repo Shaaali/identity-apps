@@ -11,6 +11,11 @@
         @media (min-width $MQWide)
           display none
 
+  & > .sidebar-links > li:first-child > a
+    font-size 15px
+    line-height 1.9
+    padding 11.5px 0
+
 a.sidebar-link
   display inline-block
   box-sizing border-box
