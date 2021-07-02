@@ -13,11 +13,11 @@ socialLoginIDPs:
     - name: Github
       customClass: darkfix
       icon: images/technologies/github-idp-illustration.svg
-      path: /guides/identity-providers/social-login/facebook/
+      path: /guides/identity-providers/social-login/github/
 
     - name: Google
       icon: images/technologies/google-idp-illustration.svg
-      path: /guides/identity-providers/social-login/facebook/
+      path: /guides/identity-providers/social-login/google/
 ---
 
 # Social Login

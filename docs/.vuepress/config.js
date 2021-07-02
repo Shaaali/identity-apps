@@ -169,7 +169,12 @@ module.exports = config({
                 title: 'Hidden',
                 children: [
                     ['identity-providers/enterprise-login/configure-additional-query-params.md', 'Configure additional query parameters'],
-                    ['identity-providers/enterprise-login/oidc.md', 'Enterprise Login'],
+                    ['identity-providers/enterprise-login/oidc.md', 'OIDC'],
+                    ['identity-providers/social-login/facebook.md', 'Facebook'],
+                    ['identity-providers/social-login/google.md', 'Google'],
+                    ['identity-providers/social-login/github.md', 'Github'],
+                    ['applications/integrate-public-client.md', 'Integrate public client'],
+                    ['applications/integrate-confidential-client.md', 'Integrate confidential client'],
                 ]
             }
             ],
