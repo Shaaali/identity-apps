@@ -112,7 +112,9 @@ module.exports = config({
                         sidebarDepth: 2,
                         children: [
                             ['spa/', 'Overview'],
-                            ['spa/spa-integrate-with-oidc', 'Integrate with OIDC']
+                            ['spa/register-app', 'Register SPA'],
+                            ['spa/configure-login', 'Configure OpenID Connect login'],
+                            ['spa/oidc-settings', 'OpenID Connect settings']
                         ]
                     },
                     {
@@ -121,22 +123,11 @@ module.exports = config({
                         sidebarDepth: 2,
                         children: [
                             ['web-app/', 'Overview'],
-                            ['web-app/web-app-integrate-with-oidc.md', 'Integrate with OIDC']
+                            ['web-app/register-app', 'Register webapp'],
+                            ['web-app/configure-login', 'Configure OpenID Connect login'],
+                            ['web-app/oidc-settings', 'OpenID Connect settings']
                         ]
                     },
-                    // Uncomment as each section is implemented
-    //                {
-    //                    title: 'Application settings',
-    //                    prefix: '/guides/applications/application-settings/',
-    //                    collapsable: false,
-    //                    children: [
-    //                        ['configure-general.md', 'Configure general details'],
-    //                        ['configure-protocol.md', 'Define authorization protocol'],
-    //                        ['configure-user-attribute.md', 'Select user attributes'],
-    //                        ['configure-sign-on.md', 'Configure sign-on method'],
-    //                        ['configure-advanced.md', 'Configure advanced settings']
-    //                    ]
-    //                },
                 ]
                 },
                 {

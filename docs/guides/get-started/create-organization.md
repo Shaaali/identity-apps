@@ -10,11 +10,8 @@ Let's get you started with Asgardeo!
 ## Create an organization
 
 1. [Sign up](https://asgardeo.io/early-signup) for an Asgardeo account.
-
 2. You will receive an invitation mail to your email address. Click **Try Asgardeo Beta** and create your new account.
-
 3. Enter a unique organization name that describes the workspace.
-
     <img :src="$withBase('/assets/img/guides/get-started/create-organization.png')" alt="new-organization-create-ui">
 
 ## Create a user
@@ -28,6 +25,6 @@ customer account.
 
 Now that you've set up your own organization and created your first user, you can:
 
-- Invite a collaborator user to your organization
+- <a href="/guides/user-management/manage-collaborator-accounts/#create-collaborator-user">Invite a collaborator user to your organization</a>
 - [Tryout a sample application](../../quickstarts/README.md)
 - [Manage your applications with asgardeo](../applications/README.md)

@@ -8,7 +8,7 @@ Administrator(Owner or collaborator) can customize the user profiles via claim m
 
 This guide will give you an overview of:
 - [How an administrator can manage the user profile.](#administrator-updates-user-profile-via-asgardeo-console)
-- [How a user can manage their own profile.](#user-updates-user-profile-via-myaccount)
+- [How a user can manage their own profile.](#user-updates-user-profile-via-my-account)
 
 ## Administrator updates user profile via Asgardeo Console
 
@@ -29,7 +29,7 @@ Let's see how an administrator can access user profile.
 Administrator can update the user profile of the **customer** via Asgardeo Console.
     
 ::: tip Note
-Profiles of **Collaborator** and the **Owner** can be updated only via MyAccount.
+Profiles of **Collaborator** and the **Owner** can be updated only via My Account.
 :::
 
 1. Update the user profile attributes.
@@ -53,9 +53,9 @@ Administrator can reset the password of a customer user and request the customer
   - **Set a temporary password for the user:**
     If owner/collaborator user selects this option, he/she can set password of the customer user.<br>
       
-## User updates user profile via MyAccount
+## User updates user profile via My Account
 
-All users can update their profile via MyAccount.
+All users can update their profile via My Account.
 
-1. In the Asgardeo MyAccount, Select **Personal Info**.
+1. In the Asgardeo My Account, Select **Personal Info**.
 2. Update profile information.

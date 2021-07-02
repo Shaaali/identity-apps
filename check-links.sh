@@ -18,7 +18,7 @@ serve -p $PORT &
 sleep 5
 
 # https://www.npmjs.com/package/broken-link-checker
-if blc --input http://localhost:$PORT -grf --exclude /assets; then
+if blc --input http://localhost:$PORT -grf; then
   echo "No broken links found."
   exit 0
 else

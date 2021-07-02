@@ -1,0 +1,2 @@
+
+A public client is an application which cannot keep the client credentials in secure way. It is recommended to use authorization code grant type for public clients. In addition to that, [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with authorization code to mitigate code interception attacks. A <a href="/guides/applications/integrate-public-client/#get-tokens">public client does not need to authenticate</a> to Asgardeo with `client_secret`.
