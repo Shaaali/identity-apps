@@ -65,10 +65,10 @@ Check the documentation of the OIDC Identity provider and get the following endp
     - **Authorized redirect URL**: It is a readonly configuration which  denotes the authorization redirect URL of Asgardeo.
     - **User info endpoint URL**: The OIDC userinfo endpoint of the external identity provider. 
     - **Logout URL**: The OIDC logout endpoint of the external identity provider.
-    - **Additional query parameters**: If you need to pass any additional query parameters to the external identity provider. For more information, see <a href="../configure-additional-query-params">Configure additional query params</a>.
-8.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a href="../configure-additional-query-params">additional query param</a>.  
+    - **Additional query parameters**: If you need to pass any additional query parameters to the external identity provider. For more information, see <a href="/guides/identity-providers/enterprise-login/configure-additional-query-params">Configure additional query params</a>.
+8.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a href="/guides/identity-providers/enterprise-login/configure-additional-query-params">additional query param</a>.  
     For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
-  
+      
 ### Enable OIDC login for application
 1. In the Asgardeo Console, Click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.

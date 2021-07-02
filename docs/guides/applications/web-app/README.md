@@ -1,6 +1,6 @@
 # Web Applications
 
-Web applications are the most common type of applications in use. They are usually hosted on a web server
+Web applications(web apps) are the most common type of applications in use. They are usually hosted on a web server
 and accessed by the browser. Web applications need authentication as they offer functionality dependent on the 
 logged-in user.
 
@@ -11,5 +11,7 @@ to enable login to web applications.
 
 Following guides provide detailed steps to integrating login to your web applications with Asgradeo using OpenID Connect.
 
-* [Login to Java EE web app using Asgardeo Tomcat OIDC Agent](../../../sdks/java-ee)
-* [Login to any web app using OpenID Connect](./web-app-integrate-with-oidc)
+* [Configure login to your webapp](./configure-login/)
+* [Tryout Java EE sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
+* [Explore OpenID Connect flow in depth](../integrate-confidential-client/)
+* [Tryout Java EE SDK](/sdks/java-ee.md)

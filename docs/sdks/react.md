@@ -13,23 +13,13 @@ This guide provides steps to authenticate users to your React SPA with OpenID Co
     buttonPath='/quickstarts/qsg-spa-react'
 />
 
-::: tip Before you begin
-
-1. Create an organization in Asgardeo
-2. Create a customer account in your organization
-3. Install npm and node in your local environment
-
-:::
-
-## Configure your application in Asgardeo
-
-You need to first create an application in Asgardeo that represents your SPA.
-
-<CommonGuide guide='guides/fragments/configure-spa-in-asgardeo.md'/>
+## Prerequisites
+1. You need to have npm with Node.js. If you don't have it, [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
+2. You should have registered a single-page application. If you don't have an app registered, <a href ="/guides/applications/spa/register-app">register an application</a> in Asgardeo.
 
 ## Add authentication to your app
 
-**1. Install SDK**
+### Install SDK
 
 Run the following command to install the React SDK and the necessary dependencies from the npm registry.
 
@@ -39,7 +29,7 @@ npm install @asgardeo/auth-react react-router-dom --save
 
 <br>
 
-**2. Configure AuthProvider**
+### Configure AuthProvider
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
@@ -84,7 +74,7 @@ render((<App />), document.getElementById("root"));
 
 <br>
 
-**3. Add login**
+### Add login
 
 The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button**
 using the `signIn()` function in the `useAuthContext` hook. Similarly, you can also implement a **Logout button** using
