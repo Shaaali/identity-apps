@@ -92,11 +92,12 @@ Click on the button below to download the sample.
       consumerSecret=<clientSecret>
       scope=openid,internal_application_mgt_view
    
+      callBackURL=http://localhost:8080/oidc-sample-app/oauth2client
+      postLogoutRedirectURI=http://localhost:8080/oidc-sample-app/index.html
+      trustedAudience=http://localhost:8080/oidc-sample-app  
       skipURIs=/oidc-sample-app/index.html
       indexPage=index.html
-      logoutURL=logout
-      callBackURL=http://localhost:8080/oidc-sample-app/oauth2client
-      trustedAudience=http://localhost:8080/oidc-sample-app
+      logoutURL=logout     
    
       # Asgardeo Endpoints
       authorizeEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize
@@ -104,7 +105,6 @@ Click on the button below to download the sample.
       tokenEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
       issuer=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
       jwksEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
-      postLogoutRedirectURI=http://localhost:8080/oidc-sample-app/index.html       
       ```
 
 <br>
