@@ -7,12 +7,12 @@
     "email": ""
   },
   "scripts": {
-    "check-links": "sh check-links.sh",
-    "test": "vuepress check-md docs",
     "predev": "vuepress check-md docs",
     "dev": "vuepress dev docs",
+
     "prebuild": "vuepress check-md docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "postbuild": "sh check-links.sh"
   },
   "license": "MIT",
   "devDependencies": {

@@ -10,7 +10,7 @@ PORT=4567
 # Kill any running serves we used to host the docs
 lsof -ti:$PORT | xargs kill
 
-npm run build
+# npm run build
 cd docs/.vuepress/dist/ || exit
 
 # https://www.npmjs.com/package/serve
