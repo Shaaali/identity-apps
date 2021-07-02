@@ -165,6 +165,13 @@ module.exports = config({
                     ['conditional-auth/api-reference.md', 'API Reference'],
                 ]
             },
+            {
+                title: 'Hidden',
+                children: [
+                    ['identity-providers/enterprise-login/configure-additional-query-params.md', 'Configure additional query parameters'],
+                    ['identity-providers/enterprise-login/oidc.md', 'Enterprise Login'],
+                ]
+            }
             ],
             '/quickstarts/' : [
             {
