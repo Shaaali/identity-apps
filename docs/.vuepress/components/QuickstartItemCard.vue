@@ -1,5 +1,5 @@
 <template>
-  <div class="tech-item" @click="navigate(qsPath)">
+  <RouterLink class="tech-item" :to="qsPath">
     <a>
       <img
         class="tech-icon"
@@ -9,7 +9,7 @@
       />
     </a>
     <p class="tech-name" v-text="techName"></p>
-  </div>
+  </RouterLink>
 </template>
 
 <script>
