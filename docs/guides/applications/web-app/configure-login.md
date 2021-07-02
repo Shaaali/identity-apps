@@ -2,9 +2,9 @@
 
 This documents walks you through the steps of configuring OpenID Connect login with Asgardeo.
 
-You can follow this document to obtain needed configurations, if you are trying to:
- - integrate a web application supports OpenID Connect <br>
- - have some OpenID Connect SDKs to add login with Asgardeo  <br>
+You can follow this document to obtain required information and the configurations, if you are trying to:
+ - Integrate a web application that supports OpenID Connect <br>
+ - Build login with Asgardeo using an OpenID Connect supported SDK <br>
 
 In case, you want to implement login from scratch, see how to <a href = "/guides/applications/integrate-confidential-client">build OpenID Connect login flow manually</a>.
 

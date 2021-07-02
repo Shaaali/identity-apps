@@ -1,8 +1,8 @@
 # Build login for confidential clients with OpenID Connect
 
-A confidential client is an application which can keep the client credentials in secure way. For example, <a href="/guides/applications/web-app">Web applications</a> is a confidential client where it can store the client secret in backend database, or some configuration store securely without exposing to third parties. 
+A confidential client is an application which can keep the client credentials securely. For example, <a href="/guides/applications/web-app">Web applications</a> is a confidential client where it can store the client secret in backend database, or some configuration store securely without exposing to third parties. 
 
-By following this guide, you will be able to manually build OpenID Connect login to your application with Asgardeo using authorization code grant.
+By following this guide, you will be able to understand the OpenID connect login step by step and build on to your application.
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="/guides/applications/web-app/register-app/#register-app">register an application</a>.

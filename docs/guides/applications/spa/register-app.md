@@ -8,7 +8,7 @@ You need to login to your [Asgardeo Console](https://console.asgardeo.io/login) 
 <CommonGuide guide='guides/fragments/manage-app/register-app/configure-spa-in-asgardeo.md'/>
 
 ## Obtain client ID
-When your application wants to communicate to Asgardeo, it needs client ID to use as an identifier. Typically, client ID and client secret are issued for OAuth applications. Since SPA is a public client, it can't store client secret in secure way. So Asgardeo does not issue client id for single-page applications.
+When your application wants to communicate to Asgardeo, it needs client ID to use as an identifier. Typically, client ID and client secret are issued for OAuth applications. Since SPA is a public client, it can't store client secret in secure way. So Asgardeo does not issue a client secret for single-page applications.
 
 After registering your application, you can obtain client ID. By navigating to the **protocol** section of the application, you can obtain **Client ID**.
 <img :src="$withBase('/assets/img/guides/applications/get-client-id.png')" alt="Get client ID of SPA">
