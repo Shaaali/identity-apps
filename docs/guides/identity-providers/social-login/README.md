@@ -4,7 +4,7 @@ prev: false
 next: false
 heading: Social Login
 subHeading: Add social login to your applications with Asgardeo
-scIdps:
+socialLoginIDPs:
     - name: Facebook
       icon: images/technologies/facebook-idp-illustration.svg
       path: /guides/identity-providers/social-login/facebook/

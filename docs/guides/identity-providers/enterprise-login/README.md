@@ -4,7 +4,7 @@ prev: false
 next: false
 heading: Enterprise Login
 subHeading: Add enterprise login to your applications with Asgardeo
-entIdps:
+enterpriseIDPs:
     - name: OpenID Connect
       icon: images/technologies/oidc-idp-illustration.png
       path: /guides/identity-providers/enterprise-login/oidc/

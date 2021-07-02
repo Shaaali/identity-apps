@@ -6,7 +6,7 @@
     @after-appear="unsetStyle"
     @enter="setStyle"
     @after-enter="unsetStyle"
-    @before-leave="setStyle"
+    @before-leave="quickUnsetStyle"
   >
     <slot />
   </transition>

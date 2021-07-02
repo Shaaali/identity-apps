@@ -15,6 +15,10 @@ export default Vue.extend({
             items.style.transform = "translateY(0)";
             items.style.opacity = "1";
         },
+        quickUnsetStyle(items) {
+            items.style.transition = `transform 0s ease-in-out 0s, opacity 0s ease-in-out 0s`;
+            items.style.opacity = "0";
+        }
     },
 });
 //# sourceMappingURL=MyTransition.js.map
