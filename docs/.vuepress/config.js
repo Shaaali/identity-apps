@@ -57,7 +57,7 @@ module.exports = config({
         nav: [
           {
             text: "Guides",
-            link: "/guides/",
+            link: "/guides/get-started/",
           },
           {
             text: 'Quickstarts',
@@ -82,7 +82,7 @@ module.exports = config({
             {
                 title: 'Get Started',
                 children: [
-                    ['', 'Asgardeo Overview'],
+                    ['get-started/', 'Asgardeo Overview'],
                     ['get-started/create-organization.md', 'Create an organization']
                 ]
             },
