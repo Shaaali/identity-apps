@@ -1,5 +1,5 @@
 <template>
-  <div class="idp-item" @click="navigate(idpPath)">
+  <RouterLink class="idp-item" :to="idpPath">
     <a>
       <img
         class="idp-icon"
@@ -9,7 +9,7 @@
       />
     </a>
     <p class="idp-name" v-text="idpName"></p>
-  </div>
+  </RouterLink>
 </template>
 
 <script>
