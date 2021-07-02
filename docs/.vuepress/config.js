@@ -57,7 +57,7 @@ module.exports = config({
         nav: [
           {
             text: "Guides",
-            link: "/guides/get-started/",
+            link: "/guides/",
           },
           {
             text: 'Quickstarts',
@@ -79,79 +79,63 @@ module.exports = config({
         ],
         sidebar: {
             '/guides/' : [
-            {
-                title: 'Get Started',
-                children: [
-                    ['get-started/', 'Asgardeo Overview'],
-                    ['get-started/create-organization.md', 'Create an organization']
-                ]
-            },
-            {
-                title: 'Users',
-                children: [
+                ["", 'Introduction'],
+                {
+                    title: 'Get Started',
+                    children: [
+                        ['get-started/create-organization.md', 'Create an organization']
+                    ]
+                },
+                {
+                    title: 'Users',
+                    children: [
+                        {
+                            title: 'Manage Users',
+                            children: [
+                                ['user-management/', 'Users'],
+                                ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
+                                ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
+                                ['user-management/user-profiles.md', 'User profiles'],
+                                ['user-management/sessions.md', 'Sessions'],
+                            ]
+                        },
+                        ['user-management/groups.md', 'Groups'],
+                    ]
+                },
+                {
+                    title: 'Applications',
+                    children: [
+                    ['applications/', 'Overview'],
                     {
-                        title: 'Manage Users',
+                        title: 'Single page application',
+                        prefix: 'applications/',
+                        sidebarDepth: 2,
                         children: [
-                            ['user-management/', 'Users'],
-                            ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
-                            ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
-                            ['user-management/user-profiles.md', 'User profiles'],
-                            ['user-management/sessions.md', 'Sessions'],
+                            ['spa/', 'Overview'],
+                            ['spa/register-app', 'Register SPA'],
+                            ['spa/configure-login', 'Configure OpenID Connect login'],
+                            ['spa/oidc-settings', 'OpenID Connect settings']
                         ]
                     },
-                    ['user-management/groups.md', 'Groups'],
+                    {
+                        title: 'Web application',
+                        prefix: 'applications/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['web-app/', 'Overview'],
+                            ['web-app/register-app', 'Register webapp'],
+                            ['web-app/configure-login', 'Configure OpenID Connect login'],
+                            ['web-app/oidc-settings', 'OpenID Connect settings']
+                        ]
+                    },
                 ]
-            },
-            {
-                title: 'Applications',
-                children: [
-                ['applications/', 'Overview'],
-                {
-                    title: 'Single page application',
-                    prefix: 'applications/',
-                    sidebarDepth: 2,
-                    children: [
-                        ['spa/', 'Overview'],
-                        ['spa/register-app', 'Register SPA'],
-                        ['spa/configure-login', 'Configure OpenID Connect login'],
-                        ['spa/oidc-settings', 'OpenID Connect settings']
-                    ]
                 },
                 {
-                    title: 'Web application',
-                    prefix: 'applications/',
-                    sidebarDepth: 2,
+                    title: 'Identity Providers',
                     children: [
-                        ['web-app/', 'Overview'],
-                        ['web-app/register-app', 'Register webapp'],
-                        ['web-app/configure-login', 'Configure OpenID Connect login'],
-                        ['web-app/oidc-settings', 'OpenID Connect settings'],
-                    ]
-                },
-              ]
-            },
-            {
-                title: 'Identity Providers',
-                children: [
-                ['identity-providers/', 'Overview'],
-                {
-                    title: 'Social login',
-                    prefix: 'identity-providers/social-login/',
-                    children: [
-                        ['facebook.md', 'Facebook'],
-                        ['github.md', 'Github'],
-                        ['google.md', 'Google'],
-                    ]
-                },
-                {
-                    title: 'Enterprise login',
-                    prefix: 'identity-providers/enterprise-login/',
-                    children: [
-                        ['oidc.md', 'OpenID Connect'],
-                        // ['saml.md', 'SAML'],
-
-                    ]
-                },
+                    ['identity-providers/', 'Overview'],
+                    ['identity-providers/social-login/', 'Social Login'],
+                    ['identity-providers/enterprise-login/', 'Enterprise Login'],
                 ]
             },
             {

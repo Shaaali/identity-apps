@@ -110,7 +110,7 @@
     display block
     text-align center
     user-select none
-    margin 7px
+    margin 10px 15px
 
     .label
       display block
@@ -216,29 +216,21 @@
     width 20px
     height 20px
     padding 5px
-    border 2px solid var(--bgcolor)
     line-height 1
     border-radius 20px
     color var(--text-color-light)
-    background var(--bgcolor)
     vertical-align middle
+    background #fff
 
     .theme-dark &
       background #32404c
-      border-color #32404c
     
     @media (max-width $MQNarrow)
       background transparent
-      border-color transparent
 
       .theme-dark &
         background transparent
-        border-color transparent
 
     &:hover
       color var(--accent-color)
-      border-color var(--accent-color)
-
-      @media (max-width $MQNarrow)
-        border-color transparent
 </style>

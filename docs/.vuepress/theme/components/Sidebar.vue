@@ -34,7 +34,7 @@
   overflow-y auto
   padding-left 1.5em
   padding-right 1em
-  padding 2em 1em 1em 1.5em
+  padding 1em 1em 1em 1.5em
 
   .theme-container:not(.has-navbar) &
     top 0
@@ -48,6 +48,7 @@
     display inline-block
     color var(--text-color)
     font-weight 400
+    font-size 14px
 
   .blogger-info.mobile
     display none
@@ -79,10 +80,6 @@
     padding 0
     margin-top 15px
     list-style none
-
-    & > li > a.sidebar-link
-      font-size 0.9em
-      line-height 1.7
 
   // narrow desktop / iPad
   @media (max-width $MQNarrow)

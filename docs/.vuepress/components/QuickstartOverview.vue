@@ -1,18 +1,18 @@
 <template>
   <!-- This component reads from docs/quickstarts/README.md and generates UI components dynamically. -->
   <main class="quickstarts-page" ref="qsPage">
-    <MyTransition :delay="0.3">
+    <MyTransition :delay="0.01">
         <header class="title-container">
           <h1 v-text="$frontmatter.heading"></h1>
           <p class="description" v-text="$frontmatter.subHeading"></p>
         </header>
     </MyTransition>
-    <MyTransition :delay="0.3">
+    <MyTransition :delay="0.01">
       <div class="qs-search-container">
         <input class="qs-search" v-model="query" type="text" placeholder="Search for technologies...">
       </div>
     </MyTransition>
-    <MyTransition :delay="0.3">
+    <MyTransition :delay="0.01">
       <transition-group class="tech-container" name="cardAnim" mode="out-in">
         <QuickstartItemCard
           v-for="technology in getQuickstarts"

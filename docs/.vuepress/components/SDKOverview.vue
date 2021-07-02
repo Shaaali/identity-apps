@@ -5,12 +5,12 @@
       v-for="(sdkDomain, index) in $frontmatter.sdkContent"
       :key="index"
     >
-      <MyTransition :delay="0.1">
+      <MyTransition :delay="0.01">
         <div class="sub-title-container">
           <h2 v-text="sdkDomain.name"></h2>
         </div>
       </MyTransition>
-      <MyTransition :delay="0.1">
+      <MyTransition :delay="0.01">
         <div class="tech-container">
           <SDKItemCard
             v-for="(technology, index) in sdkDomain.technologies"
