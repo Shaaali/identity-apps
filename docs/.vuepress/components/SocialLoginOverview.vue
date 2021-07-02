@@ -39,3 +39,4 @@ export default {
 </script>
 
 <style src="../theme/styles/components/socialLoginOverview.styl" lang="stylus"/>
+
