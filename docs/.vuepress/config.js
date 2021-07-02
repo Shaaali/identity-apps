@@ -122,7 +122,8 @@ module.exports = config({
                             ['spa/', 'Overview'],
                             ['spa/register-app', 'Register SPA'],
                             ['spa/configure-login', 'Configure OpenID Connect login'],
-                            ['spa/oidc-settings', 'OpenID Connect settings']
+                            ['spa/oidc-settings', 'OpenID Connect settings'],
+                            ['share-user-attributes/oidc', 'Share user attributes']
                         ]
                     },
                     {
@@ -133,28 +134,28 @@ module.exports = config({
                             ['web-app/', 'Overview'],
                             {
                                 title: 'Sign in with OIDC',
-                                prefix: 'web-app/oidc/',
                                 sidebarDepth: 2,
                                 children: [
-                                    ['register-app', 'Register webapp'],
-                                    ['configure-login', 'Configure OpenID Connect login'],
-                                    ['oidc-settings', 'OpenID Connect settings']
+                                    ['web-app/oidc/register-app', 'Register webapp'],
+                                    ['web-app/oidc/configure-login', 'Configure OpenID Connect login'],
+                                    ['web-app/oidc/oidc-settings', 'OpenID Connect settings'],
+                                    ['share-user-attributes/oidc', 'Share user attributes']
                                 ]
                             },
                             {
                                 title: 'Sign in with SAML',
-                                prefix: 'web-app/saml/',
                                 sidebarDepth: 2,
                                 children: [
-                                    ['register-app', 'Register webapp'],
-                                    ['configure-login', 'Configure SAML login'],
-                                    ['saml-settings', 'SAML settings']
+                                    ['web-app/saml/register-app', 'Register webapp'],
+                                    ['web-app/saml/configure-login', 'Configure SAML login'],
+                                    ['web-app/saml/saml-settings', 'SAML settings'],
+                                    ['share-user-attributes/saml', 'Share user attributes']
                                 ]
                             },
 
                         ]
                     },
-                ]
+                    ]
                 },
                 {
                     title: 'Connections',
