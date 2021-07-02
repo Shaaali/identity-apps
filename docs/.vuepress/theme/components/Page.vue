@@ -97,5 +97,6 @@
       max-width $contentWidth
 
     li
-      font-size 12px
+      font-size 14px
+      font-weight 600
 </style>
