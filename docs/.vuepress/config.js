@@ -91,8 +91,8 @@ module.exports = config({
                 children: [
                     {
                         title: 'Manage Users',
-                        path: 'user-management/',
                         children: [
+                            ['user-management/', 'Users'],
                             ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
                             ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
                             ['user-management/user-profiles.md', 'User profiles'],
@@ -194,7 +194,6 @@ module.exports = config({
             '/quickstarts/' : [
             {
                 title: 'SPA',
-                icon:  'gettingStartedIcon',
                 children: [
                     ['/quickstarts/qsg-spa-angular.md', 'Angular sample'],
                     ['/quickstarts/qsg-spa-javascript.md', 'Javascript sample'],
@@ -203,7 +202,6 @@ module.exports = config({
             },
             {
                 title: 'Web App',
-                icon:  'applicationsIcon',
                 children: [
                     ['/quickstarts/qsg-oidc-webapp-java-ee', 'Java EE sample'],
                 ]
@@ -212,7 +210,6 @@ module.exports = config({
             '/sdks/' : [
             {
                 title: 'SPA',
-                icon:  'gettingStartedIcon',
                 children: [
                     ['/sdks/angular.md', 'Angular'],
                     ['/sdks/javascript.md', 'Javascript'],
@@ -221,7 +218,6 @@ module.exports = config({
             },
             {
                 title: 'Web App',
-                icon:  'applicationsIcon',
                 children: [
                     ['/sdks/java-ee', 'Java EE'],
                 ]

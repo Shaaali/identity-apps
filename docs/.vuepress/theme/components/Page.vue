@@ -84,13 +84,18 @@
   
   .page-title
     max-width $contentWidth + 200rem
+    padding-bottom 0
 
     .has-anchor &
       max-width $contentWidth
 
   .breadcrumb
     max-width $contentWidth + 200rem
+    padding-bottom 1rem
 
     .has-anchor &
       max-width $contentWidth
+
+    li
+      font-size 12px
 </style>

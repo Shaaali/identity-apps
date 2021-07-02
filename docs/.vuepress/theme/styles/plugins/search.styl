@@ -9,19 +9,14 @@
       border-color transparent
       border-radius 0.25em
 
-      @media (max-width $MQMobile)
-        left 0
-        background-color transparent
-
-      @media (min-width $MQNarrow)
-        background-color #efeef4
-
-        &:focus
-          width 15rem
-
       &:focus
+        width 15rem
         background-color var(--bgcolor)
         border-color var(--accent-color)
+
+      @media (max-width $MQNarrow)
+        left 0
+        background-color transparent
 
       .theme-dark &
         color var(--text-color)
