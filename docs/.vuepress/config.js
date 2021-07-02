@@ -79,88 +79,89 @@ module.exports = config({
         ],
         sidebar: {
             '/guides/' : [
-            {
-                title: 'Get Started',
-                children: [
-                    ['get-started/', 'Asgardeo Overview'],
-                    ['get-started/create-organization.md', 'Create an organization']
-                ]
-            },
-            {
-                title: 'Users',
-                children: [
+                {
+                    title: 'Get Started',
+                    children: [
+                        ['get-started/', 'Asgardeo Overview'],
+                        ['get-started/create-organization.md', 'Create an organization']
+                    ]
+                },
+                {
+                    title: 'Users',
+                    children: [
+                        {
+                            title: 'Manage Users',
+                            children: [
+                                ['/guides/user-management/', 'Users'],
+                                ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
+                                ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
+                                ['user-management/user-profiles.md', 'User profiles'],
+                                ['user-management/sessions.md', 'Sessions'],
+                            ]
+                        },
+                        ['user-management/groups.md', 'Groups'],
+                    ]
+                },
+                {
+                    title: 'Applications',
+                    children: [
+                    ['applications/', 'Overview'],
                     {
-                        title: 'Manage Users',
+                        title: 'Single page application',
+                        prefix: 'applications/',
+                        sidebarDepth: 2,
                         children: [
-                            ['user-management/', 'Users'],
-                            ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
-                            ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
-                            ['user-management/user-profiles.md', 'User profiles'],
-                            ['user-management/sessions.md', 'Sessions'],
+                            ['spa/', 'Overview'],
+                            ['spa/spa-integrate-with-oidc', 'Integrate with OIDC']
                         ]
                     },
-                    ['user-management/groups.md', 'Groups'],
+                    {
+                        title: 'Web application',
+                        prefix: 'applications/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['web-app/', 'Overview'],
+                            ['web-app/web-app-integrate-with-oidc.md', 'Integrate with OIDC']
+                        ]
+                    },
+                    // Uncomment as each section is implemented
+    //                {
+    //                    title: 'Application settings',
+    //                    prefix: '/guides/applications/application-settings/',
+    //                    collapsable: false,
+    //                    children: [
+    //                        ['configure-general.md', 'Configure general details'],
+    //                        ['configure-protocol.md', 'Define authorization protocol'],
+    //                        ['configure-user-attribute.md', 'Select user attributes'],
+    //                        ['configure-sign-on.md', 'Configure sign-on method'],
+    //                        ['configure-advanced.md', 'Configure advanced settings']
+    //                    ]
+    //                },
                 ]
-            },
-            {
-                title: 'Applications',
-                children: [
-                ['applications/', 'Overview'],
-                {
-                    title: 'Single page application',
-                    prefix: 'applications/',
-                    sidebarDepth: 2,
-                    children: [
-                        ['spa/', 'Overview'],
-                        ['spa/spa-integrate-with-oidc', 'Integrate with OIDC']
-                    ]
                 },
                 {
-                    title: 'Web application',
-                    prefix: 'applications/',
-                    sidebarDepth: 2,
+                    title: 'Identity Providers',
                     children: [
-                        ['web-app/', 'Overview'],
-                        ['web-app/web-app-integrate-with-oidc.md', 'Integrate with OIDC']
-                    ]
-                },
-                // Uncomment as each section is implemented
-//                {
-//                    title: 'Application settings',
-//                    prefix: '/guides/applications/application-settings/',
-//                    collapsable: false,
-//                    children: [
-//                        ['configure-general.md', 'Configure general details'],
-//                        ['configure-protocol.md', 'Define authorization protocol'],
-//                        ['configure-user-attribute.md', 'Select user attributes'],
-//                        ['configure-sign-on.md', 'Configure sign-on method'],
-//                        ['configure-advanced.md', 'Configure advanced settings']
-//                    ]
-//                },
-              ]
-            },
-            {
-                title: 'Identity Providers',
-                children: [
-                ['identity-providers/', 'Overview'],
-                {
-                    title: 'Social login',
-                    prefix: 'identity-providers/social-login/',
-                    children: [
-                        ['facebook.md', 'Facebook'],
-                        ['github.md', 'Github'],
-                        ['google.md', 'Google'],
-                    ]
-                },
-                {
-                    title: 'Enterprise login',
-                    prefix: 'identity-providers/enterprise-login/',
-                    children: [
-                        ['oidc.md', 'OpenID Connect'],
-                        // ['saml.md', 'SAML'],
+                    ['identity-providers/', 'Overview'],
+                    ['identity-providers/social-login/', 'Social Login'],
+                    // {
+                    //     title: 'Social login',
+                    //     prefix: 'identity-providers/social-login/',
+                    //     children: [
+                    //         ['facebook.md', 'Facebook'],
+                    //         ['github.md', 'Github'],
+                    //         ['google.md', 'Google'],
+                    //     ]
+                    // },
+                    {
+                        title: 'Enterprise login',
+                        prefix: 'identity-providers/enterprise-login/',
+                        children: [
+                            ['oidc.md', 'OpenID Connect'],
+                            // ['saml.md', 'SAML'],
 
-                    ]
-                },
+                        ]
+                    },
                 ]
             },
             {

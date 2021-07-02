@@ -31,12 +31,12 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
     >
+      <DarkmodeSwitch class="darkmode-switch"/>
       <AlgoliaSearchBox
           v-if="isAlgoliaSearch"
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <DarkmodeSwitch class="darkmode-switch"/>
       <!-- <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/> -->
     </div>
   </div>
@@ -127,7 +127,7 @@ function css (el, property) {
     border-right 1px solid #aaa
 
     .has-sidebar &
-      border none
+      border-right none
 
     @media (max-width 1024px)
       border-right 1px solid #aaa
@@ -136,10 +136,10 @@ function css (el, property) {
         border-right 1px solid #aaa
 
     @media (max-width $MQMobile)
-      border none
+      border-right none
 
       .has-sidebar &
-        border none
+        border-right none
 
   .logo
     min-width $navbarHeight - $navbarVerticalPadding * 2
