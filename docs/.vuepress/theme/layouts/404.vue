@@ -15,8 +15,8 @@
 .page.not-found
   display block
   max-width $homePageWidth
-  margin 100px auto 0
-  padding ($navbarHeight + 1rem) 2rem
+  margin 0 auto 0
+  padding ($navbarHeight + 5rem) 2rem
 
   .action-button
     display inline-block
@@ -34,4 +34,10 @@
     &:hover
       cursor pointer
       background var(--accent-color-l10)
+
+  & + .footer-wrapper
+    position absolute
+    bottom 0
+    left 0
+    right 0
 </style>
