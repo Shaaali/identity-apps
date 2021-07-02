@@ -9,7 +9,7 @@
     </MyTransition>
     <MyTransition :delay="0.3">
       <div class="qs-search-container">
-        <input class="qs-search" v-model="query" type="text" placeholder="What are you looking for?">
+        <input class="qs-search" v-model="query" type="text" placeholder="Search for technologies...">
       </div>
     </MyTransition>
     <MyTransition :delay="0.3">

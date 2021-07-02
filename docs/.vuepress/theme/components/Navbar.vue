@@ -31,12 +31,12 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
     >
-      <DarkmodeSwitch class="darkmode-switch"/>
       <AlgoliaSearchBox
           v-if="isAlgoliaSearch"
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
+      <DarkmodeSwitch class="darkmode-switch"/>
       <!-- <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/> -->
     </div>
   </div>
@@ -123,11 +123,23 @@ function css (el, property) {
   
   .home-link
     padding-right 30px
-    border-right 1px solid #aaa
     height 90%
+    border-right 1px solid #aaa
+
+    .has-sidebar &
+      border none
+
+    @media (max-width 1024px)
+      border-right 1px solid #aaa
+      
+      .has-sidebar &
+        border-right 1px solid #aaa
 
     @media (max-width $MQMobile)
-      border-right none
+      border none
+
+      .has-sidebar &
+        border none
 
   .logo
     min-width $navbarHeight - $navbarVerticalPadding * 2
