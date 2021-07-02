@@ -48,7 +48,7 @@ Click on the button below to download the sample.
 2. Scroll down to the `<script>` tag at the end of the body tag and find `authConfig` object and change the configurations with the relevant values.
   - **clientID** - You should add the client id of the registered application. Refer <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain client ID</a> from Asgardeo console.
   - **serverOrigin** - "https://dev.accounts.asgardeo.io/t/<organization_name>"
-    ``` HTML
+    ``` HTML{2,4}
     const authConfig = {
         clientID: "<client_id>",
         signInRedirectURL: "https://localhost:5000",

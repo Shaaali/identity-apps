@@ -1,4 +1,4 @@
-# Build login for public clients using OpenID Connect
+# Build login for public clients with OpenID Connect
 
 A public client is an application which cannot keep the client credentials in secure way. <a href="/guides/applications/spa/">Single-page applications</a>, and native mobile applications are some examples for public clients. 
 

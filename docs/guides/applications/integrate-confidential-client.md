@@ -1,4 +1,4 @@
-# Build login for confidential clients using OpenID Connect
+# Build login for confidential clients with OpenID Connect
 
 A confidential client is an application which can keep the client credentials in secure way. For example, <a href="/guides/applications/web-app">Web applications</a> is a confidential client where it can store the client secret in backend database, or some configuration store securely without exposing to third parties. 
 

@@ -48,7 +48,7 @@ Change the `config.json` file found in the `asgardeo-angular-app/src` sample fol
  - **clientID** - You should add the client id of the registered application. Refer <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain client ID</a> from Asgardeo console.
  - **serverOrigin** - "https://dev.accounts.asgardeo.io/t/<organization_name>"
 
-    ``` json
+    ``` json{2,3}
     {
         "clientID": "clientID>",
         "serverOrigin": "https://dev.accounts.asgardeo.io/t/<organization_name>",
