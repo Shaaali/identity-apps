@@ -91,8 +91,8 @@ module.exports = config({
                 children: [
                     {
                         title: 'Manage Users',
-                        path: 'user-management/',
                         children: [
+                            ['user-management/', 'Users'],
                             ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
                             ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
                             ['user-management/user-profiles.md', 'User profiles'],
