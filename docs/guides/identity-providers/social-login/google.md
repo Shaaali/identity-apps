@@ -1,6 +1,8 @@
 # Google Login
 
-Follow this guide to enable Google login to your applications.
+You can add Google login to your applications using Asgardeo and enable users to log into applications with their Google account. To provides this capability, Asgardeo uses standard [OpenID Connect protocol](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowSteps) underneath.  
+
+This guide provides the instructions on how to enable the Google login to your applications. 
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Google login.

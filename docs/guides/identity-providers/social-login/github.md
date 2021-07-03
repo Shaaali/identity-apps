@@ -1,6 +1,8 @@
 # Github Login
 
-Follow this guide to enable Github login to your applications.
+You can add Github login to your applications using Asgardeo and enable users to log into applications with their Github account. To provides this capability, Asgardeo uses standard [OAuth2.0 protocol](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3) underneath.  
+
+This guide provides the instructions on how to enable the Github login to your applications. 
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Github login.

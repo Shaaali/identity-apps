@@ -1,9 +1,12 @@
 # OpenID Connect Identity Provider Login
 
-Follow this guide to enable login to your application using an external OpenID Connect(OIDC) identity provider. 
+You can add standard [OpenID Connect login](https://openid.net/specs/openid-connect-core-1_0.html#) to your applications using an external OpenID Connect(OIDC) identity provider and enable users to log into applications with their accounts in the external identity providers.
 
-For an application, the OpenID Connect login flow with external identity provider works as follows:
+## How it works
+To provides this login capability, Asgardeo uses standard [OpenID Connect with authorization code flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowSteps) underneath. For an application, the OpenID Connect login flow with external identity provider works as follows:
  <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-enterprise-login-flow.png')" alt="Add OIDC enterprise login in Asgardeo">
+
+This guide provides the instructions on how to enable the login to your applications. 
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable OpenID Connect enterprise login.
