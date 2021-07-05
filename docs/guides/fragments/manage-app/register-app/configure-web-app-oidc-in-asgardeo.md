@@ -1,6 +1,6 @@
 
 1. In the Asgardeo Console, Select the **Develop > Applications**.
-2. Select **Use Predefined** and select **Traditional Web Application** type.
+2. Select **New Application** and select **Traditional Web Application** type.
    <img :src="$withBase('/assets/img/guides/applications/select-app-type.png')" alt="Select app type in Asgardeo">
 3. Provide the following details. 
   - **Name:** A unique name to identify your application.
