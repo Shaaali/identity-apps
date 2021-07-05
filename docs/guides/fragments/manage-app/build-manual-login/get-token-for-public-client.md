@@ -108,28 +108,28 @@ This token request has some parameters. See [Token request with authorization co
 <br>
 <table>
   <tr>
-    <th>Request parameters</th>
+    <th>Request Parameter</th>
     <th>Description</th> 
   </tr>
   <tr>
     <td>grant_type<Badge text="Required" type="mandatory"/></td>
-    <td>the grant type. Here we are using <code>authorization_code</code> grant.</td>
+    <td>The grant type. Here we are using <code>authorization_code</code> grant.</td>
   </tr>
   <tr>
     <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
-    <td>where the response is redirected to at the end of the process.</td>
+    <td>This is where the response is redirected to at the end of the process.</td>
   </tr>
   <tr>
     <td>code<Badge text="Required" type="mandatory"/></td>
-    <td>the code received from authorization request.</td>
+    <td>The authorization code received from authorization request.</td>
   </tr>
   <tr>
     <td>code_verifier<Badge text="Required" type="mandatory"/></td>
-    <td>the plain text cryptographically random string that was used to generate the code_challenge. This is required for authorization code flow with PKCE</td>
+    <td>The plain text cryptographically random string that was used to generate the code_challenge. This is required for authorization code flow with PKCE</td>
   </tr>
   <tr>
     <td>client_id<Badge text="Required" type="mandatory"/></td>
-    <td>client id obtained when registering the application in Asgardeo.</td>
+    <td>Client id obtained when registering the application in Asgardeo.</td>
   </tr>
 </table>
 

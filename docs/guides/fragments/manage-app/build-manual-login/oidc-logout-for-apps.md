@@ -17,7 +17,7 @@ The logout request has some parameters. See [RP-initiated logout request](https:
 <br>
 <table>
   <tr>
-    <th>Request parameters</th>
+    <th>Request Parameter</th>
     <th>Description</th> 
   </tr>
   <tr>

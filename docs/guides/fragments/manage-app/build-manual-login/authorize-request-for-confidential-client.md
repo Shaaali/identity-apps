@@ -29,7 +29,7 @@ See [Authentication Request with  Authorization code](https://openid.net/specs/o
   </tr>
   <tr>
     <td>response_type<Badge text="Required" type="mandatory"/></td>
-    <td>required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
+    <td>Required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
   </tr>
   <tr>
     <td>redirect_uri<Badge text="Required" type="mandatory"/></td>

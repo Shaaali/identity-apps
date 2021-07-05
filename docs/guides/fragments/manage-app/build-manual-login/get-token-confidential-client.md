@@ -96,15 +96,15 @@ This token request has some parameters. See [Token request with authorization co
   </tr>
    <tr>
       <td>code<Badge text="Required" type="mandatory"/></td>
-      <td>the code received from authorization request.</td>
+      <td>The authorization code received from authorization request.</td>
     </tr>
   <tr>
     <td>grant_type<Badge text="Required" type="mandatory"/></td>
-    <td>the grant type. Here we are using 'authorization_code' grant.</td>
+    <td>The grant type. Here we are using 'authorization_code' grant.</td>
   </tr>
   <tr>
     <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
-    <td>where the response is redirected to at the end of the process.</td>
+    <td>This is where the response is redirected to at the end of the process.</td>
   </tr>
 </table>
 <br>
