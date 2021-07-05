@@ -25,6 +25,7 @@ customer account.
 
 Now that you've set up your own organization and created your first user, you can:
 
+- <a href="/guides/user-management/">Manage your users in Asgardeo</a>
 - <a href="/guides/user-management/manage-collaborator-accounts/#create-collaborator-user">Invite a collaborator user to your organization</a>
 - [Tryout a sample application](../../quickstarts/README.md)
 - [Manage your applications with asgardeo](../applications/README.md)

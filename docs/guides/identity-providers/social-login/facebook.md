@@ -1,6 +1,8 @@
 # Facebook Login
 
-Follow this guide to enable Facebook login to your applications.
+You can add Facebook login to your applications using Asgardeo and enable users to log into applications with their Facebook account.
+
+This guide provides the instructions on how to enable the Facebook login to your applications. 
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Facebook login.
