@@ -89,7 +89,6 @@ This token request has some parameters
   <tr>
     <td>token_type_hint<Badge text="Optional" type="optional"/></td>
     <td>The type of the token. If the token is access token, the type should be _access_token_. For refresh token, the type should be _refresh_token_</td>
-    <td>No</td>
   </tr>
 </table>
 

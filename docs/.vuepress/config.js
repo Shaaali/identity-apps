@@ -134,8 +134,26 @@ module.exports = config({
                     title: 'Identity Providers',
                     children: [
                     ['identity-providers/', 'Overview'],
-                    ['identity-providers/social-login/', 'Social Login'],
-                    ['identity-providers/enterprise-login/', 'Enterprise Login'],
+                    {
+                        title: 'Social Login',
+                        prefix: 'identity-providers/social-login/',
+                        path: 'identity-providers/social-login/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['facebook.md', 'Facebook'],
+                            ['github.md', 'Github'],
+                            ['google.md', 'Google'],
+                        ]
+                    },
+                    {
+                        title: 'Enterprise Login',
+                        prefix: 'identity-providers/enterprise-login/',
+                        path: 'identity-providers/enterprise-login/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['oidc.md', 'OpenID Connect']
+                        ]
+                    },
                 ]
             },
             {
@@ -154,6 +172,7 @@ module.exports = config({
                     {
                         title: 'Predefined templates',
                         prefix: 'conditional-auth/',
+                        sidebarDepth: 2,
                         children: [
                             ['predefined-templates/', 'Overview'],
                             ['predefined-templates/group-based-template.md', 'Group based access control'],
@@ -169,10 +188,6 @@ module.exports = config({
                 title: 'Hidden',
                 children: [
                     ['identity-providers/enterprise-login/configure-additional-query-params.md', 'Configure additional query parameters'],
-                    ['identity-providers/enterprise-login/oidc.md', 'OIDC'],
-                    ['identity-providers/social-login/facebook.md', 'Facebook'],
-                    ['identity-providers/social-login/google.md', 'Google'],
-                    ['identity-providers/social-login/github.md', 'Github'],
                     ['applications/integrate-public-client.md', 'Integrate public client'],
                     ['applications/integrate-confidential-client.md', 'Integrate confidential client'],
                 ]

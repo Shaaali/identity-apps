@@ -23,12 +23,12 @@ This authorization request takes some parameters. See [Authentication Request wi
 
 <table>
   <tr>
-    <th>Request parameters</th>
+    <th>Request Parameter</th>
     <th>Description</th> 
   </tr>
   <tr>
     <td>response_type<Badge text="Required" type="mandatory"/></td>
-    <td>required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
+    <td>Required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
   </tr>
   <tr>
     <td>redirect_uri<Badge text="Required" type="mandatory"/></td>

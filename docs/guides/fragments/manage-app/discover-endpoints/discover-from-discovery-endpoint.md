@@ -1,7 +1,8 @@
 
 [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) provides the capability to discover the metadata such as endpoints, scopes, response types, claims, supported client authentication methods of Identity providers such as Asgardeo.
 
-Application can dynamically discover the OpenID Connect identity provider metadata by calling the [OpenID Connect discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest) endpoint which follows the structure `<issuer>/.well-known/openid-configuration`.  
+Application can dynamically discover the OpenID Connect identity provider metadata by calling the [OpenID Connect discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest) endpoint which follows the structure:  
+ `<issuer>/.well-known/openid-configuration`.  
 
 **Issuer of Asgardeo:**
 ```
