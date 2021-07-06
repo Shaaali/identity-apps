@@ -17,16 +17,16 @@ with the PKCE ([Proof Key for Code Exchange](https://datatracker.ietf.org/doc/ht
 The following guides provide the detailed steps needed to secure your SPAs with Asgradeo using the OpenID Connect 
 Authorization Code Flow for public clients with the PKCE. 
 
-## Try out samples
+## What's next
+- [Configure OpenID Connect login to your Single page application ](./configure-login/)
+- [Explore OpenID Connect flow for Single page apps in depth](../integrate-public-client/)
+
+### Try out samples
 - [React SPA Sample](/quickstarts/qsg-spa-react.md)
 - [Angular SPA Sample](/quickstarts/qsg-spa-angular.md)
 - [JavaScript SPA Sample](/quickstarts/qsg-spa-javascript.md)
 
-## Use an SDK to enable sign in to your app
+### Use an SDK to enable sign in to your app
 - [React SDK](/sdks/react.md)
 - [Angular SDK](/sdks/angular.md)
 - [Javascript SDK](/sdks/javascript.md)
-
-## What's next
-- [Configure OpenID Connect login to your Single page application ](./configure-login/)
-- [Explore OpenID Connect flow for Single page apps in depth](../integrate-public-client/)

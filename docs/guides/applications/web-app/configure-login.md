@@ -6,8 +6,8 @@ You can follow this document to obtain required information and the configuratio
 
 In case, you want to implement login from scratch, see how to <a href = "/guides/applications/integrate-confidential-client">build OpenID Connect login flow manually</a>.
 
-When configure OpenID Connect based Sign In, you need to know two things:
-1. [Obtain client ID and client secret of the application](#obtain-client-id-and-client-secret-of-the-app)
+When configuring OpenID Connect based sign In, you need to know two things:
+1. [Client ID and client secret of the application](#obtain-client-id-and-client-secret-of-the-app)
 2. [OpenID Connect endpoints of Asgardeo](#discover-openid-connect-endpoints-of-asgardeo)
 
 ## Prerequisite
