@@ -27,7 +27,7 @@ Click on the button below to download the sample.
     buttonText='Download Sample'
     startIconPath='images/technologies/angular-logo.svg'
     endIconPath='icons/downloadIcon.svg'
-    externalLink='https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/download/v0.1.3/asgardeo-angular-app.zip'
+    externalLink='https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip'
     v-bind:openInNewTab='true'
 />
 <Button 

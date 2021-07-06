@@ -131,9 +131,27 @@ module.exports = config({
                         sidebarDepth: 2,
                         children: [
                             ['web-app/', 'Overview'],
-                            ['web-app/register-app', 'Register webapp'],
-                            ['web-app/configure-login', 'Configure OpenID Connect login'],
-                            ['web-app/oidc-settings', 'OpenID Connect settings']
+                            {
+                                title: 'OpenID Connect',
+                                prefix: 'web-app/oidc/',
+                                sidebarDepth: 2,
+                                children: [
+                                    ['register-app', 'Register webapp'],
+                                    ['configure-login', 'Configure OpenID Connect login'],
+                                    ['oidc-settings', 'OpenID Connect settings']
+                                ]
+                            },
+                            {
+                                title: 'SAML',
+                                prefix: 'web-app/saml/',
+                                sidebarDepth: 2,
+                                children: [
+                                    ['register-app', 'Register webapp'],
+                                    ['configure-login', 'Configure SAML login'],
+                                    ['saml-settings', 'SAML settings']
+                                ]
+                            },
+
                         ]
                     },
                 ]

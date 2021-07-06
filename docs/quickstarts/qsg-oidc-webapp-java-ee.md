@@ -8,7 +8,7 @@ Following this guide, you will be able to deploy a sample Java EE web applicatio
 
 # Prerequisites
 1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-2. You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/register-app">register an application</a> in Asgardeo.
+2. You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/oidc/register-app">register an application</a> in Asgardeo.
 3. Only <a href="/guides/user-management/">customer</a> users can login to applications. <a href ="/guides/user-management/manage-customer-accounts/#create-customer-user">Create customer account</a> if you don't have.
 
 ## Configure the sample application
@@ -53,11 +53,11 @@ Click on the button below to download the sample.
      <table>
       <tr>
           <td>consumerKey</td>
-          <td>You should add the client id of the registered application. Refer <a href = "/guides/applications/web-app/configure-login/#obtain-client-id-and-client-secret">how to obtain client ID</a> from Asgardeo console.</td>
+          <td>You should add the client id of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client ID</a> from Asgardeo console.</td>
       </tr>
       <tr>
         <td>consumerSecret</td>
-        <td>You should add the client id of the registered application. Refer <a href = "/guides/applications/web-app/configure-login/#obtain-client-id-and-client-secret">how to obtain client secret</a> from Asgardeo console.</td>
+        <td>You should add the client id of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client secret</a> from Asgardeo console.</td>
       </tr>
       <tr>
         <td>scope</td>

@@ -10,7 +10,7 @@ authentication. The new device or browser is identified by a cookie, therefore, 
 time is specified in the authentication script), the same browser or device is considered as a new device.
 
 ## Prerequisites
-1. You should have registered an application. If you don't have an application registered, <a href ="/guides/applications/web-app/register-app/">register an application</a> in Asgardeo.
+1. You should have registered an application. If you don't have an application registered, <a href ="/guides/applications/web-app/oidc/register-app/">register an application</a> in Asgardeo.
 2. Configure conditional authentication and deploy the **New-Device-Based Authentication Template** for the application.
    Refer the <a href ="/guides/conditional-auth/configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
@@ -133,4 +133,3 @@ On the successful execution of step 2 of the authentication flow, [setCookie(res
     <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
 3. Logout and login with the same user from the same device/browser. User will be successfully logged in to the
    application with only the basic authentication.
-   
