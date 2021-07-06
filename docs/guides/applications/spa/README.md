@@ -1,8 +1,11 @@
 # Single page applications
 
 Single-page applications(SPAs) are apps that run on the browser and do not require a page reload with change 
-in content. SPAs load a single HTML page initially and dynamically update the content as a user interacts with it. 
-They fetch content by doing API calls to a web server directly from the browser. Since SPAs run their logic entirely on the browser they are also known as browser-based apps.
+in content. 
+
+The main advantage of single-page application is its speed. Since content is dynamically updated as the user interacts with it, user does not need to wait for page reloads. User can experience a seamless flow with high responsiveness from application. 
+
+JavaScript frameworks and libraries, such as AngularJS, React, Vue.js, are some popular technologies which are adoptive with SPA technologies.
 
 ## Secure your SPA with Asgardeo
 
@@ -14,11 +17,16 @@ with the PKCE ([Proof Key for Code Exchange](https://datatracker.ietf.org/doc/ht
 The following guides provide the detailed steps needed to secure your SPAs with Asgradeo using the OpenID Connect 
 Authorization Code Flow for public clients with the PKCE. 
 
-* [Configure OpenID Connect login to your Single page application ](./configure-login/)
-* [Tryout React SPA Sample](/quickstarts/qsg-spa-react.md)
-* [Tryout Angular SPA Sample](/quickstarts/qsg-spa-angular.md)
-* [Tryout JavaScript SPA Sample](/quickstarts/qsg-spa-javascript.md)
-* [Explore OpenID Connect flow in depth](../integrate-public-client/)
-* [Try React SDK](/sdks/react.md)
-* [Try Angular SDK](/sdks/angular.md)
-* [Try Javascript SDK](/sdks/javascript.md)
+## What's next
+- [Configure OpenID Connect login to your Single page application ](./configure-login/)
+- [Explore OpenID Connect flow for Single page apps in depth](../integrate-public-client/)
+
+### Try out samples
+- [React SPA Sample](/quickstarts/qsg-spa-react.md)
+- [Angular SPA Sample](/quickstarts/qsg-spa-angular.md)
+- [JavaScript SPA Sample](/quickstarts/qsg-spa-javascript.md)
+
+### Use an SDK to enable sign in to your app
+- [React SDK](/sdks/react.md)
+- [Angular SDK](/sdks/angular.md)
+- [Javascript SDK](/sdks/javascript.md)

@@ -1,21 +1,19 @@
 # Configure OpenID Connect login
 
-This documents walks you through the steps of configuring OpenID Connect login with Asgardeo.
-
-You can follow this document to obtain required information and the configurations, if you are trying to:
+You can follow this document to obtain required information and the configurations to:
  - Integrate a web application that supports OpenID Connect <br>
  - Build login with Asgardeo using an OpenID Connect supported SDK <br>
 
 In case, you want to implement login from scratch, see how to <a href = "/guides/applications/integrate-confidential-client">build OpenID Connect login flow manually</a>.
 
-When configure login, you need to follow below steps:
-1. [Obtain client ID and client secret](#obtain-client-id-and-client-secret)
-2. [Discover endpoints of Asgardeo](#discover-endpoints)
+When configuring OpenID Connect based sign In, you need to know two things:
+1. [Client ID and client secret of the application](#obtain-client-id-and-client-secret-of-the-app)
+2. [OpenID Connect endpoints of Asgardeo](#discover-openid-connect-endpoints-of-asgardeo)
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="../register-app">register an application</a>.
 
-## Obtain client ID and client secret
+## Obtain client ID and client secret of the app
 When your web application login with Asgardeo, application requires client ID and client secret for authentication. To get the client ID, you can follow below steps:
 1. In the Asgardeo Console, Select the **Develop > Applications**.
 2. Select the application to integrate.
@@ -23,20 +21,21 @@ When your web application login with Asgardeo, application requires client ID an
 4. Copy **Client ID** and **Client Secret**. 
     <img :src="$withBase('/assets/img/guides/applications/get-client-id-and-secret.png')" alt="Get client ID and secret of webapp">
 
-## Discover endpoints
+## Discover OpenID Connect endpoints of Asgardeo
 You need to know the endpoints of Asgardeo if you want to add OIDC login to your application. 
 
 There are two options for an OpenID Connect application to identify the endpoints of Asgardeo:
- 1. [Use OpenID Connect discovery endpoint](#use-openid-connect-discovery-endpoint)
- 2. [Get the endpoints from Asgardeo Console](#get-endpoints-from-console)
 
-### Use OpenID Connect discovery endpoint
+1. [Use OpenID Connect discovery](#use-openid-connect-discovery)
+2. [Get endpoint information from Asgardeo Console](#get-endpoint-information-from-console)
+
+### Use OpenID Connect discovery
 
  <CommonGuide guide='guides/fragments/manage-app/discover-endpoints/discover-from-discovery-endpoint.md'/>
 
 <br>
 
-### Get endpoints from Console
+### Get endpoint information from Console
 
 Some applications and SDKs do not have the capability to dynamically resolve endpoints from  OpenID Connect discovery. You need to configure endpoints manually to support them.
 
