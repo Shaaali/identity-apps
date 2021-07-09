@@ -19,15 +19,15 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
 2. <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
 <br>
 
-## Add authentication to your app
-This guide provides information on how to:
+## Integrate your app with Asgardeo
+This guide provides below information on how to integrate your Angular app with Asgardeo:
 1. [Install SDK](#install-sdk)
-2. [Initialize module](#initialize-module)
-3. [Add logout](#add-logout)
+2. [Initialize SDK](#initialize-sdk)
+3. [Add Login](#add-login)
 4. [Get access token](#get-access-token)
 5. [Get decoded ID token](#get-decoded-id-token)
 6. [Get user information](#get-user-information)
-7. [Add Login](#add-login)
+7. [Add logout](#add-logout)
 
 
 ### Install SDK
@@ -39,15 +39,15 @@ npm install @asgardeo/auth-angular --save
 ```
 <br>
 
-### Initialize module
+### Initialize SDK
 
 Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations.
 
 Provide the following values to the `forRoot()` function of `AsgardeoAuthModule` to get the SDK to work with your application:
- - clientID
- - serverOrigin
- - signInRedirectURL
- - signOutRedirectURL
+ - **clientID** : Client ID of your  OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>
+ - **serverOrigin** : Asgardeo server host name along with your organization name
+ - **signInRedirectURL** : URL to return after login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>
+ - **signOutRedirectURL** : URL to return after logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>
 
 ```
 // app.module.ts
