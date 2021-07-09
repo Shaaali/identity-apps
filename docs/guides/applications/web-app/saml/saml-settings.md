@@ -5,22 +5,20 @@ You can find the SAML protocol related settings under **protocol** section of th
  
 ## Basic settings
 
-### Assertion consumer service URLs
+### Assertion consumer service URLs (ACS URLs)
 The Assertion Consumer Service (ACS) URL determines where to send the SAML response. 
 
-However, if the SAML2 request is signed and SAML2 request contains the ACS URL, the Asgardeo will honor the ACS URL of the SAML2 request. It should have this format: https://(host-name):(port)/acs .
-
-An application can have multiple ACS URLs.
-
-<br>
+An application can have multiple ACS URLs. SAML authentication response and logout response are sent to one of the ACS URLs configured.
 
 ### Default assertion consumer service URL
-Since there can be multiple assertion consumer URLs, you must define a Default Assertion Consumer URL in case Asgardeo is unable to retrieve it from the authentication request.
+Since there can be multiple assertion consumer URLs, you must define a Default Assertion Consumer URL in case the application does not send the ACS URL in the SAML sign-on request
 
 ::: tip In a sign-on request by a SAML app, following needs to be considered
 - If **no ACS URL is given in the <code>< AuthnRequest ></code>**, the Asgardeo sends the response to the **default ACS URL** of the service provider (whether the request is signed or not).
 - If the **ACS URL in <code>< AuthnRequest ></code> matches** with one of the registered URLs, the Asgardeo sends the response to the **matched one**.
-- If the **ACS URL in <code>< AuthnRequest ></code> does not match any** of the registered ACS URLs and if the **request is signed**, the Asgardeo sends the response to the **ACS URL in the request** only if the signature is valid. Alternatively, the <code>< AuthnRequest ></code> is rejected.
+- If the **ACS URL in <code>< AuthnRequest ></code> does not match any** of the registered ACS URLs **and**:
+  - If the **request is signed** and the **signature is valid** , the Asgardeo sends the response to the **ACS URL in the request**.
+  - If the **request is not signed**, or the **signature is not valid**, the Asgardeo rejects the authentication request.
 :::
 
 ### IdP entity ID alias
@@ -142,28 +140,6 @@ Recipient is a URI specifying the entity or location to which Asgardeo can prese
 For example, this attribute might indicate that the assertion must be delivered to a particular network endpoint in order to prevent an intermediary from redirecting it someplace else.
 
 By default, Asgardeo sends `ACS URL` as the `recipient` value.
-
-```xml
-<saml2:Assertion ID="_1fc418b1886158a8c239f9ee5205718b"
-                     IssueInstant="2021-07-07T08:28:30.228Z"
-                     Version="2.0"
-                     xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"
-                     >
-        -
-        -
-        <saml2:Subject>
-            <saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">Alica@bifrost.com</saml2:NameID>
-            <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
-                <saml2:SubjectConfirmationData InResponseTo="mjagocahejhadgbaldpgpoipaghellkjkdnpilcp"
-                                               NotOnOrAfter="2021-07-07T08:33:30.228Z"
-                                               Recipient="http://localhost:8081/sample-app/home.jsp"
-                                               />
-            </saml2:SubjectConfirmation>
-        </saml2:Subject>
-        -
-        -
-</saml2:Assertion>
-```
 
 After adding `http://localhost:8081/sample-app-new/home.jsp` as a `recipient`:
 

@@ -132,7 +132,7 @@ module.exports = config({
                         children: [
                             ['web-app/', 'Overview'],
                             {
-                                title: 'OpenID Connect',
+                                title: 'Sign in with OIDC',
                                 prefix: 'web-app/oidc/',
                                 sidebarDepth: 2,
                                 children: [
@@ -142,7 +142,7 @@ module.exports = config({
                                 ]
                             },
                             {
-                                title: 'SAML',
+                                title: 'Sign in with SAML',
                                 prefix: 'web-app/saml/',
                                 sidebarDepth: 2,
                                 children: [

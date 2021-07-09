@@ -14,6 +14,7 @@ Following guides provide detailed steps to integrating login to your web applica
 ## What's next
 - [Configure OpenID Connect login to your webapp](./oidc/configure-login/)
 - [Explore OpenID Connect flow for web apps in depth](../integrate-confidential-client/)
+- [Configure SAML login to your webapp](./saml/configure-login/)
 
 ### Try out samples
 - [Java EE sample](/quickstarts/qsg-oidc-webapp-java-ee.md)

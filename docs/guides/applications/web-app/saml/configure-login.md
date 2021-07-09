@@ -1,13 +1,13 @@
 # Configure SAML login
 
 You can follow this document to obtain required information and the configurations to:
- - Integrate a web application that supports SAML <br>
- - Build login with Asgardeo using an SAML supported library<br>
+ - Integrate a web application that supports SAML
+ - Build login with Asgardeo using an SAML supported library
 
-When configuring SAML based sign In, you need to know:
-1. SAML endpoints of Asgardeo
-2. Issuer ID of Asgardeo
-3. Certificate of Asgardeo
+When configuring SAML based sign in with Asgardeo, you need to know:
+1. SAML IDP endpoints of Asgardeo
+2. Issuer of Asgardeo
+3. Public certificate of Asgardeo
 
  <img :src="$withBase('/assets/img/guides/applications/saml-app/saml-integration.png')" alt="Integrate SAML app">
 
@@ -15,29 +15,23 @@ When configuring SAML based sign In, you need to know:
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="../register-app">register an application</a>.
 
 ## Discover SAML configurations of Asgardeo
-You need to know the SAML configurations of Asgardeo if you want to add SAML login to your application. 
+You need to know the SAML IDP configurations of Asgardeo if you want to add SAML login to your application. 
 
-There are two options for an SAML application to get the SAML configurations of Asgardeo:
-1. [Use IDP SAML metadata of Asgardeo](#use-saml-metadata)
-2. [Get SAML configurations of Asgardeo from Console](#get-saml-configurations-of-asgardeo-from-console)
+There are two options for an SAML application to get the SAML IDP configurations of Asgardeo:
+1. [Use SAML IDP metadata of Asgardeo](#use-saml-metadata)
+2. [Get SAML IDP configurations of Asgardeo from Console](#get-saml-configurations-of-asgardeo-from-console)
 
 ### Use SAML metadata
 
-[SAML metadata](https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf)  is an XML document which contains information necessary to integrate with SAML supported identity provider or application. 
+[SAML metadata](https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf) is an XML document which contains information necessary to integrate a SAML application with a with SAML supported identity provider. 
 
 The SAML IDP metadata document contains:
- 1. Endpoints (Redirect URLs, Logout URLs, etc)
+ 1. Endpoints (single sign-on URLs, single logout URLs, etc)
  2. Supported bindings
- 3. Identifiers (entityID)
- 4. Public keys. 
+ 3. Identifiers (entityID or sometimes called Issuer)
+ 4. Public certificate
  
-There are two ways to get the SAML IDP metadata of Asgardeo.
-1. File based metadata
-2. URL based metadata
-
-Based on the capability of your SAML application or library, you can choose either approach.
-
-**Sample metadata of Asgardeo**
+**Sample SAML IDP metadata of Asgardeo**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -71,27 +65,17 @@ HFY29KP4da//BDdQrftzYCATe37Um09id/0KMGs=</X509Certificate>
 		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://accounts.asgardeo.io/t/bifrost/samlsso" ResponseLocation="https://accounts.asgardeo.io/t/bifrost/samlsso"/>
 		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://accounts.asgardeo.io/t/bifrost/samlsso"/>
 		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://accounts.asgardeo.io/t/bifrost/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://accounts.asgardeo.io/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://accounts.asgardeo.io/samlsso"/>
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://accounts.asgardeo.io/t/bifrost/samlsso"/>
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://accounts.asgardeo.io/t/bifrost/samlsso"/>
 	</IDPSSODescriptor>
 </EntityDescriptor>
 ```
 
-<br>
+There are two ways to get the SAML IDP metadata of Asgardeo.
+1. [File based metadata](#use-file-based-metadata)
+2. [URL based metadata](#use-url-based-metadata)
 
-#### Use URL Based Metadata
-You can use below endpoint and view the SAML metadata.
-
-```
-https://accounts.asgardeo.io/t/<organization_name>/identity/metadata/saml2
-```
-
-_Sample endpoint URL_
-```
-https://accounts.asgardeo.io/t/bifrost/identity/metadata/saml2
-```
-
-<br>
+Based on the capability of your SAML application or library, you can choose either approach.
 
 #### Use File Based Metadata
 To download the SAML metadata file of your organization in Asgardeo,
@@ -101,6 +85,18 @@ To download the SAML metadata file of your organization in Asgardeo,
 4. Click **Download Idp Metadata** to download the metadata xml file.
     <img :src="$withBase('/assets/img/guides/applications/saml-app/download-idp-metadata.png')" alt="Get SAML metadata">
 
+#### Use URL Based Metadata
+
+You can use below endpoint URL to get the SAML IDP metadata information.
+
+```
+https://accounts.asgardeo.io/t/<organization_name>/identity/metadata/saml2
+```
+
+_Sample endpoint URL_
+```
+https://accounts.asgardeo.io/t/bifrost/identity/metadata/saml2
+```
 
 <br>
 <br>
