@@ -2,10 +2,10 @@
 
 You can follow this document to obtain required information and the configurations to:
  - Integrate a web application that supports SAML
- - Build login with Asgardeo using an SAML supported library
+ - Build login with Asgardeo using a SAML supported library
 
 When configuring SAML based sign in with Asgardeo, you need to know:
-1. SAML IDP endpoints of Asgardeo
+1. SAML IdP endpoints of Asgardeo
 2. Issuer of Asgardeo
 3. Public certificate of Asgardeo
 
@@ -15,9 +15,9 @@ When configuring SAML based sign in with Asgardeo, you need to know:
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="../register-app">register an application</a>.
 
 ## Discover SAML configurations of Asgardeo
-You need to know the SAML IDP configurations of Asgardeo if you want to add SAML login to your application. 
+You need to know the SAML IdP configurations of Asgardeo if you want to add SAML login to your application. 
 
-There are two options for an SAML application to get the SAML IdP configurations of Asgardeo:
+There are two options for a SAML application to get the SAML IdP configurations of Asgardeo:
 1. [Use SAML IdP metadata of Asgardeo](#use-saml-metadata)
 2. [Get SAML IdP configurations of Asgardeo from Console](#get-saml-configurations-of-asgardeo-from-console)
 

@@ -2,8 +2,6 @@
 To integrate your web application with Asgardeo using [SAML](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf), 
 first you need to register your application as a SAML application using the [Asgardeo console](https://console.asgardeo.io/). 
 
-SAML metadata is an XML document which contains SAML configurations necessary for integration.
-
 There are two ways you can use to provide your SAML application configurations to Asgardeo
 - Use SAML SP metadata
 - Provide SAML SP configurations manually
@@ -26,7 +24,7 @@ Login to the [Asgardeo Console](https://console.asgardeo.io/login).
 1. Click **Manual**
 2. Provide the following details and click **Register**. 
    - **Name:** A unique name to identify your application.
-   - **Issuer:** The unique identifier of the application. The value added here should be specified in the SAML authentication request as `saml:Issuer` element sent from the client application. You can't change this `issuer` configuration once you registered the app
+   - **Issuer:** The unique identifier of the application. The value added here should be specified in the SAML authentication request as `saml:Issuer` element sent from the client application. You can't change this `issuer` configuration after you register the app.
    - **Assertion consumer service URLs:** The URLs to which the browser is redirected to upon successful authentication and receives SAML response.
     <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app.png')" alt="Register SAML app"> 
 3. Click **Register**.
