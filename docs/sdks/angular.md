@@ -99,8 +99,6 @@ import { AsgardeoAuthService } from "@asgardeo/auth-angular";
     styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-
-    private isInitLogin: boolean;
     
     /*
     * Use this function in a login button to simply sign-in.
@@ -202,10 +200,8 @@ You can loop through the `decodedIdToken` object and get the other claims as wel
 Apart from adding login and logout to your application, you can get the user information from Asgardeo SDK. 
 
 There are two ways for you to get user information:
-1. Get user information from [decoded id token](#get-decoded-id-token).
+1. Get user information from [decoded ID token](#get-decoded-id-token).
 2. Use `getBasicUserInfo()` API and get basic userinfo.
-
-Instead, you can get basic user information using `getBasicUserInfo()` API. This will give you basic user information. 
  
 You can refer [Github documentation](https://github.com/asgardeo/asgardeo-auth-angular-sdk#basicuserinfo) for further reference. 
 
@@ -259,6 +255,7 @@ Now you have logged in to your application and get some user information of the 
 By calling `handleSignOut()` in your logout button, user can logout out from the application. 
 
 Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signout) for advanced usages:
+
 ```angular2
 // Use this function in a logout button to simply sign-out.
   handleSignOut(): void {
