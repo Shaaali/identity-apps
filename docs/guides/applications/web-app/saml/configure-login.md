@@ -17,21 +17,21 @@ To get started, you need to have an application registered in Asgardeo. If you d
 ## Discover SAML configurations of Asgardeo
 You need to know the SAML IDP configurations of Asgardeo if you want to add SAML login to your application. 
 
-There are two options for an SAML application to get the SAML IDP configurations of Asgardeo:
-1. [Use SAML IDP metadata of Asgardeo](#use-saml-metadata)
-2. [Get SAML IDP configurations of Asgardeo from Console](#get-saml-configurations-of-asgardeo-from-console)
+There are two options for an SAML application to get the SAML IdP configurations of Asgardeo:
+1. [Use SAML IdP metadata of Asgardeo](#use-saml-metadata)
+2. [Get SAML IdP configurations of Asgardeo from Console](#get-saml-configurations-of-asgardeo-from-console)
 
 ### Use SAML metadata
 
 [SAML metadata](https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf) is an XML document which contains information necessary to integrate a SAML application with a with SAML supported identity provider. 
 
-The SAML IDP metadata document contains:
+The SAML IdP metadata document contains:
  1. Endpoints (single sign-on URLs, single logout URLs, etc)
  2. Supported bindings
  3. Identifiers (entityID or sometimes called Issuer)
  4. Public certificate
  
-**Sample SAML IDP metadata of Asgardeo**
+**Sample SAML IdP metadata of Asgardeo**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -71,7 +71,7 @@ HFY29KP4da//BDdQrftzYCATe37Um09id/0KMGs=</X509Certificate>
 </EntityDescriptor>
 ```
 
-There are two ways to get the SAML IDP metadata of Asgardeo.
+There are two ways to get the SAML IdP metadata of Asgardeo.
 1. [File based metadata](#use-file-based-metadata)
 2. [URL based metadata](#use-url-based-metadata)
 
@@ -82,12 +82,12 @@ To download the SAML metadata file of your organization in Asgardeo,
 1. In the Asgardeo Console, Select **Develop > Application**.
 2. Select the SAML application from the application view.
 3. Go to  **Info** section.
-4. Click **Download Idp Metadata** to download the metadata xml file.
+4. Click **Download IdP Metadata** to download the metadata xml file.
     <img :src="$withBase('/assets/img/guides/applications/saml-app/download-idp-metadata.png')" alt="Get SAML metadata">
 
 #### Use URL Based Metadata
 
-You can use below endpoint URL to get the SAML IDP metadata information.
+You can use below endpoint URL to get the SAML IdP metadata information.
 
 ```
 https://accounts.asgardeo.io/t/<organization_name>/identity/metadata/saml2
@@ -113,7 +113,7 @@ You can login to [Asgardeo Console](https://console.asgardeo.io/) and get endpoi
     - **Issuer** : Issuer name of Asgardeo
     - **Single Sign-On** : Sign-on URL of Asgardeo
     - **Single Logout** : Logout URL of Asgardeo
-    - **Idp certificate** : Public certificate of Asgardeo
+    - **IdP certificate** : Public certificate of Asgardeo
    <img :src="$withBase('/assets/img/guides/applications/saml-app/idp-endpoints.png')" alt="Get SAML endpoints">
 4. You can download the certificate of Asgardeo from **IdP certificate**.
 

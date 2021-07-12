@@ -67,7 +67,7 @@ Asgardeo by default supports HTTP Post and HTTP Redirect bindings. To enable sup
 #### Enable signature validation for artifact binding
 This specifies whether the artifact resolve request signature should be validated against the application certificate. If you enable this option, make sure to provide the application certificate below.
 
-#### Enable Idp initiated SSO
+#### Enable IdP initiated SSO
 This specifies whether to initiate Single Sign-On (SSO) from the IdP instead of the application. If this is selected, a service provider is not required to send the SAML2 request.
 <br>
 
