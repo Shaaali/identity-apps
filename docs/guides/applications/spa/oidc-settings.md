@@ -27,8 +27,12 @@ You can add multiple redirect URLs.
 
 ### Proof Key for Code Exchange(PKCE)
 #### Mandatory
+It is recommended to use [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) with authorization code grant to mitigate the code interception attacks in public clients. For single-page applications, this setting is enabled dy default. 
+ 
  <CommonGuide guide='guides/fragments/manage-app/oidc-settings/pkce-mandatory.md'/>
  
+ In case, if your app does not support PKCE, you can disable it.
+
 ### Access Token
   <CommonGuide guide='guides/fragments/manage-app/oidc-settings/access-token.md'/>
 

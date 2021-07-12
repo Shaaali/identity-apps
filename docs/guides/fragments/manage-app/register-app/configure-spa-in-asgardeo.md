@@ -11,4 +11,5 @@
     <img :src="$withBase('/assets/img/guides/applications/add-cors-spa.png')" alt="Enable CORS">
 5. Click **Register**.
 
-This template configures the [OpenID Connect Authorization Code Grant](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) with **username and password** authentication.
+This template configures the [OpenID Connect Authorization Code Grant](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) with [PKCE](https://datatracker.ietf.org/doc/html/rfc7636). 
+In case , if your app does not support PKCE, you can disable it by <a href = "/guides/applications/spa/oidc-settings/#proof-key-for-code-exchange-pkce">unselecting the PKCE **Mandatory** </a> setting under **protocol** section.
