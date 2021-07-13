@@ -263,18 +263,18 @@ To validate signature for authentication and logout requests, you need to [enabl
 You need to upload the certificate in PEM format.
 
 ::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to convert your certs to PEM format using <a href ="https://www.openssl.org/" target="_blank">OpenSSL</a>
-     **Convert CRT to PEM**
-     ```
-     openssl x509 -in cert.crt -out cert.pem
-     ``` 
-    **Convert CER to PEM:**
-     ```
-     openssl x509 -in cert.cer -out cert.pem
-     ```  
-    **Convert DER to PEM:**
-      ```
-      openssl x509 -in cert.der -out cert.pem
-     ```
+ **Convert CRT to PEM**
+ ```
+ openssl x509 -in cert.crt -out cert.pem
+ ``` 
+**Convert CER to PEM:**
+ ```
+ openssl x509 -in cert.cer -out cert.pem
+ ```  
+**Convert DER to PEM:**
+  ```
+  openssl x509 -in cert.der -out cert.pem
+ ```
 :::    
 
 <br>
