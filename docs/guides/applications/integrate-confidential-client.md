@@ -5,7 +5,7 @@ A confidential client is an application which can keep the client credentials se
 By following this guide, you will be able to understand the OpenID connect login step by step and build on to your application.
 
 ## Prerequisite
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="/guides/applications/web-app/register-app/#register-app">register an application</a>.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="/guides/applications/web-app/oidc/register-app/#register-app">register an application</a>.
 
 ## Steps to build login
 You need following steps to integrate to build login to your app with Asgardeo:

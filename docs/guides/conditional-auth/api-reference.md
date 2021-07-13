@@ -446,7 +446,7 @@ Contains the authentication step information. May be null or invalid step number
 
 - `step.subject` :  Contains the authenticated user’s information from this step. May be null if the step is not yet
   executed. See [user Object](#user) for more information.
-- `step.idp` :  Gives the Idp name which was used to authenticate this user.
+- `step.idp` :  Gives the IdP name which was used to authenticate this user.
 
 ### User
 
@@ -495,4 +495,3 @@ Contains the authentication step information. May be null or invalid step number
 * `userAgent.browser` :  This is the Web Browser property that is extracted from the raw userAgent string.
 * `userAgent.platform` :  This is the Operating System property that is extracted from the raw userAgent string.
 * `userAgent.device` :  This is the Device property that is extracted from the raw userAgent string.
-    

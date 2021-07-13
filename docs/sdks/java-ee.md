@@ -17,7 +17,7 @@ using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomc
 ## Prerequisites
 1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
 2. [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
-3. You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/register-app">register an application</a> in Asgardeo.
+3. You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/oidc/register-app">register an application</a> in Asgardeo.
 
 By following this guide, you will
 1. Register your application as an OIDC app in Asgardeo

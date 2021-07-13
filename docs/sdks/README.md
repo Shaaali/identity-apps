@@ -8,7 +8,7 @@ sdkContent:
       name: Angular
       sdkPath: /sdks/angular/
       gitUrl: https://github.com/asgardeo/asgardeo-auth-angular-sdk
-      appUrl: https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/download/v0.1.3/asgardeo-angular-app.zip
+      appUrl: https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip
 
     - icon: images/technologies/javascript-logo.svg
       name: Javascript

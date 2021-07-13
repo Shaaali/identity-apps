@@ -48,4 +48,4 @@ You can login to [Asgardeo Console](https://console.asgardeo.io/) and get endpoi
 ## What's next?
 Now you've integrated your OIDC web application. You also can:
 - <a href = "/guides/applications/integrate-confidential-client">Explore OpenID Connect authentication flow in depth</a>
-- <a href = "/guides/applications/web-app/oidc-settings">Configure advanced OpenID Connect settings</a>
+- <a href = "/guides/applications/web-app/oidc/oidc-settings">Configure advanced OpenID Connect settings</a>

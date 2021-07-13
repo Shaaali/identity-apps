@@ -1,5 +1,5 @@
 # Configure additional query parameters
-Asgardeo supports sending additional information to your OIDC external IDP in the form of query params in the login request.
+Asgardeo supports sending additional information to your OIDC external IdP in the form of query params in the login request.
 - Fixed query params
 - Dynamic query params
   - Query param value sent in the application login request
@@ -57,4 +57,3 @@ Here Asgardeo sends the fixed query param to the external identity provider in t
       };
       ```
       <br>
-      

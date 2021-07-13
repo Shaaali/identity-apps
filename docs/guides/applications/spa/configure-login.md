@@ -10,6 +10,8 @@ When configuring OpenID Connect based sign In, you need to know two things:
 1. [Client ID of the application](#obtain-client-id-of-the-app)
 2. [OpenID Connect endpoints of Asgardeo](#discover-openid-connect-endpoints-of-asgardeo)
 
+  <img :src="$withBase('/assets/img/guides/applications/oidc-app/oidc-intg.png')" alt="Integrate SPA">
+
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo Console](https://console.asgardeo.io/) to <a href="/guides/applications/spa/register-app">register an application</a>.
 

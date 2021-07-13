@@ -7,7 +7,7 @@ By following this guide, you will be able to understand the OpenID connect login
 It is recommended to use authorization code grant type for public clients. In addition to that, [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with authorization code flow to mitigate code interception attacks.
 
 ## Prerequisite
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="/guides/applications/web-app/register-app/#register-app">register an application</a>.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="/guides/applications/web-app/oidc/register-app/#register-app">register an application</a>.
 
 ## Steps to build login
 You need following steps to build login to your app with Asgardeo:
