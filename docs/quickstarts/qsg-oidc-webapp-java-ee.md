@@ -89,7 +89,7 @@ Click on the button below to download the sample.
      
       ``` 
       consumerKey=<client ID>
-      consumerSecret=<client Secret>
+      consumerSecret=<client secret>
       scope=openid,internal_application_mgt_view
    
       callBackURL=http://localhost:8080/oidc-sample-app/oauth2client
