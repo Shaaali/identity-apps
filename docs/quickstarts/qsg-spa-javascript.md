@@ -50,7 +50,7 @@ Click on the button below to download the sample.
   - **serverOrigin** - "https://dev.accounts.asgardeo.io/t/<organization_name>"
     ``` HTML{2,4}
     const authConfig = {
-        clientID: "<client_id>",
+        clientID: "<client ID>",
         signInRedirectURL: "https://localhost:5000",
         serverOrigin: "https://dev.accounts.asgardeo.io/<organization_name>"
     };

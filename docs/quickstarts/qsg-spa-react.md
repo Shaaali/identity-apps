@@ -48,7 +48,7 @@ Change the `config.json` file found in the `asgardeo-react-app/src` sample folde
  - **serverOrigin** - "https://dev.accounts.asgardeo.io/t/<organization_name>"
     ``` json{2,3}
     {
-        "clientID": "<clientID>",
+        "clientID": "<client ID>",
         "serverOrigin": "https://dev.accounts.asgardeo.io/t/<organization_name>",
         "signInRedirectURL": "https://localhost:5000",
         "signOutRedirectURL": "https://localhost:5000"

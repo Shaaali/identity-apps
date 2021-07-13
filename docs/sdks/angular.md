@@ -62,7 +62,7 @@ import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
         AsgardeoAuthModule.forRoot({
             signInRedirectURL: "https://localhost:5000",
             signOutRedirectURL: "https://localhost:5000",
-            clientID: "<clientId>",
+            clientID: "<client ID>",
             serverOrigin: "https://accounts.asgardeo.io/t/<organization_name>"
         })
     ],

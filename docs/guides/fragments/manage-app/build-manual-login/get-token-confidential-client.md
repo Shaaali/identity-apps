@@ -110,7 +110,7 @@ This token request has some parameters. See [Token request with authorization co
 <br>
 
 Token endpoint requires client  authentication for confidential clients. Asgardeo supports both:
- - **client_secret_post**: You can either send client_id and client_secret as body parameters in the POST message
+ - **client_secret_post**: You can either send `client_id` and `client_secret` as body parameters in the POST message
  - **client_secret_basic**: You can send it as Authorization header in the request  as `'Authorization: Basic BASE64_ENCODED_CLIENT_ID_AND_CLIENT_SECRET'`
 
 For example, if your token request looks like:
