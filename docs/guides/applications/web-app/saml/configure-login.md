@@ -28,7 +28,7 @@ There are two options for a SAML application to get the SAML IdP configurations 
 The SAML IdP metadata document contains:
  1. Endpoints (single sign-on URLs, single logout URLs, etc)
  2. Supported bindings
- 3. Identifiers (entityID or sometimes called Issuer)
+ 3. IdP identifiers (entityID or sometimes called Issuer)
  4. Public certificate
  
 **Sample SAML IdP metadata of Asgardeo**
