@@ -31,7 +31,7 @@ It is recommended to use [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) w
  
  <CommonGuide guide='guides/fragments/manage-app/oidc-settings/pkce-mandatory.md'/>
  
- In case, if your app does not support PKCE, you can disable it.
+ In case, if your app **does not support PKCE**, you can **disable** it.
 
 ### Access Token
   <CommonGuide guide='guides/fragments/manage-app/oidc-settings/access-token.md'/>
