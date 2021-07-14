@@ -88,8 +88,8 @@ Click on the button below to download the sample.
      <br>
      
       ``` 
-      consumerKey=<clientID>
-      consumerSecret=<clientSecret>
+      consumerKey=<client ID>
+      consumerSecret=<client secret>
       scope=openid,internal_application_mgt_view
    
       callBackURL=http://localhost:8080/oidc-sample-app/oauth2client
