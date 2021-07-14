@@ -53,7 +53,7 @@ git -C $REPO_DIR config user.name "$GIT_USERNAME"
 git -C $REPO_DIR config user.email "iam-cloud@wso2.com"
 
 git -C $REPO_DIR add $DOCS_INFO_JSON_PATH
-git -C $REPO_DIR commit -m "Updating version in package.json to $NEW_ASGARDEO_PACK_VERSION"
+git -C $REPO_DIR commit -m "Updating version in package.json to $NEW_ASGARDEO_DOCS_VERSION"
 git -C $REPO_DIR push
 
 mkdir asgardeo-deployment-pipeline
