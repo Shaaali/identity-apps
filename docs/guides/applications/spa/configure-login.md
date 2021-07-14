@@ -1,8 +1,8 @@
 # Configure OpenID Connect login
 
 You can follow this document to obtain required information and the configurations to:
- - Integrate a single-page application that supports OpenID Connect <br>
- - Build login with Asgardeo using an OpenID Connect supported SDK  <br>
+ - Integrate sign in with Asgardeo for your OpenID Connect SPA
+ - Build login with Asgardeo using an OpenID Connect supported SDK
 
 In case, you want to implement login from scratch, see how to <a href = "/guides/applications/integrate-public-client">build OpenID Connect login flow manually</a>.
 
