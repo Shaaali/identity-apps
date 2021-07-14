@@ -21,7 +21,6 @@ When your single-page application login with Asgardeo, application uses client I
 4. Copy **Client ID**. 
     <img :src="$withBase('/assets/img/guides/applications/get-client-id.png')" alt="Get client ID of SPA">
 
-
 ## Discover OpenID Connect endpoints of Asgardeo
 You need to know the endpoints of Asgardeo if you want to add OIDC login to your application. 
  
