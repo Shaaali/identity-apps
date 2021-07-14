@@ -6,19 +6,16 @@ You can find the SAML protocol related settings under **protocol** section of th
 ## Basic settings
 
 ### Assertion consumer service URLs (ACS URLs)
-The Assertion Consumer Service (ACS) URL determines where to send the SAML response. 
-
+The Assertion Consumer Service (ACS) URL determines where Asgardeo will send the SAML response. 
 An application can have multiple ACS URLs. SAML authentication response and logout response are sent to one of the ACS URLs configured.
 
 ### Default assertion consumer service URL (Default ACS URL)
 Since an application can register multiple assertion consumer URLs, you need to pick one of them as the Default Assertion Consumer URL. 
+If there is only one ACS URL, it will be taken as the Default ACS URL.
 
-::: tip In a sign-on request by a SAML app, following needs to be considered
-- If **no ACS URL is given in the <code>< AuthnRequest ></code>**, Asgardeo sends the response to the **default ACS URL** of the service provider (whether the request is signed or not).
-- If the **ACS URL in <code>< AuthnRequest ></code> matches** with one of the registered URLs, the Asgardeo sends the response to the **matched one**.
-- If the **ACS URL in <code>< AuthnRequest ></code> does not match any** of the registered ACS URLs **and**:
-  - If the **request is signed** and the **signature is valid** , the Asgardeo sends the response to the **ACS URL in the request**.
-  - If the **request is not signed**, or the **signature is not valid**, the Asgardeo rejects the authentication request.
+::: tip Criteria evaluated by Asgardeo to pick the ACS URL
+- If **no ACS URL is given in the authentication request**, Asgardeo sends the response to the **default ACS URL**.
+- If an **ACS URL is given in the authentication request**, and it **matches** with one of the registered ACS URLs, the Asgardeo sends the response to the **ACS URL sent in the request**(the matched one).
 :::
 
 ### IdP entity ID alias
@@ -199,10 +196,10 @@ Specifies the logout method that is supported by the application. Asgardeo suppo
 Back Channel logout is enabled by default.
 
 #### Single logout response URL
-Specifies the endpoint of the application to where the single logout response should be sent. If you do not specify this URL, Asgardeo will use the ACS URL.
+Specifies the endpoint of the application to where the single logout response should be sent. If you do not specify this URL, Asgardeo will use the Default ACS URL.
 
 #### Single logout request URL
-Specifies the endpoint of the application to where the single logout request should be sent. If you do not specify this URL, Asgardeo will use the ACS URL.
+Specifies the endpoint of the application to where the single logout request should be sent. If you do not specify this URL, Asgardeo will use the Default ACS URL.
 
 #### IdP initiated single logout
 Asgardeo facilitates IdP initiated SAML2 single log out requests. The following parameters can be used with the IdP initiated SLO request:
