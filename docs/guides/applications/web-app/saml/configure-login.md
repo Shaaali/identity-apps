@@ -1,7 +1,7 @@
 # Configure SAML login
 
 You can follow this document to obtain required information and the configurations to:
- - Integrate a web application that supports SAML
+ - Integrate sign in with Asgardeo for your SAML web application
  - Build login with Asgardeo using a SAML supported library
 
 When configuring SAML based sign in with Asgardeo, you need to know:
