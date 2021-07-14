@@ -1,5 +1,5 @@
 # Register OpenID Connect single-page app
-To enable sign in to you single page application with Asgardeo, the first step would be to to register your single-page application using the Asgardeo console. 
+To enable sign in to you single page application with Asgardeo, first you need to register your single-page application using the Asgardeo Console. 
 
 You can register your single page app as an OpenID Connect SPA and obtain client credentials. 
 

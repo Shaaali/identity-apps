@@ -5,7 +5,7 @@ in content.
 
 The main advantage of single-page application is its speed. Since content is dynamically updated as the user interacts with it, user does not need to wait for page reloads. User can experience a seamless flow with high responsiveness from application. 
 
-JavaScript frameworks and libraries, such as AngularJS, React, Vue.js, are some popular technologies which are adopted to build SPAs.
+JavaScript frameworks and libraries, such as AngularJS, React, Vue.js, are some popular technologies adopted to build SPAs.
 
 ## Secure your SPA with Asgardeo
 
