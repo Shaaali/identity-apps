@@ -1,2 +1,4 @@
 
-Authorized redirect ULS are the Set of URLs that can be used to redirect the users after authentication or logout. 
+Authorized redirect URLs determine where Asgardeo will redirect users after authentication and logout. 
+An application can have multiple Authorized redirect URLs. 
+

@@ -8,7 +8,7 @@ The Asgardeo Console allows you to:
 - [Remove users from groups](#remove-users-from-groups) 
     
 One user can be assigned users to any number of groups. Applications can get details about a user's group in 
-the authentication response (e.g., id_token) from Asgardeo as a user attribute.                                                          
+the authentication response (e.g., ID token) from Asgardeo as a user attribute.                                                          
 
 ::: tip
 Only [customer users](./#customer) can be assigned to a group.
