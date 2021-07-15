@@ -1,5 +1,5 @@
 #### Audience
-[Audience](https://openid.net/specs/openid-connect-core-1_0.html#IDToken) value specifies the recipient(s) that this id_token is intended for. By default, the client ID of this application is added as an audience. You can add multiple audience in the ID token.
+Specifies the recipient(s) that this ID token is intended for. By default, the client ID of this application is added as an audience. You can add multiple audiences in the ID token.
 
  _Sample default ID token_:
  ```json
@@ -45,4 +45,4 @@
 <br>
 
 #### ID Token expiry time
-This provides the validity period of ID token in seconds. In Asgardeo, the default value is 3600 seconds(1 hr).
+Provides the validity period of ID token in seconds. The default value is 3600 seconds.

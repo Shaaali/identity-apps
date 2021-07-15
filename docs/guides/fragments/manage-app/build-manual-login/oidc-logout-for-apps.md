@@ -22,7 +22,7 @@ The logout request has some parameters. See [RP-initiated logout request](https:
   </tr>
   <tr>
     <td>id_token_hint<Badge text="Optional" type="optional"/></td>
-    <td>The id_token returned by the Asgardeo. This should be passed along with post_logout_redirect_uri</td>
+    <td>The ID token returned by the Asgardeo. This should be passed along with post_logout_redirect_uri</td>
   </tr>
   <tr>
     <td>post_logout_redirect_uri<Badge text="Optional" type="optional"/></td>

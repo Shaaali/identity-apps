@@ -1,5 +1,5 @@
 #### Token type  
-In additional to usual opaque tokens, Asgardeo supports self-contained JWT tokens.
+In additional to usual opaque tokens, Asgardeo supports self-contained JWT tokens as well.
 
 1. **Opaque**: These types of tokens are plain text tokens. If a resource server wants to know information related to opaque token, it has to query introspection endpoint and get the information related to tokens.
    
@@ -27,4 +27,4 @@ In additional to usual opaque tokens, Asgardeo supports self-contained JWT token
 <br>
 
 #### Access token expiry time
-This provides the validity period of access token in seconds. In Asgardeo, the default value is 3600 seconds(1 hr).
+This provides the validity period of access token in seconds. The default expiry time is 3600 seconds.
