@@ -115,7 +115,7 @@ export class AppComponent implements OnInit {
 
 ### Get access token
 
-Once the user logged in with Asgardeo, application can get the accesstoken issued by Asgardeo.
+Once the user is logged in with Asgardeo, the application can get the access token issued by Asgardeo.
 
 Refer [getAccessToken](https://github.com/asgardeo/asgardeo-auth-angular-sdk#getaccesstoken) from Github documentation.
  
