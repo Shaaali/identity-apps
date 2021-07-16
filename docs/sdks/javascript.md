@@ -91,7 +91,7 @@ if(JSON.parse(sessionStorage.getItem("initSignIn"))){
 
 ### Add logout
 
-Once the user logged inn to the application, you need a way to logout that user as well.
+Once the user is logged in to the application, you need a way to logout that user.
 
 Similar to the `signIn()` function, call `signOut()` function inside a button to logout the application.
 
