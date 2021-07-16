@@ -51,7 +51,7 @@ module.exports = config({
         Navbar: true,
         blog: false,
         feed: false,
-        pwa: false,
+        pwa: true,
         sitemap: true,
         darkmode: 'switch',
         footer: {
