@@ -135,7 +135,7 @@ getAccessToken() {
 
 ### Get decoded ID token
 
-Once the user logged in with Asgardeo, application can get the idtoken issued by Asgardeo.
+Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
 SDK provides the capability to decode the token from you can provide the claims. 
 
