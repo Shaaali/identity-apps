@@ -85,7 +85,7 @@ export class AppModule { }
 ### Add login
 
 Inject `AsgardeoAuthService` to your components to add login to your application. 
-Copy the below code to your component and the call the `handleSignIn()` two times from your login button. First call will handle the authorization code flow and the second call will do the token flow.
+Copy the below code to your component and then call `handleSignIn()` two times from your login button. The first call will handle the authorization code flow and the second call will do the token flow.
 
 Check [SignIn api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signin) for the advanced usages.
 ```
