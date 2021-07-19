@@ -9,7 +9,7 @@ When configuring SAML based sign in with Asgardeo, you need to know:
 2. Issuer of Asgardeo
 3. Public certificate of Asgardeo
 
- <img :src="$withBase('/assets/img/guides/applications/saml-app/saml-integration.png')" alt="Integrate SAML app">
+ <img :src="$withBase('/assets/img/guides/applications/saml-app/saml-integration.png')" alt="Integrate SAML app" border=0 style="border:0; text-decoration:none; outline:none">
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="../register-app">register an application</a>.
