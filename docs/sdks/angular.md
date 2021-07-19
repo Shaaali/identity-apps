@@ -231,7 +231,7 @@ getUserInfo(){
 }
 ```
 
-From this `userinfoResponse` object, you can loop through and get required user information, 
+From this `userinfoResponse` object, you can loop through and get the required user information:
 
 <table>
    <tbody>
