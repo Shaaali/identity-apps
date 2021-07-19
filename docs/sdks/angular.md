@@ -258,7 +258,7 @@ Now you have logged in to your application and get some user information of the 
 
 By calling `handleSignOut()` in your logout button, user can logout out from the application. 
 
-Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signout) for advanced usages
+Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signout) for advanced usages:
 ```angular2
 // Use this function in a logout button to simply sign-out.
   handleSignOut(): void {
