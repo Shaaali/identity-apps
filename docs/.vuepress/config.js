@@ -157,38 +157,47 @@ module.exports = config({
                 ]
                 },
                 {
-                    title: 'Identity Providers',
+                    title: 'Connections',
                     children: [
-                    ['identity-providers/', 'Overview'],
-                    {
-                        title: 'Social Login',
-                        prefix: 'identity-providers/social-login/',
-                        path: 'identity-providers/social-login/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['facebook.md', 'Facebook'],
-                            ['github.md', 'Github'],
-                            ['google.md', 'Google'],
-                        ]
-                    },
-                    {
-                        title: 'Enterprise Login',
-                        prefix: 'identity-providers/enterprise-login/',
-                        path: 'identity-providers/enterprise-login/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['oidc.md', 'OpenID Connect']
-                        ]
-                    },
-                ]
-            },
-            {
-                title: 'Multi-Factor Authentication',
-                children: [
-                    ['mfa/', 'Overview'],
-                    ['mfa/totp.md', 'TOTP']
-                ]
-            },
+                        {
+                            title: 'MFA',
+                            prefix: 'mfa/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['', 'Overview'],
+                                ['totp.md', 'TOTP']
+                            ]
+                        },
+                        {
+                            title: 'Identity Providers',
+                            prefix: 'identity-providers/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['', 'Overview'],
+                                {
+                                    title: 'Social Login',
+                                    prefix: 'social-login/',
+                                    path: 'social-login/',
+                                    sidebarDepth: 2,
+                                    children: [
+                                        ['facebook.md', 'Facebook'],
+                                        ['github.md', 'Github'],
+                                        ['google.md', 'Google'],
+                                    ]
+                                },
+                                {
+                                    title: 'Enterprise Login',
+                                    prefix: 'enterprise-login/',
+                                    path: 'enterprise-login/',
+                                    sidebarDepth: 2,
+                                    children: [
+                                        ['oidc.md', 'OpenID Connect']
+                                    ]
+                                },
+                            ]
+                        },
+                    ],
+                },
             {
                 title: 'Conditional Authentication',
                 children: [

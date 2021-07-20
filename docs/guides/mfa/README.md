@@ -21,5 +21,5 @@ You can replace **username and password** authentication with some social or ent
 1. In the Asgardeo Console, navigate to **Develop > Applications** and select the application to add MFA.
 2. Go to **Sign-in Method** and select the **step** to add the multi-factor authenticators.
 3. Select an MFA.
-    <img :src="$withBase('/assets/img/guides/mfa/add-totp-authenticator.png')" alt="Configuring TOTP authenticator in Asgardeo">
+    <img :src="$withBase('/assets/img/guides/mfa/totp/add-totp-authenticator.png')" alt="Configuring TOTP authenticator in Asgardeo">
 4. Click **Update**.

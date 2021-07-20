@@ -14,18 +14,19 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 2. Download and install one of the authenticator apps mentioned above.
 
 ## Enable TOTP for an application
-To enable TOTP multi-factor authentication, you need to add **TOTP** authentication in the authentication flow of an application. Below steps will guide you on how to enable TOTP for an application:
-1. In the Asgardeo Console, navigate to **Develop > Applications**.
-2. Select the application to add the multi-factor authentication.
-3. Go to the **Sign-in Method** tab of the selected application.
-4. For `Step 1`, click **Add Authentication** and select **username and password**.
-5. Click **Add new step** and Click on **Add Authentication**.
-6. Select **TOTP** authenticator and add it as `Step 2` authentication.
-    <img :src="$withBase('/assets/img/guides/mfa/add-totp-authenticator.png')" alt="Configuring TOTP authenticator in Asgardeo">
-7. Click **Update**.
+To enable TOTP multi-factor authentication, you need to add **TOTP** in the authentication flow of an application. Below steps will guide you on how to enable TOTP for an application:
+1. In the Asgardeo Console, there are two ways to start enabling TOTP for an application. 
+ - Option1: Navigate to **Develop > Applications**.
+ - Option2: Navigate to **Connections > TOTP** and click **connect**.
+2. Follow either one of the above options.
+3. Select the application to add the TOTP.
+4. Go to the **Sign-in Method** tab of the selected application.
+5. Click **Add TOTP as a second factor**. This will add TOTP as a second factor authenticator.
+    <img :src="$withBase('/assets/img/guides/mfa/totp/add-totp-authenticator.png')" alt="Configuring TOTP authenticator in Asgardeo">
+6. Click **Update**.
 
  ::: tip Note
- TOTP can be enabled as a multi-factor authentication if any of the previous step authentication is configured with **username and password** or a **federated authenticator**.
+ TOTP can be enabled as a multi-factor authentication if any of the previous step authentication is configured with **username and password** or a **identity provider**.
  :::
 
 
@@ -34,11 +35,11 @@ You can enroll for TOTP notification from the first login to the business applic
 1. Download authenticator.
 2. Login to your application.
 3. User is prompted with QR code , scan the code and click continue. (This step will happen only for the first time for a user after enabling TOTP by the administrator)
-    <img :src="$withBase('/assets/img/guides/mfa/scan-qr-code-totp.png')" alt="QR code for TOTP authenticator in Asgardeo">
+    <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-totp.png')" alt="QR code for TOTP authenticator in Asgardeo">
 4. Check your authenticator which you used to scan the code.
-    <img :src="$withBase('/assets/img/guides/mfa/google-authenticator.png')" alt="OTP token from the authenticator">
+    <img :src="$withBase('/assets/img/guides/mfa/totp/google-authenticator.png')" alt="OTP token from the authenticator">
 5. Enter the otp by checking the authenticator app.
-    <img :src="$withBase('/assets/img/guides/mfa/enter-otp-token.png')" alt="User enters OTP token in Asgardeo">
+    <img :src="$withBase('/assets/img/guides/mfa/totp/enter-otp-token.png')" alt="User enters OTP token in Asgardeo">
 6. Click **Continue**.
 
 
@@ -48,5 +49,5 @@ After the first time login, user will not be prompted with QR code in the login 
 Note that, enrolling TOTP via MyAccount can be done only after first login attempt using totp authentication, and it is available only for <a href="/guides/user-management/#customer">customer</a> user accounts.
  
 1. In the Asgardeo MyAccount, navigate to **Security > Multi-Factor Authentication**.
-    <img :src="$withBase('/assets/img/guides/mfa/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount">
+    <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount">
 2. Click TOTP edit icon and scan the prompted QR code using an authenticator.
