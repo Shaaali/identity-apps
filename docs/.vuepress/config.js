@@ -165,7 +165,8 @@ module.exports = config({
                             sidebarDepth: 2,
                             children: [
                                 ['', 'Overview'],
-                                ['totp.md', 'TOTP']
+                                ['emailotp.md', 'Enable Email OTP'],
+                                ['totp.md', 'Enable TOTP'],
                             ]
                         },
                         {
