@@ -14,8 +14,9 @@ In order to add Facebook login to your app, follow below steps
  3. [Enable Facebook login](#enable-facebook-login)
 
 ### Register app in Facebook
-You need to register Asgardeo as an app in Facebook. Follow the [Facebook Documentation](https://developers.facebook.com/docs/development/create-an-app) to create an app on Facebook.
+You need to register Asgardeo as an app in Facebook. You can follow the [Facebook Documentation](https://developers.facebook.com/docs/development/create-an-app) to create an app in Facebook.
 
+To register an app in Facebook:
 1. Go to [Facebook developer portal](https://developers.facebook.com/apps) and click **Create App**.
 2. Select **Consumer** app type.
 3. Provide **App Display Name** and click **Create App ID** to create an application.
@@ -35,7 +36,7 @@ You need to register Asgardeo as an app in Facebook. Follow the [Facebook Docume
       <img :src="$withBase('/assets/img/guides/idp/facebook-idp/app-id-secret-from-facebook.png')" alt="Get AppID and Secret from Facebook">
 
 ### Create Facebook Identity Provider
-1. In the Asgardeo Console, Click **Develop > Identity Providers**.
+1. In the Asgardeo Console, Click **Connections > New Connections**.
 2. Select **Facebook**.
 3. Enter the following details of the Facebook identity provider and click **Finish**:
     - **Name**: A unique name for this Facebook identity provider.
