@@ -117,6 +117,7 @@ module.exports = config({
                             ]
                         },
                         ['user-management/groups.md', 'Manage Groups'],
+                        ['user-management/roles.md', 'Manage Roles'],
                     ]
                 },
                 {
