@@ -4,7 +4,7 @@ You can add standard [OpenID Connect login](https://openid.net/specs/openid-conn
 
 ## How it works
 To provides this login capability, Asgardeo uses standard [OpenID Connect with authorization code flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowSteps) underneath. For an application, the OpenID Connect login flow with external identity provider works as follows:
- <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-enterprise-login-flow.png')" alt="Add OIDC enterprise login in Asgardeo" border=0 style="border:0; text-decoration:none; outline:none">
+ <img class="borderless-img" :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-enterprise-login-flow.png')" alt="Add OIDC enterprise login in Asgardeo">
 
 This guide provides the instructions on how to enable the login to your applications. 
 

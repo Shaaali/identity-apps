@@ -9,7 +9,7 @@ Let's take the following simplified set of requirements, your business may want 
   - Other users should not be allowed to access the application.                                                           
 
 We will start from the scratch and see how can we build our first conditional authentication script.
- <img :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="Authentication flow with Group based Access control" border=0 style="border:0; text-decoration:none; outline:none">
+ <img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="Authentication flow with Group based Access control">
 
 ## Prerequisites
 1. You should have registered an application. If you don't have an app registered, <a href ="/guides/applications/">register an application</a> in Asgardeo.
