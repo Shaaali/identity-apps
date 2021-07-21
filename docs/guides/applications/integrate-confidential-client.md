@@ -5,7 +5,7 @@ A confidential client is an application which can keep the client credentials se
 By following this guide, you will be able to understand the OpenID connect login step by step and build on to your application.
 
 The below diagram explains how login using authorization code grant works with Asgardeo.
-<img :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
+<img class="borderless-img" :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="/guides/applications/web-app/oidc/register-app/#register-app">register an application</a>.
