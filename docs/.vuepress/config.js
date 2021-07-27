@@ -240,7 +240,8 @@ module.exports = config({
             {
                 title: 'Web App',
                 children: [
-                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'Java EE sample'],
+                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'OIDC Java EE sample'],
+                    ['/quickstarts/qsg-saml-webapp-java-ee', 'SAML Java EE sample'],
                 ]
             },
             ],
@@ -256,7 +257,7 @@ module.exports = config({
             {
                 title: 'Web App',
                 children: [
-                    ['/sdks/java-ee', 'Java EE'],
+                    ['/sdks/java-ee', 'OIDC Java EE'],
                 ]
             },
             ]
