@@ -17,8 +17,12 @@ technologies:
     path: /quickstarts/qsg-spa-react/
 
   - icon: images/technologies/java-logo.svg
-    name: Java EE
+    name: Java EE - OIDC
     path: /quickstarts/qsg-oidc-webapp-java-ee/
+  
+  - icon: images/technologies/java-logo.svg
+    name: Java EE - SAML
+    path: /quickstarts/qsg-saml-webapp-java-ee/
 ---
 
 <QuickstartOverview/>

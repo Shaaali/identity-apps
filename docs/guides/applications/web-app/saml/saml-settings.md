@@ -172,6 +172,16 @@ After adding `http://localhost:8081/sample-app-new/home.jsp` as a `recipient`:
         </saml2:Subject>
 ```
 
+#### Enable encryption
+Specifies whether to enable encryption for SAML assertion.
+
+#### Assertion encryption algorithm
+
+Used as the encryption algorithm to encrypt the SAML assertion.
+
+#### Key encryption algorithm
+Used as the encryption algorithm for SAML2 key.
+
 ### Attribute Profile
 
 #### Enable attribute profile
