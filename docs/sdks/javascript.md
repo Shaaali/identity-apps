@@ -14,8 +14,8 @@ This guide provides steps to authenticate users to your JavaScript SPA with Open
 />
 
 ## Prerequisites
-1. You need to have npm with Node.js. If you don't have it, [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
-2. You should have registered a single-page application. If you don't have an app registered, <a href ="/guides/applications/spa/register-app">register an application</a> in Asgardeo.
+1. [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
+2. <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
 
 ## Add authentication to your app
 
@@ -29,17 +29,15 @@ Add the following script to the `index.html` of your application.
 
 <br>
 
-### Configure AsgardeoSPAClient
+### Initialize module
 
-Copy and use the following code within your root component to configure `AsgardeoSPAClient` for your application.
+Copy and use the following code within your root component to initialize `AsgardeoSPAClient` for your application.
 
-To initialize the SDK, use the `getInstance()` function in the SDK and pass in the required `clientID`, `serverOrigin`
-, `signInRedirectURL` & `signOutRedirectURL` to the `auth.initialize()` function.
-
-::: tip Find app information
-
-These details can be found in the **Protocol** tab of the application details view.
-:::
+To initialize the SDK, use the `getInstance()` function in the SDK and provide the following values to the `auth.initialize()` function to get the SDK to work with your application:
+ - clientID
+ - serverOrigin
+ - signInRedirectURL
+ - signOutRedirectURL
 
 ```
 <script>
@@ -62,8 +60,7 @@ auth.initialize({
 
 The `sign-in` hook is used to fire a callback function after successful sign-in.
 
-To sign in, simply call the `signIn()` function using the created instance. Similarly, call the `signOut()` function for
-application sign-out.
+To sign in, simply call the `signIn()` function using the created instance. 
 
 ```
 <script>
@@ -90,4 +87,19 @@ if(JSON.parse(sessionStorage.getItem("initSignIn"))){
 }
 
 </script>
+```
+
+### Add logout
+
+Once the user is logged in to the application, you need a way to logout that user.
+
+Similar to the `signIn()` function, call `signOut()` function inside a button to logout the application.
+
+```
+<script>
+// Use this function in a logout button to simply sign-out.
+function handleLogout() {
+    auth.signOut();
+</script>
+}
 ```
