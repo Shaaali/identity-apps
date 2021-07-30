@@ -56,7 +56,7 @@ features:
         link: /guides/user-management/groups/
         
       - name: "Roles"
-        link: 
+        link: /guides/user-management/roles/
 
 services:
     - title: Supported Integrations
