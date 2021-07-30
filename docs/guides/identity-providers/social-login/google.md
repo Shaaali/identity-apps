@@ -40,7 +40,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 4. You can find more additional configurations once you create Google identity provider.
     - **Scopes**: Asgardeo requests below scopes from Google:
         - **email**: Allows viewing user's email address.
-        - **openid**: Allows authenticating using OpenID Connect and obtain idtoken.
+        - **openid**: Allows authenticating using OpenID Connect and obtain ID token.
         - **profile**: Allows viewing user's basic profile data.          
     
       Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. Refer [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) on OpenID Connect scope param.
