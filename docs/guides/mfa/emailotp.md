@@ -56,10 +56,12 @@ Follow the steps given below.
 6. Click **Update**.
 
 ## How it works
-When a customer user tries to authenticate to a business application enabled with Email OTP, and once he successfully logged in with the first step of login flow, 
-1. The user will receive an OTP to his verified email address.
-2. Asgardeo will prompt to enter the OTP code.
+If Email OTP is enabled in the authentication flow of your application, the customer will be prompted with the Email OTP authentication step once the first authentication step is successfully completed.
+
+Given below are the high-level steps in this process:
+1. Asgardeo sends the OTP to the user's verified email address.
+2. Asgardeo prompts the user to enter the OTP code.
    <img :src="$withBase('/assets/img/guides/mfa/emailotp/enter-email-otp.png')" alt="Authenticate with email OTP in Asgardeo">
-3. User can click **Resend** to resend the OTP. This will invalidate the previously sent OTP.
-4. Enter the OTP and click **Continue**.
-6. If the authentication is successful, user can access the application.
+3. If required, the user can request Asgardeo to resend the OTP. The new OTP invalidates the previously sent OTP.
+4. The user enters the OTP and clicks **Continue**.
+5. If the authentication is successful, the user can access the application.
