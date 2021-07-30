@@ -1,7 +1,7 @@
 # Manage applications
 
 Regardless of the application type or the development technology, you can connect your application with Asgardeo and
-control the way users login to your app.
+control the way users log in to your app.
 
 Currently, Asgardeo supports integrating two application types. When you select an application type, Asgardeo provides
 all the recommended configs in place by default which you can change as needed later.

@@ -1,41 +1,17 @@
-# Users
+# Users Management
 
 The users in Asgardeo are the digital representations of the identities of physical users who interact with your 
 organization. With Asgardeo, the identity lifecycle of each of these users can be easily managed by the admins of the 
-organization.
-  
-User management is a vital requirement for any organization. Asgardeo provides a centralized user management solution
- for you to easily manage operations like assigning users to groups, assigning roles to users and thereby providing 
- access to certain operations, enforcing password changes, and many more.
+organization. 
 
-## Types of user accounts in Asgardeo
+The admins can grant users access to resources in your organization and control user access. Admins can also manage various user operations via the [Asgardeo Console](https://console.asgardeo.io) and SCIM APIs.
 
-Asgardeo supports a set of user account types based on their relationship to the organization. Given below are the 
-user account categories supported by Asgardeo.
- - **Owner**
- - **Collaborator**
- - **Customer**
-  
-  
-### Owner
+Shown below are some main user management capabilities available in Asgardeo.
 
-This is the owner of the organization who self-registers to Asgardeo by creating an organization. The owner has all 
-the administrative rights to the organization.
+<img class="borderless-img" :src="$withBase('/assets/img/guides/users/user-management-overview.png')" alt="User management">
 
-### Collaborator
-
-A user who can manage the organization and has access to the organization’s administrative operations such as 
-application onboarding and user management based on the assigned roles. A collaborator user can be invited to the organization and assigned with 
-permissions by its admins.
-
-### Customer
-
-A user that is registered within the organization, and consumes and accesses applications in that organization. A 
-customer can self-register or can be onboarded to an organization by its admins.
-
-:::tip Note
-
-  An owner or collaborator with Administrator role can act as an **administrator**. They can perform the administrative operations of the organization. <br>
-  
-  Only Owner and collaborator can access Asgardeo console. 
-:::
+See the topics given below for details of the main components that are required for user management.
+- <a href="/guides/user-management/manage-users/user-accounts/">Users</a>
+- <a href="/guides/user-management/groups/">Groups</a>
+- Roles
+- User stores

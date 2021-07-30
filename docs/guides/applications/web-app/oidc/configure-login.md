@@ -39,7 +39,7 @@ There are two options for an OpenID Connect application to identify the endpoint
 
 Some applications and SDKs do not have the capability to dynamically resolve endpoints from  OpenID Connect discovery. You need to configure endpoints manually to support them.
 
-You can login to [Asgardeo Console](https://console.asgardeo.io/) and get endpoints of Asgardeo. 
+You can log in to [Asgardeo Console](https://console.asgardeo.io/) and get endpoints of Asgardeo. 
 
  <CommonGuide guide='guides/fragments/manage-app/discover-endpoints/discover-oidc-endpoints-from-console.md'/>
 

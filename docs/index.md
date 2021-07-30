@@ -50,7 +50,7 @@ features:
     icon: usersIcon
     subLinks:
       - name: "Users"
-        link: /guides/user-management/
+        link: /guides/user-management/manage-users/user-accounts/
       
       - name: "Groups"
         link: /guides/user-management/groups/

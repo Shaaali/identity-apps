@@ -4,12 +4,12 @@ breadcrumb: false
 
 # OIDC Java EE web app sample
 
-Following this guide, you will be able to deploy a sample Java EE web application in your local environment and secure it with Asgadeo using OpenID Connect.
+Following this guide, you will be able to deploy a sample Java EE web application in your local environment and secure it with Asgardeo using OpenID Connect.
 
 # Prerequisites
 1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
 2. You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/oidc/register-app">register an application</a> in Asgardeo.
-3. Only <a href="/guides/user-management/">customer</a> users can login to applications. <a href ="/guides/user-management/manage-customer-accounts/#create-customer-user">Create customer account</a> if you don't have.
+3. Only <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> users can log in to applications. <a href ="/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user">Create customer account</a> if you don't already have one.
 
 ## Configure the sample application
 In order to try out the sample application:
@@ -122,4 +122,4 @@ Stop and restart the [tomcat server](https://tomcat.apache.org/tomcat-9.0-doc/se
 
 The app will be accessible at `https://localhost:8080/oidc-sample-app/index.html`.
 
-Try login to Asgardeo using <a href="/guides/user-management/">customer</a> account credentials.
+Log in to Asgardeo using your <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> account credentials.

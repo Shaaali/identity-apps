@@ -97,17 +97,26 @@ module.exports = config({
                 {
                     title: 'Users',
                     children: [
+                        ['user-management/', 'Overview'],
                         {
                             title: 'Manage Users',
                             children: [
-                                ['user-management/', 'Users'],
-                                ['user-management/manage-collaborator-accounts.md', 'Manage Collaborator Accounts'],
-                                ['user-management/manage-customer-accounts.md', 'Manage Customer Accounts'],
-                                ['user-management/user-profiles.md', 'User profiles'],
-                                ['user-management/sessions.md', 'Sessions'],
+                                {
+                                    title: 'Users Accounts',
+                                    prefix: 'user-management/manage-users/user-accounts/',
+                                    path:'user-management/manage-users/user-accounts/',
+                                    sidebarDepth: 2,
+                                    children: [
+                                        ['owner', 'Owner'],
+                                        ['collaborator', 'Collaborator'],
+                                        ['customer', 'Customer'],
+                                    ]
+                                },
+                                ['user-management/manage-users/user-profiles.md', 'User profiles'],
+                                ['user-management/manage-users/sessions.md', 'Active Sessions'],
                             ]
                         },
-                        ['user-management/groups.md', 'Groups'],
+                        ['user-management/groups.md', 'Manage Groups'],
                     ]
                 },
                 {

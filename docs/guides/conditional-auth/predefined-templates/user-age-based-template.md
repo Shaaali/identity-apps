@@ -15,7 +15,6 @@ is below configured value.
    Refer the <a href="/guides/conditional-auth/configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
 3. Birth Date of the user trying to login needs to be updated using Asgardeo Myaccount.
-:::
 
 ## Configured authentication steps
 

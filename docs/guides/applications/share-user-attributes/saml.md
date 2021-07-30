@@ -1,6 +1,6 @@
 # Share user attributes with SAML apps
 
-Asgardeo can share user attributes in <a href="/guides/user-management/user-profiles/">user profile</a> with applications. This guide walks you through the steps for sharing user attributes with SAML applications. 
+Asgardeo can share user attributes in <a href="/guides/user-management/manage-users/user-profiles/">user profile</a> with applications. This guide walks you through the steps for sharing user attributes with SAML applications. 
 
 ## Prerequisite
 <a href="/guides/applications/web-app/saml/saml-settings/#attribute-profile">Enable Attribute Profile</a> setting. This configuration should be enabled to share user attributes.
