@@ -6,15 +6,13 @@ A collaborator can be assigned to the following Asgardeo roles:
  - Administrator
  - Application developer
 
-## Manage collaborator accounts
-
-This guide walks you through the steps of managing a collaborator user account. An owner or another collaborator with an administrative role can manage collaborator accounts.
+This guide walks you through the steps of managing a collaborator account. An owner or another collaborator with an administrative role can manage collaborator accounts.
 - [Onboard a collaborator user](#onboard-a-collaborator)
 - [Assign roles to collaborator](#assign-roles)
 - [Delete a collaborator](#delete-a-collaborator)
 
 
-### Onboard a collaborator
+## Onboard a collaborator
 
 Admins can onboard a collaborator by sending an email invitation. 
 
@@ -31,7 +29,7 @@ To onboard a collaborator via [Asgardeo Console](https://console.asgardeo.io):
 4. Click **Invite**.
 5. The collaborator can access the Asgardeo Console by accepting the invitation and setting a password for the new user account.
      
-### Assign roles
+## Assign roles
 
 Asgardeo roles are used for managing user permissions (to access resources on the Asgardeo console).
 
@@ -42,7 +40,7 @@ To assign roles to a collaborator:
     <img :src="$withBase('/assets/img/guides/users/assign-roles-to-collaborator.png')" alt="Assign roles to collaborator">
 4. Click **Update**.
 
-### Delete a collaborator
+## Delete a collaborator
 
 A collaborator account can be deleted by admins. Once an account is deleted, the action is irreversible. 
 

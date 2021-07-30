@@ -9,9 +9,10 @@ Given below are the types of user accounts you can have in an Asgardeo organizat
   
 An **Asgardeo User** is a user managed by Asgardeo, who can access the Asgardeo console and develop or manage applications in the organization. Both the owner and collaborator are Asgardeo users.
 
-## How to choose user accounts
+## Comparing User Accounts
 
-The following table gives you a comparison on what are user types available in Asgardeo and what are the capabilities they have. 
+The following table compares the different user account types available in Asgardeo.
+
 Based on your requirements, you can choose user types and create them via [Asgardeo Console](https://console.asgardeo.io).
 
 <br>
