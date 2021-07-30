@@ -4,21 +4,19 @@ Roles consist of the permissions that are required by users to access the Asgard
 
 When you assign a role to a user, you are controlling what the user can do on the Asgardeo.
 
-Asgardeo supports the following default roles:
+The following default roles are available in Asgardeo:
+1. **Administrator**: This role includes all administrative permissions in the organization. An organization can have many users with the administrator role. An administrator is a privileged user who has overall access to the organization.
 
-1. **Administrator**: Role which provides all administrative rights of the organization. A organization can have may users with administrator role. 
-The administrator is a privileged user who has overall access to the organization.
+2. **Application developer**: This role includes the permissions required for registering and managing applications. The application developer is a privileged user who can integrate applications with Asgardeo. 
 
-2. **Application developer**: Role which provides the capabilities needed for onboarding and managing applications. The application developer is a privileged user who has the privilege to integrate applications with Asgardeo. 
-
-Only <a href="/guides/user-management/manage-users/user-accounts/collaborator/">Collaborator</a> users can be assigned to Asgardeo roles.
+Only <a href="/guides/user-management/manage-users/user-accounts/collaborator/">Collaborators</a> can be assigned to Asgardeo roles.
 
 <!--
-This is commented until this is onboarded
+This is commented until this role is onboarded to product
 3. **Administrative auditor**: Role which provides read-only access to the system. This will be useful for support operations and troubleshooting.
 -->
 
-You can refer the below tables to identify the permissions given for roles in the organization.
+The following tables list the permissions enabled for roles in the organization.
 
 ## Users
 <table>
