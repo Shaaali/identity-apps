@@ -1,19 +1,19 @@
 # Share user attributes with SAML apps
 
-Asgardeo can share user attributes in <a href="/guides/user-management/user-profiles/">user profile</a> with applications.  This guides walks you through the steps for sharing user attributes with SAML applications. 
+Asgardeo can share user attributes in <a href="/guides/user-management/user-profiles/">user profile</a> with applications. This guide walks you through the steps for sharing user attributes with SAML applications. 
 
 ## Prerequisite
-<a href="/guides/applications/web-app/saml/saml-settings/#attribute-profile">Enable Attribute profile</a> setting. This configuration should be enabled to share user attributes.
+<a href="/guides/applications/web-app/saml/saml-settings/#attribute-profile">Enable Attribute Profile</a> setting. This configuration should be enabled to share user attributes.
 
 ## Configure user attributes to share
 
-This section will guide you on how to configure user attributes  from console to share with application.
+This section guides you to configure user attributes from the Console and to share them with applications.
 
-An application developer can perform below actions via [Asgardeo Console](https://console.asgardeo.io):
+You can perform the following actions via the via [Asgardeo Console](https://console.asgardeo.io):
 - [Select user attributes](#select-user-attributes)
-- [Select subject attribute](#select-subject-attribute)
-- [Enable custom mapping for attributes](#enable-mapping)
-- [Disable the control of getting consent from users to share attributes](#disable-consent-screen)
+- [Select the subject attribute](#select-the-subject-attribute)
+- [Enable custom mapping for attributes](#map-user-attributes)
+- [Disable the consent screen](#disable-the-consent-screen)
 
 ### Select user attributes
 
@@ -21,58 +21,61 @@ An application developer can perform below actions via [Asgardeo Console](https:
 
 <br>
 
-### Enable mapping
+### Map user attributes
 
-In user attributes configuration,  you can either choose default attribute names or define application specific user attribute names.
+In the user attribute configurations, you can either choose default attribute names or define application specific user attribute names.
 
-In order to configure application specific attribute names, you need map the selected user attributes to application specific user attributes. 
+To configure application-specific attribute names, you need to map the selected user attributes to application-specific user attributes. 
 
 To perform mapping:
-1. Click, **Enable Mapping** in **User attributes** section.
+1. Click **Enable Mapping** in **User Attributes** section.
 2. Change the **Mapped user attribute** for the selected attribute.
  <img :src="$withBase('/assets/img/guides/applications/attributes/saml/enable-mapping.png')" alt="Eable mapping">
 
-This will make sure that application receives attributes based on the name that is configured.
+This ensures that the application receives attributes based on the name that is configured.
 
 ### Select mandatory user attributes
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-mandatory-attributes.md'/>
 
-Once the application developer selects the [required user attributes](#select-user-attributes), they will appear under **User Attributes**. 
-From those attributes that are listed, you can select **Mandatory** attributes. 
+Once you select the [required user attributes](#select-user-attributes), they appear under **User Attributes**. 
 
-<img :src="$withBase('/assets/img/guides/applications/attributes/saml/add-mandatory-user-attributes.png')" alt="Add madatory user attributes in Asgardeo">
+From the attributes that are listed, you can select the **Mandatory** attributes. 
+
+<img :src="$withBase('/assets/img/guides/applications/attributes/saml/add-mandatory-user-attributes.png')" alt="Add mandatory user attributes in Asgardeo">
 
 
 <br>
 
-### Select subject attribute
+### Select the subject attribute
 
-Subject attribute used to exchange information about the user. Subject is represented by **subject** attribute in the SAML assertion. 
-By default, Asgardeo shares **username** as the subject. But Asgardeo provides the capability to define any user attributes as the subject.
+The subject attribute is used for exchanging information about the user. The subject is represented by the **subject** attribute in the SAML assertion. 
+By default, Asgardeo shares **username** as the subject. Asgardeo provides the capability to define any user attribute as the subject.
 
-In order to define some other attributes as subject, 
+To define some other attributes as the subject:
 1. First you need to [select it as a user attribute](#select-user-attributes) as mentioned above. 
-2. Go to **Subject** section under **User Attributes**.
-3. You can view all the user attributes that are selected from the **Subject attribute** list. Select one attribute that you need to have as the subject attribute.
+2. Go to the **Subject** section under **User Attributes**.
+3. View all the user attributes that are selected from the **Subject attribute** list. Select one attribute that you need to have as the subject attribute.
     <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
 4. Click **Update**.
 
 <br>
 <br>
 
-### Disable consent screen
+### Disable the consent screen
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/disable-user-consent.md'/>
 
 
 ## How it works
-Once the application developer selects the required and mandatory attributes:
+
+Let's see how this flow works in Asgardeo:
+
+Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a customer tries to log in to your app.
 1. [Asgardeo  gets consent from users](#asgardeo-gets-consent-from-user)
 2. [Asgardeo shares user attributes in authentication response](#asgardeo-shares-user-attributes-with-apps)
 
-Let's see how this flow works in Asgardeo:
-<img :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
+<img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 
 ### Asgardeo gets consent from user
  
@@ -88,7 +91,7 @@ Asgardeo shares the consented user attributes with application along with **subj
 
 #### Subject
 
-Subject attribute is shared via `<saml2:Subject>` element based on the [configured subject attribute](#select-subject-attribute).
+The subject attribute is shared via the `<saml2:Subject>` element based on the [configured subject attribute](#select-the-subject-attribute).
 
 _A sample Subject element found in a SAML assertion is given below:_
 
@@ -106,7 +109,7 @@ _A sample Subject element found in a SAML assertion is given below:_
 ```
 
 #### Attribute statement
-The user attributes that are consented by the user, will be shared with application via `<saml2:AttributeStatement>` element.
+The user attributes that are consented by the user will be shared with applications via the `<saml2:AttributeStatement>` element.
 
 _A sample attribute statement element found in a SAML assertion is given below:_
 ```xml
@@ -130,7 +133,7 @@ _A sample attribute statement element found in a SAML assertion is given below:_
 
 #### Attribute statement with attribute mapping
 
-If you have done any custom attribute mapping via [Enable mapping](#enable-mapping) setting, the attributes will contain those application specific names in the SAML assertion.
+If you have done any custom attribute mapping via the [Enable mapping](#map-user-attributes) setting, the attributes will contain those application-specific names in the SAML assertion.
 
 _A sample attribute statement element with custom attribute mapping is given below:_
 
