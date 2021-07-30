@@ -9,12 +9,12 @@ This guide contains the following topics:
 1. In the Asgardeo Console, Select **Manage > Users**.
 2. Click  **New User** and select **Collaborator** user from the list.
 3. Provide the following details.
-    - **Email Address:** Emailaddress of the Collaborator user.<br>
+    - **Email Address:** Email address of the collaborator user.<br>
         ::: warning
         This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization and you can't change the username once it is created.
         :::
            
-    - **Role:** Select the role to assign to the Collaborator user. You can add/change this later.   
+    - **Role:** Select the role to assign to the collaborator user. You can add/change this later.   
 4. Click **Invite**
 5. The collaborator user can access the Asgardeo Console by accepting the invitation and setting his own password.
 
