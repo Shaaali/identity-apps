@@ -18,7 +18,7 @@ This guide contains the following topics:
     - **Last Name:** Last name of the user. You can add/change this later.
     - **Select the method to set the user password:**
       - **Invite user to set their own password:**
-            If administrator selects this option, an email with confirmation link will be sent to the provided email (username) to set their own password
+            If administrator selects this option, an email with a confirmation link will be sent to the provided email (username) to set their own password
       - **Set a temporary password for the user:**
             If administrator selects this option, he/she can set password of the user.<br>            
 4. Click **Next**.

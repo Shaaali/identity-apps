@@ -45,7 +45,7 @@ Profiles of **Collaborator** and the **Owner** can be updated only via My Accoun
 
 ### Reset the password of a user.
 
-Administrator can reset the password of a customer user and request the customer user to reset his password.
+An administrator can reset the password of a customer user and request the customer user to reset their password.
 - **Select the method to set the user password:**     
   - **Invite user to set their own password:**
     If owner/collaborator user selects this option, a password reset email will be sent to the customer user to reset their password

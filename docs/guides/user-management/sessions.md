@@ -2,11 +2,11 @@
 
 Session is the period of time a user spends on an application in a user agent instance. Simply we can consider it as the time interval between login to an application and logout from that application. 
 
-Asgardeo maintains user sessions based on session cookies. Asgardeo session will be terminated in the following instances.
- - When user closes the browser
- - When user tries to terminate the sessions via Asgardeo Console and MyAccount
- - When user logging out an application(OIDC/SAML logout mechanisms) 
- - When user resets the password.
+Asgardeo maintains user sessions based on a session cookie. Asgardeo user sessions will be terminated in the following instances.
+ - User closes the browser
+ - User terminates the sessions via Asgardeo Console and MyAccount
+ - User logs out an application(OIDC/SAML logout mechanisms) 
+ - User resets their password.
  
  Sessions can be terminated explicitly by using the session using Session management APIs as well.
 
@@ -37,7 +37,7 @@ Administrator(owner/collaborator) can view and terminate the active session(s) o
 
 ## Users manage their own sessions
 
-All users can login to MyAccount and manage their sessions.
+All users can log in to MyAccount and manage their sessions.
 
 **Users view their sessions**
  1. In the Asgardeo MyAccount, Select **Security > Active Sessions**.
