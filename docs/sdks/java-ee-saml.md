@@ -32,34 +32,36 @@ This guide provides below information on how to integrate your web app with Asga
 
 Follow the steps given below to install SAML agent.
 
-#### 1. Add the relevant dependencies
-To get started, you need to enable the SAML agent in your application's project by adding the relevant dependencies to the `pom.xml` file.
+1. Add the relevant dependencies.  
 
-```xml
-<dependency>
-    <groupId>io.asgardeo.tomcat.saml.agent</groupId>
-    <artifactId>io.asgardeo.tomcat.saml.agent</artifactId>
-    <version>0.1.31</version>
-</dependency>
-```
+      To get started, you need to enable the SAML agent in your application's project by adding the relevant dependencies to the `pom.xml` file.
+    
+      ```xml
+        <dependency>
+            <groupId>io.asgardeo.tomcat.saml.agent</groupId>
+            <artifactId>io.asgardeo.tomcat.saml.agent</artifactId>
+            <version>0.1.31</version>
+        </dependency>
+      ```
 
-#### 2. Add the nexus repository
-The agent is hosted at **WSO2 Internal Repository**. Point to this nexus repository to resolve the dependency given above.
+2. Add the nexus repository.   
 
-```xml
-<repositories>
-    <repository>
-        <id>wso2.releases</id>
-        <name>WSO2 internal Repository</name>
-        <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
-        <releases>
-            <enabled>true</enabled>
-            <updatePolicy>daily</updatePolicy>
-            <checksumPolicy>ignore</checksumPolicy>
-        </releases>
-    </repository>
-</repositories>
-```
+      The agent is hosted at **WSO2 Internal Repository**. Point to this nexus repository to resolve the dependency given above.
+
+    ```xml
+    <repositories>
+        <repository>
+            <id>wso2.releases</id>
+            <name>WSO2 internal Repository</name>
+            <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+    </repositories>
+    ```
 
 See the [reference documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/README.md) to learn more.
 
@@ -114,7 +116,7 @@ Find the configuration information below:
 <table>
    <thead>
       <tr>
-         <th>Parameter</th>
+         <th>Configuration</th>
          <th>Description</th>
       </tr>
    </thead>
