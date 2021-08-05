@@ -2,9 +2,9 @@
 breadcrumb: false
 ---
 
-# Add Login To Your Java EE webapp with SAML
+# Add login to your Java EE webapp with SAML
 
-This guide provides steps to authenticate users to your Java EE web application deployed on Tomcat with SAML 
+Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat with SAML 
 using the [Asgardeo Tomcat SAML Agent](https://github.com/asgardeo/asgardeo-tomcat-saml-agent) which enables SAML-based login and logout.
 
 <Button 
@@ -15,23 +15,22 @@ using the [Asgardeo Tomcat SAML Agent](https://github.com/asgardeo/asgardeo-tomc
 />
 
 ## Prerequisites
-1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-2. [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
-3. To get started, you need to have an application registered in Asgardeo. If you don't already have one, see the instructions on <a href ="/guides/applications/web-app/saml/register-app">registering a SAML application</a>.
+- Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
+- [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
+- To get started, you need to have an application registered in Asgardeo. If you don't already have one, see the instructions on <a href ="/guides/applications/web-app/saml/register-app">registering a SAML application</a>.
 
-## Integrate your app with Asgardeo
+## Add Login to your app
 
 This guide provides below information on how to integrate your web app with Asgardeo:
-1. [Install SDK](#install-sdk)
-2. [Initialize SDK](#initialize-sdk)
-3. [Add Login](#add-login)
+1. [Install the SDK](#install-the-sdk)
+2. [Initialize the SDK](#initialize-the-sdk)
+3. [Add login](#add-login)
 4. [Add logout](#add-logout)
 
-Refer the [Asgardeo Tomcat SAML Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent#how-it-works) for more information on how it works.
 
-### Install SDK
+### Install the SDK
 
-To get started with the SAML agent, you need to add relevant dependencies. By updating the `pom.xml` file with the following dependency, you can add SAML agent to your project.
+To get started, you need to enable the OIDC agent in your application's project by adding the relevant dependencies to the `pom.xml` file.
 
 ```xml
 <dependency>
@@ -60,10 +59,9 @@ The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency m
 
 Check out the [Github documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/README.md) to learn more.
 
-
 <br>
 
-### Initialize SDK
+### Initialize the SDK
 
 We can initialize the SAML agent by providing the configurations.
 
@@ -241,13 +239,16 @@ flow if it does not find an authenticated application session.
 
 ### Add logout
 
+In the previous steps, you implemented login for your app. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
+
 Add the following snippet to enable logout from a secured page.
 
-When the user initiates the logout, the local authenticated application session is cleared and the session in Asgardeo
-is terminated.
+When the user initiates the logout, the local authenticated application session is cleared and the session in Asgardeo is terminated.
 
 ```html
 <form action="logout?SAML2.HTTPBinding=HTTP-POST" method="get">
     <input type="submit" value="Log Out">
 </form>
 ```
+
+See the [Asgardeo Tomcat SAML Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent#how-it-works) for more information on how it works.

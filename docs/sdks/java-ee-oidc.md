@@ -2,9 +2,9 @@
 breadcrumb: false
 ---
 
-# Add Login To Your Java EE webapp with OIDC
+# Add login to your Java EE webapp with OIDC
 
-This guide provides steps to authenticate users to your Java EE web application deployed on Tomcat with OpenID Connect 
+Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat with OpenID Connect 
 using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent) which enables OIDC-based login and logout.
 
 <Button 
@@ -15,9 +15,9 @@ using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomc
 />
 
 ## Prerequisites
-1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-2. [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
-3. To get started, you need to have an application registered in Asgardeo. If you don't already have one, see the instructions on <a href ="/guides/applications/web-app/oidc/register-app">registering an OIDC application</a>.
+- Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
+- [Download](https://maven.apache.org/download.cgi), and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
+- To get started, you need to have an application registered in Asgardeo. If you don't already have one, see the instructions on <a href ="/guides/applications/web-app/oidc/register-app">registering an OIDC application</a>.
 
 ## Integrate your app with Asgardeo
 
@@ -26,9 +26,6 @@ This guide provides below information on how to integrate your web app with Asga
 2. [Initialize SDK](#initialize-sdk)
 3. [Add Login](#add-login)
 4. [Add logout](#add-logout)
-
-Refer the [Asgardeo Tomcat OIDC Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) for more information on how it works.
-
 
 ### Install SDK
 
@@ -161,3 +158,5 @@ is terminated.
     <input type="submit" value="Log Out">
 </form>
 ```
+
+See the [Asgardeo Tomcat OIDC Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) for more information on how it works.
