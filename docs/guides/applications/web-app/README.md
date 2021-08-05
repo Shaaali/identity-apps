@@ -17,7 +17,9 @@ Following guides provide detailed steps to integrating login to your web applica
 - [Configure SAML login to your webapp](./saml/configure-login/)
 
 ### Try out samples
-- [Java EE sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
+- [Java EE OIDC  sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
+- [Java EE SAML  sample](/quickstarts/qsg-saml-webapp-java-ee.md)
 
 ### Use an SDK to enable sign in to your app
-- [Java EE SDK](/sdks/java-ee.md)
+- [Java EE OIDC SDK](/sdks/java-ee-oidc.md)
+- [Java EE SAML SDK](/sdks/java-ee-saml.md)

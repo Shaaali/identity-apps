@@ -2,10 +2,10 @@
 breadcrumb: false
 ---
 
-# Web application with OIDC: Java EE
+# Add Login to your Java EE webapp with OIDC
 
-This guide provides steps to authenticate users to your Java EE web application deployed on Tomcat with OpenID Connect 
-using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)
+Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat with OpenID Connect 
+using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent) which enables OIDC-based login and logout.
 
 <Button 
     buttonType='grey-outlined-icon'
@@ -15,26 +15,21 @@ using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomc
 />
 
 ## Prerequisites
-1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-2. [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
-3. You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/oidc/register-app">register an application</a> in Asgardeo.
+- Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
+- [Download](https://maven.apache.org/download.cgi), and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
+- To get started, you need to have an application registered in Asgardeo. If you don't already have one, see the instructions on <a href ="/guides/applications/web-app/oidc/register-app">registering an OIDC application</a>.
 
-By following this guide, you will
-1. Register your application as an OIDC app in Asgardeo
-2. Embed Asgardeo OIDC Agent in your web application project
-3. Configure your web application to communicate with Asgardeo
-4. Add login and logout functionality in your web application
+## Add Login to your app
 
-## Add authentication to your app
+This guide provides below information on how to integrate your web app with Asgardeo:
+1. [Install the SDK](#install-the-sdk)
+2. [Initialize the SDK](#initialize-the-sdk)
+3. [Add login](#add-login)
+4. [Add logout](#add-logout)
 
-To ease development, we have introduced the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent)
-which enables adding OIDC-based login and logout in the web applications deployed on Tomcat.
+### Install the SDK
 
-Refer the [Asgardeo Tomcat OIDC Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) for more information on how it works.
-
-### Add dependencies
-
-You can use Asgardeo OIDC Agent in your project by updating the `pom.xml` file with the following dependency.
+To get started with the OIDC agent, you need to add relevant dependencies. By updating the `pom.xml` file with the following dependency, you can add OIDC agent to your project.
 
 ```xml
 <dependency>
@@ -64,9 +59,11 @@ as follows.
 
 <br>
 
-### Configure
+### Initialize the SDK
 
-We provide the Asgardeo endpoints to the application using a property file, which is read by the Asgardeo OIDC Agent.
+We can initialize the OIDC agent by providing the configurations.
+
+We should provide the Asgardeo endpoints to the application using a property file, which is read by the Asgardeo OIDC Agent.
 
 Create a file named `oidc-sample-app.properties` inside the _<YOUR_APP>/src/main/resources_ directory, using the content
 below.
@@ -162,6 +159,4 @@ is terminated.
 </form>
 ```
 
-## Related Links
-
-* [Tryout JAVA EE OIDC Webapp Sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
+See the [Asgardeo Tomcat OIDC Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent#how-it-works) for more information on how it works.

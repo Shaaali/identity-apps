@@ -269,7 +269,8 @@ module.exports = config({
             {
                 title: 'Web App',
                 children: [
-                    ['/sdks/java-ee', 'OIDC Java EE'],
+                    ['/sdks/java-ee-oidc', 'OIDC Java EE'],
+                    ['/sdks/java-ee-saml', 'SAML Java EE'],
                 ]
             },
             ]
