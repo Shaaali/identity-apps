@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add Login To Your Angular App
+# Add login to your Angular app
 
 This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md)
 
@@ -21,8 +21,8 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
 
 ## Integrate your app with Asgardeo
 This guide provides below information on how to integrate your Angular app with Asgardeo:
-1. [Install SDK](#install-sdk)
-2. [Initialize SDK](#initialize-sdk)
+1. [Install the SDK](#install-the-sdk)
+2. [Initialize the SDK](#initialize-the-sdk)
 3. [Add Login](#add-login)
 4. [Get access token](#get-access-token)
 5. [Get decoded ID token](#get-decoded-id-token)
@@ -30,7 +30,7 @@ This guide provides below information on how to integrate your Angular app with 
 7. [Add logout](#add-logout)
 
 
-### Install SDK
+### Install the SDK
 
 Run the following command to install the Angular SDK and the necessary dependencies from the npm registry.
 
@@ -39,7 +39,7 @@ npm install @asgardeo/auth-angular --save
 ```
 <br>
 
-### Initialize SDK
+### Initialize the SDK
 
 Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations.
 
@@ -99,8 +99,6 @@ import { AsgardeoAuthService } from "@asgardeo/auth-angular";
     styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-
-    private isInitLogin: boolean;
     
     /*
     * Use this function in a login button to simply sign-in.
@@ -202,10 +200,8 @@ You can loop through the `decodedIdToken` object and get the other claims as wel
 Apart from adding login and logout to your application, you can get the user information from Asgardeo SDK. 
 
 There are two ways for you to get user information:
-1. Get user information from [decoded id token](#get-decoded-id-token).
+1. Get user information from [decoded ID token](#get-decoded-id-token).
 2. Use `getBasicUserInfo()` API and get basic userinfo.
-
-Instead, you can get basic user information using `getBasicUserInfo()` API. This will give you basic user information. 
  
 You can refer [Github documentation](https://github.com/asgardeo/asgardeo-auth-angular-sdk#basicuserinfo) for further reference. 
 
@@ -259,6 +255,7 @@ Now you have logged in to your application and get some user information of the 
 By calling `handleSignOut()` in your logout button, user can logout out from the application. 
 
 Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signout) for advanced usages:
+
 ```angular2
 // Use this function in a logout button to simply sign-out.
   handleSignOut(): void {
