@@ -2,9 +2,9 @@
 breadcrumb: false
 ---
 
-# Add Login To Your React App
+# Add login to your React app
 
-This guide provides steps to authenticate users to your React SPA with OpenID Connect using the [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk/blob/main/README.md).
+Follow the steps given below to authenticate users to your React SPA with OpenID Connect using the [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk/blob/main/README.md).
 
 <Button 
     buttonType='grey-outlined-icon'
@@ -14,22 +14,22 @@ This guide provides steps to authenticate users to your React SPA with OpenID Co
 />
 
 ## Prerequisites
-1. [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
-2. <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
+- [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
+- <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
 
 ## Add login to your app
 
-This guide provides below information on how to integrate your React App with Asgardeo:
-1. [Install SDK](#install-sdk)
-2. [Initialize SDK](#initialize-sdk)
-3. [Add Login](#add-login)
-4. [Add logout](#add-logout)
-5. [Get access token](#get-access-token)
-6. [Get decoded ID token](#get-decoded-id-token)
-7. [Get user information](#get-user-information)
+This guide provides below information on how to integrate your React app with Asgardeo:
+1. [Install the SDK](#install-the-sdk)
+2. [Initialize the SDK](#initialize-the-sdk)
+3. [Add login](#add-login)
+4. [Get access token](#get-access-token)
+5. [Get decoded ID token](#get-decoded-id-token)
+6. [Get user information](#get-user-information)
+7. [Add logout](#add-logout)
 
 
-### Install SDK
+### Install the SDK
 
 Run the following command to install the React SDK and the necessary dependencies from the npm registry.
 
@@ -39,7 +39,7 @@ npm install @asgardeo/auth-react react-router-dom --save
 
 <br>
 
-### Initialize SDK
+### Initialize the SDK
 
 Asagrdeo uses [React Context API](https://reactjs.org/docs/context.html) under the hood to manage state. You can easily
 integrate Asgardeo to your application by wrapping your application with the `AuthProvider`.
@@ -47,8 +47,8 @@ integrate Asgardeo to your application by wrapping your application with the `Au
 `AuthProvider` takes a config object as a property that can be used to initialize the SDK instance. Provide the below configurations to the config to get the SDK to work with your application. 
  - **clientID** : Client ID of your  OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
  - **serverOrigin** : Asgardeo server host name along with your organization name.
- - **signInRedirectURL** : URL to return after the login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
- - **signOutRedirectURL** : URL to return after the logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+ - **signInRedirectURL** : The URL to which users should be redirected after the login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+ - **signOutRedirectURL** : The URL to which users should be redirected after the logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
@@ -143,7 +143,7 @@ const LandingPage = () => {
 };
 ```
 
-**Sample** `accessToken` is given below:
+**Sample access token** is given below:
 
 ```
 61985b0e-26c3-38b7-acff-b18ad934eafc 
@@ -188,7 +188,7 @@ const LandingPage = () => {
 };
 ```
 
-**Sample** `decodedIDToken` object is given below:
+**Sample decoded ID Token** object is given below:
 
 ```
 {
@@ -216,15 +216,15 @@ From this `decodedIDToken` object, you can get,
 <table>
    <tbody>
       <tr>
-         <td>sub</td>
+         <td><b>sub</b></td>
          <td><code>decodedIDToken.sub</code></td>
       </tr>
       <tr>
-           <td>email</td>
+           <td><b>email</b></td>
            <td><code>decodedIDToken.email</code></td>
       </tr>
       <tr>
-         <td>country</td>
+         <td><b>country</b></td>
          <td><code>decodedIDToken.country</code></td>
     </tr>
    </tbody>
@@ -278,7 +278,7 @@ const LandingPage = () => {
 };
 ```
 
-**Sample** `basicUserDetails` object is below:
+**Sample basic user details**(`basicUserDetails`) object is below:
 
 ```json
 {
@@ -290,20 +290,20 @@ const LandingPage = () => {
 }
 ```
 
-From this `basicUserDetails` object, you can loop through and get the required user information:
+From this basic user details object, you can loop through and get the required user information:
 
 <table>
    <tbody>
       <tr>
-         <td>username</td>
+         <td><b>username</b></td>
          <td><code>basicUserDetails.username</code></td>
       </tr>
       <tr>
-           <td>email</td>
+           <td><b>email</b></td>
            <td><code>basicUserDetails.email</code></td>
       </tr>
       <tr>
-         <td>country</td>
+         <td><b>country</b></td>
          <td><code>basicUserDetails.country</code></td>
     </tr>
    </tbody>
@@ -313,9 +313,9 @@ From this `basicUserDetails` object, you can loop through and get the required u
 
 ### Add logout
 
-Now you have logged in to your application and obtained some user information of the logged in user. You need a way to log out your application and remove user session from Asgardeo as well. 
+In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
 
-By calling `handleSignOut()` in your logout button, user can logout out from the application. 
+Call `handleSignOut()` from your logout button to enable app users to log out as shown below.
 
 
 ```
