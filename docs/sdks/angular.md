@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add Login To Your Angular App
+# Add login to your Angular app
 
 This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md)
 
@@ -21,8 +21,8 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
 
 ## Integrate your app with Asgardeo
 This guide provides below information on how to integrate your Angular app with Asgardeo:
-1. [Install SDK](#install-sdk)
-2. [Initialize SDK](#initialize-sdk)
+1. [Install the SDK](#install-the-sdk)
+2. [Initialize the SDK](#initialize-the-sdk)
 3. [Add Login](#add-login)
 4. [Get access token](#get-access-token)
 5. [Get decoded ID token](#get-decoded-id-token)
@@ -30,7 +30,7 @@ This guide provides below information on how to integrate your Angular app with 
 7. [Add logout](#add-logout)
 
 
-### Install SDK
+### Install the SDK
 
 Run the following command to install the Angular SDK and the necessary dependencies from the npm registry.
 
@@ -39,7 +39,7 @@ npm install @asgardeo/auth-angular --save
 ```
 <br>
 
-### Initialize SDK
+### Initialize the SDK
 
 Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations.
 
