@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your Java EE webapp with OIDC
+# Add Login to your Java EE webapp with OIDC
 
 Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat with OpenID Connect 
 using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent) which enables OIDC-based login and logout.
@@ -19,15 +19,15 @@ using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomc
 - [Download](https://maven.apache.org/download.cgi), and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
 - To get started, you need to have an application registered in Asgardeo. If you don't already have one, see the instructions on <a href ="/guides/applications/web-app/oidc/register-app">registering an OIDC application</a>.
 
-## Integrate your app with Asgardeo
+## Add Login to your app
 
 This guide provides below information on how to integrate your web app with Asgardeo:
-1. [Install SDK](#install-sdk)
-2. [Initialize SDK](#initialize-sdk)
-3. [Add Login](#add-login)
+1. [Install the SDK](#install-the-sdk)
+2. [Initialize the SDK](#initialize-the-sdk)
+3. [Add login](#add-login)
 4. [Add logout](#add-logout)
 
-### Install SDK
+### Install the SDK
 
 To get started with the OIDC agent, you need to add relevant dependencies. By updating the `pom.xml` file with the following dependency, you can add OIDC agent to your project.
 
@@ -59,9 +59,9 @@ as follows.
 
 <br>
 
-### Initialize SDK
+### Initialize the SDK
 
-We can initialize the SAML agent by providing the configurations.
+We can initialize the OIDC agent by providing the configurations.
 
 We should provide the Asgardeo endpoints to the application using a property file, which is read by the Asgardeo OIDC Agent.
 

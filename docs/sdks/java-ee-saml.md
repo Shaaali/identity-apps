@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your Java EE webapp with SAML
+# Add Login to your Java EE webapp with SAML
 
 Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat with SAML 
 using the [Asgardeo Tomcat SAML Agent](https://github.com/asgardeo/asgardeo-tomcat-saml-agent) which enables SAML-based login and logout.
@@ -11,7 +11,7 @@ using the [Asgardeo Tomcat SAML Agent](https://github.com/asgardeo/asgardeo-tomc
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/java-logo.svg'
-    buttonPath='/quickstarts/qsg-oidc-webapp-java-ee'
+    buttonPath='/quickstarts/qsg-saml-webapp-java-ee'
 />
 
 ## Prerequisites
@@ -30,7 +30,10 @@ This guide provides below information on how to integrate your web app with Asga
 
 ### Install the SDK
 
-To get started, you need to enable the OIDC agent in your application's project by adding the relevant dependencies to the `pom.xml` file.
+Follow the steps given below to install SAML agent.
+
+#### 1. Add the relevant dependencies
+To get started, you need to enable the SAML agent in your application's project by adding the relevant dependencies to the `pom.xml` file.
 
 ```xml
 <dependency>
@@ -40,7 +43,8 @@ To get started, you need to enable the OIDC agent in your application's project 
 </dependency>
 ```
 
-The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency mentioned above, point to the repository as follows.
+#### 2. Add the nexus repository
+The agent is hosted at **WSO2 Internal Repository**. Point to this nexus repository to resolve the dependency given above.
 
 ```xml
 <repositories>
@@ -57,15 +61,18 @@ The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency m
 </repositories>
 ```
 
-Check out the [Github documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/README.md) to learn more.
+See the [reference documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/README.md) to learn more.
 
 <br>
 
 ### Initialize the SDK
 
-We can initialize the SAML agent by providing the configurations.
+Follow the steps given below to initialize the SAML agent.
 
-We should provide the Asgardeo endpoints to the application using a property file, which is read by the Asgardeo SAML Agent.
+#### 1. Provide configurations 
+
+To initialize the SAML agent, you need a property file with the configurations (Asgardeo endpoints, etc.). The Asgardeo SAML agent reads the configurations from this file.
+
 Create a file named **sample-app.properties** inside the **<YOUR_APP>/src/main/resources** directory, using the content below.
 
 
@@ -100,10 +107,9 @@ Create a file named **sample-app.properties** inside the **<YOUR_APP>/src/main/r
     PrivateKeyPassword=<app_private_key_password>
 ```
 
-Find the configuration information below.  
-
-For advanced use cases such as SAML response signing, the Asgardeo SAML Agent uses a keystore with your private key. If your application doesn't have a keystore already, generate a keystore file and copy it to the **<APP_HOME>/src/main/resources** directory. Make sure to update KeyStorePassword, PrivateKeyAlias and PrivateKeyPassword with relevant values.
+For advanced use cases such as SAML response signing, the Asgardeo SAML Agent uses a keystore with your private key. If your application doesn't have a keystore already, generate a keystore file and copy it to the **<APP_HOME>/src/main/resources** directory. Make sure to update KeyStorePassword, PrivateKeyAlias, and PrivateKeyPassword with relevant values.
   
+Find the configuration information below: 
 
 <table>
    <thead>
@@ -181,9 +187,11 @@ For advanced use cases such as SAML response signing, the Asgardeo SAML Agent us
    </tbody>
 </table>
     
-A comprehensive list of the properties used above, can be found in the [Configuration Catalog](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/blob/master/io.asgardeo.tomcat.oidc.sample/src/main/resources/configuration-catalog.md).
+See the complete list of [configuration properties](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/io.asgardeo.tomcat.saml.sample/src/main/resources/configuration-catalog.md).
 
-Finally, copy and paste the following configuration to the **<APP_HOME>/WEB-INF/web.xml** file and change the **certificate-file** parameter with the name of **your keystore file**.
+#### 2. Configure the keystore of the app
+
+Copy the following configurations to the **<APP_HOME>/WEB-INF/web.xml** file and change the **certificate-file** parameter to the name of **your keystore file**.
 
 ```xml
 <filter>
@@ -226,8 +234,7 @@ Finally, copy and paste the following configuration to the **<APP_HOME>/WEB-INF/
 
 In the `index.html` file, add a login button to be used to forward users to secured pages.
 
-Once the user clicks on the button, the request will be intercepted by the SAML agent and will initiate the SAML Login
-flow if it does not find an authenticated application session.
+When the user clicks the button, the SAML agent intercepts the request and initiates the SAML login flow if an authenticated session does not already exist.
 
 ```html
 <form action="<HOME_PAGE>" method="post">
@@ -241,14 +248,13 @@ flow if it does not find an authenticated application session.
 
 In the previous steps, you implemented login for your app. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
 
-Add the following snippet to enable logout from a secured page.
-
 When the user initiates the logout, the local authenticated application session is cleared and the session in Asgardeo is terminated.
 
+Add the following snippet to enable logout.
 ```html
 <form action="logout?SAML2.HTTPBinding=HTTP-POST" method="get">
     <input type="submit" value="Log Out">
 </form>
 ```
 
-See the [Asgardeo Tomcat SAML Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent#how-it-works) for more information on how it works.
+See the [Asgardeo Tomcat SAML Agent documentation](https://github.com/asgardeo/asgardeo-tomcat-saml-agent#how-it-works) for more information.
