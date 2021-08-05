@@ -37,14 +37,12 @@ Run the following command to install the React SDK and the necessary dependencie
 npm install @asgardeo/auth-react react-router-dom --save
 ```
 
-<br>
-
 ### Initialize the SDK
 
-Asagrdeo uses [React Context API](https://reactjs.org/docs/context.html) under the hood to manage state. You can easily
-integrate Asgardeo to your application by wrapping your application with the `AuthProvider`.
+SDK uses [React Context API](https://reactjs.org/docs/context.html) under the hood to share the data between components. 
+You can easily integrate Asgardeo in your application by using `AuthProvider` as the wrapper element to inject configurations.
 
-`AuthProvider` takes a config object as a property that can be used to initialize the SDK instance. Provide the below configurations to the config to get the SDK to work with your application. 
+`AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitary input that can be used to initialize the SDK instance. Provide the below configurations to the config to get the SDK to work with your application. 
  - **clientID** : Client ID of your  OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
  - **serverOrigin** : Asgardeo server host name along with your organization name.
  - **signInRedirectURL** : The URL to which users should be redirected after the login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
@@ -80,7 +78,10 @@ render((<App />), document.getElementById("root"));
 ### Add login
 
 The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button**
-using the `signIn()` function in the `useAuthContext` hook. 
+using the `signIn()` function in the `useAuthContext` hook. Call this `signIn` method two times from your login button.
+
+This `signIn()` method is used authenticate the users and get authorization code and access token.
+
 
 ```
 import { useAuthContext } from "@asgardeo/auth-react";
@@ -110,7 +111,7 @@ export default LandingPage;
 
 ### Get access token
 
-Once the user is logged in with Asgardeo, the application can get the access token issued by Asgardeo.
+Add the following code in your application, and the application can get the access token issued by Asgardeo.
 
 ```
 import { useAuthContext } from "@asgardeo/auth-react";
@@ -153,9 +154,9 @@ const LandingPage = () => {
 
 Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
-SDK provides the capability to decode the token from you can provide the claims. 
+SDK provides the capability to decode the token, and you can obtain claims from the decoded ID token. 
 
-Copy `obtainDecodedIDtoken` and call it from a button click.
+Copy `obtainDecodedIDtoken` and call it from a button click as shown below.
 
 ```
 import { useAuthContext } from "@asgardeo/auth-react";
@@ -188,7 +189,7 @@ const LandingPage = () => {
 };
 ```
 
-**Sample decoded ID Token** object is given below:
+**Sample decoded ID token** object is given below:
 
 ```
 {
@@ -211,7 +212,7 @@ const LandingPage = () => {
 }
 ```
 
-From this `decodedIDToken` object, you can get, 
+From this decoded ID Token(`decodedIDToken`) object, you can get, 
 
 <table>
    <tbody>
@@ -236,14 +237,13 @@ You can loop through the `decodedIDToken` object and get the other claims as wel
 
 ### Get user information
 
-Apart from adding login and logout to your application, you can get the user information from Asgardeo SDK. 
+In addition to implementing login and logout, your application can use the SDK to get user information.
+ 
+ There are two ways for you to get user information:
+ - Get user information from the [decoded ID token](#get-decoded-id-token).
+ - Use the `getBasicUserInfo()` API and get basic user information.
 
-There are two ways for you to get user information:
-1. Get user information from [decoded id token](#get-decoded-id-token).
-2. Use `getBasicUserInfo()` API and get basic userinfo.
-
-Instead, you can get basic user information using `getBasicUserInfo()` API. This will give you basic user information. 
-
+To get the basic user information from SDK, copy the following script and call the `obtainUserInfo()` from a button as shown below. 
 
 ```
 import { useAuthContext } from "@asgardeo/auth-react";
@@ -290,7 +290,7 @@ const LandingPage = () => {
 }
 ```
 
-From this basic user details object, you can loop through and get the required user information:
+You can loop through the user info response(`basicUserDetails`), and get the following values:
 
 <table>
    <tbody>
@@ -347,6 +347,3 @@ const LandingPage = () => {
     );
 };
 ```
-
-
-
