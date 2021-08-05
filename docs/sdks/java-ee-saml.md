@@ -189,7 +189,7 @@ Find the configuration information below:
    </tbody>
 </table>
     
-See the complete list of [configuration properties](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/io.asgardeo.tomcat.saml.sample/src/main/resources/configuration-catalog.md).
+See the complete list of [configuration properties](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/io.asgardeo.tomcat.saml.agent.sample/src/main/resources/configuration-catalog.md).
 
 #### 2. Configure the keystore of the app
 
