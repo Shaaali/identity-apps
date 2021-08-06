@@ -315,6 +315,7 @@ module.exports = config({
         'tabs',
         ['check-md', {
             exitLevel: 'error'
-        }]
+        }],
+        'vuepress-plugin-chunkload-redirect'
     ]
 });
