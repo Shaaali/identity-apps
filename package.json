@@ -17,15 +17,16 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-check-md": "0.0.2",
-    "vuepress-theme-hope": "^1.13.1",
+    "broken-link-checker": "^0.7.8",
     "markdown-it-html5-embed": "^1.0.0",
+    "serve": "^12.0.0",
+    "vue-tabs-component": "^1.5.0",
+    "vuepress": "^1.8.2",
     "vuepress-bar": "^0.3.5",
     "vuepress-plugin-auto-sidebar": "^1.5.0",
-    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-check-md": "0.0.2",
+    "vuepress-plugin-chunkload-redirect": "^1.0.3",
     "vuepress-plugin-tabs": "^0.3.0",
-    "broken-link-checker": "^0.7.8",
-    "serve": "^12.0.0"
+    "vuepress-theme-hope": "^1.13.1"
   }
 }
