@@ -116,6 +116,16 @@ module.exports = config({
                                 ['bot-detection', 'Configure Bot Detection'],
                             ]
                         },
+                        {
+                            title: 'User Self-Service',
+                            prefix: 'organization/self-service/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['my-account-for-customers', 'My Account for Customers'],
+                                ['my-account-for-asgardeo-user', 'My Account for the Owner and Collaborators'],
+
+                            ]
+                        },
 
                     ]
                 },
