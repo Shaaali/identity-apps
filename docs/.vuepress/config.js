@@ -108,6 +108,15 @@ module.exports = config({
                             ]
                         },
                         {
+                            title: 'Account Recovery',
+                            prefix: 'organization/account-recovery/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['password-recovery', 'Configure Password Recovery'],
+                            ]
+                        },
+                        ['organization/configure-self-registration', 'Configure Self Registration'],
+                        {
                             title: 'Account Security',
                             prefix: 'organization/account-security/',
                             sidebarDepth: 2,
@@ -121,9 +130,25 @@ module.exports = config({
                             prefix: 'organization/self-service/',
                             sidebarDepth: 2,
                             children: [
-                                ['my-account-for-customers', 'My Account for Customers'],
-                                ['my-account-for-asgardeo-user', 'My Account for the Owner and Collaborators'],
-
+                                {
+                                    title: 'Asgardeo User',
+                                    prefix: 'asgardeo-user/',
+                                    sidebarDepth: 2,
+                                    children: [
+                                        ['my-account', 'My Account'],
+                                        ['recover-password', 'Recover your password'],
+                                    ]
+                                },
+                                {
+                                    title: 'Customer',
+                                    prefix: 'customer/',
+                                    sidebarDepth: 2,
+                                    children: [
+                                        ['my-account', 'My Account'],
+                                        ['recover-password', 'Recover your password'],
+                                        ['self-register', 'Self register'],
+                                    ]
+                                },
                             ]
                         },
 

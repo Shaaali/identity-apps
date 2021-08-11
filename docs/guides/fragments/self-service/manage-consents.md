@@ -7,7 +7,7 @@ To manage the consents given:
 2. Click on **Security > Manage Consents**.
 3. You can view the applications for which you have provided consent to share your user information.
 4. Select an application and click **See more**. You can view the attributes shared with the selected application.
-   <img :src="$withBase('/assets/img/guides/organization/self-service/view-consents.png')" alt="View consents">
+   <img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/view-consents.png')" alt="View consents">
 5. You can either:
     - Unselect the attributes individually and click **Update**. This will remove access to these unselected user attributes for the given application.
     - Click **Revoke** to revoke all the user attributes shared with that application.
