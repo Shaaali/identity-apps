@@ -40,7 +40,7 @@ Admin has configured below settings:
 - Account lock duration increment factor      : 2
 
 Based on the above settings, let's see how account lock happens in Asgardeo when a user tries to login with incorrect password.
-1. User tries to login with an incorrect password in **5 consecutive attempts** (Number of consecutive failed login attempts).
+1. User tries to log in with an incorrect password in **5 consecutive attempts** (Number of consecutive failed login attempts).
 2. User account will be **locked** for **5 minutes** (Account lock duration).
 3. After **5 minutes**, the account will be unlocked.
    -  If the user enters the correct password, the user can successfully log in.
@@ -62,4 +62,3 @@ To disable login attempts security:
 3. Click **Configure**.
 4. Turn off **Disabled** to disable this security.  
    <img :src="$withBase('/assets/img/guides/organization/account-security/login-attempts-security/disable-login-attempts-security.png')" alt="Disable login attempts security">
-
