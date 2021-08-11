@@ -17,37 +17,23 @@ Follow the steps given below to authenticate users to your JavaScript SPA with O
 - [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
 - <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
 
-## Add Login to your app
+## Install the SDK
 
-This guide provides below information on how to integrate your Javascript SPA with Asgardeo.
-1. [Install the SDK](#install-the-sdk)
-2. [Initialize the SDK](#initialize-the-sdk)
-3. [Add login](#add-login)
-4. [Get access token](#get-access-token)
-5. [Get decoded ID token](#get-decoded-id-token)
-6. [Get user information](#get-user-information)
-7. [Add logout](#add-logout)
-
-
-### Install the SDK
-
-Add the following script to the `index.html` of your application.
+Add the following script to the `index.html` file in your application.
 
 ``` html
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 ```
 
-<br>
-
-### Initialize the SDK
+## Initialize the SDK
 
 You can use the following code within your root component to initialize `AsgardeoSPAClient` for your application.
 
 To initialize the SDK, use the `getInstance()` function in the SDK and provide the following values to the `auth.initialize()` function to get the SDK to work with your application:
 - **clientID** : Client ID of your OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
- - **serverOrigin** : Asgardeo server host name along with your organization name.
- - **signInRedirectURL** : The URL to which users should be redirected after login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
- - **signOutRedirectURL** : The URL to which users should be redirected after logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+- **serverOrigin** : Asgardeo server host name along with your organization name.
+- **signInRedirectURL** : The URL to which users should be redirected after login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+- **signOutRedirectURL** : The URL to which users should be redirected after logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
 
 ```
 <script>
@@ -64,15 +50,13 @@ auth.initialize({
 </script>
 ```
 
-<br>
-
-### Add login
+## Add login
 
 The `sign-in` hook is used to fire a callback function after successful sign-in.
 
-To sign in, simply call the `signIn()` function using the created instance. Add the following script in your html file and call it twice from login button.
+To sign in, simply call the `signIn()` function using the created instance. Add the following script in your html file and call it twice from the login button.
 
-This method is used authenticate the users and get  authorization code and access token.
+This method is used authenticate the users and get authorization code and access token.
 
 ```
 <script>
@@ -86,11 +70,11 @@ function handleLogin() {
 </script>
 ```
 
-### Get access token
+## Get access token
 
-Add the following script to a html file and call it from a button. This is used to get the access token from the SDK. 
+Add the following script to the html file and call it from a button. This is used to get the access token from the SDK. 
 
-See the [SDK reference](https://github.com/asgardeo/asgardeo-auth-js-sdk#getAccessToken) for details.
+See the [SDK reference](https://github.com/asgardeo/asgardeo-auth-js-sdk#getAccessToken) for more information.
 
 
 ```
@@ -109,7 +93,7 @@ async function getToken() {
 61985b0e-26c3-38b7-acff-b18ad934eafc
 ```
 
-### Get decoded ID token
+## Get decoded ID token
 
 To get the decoded token, call `getDecodedIdToken()` from a button click as shown below. Decoded ID token is useful to get the user attributes in the form of claims.
 
@@ -171,15 +155,15 @@ You can loop through the  decoded ID token, and get the following values:
    </tbody>
 </table>  
 
-### Get user information
+## Get user information
 
-In addition to implementing login and logout, your application can use the SDK to get user information.
+In addition to implementing login and logout, your application can also use the SDK to get user information.
 
 There are two ways for you to get user information:
 - Get user information from the [decoded ID token](#get-decoded-id-token).
 - Use the `getBasicUserInfo()` API and get basic user information.
 
-To get the basic user information from SDK, copy the following script and call the `getBasicUserInfo()` from a button. 
+To get the basic user information from the SDK, copy the following script and call the `getBasicUserInfo()` from a button. 
 See the [SDK reference](https://github.com/asgardeo/asgardeo-auth-spa-sdk#getBasicUserInfo) for details.
 
 ```
@@ -225,7 +209,7 @@ You can loop through the user info response(`userinfoResponse`), and get the fol
 </table>
 
 
-### Add logout
+## Add logout
 
 In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
 

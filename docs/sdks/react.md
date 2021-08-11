@@ -17,19 +17,7 @@ Follow the steps given below to authenticate users to your React SPA with OpenID
 - [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
 - <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
 
-## Add login to your app
-
-This guide provides below information on how to integrate your React app with Asgardeo:
-1. [Install the SDK](#install-the-sdk)
-2. [Initialize the SDK](#initialize-the-sdk)
-3. [Add login](#add-login)
-4. [Get access token](#get-access-token)
-5. [Get decoded ID token](#get-decoded-id-token)
-6. [Get user information](#get-user-information)
-7. [Add logout](#add-logout)
-
-
-### Install the SDK
+## Install the SDK
 
 Run the following command to install the React SDK and the necessary dependencies from the npm registry.
 
@@ -37,16 +25,16 @@ Run the following command to install the React SDK and the necessary dependencie
 npm install @asgardeo/auth-react react-router-dom --save
 ```
 
-### Initialize the SDK
+## Initialize the SDK
 
 SDK uses [React Context API](https://reactjs.org/docs/context.html) under the hood to share the data between components. 
 You can easily integrate Asgardeo in your application by using `AuthProvider` as the wrapper element to inject configurations.
 
-`AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitary input that can be used to initialize the SDK instance. Provide the below configurations to the config to get the SDK to work with your application. 
- - **clientID** : Client ID of your  OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
- - **serverOrigin** : Asgardeo server host name along with your organization name.
- - **signInRedirectURL** : The URL to which users should be redirected after the login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
- - **signOutRedirectURL** : The URL to which users should be redirected after the logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+`AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitary input that can be used to initialize the SDK instance. Provide the configurations below to get the SDK to work with your application. 
+ - **clientID** : This is the Client ID of your OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
+ - **serverOrigin** : Asgardeo server host name along with your organization name
+ - **signInRedirectURL** : This is the URL to which users should be redirected after login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+ - **signOutRedirectURL** : This is the URL to which users should be redirected after logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
@@ -73,12 +61,10 @@ const App = () => (
 render((<App />), document.getElementById("root"));
 ```
 
-<br>
-
-### Add login
+## Add login
 
 The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button**
-using the `signIn()` function in the `useAuthContext` hook. Call this `signIn` method two times from your login button.
+using the `signIn()` function in the `useAuthContext` hook. Call this `signIn` method twice from your login button.
 
 This `signIn()` method is used authenticate the users and get authorization code and access token.
 
@@ -109,9 +95,9 @@ const LandingPage = () => {
 export default LandingPage;
 ```
 
-### Get access token
+## Get access token
 
-Add the following code in your application, and the application can get the access token issued by Asgardeo.
+Add the following code in your application. This enables the application to get the access token issued by Asgardeo.
 
 ```
 import { useAuthContext } from "@asgardeo/auth-react";
@@ -144,17 +130,17 @@ const LandingPage = () => {
 };
 ```
 
-**Sample access token** is given below:
+**Sample access token** :
 
 ```
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
-### Get decoded ID token
+## Get decoded ID token
 
 Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
-SDK provides the capability to decode the token, and you can obtain claims from the decoded ID token. 
+SDK provides the capability to decode the token, and you can obtain claims from this decoded ID token. 
 
 Copy `obtainDecodedIDtoken` and call it from a button click as shown below.
 
@@ -235,9 +221,9 @@ You can loop through the `decodedIDToken` object and get the other claims as wel
 
 <br>
 
-### Get user information
+## Get user information
 
-In addition to implementing login and logout, your application can use the SDK to get user information.
+In addition to implementing login and logout, your application can also use the SDK to get user information.
  
  There are two ways for you to get user information:
  - Get user information from the [decoded ID token](#get-decoded-id-token).
@@ -311,12 +297,11 @@ You can loop through the user info response(`basicUserDetails`), and get the fol
 
 <br>
 
-### Add logout
+## Add logout
 
 In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
 
 Call `handleSignOut()` from your logout button to enable app users to log out as shown below.
-
 
 ```
 import { useAuthContext } from "@asgardeo/auth-react";
