@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add Login to your Java EE webapp with OIDC
+# Add login to your Java EE webapp with OIDC
 
 Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent) which enables OIDC-based login and logout.
 
