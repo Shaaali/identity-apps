@@ -2,10 +2,9 @@
 breadcrumb: false
 ---
 
-# Add Login to your Java EE webapp with OIDC
+# Add login to your Java EE webapp with OIDC
 
-Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat with OpenID Connect 
-using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent) which enables OIDC-based login and logout.
+Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent) which enables OIDC-based login and logout.
 
 <Button 
     buttonType='grey-outlined-icon'
@@ -15,21 +14,13 @@ using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomc
 />
 
 ## Prerequisites
-- Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-- [Download](https://maven.apache.org/download.cgi), and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you don't have.
-- To get started, you need to have an application registered in Asgardeo. If you don't already have one, see the instructions on <a href ="/guides/applications/web-app/oidc/register-app">registering an OIDC application</a>.
+- [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
+- [Download](https://maven.apache.org/download.cgi), and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you already haven't.
+- You need to have an application registered in Asgardeo. If you don't, see the instructions on <a href ="/guides/applications/web-app/oidc/register-app">registering an OIDC application</a>.
 
-## Add Login to your app
+## Install the SDK
 
-This guide provides below information on how to integrate your web app with Asgardeo:
-1. [Install the SDK](#install-the-sdk)
-2. [Initialize the SDK](#initialize-the-sdk)
-3. [Add login](#add-login)
-4. [Add logout](#add-logout)
-
-### Install the SDK
-
-To get started with the OIDC agent, you need to add relevant dependencies. By updating the `pom.xml` file with the following dependency, you can add OIDC agent to your project.
+To get started with the OIDC agent, you need to add relevant dependencies. By updating the `pom.xml` file with the following dependency, you can add the OIDC agent to your project.
 
 ```xml
 <dependency>
@@ -39,8 +30,7 @@ To get started with the OIDC agent, you need to add relevant dependencies. By up
 </dependency>
 ```
 
-The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency mentioned above, point to the repository
-as follows.
+The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency mentioned above, point to the repository as follows.
 
 ```xml
 <repositories>
@@ -57,15 +47,11 @@ as follows.
 </repositories>
 ```
 
-<br>
+## Initialize the SDK
 
-### Initialize the SDK
+To initialize the OIDC agent, you need a property file with the configurations such as the Asgardeo endpoints. The Asgardeo OIDC agent reads the configurations from this file.
 
-We can initialize the OIDC agent by providing the configurations.
-
-We should provide the Asgardeo endpoints to the application using a property file, which is read by the Asgardeo OIDC Agent.
-
-Create a file named `oidc-sample-app.properties` inside the _<YOUR_APP>/src/main/resources_ directory, using the content
+Create a file named `oidc-sample-app.properties` in the _<YOUR_APP>/src/main/resources_ directory, using the content
 below.
 
 ::: tip Note
@@ -131,9 +117,9 @@ Finally, copy and paste the following configuration to the _<YOUR_APP>/src/main/
 
 <br>
 
-### Add login
+## Add login
 
-In the `index.html` file, add a login button to forward the user to secure pages upon successful login.
+In the `index.html` file, add a login button to redirect the user to secure pages upon successful login.
 
 Once the user clicks on the button, the request will be intercepted by the OIDC agent and will initiate the OIDC Login
 flow if it does not find an authenticated application session.
@@ -146,7 +132,7 @@ flow if it does not find an authenticated application session.
 
 <br>
 
-### Add logout
+## Add logout
 
 Add the following snippet to enable logout.
 

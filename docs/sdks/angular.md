@@ -4,7 +4,7 @@ breadcrumb: false
 
 # Add login to your Angular app
 
-This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md)
+This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md).
 
 <Button 
     buttonType='grey-outlined-icon'
@@ -19,18 +19,7 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
 2. <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
 <br>
 
-## Integrate your app with Asgardeo
-This guide provides below information on how to integrate your Angular app with Asgardeo:
-1. [Install the SDK](#install-the-sdk)
-2. [Initialize the SDK](#initialize-the-sdk)
-3. [Add Login](#add-login)
-4. [Get access token](#get-access-token)
-5. [Get decoded ID token](#get-decoded-id-token)
-6. [Get user information](#get-user-information)
-7. [Add logout](#add-logout)
-
-
-### Install the SDK
+## Install the SDK
 
 Run the following command to install the Angular SDK and the necessary dependencies from the npm registry.
 
@@ -39,15 +28,15 @@ npm install @asgardeo/auth-angular --save
 ```
 <br>
 
-### Initialize the SDK
+## Initialize the SDK
 
 Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations.
 
 Provide the following values to the `forRoot()` function of `AsgardeoAuthModule` to get the SDK to work with your application:
- - **clientID** : Client ID of your  OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
- - **serverOrigin** : Asgardeo server host name along with your organization name.
- - **signInRedirectURL** : URL to return after login. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
- - **signOutRedirectURL** : URL to return after logout. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+ - **clientID** : This is the Client ID of your OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
+ - **serverOrigin** : Asgardeo server host name along with your organization name
+ - **signInRedirectURL** : This is the URL the app redirects to after logging in. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+ - **signOutRedirectURL** : This is the URL the app redirects to after logging out. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
 
 ```
 // app.module.ts
@@ -82,12 +71,13 @@ export class AppModule { }
 ```
 <br>
 
-### Add login
+## Add login
 
 Inject `AsgardeoAuthService` to your components to add login to your application. 
-Copy the below code to your component and then call `handleSignIn()` two times from your login button. The first call will handle the authorization code flow and the second call will do the token flow.
+Copy the code given below to your component and then call `handleSignIn()` twice from your login button. The first call will handle the authorization code flow and the second call, the token flow.
 
-Check [SignIn api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signin) for the advanced usages.
+See [SignIn api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signin) for the advanced usages.
+
 ```
 // app.component.ts
 import { Component } from "@angular/core";
@@ -109,33 +99,30 @@ export class AppComponent implements OnInit {
     
 }
 ```
-<br>
 
-### Get access token
+## Get access token
 
 Once the user is logged in with Asgardeo, the application can get the access token issued by Asgardeo.
 
-Refer [getAccessToken](https://github.com/asgardeo/asgardeo-auth-angular-sdk#getaccesstoken) from Github documentation.
+Refer [getAccessToken](https://github.com/asgardeo/asgardeo-auth-angular-sdk#getaccesstoken) for more information.
  
- ```
+```
 getAccessToken() {
     this.auth.getAccessToken().then((accessToken) => console.log(accessToken));
   }
 ```
 
-**Sample** `accessToken` is given below:
+**Sample** `accessToken`:
 
 ```
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
-<br>
-
-### Get decoded ID token
+## Get decoded ID token
 
 Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
-SDK provides the capability to decode the token from you can provide the claims. 
+The SDK provides the capability to decode this token and provide the claims. 
 
 Copy `getDecodedIdToken()` and call it from a button click.
 
@@ -193,17 +180,15 @@ From this `decodedIdToken` object, you can get,
 
 You can loop through the `decodedIdToken` object and get the other claims as well.
 
-<br>
+## Get user information
 
-### Get user information
-
-Apart from adding login and logout to your application, you can get the user information from Asgardeo SDK. 
+Apart from adding login and logout to your application, you can also get the user information from the Asgardeo SDK. 
 
 There are two ways for you to get user information:
 1. Get user information from [decoded ID token](#get-decoded-id-token).
 2. Use `getBasicUserInfo()` API and get basic userinfo.
  
-You can refer [Github documentation](https://github.com/asgardeo/asgardeo-auth-angular-sdk#basicuserinfo) for further reference. 
+Refer [Github documentation](https://github.com/asgardeo/asgardeo-auth-angular-sdk#basicuserinfo) for more information. 
 
 ```
 getUserInfo(){
@@ -246,13 +231,11 @@ From this `userinfoResponse` object, you can loop through and get the required u
    </tbody>
 </table>
 
-<br>
+## Add logout
 
-### Add logout
+Now you have logged in to your application and obtained some user information. You need a way to log out of your application and remove the user session from Asgardeo as well. 
 
-Now you have logged in to your application and get some user information of the logged in user. You need a way to log out your application and remove user session from Asgardeo as well. 
-
-By calling `handleSignOut()` in your logout button, user can logout out from the application. 
+By calling `handleSignOut()` in your logout button, the user can log out out from the application. 
 
 Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signout) for advanced usages:
 
@@ -262,4 +245,3 @@ Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-
     this.auth.signOut();
   }
 ```
-<br>
