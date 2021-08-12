@@ -8,7 +8,7 @@ Once the application obtains authorization code, application has to exchange the
 **Token endpoint:**
 
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
+https://api.asgardeo.io/t/<organization_name>/oauth2/token
 ```
 
 **Request:**
@@ -17,7 +17,7 @@ https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/token' \
+curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code={authorization_doe}' \
 --data-urlencode 'grant_type=authorization_code' \
@@ -32,7 +32,7 @@ curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/to
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
+    "url": "https://api.asgardeo.io/t/bifrost/oauth2/token",
     "method": "POST",
     "timeout": 0,
     "headers": {
@@ -68,7 +68,7 @@ var data = qs.stringify({
 });
 var config = {
     method: 'post',
-    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/token',
+    url: 'https://api.asgardeo.io/t/bifrost/oauth2/token',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
     },
@@ -92,7 +92,7 @@ axios(config)
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/token' \
+curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d' \
 --data-urlencode 'grant_type=authorization_code' \

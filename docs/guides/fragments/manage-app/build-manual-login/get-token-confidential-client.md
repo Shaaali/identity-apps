@@ -9,7 +9,7 @@ Application has to provide it's credentials and get tokens.
 **Token endpoint:**
 
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
+https://api.asgardeo.io/t/<organization_name>/oauth2/token
 ```
 
 
@@ -18,7 +18,7 @@ https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request POST 'https://accounts.asgardeo.io/t/<organization_name>/oauth2/token' \
+curl --location --request POST 'https://api.asgardeo.io/t/<organization_name>/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code={authorization_code}' \
 --data-urlencode 'grant_type=authorization_code' \
@@ -32,7 +32,7 @@ curl --location --request POST 'https://accounts.asgardeo.io/t/<organization_nam
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/<organization_name>/oauth2/token",
+    "url": "https://api.asgardeo.io/t/<organization_name>/oauth2/token",
     "method": "POST",
     "timeout": 0,
     "headers": {
@@ -68,7 +68,7 @@ var data = qs.stringify({
 });
 var config = {
     method: 'post',
-    url: 'https://accounts.asgardeo.io/t/<orgaization_name>/oauth2/token',
+    url: 'https://api.asgardeo.io/t/<orgaization_name>/oauth2/token',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
     },
@@ -119,7 +119,7 @@ For example, if your token request looks like:
  
  <CodeGroupItem title="cURL" active>
   ``` 
-  curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/token' \
+  curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data-urlencode 'code=97c85a59-a758-3a56-95cd-e71a505b493d' \
   --data-urlencode 'grant_type=authorization_code' \
@@ -137,7 +137,7 @@ For example, if your token request looks like:
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/token' \
+curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Authorization: Basic ejhSQjZ5c2REWmhlNFFPMHpKQVF6S2JpNlA0YTp6MEM3OXpsb3B4OGk3QnlPdzhLMTVBOWRwbFlh' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code=97c85a59-a758-3a56-95cd-e71a505b493d' \

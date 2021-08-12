@@ -2,19 +2,19 @@
 First, your app must initiate a login request to Asgardeo. After redirecting to Asgardeo, user will be prompted with login page if the user does is not authenticated.
 
 ```  
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize?scope={scope}&response_type=code&redirect_uri={redirect_uri}&client_id={client_id}
+https://api.asgardeo.io/t/<organization_name>/oauth2/authorize?scope={scope}&response_type=code&redirect_uri={redirect_uri}&client_id={client_id}
 ```
 
 **Authorization endpoint:**
 
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize
+https://api.asgardeo.io/t/<organization_name>/oauth2/authorize
 ```
 
 **Sample request**
 
 ```
-https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?response_type=code&client_id=z8RB6ysdDZhe4QO0zJAQzKbi6P4a&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A5000
+https://api.asgardeo.io/t/bifrost/oauth2/authorize?response_type=code&client_id=z8RB6ysdDZhe4QO0zJAQzKbi6P4a&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A5000
 ```
 
 <br>

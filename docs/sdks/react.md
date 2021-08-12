@@ -50,7 +50,7 @@ const App = () => (
             signInRedirectURL: "https://localhost:5000",
             signOutRedirectURL: "https://localhost:5000",
             clientID: "<client ID>",
-            serverOrigin: "https://accounts.asgardeo.io/t/<organization_name>"
+            serverOrigin: "https://api.asgardeo.io/t/<organization_name>"
         } }
     >
         { /* Use your own component tree here instead of HomePage.  */ }
@@ -186,7 +186,7 @@ const LandingPage = () => {
     "amr": [
         "BasicAuthenticator"
     ],
-    "iss": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
+    "iss": "https://api.asgardeo.io/t/bifrost/oauth2/token",
     "sid": "81a61d37-9a6d-487a-8f5f-c7a313c44c31",
     "aud": "SmLpPiRube64JmkAf4nhZVD_6V8a",
     "c_hash": "1pWTMQ7ZTxCWSapucJF-bw",

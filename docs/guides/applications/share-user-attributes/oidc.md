@@ -119,7 +119,7 @@ _A sample ID token is given below:_
   "amr": [
     "BasicAuthenticator"
   ],
-  "iss": "https://accounts.asgardeo.io/t/bitfrost/oauth2/token",
+  "iss": "https://api.asgardeo.io/t/bitfrost/oauth2/token",
   "given_name": "alice",
   "sid": "5580be2b-a12d-43a4-823a-9d1352b88269",
   "aud": "UEP40cZTZfxJfGdDWFmTrwqluxoa",

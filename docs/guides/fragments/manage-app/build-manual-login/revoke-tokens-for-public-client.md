@@ -5,7 +5,7 @@ OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc70
 
 <CodeGroupItem title="cURL" active>
 ```
-curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/revoke' \
+curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/revoke' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'token={token}' \
 --data-urlencode 'token_type_hint={token_type}' \
@@ -19,7 +19,7 @@ curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/re
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/<organization_name>/oauth2/revoke",
+    "url": "https://api.asgardeo.io/t/<organization_name>/oauth2/revoke",
     "method": "POST",
     "timeout": 0,
     "headers": {
@@ -51,7 +51,7 @@ var data = qs.stringify({
 });
 var config = {
     method: 'post',
-    url: 'https://accounts.asgardeo.io/t/<orgaization_name>/oauth2/revoke',
+    url: 'https://api.asgardeo.io/t/<orgaization_name>/oauth2/revoke',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
     },
@@ -74,7 +74,7 @@ axios(config)
 
 <CodeGroupItem title="cURL" active>
 ```
-curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/revoke' \
+curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/revoke' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'token_type_hint=access_token' \
 --data-urlencode 'token=292896cf-5525-3551-b9e2-1787f1114924' \

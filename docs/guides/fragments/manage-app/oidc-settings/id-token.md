@@ -14,7 +14,7 @@ Specifies the recipient(s) that this ID token is intended for. By default, the c
   "amr": [
     "BasicAuthenticator"
   ],
-  "iss": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
+  "iss": "https://api.asgardeo.io/t/bifrost/oauth2/token",
   "exp": 1623847489,
   "iat": 1623843889
  }
@@ -37,7 +37,7 @@ Specifies the recipient(s) that this ID token is intended for. By default, the c
   "amr": [
     "BasicAuthenticator"
   ],
-  "iss": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
+  "iss": "https://api.asgardeo.io/t/bifrost/oauth2/token",
   "exp": 1623912434,
   "iat": 1623908834
  }

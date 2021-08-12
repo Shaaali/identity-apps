@@ -73,7 +73,7 @@ SAML2.SPEntityId=<entity_id>
 
 #Asgardeo related configs
 SAML2.IdPEntityId=accounts.asgardeo.io
-SAML2.IdPURL=https://accounts.asgardeo.io/t/<orgaization_name>/samlsso 
+SAML2.IdPURL=https://api.asgardeo.io/t/<orgaization_name>/samlsso 
 IdPPublicCert=<public_cert_of_asgardeo_organization>
 IdPPublicCertAlias=wso2carbon
 
@@ -124,7 +124,7 @@ Find the configuration information below:
       </tr>
      <tr>
           <td>SAML2.IdPURL</td>
-          <td>This specifies the endpoint of Asgardeo to which login and logout requests should be sent. Note that the organization name should be replaced in the URL with the correct value. <code>https://accounts.asgardeo.io/t/{organization_name}/samlsso</code>. </td>
+          <td>This specifies the endpoint of Asgardeo to which login and logout requests should be sent. Note that the organization name should be replaced in the URL with the correct value. <code>https://api.asgardeo.io/t/{organization_name}/samlsso</code>. </td>
      </tr>
      <tr>
            <td>IdPPublicCert</td>
