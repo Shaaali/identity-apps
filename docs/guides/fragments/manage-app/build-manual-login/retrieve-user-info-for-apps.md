@@ -5,7 +5,7 @@ information as a payload by invoking the userinfo endpoint with the access token
 **Userinfo endpoint:**
 
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/userinfo
+https://api.asgardeo.io/t/<organization_name>/oauth2/userinfo
 ```
 
 **Sample request:**
@@ -14,7 +14,7 @@ https://accounts.asgardeo.io/t/<organization_name>/oauth2/userinfo
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo' \
+curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/userinfo' \
 --header 'Authorization: Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
 ```
 
@@ -24,7 +24,7 @@ curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/use
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo",
+    "url": "https://api.asgardeo.io/t/bifrost/oauth2/userinfo",
     "method": "GET",
     "timeout": 0,
     "headers": {
@@ -46,7 +46,7 @@ var axios = require('axios');
 
 var config = {
     method: 'get',
-    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/userinfo',
+    url: 'https://api.asgardeo.io/t/bifrost/oauth2/userinfo',
     headers: {
         'Authorization': 'Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
     }

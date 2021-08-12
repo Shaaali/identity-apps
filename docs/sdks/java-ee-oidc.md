@@ -68,11 +68,11 @@ consumerSecret=<consumerSecret>
 callBackURL=<YOUR_APP_PATH>/oauth2client
 scope=openid
 logoutURL=logout
-authorizeEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize
-logoutEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oidc/logout
-tokenEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
-issuer=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
-jwksEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
+authorizeEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/authorize
+logoutEndpoint=https://api.asgardeo.io/t/<organization_name>/oidc/logout
+tokenEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/token
+issuer=https://api.asgardeo.io/t/<organization_name>/oauth2/token
+jwksEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/jwks
 skipURIs=<YOUR_APP_PATH>/index.html
 ```
 

@@ -7,7 +7,7 @@ By using a signature validation library, you can validate the signature of the I
 **JWKS endpoint:**
 
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
+https://api.asgardeo.io/t/<organization_name>/oauth2/jwks
 ```
 
 **Sample request:**
@@ -16,7 +16,7 @@ https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/jwks'
+curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/jwks'
 ```
 
 </CodeGroupItem>
@@ -25,7 +25,7 @@ curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/jwk
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/jwks",
+    "url": "https://api.asgardeo.io/t/bifrost/oauth2/jwks",
     "method": "GET",
     "timeout": 0,
 };
@@ -44,7 +44,7 @@ var axios = require('axios');
 
 var config = {
     method: 'get',
-    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/jwks',
+    url: 'https://api.asgardeo.io/t/bifrost/oauth2/jwks',
     headers: {}
 };
 

@@ -45,7 +45,7 @@ auth.initialize({
    signInRedirectURL: "https://localhost:5000",
    signOutRedirectURL: "https://localhost:5000",
    clientID: "<clientId>",
-   serverOrigin: "https://accounts.asgardeo.io/t/<organization_name>"
+   serverOrigin: "https://api.asgardeo.io/t/<organization_name>"
 });
 </script>
 ```
@@ -124,7 +124,7 @@ function getDecodedIdToken(){
  "amr": [
    "BasicAuthenticator"
  ],
- "iss": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
+ "iss": "https://api.asgardeo.io/t/bifrost/oauth2/token",
  "sid": "dd1621a7-bb3e-48cf-adae-861e261410e1",
  "aud": "SmLpPiRube64JmkAf4nhZVD_6V8a",
  "c_hash": "b15Dl_wI3rkoK0vukXYJew",

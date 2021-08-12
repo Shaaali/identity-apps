@@ -70,12 +70,12 @@ Specifies whether to initiate Single Sign-On (SSO) from the IdP instead of the a
 
 _Request_
 ```
-https://accounts.asgardeo.io/t/<organization_name>/samlsso?spEntityID={sp_issuer}
+https://api.asgardeo.io/t/<organization_name>/samlsso?spEntityID={sp_issuer}
 ```
 
 _Sample request_
 ```
-https://accounts.asgardeo.io/t/bifrost/samlsso?spEntityID=https://sample.app/saml/sp
+https://api.asgardeo.io/t/bifrost/samlsso?spEntityID=https://sample.app/saml/sp
 
 ```
 
@@ -247,12 +247,12 @@ If `Return to URLs` is not configured, the `returnTo` parameter should match wit
 
 _Request_
 ```
-https://accounts.asgardeo.io/t/<organization_name>/samlsso?slo=true&spEntityID={sp_issur}&returnTo={url}
+https://api.asgardeo.io/t/<organization_name>/samlsso?slo=true&spEntityID={sp_issur}&returnTo={url}
 ```
 
 _Sample request_
 ```
-https://accounts.asgardeo.io/t/bifrost/samlsso?slo=true&spEntityID=https://sample.app/saml/sp&returnTo=http://localhost:8081/sample-app/index.html
+https://api.asgardeo.io/t/bifrost/samlsso?slo=true&spEntityID=https://sample.app/saml/sp&returnTo=http://localhost:8081/sample-app/index.html
 ```
 
 <br>

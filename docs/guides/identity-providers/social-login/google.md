@@ -24,7 +24,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 6. Select application type as **Web application**.
 7. Provide following URL as the Authorized Redirect URI of the application.
     ```
-    https://accounts.asgardeo.io/t/<organization_name>/commonauth
+    https://api.asgardeo.io/t/<organization_name>/commonauth
     ```
 8. Obtain your **Client ID** & **Client Secret**.  
     

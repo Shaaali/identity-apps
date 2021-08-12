@@ -4,13 +4,13 @@ successfully logged out, he will be redirected to the registered authorized redi
 **Logout endpoint:**
 
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oidc/logout
+https://api.asgardeo.io/t/<organization_name>/oidc/logout
 ```
 
 **Sample url:**
 
 ```
-https://accounts.asgardeo.io/t/bifrost/oidc/logout?id_token_hint=<id_token>&post_logout_redirect_uri=<redirect URI>&state=<state>
+https://api.asgardeo.io/t/bifrost/oidc/logout?id_token_hint=<id_token>&post_logout_redirect_uri=<redirect URI>&state=<state>
 ```
 
 The logout request has some parameters. See [RP-initiated logout request](https://openid.net/specs/openid-connect-rpinitiated-1_0.html#RPLogout).

@@ -5,7 +5,7 @@ OAuth2.0 support [token introspection](https://datatracker.ietf.org/doc/html/rfc
 
 <CodeGroupItem title="cURL" active>
 ```
-curl --location --request POST 'https://accounts.asgardeo.io/t/<organization_name>/oauth2/introspect' \
+curl --location --request POST 'https://api.asgardeo.io/t/<organization_name>/oauth2/introspect' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Cookie: atbv={atbv_cookie_value}' \
 --header 'Authorization: Bearer {access_token}' \
@@ -18,7 +18,7 @@ curl --location --request POST 'https://accounts.asgardeo.io/t/<organization_nam
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/<organization_name>/oauth2/introspect",
+    "url": "https://api.asgardeo.io/t/<organization_name>/oauth2/introspect",
     "method": "POST",
     "timeout": 0,
     "headers": {
@@ -51,7 +51,7 @@ var data = qs.stringify({
 });
 var config = {
     method: 'post',
-    url: 'https://accounts.asgardeo.io/t/<organinzation_name>/oauth2/token',
+    url: 'https://api.asgardeo.io/t/<organinzation_name>/oauth2/token',
     headers: {
         'Authorization': 'Bearer {access_token}',
         'Cookie': 'atbv={atbv_cookie_value}',
@@ -98,7 +98,7 @@ For example, if your token introspection request looks like,
 
 <CodeGroupItem title="cURL" active>
 ```
-curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/introspect' \
+curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/introspect' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Cookie: atbv=646b0ed2-c501-4b17-9251-94112013a718' \
 --header 'Authorization: Bearer 54bd024f-5080-3db5-9422-785f5d610605' \
