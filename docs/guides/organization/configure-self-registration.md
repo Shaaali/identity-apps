@@ -5,7 +5,6 @@ When self registration is enabled, users can register via the application’s lo
 
 Self-registration for customers is enabled in the Asgardeo organizations by default. Asgardeo provides some default configurations. If you want to change the default password recovery configurations, you can follow this guide.
                                                                                                                                         
-
 To configure self registration:
 1. On the Asgardeo Console, click **Manage > Self Registration**.
     <img :src="$withBase('/assets/img/guides/organization/self-registration/configure-self-registration.png')" alt="Configure self registration">

@@ -1,4 +1,4 @@
-# Recover password
+# Recover password by the owner and collaborators
 
 Asgardeo provides the support for self-service password recovery option on the login page if you're not logged in to Asgardeo. If you forget your password, you can reset them by visiting to the login page.
 
@@ -16,6 +16,3 @@ To recover your password:
 6. **Enter new password** and **Proceed**.
 
 Now you have reset your password. You can log in to the Console and My Account using your new password.
-
-## Related links
-- <a href="/guides/organization/self-service/asgardeo-user/recover-password/">Asgardeo user can recover their password</a>

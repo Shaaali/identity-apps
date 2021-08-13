@@ -1,4 +1,4 @@
-# Recover password
+# Recover password by customers
 
 Asgardeo provides the support for self-service password recovery option on the login page if you're not logged in to Asgardeo. But, admins of your organization has to <a href="/guides/organization/account-recovery/password-recovery/">enable password recovery</a> for the business users based on the organizational requirements.
 
@@ -16,5 +16,3 @@ To recover your password if you are not logged in to Asgardeo:
 
 Now you have reset your password. You can log in to business application and My Account using your new password.
 
-## Related links
-- <a href="/guides/organization/self-service/customer/recover-password/">Customer can recover their password</a>
