@@ -9,7 +9,6 @@ PORT=4567
 
 # Kill any running serves we used to host the docs
 lsof -ti:$PORT | xargs kill
-rm -rf tmp
 
 # Make a temporary directory to host asgardeo docs in asgardeo/docs/ path
 rm -rf tmp
