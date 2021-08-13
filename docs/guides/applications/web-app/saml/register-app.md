@@ -59,5 +59,5 @@ SAML meta URL is the endpoint which is hosted with SAML metadata file. Asgardeo 
 
 ## What's next?
 Now you've registered your single-page application. Now you can:
-- <a href = "/guides/applications/web-app/saml/configure-login/">Configure SAML login to your web app</a>
-- <a href="/guides/applications/web-app/saml/saml-settings">Configure advanced SAML settings</a>
+- <a :href="$withBase('/guides/applications/web-app/saml/configure-login/')">Configure SAML login to your web app</a>
+- <a :href="$withBase('/guides/applications/web-app/saml/saml-settings')">Configure advanced SAML settings</a>

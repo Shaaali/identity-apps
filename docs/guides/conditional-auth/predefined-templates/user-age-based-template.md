@@ -10,9 +10,9 @@ logging in to the application. The user will be redirected to an error page if t
 is below configured value.
 
 ## Prerequisites
-1. You should have registered an application. If you don't have an application registered, <a href ="/guides/applications/web-app/oidc/register-app">register an application</a> in Asgardeo.
+1. You should have registered an application. If you don't have an application registered, <a :href="$withBase('/guides/applications/web-app/oidc/register-app/')">register an application</a> in Asgardeo.
 2. Configure conditional authentication and deploy the **User-Age-Based Authentication Template** for the application.
-   Refer the <a href="/guides/conditional-auth/configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
+   Refer the <a :href="$withBase('/guides/conditional-auth/configure-conditional-auth/')">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
 3. Birth Date of the user trying to login needs to be updated using Asgardeo Myaccount.
 

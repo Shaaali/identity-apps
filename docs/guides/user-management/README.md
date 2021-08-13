@@ -11,7 +11,7 @@ Shown below are some main user management capabilities available in Asgardeo.
 <img class="borderless-img" :src="$withBase('/assets/img/guides/users/user-management-overview.png')" alt="User management">
 
 See the topics given below for details of the main components that are required for user management.
-- <a href="/guides/user-management/manage-users/user-accounts/">Users</a>
-- <a href="/guides/user-management/groups/">Groups</a>
-- <a href="/guides/user-management/roles/">Roles</a>
+- <a :href="$withBase('/guides/user-management/manage-users/user-accounts/')">Users</a>
+- <a :href="$withBase('/guides/user-management/groups/')">Groups</a>
+- <a :href="$withBase('/guides/user-management/roles/')">Roles</a>
 - User stores

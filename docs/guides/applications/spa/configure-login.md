@@ -4,14 +4,14 @@ You can follow this document to obtain required information and the configuratio
  - Integrate sign in with Asgardeo for your OpenID Connect SPA
  - Build login with Asgardeo using an OpenID Connect supported SDK
 
-In case, you want to implement login from scratch, see how to <a href = "/guides/applications/integrate-public-client">build OpenID Connect login flow manually</a>.
+In case, you want to implement login from scratch, see how to <a :href="$withBase('/guides/applications/integrate-public-client')">build OpenID Connect login flow manually</a>.
 
 When configuring OpenID Connect based sign In, you need to know two things:
 1. [Client ID of the application](#obtain-client-id-of-the-app)
 2. [OpenID Connect endpoints of Asgardeo](#discover-openid-connect-endpoints-of-asgardeo)
 
 ## Prerequisite
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo Console](https://console.asgardeo.io/) to <a href="/guides/applications/spa/register-app">register an application</a>.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo Console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/spa/register-app')">register an application</a>.
 
 ## Obtain Client ID of the app
 When your single-page application login with Asgardeo, application uses client ID as an identifier. To get the client ID, you can follow below steps:
@@ -45,5 +45,5 @@ You can login to [Asgardeo Console](https://console.asgardeo.io/) and get endpoi
 
 ## What's next?
 Now you've added login to your application with Asgardeo. You also can:
-- <a href = "/guides/applications/integrate-public-client">Explore OpenID Connect authentication flow in depth</a>
-- <a href = "/guides/applications/spa/oidc-settings">Configure advanced OpenID Connect settings</a>
+- <a :href="$withBase('/guides/applications/integrate-public-client')">Explore OpenID Connect authentication flow in depth</a>
+- <a :href="$withBase('/guides/applications/spa/oidc-settings')">Configure advanced OpenID Connect settings</a>

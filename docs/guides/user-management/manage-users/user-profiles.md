@@ -27,7 +27,7 @@ Now you can see the profile of the user.
     
 ## Update the profile of a user
 
-An administrator can update the user profile of a <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> via the Asgardeo Console.
+An administrator can update the user profile of a <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">customer</a> via the Asgardeo Console.
 
 To update the user profile:
 1. On the Asgardeo Console, click Manage > Users.

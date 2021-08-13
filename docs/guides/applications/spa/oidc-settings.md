@@ -17,7 +17,7 @@ But implicit grant is [not recommended](https://datatracker.ietf.org/doc/html/dr
 ### Authorized redirect URLs
 <CommonGuide guide='guides/fragments/manage-app/oidc-settings/authorized-urls.md'/>
 
-The `redirect_uri` sent in <a href="/guides/applications/integrate-public-client/#get-authorization-code">login</a> request and the `post_logout_redirect_uri` sent in <a href="/guides/applications/integrate-public-client/#logout-the-application">logout request</a> should match with one of the registered authorized redirect URLs.
+The `redirect_uri` sent in <a :href="$withBase('/guides/applications/integrate-public-client/#get-authorization-code')">login</a> request and the `post_logout_redirect_uri` sent in <a :href="$withBase('/guides/applications/integrate-public-client/#logout-the-application')">logout request</a> should match with one of the registered authorized redirect URLs.
 
 ### Allowed origins
  <CommonGuide guide='guides/fragments/manage-app/oidc-settings/allowed-origin.md'/>

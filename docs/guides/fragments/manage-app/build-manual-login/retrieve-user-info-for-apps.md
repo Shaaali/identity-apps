@@ -73,5 +73,5 @@ Asgardeo returns only `sub` claim, if there is no user attributes shared with th
 }
 ```
 
-You can customize the user information in the response by <a href="/guides/applications/share-user-attributes/oidc/">configuring user attributes</a> with the application.
+You can customize the user information in the response by <a :href="$withBase('/guides/applications/share-user-attributes/oidc/')">configuring user attributes</a> with the application.
 <br>

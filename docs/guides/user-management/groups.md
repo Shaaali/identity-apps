@@ -10,7 +10,7 @@ The Asgardeo Console allows you to:
 One user can be assigned to any number of groups. Applications can get details about groups a user belongs to in the authentication response (e.g., ID token) from Asgardeo as a user attribute.                                                          
 
 ::: tip
-Only <a href="/guides/user-management/manage-users/user-accounts/customer">customer</a> users can be assigned to a group.
+Only <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer')">customer</a> users can be assigned to a group.
 :::
 
 For example, you can create the following user groups: `Admin`, `Manager`, and `Developer`. When one user group is granted access to a resource, it applies to all users in the group.
@@ -40,7 +40,7 @@ To assign  users  to groups:
 6. Click **Save**.
 
 ## Remove users from groups
-<a href="/guides/user-management/manage-users/user-accounts/customer/">Customer</a> users can be removed from the assigned groups by admins.
+<a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">Customer</a> users can be removed from the assigned groups by admins.
 
 To remove users from groups:
 1. In the Asgardeo Console, Click **Manage > Groups**.

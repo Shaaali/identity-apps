@@ -4,7 +4,7 @@ You can follow this document to obtain required information and the configuratio
  - Integrate sign in with Asgardeo for your OpenID Connect web application
  - Build login with Asgardeo using an OpenID Connect supported SDK
 
-In case, you want to implement login from scratch, see how to <a href = "/guides/applications/integrate-confidential-client">build OpenID Connect login flow manually</a>.
+In case, you want to implement login from scratch, see how to <a :href="$withBase('/guides/applications/integrate-confidential-client')">build OpenID Connect login flow manually</a>.
 
 When configuring OpenID Connect based sign In, you need to know two things:
 1. [Client ID and client secret of the application](#obtain-client-id-and-client-secret-of-the-app)
@@ -47,5 +47,5 @@ You can log in to [Asgardeo Console](https://console.asgardeo.io/) and get endpo
 
 ## What's next?
 Now you've integrated your OIDC web application. You also can:
-- <a href = "/guides/applications/integrate-confidential-client">Explore OpenID Connect authentication flow in depth</a>
-- <a href = "/guides/applications/web-app/oidc/oidc-settings">Configure advanced OpenID Connect settings</a>
+- <a :href="$withBase('/guides/applications/integrate-confidential-client')">Explore OpenID Connect authentication flow in depth</a>
+- <a :href="$withBase('/guides/applications/web-app/oidc/oidc-settings')">Configure advanced OpenID Connect settings</a>

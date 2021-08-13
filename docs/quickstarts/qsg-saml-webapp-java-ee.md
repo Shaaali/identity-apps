@@ -8,8 +8,8 @@ Follow the steps given below to deploy a sample Java EE web application in your 
 
 # Prerequisites
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
-- You need to have a web application registered. If you don't, <a href ="/guides/applications/web-app/saml/register-app">register a SAML application</a> in Asgardeo.
-- Only <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> users can log in to applications. <a href ="/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user">Create a customer account</a> if you don't already have one.
+- You need to have a web application registered. If you don't, <a :href="$withBase('/guides/applications/web-app/saml/register-app')">register a SAML application</a> in Asgardeo.
+- Only <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
 
 ## Download the sample
 
@@ -52,11 +52,11 @@ Click on the **Download sample** button below to download the sample. Alternativ
    <tbody>
       <tr>
           <td>SAML2.AssertionConsumerURL</td>
-          <td>You need to add `http://localhost:8080/sample-app/home.jsp` to Assertion consumer URLs. If you are running tomcat on a different port than 8080, change the port in the ACS URL. See <a href = "/guides/applications/web-app/saml/saml-settings/#default-assertion-consumer-service-url-default-acs-url">See ACS URLs</a> for more information.</td>
+          <td>You need to add `http://localhost:8080/sample-app/home.jsp` to Assertion consumer URLs. If you are running tomcat on a different port than 8080, change the port in the ACS URL. See <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#default-assertion-consumer-service-url-default-acs-url')">See ACS URLs</a> for more information.</td>
       </tr>
       <tr>
         <td>SAML2.SPEntityId</td>
-        <td>You need to add `http://localhost.com:8080/spring-security-saml2-sample/saml/metadata` as the issuer of the application when registering it. See <a href = "/guides/applications/web-app/saml/register-app/#register-app-using-manual-configurations">how to register a SAML app manually</a> via Asgardeo console.</td>
+        <td>You need to add `http://localhost.com:8080/spring-security-saml2-sample/saml/metadata` as the issuer of the application when registering it. See <a :href="$withBase('/guides/applications/web-app/saml/register-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via Asgardeo console.</td>
       </tr>
       <tr>
         <td>SAML2.IdPEntityId</td>
@@ -68,7 +68,7 @@ Click on the **Download sample** button below to download the sample. Alternativ
       </tr>
       <tr>
           <td>IdPPublicCert</td>
-          <td>Specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo console. See <a href="/guides/applications/web-app/saml/configure-login/#get-saml-configurations-of-asgardeo-from-console">how to get SAML configurations from the console</a></td>
+          <td>Specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo console. See <a :href="$withBase('/guides/applications/web-app/saml/configure-login/#get-saml-configurations-of-asgardeo-from-console')">how to get SAML configurations from the console</a></td>
       </tr>
       <tr>
           <td>EnableSAML2SSOLogin</td>
@@ -80,19 +80,19 @@ Click on the **Download sample** button below to download the sample. Alternativ
       </tr>
       <tr>
         <td>SAML2.EnableResponseSigning</td>
-        <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#response-signing">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+        <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
     </tr>
     <tr>
       <td>SAML2.EnableAssertionSigning</td>
-      <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#response-signing">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+      <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
     </tr>
     <tr>
       <td>SAML2.EnableAssertionEncryption</td>
-      <td>If this configuration is set to <code>true</code>,the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#enable-encryption">enable encryption for SAML assertion</a> from Asgardeo.</td>
+      <td>If this configuration is set to <code>true</code>,the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#enable-encryption')">enable encryption for SAML assertion</a> from Asgardeo.</td>
     </tr>
     <tr>
       <td>SAML2.EnableRequestSigning</td>
-      <td>If this configuration is set to <code>true</code>, Asgardeo validates the SAML authentication request and logout request. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#request-validation">enable request signing</a> from Asgardeo.</td>
+      <td>If this configuration is set to <code>true</code>, Asgardeo validates the SAML authentication request and logout request. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#request-validation')">enable request signing</a> from Asgardeo.</td>
     </tr>
     <tr>
       <td>SAML2.IsPassiveAuthn</td>

@@ -10,9 +10,9 @@ will have to go through two steps during the login flow. Basic authentication as
 the `Step 2`.
 
 ## Prerequisites
-1. You should have registered an application. If you don't have an application registered, <a href ="/guides/applications/web-app/oidc/register-app/">register an application</a> in Asgardeo.
+1. You should have registered an application. If you don't have an application registered, <a :href="$withBase('/guides/applications/web-app/oidc/register-app/')">register an application</a> in Asgardeo.
 2. Configure conditional authentication and deploy the **Group-Based 2FA Template** for the application.
-   Refer the <a href ="/guides/conditional-auth/configure-conditional-auth/">Configure conditional authentication for an application</a> guide on
+   Refer the <a :href="$withBase('/guides/conditional-auth/configure-conditional-auth/')">Configure conditional authentication for an application</a> guide on
    configuring conditional authentication with the template.
 3. Customize the login flow and enable TOTP as the step 2.
 4. Create the groups and assign users as necessary to try out the flow.

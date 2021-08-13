@@ -11,11 +11,11 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 
 ## Prerequisites
 1. To get started, you need to have an application registered in Asgardeo.
-If you don't already have one, see the instructions on <a href="/guides/applications/">registering an application</a>.
+If you don't already have one, see the instructions on <a :href="$withBase('/guides/applications/')">registering an application</a>.
 2. Download and install one of the authenticator apps mentioned above.
 
 ::: tip Note
- - You can use TOTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a href="/guides/identity-providers/">identity provider</a>.   
+ - You can use TOTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a :href="$withBase('/guides/identity-providers/')">identity provider</a>.   
  - TOTP cannot be used as a first step of your login flow.
 :::
 
@@ -48,7 +48,7 @@ You can enroll for TOTP notification from the first login to the business applic
 ## Enroll TOTP via MyAccount
 After the first time login, user will not be prompted with QR code in the login flow. In case, if the user wants to use another authenticator app for getting otp, user can configure it via Asgardeo MyAccount. The QR code via MyAccount is same the code prompted in the first time login flow.
 
-Note that, enrolling TOTP via MyAccount can be done only after first login attempt using totp authentication, and it is available only for <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> user accounts.
+Note that, enrolling TOTP via MyAccount can be done only after first login attempt using totp authentication, and it is available only for <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">customer</a> user accounts.
  
 1. In the Asgardeo MyAccount, navigate to **Security > Multi-Factor Authentication**.
     <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount">

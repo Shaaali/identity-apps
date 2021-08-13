@@ -12,7 +12,7 @@ Asgardeo provides below capabilities for the easy access to manage your informat
 - Enroll for TOTP
 
 ## Access My Account portal
-<a href="/guides/user-management/manage-users/user-accounts/customer/">Customers</a> are managed by the organization. So their My Account portal is accessible via their organization.
+<a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">Customers</a> are managed by the organization. So their My Account portal is accessible via their organization.
 
 You can access their My Account portal by accessing the below URL.
 
