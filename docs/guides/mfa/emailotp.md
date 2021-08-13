@@ -54,7 +54,7 @@ Follow the steps given below.
 
    This adds Email OTP as an authentication option for the configured step.
     <img :src="$withBase('/assets/img/guides/mfa/emailotp/enable-email-otp.png')" alt="Enable email OTP authenticator in Asgardeo">
-6. Click **Update**.
+7. Click **Update**.
 
 ## How it works
 
