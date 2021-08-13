@@ -98,7 +98,6 @@ module.exports = config({
                     title: 'Organization',
                     children: [
                         ['organization/organizations', 'Manage Organizations'],
-                        ['organization/attributes', 'Attributes'],
                         {
                             title: 'Attributes',
                             prefix: 'organization/attributes/',
