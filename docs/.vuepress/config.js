@@ -95,6 +95,32 @@ module.exports = config({
                     ]
                 },
                 {
+                    title: 'Organization',
+                    children: [
+                        ['organization/organizations', 'Manage Organizations'],
+                        ['organization/attributes', 'Attributes'],
+                        {
+                            title: 'Attributes',
+                            prefix: 'organization/attributes/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['manage-attributes', 'Manage Attributes'],
+                                ['manage-attribute-mappings', 'Manage Attribute Mappings'],
+                            ]
+                        },
+                        {
+                            title: 'Account Security',
+                            prefix: 'organization/account-security/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['login-attempts-security', 'Configure Login Attempts Security'],
+                                ['bot-detection', 'Configure Bot Detection'],
+                            ]
+                        },
+
+                    ]
+                },
+                {
                     title: 'Users',
                     children: [
                         ['user-management/', 'Overview'],
