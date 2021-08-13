@@ -12,31 +12,31 @@ If you don't already have one, see the instructions on <a href="/guides/applicat
 
 ::: tip Note
    - You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a href="/guides/identity-providers/">identity provider</a>.  
-   - Email OTP cannot be used as a first step of your login flow.
+   - Email OTP cannot be used as a first step in your login flow.
 :::
   
 ## Set up Email OTP
-Asgardeo has some default settings for email OTP which are sufficient for most cases. 
-If you think you need to change the default settings to better suit your organization, you can go ahead and change them.
+Asgardeo has some default settings for email OTP, which are sufficient for most cases. If required, you can change the default settings as explained below.
 
-If you decide to go with default settings, you can skip this section.
+To update the default Email OTP settings:
 
-To set up Email OTP:
 1. In the [Asgardeo Console](https://console.asgardeo.io), go to **Connections > Email OTP** and click **Setup**.
-   <img :src="$withBase('/assets/img/guides/mfa/emailotp/setup-email-otp.png')" alt="Setup email OTP in Asgardeo">
-2. Update the following settings if required:
+2. Update the following parameters in the **Settings** tab:
+
+    <img :src="$withBase('/assets/img/guides/mfa/emailotp/setup-email-otp.png')" alt="Setup email OTP in Asgardeo">
+
     <table>
       <tr>
-        <td><b>Email OTP Expiry Time</b></td>
-        <td>Specifies the expiry time of the OTP token. The generated OTP will not be valid after this expiry time</td>
+        <td><b>Email OTP expiry time</b></td>
+        <td>Specifies the expiry time of the OTP token. The generated OTP will not be valid after this expiry time.</td>
       </tr>
       <tr>
-        <td><b>Email OTP Token Length</b></td>
-        <td>Specifies the number of allowed characters in the OTP token</td>
+        <td><b>Email OTP token length</b></td>
+        <td>Specifies the number of characters allowed in the OTP token</td>
       </tr>
       <tr>
         <td><b>Use only numeric characters for OTP token</b></td>
-        <td>Specifies whether to use only numeric characters in the OTP token. If this is selected, the generated OTP token contains only digits (0-9). If this option not selected, the token contains alphanumeric characters.</td>
+        <td>Specifies whether to use only numeric characters in the OTP token. If this is selected, the generated OTP token contains only digits (0-9). If this option is not selected, the token contains alphanumeric characters.</td>
       </tr>
     </table>
 3. Once you update the Email OTP settings, click **Update**.
@@ -49,16 +49,17 @@ Follow the steps given below.
 2. Select the application to add Email OTP.
 3. Go to the **Sign-in Method** tab of the selected application.
 4. Click **Start with default configuration**. 
-5. Click **Add new step > Add Authentication**
-6. Click **Email OTP**. This adds Email OTP as an authentication option for the configured step.
-7. Click **Add**.
+5. Add a new step and click **Add Authentication**.
+6. Select **Email OTP** and click **Add**.
+
+   This adds Email OTP as an authentication option for the configured step.
     <img :src="$withBase('/assets/img/guides/mfa/emailotp/enable-email-otp.png')" alt="Enable email OTP authenticator in Asgardeo">
 6. Click **Update**.
 
 ## How it works
-If Email OTP is enabled in the authentication flow of your application, the customer will be prompted with the Email OTP authentication step once the first authentication step is successfully completed.
 
-Given below are the high-level steps in this process:
+If Email OTP is enabled in the authentication flow of your application, the customer is prompted with the Email OTP authentication step once the first authentication step is completed. Given below are the high-level steps that follow:
+
 1. Asgardeo sends the OTP to the user's verified email address.
 2. Asgardeo prompts the user to enter the OTP code.
    <img :src="$withBase('/assets/img/guides/mfa/emailotp/enter-email-otp.png')" alt="Authenticate with email OTP in Asgardeo">
