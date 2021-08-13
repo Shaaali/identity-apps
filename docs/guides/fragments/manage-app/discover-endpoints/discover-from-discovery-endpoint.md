@@ -6,12 +6,12 @@ Application can dynamically discover the OpenID Connect identity provider metada
 
 **Issuer of Asgardeo:**
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
+https://api.asgardeo.io/t/<organization_name>/oauth2/token
 ```
 
 **Discovery endpoint of Asgardeo:**
 ```
-https://accounts.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-configuration
+https://api.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-configuration
 ```
 
 **Sample request:**
@@ -21,7 +21,7 @@ https://accounts.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/open
 <CodeGroupItem title="cURL">
 
 ``` 
-curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration'
+curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration'
 ```
 
 </CodeGroupItem>
@@ -30,7 +30,7 @@ curl --location --request GET 'https://accounts.asgardeo.io/t/bifrost/oauth2/tok
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration",
+    "url": "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration",
     "method": "GET",
     "timeout": 0,
 };
@@ -49,7 +49,7 @@ var axios = require('axios');
 
 var config = {
     method: 'get',
-    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration',
+    url: 'https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration',
     headers: {}
 };
 
@@ -73,14 +73,14 @@ axios(config)
 {
     .
     .
-   "introspection_endpoint" : "https://accounts.asgardeo.io/t/bifrost/oauth2/introspect",
-   "end_session_endpoint" : "https://accounts.asgardeo.io/t/bifrost/oidc/logout",
-   "registration_endpoint" : "https://accounts.asgardeo.io/t/bifrost/api/identity/oauth2/dcr/v1.0/register",
-   "token_endpoint" : "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
-   "jwks_uri" : "https://accounts.asgardeo.io/t/bifrost/oauth2/jwks",
-   "revocation_endpoint" : "https://accounts.asgardeo.io/t/bifrost/oauth2/revoke",
-   "authorization_endpoint" : "https://accounts.asgardeo.io/t/bifrost/oauth2/authorize",
-   "issuer" : "https://accounts.asgardeo.io/t/bifrost/oauth2/token"
+   "introspection_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/introspect",
+   "end_session_endpoint" : "https://api.asgardeo.io/t/bifrost/oidc/logout",
+   "registration_endpoint" : "https://api.asgardeo.io/t/bifrost/api/identity/oauth2/dcr/v1.0/register",
+   "token_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/token",
+   "jwks_uri" : "https://api.asgardeo.io/t/bifrost/oauth2/jwks",
+   "revocation_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/revoke",
+   "authorization_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/authorize",
+   "issuer" : "https://api.asgardeo.io/t/bifrost/oauth2/token"
     .
     .
 }

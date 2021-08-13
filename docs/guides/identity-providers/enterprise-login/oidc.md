@@ -22,7 +22,7 @@ You need to register an OpenID Connect application in the external identity prov
 
 You can use the following URL as the **callbackURL** of the application. 
 ```
-https://accounts.asgardeo.io/t/<organization_name>/commonauth
+https://api.asgardeo.io/t/<organization_name>/commonauth
 ```
 Once you register an application, obtain:
 - **client_id**(also known as app_id or application_id)

@@ -3,7 +3,7 @@ By enabling this option, Asgardeo mandates an application to use [PKCE](https://
 
 _Sample authorization request_
 ```  
-https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>&code_challenge=<code_challenge>&code_challenge_method=<code_challenge_method>
+https://api.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>&code_challenge=<code_challenge>&code_challenge_method=<code_challenge_method>
 ```
 
 _Sample token request_:
@@ -12,7 +12,7 @@ _Sample token request_:
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/token' \
+curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d' \
 --data-urlencode 'grant_type=authorization_code' \
@@ -27,7 +27,7 @@ curl --location --request POST 'https://accounts.asgardeo.io/t/bifrost/oauth2/to
 
 ```js
 var settings = {
-    "url": "https://accounts.asgardeo.io/t/bifrost/oauth2/token",
+    "url": "https://api.asgardeo.io/t/bifrost/oauth2/token",
     "method": "POST",
     "timeout": 0,
     "headers": {
@@ -63,7 +63,7 @@ var data = qs.stringify({
 });
 var config = {
     method: 'post',
-    url: 'https://accounts.asgardeo.io/t/bifrost/oauth2/token',
+    url: 'https://api.asgardeo.io/t/bifrost/oauth2/token',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
     },

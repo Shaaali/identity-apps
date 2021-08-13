@@ -65,23 +65,23 @@ Click on the button below to download the sample.
       </tr>
       <tr>
         <td>authorizeEndpoint</td>
-        <td>`https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize` is the authorization endpoint of Asgardeo. Change the organization name here.</td>
+        <td>`https://api.asgardeo.io/t/<organization_name>/oauth2/authorize` is the authorization endpoint of Asgardeo. Change the organization name here.</td>
       </tr>
       <tr>
           <td>logoutEndpoint</td>
-          <td>`https://accounts.asgardeo.io/t/<organization_name>/oidc/logout` is the logout endpoint of Asgardeo. Change the organization name here.</td>
+          <td>`https://api.asgardeo.io/t/<organization_name>/oidc/logout` is the logout endpoint of Asgardeo. Change the organization name here.</td>
       </tr>
       <tr>
           <td>tokenEndpoint</td>
-          <td>`https://accounts.asgardeo.io/t/<organization_name>/oauth2/token` is the token endpoint of Asgardeo. Change the organization name here.</td>
+          <td>`https://api.asgardeo.io/t/<organization_name>/oauth2/token` is the token endpoint of Asgardeo. Change the organization name here.</td>
       </tr>
       <tr>
         <td>issuer</td>
-        <td>`https://accounts.asgardeo.io/t/<organization_name>/oauth2/token` is the issuer Asgardeo. Change the organization name here. It is used for id token validation.</td>
+        <td>`https://api.asgardeo.io/t/<organization_name>/oauth2/token` is the issuer Asgardeo. Change the organization name here. It is used for id token validation.</td>
       </tr>
       <tr>
         <td>jwksEndpoint</td>
-        <td>`https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks` is the jwks endpoint of Asgardeo. Change the organization name here.</td>
+        <td>`https://api.asgardeo.io/t/<organization_name>/oauth2/jwks` is the jwks endpoint of Asgardeo. Change the organization name here.</td>
     </tr>
     </table>
      
@@ -100,11 +100,11 @@ Click on the button below to download the sample.
       logoutURL=logout     
    
       # Asgardeo Endpoints
-      authorizeEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/authorize
-      logoutEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oidc/logout
-      tokenEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
-      issuer=https://accounts.asgardeo.io/t/<organization_name>/oauth2/token
-      jwksEndpoint=https://accounts.asgardeo.io/t/<organization_name>/oauth2/jwks
+      authorizeEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/authorize
+      logoutEndpoint=https://api.asgardeo.io/t/<organization_name>/oidc/logout
+      tokenEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/token
+      issuer=https://api.asgardeo.io/t/<organization_name>/oauth2/token
+      jwksEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/jwks
       ```
 
 <br>

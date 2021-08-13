@@ -46,12 +46,12 @@ Click on the button below to download the sample.
 Change the `config.json` file found in the `asgardeo-angular-app/src` sample folder with the relevant values.
 
  - **clientID** - You should add the client id of the registered application. Refer <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain client ID</a> from Asgardeo console.
- - **serverOrigin** - "https://dev.accounts.asgardeo.io/t/<organization_name>"
+ - **serverOrigin** - "https://api.asgardeo.io/t/<organization_name>"
 
     ``` json{2,3}
     {
         "clientID": "<client ID>",
-        "serverOrigin": "https://dev.accounts.asgardeo.io/t/<organization_name>",
+        "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
         "signInRedirectURL": "https://localhost:5000",
         "signOutRedirectURL": "https://localhost:5000"
     }

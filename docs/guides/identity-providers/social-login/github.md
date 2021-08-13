@@ -19,11 +19,11 @@ In order to add Github login to your app, follow below steps
 3. Provide below URLs while configuring the app. 
     - **Homepage URL**.
       ```
-       https://accounts.asgardeo.io/t/<organization_name>
+       https://api.asgardeo.io/t/<organization_name>
       ```
    - **Authorization callback URL**
       ```
-      https://accounts.asgardeo.io/t/<organization_name>/commonauth
+      https://api.asgardeo.io/t/<organization_name>/commonauth
       ```
 4. Obtain **Client ID** and **Client secret**.
 

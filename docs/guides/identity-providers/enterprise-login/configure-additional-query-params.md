@@ -20,7 +20,7 @@ Here Asgardeo sends the fixed query param to the external identity provider in t
        <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/queryparam/dynamic_query_param_from_app.png')" alt="Add dynamic query param in enterprise IDP config">
         You can see a sample OIDC request from an application below.
        ```  
-        https://accounts.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>&login_hint_value=user@gmail.com
+        https://api.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=<redirect_uri>&client_id=<client_id>&login_hint_value=user@gmail.com
        ``` 
       <br> 
       
