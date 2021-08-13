@@ -49,7 +49,7 @@ Check the documentation of the OIDC Identity provider and get the following endp
     You can either configure JWKS endpoint or upload a certificate of the external party. This will help to validate the signature of the assertions sent by the external identity provider.
     -  **JWKS endpoint**: The JWKS endpoint of the external identity provider.
     -  **Use PEM certificate** : Upload or paste the public certificate of the external identity provider. The certificate should be in PEM format.  
-        ::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to see how you can convert them to PEM format using <a href ="https://www.openssl.org/" target="_blank">OpenSSL</a>
+        ::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to see how you can convert them to PEM format using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>
          **Convert CRT to PEM**
          ```
          openssl x509 -in cert.crt -out cert.pem
@@ -68,8 +68,8 @@ Check the documentation of the OIDC Identity provider and get the following endp
     - **Authorized redirect URL**: It is a readonly configuration which  denotes the authorization redirect URL of Asgardeo.
     - **User info endpoint URL**: The OIDC userinfo endpoint of the external identity provider. 
     - **Logout URL**: The OIDC logout endpoint of the external identity provider.
-    - **Additional query parameters**: If you need to pass any additional query parameters to the external identity provider. For more information, see <a href="/guides/identity-providers/enterprise-login/configure-additional-query-params">Configure additional query params</a>.
-8.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a href="/guides/identity-providers/enterprise-login/configure-additional-query-params">additional query param</a>.  
+    - **Additional query parameters**: If you need to pass any additional query parameters to the external identity provider. For more information, see <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">Configure additional query params</a>.
+8.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">additional query param</a>.  
     For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
       
 ### Enable OIDC login for application

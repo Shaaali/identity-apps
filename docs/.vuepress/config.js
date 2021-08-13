@@ -21,7 +21,7 @@ module.exports = config({
         ['meta', {name: 'robots', content: 'noindex, nofollow'}]
     ],
 
-    base: "/",
+//    base: '/asgardeo/docs/',
 
     /**
      * Theme configuration, here is the default theme configuration for VuePress.

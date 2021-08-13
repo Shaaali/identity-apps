@@ -8,10 +8,10 @@ Follow the instructions given below to configure multi-factor authentication (MF
 
 ## Prerequisites
 To get started, you need to have an application registered in Asgardeo.
-If you don't already have one, see the instructions on <a href="/guides/applications/">registering an application</a>.
+If you don't already have one, see the instructions on <a :href="$withBase('/guides/applications/')">registering an application</a>.
 
 ::: tip Note
-   - You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a href="/guides/identity-providers/">identity provider</a>.  
+   - You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a :href="$withBase('/guides/identity-providers/')">identity provider</a>.  
    - Email OTP cannot be used as a first step in your login flow.
 :::
   

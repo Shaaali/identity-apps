@@ -12,15 +12,15 @@ We will start from the scratch and see how can we build our first conditional au
  <img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="Authentication flow with Group based Access control">
 
 ## Prerequisites
-1. You should have registered an application. If you don't have an app registered, <a href ="/guides/applications/">register an application</a> in Asgardeo.
+1. You should have registered an application. If you don't have an app registered, <a :href="$withBase('/guides/applications/')">register an application</a> in Asgardeo.
 2. Customize the login flow and enable `Username and Password authentication` authentication.
-3. Create relevant <a href="/guides/user-management/groups/">groups</a> and assign users as necessary to try out the flow.
+3. Create relevant <a :href="$withBase('/guides/user-management/groups/')">groups</a> and assign users as necessary to try out the flow.
 
 ## Let's get started
 
 ### 1. Start with the default script
 
-To start off, <a href="/guides/conditional-auth/configure-conditional-auth/">Configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
+To start off, <a :href="$withBase('/guides/conditional-auth/configure-conditional-auth/')">Configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
 
 ```js
 var onLoginRequest = function(context) {
@@ -108,5 +108,5 @@ var onLoginRequest = function (context) {
 Now you have completed writing a conditional auth script for group-based access control scenario.
 
 Similarly, you can build your own scripts to handle many scenarios using:
- - <a href="/guides/conditional-auth/api-reference">API references</a>
- - <a href="/guides/conditional-auth/predefined-templates">Pre-defined templates</a>.
+ - <a :href="$withBase('/guides/conditional-auth/api-reference')">API references</a>
+ - <a :href="$withBase('/guides/conditional-auth/predefined-templates')">Pre-defined templates</a>.

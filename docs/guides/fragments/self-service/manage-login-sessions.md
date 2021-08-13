@@ -1,5 +1,5 @@
 
-You can self-manage the <a href="/guides/user-management/manage-users/sessions/">active sessions</a> via My Account. 
+You can self-manage the <a :href="$withBase('/guides/user-management/manage-users/sessions/')">active sessions</a> via My Account. 
 
 You can view active login sessions and terminate active session(s).
 

@@ -2,7 +2,7 @@
 
 A collaborator is a user who can manage the organization and has access to the organization’s administrative operations. A collaborator can be invited to the organization and assigned with
 
-A collaborator can be assigned to the following <a href="/guides/user-management/roles/">Asgardeo roles</a>:
+A collaborator can be assigned to the following <a :href="$withBase('/guides/user-management/roles/')">Asgardeo roles</a>:
  - Administrator
  - Application developer
 

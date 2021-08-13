@@ -15,6 +15,6 @@ After registering your application, you can obtain client ID and client secret b
 
 ## What's next?
 Now you've registered your single-page application. Now you can:
-- <a href = "/guides/applications/web-app/oidc/configure-login/">Configure OpenID Connect login to your web app</a>
-- <a href="/quickstarts/">Try out samples</a>
-- <a href="/sdks/">Add login to your app using SDKs</a>
+- <a :href="$withBase('/guides/applications/web-app/oidc/configure-login/')">Configure OpenID Connect login to your web app</a>
+- <a :href="$withBase('/quickstarts/')">Try out samples</a>
+- <a :href="$withBase('/sdks/')">Add login to your app using SDKs</a>

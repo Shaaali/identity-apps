@@ -7,7 +7,7 @@ Asgardeo supports below attribute mappings:
 - [SCIM 2.0](#manage-scim-2-0-attribute-mappings)
 
 ## Manage OpenID Connect attribute mappings
-You can map OpenID Connect claims to <a href="/guides/organization/attributes/manage-attributes">default attributes</a> in the organization. This allows applications that implement OpenID Connect login to receive user information in the ID token.
+You can map OpenID Connect claims to <a :href="$withBase('/guides/organization/attributes/manage-attributes')">default attributes</a> in the organization. This allows applications that implement OpenID Connect login to receive user information in the ID token.
 
 ### View OpenID Connect attributes
 To view the OpenID Connect attributes available for your organization:
@@ -56,7 +56,7 @@ For example, shown below are a set of OpenID Connect claims mapped to user attri
       </tbody>
     </table>
 
-You need to enable `email_home` as a <a href="/guides/applications/share-user-attributes/oidc/#select-user-attributes">requested attribute</a> for your application and also add it to an OIDC scope. You can then configure your application to receive this user information when a user signs in.
+You need to enable `email_home` as a <a :href="$withBase('/guides/applications/share-user-attributes/oidc/#select-user-attributes')">requested attribute</a> for your application and also add it to an OIDC scope. You can then configure your application to receive this user information when a user signs in.
 
 After user authentication, you can find the `email_home` claim the ID token as shown below.
 

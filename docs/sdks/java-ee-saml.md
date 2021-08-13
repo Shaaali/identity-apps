@@ -17,7 +17,7 @@ Follow the steps given below to authenticate users to your Java EE web applicati
 
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
 - [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you already haven't.
-- You need to have an application already registered in Asgardeo. If you don't, see the instructions on <a href ="/guides/applications/web-app/saml/register-app">registering a SAML application</a>.
+- You need to have an application already registered in Asgardeo. If you don't, see the instructions on <a :href="$withBase('/guides/applications/web-app/saml/register-app')">registering a SAML application</a>.
 
 ## Install the SDK
 
@@ -112,11 +112,11 @@ Find the configuration information below:
    <tbody>
       <tr>
          <td>SAML2.AssertionConsumerURL</td>
-         <td>Specifies the URL to redirect to after login and logout. See <a href = "/guides/applications/web-app/saml/saml-settings/#default-assertion-consumer-service-url-default-acs-url">See ACS URLs</a></td>
+         <td>Specifies the URL to redirect to after login and logout. See <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#default-assertion-consumer-service-url-default-acs-url')">See ACS URLs</a></td>
       </tr>
       <tr>
          <td>SAML2.SPEntityId</td>
-         <td>This is the unique name of the application used when registering your application with Asgardeo. See <a href = "/guides/applications/web-app/saml/register-app/#register-app-using-manual-configurations">how to register a SAML app manually</a> via the Asgardeo Console.</td>
+         <td>This is the unique name of the application used when registering your application with Asgardeo. See <a :href="$withBase('/guides/applications/web-app/saml/register-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via the Asgardeo Console.</td>
       </tr>
       <tr>
          <td>SAML2.IdPEntityId</td>
@@ -128,7 +128,7 @@ Find the configuration information below:
      </tr>
      <tr>
            <td>IdPPublicCert</td>
-           <td>This specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo Console. See <a href="/guides/applications/web-app/saml/configure-login/#get-saml-configurations-of-asgardeo-from-console">how to get SAML configurations from the Asgardeo Console.</a></td>
+           <td>This specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo Console. See <a :href="$withBase('/guides/applications/web-app/saml/configure-login/#get-saml-configurations-of-asgardeo-from-console')">how to get SAML configurations from the Asgardeo Console.</a></td>
        </tr>
        <tr>
            <td>EnableSAML2SSOLogin</td>
@@ -140,19 +140,19 @@ Find the configuration information below:
        </tr>
        <tr>
          <td>SAML2.EnableResponseSigning</td>
-         <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#response-signing">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+         <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
      </tr>
      <tr>
        <td>SAML2.EnableAssertionSigning</td>
-       <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#response-signing">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+       <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
      </tr>
      <tr>
        <td>SAML2.EnableAssertionEncryption</td>
-       <td>If this configuration is set to <code>true</code>,the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#enable-encryption">enable encryption for SAML assertion</a> from Asgardeo.</td>
+       <td>If this configuration is set to <code>true</code>,the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#enable-encryption')">enable encryption for SAML assertion</a> from Asgardeo.</td>
      </tr>
      <tr>
        <td>SAML2.EnableRequestSigning</td>
-       <td>If this configuration is set to <code>true</code>, Asgardeo validates the SAML authentication request and logout request. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#request-validation">enable request signing</a> from Asgardeo.</td>
+       <td>If this configuration is set to <code>true</code>, Asgardeo validates the SAML authentication request and logout request. If this configuration is set to <code>true</code>, then <a :href="$withBase('/guides/applications/web-app/saml/saml-settings/#request-validation')">enable request signing</a> from Asgardeo.</td>
      </tr>
      <tr>
        <td>SAML2.IsPassiveAuthn</td>

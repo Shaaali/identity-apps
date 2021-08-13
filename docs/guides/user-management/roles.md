@@ -9,7 +9,7 @@ The following default roles are available in Asgardeo:
 
 2. **Application developer**: This role includes the permissions required for registering and managing applications. The application developer is a privileged user who can integrate applications with Asgardeo. 
 
-Only <a href="/guides/user-management/manage-users/user-accounts/collaborator/">Collaborators</a> can be assigned to Asgardeo roles.
+Only <a :href="$withBase('/guides/user-management/manage-users/user-accounts/collaborator/')">Collaborators</a> can be assigned to Asgardeo roles.
 
 <!--
 This is commented until this role is onboarded to product
