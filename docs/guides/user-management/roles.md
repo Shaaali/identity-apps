@@ -1,8 +1,8 @@
 # Asgardeo default roles
 
-Roles consist of the permissions that are required by users to access the Asgardeo resources such as functions available on the Asgardeo Console, REST APIs, etc
+Roles consist of the permissions that are required by users to access the Asgardeo resources such as functions available on the Asgardeo Console, REST APIs, etc.
 
-When you assign a role to a user, you are controlling what the user can do on the Asgardeo.
+When you assign a role to a user, you are controlling what the user can do in Asgardeo.
 
 The following default roles are available in Asgardeo:
 1. **Administrator**: This role includes all administrative permissions in the organization. An organization can have many users with the administrator role. An administrator is a privileged user who has overall access to the organization.
