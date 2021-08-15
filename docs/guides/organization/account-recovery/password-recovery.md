@@ -1,6 +1,6 @@
 # Configure password recovery
 
-Asgardeo provides the support for self-service password recovery option for <a href="/guides/user-management/manage-users/user-accounts/customer/">customers</a> on the login page. The user will receive a password reset link via email upon request. 
+Asgardeo provides the support for self-service password recovery option for <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">customers</a> on the login page. The user will receive a password reset link via email upon request. 
 This guide walks you through setting up password recovery for users to recover a lost or forgotten password. 
 
 To configure password recovery:

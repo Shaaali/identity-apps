@@ -1,6 +1,6 @@
 # Configure self registration
 
-<a href="/guides/user-management/manage-users/user-accounts/customer">Customers</a> can self-register themselves to an organization in Asgardeo. Asgardeo provides the capability to enable  or disable self-registration feature and configure the settings. 
+<a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer')">Customers</a> can self-register themselves to an organization in Asgardeo. Asgardeo provides the capability to enable  or disable self-registration feature and configure the settings. 
 When self registration is enabled, users can register via the application’s login page. This creates a new customer account in the organization.
 
 Self-registration for customers is enabled in the Asgardeo organizations by default. Asgardeo provides some default configurations. If you want to change the default password recovery configurations, you can follow this guide.
@@ -23,7 +23,7 @@ To configure self registration:
        </table>
 6. Click **Update** once you configure the required settings.  
 
-See how to <a href="/guides/organization/self-service/customer/self-register/">try self registration</a>.     
+See how to <a :href="$withBase('/guides/organization/self-service/customer/self-register/')">try self registration</a>.     
 
 
 
