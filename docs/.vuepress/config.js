@@ -264,7 +264,8 @@ module.exports = config({
                                     path: 'enterprise-login/',
                                     sidebarDepth: 2,
                                     children: [
-                                        ['oidc.md', 'OpenID Connect']
+                                        ['oidc.md', 'OpenID Connect'],
+                                        ['saml.md', 'SAML'],
                                     ]
                                 },
                             ]
@@ -290,6 +291,8 @@ module.exports = config({
                     ['identity-providers/enterprise-login/configure-additional-query-params.md', 'Configure additional query parameters'],
                     ['applications/integrate-public-client.md', 'Integrate public client'],
                     ['applications/integrate-confidential-client.md', 'Integrate confidential client'],
+                    ['identity-providers/enterprise-login/saml-settings.md', 'SAML IdP Settings'],
+
                 ]
             }
             ],
