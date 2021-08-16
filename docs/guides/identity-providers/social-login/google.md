@@ -29,7 +29,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 8. Obtain your **Client ID** & **Client Secret**.  
     
 ### Create Google identity provider
-1. In the Asgardeo Console, Click **Develop > Connections**.
+1. On the Asgardeo Console, click **Develop > Connections**.
 2. Click **New Connections**.
 3. Select **Google**.
     <!--img :src="$withBase('/assets/img/guides/idp/list_of_idps.png')" alt="List of IDPs in Asgardeo"-->
@@ -38,7 +38,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
     - **Client ID**: client_id obtained from Google.
     - **Client Secret**: client_secret obtained from Google.   
     <img :src="$withBase('/assets/img/guides/idp/google-idp/add-google-idp.png')" alt="Add Google IDP in Asgardeo">
-5. You can find more additional configurations once you create Google identity provider.
+5. You can find additional configurations once you create the Google identity provider.
     - **Scopes**: Asgardeo requests below scopes from Google:
         - **email**: Allows viewing user's email address.
         - **openid**: Allows authenticating using OpenID Connect and obtain ID token.
@@ -47,7 +47,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
       Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. Refer [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) on OpenID Connect scope param.
  
 ###  Enable Google login
-1. In the Asgardeo Console, Click **Develop > Applications**.
+1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
 3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
 4. Click **Add Authentication** on the step, and select the Google identity provider you added the above.

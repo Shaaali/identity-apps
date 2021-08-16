@@ -35,10 +35,10 @@ Check the documentation of the OIDC Identity provider and get the following endp
 - Logout endpoint (optional)
 
 ### Create OIDC identity provider
-1. In the Asgardeo Console, Click **Develop > Connections**.
+1. On the Asgardeo Console, click **Develop > Connections**.
 2. Click **New Connections**.
 3. Select **Enterprise** .
-4. Provide a unique **Identity provider name** and select **OpenID Connect**.
+4. Provide a unique **identity provider name** and select **OpenID Connect**.
 5. Enter the following details of the external OIDC identity provider and click **Next**:
      - **Name**: A unique name for this enterprise IdP.
      - **Client ID**: client_id obtained from the external identity provider. 
@@ -65,17 +65,17 @@ Check the documentation of the OIDC Identity provider and get the following endp
          ```
         :::     
 7. After providing certificate details, click **Finish**.
-8. You can find more additional configurations once you create OIDC identity provider.
+8. You can find additional configurations once you create the OIDC identity provider.
     - **Authorized redirect URL**: It is a readonly configuration which  denotes the authorization redirect URL of Asgardeo.
     - **User info endpoint URL**: The OIDC userinfo endpoint of the external identity provider. 
     - **Logout URL**: The OIDC logout endpoint of the external identity provider.
     - **Additional query parameters**: If you need to pass any additional query parameters to the external identity provider. For more information, see <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">Configure additional query params</a>.
-    - **Enable HTTP basic auth for client authentication**: Specify whether to enable HTTP basic authentication for token request. Unless, client credentials will be sent in the request body.
-9.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">additional query param</a>.  
+    - **Enable HTTP basic auth for client authentication**: Specify whether to enable HTTP basic authentication for the token request. Otherwise, client credentials are sent in the request body.
+9.  Asgardeo requests for the **openid** scope from the external identity provider. If you need more attributes from external identity provider, you can configure `scope` as an <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">additional query param</a>.  
     For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
       
 ### Enable OIDC login for application
-1. In the Asgardeo Console, Click **Develop > Applications**.
+1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
 3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
 4. Click **Add Authentication** on the step, and select the OIDC identity provider you added the above.
