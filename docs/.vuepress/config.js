@@ -22,6 +22,7 @@ module.exports = config({
     ],
 
     base: '/asgardeo/docs/',
+    dest: 'docs/.vuepress/dist/asgardeo/docs',
 
     /**
      * Theme configuration, here is the default theme configuration for VuePress.
