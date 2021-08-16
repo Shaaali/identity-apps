@@ -36,14 +36,15 @@ To register an app in Facebook:
       <img :src="$withBase('/assets/img/guides/idp/facebook-idp/app-id-secret-from-facebook.png')" alt="Get AppID and Secret from Facebook">
 
 ### Create Facebook Identity Provider
-1. In the Asgardeo Console, Click **Connections > New Connections**.
-2. Select **Facebook**.
-3. Enter the following details of the Facebook identity provider and click **Finish**:
+1. In the Asgardeo Console, Click **Develop > Connections**.
+2. Click **New Connections**.
+3. Select **Facebook**.
+4. Enter the following details of the Facebook identity provider and click **Finish**:
     - **Name**: A unique name for this Facebook identity provider.
     - **App ID**: App ID obtained from Facebook.
     - **App Secret**: App secret obtained from Facebook.   
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-idp.png')" alt="Add Facebook IDP in Asgardeo">
-4. You can find more additional configurations once you create Facebook identity provider.
+5. You can find more additional configurations once you create Facebook identity provider.
     - **Permissions**: Asgardeo requests below permissions from Facebook:
       - **email**: Grants read access to a user's primary email address.
       - **public_profile**: Grants read access to a user's default public profile fields.  

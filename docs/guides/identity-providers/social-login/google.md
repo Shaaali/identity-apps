@@ -29,15 +29,16 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 8. Obtain your **Client ID** & **Client Secret**.  
     
 ### Create Google identity provider
-1. In the Asgardeo Console, Click **Connections > New Connections**.
-2. Select **Google**.
+1. In the Asgardeo Console, Click **Develop > Connections**.
+2. Click **New Connections**.
+3. Select **Google**.
     <!--img :src="$withBase('/assets/img/guides/idp/list_of_idps.png')" alt="List of IDPs in Asgardeo"-->
-3. Enter the following details of the Google identity provider and click **Finish**:
+4. Enter the following details of the Google identity provider and click **Finish**:
     - **Name**: A unique name for this Google identity provider.
     - **Client ID**: client_id obtained from Google.
     - **Client Secret**: client_secret obtained from Google.   
     <img :src="$withBase('/assets/img/guides/idp/google-idp/add-google-idp.png')" alt="Add Google IDP in Asgardeo">
-4. You can find more additional configurations once you create Google identity provider.
+5. You can find more additional configurations once you create Google identity provider.
     - **Scopes**: Asgardeo requests below scopes from Google:
         - **email**: Allows viewing user's email address.
         - **openid**: Allows authenticating using OpenID Connect and obtain ID token.

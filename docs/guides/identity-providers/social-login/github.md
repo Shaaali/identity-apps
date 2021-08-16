@@ -28,14 +28,15 @@ In order to add Github login to your app, follow below steps
 4. Obtain **Client ID** and **Client secret**.
 
 ### Create Github Identity Provider
-1. In the Asgardeo Console, Click **Connections > New Connections**.
-2. Select **Github**.
-3. Enter the following details of the Github identity provider and click **Finish**:
+1.  In the Asgardeo Console, Click **Develop > Connections**.
+2. Click **New Connections**.
+3. Select **Github**.
+4. Enter the following details of the Github identity provider and click **Finish**:
     - **Name**: A unique name for this Github identity provider.
     - **Client ID**: Client ID obtained from Github.
     - **Client secret**: Client secret obtained from Github.   
     <img :src="$withBase('/assets/img/guides/idp/github-idp/add-github-idp.png')" alt="Add Github IDP in Asgardeo">
-4. You can find more additional configurations once you create Github identity provider.
+5. You can find more additional configurations once you create Github identity provider.
      - **Scopes**:  Asgardeo requests below scopes from Github:
        - **user:email** : Grants read access to a user's email addresses.
        - **read:user** : Grants access to read a user's profile data.  

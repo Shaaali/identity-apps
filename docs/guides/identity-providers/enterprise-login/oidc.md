@@ -35,17 +35,18 @@ Check the documentation of the OIDC Identity provider and get the following endp
 - Logout endpoint (optional)
 
 ### Create OIDC identity provider
-1. In the Asgardeo Console, Click **Develop > Identity Providers**.
-2. Select **Enterprise**  Identity Provider type.
-3. Provide a unique **Identity provider name** and select **OpenID Connect**.
-4. Enter the following details of the external OIDC identity provider and click **Next**:
+1. In the Asgardeo Console, Click **Develop > Connections**.
+2. Click **New Connections**.
+3. Select **Enterprise** .
+4. Provide a unique **Identity provider name** and select **OpenID Connect**.
+5. Enter the following details of the external OIDC identity provider and click **Next**:
      - **Name**: A unique name for this enterprise IdP.
      - **Client ID**: client_id obtained from the external identity provider. 
      - **Client secret**: client_secret obtained from the external identity provider. 
      - **Authorization endpoint URL**: The authorization endpoint of the external identity provider.
      - **Token endpoint URL** : The token endpoint of the external identity provider.
      <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/create-oidc-enterprise-idp-wizard.png')" alt="Create OIDC Enterprise IDP in Asgardeo">     
-5. Provide the mode of certificate configuration.
+6. Provide the mode of certificate configuration.
     You can either configure JWKS endpoint or upload a certificate of the external party. This will help to validate the signature of the assertions sent by the external identity provider.
     -  **JWKS endpoint**: The JWKS endpoint of the external identity provider.
     -  **Use PEM certificate** : Upload or paste the public certificate of the external identity provider. The certificate should be in PEM format.  
@@ -63,13 +64,14 @@ Check the documentation of the OIDC Identity provider and get the following endp
           openssl x509 -in cert.der -out cert.pem
          ```
         :::     
-6. After providing certificate details, click **Finish**.
-7. You can find more additional configurations once you create OIDC identity provider.
+7. After providing certificate details, click **Finish**.
+8. You can find more additional configurations once you create OIDC identity provider.
     - **Authorized redirect URL**: It is a readonly configuration which  denotes the authorization redirect URL of Asgardeo.
     - **User info endpoint URL**: The OIDC userinfo endpoint of the external identity provider. 
     - **Logout URL**: The OIDC logout endpoint of the external identity provider.
     - **Additional query parameters**: If you need to pass any additional query parameters to the external identity provider. For more information, see <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">Configure additional query params</a>.
-8.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">additional query param</a>.  
+    - **Enable HTTP basic auth for client authentication**: Specify whether to enable HTTP basic authentication for token request. Unless, client credentials will be sent in the request body.
+9.  Asgardeo requests for **openid** scope from external identity provider. If you need more attributes from external identity provider, you can configure `scope` as <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">additional query param</a>.  
     For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
       
 ### Enable OIDC login for application
