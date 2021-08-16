@@ -6,7 +6,7 @@ When the user signs in from such a device, this template enables two-factor auth
 
 ## Scenario
 
-If the customer uses a new device or a new browser to sign in to the application, the user is prompted with a second authentication step. An email is also sent to the customer with details of the sign-in attempt. The new device or browser is identified by a cookie, therefore, once the cookie expires (this expiry time is specified in the authentication script), the same browser or device is considered as a new device.
+If the customer uses a new device or a new browser to sign in to the application, the user is prompted with a second authentication step. An email is also sent to the customer with details of the sign-in attempt. The new device or browser is identified by a cookie. Therefore, once the cookie expires (this expiry time is specified in the authentication script), the same browser or device is considered as a new device.
 
 ## Prerequisites
 
