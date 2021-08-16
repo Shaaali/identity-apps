@@ -11,9 +11,13 @@ PORT=4567
 lsof -ti:$PORT | xargs kill
 
 # Make a temporary directory to host asgardeo docs in asgardeo/docs/ path
+rm -rf tmp
+mkdir tmp
+mkdir tmp/asgardeo
+mkdir tmp/asgardeo/docs
+cp -r docs/.vuepress/dist/* tmp/asgardeo/docs/
 
-# npm run build
-cd docs/.vuepress/dist || exit
+cd tmp || exit
 # https://www.npmjs.com/package/serve
 serve -p $PORT &
 sleep 5
