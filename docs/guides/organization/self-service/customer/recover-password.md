@@ -1,18 +1,17 @@
-# Recover password by customers
+# Password recovery by customers
 
-Asgardeo provides the support for self-service password recovery option on the login page if you're not logged in to Asgardeo. But, admins of your organization has to <a href="/guides/organization/account-recovery/password-recovery/">enable password recovery</a> for the business users based on the organizational requirements.
+Customers in an Asgardeo organization can recover a forgotten password by following the instructions on the Asgardeo login page provided that <a :href="$withBase('/guides/organization/account-recovery/password-recovery/')">password recovery is enabled</a> for business users in the organization.
 
-If you are already logged into My Account portal, you can see the steps<a :href="$withBase('/guides/organization/self-service/customer/my-account/#change-password')">here</a> to change your password.
+If you are signed in to your My Account portal, you can see the steps to <a :href="$withBase('/guides/organization/self-service/customer/my-account/#change-password')">set a new password</a> from there.
 
-To recover your password if you are not logged in to Asgardeo:
-1. Go to the login page via My Account Portal or a business application.
+To recover your password:
+1. Go to the login page via <a :href="$withBase('/guides/organization/self-service/customer/my-account/#access-my-account-portal')">My Account Portal</a> or a business application.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" alt="Recover your password">
 2. Click **Forgot password?**
 3. Enter your username and click **Send Reset Link**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/forgot-your-password.png')" alt="Forgot your password">
-4. An email notification is sent to your email address. Click on the **Reset Password** given on the email.
+4. An email notification is sent to your email address. Click **Reset Password** on the email.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/reset-password-email.png')" alt="Reset password email">
-5. **Enter new password** and **Proceed**.
+5. Enter new password and **Proceed**.
 
-Now you have reset your password. You can log in to business application and My Account using your new password.
-
+Now you have reset your password. You can log in to your business applications and My Account portal using your new password.

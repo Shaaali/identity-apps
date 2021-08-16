@@ -112,10 +112,10 @@ module.exports = config({
                             prefix: 'organization/account-recovery/',
                             sidebarDepth: 2,
                             children: [
-                                ['password-recovery', 'Configure Password Recovery'],
+                                ['password-recovery', 'Configure password recovery'],
                             ]
                         },
-                        ['organization/configure-self-registration', 'Configure Self Registration'],
+                        ['organization/configure-self-registration', 'Configure self registration'],
                         {
                             title: 'Account Security',
                             prefix: 'organization/account-security/',

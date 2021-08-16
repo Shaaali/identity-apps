@@ -1,4 +1,4 @@
-# My Account for the owner and collaborators
+# My Account for owners and collaborators
 
 Asgardeo provides the [My Account portal](https://myaccount.asgardeo.io) to help you manage your account by yourself and easily access and manage your information from anywhere.
 
