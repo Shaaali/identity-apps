@@ -18,7 +18,7 @@ is below the configured value.
 Follow the steps given below.
 
 1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply, and go to **Sign-in Method**.
+2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
 3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
 4. Turn on **Conditional Authentication** by switching the toggle.
 
@@ -37,7 +37,7 @@ Follow the steps given below.
         <tbody>
             <tr>
                 <td>ageLimit</td>
-                <td>Minimum age required for the user to log in to the application.</td>
+                <td>Minimum age required for the user to sign in to the application.</td>
             </tr>
             <tr>
                 <td>errorPage</td>
@@ -104,12 +104,11 @@ var getAge = function (birthDate) {
 
 Let's look at how this script works.
 
-The **validateDOB** function validates whether the provided data of birth is correct.
-
-The **getAge** function calculates the age based on the configured birthdate.
-
-When step 1 of the authentication flow is completed, the **onLoginRequest** function checks whether the
-age of the user is above the configured age limit. If the age is below the configured limit, the user is directed to the
+1.  The **validateDOB** function validates whether the provided date of birth is correct.
+2.  The **getAge** function calculates the age based on the configured birthdate.
+3.  When step 1 of the authentication flow is complete, the **onLoginRequest** function checks whether the
+age of the user is above the configured age limit. 
+4.  If the age is below the configured limit, the user is directed to the
 configured error page.
 
 ## Try it out
@@ -117,6 +116,7 @@ configured error page.
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who is above 18 years. The user will be successfully logged in to the application.
-3. Log out and log in with a user who is below 18 years. The user will be restricted from logging in.
+2. Try to sign in with a user who is above 18 years. The user will be successfully signed in to the application.
+3. Log out of the application.
+4. Sign in again with a user who is below 18 years. The user will be restricted from signing in.
     <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">

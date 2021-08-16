@@ -12,14 +12,14 @@ For customers in the organization that belong to the `manager` or `employee` use
 ## Prerequisites
 
 -  You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/oidc/register-app/')">register an application</a>.
-- Create user groups and assign customer accounts to each group.
+- Create two user groups named `manager` and `employee` and assign customer accounts to each group.
 
 ## Configure the sign-in flow
 
 Follow the steps given below.
 
 1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply, and go to **Sign-in Method**.
+2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
 3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
 4. Turn on **Conditional Authentication** by switching the toggle.
 
@@ -68,16 +68,19 @@ var onLoginRequest = function (context) {
 
 Let's look at how this script works.
 
-When step 1 of the authentication flow is completed, the **onLoginRequest** function retrieves the logged-in user from the context. The logged-in user and the configured list of groups are passed to the following conditional
-authentication JavaScript function - `isMemberOfAnyOfGroups`. This function (which is available in Asgardeo by default) verifies whether the given user belongs to any of the listed groups. If the logged-in user belongs to any of the configured groups, authentication step 2 (TOTP) is prompted.
+1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the logged-in user from the context. 
+2. The logged-in user and the configured list of groups are passed to the following conditional
+authentication JavaScript function - `isMemberOfAnyOfGroups`. 
+3. This function (which is available in Asgardeo by default) verifies whether the given user belongs to any of the listed groups. 
+4. If the logged-in user belongs to any of the configured groups, authentication step 2 (TOTP) is prompted.
 
 ## Try it out
 
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who does not belong to any of the configured groups (manager or employee). You will 
-   successfully log in to the application.
-3. Log out and log in with a user who belongs to the manager or employee group or both. You will be prompted with
-   TOTP authentication.
+2. Try to sign in with a user who does not belong to any of the configured groups (manager or employee). You will 
+   successfully signed in to the application.
+3. Log out of the application.
+4. Sign in with a user who belongs to the manager or employee group or both. TOTP authentication is prompted.
     <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="group-based-2fa-conditional-auth-totp-page">

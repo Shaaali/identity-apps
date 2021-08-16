@@ -70,6 +70,8 @@ The available templates are listed below.
 
   This login flow prompts 2FA for users who are logging in from outside the given IP range.
 
+If required, you can also use the script editor to introduce new functions and fields to an authentication script based on your requirement. See the instructions on <a :href="$withBase('/guides/conditional-auth/write-your-first-script/')">writing a custom authentication script</a>. 
+
 ## What's next
 * [Set up conditional authentication for your application](./configure-conditional-auth)
 * [Checkout the JS API reference](./api-reference)

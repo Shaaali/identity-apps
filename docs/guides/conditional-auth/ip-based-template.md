@@ -17,7 +17,7 @@ You need an application registered in Asgardeo. If you don't already have one, <
 Follow the steps given below.
 
 1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply, and go to **Sign-in Method**.
+2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
 3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
 4. Turn on **Conditional Authentication** by switching the toggle.
 
@@ -100,16 +100,14 @@ var isCorporateIP = function (ip, subnets) {
 
 Let's look at how this script works.
 
-The **convertIpToLong** function converts and returns the provided IP address as a long value.
-
-The **isCorporateIP** function returns whether the user's IP address is in the given range. This method accepts two inputs. The
+1.  The **convertIpToLong** function converts and returns the provided IP address as a long value.
+2.  The **isCorporateIP** function returns whether the user's IP address is in the given range. This method accepts two inputs. The
 first argument is the IP address that should be validated and the second argument is the allowed IP range.
-
-When step 1 of the authentication flow is completed, the **onLoginRequest** function retrieves the IP
-address of the user from the context. This IP address is passed to the _isCorporateIP_ function along with the
+3.  When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the IP
+address of the user from the context. 
+4.  This IP address is passed to the _isCorporateIP_ function along with the
 configured IP address range.
-
-If the IP address of the logged-in user is not in the configured IP range, step 2 of the authentication flow is
+5.  If the IP address of the logged-in user is not in the configured IP range, step 2 of the authentication flow is
 executed.
 
 ## Try it out
@@ -117,7 +115,7 @@ executed.
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who has the IP address in the configured range. You will successfully log in to the application.
-3. Log out and log in with a user who does not belong to the configured IP address range. You will be prompted with
-   TOTP authentication.
+2. Try to sign in with a user who has the IP address in the configured range. You will successfully sign in to the application.
+3. Log out of the application.
+4. Sign in with a user who does not belong to the configured IP address range. TOTP authentication is prompted.
    <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="ip-based-2fa-conditional-auth-totp-page">

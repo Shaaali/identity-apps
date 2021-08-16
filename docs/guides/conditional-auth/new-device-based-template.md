@@ -17,7 +17,7 @@ You need an application registered in Asgardeo. If you don't already have one, <
 Follow the steps given below.
 
 1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply, and go to **Sign-in Method**.
+2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
 3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
 4. Turn on **Conditional Authentication** by switching the toggle.
 
@@ -120,23 +120,20 @@ var validateCookie = function (context, subject) {
 
 Let's look at how this script works.
 
-The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function [getCookieValue(request, name, properties)](api-reference/#get-cookie-value). The cookie name is configured with the _cookieName_ parameter.
-
-Upon the successful execution of step 1 in the authentication flow, the **onLoginRequest** function validates the **deviceAuth** cookie. If there is no valid cookie found, the function checks whether the _sendNotification_ and _stepUpAuthentication_ parameters are enabled.
-
-If the _sendNotification_ property is enabled, the JavaScript conditional authentication function [sendEmail(user, templateId, placeholderParameters)](api-reference/#send-email) is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the _emailTemplate_ variable.
-
-If the _stepUpAuthentication_ parameter is enabled, step 2 of the authentication flow is executed.
-
-On the successful execution of step 2 of the authentication flow, [setCookie(response, name, value, properties)](api-reference/#set-cookie) is called to set a **deviceAuth** cookie.
+1.  The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function [getCookieValue(request, name, properties)](api-reference/#get-cookie-value). The cookie name is configured with the _cookieName_ parameter.
+2.  When step 1 of the authentication flow is complete, the **onLoginRequest** function validates the **deviceAuth** cookie. 
+3.  If there is no valid cookie found, the function checks whether the _sendNotification_ and _stepUpAuthentication_ parameters are enabled.
+4.  If the _sendNotification_ property is enabled, the JavaScript conditional authentication function [sendEmail(user, templateId, placeholderParameters)](api-reference/#send-email) is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the _emailTemplate_ variable.
+5.  If the _stepUpAuthentication_ parameter is enabled, step 2 of the authentication flow is executed.
+6.  On the successful execution of step 2 of the authentication flow, [setCookie(response, name, value, properties)](api-reference/#set-cookie) is called to set a **deviceAuth** cookie.
 
 ## Try it out
 
 Follow the steps given below.
 
 1. Access the application URL from a new device/browser.
-2. Try to log in to the application. You will be prompted with TOTP authentication. The configured email of the user
-   will receive the email notification.
+2. Try to sign in to the application. TOTP authentication is prompted and the configured email of the user receives the email notification.
     <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
-3. Log out and log in with the same user from the same device/browser. You will be successfully logged in to the
+3. Log out of the application. 
+4.  Sign in with the same user from the same device/browser. You will be successfully signed in to the
    application with only the basic authentication.
