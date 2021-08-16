@@ -245,27 +245,19 @@ module.exports = config({
                         },
                     ],
                 },
-            {
-                title: 'Conditional Authentication',
-                children: [
-                    ['conditional-auth/', 'Overview'],
-                    ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
-                    ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
-                    {
-                        title: 'Predefined templates',
-                        prefix: 'conditional-auth/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['predefined-templates/', 'Overview'],
-                            ['predefined-templates/group-based-template.md', 'Group based access control'],
-                            ['predefined-templates/ip-based-template.md', 'IP based access control'],
-                            ['predefined-templates/new-device-based-template.md', 'Device based access control'],
-                            ['predefined-templates/user-age-based-template.md', 'Age based access control'],
-                        ]
-                    },
-                    ['conditional-auth/api-reference.md', 'API Reference'],
-                ]
-            },
+                {
+                    title: 'Conditional Authentication',
+                    children: [
+                        ['conditional-auth/', 'Overview'],
+                        ['conditional-auth/configure-conditional-auth.md', 'Set up conditional authentication'],
+                        ['conditional-auth/group-based-template.md', 'Add group-based authentication'],
+                        ['conditional-auth/ip-based-template.md', 'Add IP-based authentication'],
+                        ['conditional-auth/new-device-based-template.md', 'Add device-based authentication'],
+                        ['conditional-auth/user-age-based-template.md', 'Add user age-based authentication'],
+                        ['conditional-auth/write-your-first-script.md', 'Write a custom authentication script'],
+                        ['conditional-auth/api-reference.md', 'Authentication Script - Reference'],
+                    ]
+                },
             {
                 title: 'Hidden',
                 children: [
