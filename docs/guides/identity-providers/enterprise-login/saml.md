@@ -63,7 +63,7 @@ The SAML IdP metadata document contains:
 5. Click **Finish**.
 
 #### Create IdP using manual configurations
-1. Click **File Based Configuration**.
+1. Click **Manual Configuration**.
       <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-manual-config.png')" alt="Create SAML Enterprise IDP with manual configurations">
 2. Enter the following details and click **Next**:
      - **Service provider entity ID**: A unique name for this enterprise IdP. This value will be used as the `<saml2:Issuer>` in the SAML requests initiated from Asgardeo to external Identity Provider (IdP).
@@ -85,3 +85,5 @@ You can find more additional configurations once you create SAML identity provid
 5. Select **Update**.
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/enable-saml-enterprise-login-with-basic.png')" alt="Add SAML IdP login in Asgardeo">
 
+## Related links
+- <a :href="$withBase('/guides/identity-providers/enterprise-login/saml-settings')">Configure SAML IdP settings</a>
