@@ -58,7 +58,7 @@ For example, shown below are a set of OpenID Connect claims mapped to user attri
 
 You need to enable `email_home` as a <a :href="$withBase('/guides/applications/share-user-attributes/oidc/#select-user-attributes')">requested attribute</a> for your application and also add it to an OIDC scope. You can then configure your application to receive this user information when a user signs in.
 
-After user authentication, you can find the `email_home` claim the ID token as shown below.
+After user authentication, you can find the `email_home` claim in the ID token as shown below.
 
 ```
     {
@@ -87,7 +87,7 @@ After user authentication, you can find the `email_home` claim the ID token as s
 
 ### Delete an OpenID Connect attribute
 To view the OpenID Connect attributes available in your organization:
-1. On the Asgardeo Console, Click **Manage > Attributes> Manage Attribute Mappings**.
+1. On the Asgardeo console, click **Manage > Attributes> Manage Attribute Mappings**.
 2. Click **OpenID Connect**.
 3. Select the attribute to delete.
 4. Click **Delete**.
@@ -104,6 +104,6 @@ The attributes in these schemas are well-defined in the [SCIM 2.0 specification]
 
 ### View SCIM 2.0 attributes
 To view the SCIM 2 attributes mapped to user attributes in your organization:
-1. On the Asgardeo Console, Click **Manage > Attributes> Manage Attribute Mappings**.
+1. On the Asgardeo console, click **Manage > Attributes> Manage Attribute Mappings**.
 2. Click **SCIM 2.0**.
    <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/view-scim2-attributes.png')" alt="View SCIM2 attributes">
