@@ -1,29 +1,26 @@
-# Configure self registration
+# Configure self-registration
 
-<a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer')">Customers</a> can self-register themselves to an organization in Asgardeo. Asgardeo provides the capability to enable  or disable self-registration feature and configure the settings. 
-When self registration is enabled, users can register via the application’s login page. This creates a new customer account in the organization.
+<a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer')">Customers</a> can self-register to an organization in Asgardeo via an application’s login page. This creates a new customer account in the organization. The self-registration capability is enabled in Asgardeo organizations by default. 
 
-Self-registration for customers is enabled in the Asgardeo organizations by default. Asgardeo provides some default configurations. If you want to change the default password recovery configurations, you can follow this guide.
-                                                                                                                                        
-To configure self registration:
-1. On the Asgardeo Console, click **Manage > Self Registration**.
+To disable this capability in your organization or to change the default configurations, see the following instructions:
+
+1. On the Asgardeo console, click **Manage > Self Registration**.
     <img :src="$withBase('/assets/img/guides/organization/self-registration/configure-self-registration.png')" alt="Configure self registration">
 2. Configure the below settings.
-    <table>
-          <tbody>
-             <tr>
-                  <td><b>Account Verification</b></td>
-                  <td>Account Verification enables email verification at the self registration. The new account is activated only after the user verifies the email</td>
-             </tr>
-             <tr>
-                <td><b>Account verification link expiry time</b></td>
-                <td>Specifies account verification link expiry time in minutes. If you enter 60 min, account verification email will be expired after 60 min.</td>
-           </tr>
-          </tbody>
-       </table>
-6. Click **Update** once you configure the required settings.  
 
-See how to <a :href="$withBase('/guides/organization/self-service/customer/self-register/')">try self registration</a>.     
+    -   To disable self-registration, turn off the toggle.
+    -   To configure how self-registration works, update the following settings and click **Update**.
+        <table>
+            <tbody>
+                <tr>
+                    <td><b>Account Verification</b></td>
+                    <td>Enables email verification at self-registration. The new account is activated only after the user verifies the email.</td>
+                </tr>
+                <tr>
+                    <td><b>Account verification link expiry time</b></td>
+                    <td>Specifies account verification link expiry time in minutes. If you enter 60 min, the account verification email expires after 60 min.</td>
+            </tr>
+            </tbody>
+        </table>
 
-
-
+<a :href="$withBase('/guides/organization/self-service/customer/self-register/')">Try self-registration</a>.

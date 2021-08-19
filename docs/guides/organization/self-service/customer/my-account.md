@@ -28,11 +28,6 @@ Example URL:
 https://myaccount.asgardeo.io/t/bifrost
 ```
 
-<br>
-
-
-Customers can sign-in to their My Account portal and self-manage their information as follows:
-
 ## Update profile information
 <CommonGuide guide='guides/fragments/self-service/update-profile.md'/>
 

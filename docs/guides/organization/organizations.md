@@ -26,7 +26,7 @@ If you have multiple organizations, you can switch between them on the console.
 
 1. On the Asgardeo console, click your organization name in the header.
 2. Click **Switch Organization** to see the list of organizations you have.
-   <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization.png')" alt="Switch between organizations">
+   <img :src="$withBase('/assets/img/guides/organization/manage-organizations/switch-organization.png')" alt="Switch between organizations">
 3. Select the required organization to make the switch.
 
 Now you have switched to another organization on the Asgardeo console and you can access the resources available for that organization.

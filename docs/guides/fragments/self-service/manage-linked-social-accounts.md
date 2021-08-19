@@ -1,7 +1,8 @@
 
-You can view the linked social accounts and remove them if needed.
+The account owner can view one's linked social accounts and remove them if needed.
 
-To view the linked social accounts:
+Given below are the steps to follow.
+
 1. Sign in to the My Account portal.
 2. Click **Personal Info > External Logins**.
 3. To remove any of the linked accounts, click **Remove**.
