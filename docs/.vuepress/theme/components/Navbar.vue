@@ -32,9 +32,9 @@
       } : {}"
     >
       <DarkmodeSwitch class="darkmode-switch"/>
-      <AlgoliaSearchBox
-          v-if="isAlgoliaSearch"
-          :options="algolia"
+      <AlgoliaSearchFull
+        v-if="isAlgoliaSearch"
+        :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
       <!-- <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/> -->
@@ -45,7 +45,7 @@
 <!--<script src="./Navbar" />-->
 
 <script>
-import AlgoliaSearchBox from '@AlgoliaSearchBox'
+import AlgoliaSearchFull from '@theme/components/AlgoliaSearch/Full.vue'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
@@ -57,7 +57,7 @@ export default {
     SidebarButton,
     NavLinks,
     SearchBox,
-    AlgoliaSearchBox,
+    AlgoliaSearchFull,
     Button, 
     DarkmodeSwitch
   },

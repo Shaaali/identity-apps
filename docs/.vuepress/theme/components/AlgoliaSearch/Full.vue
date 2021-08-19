@@ -50,7 +50,7 @@ body.theme-dark
 
 .DocSearch-Button
   height 36px
-  margin 0 1rem 0 0.25rem
+  margin 6px 1rem 0 0.25rem
   padding 0.5rem
   background var(--docsearch-searchbox-background)
   border-radius 40px
@@ -61,12 +61,12 @@ body.theme-dark
   outline none
 
   .DocSearch-Search-Icon
-    width 1.1rem
-    height 1.1rem
+    width 1rem
+    height 1rem
     color #aaa
-    stroke-width 3
+    stroke-width 2
     position relative
-    bottom -0.125em
+    bottom 0
 
   @media (max-width $MQMobile)
     margin-right 0
