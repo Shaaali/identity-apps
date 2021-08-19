@@ -46,7 +46,7 @@ Click on the button below to download the sample.
 Change the `config.json` file found in the `asgardeo-angular-app/src` sample folder with the relevant values.
 
  - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/spa/configure-login/#obtain-client-id')">how to obtain client ID</a> from Asgardeo console.
- - **serverOrigin** - "https://api.asgardeo.io/t/<organization_name>"
+ - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
 
     ``` json{2,3}
     {
@@ -61,7 +61,7 @@ Change the `config.json` file found in the `asgardeo-angular-app/src` sample fol
 
 ### Run the sample
 
-Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000` 
+Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000`
 
 ```bash
 npm install && npm start
