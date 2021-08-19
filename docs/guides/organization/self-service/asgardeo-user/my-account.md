@@ -20,8 +20,6 @@ You can also switch to My Account from the console as follows:
     <img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/switch-to-myaccount.png')" alt="Switch to MyAccount from Console">
 2. Select **My Account** to automatically sign in to your My Account portal.
 
-You can sign-in to the My Account portal and self-manage your information as follows:
-
 ## Update profile information
 <CommonGuide guide='guides/fragments/self-service/update-profile.md'/>
 
