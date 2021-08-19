@@ -369,6 +369,13 @@ module.exports = config({
         ['check-md', {
             exitLevel: 'error'
         }],
-        'vuepress-plugin-chunkload-redirect'
+        'vuepress-plugin-chunkload-redirect',
+        ['vuepress-plugin-code-copy', {
+            align: 'bottom',
+            backgroundTransition: false,
+            color: '#777',
+            staticIcon: false,
+            successText: 'Copied Successfully!'
+        }]
     ]
 });

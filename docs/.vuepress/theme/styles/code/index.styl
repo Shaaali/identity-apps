@@ -17,7 +17,7 @@
 {$contentClass}
   pre, pre[class*='language-']
     line-height 1.4
-    padding 1.25rem 1.5rem
+    padding 1.5rem 0.25rem 0.25rem
     margin 0.85rem 0 0 5px
     background var(--code-bgcolor)
     border-radius 6px
@@ -147,5 +147,15 @@ div[class~='language-php']:before
 div[class~='language-stylus']:before
   content 'styl'
 
+// Code copy success text styling
+.code-copy-added
+  .success
+    color var(--text-color-light)
 
+  .code-copy
+    position sticky
+    top 0
+    left 0
+    margin-top 20px
+    zoom 0.9
 
