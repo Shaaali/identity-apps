@@ -4,15 +4,15 @@ Admins can create multiple organizations via the Asgardeo console and switch bet
 The admin who creates the organization is the <a :href="$withBase('/guides/user-management/manage-users/user-accounts/owner/')">owner</a> of the organization.
 
 ## Create an organization
-You can create a new organization via the Asgardeo Console.
+You can create a new organization via the Asgardeo console.
 
-1. On the Asgardeo Console, click your organization name in the header.
+1. On the Asgardeo console, click your organization name in the header.
 2. Click **New Organization**.
    <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization.png')" alt="Create new organization">
 3. Provide the **Organization Name**.
     ::: warning
-      - The organization name should be unique, and you can't change the organization name once that is created. 
-      - The organization name can contain 4 to 30 characters, It can only have lowercase alphanumeric characters, and it must always begin with an alphabet character.
+      - The organization name should be unique and you can't change the organization name once it is created. 
+      - The organization name can contain 4 to 30 characters. It can only have lowercase alphanumeric characters, and it must always begin with an alphabet character.
 
     :::
     <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization-form.png')" alt="Create new organization form">
@@ -22,11 +22,11 @@ Now a new organization is created and you can access your workspace. You can sta
 
 ## Switch between organizations
 
-If you have multiple organizations, you can switch between them in the Console.
+If you have multiple organizations, you can switch between them on the console.
 
-1. On the Asgardeo Console, click your organization name in the header.
+1. On the Asgardeo console, click your organization name in the header.
 2. Click **Switch Organization** to see the list of organizations you have.
    <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization.png')" alt="Switch between organizations">
 3. Select the required organization to make the switch.
 
-Now you have switched to another organization in the Asgardeo Console and you can access the resources available for that organization.
+Now you have switched to another organization on the Asgardeo console and you can access the resources available for that organization.

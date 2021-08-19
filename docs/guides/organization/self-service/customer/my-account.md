@@ -1,26 +1,29 @@
 # My Account Portal for customers
-Asgardeo provides My Account portal to help you to self manage your account and easy access to manage your information from anywhere.
 
-Asgardeo provides below capabilities for the easy access to manage your information:
+Customers can easily access and self-manage their Asgardeo accounts from anywhere by using the [My Account portal](https://myaccount.asgardeo.io) for customers.
+
+You can do the following on this portal:
 - Update profile information
 - Change password
 - View and revoke consents given to applications
 - View linked social accounts
 - View and revoke active sessions
 - Update the account recovery email
-- Discover your applications and maintain them
-- Enroll for TOTP
+- Discover and maintain your applications
+- Enroll TOTP
 
 ## Access My Account portal
-<a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">Customers</a> are managed by the organization. So their My Account portal is accessible via their organization.
 
-You can access their My Account portal by accessing the below URL.
+<a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">Customers</a> can access the My Account portal via their organization.
+
+The format of the My Account portal URL is as follows:
 
 ```
 https://myaccount.asgardeo.io/t/{organization_name}
 ```
 
-**Sample My Account portal** URL :
+Example URL:
+
 ```
 https://myaccount.asgardeo.io/t/bifrost
 ```
@@ -28,11 +31,10 @@ https://myaccount.asgardeo.io/t/bifrost
 <br>
 
 
-You can log in to My Account portal and self-manage your information. Below section guides you on how to manage your information via My Account.
+Customers can sign-in to their My Account portal and self-manage their information as follows:
 
 ## Update profile information
 <CommonGuide guide='guides/fragments/self-service/update-profile.md'/>
-
 
 ## Change password 
 <CommonGuide guide='guides/fragments/self-service/change-password.md'/>

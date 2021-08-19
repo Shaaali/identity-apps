@@ -1,11 +1,13 @@
 # Configure login attempts security
 
-You can protect user accounts from password brute-force attacks by locking the account on consecutive failed login attempts. By default, this setting is disabled.
+You can protect user accounts in Asgardeo from password brute-force attacks by locking the account on consecutive failed login attempts. By default, this setting is disabled.
 
 You can configure the number of consecutive failed login attempts that should be allowed for users in an organization. When a user exceeds this number of attempts, the account is automatically locked and the user is informed via email. The account will be activated automatically after the specified lock duration.
 
-To configure log in attempts security:
-1. On the Asgardeo Console, click **Manage > Account Security**.
+## Enable login attempts security
+
+To configure login attempts security:
+1. On the Asgardeo console, click **Manage > Account Security**.
 2. Go to **Login Attempts Security**.
 3. Click **Configure** to open the **Login Attempts Security** page.
 4. Turn on **Enabled** to enable this configuration.  
@@ -34,12 +36,12 @@ To configure log in attempts security:
 
 ### How it works
 
-Admin has configured below settings:
-- Number of consecutive failed login attempts : 5
-- Account lock duration                       : 5 min
-- Account lock duration increment factor      : 2
+Admin has configured the below settings:
+- Number of consecutive failed login attempts: 5
+- Account lock duration: 5 min
+- Account lock duration increment factor: 2
 
-Based on the above settings, let's see how account lock happens in Asgardeo when a user tries to login with incorrect password.
+Based on the above settings, let's see how account lock happens in Asgardeo when a user tries to log in with an incorrect password.
 1. User tries to log in with an incorrect password in **5 consecutive attempts** (Number of consecutive failed login attempts).
 2. User account will be **locked** for **5 minutes** (Account lock duration).
 3. After **5 minutes**, the account will be unlocked.
@@ -57,7 +59,7 @@ Account unlock timeout = Account lock duration * (Account lock duration incremen
 ## Disable login attempts security
 
 To disable login attempts security:
-1. On the Asgardeo Console, click **Manage > Account Security**.
+1. On the Asgardeo console, click **Manage > Account Security**.
 2. Go to **Login Attempts Security**.
 3. Click **Configure**.
 4. Turn off **Disabled** to disable this security.  
