@@ -32,7 +32,7 @@ module.exports = config({
      */
 
     themeConfig: {
-        hostname : 'https://docs.asgardeo.io',
+        hostname : 'https://wso2.com',
         displayAllHeaders: false,
         repo: '',
         editLinks: true,
