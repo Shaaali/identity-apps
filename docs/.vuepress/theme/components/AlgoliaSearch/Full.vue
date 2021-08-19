@@ -16,8 +16,8 @@ body
   --docsearch-spacing 12px
   --docsearch-icon-stroke-width 1.4
   --docsearch-muted-color #969faf
-  --docsearch-container-background rgba(101, 108, 133, 0.8)
-  --docsearch-modal-width 560px
+  --docsearch-container-background rgba(33, 42, 50, 0.7)
+  --docsearch-modal-width 900px
   --docsearch-modal-height 600px
   --docsearch-modal-shadow inset 1px 1px 0 0 hsla(0, 0%, 100%, 0.5), 0 3px 8px 0 #555a64
   --docsearch-searchbox-height 56px
@@ -41,7 +41,7 @@ body.theme-dark
   --docsearch-container-background rgba(9, 10, 17, 0.8)
   --docsearch-modal-shadow inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309
   --docsearch-searchbox-background #090a11
-  --docsearch-searchbox-focus-background #000
+  --docsearch-searchbox-focus-background #212a32
   --docsearch-hit-shadow none
   --docsearch-key-gradient linear-gradient(-26.5deg, #565872, #31355b)
   --docsearch-key-shadow inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d, 0 2px 2px 0 rgba(3, 4, 9, 0.3)
@@ -49,11 +49,11 @@ body.theme-dark
   --docsearch-muted-color #7f8497
 
 .DocSearch-Button
-  height 36px
-  margin 6px 1rem 0 0.25rem
-  padding 0.5rem
+  width 33px
+  height 33px
+  margin 9px 1rem 0 0.25rem
   background var(--docsearch-searchbox-background)
-  border-radius 40px
+  border-radius 40px !important
   color var(--docsearch-muted-color)
   display inline-flex
   align-items center
@@ -61,10 +61,11 @@ body.theme-dark
   outline none
 
   .DocSearch-Search-Icon
-    width 1rem
-    height 1rem
-    color #aaa
-    stroke-width 2
+    width 16px
+    height 16px
+    padding 2px
+    color var(--text-color-light)
+    stroke-width 3
     position relative
     bottom 0
 
@@ -79,6 +80,7 @@ body.theme-dark
   stroke-width 1.6
 
 .DocSearch-Button-Placeholder
+  display none !important
   padding 0 12px 0 6px
   font-size 1rem
 
@@ -96,7 +98,7 @@ body.theme-dark
   background var(--docsearch-key-gradient)
   box-shadow var(--docsearch-key-shadow)
   color var(--docsearch-muted-color)
-  display flex
+  display none !important
   justify-content center
   align-items center
 
@@ -120,6 +122,7 @@ body.theme-dark
   width 100vw
   height 100vh
   background-color var(--docsearch-container-background)
+  animation 0.3s fade-in
 
   @media (max-width $MQNarrow)
     position absolute
@@ -146,8 +149,9 @@ body.theme-dark
   margin 60px auto auto
   border-radius 6px
   box-shadow var(--docsearch-modal-shadow)
-  background var(--bgcolor-light)
+  background var(--sdk-bgcolor)
   flex-direction column
+  transition max-height 0.3s ease-out
 
   @media (max-width $MQNarrow)
     width 100%
@@ -165,7 +169,6 @@ body.theme-dark
   align-items center
   background var(--docsearch-searchbox-focus-background)
   border-radius 4px
-  box-shadow var(--docsearch-searchbox-shadow)
   display flex
   height var(--docsearch-searchbox-height)
   padding 0 var(--docsearch-spacing)
@@ -201,7 +204,7 @@ body.theme-dark
 
 .DocSearch-MagnifierLabel, .DocSearch-Reset
   align-items center
-  color var(--accent-color)
+  color var(--text-color-light)
   display flex
   justify-content center
 
@@ -331,8 +334,8 @@ body.theme-dark
 
 .DocSearch-Hit
   position relative
-  padding-bottom 4px
-  border-radius 4px
+  padding 4px 10px
+  border-radius 6px
   display flex
 
   a
@@ -340,7 +343,7 @@ body.theme-dark
     padding-left var(--docsearch-spacing)
     border-radius 4px
     background var(--bgcolor)
-    box-shadow var(--docsearch-hit-shadow)
+    // box-shadow var(--docsearch-hit-shadow)
     display block
 
   &[aria-selected='true'] a
@@ -369,8 +372,9 @@ body.theme-dark
   position sticky
   top 0
   z-index 10
-  margin 0 -4px
-  padding 8px 4px 0
+  margin 10px 0px
+  padding 5px 10px
+  border-radius 6px
   background var(--bgcolor-light)
   color var(--accent-color)
   font-size 0.85em
