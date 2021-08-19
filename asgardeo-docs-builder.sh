@@ -31,23 +31,12 @@ gh release create --title "Asgardeo Docs - v$VERSION" v"$VERSION" "$ASGARDEO_DOC
 # Create new version
 incrementPackVersion() {
     old_version=$1
-
-    if [[ $old_version == *"-"* ]]; then
-        regex='^[0-9]+$'
-        last_digit="${old_version: -1}"
-
-        if ! [[ $last_digit =~ $regex ]] ; then
-            echo "$old_version"2
-        else
-            echo "$(echo "$old_version" | sed 's/.$//')$((last_digit+1))"
-        fi
-    else
-        echo $(echo "$old_version" | awk -F. '{print $1"."$2"."$3+1}')
-    fi
+    echo "$old_version" | awk -F. '{print $1"."$2"."$3+1}'
 }
 
 # Update version in package.json
 NEW_ASGARDEO_DOCS_VERSION=$(incrementPackVersion "$VERSION")
+echo "Next asgardeo-docs version: $NEW_ASGARDEO_DOCS_VERSION"
 tmp=$(mktemp)
 jq --arg variable "$NEW_ASGARDEO_DOCS_VERSION" '.version = $variable' package.json > "$tmp" && mv "$tmp" package.json
 
