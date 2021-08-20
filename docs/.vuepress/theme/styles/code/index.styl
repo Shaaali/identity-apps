@@ -108,55 +108,51 @@ div[class*='language-']
       border-radius 6px 0 0 6px
       background var(--code-bgcolor)
 
-for lang in $codeLang
-  div{'[class~="language-' + lang + '"]'}
-    &:before
-      content '' + lang
+// Disabled syntax tags in code blocks. Uncomment to re-enable if necessary.
 
-div[class~='language-javascript']
-  &:before
-    content 'js'
+// for lang in $codeLang
+//   div{'[class~="language-' + lang + '"]'}
+//     &:before
+//       content '' + lang
 
-div[class~='language-typescript']
-  &:before
-    content 'ts'
+// div[class~='language-javascript']
+//   &:before
+//     content 'js'
 
-div[class~='language-markup']
-  &:before
-    content 'html'
+// div[class~='language-typescript']
+//   &:before
+//     content 'ts'
 
-div[class~='language-markdown']
-  &:before
-    content 'md'
+// div[class~='language-markup']
+//   &:before
+//     content 'html'
 
-div[class~='language-json']:before
-  content 'json'
+// div[class~='language-markdown']
+//   &:before
+//     content 'md'
 
-div[class~='language-ruby']:before
-  content 'rb'
+// div[class~='language-json']:before
+//   content 'json'
 
-div[class~='language-python']:before
-  content 'py'
+// div[class~='language-ruby']:before
+//   content 'rb'
 
-div[class~='language-bash']:before
-  content 'sh'
+// div[class~='language-python']:before
+//   content 'py'
 
-div[class~='language-php']:before
-  content 'php'
+// div[class~='language-bash']:before
+//   content 'sh'
 
-div[class~='language-stylus']:before
-  content 'styl'
+// div[class~='language-php']:before
+//   content 'php'
+
+// div[class~='language-stylus']:before
+//   content 'styl'
 
 // Code copy component styling
 .xiaopanda-code-copy
   .copy-button, .copy-ok
     zoom 0.7
-    padding-top 0px
+    padding-top 7px
     padding-right 7px 
-    margin-top 40px
-
-  &.language-
-    .copy-button, .copy-ok
-      padding-top 5px
-      margin-top 0px
 
