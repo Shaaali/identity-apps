@@ -3,12 +3,26 @@ import SidebarGroup from "@theme/components/SidebarGroup.vue";
 import SidebarLink from "@theme/components/SidebarLink.vue";
 import { isActive } from "@theme/util/path";
 const descendantIsActive = (route, item) => {
-    if (item.type === "group")
-        return item.children.some((child) => {
-            if (child.type === "group")
-                return descendantIsActive(route, child);
-            return child.type === "page" && isActive(route, child.path);
-        });
+    if (item.type === "group") {
+        if (item.path === "") {
+            return item.children.some((child) => {
+                if (child.type === "group")
+                    return descendantIsActive(route, child);
+                return child.type === "page" && isActive(route, child.path);
+            });
+        } else {
+            // Added condition for collapsible sidebar item with an index page.
+            if (item.path === route.path) {
+                return true;
+            } else {
+                return item.children.some((child) => {
+                    if (child.type === "group")
+                        return descendantIsActive(route, child);
+                    return child.type === "page" && isActive(route, child.path);
+                });
+            }
+        }
+    }
     return false;
 };
 const resolveOpenGroupIndex = (route, items) => {
