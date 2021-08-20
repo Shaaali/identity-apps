@@ -370,12 +370,11 @@ module.exports = config({
             exitLevel: 'error'
         }],
         'vuepress-plugin-chunkload-redirect',
-        ['vuepress-plugin-code-copy', {
-            align: 'bottom',
-            backgroundTransition: false,
-            color: '#777',
-            staticIcon: false,
-            successText: 'Copied Successfully!'
+        ['@xiaopanda/vuepress-plugin-code-copy', {
+            buttonStaticIcon: true,
+            buttonIconTitle: "Copy to clipboard",
+            buttonAlign: "top",
+            buttonColor: "#888"
         }]
     ]
 });
