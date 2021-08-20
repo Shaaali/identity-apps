@@ -81,3 +81,7 @@ Check the documentation of the OIDC Identity provider and get the following endp
 4. Click **Add Authentication** on the step, and select the OIDC identity provider you added the above.
 5. Select **Update**.
     <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/enable-oidc-enterprise-login-with-basic.png')" alt="Add OIDC identity provider login in Asgardeo">
+
+
+## Related links
+- <a :href="$withBase('/guides/identity-providers/enterprise-login/configure-additional-query-params')">Configure additional query params</a>
