@@ -9,7 +9,7 @@ This allows you to strengthen the authentication flow when the risk is higher. I
 
 The authentication script, for configuring dynamic authentication flows in Asgardeo, is a functional language, which is similar to Javascript. You can configure the script using the script editor in the Asgardeo console. You can either use a [template](#script-templates) or <a :href="$withBase('/guides/conditional-auth/write-your-first-script/')">write a custom script</a>.
 
-This scripting language supports a set of inbuilt [functions](./api-reference#utility-functions) and [objects](./api-reference#object-reference). A simple conditional authentication script will look like the following:
+This scripting language supports a set of inbuilt <a :href ="$withBase('/references/conditional-auth/api-reference/#utility-functions')">functions</a> and <a :href ="$withBase('/references/conditional-auth/api-reference/#object-reference')">objects</a>. A simple conditional authentication script will look like the following:
 
 ```js
 var onLoginRequest = function(context) {
@@ -74,4 +74,4 @@ If required, you can also use the script editor to introduce new functions and f
 
 ## What's next
 * [Set up conditional authentication for your application](./configure-conditional-auth)
-* [Checkout the JS API reference](./api-reference)
+* <a :href ="$withBase('/references/conditional-auth/api-reference')">Checkout the JS API reference</a>

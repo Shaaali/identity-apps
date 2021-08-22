@@ -178,7 +178,6 @@ module.exports = config({
                             ['conditional-auth/new-device-based-template.md', 'Add device-based authentication'],
                             ['conditional-auth/user-age-based-template.md', 'Add user age-based authentication'],
                             ['conditional-auth/write-your-first-script.md', 'Write a custom authentication script'],
-                            ['conditional-auth/api-reference.md', 'Authentication Script - Reference'],
                         ]
                     },
                     ]
@@ -302,6 +301,7 @@ module.exports = config({
                     ]
                 },
                 ['/references/user-management/user-roles.md', 'Role-based permissions'],
+                ['/references/conditional-auth/api-reference.md', 'Conditional auth - API'],
             ]
 //
 //            '/concepts/' : [

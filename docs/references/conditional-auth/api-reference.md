@@ -1,4 +1,4 @@
-# API Reference
+# Conditional authentication - API reference
 
 Asgardeo provides a set of defined functions and objects to write your conditional authentication script.  
 There are three groups of API references:

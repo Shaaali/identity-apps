@@ -120,12 +120,12 @@ var validateCookie = function (context, subject) {
 
 Let's look at how this script works.
 
-1.  The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function [getCookieValue(request, name, properties)](api-reference/#get-cookie-value). The cookie name is configured with the _cookieName_ parameter.
+1.  The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function<a :href ="$withBase('/references/conditional-auth/api-reference/#get-cookie-value')">getCookieValue(request, name, properties</a>. The cookie name is configured with the _cookieName_ parameter.
 2.  When step 1 of the authentication flow is complete, the **onLoginRequest** function validates the **deviceAuth** cookie. 
 3.  If there is no valid cookie found, the function checks whether the _sendNotification_ and _stepUpAuthentication_ parameters are enabled.
-4.  If the _sendNotification_ property is enabled, the JavaScript conditional authentication function [sendEmail(user, templateId, placeholderParameters)](api-reference/#send-email) is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the _emailTemplate_ variable.
+4.  If the _sendNotification_ property is enabled, the JavaScript conditional authentication function <a :href ="$withBase('/references/conditional-auth/api-reference/#send-email')">sendEmail(user, templateId, placeholderParameters)</a> is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the _emailTemplate_ variable.
 5.  If the _stepUpAuthentication_ parameter is enabled, step 2 of the authentication flow is executed.
-6.  On the successful execution of step 2 of the authentication flow, [setCookie(response, name, value, properties)](api-reference/#set-cookie) is called to set a **deviceAuth** cookie.
+6.  On the successful execution of step 2 of the authentication flow, <a :href ="$withBase('/references/conditional-auth/api-reference/#set-cookie')">setCookie(response, name, value, properties)</a> is called to set a **deviceAuth** cookie.
 
 ## Try it out
 
