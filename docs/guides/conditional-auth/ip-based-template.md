@@ -10,7 +10,7 @@ Users signing in from the internally configured network specified in the script 
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/oidc/register-app/')">register an application</a>.
+You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a>.
 
 ## Configure the sign-in flow
 

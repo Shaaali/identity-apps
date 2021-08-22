@@ -15,7 +15,7 @@ We will start from the scratch and see how can we build our first conditional au
 
 1. You should have registered an application. If you don't have an app registered, <a :href ="$withBase('/guides/applications/')">register an application</a> in Asgardeo.
 2. Customize the login flow and enable `Username and Password authentication` authentication.
-3. Create relevant <a :href="$withBase('/guides/user-management/groups/')">groups</a> and assign users as necessary to try out the flow.
+3. Create relevant <a :href="$withBase('/guides/users/manage-groups/')">groups</a> and assign users as necessary to try out the flow.
 
 ## Start with the default script
 

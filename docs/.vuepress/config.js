@@ -82,6 +82,10 @@ module.exports = config({
            text: 'SDKs',
            link: '/sdks/'
          },
+         {
+            text: 'References',
+            link: '/references/'
+         },
 //          {
 //            text: 'Concepts',
 //            link: '/concepts/'
@@ -90,19 +94,138 @@ module.exports = config({
         sidebar: {
             '/guides/' : [
                 ["", 'Introduction'],
+                ['get-started/create-organization.md', 'Get Started'],
                 {
-                    title: 'Get Started',
+                    title: 'Integrate Apps',
                     children: [
-                        ['get-started/create-organization.md', 'Create an organization']
+                    ['manage-apps.md', 'Overview'],
+                    {
+                        title: 'Register Application',
+                        prefix: 'applications/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['spa/register-single-page-app.md', 'Register an SPA'],
+                            ['web-app/register-oidc-web-app.md', 'Register web app with OIDC'],
+                            ['web-app/register-saml-web-app.md', 'Register web app with SAML'],
+                        ]
+                    },
+                    {
+                        title: 'Add Asgardeo Login',
+                        prefix: 'applications/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['spa/add-login-to-single-page-app.md', 'Add login to an SPA'],
+                            ['web-app/add-login-to-web-app.md', 'Add login to web app'],
+                            {
+                                title: 'Implement OIDC flows',
+                                children: [
+                                    ['oidc/discover-oidc-configs.md', 'Discover OIDC configurations'],
+                                    ['oidc/integrate-confidential-client.md', 'Implement Authorization Code flow'],
+                                    ['oidc/integrate-public-client.md', 'Implement Authorization Code flow with PKCE'],
+                                ]
+                            },
+                            {
+                                title: 'Implement SAML flows',
+                                sidebarDepth: 2,
+                                children: [
+                                    ['saml/discover-saml-configs.md', 'Discover SAML configurations'],
+                                ]
+                            },
+                            {
+                                title: 'Enable User Attributes',
+                                children: [
+                                    ['user-attributes/enable-attributes-for-oidc-app.md', 'Enable attributes for OIDC apps'],
+                                    ['user-attributes/enable-attributes-for-saml-app.md', 'Enable attributes for SAML apps'],
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Add Social Login',
+                        prefix: 'connections/social-login/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['add-facebook-login.md', 'Add Facebook login'],
+                            ['add-github-login.md', 'Add Github login'],
+                            ['add-google-login.md', 'Add Google login'],
+                        ]
+                    },
+                    {
+                        title: 'Add Enterprise Login',
+                        prefix: 'connections/enterprise-login/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['add-oidc-idp-login.md', 'Add login with OIDC'],
+                            ['add-saml-idp-login.md', 'Add login with SAML'],
+                        ]
+                    },
+                    {
+                        title: 'Add Multi-Factor Authentication',
+                        prefix: 'connections/mfa/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['add-totp-login.md', 'Add TOTP'],
+                            ['add-emailotp-login.md', 'Add Email OTP'],
+                        ]
+                    },
+                    {
+                        title: 'Add Conditional Authentication',
+                        children: [
+                            ['conditional-auth/', 'Overview'],
+                            ['conditional-auth/configure-conditional-auth.md', 'Set up conditional authentication'],
+                            ['conditional-auth/group-based-template.md', 'Add group-based authentication'],
+                            ['conditional-auth/ip-based-template.md', 'Add IP-based authentication'],
+                            ['conditional-auth/new-device-based-template.md', 'Add device-based authentication'],
+                            ['conditional-auth/user-age-based-template.md', 'Add user age-based authentication'],
+                            ['conditional-auth/write-your-first-script.md', 'Write a custom authentication script'],
+                            ['conditional-auth/api-reference.md', 'Authentication Script - Reference'],
+                        ]
+                    },
                     ]
                 },
                 {
-                    title: 'Organization',
+                    title: 'Manage Users',
+                    prefix: 'users/',
                     children: [
-                        ['organization/organizations', 'Manage Organizations'],
+                        ['', 'Overview'],
+                        ['owner.md', 'Manager owner'],
+                        ['manage-collaborators.md', 'Manage collaborators'],
+                        ['manage-customers.md', 'Manage customers'],
+                        ['manage-user-profiles.md', 'Manage user profiles'],
+                        ['manage-sessions.md', 'Manage active sessions'],
+                        ['manage-groups', 'Manage groups'],
+                        ['password-recovery', 'Configure password recovery'],
                         {
-                            title: 'Attributes',
-                            prefix: 'organization/attributes/',
+                            title: 'User Self-Service',
+                            prefix: 'self-service/',
+                            sidebarDepth: 2,
+                            children: [
+                                {
+                                    title: 'Asgardeo User',
+                                    children: [
+                                        ['asgardeo-user/my-account', 'My Account'],
+                                        ['asgardeo-user/recover-password', 'Recover your password'],
+                                    ]
+                                },
+                                {
+                                    title: 'Customer',
+                                    children: [
+                                        ['customer/my-account', 'My Account'],
+                                        ['customer/recover-password', 'Recover your password'],
+                                        ['customer/self-register', 'Self-register'],
+                                    ]
+                                },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    title: 'Manage Organization Settings',
+                    children: [
+                        ['org-settings/organizations', 'Manage Organizations'],
+                        {
+                            title: 'Manage User Attributes',
+                            prefix: 'org-settings/attributes/',
                             sidebarDepth: 2,
                             children: [
                                 ['manage-attributes', 'Manage Attributes'],
@@ -111,191 +234,24 @@ module.exports = config({
                         },
                         {
                             title: 'Account Recovery',
-                            prefix: 'organization/account-recovery/',
+                            prefix: 'org-settings/account-recovery/',
                             sidebarDepth: 2,
                             children: [
                                 ['password-recovery', 'Configure password recovery'],
                             ]
                         },
-                        ['organization/configure-self-registration', 'Configure self registration'],
+                        ['org-settings/configure-self-registration', 'Self-registration'],
                         {
-                            title: 'Account Security',
-                            prefix: 'organization/account-security/',
+                            title: 'Manage Account Security',
+                            prefix: 'org-settings/account-security/',
                             sidebarDepth: 2,
                             children: [
                                 ['login-attempts-security', 'Configure Login Attempts Security'],
                                 ['bot-detection', 'Configure Bot Detection'],
                             ]
                         },
-                        {
-                            title: 'User Self-Service',
-                            prefix: 'organization/self-service/',
-                            sidebarDepth: 2,
-                            children: [
-                                {
-                                    title: 'Asgardeo User',
-                                    prefix: 'asgardeo-user/',
-                                    sidebarDepth: 2,
-                                    children: [
-                                        ['my-account', 'My Account'],
-                                        ['recover-password', 'Recover your password'],
-                                    ]
-                                },
-                                {
-                                    title: 'Customer',
-                                    prefix: 'customer/',
-                                    sidebarDepth: 2,
-                                    children: [
-                                        ['my-account', 'My Account'],
-                                        ['recover-password', 'Recover your password'],
-                                        ['self-register', 'Self register'],
-                                    ]
-                                },
-                            ]
-                        },
-
                     ]
                 },
-                {
-                    title: 'Users',
-                    children: [
-                        ['user-management/', 'Overview'],
-                        {
-                            title: 'Manage Users',
-                            children: [
-                                {
-                                    title: 'Users Accounts',
-                                    prefix: 'user-management/manage-users/user-accounts/',
-                                    path:'user-management/manage-users/user-accounts/',
-                                    sidebarDepth: 2,
-                                    children: [
-                                        ['owner', 'Owner'],
-                                        ['collaborator', 'Collaborator'],
-                                        ['customer', 'Customer'],
-                                    ]
-                                },
-                                ['user-management/manage-users/user-profiles.md', 'User profiles'],
-                                ['user-management/manage-users/sessions.md', 'Active Sessions'],
-                            ]
-                        },
-                        ['user-management/groups.md', 'Manage Groups'],
-                        ['user-management/roles.md', 'Manage Roles'],
-                    ]
-                },
-                {
-                    title: 'Applications',
-                    children: [
-                    ['applications/', 'Overview'],
-                    {
-                        title: 'Single page application',
-                        prefix: 'applications/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['spa/', 'Overview'],
-                            ['spa/register-app', 'Register SPA'],
-                            ['spa/configure-login', 'Configure OpenID Connect login'],
-                            ['spa/oidc-settings', 'OpenID Connect settings'],
-                            ['share-user-attributes/oidc', 'Share user attributes']
-                        ]
-                    },
-                    {
-                        title: 'Web application',
-                        prefix: 'applications/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['web-app/', 'Overview'],
-                            {
-                                title: 'Sign in with OIDC',
-                                sidebarDepth: 2,
-                                children: [
-                                    ['web-app/oidc/register-app', 'Register webapp'],
-                                    ['web-app/oidc/configure-login', 'Configure OpenID Connect login'],
-                                    ['web-app/oidc/oidc-settings', 'OpenID Connect settings'],
-                                    ['share-user-attributes/oidc', 'Share user attributes']
-                                ]
-                            },
-                            {
-                                title: 'Sign in with SAML',
-                                sidebarDepth: 2,
-                                children: [
-                                    ['web-app/saml/register-app', 'Register webapp'],
-                                    ['web-app/saml/configure-login', 'Configure SAML login'],
-                                    ['web-app/saml/saml-settings', 'SAML settings'],
-                                    ['share-user-attributes/saml', 'Share user attributes']
-                                ]
-                            },
-
-                        ]
-                    },
-                    ]
-                },
-                {
-                    title: 'Connections',
-                    children: [
-                        {
-                            title: 'MFA',
-                            prefix: 'mfa/',
-                            sidebarDepth: 2,
-                            children: [
-                                ['', 'Overview'],
-                                ['emailotp.md', 'Enable Email OTP'],
-                                ['totp.md', 'Enable TOTP'],
-                            ]
-                        },
-                        {
-                            title: 'Identity Providers',
-                            prefix: 'identity-providers/',
-                            sidebarDepth: 2,
-                            children: [
-                                ['', 'Overview'],
-                                {
-                                    title: 'Social Login',
-                                    prefix: 'social-login/',
-                                    path: 'social-login/',
-                                    sidebarDepth: 2,
-                                    children: [
-                                        ['facebook.md', 'Facebook'],
-                                        ['github.md', 'Github'],
-                                        ['google.md', 'Google'],
-                                    ]
-                                },
-                                {
-                                    title: 'Enterprise Login',
-                                    prefix: 'enterprise-login/',
-                                    path: 'enterprise-login/',
-                                    sidebarDepth: 2,
-                                    children: [
-                                        ['oidc.md', 'OpenID Connect'],
-                                        ['saml.md', 'SAML'],
-                                    ]
-                                },
-                            ]
-                        },
-                    ],
-                },
-                {
-                    title: 'Conditional Authentication',
-                    children: [
-                        ['conditional-auth/', 'Overview'],
-                        ['conditional-auth/configure-conditional-auth.md', 'Set up conditional authentication'],
-                        ['conditional-auth/group-based-template.md', 'Add group-based authentication'],
-                        ['conditional-auth/ip-based-template.md', 'Add IP-based authentication'],
-                        ['conditional-auth/new-device-based-template.md', 'Add device-based authentication'],
-                        ['conditional-auth/user-age-based-template.md', 'Add user age-based authentication'],
-                        ['conditional-auth/write-your-first-script.md', 'Write a custom authentication script'],
-                        ['conditional-auth/api-reference.md', 'Authentication Script - Reference'],
-                    ]
-                },
-            {
-                title: 'Hidden',
-                children: [
-                    ['identity-providers/enterprise-login/configure-additional-query-params.md', 'Configure additional query parameters'],
-                    ['applications/integrate-public-client.md', 'Integrate public client'],
-                    ['applications/integrate-confidential-client.md', 'Integrate confidential client'],
-                    ['identity-providers/enterprise-login/saml-settings.md', 'SAML IdP Settings'],
-
-                ]
-            }
             ],
             '/quickstarts/' : [
             {
@@ -330,6 +286,23 @@ module.exports = config({
                     ['/sdks/java-ee-saml', 'SAML Java EE'],
                 ]
             },
+            ],
+            '/references/' : [
+                {
+                    title: 'App Configurations',
+                    children: [
+                        ['/references/app-settings/oidc-settings-for-app.md', 'OIDC configurations'],
+                        ['/references/app-settings/saml-settings-for-app.md', 'Saml configurations'],
+                    ]
+                },
+                {
+                    title: 'IdP Configurations',
+                    children: [
+                        ['/references/idp-settings/oidc-settings-for-idp.md', 'OIDC configurations'],
+                        ['/references/idp-settings/saml-settings-for-idp.md', 'SAML configurations'],
+                    ]
+                },
+                ['/references/user-management/user-roles.md', 'Role-based permissions'],
             ]
 //
 //            '/concepts/' : [

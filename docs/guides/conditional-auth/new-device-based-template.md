@@ -10,7 +10,7 @@ If the customer uses a new device or a new browser to sign in to the application
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/oidc/register-app/')">register an application</a>.
+You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a>.
 
 ## Configure the sign-in flow
 
