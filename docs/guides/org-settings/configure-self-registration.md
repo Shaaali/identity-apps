@@ -23,4 +23,4 @@ To disable this capability in your organization or to change the default configu
             </tbody>
         </table>
 
-<a :href="$withBase('/guides/organization/self-service/customer/self-register/')">Try self-registration</a>.
+<a :href="$withBase('/guides/users/self-service/customer/self-register/')">Try self-registration</a>.

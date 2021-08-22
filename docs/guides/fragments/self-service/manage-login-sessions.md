@@ -1,5 +1,5 @@
 
-The account owner can self-manage <a :href="$withBase('/guides/user-management/manage-users/sessions/')">active sessions</a> via My Account as follows:
+The account owner can self-manage <a :href="$withBase('/guides/users/manage-sessions/')">active sessions</a> via My Account as follows:
 
 1. Sign in to the My Account portal.
 2. Click **Security > Active Sessions**. All the active login sessions of the user are listed.

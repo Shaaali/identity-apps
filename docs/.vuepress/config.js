@@ -194,7 +194,6 @@ module.exports = config({
                         ['manage-user-profiles.md', 'Manage user profiles'],
                         ['manage-sessions.md', 'Manage active sessions'],
                         ['manage-groups', 'Manage groups'],
-                        ['password-recovery', 'Configure password recovery'],
                         {
                             title: 'User Self-Service',
                             prefix: 'self-service/',

@@ -2,7 +2,7 @@
 
 If you are an owner or collaborator in an Asgardeo organization, you can recover a forgotten password by following the instructions on the Asgardeo sign-in page.
 
-If you are already signed in to your My Account portal, you can <a :href="$withBase('/guides/organization/self-service/asgardeo-user/my-account/#change-password')">set a new password</a> from there.
+If you are already signed in to your My Account portal, you can <a :href="$withBase('/guides/users/self-service/asgardeo-user/my-account/#change-password')">set a new password</a> from there.
 
 To recover your password:
 1. Go to the Asgardeo sign-in page via the [My Account](https://myaccount.asgardeo.io/) portal or the [console](https://console.asgardeo.io/login).
