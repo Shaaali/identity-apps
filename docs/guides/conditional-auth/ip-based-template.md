@@ -36,7 +36,7 @@ Follow the steps given below.
     <tbody>
         <tr>
             <td>corpNetwork</td>
-            <td>Comma separated list of IP addresses for which two-factor authentication should apply./td>
+            <td>Comma separated list of IP addresses for which two-factor authentication should apply.</td>
         </tr>
     </tbody>
     </table>
