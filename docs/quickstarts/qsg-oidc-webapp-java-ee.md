@@ -113,4 +113,3 @@ sh catalina.sh start
 The app will be accessible at `https://localhost:8080/oidc-sample-app/index.html`.
 
 Log in to Asgardeo using your customer account credentials.
-

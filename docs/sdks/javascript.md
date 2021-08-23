@@ -15,7 +15,7 @@ Follow the steps given below to authenticate users to your JavaScript SPA with O
 
 ## Prerequisites
 - [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
-- <a :href="$withBase('/guides/applications/spa/register-app')">Register an application</a> in Asgardeo.
+- <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Register an application</a> in Asgardeo.
 
 ## Install the SDK
 
@@ -30,10 +30,10 @@ Add the following script to the `index.html` file in your application.
 You can use the following code within your root component to initialize `AsgardeoSPAClient` for your application.
 
 To initialize the SDK, use the `getInstance()` function in the SDK and provide the following values to the `auth.initialize()` function to get the SDK to work with your application:
-- **clientID** : Client ID of your OIDC app. See <a :href="$withBase('/guides/applications/spa/configure-login/#obtain-client-id-of-the-app')">how to obtain client ID</a>.
+- **clientID** : Client ID of your OIDC app. See <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.
 - **serverOrigin** : Asgardeo server host name along with your organization name.
-- **signInRedirectURL** : The URL to which users should be redirected after login. See <a :href="$withBase('/guides/applications/spa/oidc-settings/#authorized-redirect-urls')">Authorized redirect URLs</a>.
-- **signOutRedirectURL** : The URL to which users should be redirected after logout. See <a :href="$withBase('/guides/applications/spa/oidc-settings/#authorized-redirect-urls')">Authorized redirect URLs</a>.
+- **signInRedirectURL** : The URL to which users should be redirected after login. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
+- **signOutRedirectURL** : The URL to which users should be redirected after logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
 
 ```
 <script>

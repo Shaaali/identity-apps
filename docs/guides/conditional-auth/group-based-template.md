@@ -11,7 +11,7 @@ For customers in the organization that belong to the `manager` or `employee` use
 
 ## Prerequisites
 
--  You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/oidc/register-app/')">register an application</a>.
+-  You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a>.
 - Create two user groups named `manager` and `employee` and assign customer accounts to each group.
 
 ## Configure the sign-in flow

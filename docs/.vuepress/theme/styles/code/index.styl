@@ -58,9 +58,15 @@ div[class*='language-']
     right 1em
     font-size 0.75rem
 
-  &:not(.line-numbers-mode)
+  &.no-line-numbers, &.language-no-line-numbers
+    &.line-numbers-mode::after
+      content none
+
     .line-numbers-wrapper
       display none
+
+    pre, pre[class*='language-']
+      padding-left 1.5rem
 
   &.line-numbers-mode
     .highlight-lines .highlighted

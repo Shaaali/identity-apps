@@ -38,6 +38,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 Change the `asgardeo-react-app/src/config.json` file with the relevant values.
 
+
 - **clientID** - You need to add the client id of the registered application. See <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain the client ID</a> from the Asgardeo console.
 - **serverOrigin** - "https://api.asgardeo.io/t/<organization_name>"
 ``` json{2,3}
@@ -48,6 +49,7 @@ Change the `asgardeo-react-app/src/config.json` file with the relevant values.
     "signOutRedirectURL": "https://localhost:5000"
 }
 ```
+
 
 ## Run the sample
 

@@ -10,53 +10,53 @@ actionLink: /guides/
 features:
   - title: Manage Your Applications
     details: Secure your applications using your preferred protocol.
-    link: /guides/applications/
+    link: /guides/manage-apps/
     icon: padlockIcon
     subLinks:
       - name: "Web applications"
-        link: /guides/applications/web-app/
+        link: /guides/manage-apps/#web-applications
           
       - name: "Single page applications"
-        link: /guides/applications/spa/
+        link: /guides/manage-apps/#sing-page-applications
       
       - name: "Native applications"
         link: 
 
   - title: Configure Federated Login
     details: Let users log in to applications with an Identity Provider of their choice.
-    link: /guides/identity-providers/
+    link: /guides/manage-apps/#manage-identity-providers
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
-        link: /guides/identity-providers/social-login/
+        link: /guides/connections/social-login/
 
       - name: "Enterprise login"
-        link: /guides/identity-providers/enterprise-login/
+        link: /guides/connections/enterprise-login/
 
   - title: Add Strong Authentication
     details: Protect your user login using multi-factor and adaptive authentication.
-    link: /guides/mfa/
+    link:
     icon: addAuthnIcon
     subLinks:
       - name: "Multi-factor authentication"
-        link: /guides/mfa/
+        link: /guides/connections/mfa/
 
       - name: "Conditional authentication"
         link: /guides/conditional-auth/
 
   - title: Manage users
     details: Onboard users and collectively manage their access
-    link: /guides/user-management/
+    link: /guides/users/
     icon: usersIcon
     subLinks:
       - name: "Users"
-        link: /guides/user-management/manage-users/user-accounts/
+        link: /guides/users/#user-accounts
       
       - name: "Groups"
-        link: /guides/user-management/groups/
+        link: /guides/users/manage-groups/
         
       - name: "Roles"
-        link: /guides/user-management/roles/
+        link: /references/user-management/user-roles/
 
 services:
     - title: Supported Integrations
