@@ -244,16 +244,16 @@ module.exports = config({
             {
                 title: 'SPA',
                 children: [
-                    ['/quickstarts/qsg-spa-angular.md', 'Angular sample'],
-                    ['/quickstarts/qsg-spa-javascript.md', 'Javascript sample'],
-                    ['/quickstarts/qsg-spa-react.md', 'React sample'],
+                    ['/quickstarts/qsg-spa-angular.md', 'Angular'],
+                    ['/quickstarts/qsg-spa-javascript.md', 'Javascript'],
+                    ['/quickstarts/qsg-spa-react.md', 'React'],
                 ]
             },
             {
                 title: 'Web App',
                 children: [
-                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'OIDC Java EE sample'],
-                    ['/quickstarts/qsg-saml-webapp-java-ee', 'SAML Java EE sample'],
+                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'OIDC Java EE'],
+                    ['/quickstarts/qsg-saml-webapp-java-ee', 'SAML Java EE'],
                 ]
             },
             ],

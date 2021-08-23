@@ -6,14 +6,14 @@ breadcrumb: false
 
 Follow the steps given below to deploy a sample Java EE web application in your local environment and secure it with Asgadeo using SAML.
 
-# Prerequisites
+## Prerequisites
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
 - You need to have a web application registered. If you don't, <a href ="/guides/applications/web-app/saml/register-app">register a SAML application</a> in Asgardeo.
 - Only <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> users can log in to applications. <a href ="/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user">Create a customer account</a> if you don't already have one.
 
 ## Download the sample
 
-Click on the **Download sample** button below to download the sample. Alternatively, you can choose to view the source code by clicking on the **View source** button.
+Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.
 
 <Button 
     buttonType='grey-outlined-icon'
@@ -36,7 +36,7 @@ Click on the **Download sample** button below to download the sample. Alternativ
 ## Configure the sample
 
 1. Copy the **war** file downloaded in the [previous step](#download-the-sample) to the deployment location in your Tomcat server (i.e, referred as <TOMCAT_HOME>).
-2. Run the webapp from the `<TOMCAT_HOME>/bin` folder to explode the webapp and edit configurations. If your Tomcat server is set to auto-deploy applications by default, then the war file copied into the deployment location will be extracted automatically. If not, go ahead and restart the server to get the extracted sample.
+2. Run the webapp from the `<TOMCAT_HOME>/bin` folder to explode it and edit the configurations. If your Tomcat server is set to auto-deploy applications by default, then the war file copied into the deployment location will be extracted automatically. If not, go ahead and restart the server to get the extracted sample.
     ```shell script
     sh catalina.sh start
     ```
@@ -88,7 +88,7 @@ Click on the **Download sample** button below to download the sample. Alternativ
     </tr>
     <tr>
       <td>SAML2.EnableAssertionEncryption</td>
-      <td>If this configuration is set to <code>true</code>,the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#enable-encryption">enable encryption for SAML assertion</a> from Asgardeo.</td>
+      <td>If this configuration is set to <code>true</code>, the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#enable-encryption">enable encryption for SAML assertion</a> from Asgardeo.</td>
     </tr>
     <tr>
       <td>SAML2.EnableRequestSigning</td>
@@ -138,7 +138,7 @@ Click on the **Download sample** button below to download the sample. Alternativ
 
 Now you have added the relevant configurations in your sample application.
 
-Stop and restart the [Tomcat server](https://tomcat.apache.org/tomcat-9.0-doc/setup.html) with the default port `8080`, for the newly added changes to be applied.
+Stop and restart the Tomcat server with the default port `8080` for the newly added changes to be applied.
 
 ```shell script
 sh catalina.sh stop
