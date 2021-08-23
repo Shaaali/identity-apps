@@ -1,4 +1,4 @@
-# SAML configurations for IdPs
+# SAML settings for IdPs
 You can find the SAML IdP related settings under **settings** section of the selected SAML IdP. 
 <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/saml-settings.png')" alt="SAML IdP settings">
 

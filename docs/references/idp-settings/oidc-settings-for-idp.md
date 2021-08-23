@@ -1,4 +1,4 @@
-# OIDC configurations for IdPs
+# OIDC settings for IdPs
 Asgardeo supports sending additional information to your OIDC external IdP in the form of query params in the login request.
 - Fixed query params
 - Dynamic query params

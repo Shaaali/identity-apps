@@ -187,7 +187,7 @@ module.exports = config({
                     prefix: 'users/',
                     children: [
                         ['', 'Overview'],
-                        ['owner.md', 'Manager owner'],
+                        ['owner.md', 'Manage owner'],
                         ['manage-collaborators.md', 'Manage collaborators'],
                         ['manage-customers.md', 'Manage customers'],
                         ['manage-user-profiles.md', 'Manage user profiles'],
