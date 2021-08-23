@@ -6,14 +6,8 @@ This guide provides the instructions on how to enable the Google login to your a
 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Google login.
- 
-## Add Google login
-In order to add Google login to your app, follow below steps
- 1. [Register app in Google](#register-app-in-google)
- 2. [Create Google Identity Provider](#create-google-identity-provider)
- 3. [Enable Google login](#enable-google-login)
 
-### Register app in Google
+## Register app in Google
 You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [Google documentation](https://support.google.com/googleapi/answer/6158849) to create an OAuth2.0 application.
 
 1. Go to [Google Developer console](https://console.developers.google.com/apis/credentials)
@@ -21,6 +15,11 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 3. If the **APIs & services** page isn't already open, open the console left side menu and select **APIs & services**.
 4. On the left, click **Credentials**.
 5. Click **Create Credentials**  and select **OAuth client ID**.
+    
+    ::: tip Note
+    At this point, you can choose to configure you consent screen by clicking on **Consent Screen**. For more information, see [User Consent](https://support.google.com/googleapi/answer/6158849#userconsent&zippy=%2Cuser-consent).
+    :::
+
 6. Select application type as **Web application**.
 7. Provide following URL as the Authorized Redirect URI of the application.
     ```
@@ -28,7 +27,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
     ```
 8. Obtain your **Client ID** & **Client Secret**.  
     
-### Create Google identity provider
+## Create Google identity provider
 1. On the Asgardeo Console, click **Develop > Connections**.
 2. Click **New Connections**.
 3. Select **Google**.
@@ -46,7 +45,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
     
       Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. Refer [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) on OpenID Connect scope param.
  
-###  Enable Google login
+##  Enable Google login
 1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
 3. Click **Start with Default configuration**(If you have not modified the default sign in flow).

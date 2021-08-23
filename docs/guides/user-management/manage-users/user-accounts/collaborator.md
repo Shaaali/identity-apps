@@ -7,10 +7,6 @@ A collaborator can be assigned to the following <a :href="$withBase('/guides/use
  - Application developer
 
 This guide walks you through the steps of managing a collaborator account. An owner or another collaborator with an administrative role can manage collaborator accounts.
-- [Onboard a collaborator user](#onboard-a-collaborator)
-- [Assign roles to collaborator](#assign-roles)
-- [Delete a collaborator](#delete-a-collaborator)
-
 
 ## Onboard a collaborator
 
@@ -46,5 +42,6 @@ A collaborator account can be deleted by admins. Once an account is deleted, the
 
 To delete a collaborator account:
 1. In the Asgardeo Console, click **Manage > Users**.
-2. Click **Delete** for the user you want to remove.
-3. Type the user's username to confirm deleting the user.     
+2. Click the **Delete** icon for the user you want to remove.
+3. Enable the checkbox to confirm your action. 
+4. Click **Confirm**.     

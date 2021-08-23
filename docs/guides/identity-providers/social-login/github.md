@@ -7,13 +7,7 @@ This guide provides the instructions on how to enable the Github login to your a
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable Github login.
 
-## Add Github login
-In order to add Github login to your app, follow below steps
- 1. [Register OAuth app in Github](#register-app-in-github)
- 2. [Create Github Identity Provider](#create-github-identity-provider)
- 3. [Enable Github login](#enable-github-login)
-
-### Register app in Github
+## Register app in Github
 1. Follow this [Github documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) to create Asgardeo as an OAuth app in Github.
 2. Go to [Github](https://github.com/) and create an OAuth App.
 3. Provide below URLs while configuring the app. 
@@ -27,7 +21,7 @@ In order to add Github login to your app, follow below steps
       ```
 4. Obtain **Client ID** and **Client secret**.
 
-### Create Github Identity Provider
+## Create Github Identity Provider
 1. On the Asgardeo Console, click **Develop > Connections**.
 2. Click **New Connections**.
 3. Select **Github**.
@@ -43,7 +37,7 @@ In order to add Github login to your app, follow below steps
      
        Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. You can read [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to know more about scopes.
  
-###  Enable Github login
+##  Enable Github login
 1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
 3. Click **Start with Default configuration**(If you have not modified the default sign in flow).

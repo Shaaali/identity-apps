@@ -11,14 +11,7 @@ This guide will show you how to register a SAML IdP in Asgardeo and enable SAML 
 ## Prerequisite
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, <a :href="$withBase('/guides/applications/')">register an application</a> in Asgardeo to enable SAML enterprise login.
 
-## Add SAML Identity Provider Login
-
-In order to add SAML identity provider login to your app, follow below steps:
- 1. [Register app in the external SAML identity provider](#register-app-in-the-identity-provider)
- 2. [Create SAML Identity Provider](#create-saml-identity-provider)
- 3. [Enable SAML login for application](#enable-saml-login-for-application)
-
-### Register app in the identity provider
+## Register app in the identity provider
 You need to register Asgardeo as a SAML application in the external identity provider. Follow the identity provider's documentation to know how to register a SAML application.
 
 You can use the following URL as the **Assertion Consumer Service URL**(also known as callback URL/ redirect URL/ ACS URL) of the application which represents Asgardeo. 
@@ -46,7 +39,7 @@ After you register the app, you should obtain some configurations. You can eithe
      - [File Based Configuration](#create-idp-using-saml-idp-metadata-file): Provide the SAML metadata file to register the IdP.
      - [Manual Configuration](#create-idp-using-manual-configurations): You need to provide the configurations of SAML IdP to register.
        
-#### Create IdP using SAML IdP metadata file
+### Create IdP using SAML IdP metadata file
 
 SAML IdP metadata is a popular way of integrating a SAML IdP.
 
@@ -62,7 +55,7 @@ The SAML IdP metadata document contains:
 4. Upload the public certificate of the identity provider.
 5. Click **Finish**.
 
-#### Create IdP using manual configurations
+### Create IdP using manual configurations
 1. Click **Manual Configuration**.
       <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-manual-config.png')" alt="Create SAML Enterprise IDP with manual configurations">
 2. Enter the following details and click **Next**:
@@ -77,7 +70,7 @@ The SAML IdP metadata document contains:
 
 You can find more additional configurations once you create SAML identity provider. See <a :href="$withBase('/guides/identity-providers/enterprise-login/saml-settings')">SAML IdP settings</a>.
   
-### Enable SAML login for application
+## Enable SAML login for application
 1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** of your application.
 3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
