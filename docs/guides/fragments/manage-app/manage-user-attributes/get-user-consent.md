@@ -1,7 +1,7 @@
 
 Once the user is logged in to Asgardeo, Asgardeo requests consent from the end user to share user attributes with the application. 
 
-If the user **does not have** the attribute details in the <a :href="$withBase('/guides/user-management/manage-users/user-profiles/')">user profile</a>, Asgardeo will prompt the user to enter the **mandatory** user attributes during login.  
+If the user **does not have** the attribute details in the <a :href="$withBase('/guides/users/manage-user-profiles/')">user profile</a>, Asgardeo will prompt the user to enter the **mandatory** user attributes during login.  
 
 The customer user can do one of the following:
 1. **Select All** and click **Allow**. 
