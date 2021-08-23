@@ -346,6 +346,12 @@ module.exports = config({
         ['check-md', {
             exitLevel: 'error'
         }],
-        'vuepress-plugin-chunkload-redirect'
+        'vuepress-plugin-chunkload-redirect',
+        ['@xiaopanda/vuepress-plugin-code-copy', {
+            buttonStaticIcon: true,
+            buttonIconTitle: "Copy to clipboard",
+            buttonAlign: "top",
+            buttonColor: "#888"
+        }]
     ]
 });
