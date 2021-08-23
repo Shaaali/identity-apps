@@ -7,6 +7,6 @@
   - **Authorized Redirect URLs:** The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated.<br>
     <img :src="$withBase('/assets/img/guides/applications/create-new-spa.png')" alt="Create a new SPA">
 4. Click on **Allow** to add that URL as **Allowed origin**. This will allow your applications to do cross origin HTTP requests to Asgardeo during login flow.        
-    For more information, see <a href="/guides/applications/spa/oidc-settings/#allowed-origins">allowed origins</a>.
+    For more information, see <a :href="$withBase('/guides/applications/spa/oidc-settings/#allowed-origins')">allowed origins</a>.
     <img :src="$withBase('/assets/img/guides/applications/add-cors-spa.png')" alt="Enable CORS">
 5. Click **Register**.

@@ -34,7 +34,7 @@ Let's look at how admins can onboard customers from the Asgardeo Console.
 6. Click **Finish**.
      
 ## Assign groups
-A user can be assigned to different <a href="/guides/user-management/groups/">groups</a> in the organization. Based on the assigned groups, admins can restrict customer users' access to resources.
+A user can be assigned to different <a :href="$withBase('/guides/user-management/groups/')">groups</a> in the organization. Based on the assigned groups, admins can restrict customer users' access to resources.
 
 To assign users to groups: 
 1. On the Asgardeo Console, click **Manage > Users**. 

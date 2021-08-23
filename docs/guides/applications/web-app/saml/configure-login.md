@@ -121,4 +121,4 @@ You can login to [Asgardeo Console](https://console.asgardeo.io/) and get endpoi
 
 ## What's next?
 Now you've integrated your SAML web application. You also can:
-- <a href = "/guides/applications/web-app/saml/saml-settings">Configure SAML settings</a>
+- <a :href="$withBase('/guides/applications/web-app/saml/saml-settings')">Configure SAML settings</a>

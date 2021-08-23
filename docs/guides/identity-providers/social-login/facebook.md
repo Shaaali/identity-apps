@@ -36,14 +36,15 @@ To register an app in Facebook:
       <img :src="$withBase('/assets/img/guides/idp/facebook-idp/app-id-secret-from-facebook.png')" alt="Get AppID and Secret from Facebook">
 
 ### Create Facebook Identity Provider
-1. In the Asgardeo Console, Click **Connections > New Connections**.
-2. Select **Facebook**.
-3. Enter the following details of the Facebook identity provider and click **Finish**:
+1. On the Asgardeo Console, click **Develop > Connections**.
+2. Click **New Connections**.
+3. Select **Facebook**.
+4. Enter the following details of the Facebook identity provider and click **Finish**:
     - **Name**: A unique name for this Facebook identity provider.
     - **App ID**: App ID obtained from Facebook.
     - **App Secret**: App secret obtained from Facebook.   
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-idp.png')" alt="Add Facebook IDP in Asgardeo">
-4. You can find more additional configurations once you create Facebook identity provider.
+5. You can find additional configurations once you create the Facebook identity provider.
     - **Permissions**: Asgardeo requests below permissions from Facebook:
       - **email**: Grants read access to a user's primary email address.
       - **public_profile**: Grants read access to a user's default public profile fields.  
@@ -51,7 +52,7 @@ To register an app in Facebook:
       Asgardeo needs these permissions to get user information and sends this to application based on the attribute configurations in the application. You can read [Facebook Documentation](https://developers.facebook.com/docs/permissions/reference) to know about permissions.
  
 ###  Enable Facebook login
-1. In the Asgardeo Console, Click **Develop > Applications**.
+1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
 3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
 4. Click **Add Authentication** on the step, and select the Facebook identity provider you added the above.

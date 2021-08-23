@@ -13,7 +13,7 @@ You need to login to your [Asgardeo Console](https://console.asgardeo.io/login) 
 
 ### Disable PKCE 
 This single-page application template configures the [OpenID Connect Authorization Code Grant](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) with [PKCE](https://datatracker.ietf.org/doc/html/rfc7636). 
-In case , if your app does not support PKCE, you can disable it by <a href = "/guides/applications/spa/oidc-settings/#proof-key-for-code-exchange-pkce">unselecting the PKCE **Mandatory** </a> setting under **protocol** section.
+In case , if your app does not support PKCE, you can disable it by <a :href="$withBase('/guides/applications/spa/oidc-settings/#proof-key-for-code-exchange-pkce')">unselecting the PKCE **Mandatory** </a> setting under **protocol** section.
 
 
 ## Obtain client ID
@@ -24,7 +24,7 @@ After registering your application, you can navigate to the **protocol** section
 
 ## What's next?
 Now you've registered your single-page application. Now you can:
-- <a href = "/guides/applications/spa/configure-login">Configure OpenID Connect login to your single-page app</a>
-- <a href="/quickstarts/">Try out samples</a>
-- <a href="/sdks/">Try out single page applications SDKs</a>
-- <a href="/guides/applications/integrate-public-client/">Explore authentication flow in depth</a>
+- <a :href="$withBase('/guides/applications/spa/configure-login')">Configure OpenID Connect login to your single-page app</a>
+- <a :href="$withBase('/quickstarts/')">Try out samples</a>
+- <a :href="$withBase('/sdks/')">Try out single page applications SDKs</a>
+- <a :href="$withBase('/guides/applications/integrate-public-client/')">Explore authentication flow in depth</a>

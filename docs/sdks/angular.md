@@ -16,7 +16,7 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
 
 ## Prerequisites
 1. [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
-2. <a href ="/guides/applications/spa/register-app">Register an application</a> in Asgardeo.
+2. <a :href="$withBase('/guides/applications/spa/register-app')">Register an application</a> in Asgardeo.
 <br>
 
 ## Install the SDK
@@ -33,10 +33,10 @@ npm install @asgardeo/auth-angular --save
 Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations.
 
 Provide the following values to the `forRoot()` function of `AsgardeoAuthModule` to get the SDK to work with your application:
- - **clientID** : This is the Client ID of your OIDC app. See <a href="/guides/applications/spa/configure-login/#obtain-client-id-of-the-app">how to obtain client ID</a>.
+ - **clientID** : This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/applications/spa/configure-login/#obtain-client-id-of-the-app')">how to obtain client ID</a>.
  - **serverOrigin** : Asgardeo server host name along with your organization name
- - **signInRedirectURL** : This is the URL the app redirects to after logging in. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
- - **signOutRedirectURL** : This is the URL the app redirects to after logging out. See <a href="/guides/applications/spa/oidc-settings/#authorized-redirect-urls">Authorized redirect URLs</a>.
+ - **signInRedirectURL** : This is the URL the app redirects to after logging in. See <a :href="$withBase('/guides/applications/spa/oidc-settings/#authorized-redirect-urls')">Authorized redirect URLs</a>.
+ - **signOutRedirectURL** : This is the URL the app redirects to after logging out. See <a :href="$withBase('/guides/applications/spa/oidc-settings/#authorized-redirect-urls')">Authorized redirect URLs</a>.
 
 ```
 // app.module.ts
@@ -239,7 +239,7 @@ By calling `handleSignOut()` in your logout button, the user can log out out fro
 
 Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signout) for advanced usages:
 
-```angular2
+```
 // Use this function in a logout button to simply sign-out.
   handleSignOut(): void {
     this.auth.signOut();

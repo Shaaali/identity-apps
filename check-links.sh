@@ -10,15 +10,16 @@ PORT=4567
 # Kill any running serves we used to host the docs
 lsof -ti:$PORT | xargs kill
 
-# npm run build
-cd docs/.vuepress/dist/ || exit
+# Make a temporary directory to host asgardeo docs in asgardeo/docs/ path
 
+# npm run build
+cd docs/.vuepress/dist || exit
 # https://www.npmjs.com/package/serve
 serve -p $PORT &
 sleep 5
 
 # https://www.npmjs.com/package/broken-link-checker
-if blc --input http://localhost:$PORT -grf; then
+if blc --input http://localhost:$PORT/asgardeo/docs/ -grf; then
   echo "No broken links found."
   exit 0
 else

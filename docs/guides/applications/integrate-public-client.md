@@ -1,6 +1,6 @@
 # Build login for public clients with OpenID Connect
 
-A public client is an application which cannot keep the client credentials securely. <a href="/guides/applications/spa/">Single-page applications</a>, and native mobile applications are some examples for public clients. 
+A public client is an application which cannot keep the client credentials securely. <a :href="$withBase('/guides/applications/spa/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
 
 By following this guide, you will be able to understand the OpenID connect login flow step by step and build on to your application.
 
@@ -10,7 +10,7 @@ The below diagram explains how login using authorization code grant works with A
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
 
 ## Prerequisite
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a href="/guides/applications/web-app/oidc/register-app/#register-app">register an application</a>.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/web-app/oidc/register-app/#register-app')">register an application</a>.
 
 ## Steps to build login
 You need following steps to build login to your app with Asgardeo:

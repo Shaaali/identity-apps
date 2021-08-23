@@ -1,33 +1,24 @@
 # Configure conditional authentication
 
-This guide gives you the steps to define conditional authentication to your application. We assume that you have already
-configured an application in Asgardeo to represent your app.
-
-Refer the <a href="/guides/applications">Manage applications</a> section to register your application in Asgardeo if not
-done already.
+Given below are the high-level steps for enabling [conditional authentication](./README.md) in your application.
 
 ## Enable conditional authentication
 
+Follow the steps given below.
+
 1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional authentication should be defined, and select **Sign-in Method**" .
-3. Click on "**Start with default configuration**" button to customize the login flow starting with the `username and
-   password` login.
-4. Enable the "**Conditional Authentication**" radio button.
+2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
+3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
+4. Turn on **Conditional Authentication** by switching the toggle.
+
    <img :src="$withBase('/assets/img/guides/conditional-auth/enable-conditional-auth.png')" alt="Enable conditional auth in Asgardeo">
 
+   You can now define your conditional authentication script.
+
 ## Add conditional authentication script
-There are two ways to add conditional authentication script:
-1. [Use a predefined template ](#use-a-predefined-template)
-2. [Write conditional authentication script](#write-a-conditional-auth-script)
 
-### Use a predefined template
-Asgardeo provides a set of conditional authentication script templates based on common scenarios. You can use these templates to configure conditional authentication depending on your requirements.
+There are two ways to add a conditional authentication script:
 
-Refer the <a href="/guides/conditional-auth/predefined-templates">Conditional authentication scenarios section</a> for the detailed guide on each
-template.
+-  Use a <a :href="$withBase('/guides/conditional-auth/#script-templates')">predefined template</a>.
 
-### Write a conditional auth script
-If required, you can also use the script editor to introduce new functions and fields to an authentication script based
-on your requirement, and then engage the script to the application’s authentication configuration.
-
-You can refer this <a href="/guides/conditional-auth/write-your-first-script/">documentation</a> on how to get started with writing a very basic conditional authentication script. 
+-  Write a <a :href="$withBase('/guides/conditional-auth/write-your-first-script/')">new conditional auth script</a>.

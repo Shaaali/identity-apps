@@ -18,10 +18,12 @@ module.exports = config({
         ['meta', {name: 'theme-color', content: '#3eaf7c'}],
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
+        ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
         ['meta', {name: 'robots', content: 'noindex, nofollow'}]
     ],
 
-    base: "/",
+    base: '/asgardeo/docs/',
+    dest: 'docs/.vuepress/dist/asgardeo/docs',
 
     /**
      * Theme configuration, here is the default theme configuration for VuePress.
@@ -30,7 +32,7 @@ module.exports = config({
      */
 
     themeConfig: {
-        hostname : 'https://docs.asgardeo.io',
+        hostname : 'https://wso2.com',
         displayAllHeaders: false,
         repo: '',
         editLinks: true,
@@ -92,6 +94,66 @@ module.exports = config({
                     title: 'Get Started',
                     children: [
                         ['get-started/create-organization.md', 'Create an organization']
+                    ]
+                },
+                {
+                    title: 'Organization',
+                    children: [
+                        ['organization/organizations', 'Manage Organizations'],
+                        {
+                            title: 'Attributes',
+                            prefix: 'organization/attributes/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['manage-attributes', 'Manage Attributes'],
+                                ['manage-attribute-mappings', 'Manage Attribute Mappings'],
+                            ]
+                        },
+                        {
+                            title: 'Account Recovery',
+                            prefix: 'organization/account-recovery/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['password-recovery', 'Configure password recovery'],
+                            ]
+                        },
+                        ['organization/configure-self-registration', 'Configure self registration'],
+                        {
+                            title: 'Account Security',
+                            prefix: 'organization/account-security/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['login-attempts-security', 'Configure Login Attempts Security'],
+                                ['bot-detection', 'Configure Bot Detection'],
+                            ]
+                        },
+                        {
+                            title: 'User Self-Service',
+                            prefix: 'organization/self-service/',
+                            sidebarDepth: 2,
+                            children: [
+                                {
+                                    title: 'Asgardeo User',
+                                    prefix: 'asgardeo-user/',
+                                    sidebarDepth: 2,
+                                    children: [
+                                        ['my-account', 'My Account'],
+                                        ['recover-password', 'Recover your password'],
+                                    ]
+                                },
+                                {
+                                    title: 'Customer',
+                                    prefix: 'customer/',
+                                    sidebarDepth: 2,
+                                    children: [
+                                        ['my-account', 'My Account'],
+                                        ['recover-password', 'Recover your password'],
+                                        ['self-register', 'Self register'],
+                                    ]
+                                },
+                            ]
+                        },
+
                     ]
                 },
                 {
@@ -203,40 +265,35 @@ module.exports = config({
                                     path: 'enterprise-login/',
                                     sidebarDepth: 2,
                                     children: [
-                                        ['oidc.md', 'OpenID Connect']
+                                        ['oidc.md', 'OpenID Connect'],
+                                        ['saml.md', 'SAML'],
                                     ]
                                 },
                             ]
                         },
                     ],
                 },
-            {
-                title: 'Conditional Authentication',
-                children: [
-                    ['conditional-auth/', 'Overview'],
-                    ['conditional-auth/configure-conditional-auth.md', 'Setup conditional authentication'],
-                    ['conditional-auth/write-your-first-script.md', 'Write your first authentication script'],
-                    {
-                        title: 'Predefined templates',
-                        prefix: 'conditional-auth/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['predefined-templates/', 'Overview'],
-                            ['predefined-templates/group-based-template.md', 'Group based access control'],
-                            ['predefined-templates/ip-based-template.md', 'IP based access control'],
-                            ['predefined-templates/new-device-based-template.md', 'Device based access control'],
-                            ['predefined-templates/user-age-based-template.md', 'Age based access control'],
-                        ]
-                    },
-                    ['conditional-auth/api-reference.md', 'API Reference'],
-                ]
-            },
+                {
+                    title: 'Conditional Authentication',
+                    children: [
+                        ['conditional-auth/', 'Overview'],
+                        ['conditional-auth/configure-conditional-auth.md', 'Set up conditional authentication'],
+                        ['conditional-auth/group-based-template.md', 'Add group-based authentication'],
+                        ['conditional-auth/ip-based-template.md', 'Add IP-based authentication'],
+                        ['conditional-auth/new-device-based-template.md', 'Add device-based authentication'],
+                        ['conditional-auth/user-age-based-template.md', 'Add user age-based authentication'],
+                        ['conditional-auth/write-your-first-script.md', 'Write a custom authentication script'],
+                        ['conditional-auth/api-reference.md', 'Authentication Script - Reference'],
+                    ]
+                },
             {
                 title: 'Hidden',
                 children: [
                     ['identity-providers/enterprise-login/configure-additional-query-params.md', 'Configure additional query parameters'],
                     ['applications/integrate-public-client.md', 'Integrate public client'],
                     ['applications/integrate-confidential-client.md', 'Integrate confidential client'],
+                    ['identity-providers/enterprise-login/saml-settings.md', 'SAML IdP Settings'],
+
                 ]
             }
             ],

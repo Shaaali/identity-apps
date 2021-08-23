@@ -7,7 +7,6 @@ breadcrumb: false
 Following this guide, you will be able to deploy a sample Java EE web application in your local environment and secure it with Asgardeo using OpenID Connect.
 
 ## Prerequisites
-
 - Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
 - You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/oidc/register-app">register an application</a> in Asgardeo.
 - Only <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> users can log in to applications. <a href ="/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user">Create customer account</a> if you don't already have one.
@@ -114,3 +113,4 @@ sh catalina.sh start
 The app will be accessible at `https://localhost:8080/oidc-sample-app/index.html`.
 
 Log in to Asgardeo using your customer account credentials.
+

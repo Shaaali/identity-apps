@@ -7,6 +7,7 @@ breadcrumb: false
 Following this guide, you will be able to deploy a sample JavaScript single page application in your local environment and secure it with Asgardeo using OpenID Connect.
 
 ## Prerequisites
+
 - You need to have npm with Node.js. If you don't have it, [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
 - You need to have a single-page application registered. If you don't have an app registered, <a href ="/guides/applications/spa/register-app">register an application</a> in Asgardeo.
 - Only <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> users can log in to applications. <a href ="/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user">Create a customer account</a> if you don't already have one.
@@ -42,7 +43,7 @@ Click the **Download sample** button to download the sample. You can also choose
     
     - **clientID** - You need to add the client id of the registered application. Refer <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain the client ID</a> from the Asgardeo console.
     - **serverOrigin** - "https://api.asgardeo.io/t/<organization_name>"
-    
+
     ``` HTML{2,4}
     const authConfig = {
         clientID: "<client ID>",
@@ -60,3 +61,4 @@ npm install && npm start
 ```
 
 Log in to Asgardeo using your customer account credentials.
+
