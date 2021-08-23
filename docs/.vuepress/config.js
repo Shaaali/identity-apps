@@ -93,7 +93,7 @@ module.exports = config({
         ],
         sidebar: {
             '/guides/' : [
-                ["", 'Introduction'],
+                ['', 'Introduction'],
                 ['get-started/create-organization.md', 'Get Started'],
                 {
                     title: 'Integrate Apps',
@@ -164,6 +164,7 @@ module.exports = config({
                         prefix: 'connections/mfa/',
                         sidebarDepth: 2,
                         children: [
+                            ['', 'Overview'],
                             ['add-totp-login.md', 'Add TOTP'],
                             ['add-emailotp-login.md', 'Add Email OTP'],
                         ]

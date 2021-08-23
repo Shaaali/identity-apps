@@ -1,4 +1,4 @@
-# Multi-Factor Authentication
+# Overview - MFA
 
 Multi-Factor Authentication (MFA) allows you to grant access to your resources by using two (2-Factor) or more (Multi-Factor) factors to authenticate users. If one factor is compromised or broken, an attacker still has at least one more barrier to breach before successfully breaking into the resource. Hence, MFA provides an additional layer of security to the resource.
 
