@@ -15,11 +15,11 @@ We will start from the scratch and see how can we build our first conditional au
 
 1. You should have registered an application. If you don't have an app registered, <a :href ="$withBase('/guides/applications/')">register an application</a> in Asgardeo.
 2. Customize the login flow and enable `Username and Password authentication` authentication.
-3. Create relevant <a :href="$withBase('/guides/user-management/groups/')">groups</a> and assign users as necessary to try out the flow.
+3. Create relevant <a :href="$withBase('/guides/users/manage-groups/')">groups</a> and assign users as necessary to try out the flow.
 
 ## Start with the default script
 
-To start off, <a :href="$withBase('/guides/conditional-auth/configure-conditional-auth/')">Configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
+To start off, <a :href="$withBase('/references/conditional-auth/api-reference/')">Configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
 
 ```js
 var onLoginRequest = function(context) {
@@ -30,7 +30,7 @@ The above scripts does not have any conditional authentication. It allow all use
 
 ## Implement onSuccess callback
 
-Now, we will implement what to do, if  **username and password based authentication** is success. You can use <a href="../api-reference/#executestep">onSuccess</a> eventCallback.
+Now, we will implement what to do, if  **username and password based authentication** is success. You can use <a :href="$withBase('/references/conditional-auth/api-reference/')">onSuccess</a> eventCallback.
 
 ```js
 var onLoginRequest = function (context) {
@@ -44,7 +44,7 @@ var onLoginRequest = function (context) {
 
 ## Get user object
 
-If **username and password based authentication** is success, let's try to get the <a href="../api-reference/#user">user</a> from the <a href="../api-reference/#context">context</a>. You can use `context.currentKnownSubject` to get the authenticated user.
+If **username and password based authentication** is success, let's try to get the <a :href="$withBase('/references/conditional-auth/api-reference/#user')">user</a> from the <a :href="$withBase('/references/conditional-auth/api-reference/#context')">context</a>. You can use `context.currentKnownSubject` to get the authenticated user.
 
 ```js
 var groups = ['employee', 'manager'];
@@ -61,9 +61,9 @@ var onLoginRequest = function (context) {
 
 ## Check membership of user
 
-Now check whether user is a member of `admin` or `manager`. You can use the utility function <a href="../api-reference/#check-group-membership">isMemberOfAnyOfGroups(user, groups)</a>. 
+Now check whether user is a member of `admin` or `manager`. You can use the utility function <a :href="$withBase('/references/conditional-auth/api-reference/#check-group-membership')">isMemberOfAnyOfGroups(user, groups)</a>. 
 
-Refer the <a href="../api-reference/#utility-functions"> inbuilt functions </a> to get to know more existing functions.
+Refer the <a :href="$withBase('/references/conditional-auth/api-reference/#utility-functions')">inbuilt functions</a> to get to know more existing functions.
 
 ```js
 var groups = ['employee', 'manager'];
@@ -106,4 +106,4 @@ var onLoginRequest = function (context) {
 
 Now you have completed writing a conditional auth script for group-based access control scenario.
 
-Similarly, you can build your own scripts to handle many scenarios using the <a :href="$withBase('/guides/conditional-auth/api-reference/')">API references</a>.
+Similarly, you can build your own scripts to handle many scenarios using the <a :href="$withBase('/references/conditional-auth/api-reference/')">API references</a>.

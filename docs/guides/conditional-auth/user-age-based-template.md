@@ -10,7 +10,7 @@ is below the configured value.
 
 ## Prerequisites
 
--   You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/oidc/register-app/')">register an application</a>.
+-   You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a>.
 -   Update the birth date of a customer (using the My Account portal) so that the current age is below 18 years.
 
 ## Configure the sign-in flow

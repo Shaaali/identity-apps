@@ -45,11 +45,11 @@ Click the **Download sample** button to download the sample. You can also choose
      <table>
       <tr>
           <td>consumerKey</td>
-          <td>Add the client id of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client ID</a> from Asgardeo console.</td>
+          <td>Add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain client ID</a> from Asgardeo console.</td>
       </tr>
       <tr>
         <td>consumerSecret</td>
-        <td>Add the client secret of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client secret</a> from Asgardeo console.</td>
+        <td>Add the client secret of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain client secret</a> from Asgardeo console.</td>
       </tr>
       <tr>
         <td>scope</td>
@@ -113,4 +113,3 @@ sh catalina.sh start
 The app will be accessible at `https://localhost:8080/oidc-sample-app/index.html`.
 
 Log in to Asgardeo using your customer account credentials.
-
