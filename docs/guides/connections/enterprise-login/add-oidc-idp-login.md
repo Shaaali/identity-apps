@@ -11,7 +11,7 @@ This guide provides the instructions on how to enable the login to your applicat
 
 ## Prerequisite
 
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, [register an application](../../applications/) in Asgardeo to enable OpenID Connect enterprise login.
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a> in Asgardeo to enable OpenID Connect enterprise login.
 
 ## Register app in the identity provider
 
