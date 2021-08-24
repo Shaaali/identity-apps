@@ -6,25 +6,19 @@ breadcrumb: false
 
 Following this guide, you will be able to deploy a sample Java EE web application in your local environment and secure it with Asgardeo using OpenID Connect.
 
-# Prerequisites
-1. Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-2. You should have registered a web application. If you don't have an app registered, <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app')">register an application</a> in Asgardeo.
-3. Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create customer account</a> if you don't already have one.
+## Prerequisites
+- Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
+- You should have registered a web application. If you don't have an app registered, <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a> in Asgardeo.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="('/guides/users/manage-customers/#onboard-a-customer')">Create customer account</a> if you don't already have one.
 
-## Configure the sample application
-In order to try out the sample application:
-1. [Download the sample](#download-the-sample)
-2. [Configure the sample](#configure-the-sample)
-3. [Run the sample](#run-the-sample)
+## Download the sample
 
-### Download the sample
-
-Click on the button below to download the sample.
+Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.
 
 <Button 
     buttonType='grey-outlined-icon'
     displayType='inline-button'
-    buttonText='Download Sample'
+    buttonText='Download sample'
     startIconPath='images/technologies/java-logo.svg'
     endIconPath='icons/downloadIcon.svg'
     externalLink='https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war'
@@ -39,9 +33,7 @@ Click on the button below to download the sample.
     v-bind:openInNewTab='true'
 />
 
-<br>
-
-### Configure the sample
+## Configure the sample
 
 1. Copy the **war** file downloaded in the [previous step](#download-the-sample) to the deployment location in your Tomcat server(i.e, referred as <TOMCAT_HOME>).
 2. Run the webapp from `<TOMCAT_HOME>/bin` folder to explode the webapp to edit configurations. 
@@ -53,15 +45,15 @@ Click on the button below to download the sample.
      <table>
       <tr>
           <td>consumerKey</td>
-          <td>You should add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain client ID</a> from Asgardeo console.</td>
+          <td>Add the client id of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client ID</a> from Asgardeo console.</td>
       </tr>
       <tr>
         <td>consumerSecret</td>
-        <td>You should add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain client secret</a> from Asgardeo console.</td>
+        <td>Add the client secret of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client secret</a> from Asgardeo console.</td>
       </tr>
       <tr>
         <td>scope</td>
-        <td>For the OpenId Connect flow, the scope should contain <code>openid</code> as one of the scopes. You can add additional scopes as well. By default,  openid and internal_application_mgt_view scopes are added. If you want additional scopes, add them here.</td>
+        <td>For the OpenId Connect flow, the scope should contain <code>openid</code> as one of the scopes. You can add additional scopes as well. By default,  openid and internal_application_mgt_view scopes are added. If required, add the additional scopes here.</td>
       </tr>
       <tr>
         <td>authorizeEndpoint</td>
@@ -107,19 +99,17 @@ Click on the button below to download the sample.
       jwksEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/jwks
       ```
 
-<br>
-
-### Run the sample
+## Run the sample
 
 Now you have added the relevant configurations.
 
-Stop and restart the [tomcat server](https://tomcat.apache.org/tomcat-9.0-doc/setup.html) with default port `8080`, for the newly added changes to be applied to the application.
+Stop and restart the tomcat server with the default port `8080` for the newly added changes to be applied to the application.
 
-  ```shell script
-   sh catalina.sh stop
-   sh catalina.sh start
-   ```
+```shell script
+sh catalina.sh stop
+sh catalina.sh start
+```
 
 The app will be accessible at `https://localhost:8080/oidc-sample-app/index.html`.
 
-Log in to Asgardeo using your <a :href="$withBase('/guides/users/manage-customers/')">customer</a> account credentials.
+Log in to Asgardeo using your customer account credentials.
