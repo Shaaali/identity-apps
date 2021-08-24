@@ -72,7 +72,6 @@ const getPluginConfig = (themeConfig) => {
                     layoutChunkName: (layout) => `layout-${layout.componentName}`,
                 },
         ],
-        ["@mr-hope/copy-code", themeConfig.copyCode],
         ["photo-swipe", themeConfig.photoSwipe],
         ["smooth-scroll", themeConfig.smoothScroll],
         [

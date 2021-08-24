@@ -12,7 +12,6 @@ Following this guide, you will be able to deploy a sample React single page appl
 - You need to have a single-page application registered. If you don't have an app registered, <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">register an application</a> in Asgardeo.
 - Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
 
-
 ## Download the sample
 
 Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.

@@ -38,15 +38,9 @@ Click the **Download sample** button to download the sample. You can also choose
 
 ## Configure the sample
 
-1.  Open the `index.html` file located at the root of the project. 
-2.  Scroll down to the `<script>` tag at the end of the body tag and find the `authConfig` object. Now change the configurations with the relevant values.
-    
-    - **clientID** - You need to add the client id of the registered application. Refer <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain the client ID</a> from the Asgardeo console.
-    - **serverOrigin** - "https://api.asgardeo.io/t/<organization_name>"
-
 1. Open the `index.html` file located at the root of the project 
 2. Scroll down to the `<script>` tag at the end of the body tag and find `authConfig` object and change the configurations with the relevant values.
-  - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain client ID</a> from Asgardeo console.
+  - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain the client ID</a> from the Asgardeo console.
   - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
 
     ``` HTML{2,4}

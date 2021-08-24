@@ -8,8 +8,9 @@ Following this guide, you will be able to deploy a sample Java EE web applicatio
 
 ## Prerequisites
 - Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-- You should have registered a web application. If you don't have an app registered, <a href ="/guides/applications/web-app/oidc/register-app">register an application</a> in Asgardeo.
-- Only <a href="/guides/user-management/manage-users/user-accounts/customer/">customer</a> users can log in to applications. <a href ="/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user">Create customer account</a> if you don't already have one.
+- You need a web application registered. If you don't have an app registered, <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a> in Asgardeo.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="('/guides/users/manage-customers/#onboard-a-customer')">Create a customer account</a> if you don't already have one.
+
 
 ## Download the sample
 
@@ -45,11 +46,11 @@ Click the **Download sample** button to download the sample. You can also choose
      <table>
       <tr>
           <td>consumerKey</td>
-          <td>Add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain client ID</a> from Asgardeo console.</td>
+          <td>Add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain the client ID</a> from the Asgardeo console.</td>
       </tr>
       <tr>
         <td>consumerSecret</td>
-        <td>Add the client secret of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain client secret</a> from Asgardeo console.</td>
+        <td>Add the client secret of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain the client secret</a> from the Asgardeo console.</td>
       </tr>
       <tr>
         <td>scope</td>
