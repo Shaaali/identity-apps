@@ -9,7 +9,7 @@ Follow the steps given below to deploy a sample Java EE web application in your 
 ## Prerequisites
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
 - You need to have a web application registered. If you don't, <a :href="$withBase('/guides/applications/web-app/register-saml-web-app')">register a SAML application</a> in Asgardeo.
-- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">customers</a> can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
 
 ## Download the sample
 

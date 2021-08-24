@@ -9,7 +9,7 @@ Following this guide, you will be able to deploy a sample Java EE web applicatio
 ## Prerequisites
 - Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
 - You need a web application registered. If you don't have an app registered, <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a> in Asgardeo.
-- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="('/guides/users/manage-customers/#onboard-a-customer')">Create a customer account</a> if you don't already have one.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-a-customer')">Create a customer account</a> if you don't already have one.
 
 
 ## Download the sample
