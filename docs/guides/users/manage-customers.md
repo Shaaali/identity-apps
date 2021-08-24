@@ -3,9 +3,6 @@
 A customer registered in the organization can consume and access applications in that organization.
 
 This guide walks you through the process of managing a customer account. An owner or a collaborator with administrative privilege can manage customer accounts.
-- [Onboard a customer](#onboard-a-customer)
-- [Assign groups to a customer](#assign-groups) 
-- [Delete a customer](#delete-a-customer)
 
 ## Onboard a customer
 There are two ways to onboard a customer:
@@ -49,5 +46,5 @@ To delete a customer account:
 1. On the Asgardeo Console, click **Manage > Users**.
 2. View all the users.
 3. Click **Delete** for the user that should be removed.
-4. Type the user's username to confirm the action.     
+4. Enable the checkbox to confirm your action.     
 5. Click **Confirm**.

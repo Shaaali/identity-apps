@@ -1,11 +1,6 @@
 # Manage groups
 
 A group is a collection of users who have the same privileges to access resources in an organization. 
-
-The Asgardeo Console allows you to:
-- [Create and manage groups](#create-new-group)
-- [Assign users to groups](#assign-users-to-groups)
-- [Remove users from groups](#remove-users-from-groups) 
     
 One user can be assigned to any number of groups. Applications can get details about groups a user belongs to in the authentication response (e.g., ID token) from Asgardeo as a user attribute.                                                          
 

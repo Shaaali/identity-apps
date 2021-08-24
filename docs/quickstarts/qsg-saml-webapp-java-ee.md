@@ -88,7 +88,7 @@ Click the **Download sample** button to download the sample. You can also choose
     </tr>
     <tr>
       <td>SAML2.EnableAssertionEncryption</td>
-      <td>If this configuration is set to <code>true</code>, the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#enable-encryption">enable encryption for SAML assertion</a> from Asgardeo.</td>
+      <td>If this configuration is set to <code>true</code>, the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app')">enable encryption for SAML assertion</a> from Asgardeo.</td>
     </tr>
     <tr>
       <td>SAML2.EnableRequestSigning</td>
