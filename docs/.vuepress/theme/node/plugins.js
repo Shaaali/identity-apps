@@ -85,6 +85,34 @@ const getPluginConfig = (themeConfig) => {
                 }
                 : false,
         ],
+        [
+            "container", 
+            {
+                type: "danger",
+                defaultTitle: "",
+            }
+        ],
+        [
+            "container", 
+            {
+                type: "info",
+                defaultTitle: "",
+            }
+        ],
+        [
+            "container", 
+            {
+                type: "tip",
+                defaultTitle: "",
+            }
+        ],
+        [
+            "container", 
+            {
+                type: "warning",
+                defaultTitle: "",
+            }
+        ],
     ];
 };
 exports.getPluginConfig = getPluginConfig;

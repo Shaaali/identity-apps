@@ -6,8 +6,10 @@ $darkTextColor ?= #9e9e9e
   border-radius 4px !important
 
   .custom-block-title
+    line-height 1rem !important
     font-weight 500 !important
     color var(--text-color) !important
+    margin-bottom 0.5rem !important
 
   &.info
     background var(--info-block-bgColor) !important
@@ -39,6 +41,12 @@ $darkTextColor ?= #9e9e9e
 
     p
       font-size 14px
+      line-height 1.4rem
+    
+    ul
+      font-size 14px
+      padding-left 1em
+    
 
   &.info, &.tip, &.warning, &.danger, &.details
     a
