@@ -22,7 +22,7 @@ You need to register Asgardeo as a OAuth2.0 application in Google. Follow the [G
 5. Click **Create Credentials**  and select **OAuth client ID**.
     
     ::: tip Note
-    At this point, you can choose to configure you consent screen by clicking on **Consent Screen**. For more information, see [User Consent](https://support.google.com/googleapi/answer/6158849#userconsent&zippy=%2Cuser-consent).
+    At this point, you can choose to configure your consent screen by clicking **Consent Screen**. For more information, see [User Consent](https://support.google.com/googleapi/answer/6158849#userconsent&zippy=%2Cuser-consent).
     :::
 
 6. Select application type as **Web application**.

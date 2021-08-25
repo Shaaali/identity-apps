@@ -1,4 +1,4 @@
-# Configure login attempts security
+# Configure login-attempts security
 
 You can protect user accounts in Asgardeo from password brute-force attacks by locking the account on consecutive failed login attempts. By default, this setting is disabled.
 

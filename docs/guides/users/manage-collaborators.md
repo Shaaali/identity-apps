@@ -41,7 +41,7 @@ To assign roles to a collaborator:
 A collaborator account can be deleted by admins. Once an account is deleted, the action is irreversible. 
 
 To delete a collaborator account:
-1. In the Asgardeo Console, click **Manage > Users**.
-2. Click the **Delete** icon for the user you want to remove.
-3. Enable the checkbox to confirm your action. 
+1. On the Asgardeo Console, click **Manage > Users**.
+2. Click **Delete** for the user you want to remove.
+3. Select the checkbox to confirm your action. 
 4. Click **Confirm**.     

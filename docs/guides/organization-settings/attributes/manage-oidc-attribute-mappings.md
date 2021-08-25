@@ -1,15 +1,7 @@
-# Manage attribute mappings
+# Manage OpenID Connect attribute mappings
+You can map OpenID Connect claims to <a :href="$withBase('/guides/organization-settings/attributes/manage-attributes')">default attributes</a> in the organization. This allows applications that implement OpenID Connect login to receive user information in the ID token.
 
-Attribute mapping help to map the default attributes, and they will be transformed to the mapped attribute when interacting with APIs and applications.
-
-Asgardeo supports below attribute mappings:
-- [OpenID Connect](#manage-openid-connect-attribute-mappings)
-- [SCIM 2.0](#manage-scim-2-0-attribute-mappings)
-
-## Manage OpenID Connect attribute mappings
-You can map OpenID Connect claims to <a :href="$withBase('/guides/org-settings/attributes/manage-attributes')">default attributes</a> in the organization. This allows applications that implement OpenID Connect login to receive user information in the ID token.
-
-### View OpenID Connect attributes
+## View OpenID Connect attributes
 To view the OpenID Connect attributes available for your organization:
 1. On the Asgardeo Console, Click **Manage > Attributes> Manage Attribute Mappings**.
 2. Click **OpenID Connect**.
@@ -17,7 +9,7 @@ To view the OpenID Connect attributes available for your organization:
 
 You can find the mapped OpenID Connect attributes.
 
-### Add an OpenID Connect attribute
+## Add an OpenID Connect attribute
 Asgardeo supports some OpenID Connect attributes by default. You can add new OpenID Connect attributes as follows:
 
 1. On the Asgardeo Console, Click **Manage > Attributes> Manage Attribute Mappings**.
@@ -85,25 +77,10 @@ After user authentication, you can find the `email_home` claim in the ID token a
 
 <br>
 
-### Delete an OpenID Connect attribute
+## Delete an OpenID Connect attribute
 To view the OpenID Connect attributes available in your organization:
 1. On the Asgardeo console, click **Manage > Attributes> Manage Attribute Mappings**.
 2. Click **OpenID Connect**.
 3. Select the attribute to delete.
 4. Click **Delete**.
 5. Type the OpenID Connect attribute name to confirm the action.
-
-
-## Manage SCIM 2.0 attribute mappings
-Attributes in your organization are mapped to the following SCIM 2.0 schemas mappings:
-- [Core schema attributes](https://datatracker.ietf.org/doc/html/rfc7643#section-3.1)
-- [User schema attributes](https://datatracker.ietf.org/doc/html/rfc7643#section-4.1)
-- [Enterprise schema attributes](https://datatracker.ietf.org/doc/html/rfc7643#section-4.3)
-
-The attributes in these schemas are well-defined in the [SCIM 2.0 specification](https://datatracker.ietf.org/doc/html/rfc7643) and you can't modify the attributes in these schemas. 
-
-### View SCIM 2.0 attributes
-To view the SCIM 2 attributes mapped to user attributes in your organization:
-1. On the Asgardeo console, click **Manage > Attributes> Manage Attribute Mappings**.
-2. Click **SCIM 2.0**.
-   <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/view-scim2-attributes.png')" alt="View SCIM2 attributes">
