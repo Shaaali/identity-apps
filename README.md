@@ -21,4 +21,4 @@ Refer [Developer Wiki](https://github.com/wso2-enterprise/asgardeo-docs/wiki) fo
 |-------------|-----|
 | Dev         | <https://dev.docs.asgardeo.io/asgardeo/docs>    |
 | Stage       | <https://stage.docs.asgardeo.io/asgardeo/docs>    |
-| Live        | <https://docs.asgardeo.io/asgardeo/docs>    |
+| Live        | <https://wso2.com/asgardeo/docs/>    |
