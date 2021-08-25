@@ -1,4 +1,4 @@
-# Asgardeo default roles
+# Asgardeo user roles
 
 Roles consist of the permissions that are required by users to access the Asgardeo resources such as functions available on the Asgardeo Console, REST APIs, etc.
 

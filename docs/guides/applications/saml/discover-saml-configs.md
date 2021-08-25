@@ -1,4 +1,4 @@
-# Discover SAML configurations of Asgardeo
+# Discover SAML endpoints and configs in Asgardeo
 
 You can follow this document to obtain required information and the configurations to:
  - Integrate sign in with Asgardeo for your SAML web application

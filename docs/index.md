@@ -10,21 +10,21 @@ actionLink: /guides/
 features:
   - title: Manage Your Applications
     details: Secure your applications using your preferred protocol.
-    link: /guides/manage-apps/
+    link: /guides/applications/
     icon: padlockIcon
     subLinks:
       - name: "Web applications"
-        link: /guides/manage-apps/#web-applications
+        link: /guides/applications/#web-applications
           
       - name: "Single page applications"
-        link: /guides/manage-apps/#sing-page-applications
+        link: /guides/applications/#sing-page-applications
       
       - name: "Native applications"
         link: 
 
   - title: Configure Federated Login
     details: Let users log in to applications with an Identity Provider of their choice.
-    link: /guides/manage-apps/#manage-identity-providers
+    link: 
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
