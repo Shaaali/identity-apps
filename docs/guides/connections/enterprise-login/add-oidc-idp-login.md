@@ -18,7 +18,7 @@ To get started, you need to have an application registered in Asgardeo. If you d
 You need to register an OpenID Connect application in the external identity provider. Follow the identity provider's documentation to know how to register an OIDC application.
 
 You can use the following URL as the **callbackURL** of the application. 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/commonauth
 ```
 Once you register an application, obtain:
@@ -50,15 +50,15 @@ Check the documentation of the OIDC Identity provider and get the following endp
     -  **Use PEM certificate** : Upload or paste the public certificate of the external identity provider. The certificate should be in PEM format.  
         ::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to see how you can convert them to PEM format using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>
          **Convert CRT to PEM**
-         ```
+         ``` no-line-numbers
          openssl x509 -in cert.crt -out cert.pem
          ``` 
         **Convert CER to PEM:**
-         ```
+         ``` no-line-numbers
          openssl x509 -in cert.cer -out cert.pem
          ```  
         **Convert DER to PEM:**
-          ```
+          ``` no-line-numbers
           openssl x509 -in cert.der -out cert.pem
          ```
         :::     

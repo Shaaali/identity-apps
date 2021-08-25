@@ -7,7 +7,7 @@ You can follow this document to obtain required information and the configuratio
 When configuring SAML based sign in with Asgardeo, you need to know:
 1. SAML IdP endpoints of Asgardeo
 2. Issuer of Asgardeo
-3. Public certificate of Asgardeo
+3. The public certificate of Asgardeo
 
  <img :src="$withBase('/assets/img/guides/applications/saml-app/saml-integration.png')" alt="Integrate SAML app" border=0 style="border:0; text-decoration:none; outline:none">
 
@@ -33,7 +33,7 @@ The SAML IdP metadata document contains:
  
 **Sample SAML IdP metadata of Asgardeo**
 
-```xml
+```xml no-line-numbers
 <?xml version="1.0" encoding="UTF-8"?>
 <EntityDescriptor
 	xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="accounts.asgardeo.io">
@@ -89,12 +89,12 @@ To download the SAML metadata file of your organization in Asgardeo,
 
 You can use below endpoint URL to get the SAML IdP metadata information.
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/identity/metadata/saml2
 ```
 
 _Sample endpoint URL_
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/bifrost/identity/metadata/saml2
 ```
 

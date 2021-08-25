@@ -5,12 +5,12 @@ Application can dynamically discover the OpenID Connect identity provider metada
  `<issuer>/.well-known/openid-configuration`.  
 
 **Issuer of Asgardeo:**
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/token
 ```
 
 **Discovery endpoint of Asgardeo:**
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-configuration
 ```
 
@@ -20,7 +20,7 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-co
 
 <CodeGroupItem title="cURL">
 
-``` 
+```  no-line-numbers
 curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration'
 ```
 
@@ -28,7 +28,7 @@ curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/token/.w
 
 <CodeGroupItem title="JavaScript - jQuery" active>
 
-```js
+```js no-line-numbers
 var settings = {
     "url": "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration",
     "method": "GET",
@@ -44,7 +44,7 @@ $.ajax(settings).done(function (response) {
 
 <CodeGroupItem title="Nodejs - Axios" active>
 
-```js
+```js no-line-numbers
 var axios = require('axios');
 
 var config = {
@@ -69,7 +69,7 @@ axios(config)
 <br>
 
 **Sample response:**
-```json
+```json no-line-numbers
 {
     .
     .

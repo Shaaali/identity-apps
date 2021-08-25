@@ -37,7 +37,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 1. Copy the **war** file downloaded in the [previous step](#download-the-sample) to the deployment location in your Tomcat server (i.e, referred as <TOMCAT_HOME>).
 2. Run the webapp from the `<TOMCAT_HOME>/bin` folder to explode it and edit the configurations. If your Tomcat server is set to auto-deploy applications by default, then the war file copied into the deployment location will be extracted automatically. If not, go ahead and restart the server to get the extracted sample.
-    ```shell script
+    ```shell script no-line-numbers
     sh catalina.sh start
     ```
 3. Update the `sample-app.properties` file located in `<TOMCAT_HOME>/webapps/sample-app/WEB-INF/classes` with the relevant values.    
@@ -103,7 +103,7 @@ Click the **Download sample** button to download the sample. You can also choose
      
      <br>
      
-      ``` 
+      ```  no-line-numbers
       SAML2.AssertionConsumerURL=http://localhost:8080/sample-app/home.jsp
       SAML2.SPEntityId=http://localhost.com:8080/spring-security-saml2-sample/saml/metadata
       
@@ -140,7 +140,7 @@ Now you have added the relevant configurations in your sample application.
 
 Stop and restart the Tomcat server with the default port `8080` for the newly added changes to be applied.
 
-```shell script
+```shell script no-line-numbers
 sh catalina.sh stop
 sh catalina.sh start
 ```

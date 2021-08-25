@@ -93,7 +93,7 @@ The application can decode the ID token to view the claims.
 
 _A sample ID token is given below:_
 
-```
+``` no-line-numbers
 {
   "isk": "69b37037a2349763dc48e2a30a62c3feebf0b5823cf869e149352737ddc0ca63",
   "at_hash": "7qgloEmkz3kGBTtH7RI4qw",
@@ -121,7 +121,7 @@ In addition to getting attributes from the ID token, the application can <a :hre
 
 _A sample userinfo response is given below:_
 
-```json
+```json no-line-numbers
 {
     "sub": "user@sample.com",
     "nickname": "nick",

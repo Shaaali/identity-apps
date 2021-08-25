@@ -132,7 +132,7 @@ const LandingPage = () => {
 
 **Sample access token** :
 
-```
+``` no-line-numbers
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
@@ -177,7 +177,7 @@ const LandingPage = () => {
 
 **Sample decoded ID token** object is given below:
 
-```
+``` no-line-numbers
 {
     "isk": "329d5bf5732791509edabb093d78a4a2665dbc65d99119f45f1d4db1a2459cf1",
     "at_hash": "TN1HIyOnt_8shS2DalrdfQ",
@@ -266,7 +266,7 @@ const LandingPage = () => {
 
 **Sample basic user details**(`basicUserDetails`) object is below:
 
-```json
+```json no-line-numbers
 {
     "allowedScopes": "openid",
     "sessionState": "eb0e12f9a113f49ffef887a464c7980d84bb5b11dfeb1774309aee9b88c83c21.8-LXzzHCUSOOa2GeH-LFfA",

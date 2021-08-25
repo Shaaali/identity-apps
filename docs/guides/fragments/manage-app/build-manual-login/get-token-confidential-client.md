@@ -8,7 +8,7 @@ Application has to provide it's credentials and get tokens.
 
 **Token endpoint:**
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/token
 ```
 
@@ -149,7 +149,7 @@ curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' 
 
 then response will be,
 
-```json
+```json no-line-numbers
 {
   "access_token": "54bd024f-5080-3db5-9422-785f5d610605",
   "scope": "openid",

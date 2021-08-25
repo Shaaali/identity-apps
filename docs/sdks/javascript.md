@@ -21,7 +21,7 @@ Follow the steps given below to authenticate users to your JavaScript SPA with O
 
 Add the following script to the `index.html` file in your application.
 
-``` html
+``` html no-line-numbers
 <script src="https://unpkg.com/@asgardeo/auth-spa@latest/dist/asgardeo-spa.production.min.js"></script>
 ```
 
@@ -89,7 +89,7 @@ async function getToken() {
 ```
 
 **Sample access token** is given below:
-```
+``` no-line-numbers
 61985b0e-26c3-38b7-acff-b18ad934eafc
 ```
 
@@ -115,7 +115,7 @@ function getDecodedIdToken(){
 
 **Sample decoded ID Token** object is given below:
 
-```
+``` no-line-numbers
 {
  "isk": "3af75bf6579a88cfb37ee85bd96c34524899857a91989be722e4ba53d392e3f7",
  "at_hash": "3gTKEUwxlPyxc1FPDmlxMw",
@@ -183,7 +183,7 @@ function getBasicUserInfo(){
 
 **Sample user info response**(`userinfoResponse`) object is below:
 
-```
+``` no-line-numbers
 {
  "allowedScopes": "openid",
  "sessionState": "f143343efdd6bcb57fe3d6215d9b740d2b1714df4bee0f506e31a7d75e1c2a8d.sI-dfLfA0yRDiKFvsG89LA",
