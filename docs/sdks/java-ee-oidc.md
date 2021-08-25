@@ -54,7 +54,7 @@ To initialize the OIDC agent, you need a property file with the configurations s
 Create a file named `oidc-sample-app.properties` in the _<YOUR_APP>/src/main/resources_ directory, using the content
 below.
 
-::: tip Note
+::: info Info
 
 The `skipURIs` property defines the web pages in your application that should not be secured, and do not require
 authentication.

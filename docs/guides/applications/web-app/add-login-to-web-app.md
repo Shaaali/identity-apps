@@ -13,4 +13,4 @@ Following guides provide detailed steps to integrating login to your web applica
 - [Java EE SAML SDK](/sdks/java-ee-saml.md)
 
 ### Manually add login to your web app
-- <a :href="$withBase('/guides/applications/oidc/integrate-confidential-client/')">Implement authorization code flow</a>
+- <a :href="$withBase('/guides/applications/oidc/implement-auth-code/')">Implement authorization code flow</a>

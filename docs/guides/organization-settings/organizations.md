@@ -11,9 +11,7 @@ You can create a new organization via the Asgardeo console.
    <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization.png')" alt="Create new organization">
 3. Provide the **Organization Name**.
     ::: warning
-      - The organization name should be unique and you can't change the organization name once it is created. 
-      - The organization name can contain 4 to 30 characters. It can only have lowercase alphanumeric characters, and it must always begin with an alphabet character.
-
+      The organization name should be unique and you can't change the organization name once it is created. 
     :::
     <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization-form.png')" alt="Create new organization form">
 4. Click **Create**.

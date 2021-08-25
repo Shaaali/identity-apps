@@ -18,9 +18,10 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 
 -   Download and install one of the authenticator apps mentioned above.
 
-::: tip Note
+::: info Info
  - You can use TOTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a :href="$withBase('/guides/connections/')">identity provider</a>.   
  - TOTP cannot be used as a first step of your login flow.
+ - You can enable TOTP for federated users as well.
 :::
 
 

@@ -118,10 +118,16 @@ module.exports = config({
                             ['web-app/add-login-to-web-app.md', 'Add login to web app'],
                             {
                                 title: 'Implement OIDC flows',
+                                prefix: 'oidc/',
                                 children: [
-                                    ['oidc/discover-oidc-configs.md', 'Discover OIDC endpoints'],
-                                    ['oidc/integrate-confidential-client.md', 'Implement Authorization Code flow'],
-                                    ['oidc/integrate-public-client.md', 'Implement Authorization Code flow with PKCE'],
+                                    ['discover-oidc-configs', 'Discover OIDC endpoints'],
+                                    ['implement-auth-code', 'Add Authorization code flow'],
+                                    ['implement-auth-code-with-pkce.md', 'Add Authorization Code flow with PKCE'],
+                                    ['validate-id-tokens.md', 'Validate ID tokens'],
+                                    ['request-user-info.md', 'Request user information'],
+                                    ['introspect-tokens.md', 'Validate tokens'],
+                                    ['revoke-tokens.md', 'Revoke tokens'],
+                                    ['add-logout.md', 'Add logout'],
                                 ]
                             },
                             {
@@ -297,7 +303,7 @@ module.exports = config({
                     title: 'App Configurations',
                     children: [
                         ['/references/app-settings/oidc-settings-for-app.md', 'OIDC configurations'],
-                        ['/references/app-settings/saml-settings-for-app.md', 'Saml configurations'],
+                        ['/references/app-settings/saml-settings-for-app.md', 'SAML configurations'],
                     ]
                 },
                 {

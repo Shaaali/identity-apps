@@ -18,7 +18,7 @@ To onboard a collaborator via [Asgardeo Console](https://console.asgardeo.io):
 3. Provide the following details.
     - **Email Address:** Email address of the collaborator.<br>
         ::: warning
-        This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
+         This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
         :::               
     - **Role:** Select a role to assign to the collaborator. You can change this later.   
     <img :src="$withBase('/assets/img/guides/users/add-collaborator-account.png')" alt="Add collaborator user">

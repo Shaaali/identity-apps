@@ -4,7 +4,7 @@ A group is a collection of users who have the same privileges to access resource
     
 One user can be assigned to any number of groups. Applications can get details about groups a user belongs to in the authentication response (e.g., ID token) from Asgardeo as a user attribute.                                                          
 
-::: tip
+::: info Info
 Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can be assigned to a group.
 :::
 

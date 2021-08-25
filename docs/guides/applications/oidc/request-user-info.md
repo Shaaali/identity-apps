@@ -1,3 +1,4 @@
+# Request user information by apps
 
 User information is encoded inside the ID token returned along with the access token. In addition to that, OpenID Connect provides [userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) to obtain user
 information as a payload by invoking the userinfo endpoint with the access token obtained.
@@ -14,8 +15,8 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/userinfo
 <CodeGroupItem title="cURL" active>
 
 ``` 
-curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/userinfo' \
---header 'Authorization: Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
+curl --location --request GET 'https://api.asgardeo.io/t/{organization}/oauth2/userinfo' \
+--header 'Authorization: Bearer {your_access_token}'
 ```
 
 </CodeGroupItem>
@@ -24,11 +25,11 @@ curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/userinfo
 
 ```js
 var settings = {
-    "url": "https://api.asgardeo.io/t/bifrost/oauth2/userinfo",
+    "url": "https://api.asgardeo.io/t/{organization}/oauth2/userinfo",
     "method": "GET",
     "timeout": 0,
     "headers": {
-        "Authorization": "Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805"
+        "Authorization": "Bearer {your_access_token}"
     },
 };
 
@@ -46,9 +47,9 @@ var axios = require('axios');
 
 var config = {
     method: 'get',
-    url: 'https://api.asgardeo.io/t/bifrost/oauth2/userinfo',
+    url: 'https://api.asgardeo.io/t/{organization}/oauth2/userinfo',
     headers: {
-        'Authorization': 'Bearer 46e69c49-d697-3ce0-bdfe-1decb5157805'
+        'Authorization': 'Bearer {your_access_token}'
     }
 };
 
