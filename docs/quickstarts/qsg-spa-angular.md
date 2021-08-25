@@ -43,7 +43,7 @@ Change the `asgardeo-angular-app/src/config.json` file with the relevant values.
 - **clientID** - Add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain client ID</a> from the Asgardeo console.
 - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
 
-``` json{2,3}
+``` json{2,3} no-line-numbers
 {
     "clientID": "<client ID>",
     "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
@@ -56,7 +56,7 @@ Change the `asgardeo-angular-app/src/config.json` file with the relevant values.
 
 Run the following command at the root of the project to start the sample application. The app will be accessible at `https://localhost:5000`. 
 
-```bash
+```bash no-line-numbers
 npm install && npm start
 ```
 Log in to Asgardeo using your customer account credentials.

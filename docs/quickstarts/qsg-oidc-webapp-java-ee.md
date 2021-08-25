@@ -38,7 +38,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 1. Copy the **war** file downloaded in the [previous step](#download-the-sample) to the deployment location in your Tomcat server(i.e, referred as <TOMCAT_HOME>).
 2. Run the webapp from `<TOMCAT_HOME>/bin` folder to explode the webapp to edit configurations. 
-    ```shell script
+    ```shell script no-line-numbers
    sh catalina.sh start
    ```
 3. Update the `oidc-sample-app.properties` file located in `<TOMCAT_HOME>/webapps/oidc-sample-app/WEB-INF/classes` with the relevant values.    
@@ -80,7 +80,7 @@ Click the **Download sample** button to download the sample. You can also choose
      
      <br>
      
-      ``` 
+      ``` no-line-numbers
       consumerKey=<client ID>
       consumerSecret=<client secret>
       scope=openid,internal_application_mgt_view
@@ -106,7 +106,7 @@ Now you have added the relevant configurations.
 
 Stop and restart the tomcat server with the default port `8080` for the newly added changes to be applied to the application.
 
-```shell script
+```shell script no-line-numbers
 sh catalina.sh stop
 sh catalina.sh start
 ```

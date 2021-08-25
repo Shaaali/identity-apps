@@ -21,11 +21,11 @@ To register an app in Facebook:
 4. To add [Facebook login](https://developers.facebook.com/docs/facebook-login/), Click **Set Up** on **Facebook Login** card.
 5. Select **Web** type.
 6. Provide below as **Site URL**.
-    ```
+    ``` no-line-numbers
     https://api.asgardeo.io/t/<organization_name>
     ```
 7. Go to **Settings** under **Facebook Login**, and add below as **Valid OAuth Redirect URIs**.
-   ```
+   ``` no-line-numbers
    https://api.asgardeo.io/t/<organization_name>/commonauth
    ```
 9. Enable **Client OAuth Login** and **Web OAuth Login** (These configs are enabled by default). 

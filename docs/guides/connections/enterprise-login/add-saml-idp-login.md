@@ -20,7 +20,7 @@ To get started, you need to have an application registered in Asgardeo. If you d
 You need to register Asgardeo as a SAML application in the external identity provider. Follow the identity provider's documentation to know how to register a SAML application.
 
 You can use the following URL as the **Assertion Consumer Service URL**(also known as callback URL/ redirect URL/ ACS URL) of the application which represents Asgardeo. 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/commonauth
 ```
 

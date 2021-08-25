@@ -18,13 +18,13 @@ You can do the following on this portal:
 
 The format of the My Account portal URL is as follows:
 
-```
+``` no-line-numbers
 https://myaccount.asgardeo.io/t/{organization_name}
 ```
 
 Example URL:
 
-```
+```  no-line-numbers
 https://myaccount.asgardeo.io/t/bifrost
 ```
 

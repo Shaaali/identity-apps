@@ -43,7 +43,7 @@ Click the **Download sample** button to download the sample. You can also choose
   - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain the client ID</a> from the Asgardeo console.
   - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
 
-    ``` HTML{2,4}
+    ``` HTML{2,4} no-line-numbers
     const authConfig = {
         clientID: "<client ID>",
         signInRedirectURL: "https://localhost:5000",
@@ -55,7 +55,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000`. 
 
-```bash
+```bash no-line-numbers
 npm install && npm start
 ```
 

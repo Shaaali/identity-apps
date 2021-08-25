@@ -6,7 +6,7 @@ By using a signature validation library, you can validate the signature of the I
 
 **JWKS endpoint:**
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/jwks
 ```
 
@@ -62,7 +62,7 @@ axios(config)
 
 _Sample response:_
 
-```json
+```json no-line-numbers
 {
   "keys": [
     {

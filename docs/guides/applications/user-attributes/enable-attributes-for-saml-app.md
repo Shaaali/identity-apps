@@ -89,7 +89,7 @@ The subject attribute is shared via the `<saml2:Subject>` element based on the [
 
 _A sample Subject element found in a SAML assertion is given below:_
 
-```xml
+```xml no-line-numbers
 <saml2:Subject>
 	<saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">alice@bifrost.com</saml2:NameID>
 	<saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
@@ -106,7 +106,7 @@ _A sample Subject element found in a SAML assertion is given below:_
 The user attributes that are consented by the user will be shared with applications via the `<saml2:AttributeStatement>` element.
 
 _A sample attribute statement element found in a SAML assertion is given below:_
-```xml
+```xml no-line-numbers
 <saml2:AttributeStatement>
         <saml2:Attribute Name="http://wso2.org/claims/country"
                          NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
@@ -131,7 +131,7 @@ If you have done any custom attribute mapping via the [Enable mapping](#map-user
 
 _A sample attribute statement element with custom attribute mapping is given below:_
 
-```xml
+```xml no-line-numbers
 <saml2:AttributeStatement>
             <saml2:Attribute Name="country"
                              NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"

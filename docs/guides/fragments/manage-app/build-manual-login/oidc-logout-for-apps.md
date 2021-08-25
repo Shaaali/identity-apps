@@ -3,13 +3,13 @@ successfully logged out, he will be redirected to the registered authorized redi
 
 **Logout endpoint:**
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oidc/logout
 ```
 
 **Sample url:**
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/bifrost/oidc/logout?id_token_hint=<id_token>&post_logout_redirect_uri=<redirect URI>&state=<state>
 ```
 
@@ -36,7 +36,7 @@ The logout request has some parameters. See [RP-initiated logout request](https:
 
 **Sample response:**
 
-```
+``` no-line-numbers
 http://myapp.com?state=state-param
 ```
 

@@ -16,11 +16,11 @@ To get started, you need to have an application registered in Asgardeo. If you d
 2. Go to [Github](https://github.com/) and create an OAuth App.
 3. Provide below URLs while configuring the app. 
     - **Homepage URL**.
-      ```
+      ``` no-line-numbers
        https://api.asgardeo.io/t/<organization_name>
       ```
    - **Authorization callback URL**
-      ```
+      ``` no-line-numbers
       https://api.asgardeo.io/t/<organization_name>/commonauth
       ```
 4. Obtain **Client ID** and **Client secret**.

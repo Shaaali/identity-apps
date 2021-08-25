@@ -60,7 +60,7 @@ You need to enable `email_home` as a <a :href="$withBase('/guides/applications/u
 
 After user authentication, you can find the `email_home` claim in the ID token as shown below.
 
-```
+``` no-line-numbers
     {
       "isk": "69b37037a2349763dc48e2a30a62c3feebf0b5823cf869e149352737ddc0ca63",
       "at_hash": "7qgloEmkz3kGBTtH7RI4qw",

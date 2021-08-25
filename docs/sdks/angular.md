@@ -23,7 +23,7 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
 
 Run the following command to install the Angular SDK and the necessary dependencies from the npm registry.
 
-```
+``` no-line-numbers
 npm install @asgardeo/auth-angular --save
 ```
 <br>
@@ -113,8 +113,8 @@ getAccessToken() {
 ```
 
 **Sample** `accessToken`:
-
-```
+ 
+``` no-line-numbers
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
@@ -138,7 +138,7 @@ getDecodedIdToken() {
 
 **Sample** `decodedIdToken` object is given below:
 
-```
+``` no-line-numbers
 {
   "isk": "a26bd07d5298e1a427334248c82ba82d01c5d5be55aa27bbabf060fc88a76b7c",
   "at_hash": "8vJsHIxjIqfws9Ia2r8zKw",
@@ -202,7 +202,7 @@ getUserInfo(){
 
 **Sample** `userinfoResponse` object is below:
 
-```
+``` no-line-numbers
 {
   "allowedScopes": "openid",
   "sessionState": "977a152b3dc3584de549f150aed85d8e1a5bb62bc1e73d0c6f3516a69b608a1d.hsMArR21vaiMKvTRNgZ1Bw",
