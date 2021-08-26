@@ -1,6 +1,7 @@
 <template>
   <div class="navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+
     <RouterLink
         :to="$localePath"
         class="home-link"
@@ -32,8 +33,8 @@
     >
       <DarkmodeSwitch class="darkmode-switch"/>
       <AlgoliaSearchBox
-        v-if="isAlgoliaSearch"
-        :options="algolia"
+          v-if="isAlgoliaSearch"
+          :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
       <!-- <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/> -->
