@@ -32,7 +32,7 @@
       } : {}"
     >
       <DarkmodeSwitch class="darkmode-switch"/>
-      <AlgoliaSearchFull
+      <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"
       />
@@ -45,7 +45,7 @@
 <!--<script src="./Navbar" />-->
 
 <script>
-import AlgoliaSearchFull from '@theme/components/AlgoliaSearch/Full.vue'
+import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
@@ -57,7 +57,7 @@ export default {
     SidebarButton,
     NavLinks,
     SearchBox,
-    AlgoliaSearchFull,
+    AlgoliaSearchBox,
     Button, 
     DarkmodeSwitch
   },
