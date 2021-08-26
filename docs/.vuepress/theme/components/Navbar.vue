@@ -1,7 +1,6 @@
 <template>
   <div class="navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
-
     <RouterLink
         :to="$localePath"
         class="home-link"
