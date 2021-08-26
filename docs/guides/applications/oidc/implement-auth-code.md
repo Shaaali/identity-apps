@@ -9,8 +9,9 @@ You need following steps to build login to your app using authorization code gra
 1. [Get authorization code](#get-authorization-code)
 2. [Get tokens](#get-tokens)
 
-## Prerequisite
+::: info Before you start
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/#register-app')">register an application</a>.
+:::
 
 ## Get authorization code
 First, your app must initiate a login request to authorization endpoint of Asgardeo. After redirecting to Asgardeo, user will be prompted with login page if the user does is not authenticated.

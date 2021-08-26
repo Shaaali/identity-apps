@@ -1,10 +1,15 @@
 # Validate tokens by resource servers
 
-OAuth2.0 support [token introspection](https://datatracker.ietf.org/doc/html/rfc7662) to inspect the **access tokens** and **refresh tokens** using Asgardeo. 
+A resource server is responsible for protecting resources such as APIs via OAuth2 access tokens. Access tokens are intended for authorizing the access of a resource. 
+The resource server should be able to verify the access token sent by application.  If the application sends a <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#access-token')">self-contained JWT access token</a>, then resource server can validate the access token without interacting with IdP. OAuth2.0 support [token introspection](https://datatracker.ietf.org/doc/html/rfc7662) to inspect the **access tokens** and **refresh tokens** using IdPs. 
 
-A  resource server can inspect access tokens and refresh tokens using Asgardeo and know the information related to thoose tokens.
+Asgardeo provides `/oauth2/introspect` endpoint to perform token validation. A resource server can inspect tokens using Asgardeo and know the information related to the tokens. In Asgardeo, the resource server has to use client secret basic authentication to authenticate to the token introspection endpoint. You have to send it as Authorization header in the request  as `Authorization: Basic BASE46_ENCODING<client_id:client_secret>`
 
-The resource server has to use client_secret_basic authentication to authenticate to intropsect endpoint. You have to send it as Authorization header in the request  as `Authorization: Basic BASE46_ENCODING<client_id:client_secret>`
+**Token introspection endpoint:**
+
+``` no-line-numbers
+https://api.asgardeo.io/t/<organization_name>/oauth2/introspect
+```
 
 :::tip Tips
 To perform base 64 encoding of client ID and secret, you can use some tools, or you can run below command.

@@ -120,14 +120,14 @@ module.exports = config({
                                 title: 'Implement OIDC flows',
                                 prefix: 'oidc/',
                                 children: [
-                                    ['discover-oidc-configs', 'Discover OIDC endpoints'],
-                                    ['implement-auth-code', 'Add Authorization code flow'],
-                                    ['implement-auth-code-with-pkce.md', 'Add Authorization Code flow with PKCE'],
+                                    ['discover-oidc-configs.md', 'Discover OIDC endpoints'],
+                                    ['implement-auth-code.md', 'Implement Authorization code flow'],
+                                    ['implement-auth-code-with-pkce.md', 'Implement Authorization Code flow with PKCE'],
                                     ['validate-id-tokens.md', 'Validate ID tokens'],
                                     ['request-user-info.md', 'Request user information'],
                                     ['introspect-tokens.md', 'Validate tokens'],
                                     ['revoke-tokens.md', 'Revoke tokens'],
-                                    ['add-logout.md', 'Add logout'],
+                                    ['add-logout.md', 'Implement logout'],
                                 ]
                             },
                             {

@@ -1,4 +1,4 @@
-# Revoke tokensby apps
+# Revoke tokens by apps
 
 OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc7009) to revoke any access granted to them. This token endpoint can revoke **access tokens** and **refresh tokens**. 
 
@@ -12,7 +12,13 @@ Public clients such as SPAs, mobile apps can't store credentials securely. Those
 - Revoking access token revocation endpoint will not revoke the refresh token.
 ::: 
 
-## Token revocation for confidential clients
+**Token revocation endpoint:**
+
+``` no-line-numbers
+https://api.asgardeo.io/t/<organization_name>/oauth2/revoke
+```
+
+## Token revocation by confidential clients
 
 Token endpoint requires client authentication for confidential clients. Asgardeo supports both:
  - **client_secret_post**: You can either send client_id and client_secret as body parameters in the POST message
@@ -148,7 +154,7 @@ curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/revoke'
 Once the token is revoked, you will get 200 OK.
 
 
-## Token revocation for public clients
+## Token revocation by public clients
 
 Since public clients can't store credentials securly, they don't  need to do  authentication when invoking token revocation. But they need to submit their client ID.
 
@@ -247,6 +253,6 @@ This token revocation request for public clients has some parameters:
 
 Once the token is revoked, you will get 200 OK.
 
-::: info 
+::: info  Info
 You will always get 200 OK response when you try to revoke a token that is invalid, expired, or already revoked. This will help to prevent any information leaks.
 :::

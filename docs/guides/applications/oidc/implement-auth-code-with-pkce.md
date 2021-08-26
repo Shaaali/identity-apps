@@ -3,7 +3,7 @@
 A public client is an application which cannot keep the client credentials securely. <a :href="$withBase('/guides/applications/spa/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
 It is recommended to use authorization code grant type for public clients. In addition to that, [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with authorization code flow to mitigate code interception attacks.
 
-By following this guide, you will be able to understand the authorization code flow with PKCE and build on to your application.
+By following this guide, you will be able to understand the authorization code flow with PKCE and build on to your single-page application.
 
 The below diagram explains how login using authorization code grant works with Asgardeo.
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
@@ -12,8 +12,8 @@ You need following steps to build login to your app using authorization code gra
 1. [Get authorization code](#get-authorization-code)
 2. [Get tokens](#get-tokens)
 
-::: info
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/#register-app')">register an application</a>.
+::: info Before you start
+To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/spa/register-single-page-app/#register-app')">register a single-page application</a>.
 :::
 
 ## Get authorization code
