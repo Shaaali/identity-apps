@@ -1,18 +1,18 @@
 
 First, your app must initiate a login request to Asgardeo. After redirecting to Asgardeo, user will be prompted with login page if the user does is not authenticated.
-```  
+```   no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/authorize?scope={scope}&response_type=code&redirect_uri={redirect_uri}&client_id={client_id}&code_challenge=<code_challenge>&code_challenge_method=<code_challenge_method>
 ```
 
 **Authorization endpoint:**
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/authorize
 ```
 
 **Sample login request:**
 
-```  
+```   no-line-numbers
 https://api.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=code&redirect_uri=https://localhost:5000&client_id=fv_LScHaB83PN4VPX1cHufphtHQa&code_challenge_method=S256&code_challenge=IMbNq8j9HZBlbLuZ4nHcYOv1ZkRF5TVNAfVIGyeUsi0
 ```
 
@@ -60,7 +60,7 @@ Once the user authenticated, Asgardeo will redirect to `redirect_uri` with autho
 
 **Sample response:**
 
-```
+``` no-line-numbers
 https://localhost:5000/?code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d&session_state=a0c3bc89849ba0f236791f7fe76a837b7b4422fdc9aca16db394d19a28724a29.wQc7eSHSRrGNfECJRMhSAw
 ```
 

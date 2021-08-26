@@ -2,7 +2,7 @@
 Specifies the recipient(s) that this ID token is intended for. By default, the client ID of this application is added as an audience. You can add multiple audiences in the ID token.
 
  _Sample default ID token_:
- ```json
+ ```json no-line-numbers
  {
   "isk": "c37e33a87f794f9db4e43eeec5596dd0f64ba43c2c8a6e35eb4bd09e8a09d58a",
   "at_hash": "sXH3BGop66MmXp0CCWDk2A",
@@ -22,7 +22,7 @@ Specifies the recipient(s) that this ID token is intended for. By default, the c
 
  _Sample ID token when `sample_app` is added as a audience value_:
 
- ```json
+ ```json no-line-numbers
  {
   "isk": "1f77c2907c1c2670d73909d3dad38cd02ecda3c21a343dec9d75b51630ca5418",
   "at_hash": "a387Ursh5iNxeMmNViWT2A",

@@ -9,7 +9,7 @@ Follow the steps given below to deploy a sample Java EE web application in your 
 ## Prerequisites
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
 - You need to have a web application registered. If you don't, <a :href="$withBase('/guides/applications/web-app/register-saml-web-app')">register a SAML application</a> in Asgardeo.
-- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">customers</a> can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
 
 ## Download the sample
 
@@ -37,7 +37,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 1. Copy the **war** file downloaded in the [previous step](#download-the-sample) to the deployment location in your Tomcat server (i.e, referred as <TOMCAT_HOME>).
 2. Run the webapp from the `<TOMCAT_HOME>/bin` folder to explode it and edit the configurations. If your Tomcat server is set to auto-deploy applications by default, then the war file copied into the deployment location will be extracted automatically. If not, go ahead and restart the server to get the extracted sample.
-    ```shell script
+    ```shell script no-line-numbers
     sh catalina.sh start
     ```
 3. Update the `sample-app.properties` file located in `<TOMCAT_HOME>/webapps/sample-app/WEB-INF/classes` with the relevant values.    
@@ -88,7 +88,7 @@ Click the **Download sample** button to download the sample. You can also choose
     </tr>
     <tr>
       <td>SAML2.EnableAssertionEncryption</td>
-      <td>If this configuration is set to <code>true</code>, the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a href="/guides/applications/web-app/saml/saml-settings/#enable-encryption">enable encryption for SAML assertion</a> from Asgardeo.</td>
+      <td>If this configuration is set to <code>true</code>, the application expects an encrypted SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app')">enable encryption for SAML assertion</a> from Asgardeo.</td>
     </tr>
     <tr>
       <td>SAML2.EnableRequestSigning</td>
@@ -103,7 +103,7 @@ Click the **Download sample** button to download the sample. You can also choose
      
      <br>
      
-      ``` 
+      ```  no-line-numbers
       SAML2.AssertionConsumerURL=http://localhost:8080/sample-app/home.jsp
       SAML2.SPEntityId=http://localhost.com:8080/spring-security-saml2-sample/saml/metadata
       
@@ -140,7 +140,7 @@ Now you have added the relevant configurations in your sample application.
 
 Stop and restart the Tomcat server with the default port `8080` for the newly added changes to be applied.
 
-```shell script
+```shell script no-line-numbers
 sh catalina.sh stop
 sh catalina.sh start
 ```

@@ -4,7 +4,7 @@ information as a payload by invoking the userinfo endpoint with the access token
 
 **Userinfo endpoint:**
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/userinfo
 ```
 
@@ -67,7 +67,7 @@ axios(config)
 **Default sample response:**  
 Asgardeo returns only `sub` claim, if there is no user attributes shared with the application.
 
-```json
+```json no-line-numbers
 {
   "sub": "user1@bifrost.com"
 }

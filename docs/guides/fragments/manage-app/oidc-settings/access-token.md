@@ -3,7 +3,7 @@ In additional to usual opaque tokens, Asgardeo supports self-contained JWT token
 
 1. **Opaque**: These types of tokens are plain text tokens. If a resource server wants to know information related to opaque token, it has to query introspection endpoint and get the information related to tokens.
    
-```json
+```json no-line-numbers
 {
 "access_token": "9fac7747-bb2d-46be-bef2-a95b2f69f8b2",
 "scope": "openid",
@@ -15,7 +15,7 @@ In additional to usual opaque tokens, Asgardeo supports self-contained JWT token
       
 2. **JWT token**: JWT tokens are self-contained verifiable access tokens. They contain information related to tokens. If a resource server wants to know the information related to that token, it can decode the token and get the required information without any additional network calls.
 
-```json
+```json no-line-numbers
 {
  "access_token": "eyJ4NXQiOiJZemM1T1Rnd1pURTNNV1F6TVdFek5ERm1OelZoTTJOaU9UQmxOamN3TlRJNU9HTTBNbVExWWprd1lqZzJNVEl3WldNd056TTRNemcxWkdJeVpEZzNaQSIsImtpZCI6Ill6YzVPVGd3WlRFM01XUXpNV0V6TkRGbU56VmhNMk5pT1RCbE5qY3dOVEk1T0dNME1tUTFZamt3WWpnMk1USXdaV013TnpNNE16ZzFaR0l5WkRnM1pBX1JTMjU2IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJBbGljYUBiaWZyb3N0LmNvbSIsImF1dCI6IkFQUExJQ0FUSU9OX1VTRVIiLCJhdWQiOiJXc29xOHQ0bkhXODBnU25QZnlEdlJiaUNfX0VhIiwibmJmIjoxNjIzOTA0ODA1LCJhenAiOiJXc29xOHQ0bkhXODBnU25QZnlEdlJiaUNfX0VhIiwic2NvcGUiOiJvcGVuaWQiLCJpc3MiOiJodHRwczpcL1wvYWNjb3VudHMuYXNnYXJkZW8uaW9cL3RcL2JpZnJvc3RcL29hdXRoMlwvdG9rZW4iLCJleHAiOjE2MjM5MDg0MDUsImlhdCI6MTYyMzkwNDgwNSwianRpIjoiOWZhYzc3NDctYmIyZC00NmJlLWJlZjItYTk1YjJmNjlmOGIyIn0.ETimDfsoXiV2wqkCy7ZWZ-cO3mK8VaGKXvbBeFd8hh5TceGppRvrOs_0Kxez6p8gVRTrCbv-iBIrJFikl_I_euqTk30-JfPxvh0ox5RxY_4nsXs8GGycJwL40XfssE5BLlFSff2YIsbvy6Mbih8_Jerb-RA6j7cAZSII_T-4ATD7mk9DeXmK_-jwqBoyH0UNtAxJKLgfIs8G2yIiioaS4rSnX8tEGGvPvcaDzeTdNx2RNKod_EYlWDNJVtJHUf61lstu4WSA0pdHyP5_Fpbhe4pu_FaXeSMyAwsHYIENWVarB8kknvyUnL51lkoOrIJaSHRjqIbSNteIJ3QyEQ-a8Q",
  "scope": "openid",

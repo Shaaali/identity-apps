@@ -22,7 +22,7 @@ Follow the steps given below to authenticate users to your Java EE web applicati
 
 To get started with the OIDC agent, you need to add relevant dependencies. By updating the `pom.xml` file with the following dependency, you can add the OIDC agent to your project.
 
-```xml
+```xml no-line-numbers
 <dependency>
     <groupId>io.asgardeo.tomcat.oidc.agent</groupId>
     <artifactId>io.asgardeo.tomcat.oidc.agent</artifactId>
@@ -32,7 +32,7 @@ To get started with the OIDC agent, you need to add relevant dependencies. By up
 
 The Agent is hosted at **WSO2 Internal Repository**. To resolve the dependency mentioned above, point to the repository as follows.
 
-```xml
+```xml no-line-numbers
 <repositories>
     <repository>
         <id>wso2.releases</id>
@@ -62,7 +62,7 @@ authentication.
 
 _Few of the configurations such as `callBackURL` and `skipURIs` depends on the context path of your application._
 
-```
+```  no-line-numbers
 consumerKey=<consumerKey>
 consumerSecret=<consumerSecret>
 callBackURL=<YOUR_APP_PATH>/oauth2client
@@ -82,7 +82,7 @@ the [Configuration Catalog](https://github.com/asgardeo/asgardeo-tomcat-oidc-age
 
 Finally, copy and paste the following configuration to the _<YOUR_APP>/src/main/webapp/WEB-INF/web.xml_ file.
 
-```xml
+```xml no-line-numbers
 <filter>
     <filter-name>OIDCAgentFilter</filter-name>
     <filter-class>io.asgardeo.tomcat.oidc.agent.OIDCAgentFilter</filter-class>

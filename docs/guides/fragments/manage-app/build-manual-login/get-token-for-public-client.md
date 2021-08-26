@@ -7,7 +7,7 @@ Once the application obtains authorization code, application has to exchange the
 
 **Token endpoint:**
 
-```
+``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/token
 ```
 
@@ -16,7 +16,7 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/token
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
 
-``` 
+```
 curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code={authorization_doe}' \
@@ -91,7 +91,7 @@ axios(config)
 
 <CodeGroupItem title="cURL" active>
 
-``` 
+``` no-line-numbers
 curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d' \
@@ -136,7 +136,7 @@ This token request has some parameters. See [Token request with authorization co
 
 **Sample response:**
 
-```json
+```json no-line-numbers
 {
   "access_token": "54bd024f-5080-3db5-9422-785f5d610605",
   "refresh_token": "7024af0f-9216-3b8f-a249-edf6db7f72ab",

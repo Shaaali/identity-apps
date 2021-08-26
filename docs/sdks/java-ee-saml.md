@@ -27,7 +27,7 @@ Follow the steps given below to install the SAML agent.
 
     To get started, you need to enable the SAML agent in your application's project by adding the relevant dependencies to the `pom.xml` file.
 
-    ```xml
+    ```xml no-line-numbers
     <dependency>
         <groupId>io.asgardeo.tomcat.saml.agent</groupId>
         <artifactId>io.asgardeo.tomcat.saml.agent</artifactId>
@@ -39,7 +39,7 @@ Follow the steps given below to install the SAML agent.
 
     The agent is hosted at **WSO2 Internal Repository**. Point to this nexus repository to resolve the dependency mentioned above.
 
-    ```xml
+    ```xml no-line-numbers
     <repositories>
         <repository>
           <id>wso2.releases</id>
@@ -67,7 +67,7 @@ To initialize the SAML agent, you need a property file with the configurations s
 Create a file named **sample-app.properties** inside the **<YOUR_APP>/src/main/resources** directory, using the content below.
 
 
-``` 
+```   no-line-numbers
 SAML2.AssertionConsumerURL=<acs_url>
 SAML2.SPEntityId=<entity_id>
 
@@ -184,7 +184,7 @@ See the complete list of [configuration properties](https://github.com/asgardeo/
 
 Copy the following configurations to the **<APP_HOME>/WEB-INF/web.xml** file and change the **certificate-file** parameter to the name of **your keystore file**.
 
-```xml
+```xml no-line-numbers
 <filter>
     <filter-name>SAML2SSOAgentFilter</filter-name>
     <filter-class>io.asgardeo.tomcat.saml.agent.SAML2SSOAgentFilter</filter-class>

@@ -8,11 +8,7 @@ User profiles can be managed using the Asgardeo Console or SCIM2 APIs. Users can
 
 This guide will give you an overview on how an administrator can manage the profiles of users.
 
-From the user's profile in Asgardeo console, admin can perform following options:
- - [View profile  of a user](#view-profile-of-a-user)
- - [Update the profile of a user.](#update-the-profile-of-a-user)
- - [Delete a user.](#delete-a-user)
- - [Reset the password of a user.](#reset-the-password-of-a-user)
+From the user's profile in the Asgardeo console, admin can perform following options.
  
 ## View profile of a user
 
@@ -40,7 +36,7 @@ To update the user profile:
 To delete a user from user profile view:
 1. Click **Delete User** in **Profile** section of the selected user.
   <img :src="$withBase('/assets/img/guides/users/delete-user.png')" alt="Delete user">
-2. Type the user's username to confirm the action.
+2. Enable the checkbox to confirm your action. 
 3. Click **Confirm**.     
 
 ## Reset the password of a user

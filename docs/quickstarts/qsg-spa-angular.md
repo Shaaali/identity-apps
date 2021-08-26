@@ -8,9 +8,9 @@ Following this guide, you will be able to deploy a sample Angular single page ap
 
 ## Prerequisites
 
-- You need to have npm with Node.js. If you don't have it, [install npm and node](https://www.npmjs.com/get-npm) in your local environment.
-- You need to have a single-page application registered. If you don't have an app registered, <a href ="/guides/applications/spa/register-app">register an application</a> in Asgardeo.
-- Only <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/user-management/manage-users/user-accounts/customer/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
+- You need to have npm with Node.js. If you don't have it, [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
+- You need to have a single-page application registered. If you don't have an app registered, <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">register an application</a> in Asgardeo.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
 
 Follow the steps given below in order to try out the sample application.
 
@@ -40,10 +40,10 @@ Click the **Download sample** button to download the sample. You can also choose
 
 Change the `asgardeo-angular-app/src/config.json` file with the relevant values.
 
-- **clientID** - You need to add the client id of the registered application. See <a href = "/guides/applications/spa/configure-login/#obtain-client-id">how to obtain client ID</a> from the Asgardeo console.
-- **serverOrigin** - "https://api.asgardeo.io/t/<organization_name>"
+- **clientID** - Add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain client ID</a> from the Asgardeo console.
+- **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
 
-``` json{2,3}
+``` json{2,3} no-line-numbers
 {
     "clientID": "<client ID>",
     "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
@@ -56,7 +56,7 @@ Change the `asgardeo-angular-app/src/config.json` file with the relevant values.
 
 Run the following command at the root of the project to start the sample application. The app will be accessible at `https://localhost:5000`. 
 
-```bash
+```bash no-line-numbers
 npm install && npm start
 ```
 Log in to Asgardeo using your customer account credentials.

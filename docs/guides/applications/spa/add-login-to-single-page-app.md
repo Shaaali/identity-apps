@@ -17,3 +17,6 @@ The following guides provide the detailed steps needed to secure your SPAs with 
 - [React SDK](/sdks/react.md)
 - [Angular SDK](/sdks/angular.md)
 - [Javascript SDK](/sdks/javascript.md)
+
+### Manually add login to your SPA
+- <a :href="$withBase('/guides/applications/oidc/integrate-public-client/')">Implement authorization code flow with PKCE</a>

@@ -11,27 +11,21 @@ To get started, you need to have an application registered in Asgardeo. If you d
 -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
 -   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">web app with SAML</a>
 
-## Add Github login
-In order to add Github login to your app, follow below steps
- 1. [Register OAuth app in Github](#register-app-in-github)
- 2. [Create Github Identity Provider](#create-github-identity-provider)
- 3. [Enable Github login](#enable-github-login)
-
-### Register app in Github
+## Register app in Github
 1. Follow this [Github documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app) to create Asgardeo as an OAuth app in Github.
 2. Go to [Github](https://github.com/) and create an OAuth App.
 3. Provide below URLs while configuring the app. 
     - **Homepage URL**.
-      ```
+      ``` no-line-numbers
        https://api.asgardeo.io/t/<organization_name>
       ```
    - **Authorization callback URL**
-      ```
+      ``` no-line-numbers
       https://api.asgardeo.io/t/<organization_name>/commonauth
       ```
 4. Obtain **Client ID** and **Client secret**.
 
-### Create Github Identity Provider
+## Create Github Identity Provider
 1. On the Asgardeo Console, click **Develop > Connections**.
 2. Click **New Connections**.
 3. Select **Github**.
@@ -47,7 +41,7 @@ In order to add Github login to your app, follow below steps
      
        Asgardeo needs these scopes to get user information and sends this to application based on the attribute configurations in the application. You can read [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to know more about scopes.
  
-###  Enable Github login
+##  Enable Github login
 1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
 3. Click **Start with Default configuration**(If you have not modified the default sign in flow).

@@ -8,8 +8,9 @@ Following this guide, you will be able to deploy a sample Java EE web applicatio
 
 ## Prerequisites
 - Download [Apache tomcat](https://tomcat.apache.org/tomcat-9.0-doc/) 9.x or 8.x in your local environment.
-- You should have registered a web application. If you don't have an app registered, <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a> in Asgardeo.
-- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="('/guides/users/manage-customers/#onboard-a-customer')">Create customer account</a> if you don't already have one.
+- You need a web application registered. If you don't have an app registered, <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a> in Asgardeo.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-a-customer')">Create a customer account</a> if you don't already have one.
+
 
 ## Download the sample
 
@@ -37,7 +38,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 1. Copy the **war** file downloaded in the [previous step](#download-the-sample) to the deployment location in your Tomcat server(i.e, referred as <TOMCAT_HOME>).
 2. Run the webapp from `<TOMCAT_HOME>/bin` folder to explode the webapp to edit configurations. 
-    ```shell script
+    ```shell script no-line-numbers
    sh catalina.sh start
    ```
 3. Update the `oidc-sample-app.properties` file located in `<TOMCAT_HOME>/webapps/oidc-sample-app/WEB-INF/classes` with the relevant values.    
@@ -45,11 +46,11 @@ Click the **Download sample** button to download the sample. You can also choose
      <table>
       <tr>
           <td>consumerKey</td>
-          <td>Add the client id of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client ID</a> from Asgardeo console.</td>
+          <td>Add the client id of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain the client ID</a> from the Asgardeo console.</td>
       </tr>
       <tr>
         <td>consumerSecret</td>
-        <td>Add the client secret of the registered application. Refer <a href = "/guides/applications/web-app/oidc/configure-login/#obtain-client-id-and-client-secret">how to obtain client secret</a> from Asgardeo console.</td>
+        <td>Add the client secret of the registered application. Refer <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-and-client-secret')">how to obtain the client secret</a> from the Asgardeo console.</td>
       </tr>
       <tr>
         <td>scope</td>
@@ -79,7 +80,7 @@ Click the **Download sample** button to download the sample. You can also choose
      
      <br>
      
-      ``` 
+      ``` no-line-numbers
       consumerKey=<client ID>
       consumerSecret=<client secret>
       scope=openid,internal_application_mgt_view
@@ -105,7 +106,7 @@ Now you have added the relevant configurations.
 
 Stop and restart the tomcat server with the default port `8080` for the newly added changes to be applied to the application.
 
-```shell script
+```shell script no-line-numbers
 sh catalina.sh stop
 sh catalina.sh start
 ```

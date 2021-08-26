@@ -72,7 +72,6 @@ const getPluginConfig = (themeConfig) => {
                     layoutChunkName: (layout) => `layout-${layout.componentName}`,
                 },
         ],
-        ["@mr-hope/copy-code", themeConfig.copyCode],
         ["photo-swipe", themeConfig.photoSwipe],
         ["smooth-scroll", themeConfig.smoothScroll],
         [
@@ -84,6 +83,34 @@ const getPluginConfig = (themeConfig) => {
                         : {},
                 }
                 : false,
+        ],
+        [
+            "container", 
+            {
+                type: "danger",
+                defaultTitle: "",
+            }
+        ],
+        [
+            "container", 
+            {
+                type: "info",
+                defaultTitle: "",
+            }
+        ],
+        [
+            "container", 
+            {
+                type: "tip",
+                defaultTitle: "",
+            }
+        ],
+        [
+            "container", 
+            {
+                type: "warning",
+                defaultTitle: "",
+            }
         ],
     ];
 };
