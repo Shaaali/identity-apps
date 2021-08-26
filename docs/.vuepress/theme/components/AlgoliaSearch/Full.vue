@@ -343,7 +343,6 @@ body.theme-dark
     padding-left var(--docsearch-spacing)
     border-radius 4px
     background var(--bgcolor)
-    // box-shadow var(--docsearch-hit-shadow)
     display block
 
   &[aria-selected='true'] a
