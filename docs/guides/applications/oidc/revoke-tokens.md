@@ -1,15 +1,15 @@
-# Revoke tokens by apps
+# Revoke access tokens
 
 OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc7009) to revoke any access granted to them. This token endpoint can revoke **access tokens** and **refresh tokens**. 
 
-Confidential clients such as  web apps can keep the client credentials securely. Those clients need to prove their identity when they access revocation endpoint to revoke access tokens. 
+Confidential clients such as  web apps can keep the client credentials securely. Those clients need to prove their identity when they access the  revocation endpoint to revoke access tokens. 
 
 Public clients such as SPAs, mobile apps can't store credentials securely. Those apps need to submit only their client ID to identify the apps during token revocation.  
 
 
 ::: info Info
-- Revoking a refresh token via revocation endpoint will not revoke the respective access token.
-- Revoking access token revocation endpoint will not revoke the refresh token.
+- Revoking a refresh token via the revocation endpoint will not revoke the respective access token.
+- Revoking an access token via the revocation endpoint will not revoke the respective refresh token.
 ::: 
 
 **Token revocation endpoint:**
@@ -21,8 +21,8 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/revoke
 ## Token revocation by confidential clients
 
 Token endpoint requires client authentication for confidential clients. Asgardeo supports both:
- - **client_secret_post**: You can either send client_id and client_secret as body parameters in the POST message
- - **client_secret_basic**: You can send it as Authorization header in the request  as `'Authorization: Basic BASE64_ENCODED_CLIENT_ID_AND_CLIENT_SECRET'`
+ - **client_secret_post**: You can either send client_id and client_secret as body parameters in the POST message.
+ - **client_secret_basic**: You can send this value in the request header as: `'Authorization: Basic BASE64_ENCODE<client_id:client_secret>'`.
 
 Apart from client authentication, the revocation request has some other parameters as well.
 
@@ -38,14 +38,14 @@ Apart from client authentication, the revocation request has some other paramete
     </tr>
   <tr>
     <td>token_type_hint<Badge text="Optional" type="optional"/></td>
-    <td>The type of the token. If the token is access token, the type should be <b>access_token</b>. For refresh token, the type should be <b>refresh_token</b></td>
+    <td>The type of the token. If the token is an access token, the type should be <b>access_token</b>. For a refresh token, the type should be <b>refresh_token</b></td>
   </tr>
 </table>
 <br>
 
 ### Client secret post based authentication
 
-In client secret post based authentication, apps cann send the `client_id` and `client_secret` as body params in the revocation request. 
+In this method, the app can send the `client_id` and `client_secret` as body params in the revocation request. 
 
 Sample request is given below.
 
@@ -123,15 +123,14 @@ axios(config)
 
 ### Client secret basic authentication
 
-In client secret basic authentication, application has to do base64 encoding on the client ID and client secret and pass that as basic authorization header in the revocation request.
+In client secret basic authentication, the application has to do base64 encoding on the client ID and client secret and pass that as a basic authorization header in the revocation request.
 
-The authorization header should look like below:
+The authorization header should look as follows:
 
 `Basic BASE46_ENCODING<your_client_id:your_client_secret>`   
 
 :::tip Tips
-To perform base 64 encoding of client ID and secret, you can use some tools, or you can run below command.
-
+To perform base64 encoding for the client ID and secret, you can use a tool, or you can run the below command.
 `
 echo -n '<your_client_id:your_client_secret>' | base64
 `
@@ -150,9 +149,7 @@ curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/revoke'
 ```
 </CodeGroupItem>
 
-
-Once the token is revoked, you will get 200 OK.
-
+When the token is revoked, you will get a `200 OK` response.
 
 ## Token revocation by public clients
 
@@ -230,7 +227,7 @@ axios(config)
 </CodeGroup>
 
 
-This token revocation request for public clients has some parameters:
+This token revocation request for public clients has the following parameters:
 <br>
 <table>
   <tr>
@@ -243,16 +240,16 @@ This token revocation request for public clients has some parameters:
     </tr>
   <tr>
     <td>token_type_hint<Badge text="Optional" type="optional"/></td>
-    <td>The type of the token. If the token is access token, the type should be _access_token_. For refresh token, the type should be _refresh_token_</td>
+    <td>The type of the token. If the token is an access token, the type should be <b>access_token</b>. For a refresh token, the type should be <b>refresh_token</b></td>
   </tr>
   <tr>
     <td>client_id<Badge text="Required" type="mandatory"/></td>
-    <td>Client ID of the application</td>
+    <td>The client ID of the application</td>
   </tr>
 </table>
 
-Once the token is revoked, you will get 200 OK.
+When the token is revoked, you will get a `200 OK` response.
 
 ::: info  Info
-You will always get 200 OK response when you try to revoke a token that is invalid, expired, or already revoked. This will help to prevent any information leaks.
+You will always get a `200 OK` response when you try to revoke a token that is invalid, expired, or already revoked. This helps to prevent any information leaks.
 :::

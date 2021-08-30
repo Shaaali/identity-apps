@@ -1,24 +1,24 @@
 # Implement authorization code grant with PKCE in apps
 
-A public client is an application which cannot keep the client credentials securely. <a :href="$withBase('/guides/applications/spa/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
-It is recommended to use authorization code grant type for public clients. In addition to that, [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with authorization code flow to mitigate code interception attacks.
+A public client is an application that cannot keep the client credentials securely. <a :href="$withBase('/guides/applications/spa/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
+It is recommended to use authorization code grant type for public clients. In addition to that, [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with the authorization code grant to mitigate code interception attacks.
 
 By following this guide, you will be able to understand the authorization code flow with PKCE and build on to your single-page application.
 
 The below diagram explains how login using authorization code grant works with Asgardeo.
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
 
-You need following steps to build login to your app using authorization code grant with PKCE:
+You need following steps to to add login to your app using the authorization code grant with PKCE:
 1. [Get authorization code](#get-authorization-code)
 2. [Get tokens](#get-tokens)
 
-::: info Before you start
+## Prerequisites
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/spa/register-single-page-app/#register-app')">register a single-page application</a>.
-:::
+
 
 ## Get authorization code
 
-First, your app must initiate a login request to Asgardeo. After redirecting to Asgardeo, user will be prompted with login page if the user does is not authenticated.
+First, your app must initiate a login request to Asgardeo. After redirecting to Asgardeo, the user is prompted with a login page if the user is not already authenticated.
 ```   no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/authorize?scope={scope}&response_type=code&redirect_uri={redirect_uri}&client_id={client_id}&code_challenge=<code_challenge>&code_challenge_method=<code_challenge_method>
 ```
@@ -37,7 +37,7 @@ https://api.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=co
 
 <br>
 
-This authorization request takes some parameters. See [Authentication Request with  Authorization code](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest) and [Authorization request with PKCE](https://datatracker.ietf.org/doc/html/rfc7636#page-9)
+This authorization request takes some parameters. See [Authentication Request with Authorization code](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest) and [Authorization Request with PKCE](https://datatracker.ietf.org/doc/html/rfc7636#page-9)
 <br>
 
 <table>
@@ -47,7 +47,7 @@ This authorization request takes some parameters. See [Authentication Request wi
   </tr>
   <tr>
     <td>response_type<Badge text="Required" type="mandatory"/></td>
-    <td>Required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
+    <td>The required grant type. Here, Enter <code>code</code> to represent the authorization code grant type.</td>
   </tr>
   <tr>
     <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
@@ -55,7 +55,7 @@ This authorization request takes some parameters. See [Authentication Request wi
   </tr>
   <tr>
     <td>client_id<Badge text="Required" type="mandatory"/></td>
-    <td>Client id obtained when registering the application in Asgardeo.</td>
+    <td>The client ID that was generated when registering the application in Asgardeo.</td>
   </tr>
   <tr>
     <td>scope<Badge text="Required" type="mandatory"/></td>
@@ -72,7 +72,7 @@ This authorization request takes some parameters. See [Authentication Request wi
   </tr>
 </table>
 
-Once the user authenticated, Asgardeo will redirect to `redirect_uri` with authorization code.
+When the user is authenticated, Asgardeo redirects to the `redirect_uri` with the authorization code.
 
 
 **Sample response:**
@@ -238,4 +238,4 @@ This token request has some parameters. See [Token request with authorization co
 
 <br>
 
-To get refresh token, you need to enable `Refresh Token` grant type for the application. By default, it is enabled for single-page application template.
+To get a refresh token, you need to enable the `Refresh Token` grant type for the application. By default, it is enabled for the single-page application template.

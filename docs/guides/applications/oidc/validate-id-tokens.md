@@ -1,6 +1,6 @@
-# Validate ID tokens by apps
+# Validate ID tokens
 
-ID token is a security token sent by Asgardeo to application during token request. This ID token contain information about the authenticated user. 
+The ID token is a security token that is sent by Asgardeo to the application when a token is requested with openid scopes. This ID token contains information about the authenticated user. 
 
 **Sample ID token**
 ```no-line-numbers
@@ -26,13 +26,13 @@ eyJ4NXQiOiJZemM1T1Rnd1pURTNNV1F6TVdFek5ERm1OelZoTTJOaU9UQmxOamN3TlRJNU9HTTBNbVEx
   "sid": "f78f5f4c-1862-4209-85a3-e22c2a9c068d"
 }
 ```
-When an application receives ID token, it has to validate the token. Validating an ID token involves followings:
+When an application receives an ID token, it has to validate the ID token:
 - [Verify the signature used to sign the ID token](#verify-the-signature-in-the-id-token)
-- [Verify the claims in ID token](#verify-the-claims-in-id-token)
+- [Verify claims in the ID token](#verify-claims-in-the-id-token)
 
 
 ## Verify the signature in the ID token
-In order to validate the signature on the obtained ID token, you need the public key of Asgardeo. Signature of ID tokens can be validated using JWKS endpoint. See [ID Token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation).
+To validate the signature on the ID token, you need the public key of Asgardeo. The signature of ID tokens can be validated using the JWKS endpoint in Asgardeo. See [ID Token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation) for details.
 
 Asgardeo exposes the public key information through the standard [JWKS](https://datatracker.ietf.org/doc/html/rfc7517) endpoint.
 
@@ -114,12 +114,12 @@ _Sample response:_
 <br>
 
 
-## Verify the claims in ID token
+## Verify claims in the ID token
 
-Applications should verify the claims in the ID token before consume it. You can either use some libraries, or use manual approach to verify the claims.  See [ID token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation)
+Applications should verify the claims in the ID token before consuming it. You can either use some libraries, or you can manually verify the claims.  See [ID token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation) for details.
 
-These are some claims that are sent in ID token which needs to be verified by the application.
-- **iss**(issuer): should match the `https://api.asgardeo.io/t/<organization_name>/oauth2/token`
-- **aud**(audience): should match the Client ID of the application.
-- **iat** (issued at time): indicates when this ID token was issued. Applications can reject tokens that were issued too far away from the current time.
-- **exp** (expiry time): indicates at which time this ID token will expire. Applications should reject the expired tokens.
+Given below are some claims that are sent in ID token. These need to be verified by the application.
+- **iss**(issuer): This should match the`https://api.asgardeo.io/t/<organization_name>/oauth2/token` value.
+- **aud**(audience): This should match the client ID of the application.
+- **iat** (issued at time): This indicates when the ID token was issued. Applications can reject tokens that were issued too long ago.
+- **exp** (expiry time): This indicates at which the time at which the ID token will expire. Applications should reject the expired tokens.

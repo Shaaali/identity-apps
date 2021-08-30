@@ -4,7 +4,7 @@ You can follow this document to obtain required information and the configuratio
  - Integrate sign in with Asgardeo for your OpenID Connect SPA
  - Build login with Asgardeo using an OpenID Connect supported SDK
 
-In case, you want to implement login from scratch, see how to <a :href="$withBase('/guides/applications/oidc/implement-auth-code-with-pkce')">build OpenID Connect login flow manually</a>.
+In case, you want to implement login from scratch, see how to <a :href="$withBase('/guides/applications/oidc/implement-auth-code-with-pkce')">build the OpenID Connect login flow manually</a>.
 
 When configuring OpenID Connect based sign In, you need to know two things:
 1. [Client ID of the application](#obtain-client-id-of-the-app)
@@ -46,5 +46,5 @@ You can log  in to [Asgardeo Console](https://console.asgardeo.io/) and get endp
 
 ## What's next?
 Now you've added login to your application with Asgardeo. You also can:
-- <a :href="$withBase('/guides/applications/oidc/implement-auth-code-with-pkce')">Explore OpenID Connect authentication flow in depth</a>
+- <a :href="$withBase('/guides/applications/oidc/implement-auth-code-with-pkce')">Explore the OpenID Connect authentication flow in depth</a>
 - <a :href="$withBase('/references/app-settings/oidc-settings-for-app')">Configure advanced OpenID Connect settings</a>

@@ -1,7 +1,7 @@
 # Add logout to application
 
-OpenID Connect provides [OpenID Connect RP-Initiated Logout](https://openid.net/specs/openid-connect-rpinitiated-1_0.html) to terminate user session. The logout endpoint is used to terminate the user session at Asgardeo and log the user out. When a user is
-successfully logged out, the user will be redirected to the `post_logout_redirect_uri` sent in the logout request.
+OpenID Connect provides [OpenID Connect RP-Initiated Logout](https://openid.net/specs/openid-connect-rpinitiated-1_0.html) to terminate user sessions. The logout endpoint is used to terminate the user session at Asgardeo and to log the user out. When a user is
+successfully logged out, the user is redirected to the `post_logout_redirect_uri` sent in the logout request.
 
 **Logout endpoint:**
 
@@ -24,11 +24,11 @@ The logout request has some parameters. See [RP-initiated logout request](https:
   </tr>
   <tr>
     <td>id_token_hint<Badge text="Recommended" type="recommended"/></td>
-    <td>The ID token returned by the Asgardeo during token request is passed to the logout endpoint a hint about the End-User's current authenticated session with the Client.</td>
+    <td>The ID token returned by the Asgardeo in response to the token request is passed to the logout endpoint with a hint about the customer's current authenticated session on the application.</td>
   </tr>
   <tr>
     <td>post_logout_redirect_uri<Badge text="Optional" type="optional"/></td>
-    <td>The URL to be redirected to when the user is logging out. The value defined here should be added as one of the <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">authorized redirect URLs</a>. This should be passed along with 'id_token_hint'. If 'post_logout_redirect_uri' parameter is not passed, user will be ended up in Asgardeo common page after logout.</td>
+    <td>The URL to be redirected to during user logout. The value defined here should be added as one of the <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">authorized redirect URLs</a>. This should be passed along with the 'id_token_hint'. If 'post_logout_redirect_uri' parameter is not passed, the user will be routed to Asgardeo's common page after logout.</td>
   </tr>
   <tr>
     <td>state<Badge text="Optional" type="optional"/></td>
