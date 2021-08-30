@@ -49,7 +49,7 @@ module.exports = config({
         //     apiKey: "eb6a5c630b8ebd2d4d862a2b0aaa7a67",
         //     indexName: "asgardeo-algolia"
         // },
-
+        algoliaType: "full",
         Navbar: true,
         blog: false,
         feed: false,
