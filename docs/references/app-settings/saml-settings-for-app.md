@@ -13,7 +13,7 @@ An application can have multiple ACS URLs. SAML authentication response and logo
 Since an application can register multiple assertion consumer URLs, you need to pick one of them as the Default Assertion Consumer URL. 
 If there is only one ACS URL, it will be taken as the Default ACS URL.
 
-::: tip Criteria evaluated by Asgardeo to pick the ACS URL
+::: info Info
 - If **no ACS URL is given in the authentication request**, Asgardeo sends the response to the **default ACS URL**.
 - If an **ACS URL is given in the authentication request**, and it **matches** with one of the registered ACS URLs, the Asgardeo sends the response to the **ACS URL sent in the request**(the matched one).
 :::

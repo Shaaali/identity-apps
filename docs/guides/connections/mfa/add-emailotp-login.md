@@ -13,9 +13,10 @@ To get started, you need to have an application registered in Asgardeo. If you d
 -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
 -   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">web app with SAML</a>
 
-::: tip Note
-   - You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a :href="$withBase('/guides/connections/')">identity provider</a>.  
-   - Email OTP cannot be used as a first step in your login flow.
+::: info Info
+- You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a :href="$withBase('/guides/connections/')">identity provider</a>.  
+- Email OTP cannot be used as a first step in your login flow.
+- You can enable Email OTP for federated users as well.
 :::
   
 ## Set up Email OTP

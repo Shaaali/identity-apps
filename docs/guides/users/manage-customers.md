@@ -17,7 +17,7 @@ Let's look at how admins can onboard customers from the Asgardeo Console.
     - **Email (username):** A unique email address to identify the user. 
         <br>
         ::: warning
-        This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization and you can't change the username once it is created.
+         This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization and you can't change the username once it is created.
         :::
     - **First Name:** First name of the user. You can add/change this later.
     - **Last Name:** Last name of the user. You can add/change this later.

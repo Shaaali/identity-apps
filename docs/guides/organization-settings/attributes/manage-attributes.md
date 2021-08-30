@@ -22,7 +22,7 @@ To update the properties of a user attribute:
 2. Click **Attributes** to see the list of attributes.
 3. Click **Edit** for the attribute you want to update.
    <img :src="$withBase('/assets/img/guides/organization/attributes/edit-attributes.png')" alt="Edit attributes"> 
-   ::: tip Note
+   ::: info Info
      **Attribute** specifies the unique identifier of the attribute. It always start with `http://wso2.org/claims`. This cannot be edited.
    :::
 4. Update the following values.
