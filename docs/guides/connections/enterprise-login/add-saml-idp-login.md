@@ -83,5 +83,73 @@ You can find more additional configurations once you create SAML identity provid
 5. Select **Update**.
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/enable-saml-enterprise-login-with-basic.png')" alt="Add SAML IdP login in Asgardeo">
 
+## Configure user attributes
+
+Configuring attributes for an identity provider involves mapping the attributes available in the external SAML IdP to attributes that are local to Asgardeo. 
+This is done so that Asgardeo can identify the user attributes in the response sent from the external SAML IdP. 
+
+1. On the Asgardeo Console, click **Develop > Connections**.
+2. Select the SAML IdP connection for which you want to configure user attributes.
+3. Select **Setup** on the selected IdP connection.
+4. Go to **Attributes**.
+    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/go-to-user-attribute-page.png')" alt="Go to attributes section in SAML IdP">
+5. Click **Add IdP Attributes**.
+6. Provide the following and click **Add Attribute Mapping**.
+    - **External IdP Attribute**: The attribute from the external IdP that should be mapped to the local attribute.
+    - **Maps to**: The local attribute to which the external IdP attribute is mapped.
+    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/map-saml-idp-attributes.png')" alt="Map SAML IdP attributes">
+7. You can select one of the above mapped attributes as the **subject attribute**. 
+    :::info
+     To configure a different attribute as the subject, first you need to enable the <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/#find-user-id-from-requests')">Find user ID from requests</a> setting under SAML IdP.
+     If this setting is not enabled, Asgardeo uses the subject attribute that is sent by the external SAML IdP.
+    ::: 
+8. Click **Update**.
+
+### How it works 
+As an example,a SAML IdP will return authenticated user's nick name and profile updated time to Asgardeo in the SAML authentication response.
+- http://schemas.idp.com/nickname   : nick name
+- http://schemas.idp.com/updated_at : profile updated time
+
+You want to get them in the local attribute URI. So that application will receive them in the local attribute URI. 
+
+If you don't do that mapping, the application will receive the attributes as sent by the external IdP.
+
+**A sample IdP attribute mapping done from Asgardeo Console**:
+ <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/sample-attribute-mapping.png')" alt="Sample IdP attribute mapping">
+
+**Sample attributes in the SAML assertion of the integrated SAML app**:
+```xml no-line-numbers
+<saml2:AttributeStatement>
+            <saml2:Attribute Name="http://wso2.org/claims/modified"
+                             NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+                             >
+                <saml2:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                      xsi:type="xsd:string"
+                                      >Mon Aug 30 2021 07:26:40 GMT+0000 (Coordinated Universal Time)</saml2:AttributeValue>
+            </saml2:Attribute>
+            <saml2:Attribute Name="http://wso2.org/claims/nickname"
+                             NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+                             >
+                <saml2:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                      xsi:type="xsd:string"
+                                      >John</saml2:AttributeValue>
+            </saml2:Attribute>
+        </saml2:AttributeStatement>
+```
+
+**Sample subject attribute** in the assertion looks as shown below:
+
+```xml no-line-numbers
+<saml2:Subject>
+            <saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">John</saml2:NameID>
+            <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+                <saml2:SubjectConfirmationData InResponseTo="jimhbeljflkppacldhnjcfjkhoobkddhngnkamom"
+                                               NotOnOrAfter="2021-08-30T09:49:21.336Z"
+                                               Recipient="http://localhost:8081/sample-app/home.jsp"
+                                               />
+            </saml2:SubjectConfirmation>
+</saml2:Subject>
+```
+
 ## Related links
 - <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/')">Configure SAML IdP settings</a>

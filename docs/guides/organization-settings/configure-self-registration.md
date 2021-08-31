@@ -1,6 +1,6 @@
 # Configure self-registration
 
-<a :href="$withBase('/guides/users/manage-customers/')">Customers</a> can self-register to an organization in Asgardeo via an application’s login page. This creates a new customer account in the organization. The self-registration capability is enabled in Asgardeo organizations by default. 
+<a :href="$withBase('/guides/users/manage-customers/')">Customers</a> can self-register to an organization in Asgardeo via an application’s login page. This creates a new customer account in the organization. 
 
 To disable this capability in your organization or to change the default configurations, see the following instructions:
 

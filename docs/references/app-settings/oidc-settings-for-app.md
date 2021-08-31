@@ -24,7 +24,7 @@ Authorized redirect URLs are not required for `Client Credentials` and `Password
 
 <CommonGuide guide='guides/fragments/manage-app/oidc-settings/authorized-urls.md'/>
 
-The `redirect_uri` sent in <a :href="$withBase('/guides/applications/oidc/integrate-confidential-client/#get-authorization-code')">login</a> request and the `post_logout_redirect_uri` sent in <a :href="$withBase('/guides/applications/oidc/integrate-confidential-client/#logout-the-application')">logout request</a> should match with one of the registered authorized redirect URLs.
+The `redirect_uri` sent in the <a :href="$withBase('/guides/applications/oidc/implement-auth-code/#get-authorization-code')">login</a> request and the `post_logout_redirect_uri` sent in the <a :href="$withBase('/guides/applications/oidc/add-logout')">logout request</a> should match with one of the registered authorized redirect URLs.
 
 
 ### Allowed origins
