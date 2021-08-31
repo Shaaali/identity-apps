@@ -85,23 +85,23 @@ You can find more additional configurations once you create SAML identity provid
 
 ## Configure user attributes
 
-Configuring attributes for an identity provider involves mapping the attributes available in the external SAML IdP to attributes that are local to the Asgardeo. 
+Configuring attributes for an identity provider involves mapping the attributes available in the external SAML IdP to attributes that are local to Asgardeo. 
 This is done so that Asgardeo can identify the user attributes in the response sent from the external SAML IdP. 
 
 1. On the Asgardeo Console, click **Develop > Connections**.
-2. Select the SAML IdP connection you want to configure user attributes.
+2. Select the SAML IdP connection for which you want to configure user attributes.
 3. Select **Setup** on the selected IdP connection.
 4. Go to **Attributes**.
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/go-to-user-attribute-page.png')" alt="Go to attributes section in SAML IdP">
 5. Click **Add IdP Attributes**.
 6. Provide the following and click **Add Attribute Mapping**.
-    - **External IdP Attribute**: Attribute which you want to map from the external IdP.
-    - **Maps to**: Local attribute to which  you want to map the external IdP attribute.
+    - **External IdP Attribute**: The attribute from the external IdP that should be mapped to the local attribute.
+    - **Maps to**: The local attribute to which the external IdP attribute is mapped.
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/map-saml-idp-attributes.png')" alt="Map SAML IdP attributes">
-7. You can select one of the above mapped attribute as the **subject attribute**. 
+7. You can select one of the above mapped attributes as the **subject attribute**. 
     :::info
-     To configure a different attribute as the subject, first you need to enable <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/#find-user-id-from-requests')">Find user ID from requests</a> setting under SAML IdP.
-     If you don't enable that setting, Asgardeo will send the subject attribute as sent by the external SAML IdP.
+     To configure a different attribute as the subject, first you need to enable the <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/#find-user-id-from-requests')">Find user ID from requests</a> setting under SAML IdP.
+     If this setting is not enabled, Asgardeo uses the subject attribute that is sent by the external SAML IdP.
     ::: 
 8. Click **Update**.
 

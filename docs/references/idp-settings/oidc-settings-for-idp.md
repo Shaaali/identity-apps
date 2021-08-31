@@ -1,14 +1,14 @@
 # OIDC settings for IdPs
 
-You can find the OIDC enterprise IdP related settings under **settings** section of the selected OIDC enterprise IdP. 
+You can find the OIDC enterprise IdP settings under **settings** section of the selected OIDC enterprise IdP. 
 <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-settings.png')" alt="OIDC IdP settings">
 
 ## Mandatory settings
 ###  Client ID
-Client ID obtained when registering Asgardeo as an OIDC application in the external identity provider . 
+The client ID that is generated when registering Asgardeo as an OIDC application in the external identity provider . 
 
 ### Client secret
-Client secret obtained when registering Asgardeo as an OIDC application in the external identity provider. 
+The client secret that is generated when registering Asgardeo as an OIDC application in the external identity provider. 
 
 ### Authorization endpoint URL
 The OpenID Connect standard authorization endpoint URL of the external identity provider.
@@ -19,7 +19,7 @@ The OpenID Connect standard token endpoint URL of the external identity provider
 ### Authorized redirect URL
 This is where the user needs to be redirected after completing the authentication at the external identity provider. The identity provider needs to send the authorization code to this URL upon successful authentication.
 
-You should configure this URL `https://api.asgardeo.io/t/{your_organinzation_name}/commonauth` as the redirect URL/callback URL when you are registering  Asgardeo as an OIDC  application in the external IdP.
+You should configure `https://api.asgardeo.io/t/{your_organinzation_name}/commonauth` as the redirect URL/callback URL when you register Asgardeo as an OIDC application in the external IdP.
 
 ## Additional settings
 ### User info endpoint URL
