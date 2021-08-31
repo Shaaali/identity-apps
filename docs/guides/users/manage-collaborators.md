@@ -27,7 +27,7 @@ To onboard a collaborator via [Asgardeo Console](https://console.asgardeo.io):
      
 ## Assign roles
 
-Asgardeo roles are used for managing user permissions (to access resources on the Asgardeo console).
+Asgardeo <a :href="$withBase('/references/user-management/user-roles/')">Roles</a> are used for managing user permissions (to access resources on the Asgardeo console).
 
 To assign roles to a collaborator:
 1. On the Asgardeo Console, click **Manage > Users**.
@@ -35,6 +35,8 @@ To assign roles to a collaborator:
 3. Go to **Roles** and assign the roles.
     <img :src="$withBase('/assets/img/guides/users/assign-roles-to-collaborator.png')" alt="Assign roles to collaborator">
 4. Click **Update**.
+
+For details on available roles and the permissions assigned to them, see <a :href="$withBase('/references/user-management/user-roles/')">Asgardeo User Roles</a>.
 
 ## Delete a collaborator
 
