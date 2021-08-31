@@ -26,7 +26,7 @@ You should configure `https://api.asgardeo.io/t/{your_organinzation_name}/common
 The [OpenID Connect standard userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) of the external identity provider. If this URL is not given, user attributes will be taken from ID token obtained in the token request from external IdP.
 
 ### Logout URL
-The [OpenID Connect standard logout endpoint](https://openid.net/specs/openid-connect-rpinitiated-1_0.html#Terminology) of the external identity provider. If this URL is not given, Asgardeo will not send logout request to external IdP when a user logs out from the connected application.
+The [OpenID Connect standard logout endpoint](https://openid.net/specs/openid-connect-rpinitiated-1_0.html#Terminology) of the external identity provider. If this URL is not given, Asgardeo will not send logout requests to the external IdP when a user logs out from the connected application.
 
 ### Additional query parameters
 
