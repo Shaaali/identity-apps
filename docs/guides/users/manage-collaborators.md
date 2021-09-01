@@ -36,7 +36,7 @@ To assign roles to a collaborator:
     <img :src="$withBase('/assets/img/guides/users/assign-roles-to-collaborator.png')" alt="Assign roles to collaborator">
 4. Click **Update**.
 
-For details on available roles and the permissions assigned to them, see <a :href="$withBase('/references/user-management/user-roles/')">Asgardeo User Roles</a>.
+For details on the available user roles and the permissions assigned to them, see <a :href="$withBase('/references/user-management/user-roles/')">Asgardeo User Roles</a>.
 
 ## Delete a collaborator
 
