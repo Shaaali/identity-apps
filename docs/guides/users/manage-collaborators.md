@@ -27,7 +27,7 @@ To onboard a collaborator via [Asgardeo Console](https://console.asgardeo.io):
      
 ## Assign roles
 
-Asgardeo <a :href="$withBase('/references/user-management/user-roles/')">Roles</a> are used for managing user permissions (to access resources on the Asgardeo console).
+Asgardeo <a :href="$withBase('/references/user-management/user-roles/')">Roles</a> are used to specify the permissions that a user needs to access various resources on the Asgardeo console.
 
 To assign roles to a collaborator:
 1. On the Asgardeo Console, click **Manage > Users**.
