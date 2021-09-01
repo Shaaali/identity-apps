@@ -26,8 +26,8 @@ When your single-page application login with Asgardeo, application uses client I
 You need to know the endpoints of Asgardeo if you want to add OIDC login to your application. 
  
 There are two options for an OpenID Connect application to identify the endpoints of Asgardeo:
- 1. [Use OpenID Connect discovery](#use-openid-connect-discovery)
- 2. [Get endpoint information from Asgardeo Console](#get-endpoint-information-from-console)
+ 1. Use OpenID Connect discovery
+ 2. Get endpoint information from Asgardeo Console
  
 ### Use OpenID Connect discovery
  
