@@ -1,15 +1,14 @@
 # Add user age-based authentication
 
-To control access to your application based on the user's age, you can apply the **Age-Based** conditional authentication template. The age of the user is calculated using the `date of birth` attribute in the user's profile.
+To control access to your application based on the user's age, you can apply the **Age-Based** conditional authentication template. The age of the user is calculated using the `date of birth` attribute in the user's profile. Users are redirected to an error page if the date of birth is not specified in the user profile or if the user's age is below the minimum age configured in the template.
 
 ## Scenario
 
-Users who are below the specified age limit (i.e., under the age of 18 years) are restricted access and prevented from
-signing in to the application. Users will be redirected to an error page if the date of birth is not present or if the user's age is below the configured value.
+Consider a scenario where users who are younger than 18 years should be prevented from signing in to an application and redirected to an error message.
 
 ## Prerequisites
 
--   You need an application registered in Asgardeo. If you don't already have, register one of the following application types:
+-   You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
     -   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
     -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">Web app with SAML</a>
@@ -33,7 +32,7 @@ signing in to the application. Users will be redirected to an error page if the 
         <tbody>
             <tr>
                 <td>ageLimit</td>
-                <td>Minimum age required for the user to log in to the application.</td>
+                <td><p>Minimum age required for the user to log in to the application.</p>For this example scenario, enter <code>18</code> as the value.</td>
             </tr>
             <tr>
                 <td>errorPage</td>
@@ -41,10 +40,12 @@ signing in to the application. Users will be redirected to an error page if the 
             </tr>
             <tr>
                 <td>errorPageParameters</td>
-                <td>Parameters to be passed to the error page.</td>
+                <td>Parameters to be passed to the error page. This information will display on the error page.</td>
             </tr>
         </tbody>
     </table>
+
+7. Click **Update** to confirm.
 
 ## How it works
 
@@ -101,7 +102,7 @@ var getAge = function (birthDate) {
 Let's look at how this script works.
 
 1.  The **validateDOB** function validates whether the provided date of birth is correct.
-2.  The **getAge** function calculates the age based on the configured birthdate.
+2.  The **getAge** function calculates the age based on the configured birth date.
 3.  When step 1 of the authentication flow is complete, the **onLoginRequest** function checks whether the
 age of the user is above the configured age limit. 
 4.  If the age is below the configured limit, the user is directed to the
@@ -116,7 +117,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who is above 18 years. The user will be successfully signed in to the application.
+2. Try to log in with a user who is above 18 years of age. The user will be successfully signed in to the application.
 3. Log out of the application.
 4. Log in again with a user who is below 18 years. The user will be restricted from signing in.
     <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">

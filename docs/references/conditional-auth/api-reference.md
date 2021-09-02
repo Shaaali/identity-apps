@@ -2,9 +2,9 @@
 
 Asgardeo provides a set of defined functions and objects to write your conditional authentication script. They are grouped as follows:
 
-- [Core functions](#core-functions): These are the basic functions that are used in the script. These are used for identifying the user who intitiates the login flow, executing a step in the login flow, handling login failures, etc.
-- [Utility functions](#utility-functions): These utility functions are used for specific usecases. For example, checking whether the login user belongs to a specific user group.
-- [Object references](#object-reference): Objects that you can use to get behaviours and attributes and based on them, you can take decisions. For an example, you can use **user** object or **request** object and based on the attributes and behaviours you can go write your conditions.
+- [Core functions](#core-functions): These are the basic functions that are used in the script. These are used for identifying the user who initiated the login flow, executing a step in the login flow, handling login failures, etc.
+- [Utility functions](#utility-functions): These utility functions are used for specific scenarios. For example, checking whether the login user belongs to a specific user group.
+- [Object references](#object-reference): Objects that you can use to capture user behaviors and to set attributes. For example, you can use the **user** and **request** objects and write the login conditions accordingly.
 
 ---
 
@@ -39,7 +39,7 @@ This function is called when the initial login request is received by Asgardeo. 
 
 `executeStep()` 
 
-This function is called to execute an authentication step in the login flow. Authentication steps need to be configured prior to using this function. This method accepts an object as a parameter and should include the parameters listed below.
+This function is called to execute an authentication step in the login flow. Authentication steps need to be configured before using this function. This method accepts an object as a parameter and should include the parameters listed below.
 
 - **Parameters**
 
@@ -64,12 +64,12 @@ This function is called to execute an authentication step in the login flow. Aut
 
   Shown below are ways to define a login flow using the core functions.
 
-  * With only the `stepId`.
+  * This example uses only the `stepId`.
       ``` js
       executeStep(1)
       ```
 
-  * With only the `stepId` and `eventCallbacks`.
+  * This example uses only the `stepId` and `eventCallbacks`.
       ``` js
       executeStep(1, {
           onSuccess: function(context) {
@@ -78,9 +78,7 @@ This function is called to execute an authentication step in the login flow. Aut
       });
       ```
 
-  * With the `stepId`, `options`, and an empty `eventCallbacks` array. Different properties can be defined in the `options` object such as `authenticationOptions`, `authenticatorParams`. However, you cannot write a script with only the `stepId` and `options`.
-
-  See the following two examples:
+  * This example uses the `stepId`, `options`, and an empty `eventCallbacks` array. Different properties can be defined by the `options` object such as `authenticationOptions` and `authenticatorParams`. However, you cannot write a script with only the `stepId` and `options`. See the following two examples:
 
     ``` js
     executeStep(1,{
@@ -102,10 +100,8 @@ This function is called to execute an authentication step in the login flow. Aut
     ```
 
   **Authentication step filtering**
-
-  Filters out authentication options of a step based on a condition. This can be achieved by specifying an
-  array named `authenticationOptions` to the `options` map. Each array item requires an `idp` for federated
-  IdPs or an `authenticator` for local authenticators.
+  
+  Filters out authentication options of a step based on a condition. This can be achieved by specifying an array named `authenticationOptions` to the `options` map. Each array item requires an `idp` for federated IdPs or an `authenticator` for local authenticators.
 
   ``` js
   executeStep(1,{
@@ -123,7 +119,7 @@ This function is called to execute an authentication step in the login flow. Aut
 This function redirects the user to the redirect URI provided in the authorization request when the login flow fails.
 
 This function takes a map as an optional parameter. When a map is provided as the parameter, the redirect URL will be
-appended with following properties (which should be contained in the map). Otherwise, the default parameters are
+appended with the following properties (which should be contained in the map). Otherwise, the default parameters are
 passed. All the properties passed in the map are also optional.
 
 - **Parameters**
@@ -167,7 +163,7 @@ This function redirects the user to an error page. It includes the parameters li
       <tr>
         <td><code>url</code></td>
         <td>The URL of the error page that the user is redirected to. If the value is null, the user is redirected by default to the <strong>retry.do</strong> error page.<br />
-        Note that any relative URL is assumed as the relative to the host’s root.</td>
+        Note that any relative URL is assumed to be the relative to the host’s root.</td>
       </tr>
       <tr>
         <td><code>parameters</code></td>
@@ -179,7 +175,7 @@ This function redirects the user to an error page. It includes the parameters li
 - **Example**
 
   When passing error messages to the error page, it is recommended to use the **i18n key** so that it can be internationalized
-  easily at the page.
+  easily on the page.
 
   ```js
   var user = context.steps[1].subject;
@@ -231,7 +227,7 @@ This function returns true if the specified `user` belongs to at least one of th
 
 `setCookie(response, name, value, properties)`
 
-This functions sets a new cookie. It includes the parameters listed below.
+This function sets a new cookie. It includes the parameters listed below.
 
 - **Parameters**
 
@@ -250,7 +246,7 @@ This functions sets a new cookie. It includes the parameters listed below.
         <td><p>A map that may contain optional attributes of the cookie with the two custom attributes given below.</p>
           <ul>
             <li><code>sign</code>: The default value is false. If it is set to true, the value will be signed.</li>
-            <li><code>encrypt</code>: The default value is false. If it is set to true, the value will be encrypted.</li>
+            <li><code>encrypt</code>: The default value is false. If it is set to true, the value will be encrypted.</li>
           </ul>
         </td>
       </tr>
@@ -318,7 +314,7 @@ This function gets the plain-text cookie value for the cookie `name` if it is pr
 
 `prompt()`
 
-This function prompts for user input. It includes the parameters listed below.
+This function prompts user input. It includes the parameters listed below.
 
 - **Parameters**
 
@@ -489,7 +485,7 @@ The step number is the one configured at the step configuration, not the actual 
 
 ### Step
 
-Contains the authentication step information. May be null or invalid step number.
+Contains the authentication step information. May be a null or invalid step number.
 
 <table>
     <tr>

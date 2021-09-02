@@ -4,16 +4,16 @@ You can secure the login flow based on the user's IP address by applying the **I
 
 ## Scenario
 
-For customers in the organization who log in to your app from an IP address that is not within the configured IP range (i.e. 192.168.1.0/24, 10.100.0.0/16), the login flow should be stepped up. That is, these customers are required to go through two steps to log in as follows:
+Consider a scenario where the internal IP range of an organization is as follows: `192.168.1.0/24, 10.100.0.0/16`. The login flow should be stepped up with TOTP when users log in from outside this IP range as follows:
 
 1. Username and password
 2. TOTP
 
-Users who log in from the internally configured network specified in the script are not prompted with TOTP and they can simply log in with their username and password.
+Users who log in from the internal network should be allowed to simply log in with their username and password.
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have, register one of the following application types:
+You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
 
 -   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
@@ -24,22 +24,29 @@ You need an application registered in Asgardeo. If you don't already have, regis
 <CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
 5. Select the **IP-Based** template.
-6. Update the following parameter in the script.
+6. Verify that the login flow is now updated with the following two authentication steps:
+
+    -   Step 1: Username and Password
+    -   Step 2: TOTP
+
+7. Update the following parameter in the script.
 
     <table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>corpNetwork</td>
-            <td>Comma separated list of IP addresses. Two-factor authentication should apply when users log in from outside this range.</td>
-        </tr>
-    </tbody>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>corpNetwork</td>
+                <td>Comma separated list of IP addresses. Two-factor authentication should apply when users log in from outside this range. The default values in the template are <code>192.168.1.0/24</code> and <code>10.100.0.0/16</code>.</td>
+            </tr>
+        </tbody>
     </table>
+
+8. Click **Update** to confirm.
 
 ## How it works
 

@@ -2,11 +2,16 @@
 
 You can apply the **New-Device-Based** conditional authentication template to your application to enable a more secure login flow for users who log in from a previously unused device.
 
-When the user signs in from such a device, this template enables two-factor authentication and/or sends an email notification when the user passes the first authentication step. A cookie is used to identify whether the device has been used before.
+When the user signs in from such a device, this template enables two-factor authentication and/or sends an email notification when the user passes the first authentication step. A cookie is used to identify whether the device has been used before. When the cookie expires (this expiry time is specified in the template), the same browser or device is considered a new device.
 
 ## Scenario
 
-If the customer uses a new device or a new browser to log in to the application, the user is prompted with a second authentication step. An email is also sent to the customer with details of the login attempt. The new device or browser is identified by a cookie. Therefore, once the cookie expires (this expiry time is specified in the authentication script), the same browser or device is considered a new device.
+Consider a scenario where users who log in to an application from a new device or browser should be prompted with TOTP as a second authentication step. The two authentication steps are as follows:
+
+1. Username and password
+2. TOTP
+
+An email should also be sent to the customer with details of the login attempt.
 
 ## Prerequisites
 
@@ -21,7 +26,13 @@ You need an application registered in Asgardeo. If you don't already have one, r
 <CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
 5. Select the **Request > Device-Based** template.
-6. Update the following parameter in the script.
+
+6. Verify that the login flow is now updated with the following two authentication steps:
+
+    -   Step 1: Username and Password
+    -   Step 2: TOTP
+
+7. Update the following parameter in the script.
 
     <table>
         <thead>
@@ -45,6 +56,8 @@ You need an application registered in Asgardeo. If you don't already have one, r
             </tr>
         </tbody>
     </table>
+
+8. Click **Update** to confirm.
 
 ## How it works
 
@@ -113,12 +126,12 @@ var validateCookie = function (context, subject) {
 
 Let's look at how this script works.
 
-1.  The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the conditional authentication JavaScript function<a :href ="$withBase('/references/conditional-auth/api-reference/#get-cookie-value')">getCookieValue(request, name, properties</a>. The cookie name is configured with the _cookieName_ parameter.
+1.  The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the <a :href ="$withBase('/references/conditional-auth/api-reference/#get-cookie-value')">getCookieValue(request, name, properties</a> function. The cookie name is configured with the **cookieName** parameter.
 2.  When step 1 of the authentication flow is complete, the **onLoginRequest** function validates the **deviceAuth** cookie. 
-3.  If there is no valid cookie found, the function checks whether the _sendNotification_ and _stepUpAuthentication_ parameters are enabled.
-4.  If the _sendNotification_ property is enabled, the JavaScript conditional authentication function <a :href ="$withBase('/references/conditional-auth/api-reference/#send-email')">sendEmail(user, templateId, placeholderParameters)</a> is called to send the notification email with the logged in timestamp. The email template is set as **UnseenDeviceLogin** in the _emailTemplate_ variable.
-5.  If the _stepUpAuthentication_ parameter is enabled, step 2 of the authentication flow is executed.
-6.  On the successful execution of step 2 of the authentication flow, <a :href ="$withBase('/references/conditional-auth/api-reference/#set-cookie')">setCookie(response, name, value, properties)</a> is called to set a **deviceAuth** cookie.
+3.  If there is no valid cookie found, the function checks whether the **sendNotification** and **stepUpAuthentication** parameters are enabled.
+4.  If the **sendNotification** property is enabled, the <a :href ="$withBase('/references/conditional-auth/api-reference/#send-email')">sendEmail(user, templateId, placeholderParameters)</a> function is called to send the notification email with the login timestamp. The email template is set as **UnseenDeviceLogin** in the **emailTemplate** variable.
+5.  If the **stepUpAuthentication** parameter is enabled, step 2 of the authentication flow is executed.
+6.  On the successful execution of step 2 of the authentication flow, the <a :href ="$withBase('/references/conditional-auth/api-reference/#set-cookie')">setCookie(response, name, value, properties)</a> function is called to set a **deviceAuth** cookie.
 
 ::: info
 Find out more about the scripting language in the <a :href="$withBase('/references/conditional-auth/api-reference/')">Conditional Authentication API Reference</a>.
@@ -128,7 +141,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 
 Follow the steps given below.
 
-1. Access the application URL from a new device/browser.
+1. Access the application URL from a **new device/browser**.
 2. Try to log in to the application. TOTP authentication is prompted and the configured email of the user receives the email notification.
     <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
 3. Log out of the application. 
