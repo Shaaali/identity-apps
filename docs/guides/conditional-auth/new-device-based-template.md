@@ -1,27 +1,24 @@
 # Add device-based authentication
 
-You can enable a more secure sign-in flow when users sign in from a previously unused device by applying the **New-Device-Based** conditional authentication template to your application.
+You can apply the **New-Device-Based** conditional authentication template to your application to enable a more secure login flow for users who log in from a previously unused device.
 
 When the user signs in from such a device, this template enables two-factor authentication and/or sends an email notification when the user passes the first authentication step. A cookie is used to identify whether the device has been used before.
 
 ## Scenario
 
-If the customer uses a new device or a new browser to sign in to the application, the user is prompted with a second authentication step. An email is also sent to the customer with details of the sign-in attempt. The new device or browser is identified by a cookie. Therefore, once the cookie expires (this expiry time is specified in the authentication script), the same browser or device is considered as a new device.
+If the customer uses a new device or a new browser to log in to the application, the user is prompted with a second authentication step. An email is also sent to the customer with details of the login attempt. The new device or browser is identified by a cookie. Therefore, once the cookie expires (this expiry time is specified in the authentication script), the same browser or device is considered a new device.
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a>.
+You need an application registered in Asgardeo. If you don't already have one, register one of the following application types.
 
-## Configure the sign-in flow
+-   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
+-   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
+-   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">Web app with SAML</a>
 
-Follow the steps given below.
+## Configure the login flow
 
-1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
-3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
-4. Turn on **Conditional Authentication** by switching the toggle.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/enable-conditional-auth.png')" alt="Enable conditional auth in Asgardeo">
+<CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
 5. Select the **Request > Device-Based** template.
 6. Update the following parameter in the script.
@@ -37,10 +34,6 @@ Follow the steps given below.
             <tr>
                 <td>sendNotification</td>
                 <td>Specifies whether email notifications should be sent to users.</td>
-            </tr>
-            <tr>
-                <td>stepUpAuthentication</td>
-                <td>Specifies whether to step up the authentication.</td>
             </tr>
             <tr>
                 <td>cookieName</td>
@@ -127,13 +120,16 @@ Let's look at how this script works.
 5.  If the _stepUpAuthentication_ parameter is enabled, step 2 of the authentication flow is executed.
 6.  On the successful execution of step 2 of the authentication flow, <a :href ="$withBase('/references/conditional-auth/api-reference/#set-cookie')">setCookie(response, name, value, properties)</a> is called to set a **deviceAuth** cookie.
 
+::: info
+Find out more about the scripting language in the <a :href="$withBase('/references/conditional-auth/api-reference/')">Conditional Authentication API Reference</a>.
+:::
+
 ## Try it out
 
 Follow the steps given below.
 
 1. Access the application URL from a new device/browser.
-2. Try to sign in to the application. TOTP authentication is prompted and the configured email of the user receives the email notification.
+2. Try to log in to the application. TOTP authentication is prompted and the configured email of the user receives the email notification.
     <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
 3. Log out of the application. 
-4.  Sign in with the same user from the same device/browser. You will be successfully signed in to the
-   application with only the basic authentication.
+4. Log in with the same user from the same device/browser. You will be successfully signed in to the application with only the basic authentication.

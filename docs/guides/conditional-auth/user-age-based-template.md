@@ -1,28 +1,24 @@
 # Add user age-based authentication
 
-To control access to your application based on the user's age, you can apply the **Age-Based** template. The age of the user is calculated using the `date of birth` attribute.
+To control access to your application based on the user's age, you can apply the **Age-Based** conditional authentication template. The age of the user is calculated using the `date of birth` attribute in the user's profile.
 
 ## Scenario
 
-Any user who is below the specified age limit (i.e., under the age of 18 years) is restricted access and prevented from
-signing in to the application. The user will be redirected to an error page if the date of birth is not present or if the user's age
-is below the configured value.
+Users who are below the specified age limit (i.e., under the age of 18 years) are restricted access and prevented from
+signing in to the application. Users will be redirected to an error page if the date of birth is not present or if the user's age is below the configured value.
 
 ## Prerequisites
 
--   You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a>.
--   Update the birth date of a customer (using the My Account portal) so that the current age is below 18 years.
+-   You need an application registered in Asgardeo. If you don't already have, register one of the following application types:
+    -   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
+    -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
+    -   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">Web app with SAML</a>
 
-## Configure the sign-in flow
+-   Go to the customer's user profile and update the birth date so that the current age is below 18 years. For instructions, see <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Manage user profiles</a>.
 
-Follow the steps given below.
+## Configure the login flow
 
-1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
-3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
-4. Turn on **Conditional Authentication** by switching the toggle.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/enable-conditional-auth.png')" alt="Enable conditional auth in Asgardeo">
+<CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
 5. Select the **User > Age-Based** template.
 6. Update the following parameter in the script.
@@ -37,7 +33,7 @@ Follow the steps given below.
         <tbody>
             <tr>
                 <td>ageLimit</td>
-                <td>Minimum age required for the user to sign in to the application.</td>
+                <td>Minimum age required for the user to log in to the application.</td>
             </tr>
             <tr>
                 <td>errorPage</td>
@@ -111,12 +107,16 @@ age of the user is above the configured age limit.
 4.  If the age is below the configured limit, the user is directed to the
 configured error page.
 
+::: info
+Find out more about the scripting language in the <a :href="$withBase('/references/conditional-auth/api-reference/')">Conditional Authentication API Reference</a>.
+:::
+
 ## Try it out
 
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to sign in with a user who is above 18 years. The user will be successfully signed in to the application.
+2. Try to log in with a user who is above 18 years. The user will be successfully signed in to the application.
 3. Log out of the application.
-4. Sign in again with a user who is below 18 years. The user will be restricted from signing in.
+4. Log in again with a user who is below 18 years. The user will be restricted from signing in.
     <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">
