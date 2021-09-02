@@ -5,8 +5,6 @@ You can register your single page app as an OpenID Connect SPA and obtain client
 
 Since single-page applications are public clients, Asgardeo will issue only a client ID (no client secrets will be issued) for your single-page application.
 
-This guide will guide you how to [register an application](#register-app) and [obtain client ID](#obtain-client-id). 
-
 ## Register app
 You need to login to your [Asgardeo Console](https://console.asgardeo.io/login) to register your OpenID Connect single-page application.
 <CommonGuide guide='guides/fragments/manage-app/register-app/configure-spa-in-asgardeo.md'/>

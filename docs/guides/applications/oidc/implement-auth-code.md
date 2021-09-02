@@ -6,8 +6,8 @@ The below diagram explains how login using authorization code grant works with A
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
 
 You need following steps to build login to your app using authorization code grant:
-1. [Get authorization code](#get-authorization-code)
-2. [Get tokens](#get-tokens)
+1. Get authorization code
+2. Get tokens
 
 ## Prerequisites
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/#register-app')">register an application</a>.
