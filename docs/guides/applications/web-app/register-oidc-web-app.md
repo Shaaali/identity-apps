@@ -1,19 +1,52 @@
-# Register OpenID Connect web app
-To integrate your web application with Asgardeo using OpenID Connect, first you need to register your web application as an OpenID Connect web application in Asgardeo console and obtain client credentials.  
+# Register an OpenID Connect web app
+
+To integrate your web application with Asgardeo using OpenID Connect, you need to first register your web application as an OpenID Connect web application in Asgardeo console and obtain client credentials.
+
 Follow the instructions given below.
 
-## Register app
-You need to login to your [Asgardeo Console](https://console.asgardeo.io/login) to register your OpenID Connect web application.
-<CommonGuide guide='guides/fragments/manage-app/register-app/configure-web-app-oidc-in-asgardeo.md'/>
+## Register the app
 
-## Obtain client ID and client secret
-Application needs client id and client secret to authenticate to APIs of Asgardeo.  
+To register the app:
 
-After registering your application, you can obtain client ID and client secret by navigating to the **protocol** section of the application.
+1. On the [Asgardeo console](https://console.asgardeo.io/login), click **Develop > Applications**.
+
+    <img :src="$withBase('/assets/img/guides/applications/select-app-type.png')" alt="Select app type in Asgardeo">
+
+2. Click **New Application** and select **Traditional Web Application** to open the following:
+
+    <img :src="$withBase('/assets/img/guides/applications/create-new-web-app.png')" alt="Create a new web app">
+
+3. Enter the following details. 
+
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>A unique name to identify your application.</td>
+        </tr>
+        <tr>
+            <td>Protocol</td>
+            <td><p>The access configuration protocol that is used to log in to the application with SSO.</p> Select <b>OpenID Connect</b>.</td>
+        </tr>
+        <tr>
+            <td>Authorized redirect URLs</td>
+            <td>The authorized redirect URLs determine where the authorization code is sent to once the user is authenticated.</td>
+        </tr>
+    </table>
+
+4. Click **Register** to complete the registration
+
+## Obtain the client ID and secret
+
+When you register your web application, the OpenID Connect client ID and client secret are generated. Your web application will identify itself to Asgardeo with these credentials.
+
+You can get this client ID from the **Protocol** tab of the application as shown below.
+
 <img :src="$withBase('/assets/img/guides/applications/get-client-id-and-secret.png')" alt="Get client ID and secret of webapp">
 
 ## What's next?
-Now you've registered your web application. Now you can:
+
 - <a :href="$withBase('/guides/applications/web-app/add-login-to-web-app/')">Add login to your web app</a>
-- <a :href="$withBase('/quickstarts/')">Try out samples</a>
-- <a :href="$withBase('/sdks/')">Add login to your app using SDKs</a>

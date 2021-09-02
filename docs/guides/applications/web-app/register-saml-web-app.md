@@ -1,62 +1,63 @@
-# Register SAML web app
-To integrate your web application with Asgardeo using [SAML](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf), 
-first you need to register your application as a SAML application using the [Asgardeo console](https://console.asgardeo.io/). 
+# Register a SAML web app
 
-There are two ways you can use to provide your SAML application configurations to Asgardeo
+To integrate your web application with Asgardeo using [SAML](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf), you need to first register your application as a SAML application in Asgardeo.
+
+There are two ways to provide your SAML application configurations to Asgardeo during registration:
+
 - Use SAML SP metadata
-- Provide SAML SP configurations manually
+- Add SAML SP configurations manually
 
-## Register app
-Login to the [Asgardeo Console](https://console.asgardeo.io/login).
-1. In the Asgardeo Console, Select the **Develop > Applications**.
-2. Select **New Application** and select **Traditional Web Application** type.
+## Register the app
+
+To register the app:
+
+1. On the [Asgardeo Console](https://console.asgardeo.io/login), click **Develop > Applications**.
+
     <img :src="$withBase('/assets/img/guides/applications/select-app-type.png')" alt="Select app type in Asgardeo">
-3. Select the **SAML** protocol.
-4. Asgardeo provides three ways to register a SAML application. 
-    - [Manual](#register-app-using-manual-configurations): You need to provide the configurations of SAML app to register.
-    - [File Based](#register-app-using-saml-sp-metadata-file): Provide the SAML metadata file to register the app
-    - [URL Based](#register-app-using-saml-sp-meta-url): Upload SAML metadata URL to register the app 
-5. Pick one of the above options and proceed.       
 
-### Register app using manual configurations
-1. Click **Manual**
-2. Provide the following details and click **Register**. 
-   - **Name:** A unique name to identify your application.
-   - **Issuer:** The unique identifier of the application. The value added here should be specified in the SAML authentication request as `saml:Issuer` element sent from the client application. You can't change this `issuer` configuration after you register the app.
-   - **Assertion consumer service URLs:** The URLs to which the browser is redirected to upon successful authentication and receives SAML response.
-    <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app.png')" alt="Register SAML app"> 
-3. Click **Register**.
+2. Click **New Application** and select **Traditional Web Application**.
+3. In the **Name** field, enter a unique name to identify your application.
+4. Select the **SAML** protocol.
+5. Select one of the methods to add the SAML configurations of your app: 
 
-### Register app using metadata.
+    - **Manual**
+    
+        If you selected this option, you can manually specify the SAML configurations as follows:
 
-SAML SP metadata is a popular way of integrating a SAML application.
- 
-A SP metadata XML file contains:
-- SP certificate
-- The entity ID (also known as issuer)
-- Assertion Consumer Service URLs (ACS URLs)
-- Single Logout Service URLs
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Issuer</td>
+                <td>The unique identifier of the application. The value added here should be specified in the SAML authentication request as <code>saml:Issuer</code> element sent from the client application. You can't change this <code>issuer</code> configuration after you register the app.</td>
+            </tr>
+            <tr>
+                <td>Assertion consumer service URLs</td>
+                <td>The URLs to which the browser is redirected to upon successful authentication and receives SAML response.</td>
+            </tr>
+        </table>
 
-Asgardeo provides two options to get the metadata to register a SAML application:
-1. [File Based metadata](#register-app-using-saml-sp-metadata-file)
-2. [URL Based metadata](#register-app-using-saml-sp-meta-url)
+        <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app.png')" alt="Register SAML app"> 
 
-#### Register app using SAML SP metadata file
-Asgardeo provides the support to register a SAML app using its metadata file. 
-1. Click **File Based** and **upload** the metadata file which contains SAML configuration of the application.
- <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app-using-metadata-file.png')" alt="Register SAML app using metadata file"> 
-2. Click **Register**.
+    - **File-Based** 
+    
+        If you selected this option, you can upload a SAML SP metadata file to apply the SAML configurations for your application. An SP metadata XML file contains the following:
 
-#### Register app using SAML SP meta URL
-SAML meta URL is the endpoint which is hosted with SAML metadata file. Asgardeo provides the support to register a SAML app using its SAML meta URL. 
-1. Click **URL Based** and upload the metadata file.
-2. Provide the following details.
-    - **Meta URL** : URL from which SAML configuration of the application can be fetched
-  <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app-using-meta-url.png')" alt="Register SAML app using meta url"> 
-3. Click **Register**.
+        - SP certificate
+        - The entity ID (also known as issuer)
+        - Assertion Consumer Service URLs (ACS URLs)
+        - Single Logout Service URLs
+    
+        <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app-using-metadata-file.png')" alt="Register SAML app using metadata file"> 
+
+    - **URL-Based**   
+
+        If you selected this option, you can provide the SAML meta URL, which refers to the endpoint that hosts the SAML metadata file.
+    
+         <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app-using-meta-url.png')" alt="Register SAML app using meta url">     
 
 ## What's next?
-Now you've registered your web application. Now you can:
+
 - <a :href="$withBase('/guides/applications/web-app/add-login-to-web-app/')">Add login to your web app</a>
-- <a :href="$withBase('/quickstarts/')">Try out samples</a>
-- <a :href="$withBase('/sdks/')">Add login to your app using SDKs</a>
