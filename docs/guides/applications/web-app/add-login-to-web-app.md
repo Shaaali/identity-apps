@@ -1,6 +1,6 @@
 # Add login to web app
 
-Browser-based standard protocols like SAML, OpenID Connect are most commonly used to integrate with identity providers to enable login to web applications. 
+Browser-based protocols like SAML and OpenID Connect are most commonly used to integrate web applications with identity providers. 
 
 See the guides given below to add login to your web apps with Asgradeo using OpenID Connect or SAML.
 
