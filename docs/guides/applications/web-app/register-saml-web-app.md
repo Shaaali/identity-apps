@@ -20,7 +20,7 @@ To register the app:
 2. Click **New Application** and select **Traditional Web Application**.
 3. In the **Name** field, enter a unique name to identify your application.
 4. Select the **SAML** protocol.
-5. Select one of the methods to add the SAML configurations of your app:
+5. Select one of the following methods and add the SAML configurations:
 
     <table>
         <tr>
