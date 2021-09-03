@@ -4,7 +4,7 @@ You can secure the login flow based on the user's IP address by applying the **I
 
 ## Scenario
 
-Consider a scenario where the internal IP range of an organization is as follows: `192.168.1.0/24, 10.100.0.0/16`. The login flow should be stepped up with TOTP when users log in from outside this IP range as follows:
+Consider a scenario where the internal IPs of an organization are as follows: `192.168.1.0/24, 10.100.0.0/16`. The login flow should be stepped up with TOTP when users log in from outside this IP range as follows:
 
 1. Username and password
 2. TOTP
@@ -40,7 +40,7 @@ You need an application registered in Asgardeo. If you don't already have one, r
         </thead>
         <tbody>
             <tr>
-                <td>corpNetwork</td>
+                <td><code>corpNetwork</code></td>
                 <td>Comma separated list of IP addresses. Two-factor authentication should apply when users log in from outside this range. The default values in the template are <code>192.168.1.0/24</code> and <code>10.100.0.0/16</code>.</td>
             </tr>
         </tbody>
@@ -126,7 +126,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to sign in with a user who has the IP address in the configured range. You will successfully sign in to the application.
+2. Try to log in with a user who has the IP address in the configured range. You will successfully log in to the application.
 3. Log out of the application.
-4. Sign in with a user who does not belong to the configured IP address range. TOTP authentication is prompted.
+4. Log in with a user who does not belong to the configured IP address range. TOTP authentication is prompted.
    <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="ip-based-2fa-conditional-auth-totp-page">

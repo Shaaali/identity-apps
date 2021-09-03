@@ -31,15 +31,15 @@ Consider a scenario where users who are younger than 18 years should be prevente
         </thead>
         <tbody>
             <tr>
-                <td>ageLimit</td>
+                <td><code>ageLimit</code></td>
                 <td><p>Minimum age required for the user to log in to the application.</p>For this example scenario, enter <code>18</code> as the value.</td>
             </tr>
             <tr>
-                <td>errorPage</td>
+                <td><code>errorPage</code></td>
                 <td>The error page to which users are redirected if the age limit is below age limit. The default error page is used if this parameter is not configured.</td>
             </tr>
             <tr>
-                <td>errorPageParameters</td>
+                <td><code>errorPageParameters</code></td>
                 <td>Parameters to be passed to the error page. This information will display on the error page.</td>
             </tr>
         </tbody>
@@ -117,7 +117,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who is above 18 years of age. The user will be successfully signed in to the application.
+2. Try to log in with a user who is above 18 years of age. This user will successfully log in to the application.
 3. Log out of the application.
-4. Log in again with a user who is below 18 years. The user will be restricted from signing in.
+4. Log in again with a user who is below 18 years. The user will see the following error.
     <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">

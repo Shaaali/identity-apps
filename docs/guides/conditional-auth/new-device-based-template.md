@@ -15,7 +15,7 @@ An email should also be sent to the customer with details of the login attempt.
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, register one of the following application types.
+You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
 
 -   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
@@ -43,16 +43,16 @@ You need an application registered in Asgardeo. If you don't already have one, r
         </thead>
         <tbody>
             <tr>
-                <td>sendNotification</td>
-                <td>Specifies whether email notifications should be sent to users.</td>
+                <td><code>sendNotification</code></td>
+                <td><p>Specifies whether email notifications should be sent to users.</p> For this scenario, set this parameter to <code>true</code>.</td>
             </tr>
             <tr>
-                <td>cookieName</td>
-                <td>Cookie name to be used for device identification.</td>
+                <td><code>cookieName</code></td>
+                <td>A user-defined cookie name to be used for device identification.</td>
             </tr>
             <tr>
-                <td>deviceRememberPeriod</td>
-                <td>The length of time for which this device should be remembered as a trusted device. Once this time period passes, login attempts are considered as new device logins.</td>
+                <td><code>deviceRememberPeriod</code></td>
+                <td><p>The length of time <b>in seconds</b> for which this device should be remembered as a trusted device. Once this time period passes, login attempts are considered as new device logins.</p>For example, you can specify two years as follows: <code>60 * 60 * 24 * 365 * 2</code></td>
             </tr>
         </tbody>
     </table>
@@ -145,4 +145,4 @@ Follow the steps given below.
 2. Try to log in to the application. TOTP authentication is prompted and the configured email of the user receives the email notification.
     <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
 3. Log out of the application. 
-4. Log in with the same user from the same device/browser. You will be successfully signed in to the application with only the basic authentication.
+4. Log in with the same user from the same device/browser. You will successfully log in to the application with only the basic authentication.

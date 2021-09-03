@@ -41,7 +41,7 @@ Consider a scenario with two user groups, `manager` and `employee`. For users as
       </thead>
       <tbody>
          <tr>
-            <td>groupsToStepUp</td>
+            <td><code>groupsToStepUp</code></td>
             <td><p>Comma separated list of user groups. Two-factor authentication should apply to users from these groups.</p> For this example scenario, enter <code>manager</code> and <code>employee</code>.</td>
          </tr>
       </tbody>
