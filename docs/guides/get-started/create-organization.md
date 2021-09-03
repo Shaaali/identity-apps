@@ -9,7 +9,7 @@ Let's get you started with Asgardeo!
 
 ## Create an organization
 
-1. [Sign up](https://asgardeo.io/early-signup) for an Asgardeo account.
+1. [Sign up](https://wso2.com/asgardeo) for an Asgardeo account.
 2. You will receive an invitation mail to your email address. Click **Try Asgardeo Beta** and create your new account.
 3. Enter a unique organization name that describes the workspace.
     <img :src="$withBase('/assets/img/guides/get-started/create-organization.png')" alt="new-organization-create-ui">
@@ -28,4 +28,4 @@ Now that you've set up your own organization and created your first user, you ca
 - <a :href="$withBase('/guides/users/')">Manage your users in Asgardeo</a>
 - <a :href="$withBase('/guides/users/manage-collaborators/')">Invite a collaborator user to your organization</a>
 - <a :href="$withBase('/quickstarts/')">Tryout a sample application</a>
-- <a :href="$withBase('/guides/manage-apps/')">Manage your applications with asgardeo</a>
+- <a :href="$withBase('/guides/applications/')">Manage your applications with asgardeo</a>

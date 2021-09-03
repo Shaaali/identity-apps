@@ -6,8 +6,6 @@ There are two ways you can use to provide your SAML application configurations t
 - Use SAML SP metadata
 - Provide SAML SP configurations manually
 
-This guide will show you how to [register a SAML application](#register-app) in Asgardeo. 
-
 ## Register app
 Login to the [Asgardeo Console](https://console.asgardeo.io/login).
 1. In the Asgardeo Console, Select the **Develop > Applications**.

@@ -18,7 +18,7 @@ To onboard a collaborator via [Asgardeo Console](https://console.asgardeo.io):
 3. Provide the following details.
     - **Email Address:** Email address of the collaborator.<br>
         ::: warning
-        This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
+         This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
         :::               
     - **Role:** Select a role to assign to the collaborator. You can change this later.   
     <img :src="$withBase('/assets/img/guides/users/add-collaborator-account.png')" alt="Add collaborator user">
@@ -27,7 +27,7 @@ To onboard a collaborator via [Asgardeo Console](https://console.asgardeo.io):
      
 ## Assign roles
 
-Asgardeo roles are used for managing user permissions (to access resources on the Asgardeo console).
+Asgardeo <a :href="$withBase('/references/user-management/user-roles/')">Roles</a> are used to specify the permissions that a user needs to access various resources on the Asgardeo console.
 
 To assign roles to a collaborator:
 1. On the Asgardeo Console, click **Manage > Users**.
@@ -36,12 +36,14 @@ To assign roles to a collaborator:
     <img :src="$withBase('/assets/img/guides/users/assign-roles-to-collaborator.png')" alt="Assign roles to collaborator">
 4. Click **Update**.
 
+For details on the available user roles and the permissions assigned to them, see <a :href="$withBase('/references/user-management/user-roles/')">Asgardeo User Roles</a>.
+
 ## Delete a collaborator
 
 A collaborator account can be deleted by admins. Once an account is deleted, the action is irreversible. 
 
 To delete a collaborator account:
-1. In the Asgardeo Console, click **Manage > Users**.
-2. Click the **Delete** icon for the user you want to remove.
-3. Enable the checkbox to confirm your action. 
+1. On the Asgardeo Console, click **Manage > Users**.
+2. Click **Delete** for the user you want to remove.
+3. Select the checkbox to confirm your action. 
 4. Click **Confirm**.     

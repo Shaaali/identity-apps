@@ -1,7 +1,6 @@
 # Register OpenID Connect web app
 To integrate your web application with Asgardeo using OpenID Connect, first you need to register your web application as an OpenID Connect web application in Asgardeo console and obtain client credentials.  
-
-This guide will show you how to [register an application](#register-app) and [obtain client credentials](#obtain-client-id-and-client-secret). 
+Follow the instructions given below.
 
 ## Register app
 You need to login to your [Asgardeo Console](https://console.asgardeo.io/login) to register your OpenID Connect web application.

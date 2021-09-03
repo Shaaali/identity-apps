@@ -1,5 +1,5 @@
 
-By enabling this option, Asgardeo mandates an application to use [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) with <a :href="$withBase('/guides/applications/oidc/integrate-public-client/#get-tokens')">authorization code flow</a>. Application has to send `code challenge` in the authorization request and corresponding `code verifier` in the token request. Asgardeo supports `SHA-256` and `plain`.
+By enabling this option, Asgardeo mandates an application to use [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) with the <a :href="$withBase('/guides/applications/oidc/implement-auth-code-with-pkce/#get-tokens')">authorization code flow</a>. The application has to send a `code challenge` in the authorization request and the corresponding `code verifier` in the token request. Asgardeo supports `SHA-256` and `plain`.
 
 _Sample authorization request_
 ```  no-line-numbers

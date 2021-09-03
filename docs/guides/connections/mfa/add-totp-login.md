@@ -11,16 +11,15 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 
 ## Prerequisites
 -   To get started, you need to have an application registered in Asgardeo. If you don't already have, register one of the following application types.
-
     -   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
     -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">web app with SAML</a>
-
 -   Download and install one of the authenticator apps mentioned above.
 
-::: tip Note
+::: info Info
  - You can use TOTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or an <a :href="$withBase('/guides/connections/')">identity provider</a>.   
  - TOTP cannot be used as a first step of your login flow.
+ - Federated users(users who are authenticated with external IdPs) can log in with TOTP MFA option.
 :::
 
 
@@ -50,9 +49,12 @@ You can enroll for TOTP notification from the first login to the business applic
 
 
 ## Enroll TOTP via MyAccount
-After the first time login, user will not be prompted with QR code in the login flow. In case, if the user wants to use another authenticator app for getting otp, user can configure it via Asgardeo MyAccount. The QR code via MyAccount is same the code prompted in the first time login flow.
-
+If the user wants to use another authenticator app for getting the OTP, the user can configure it via the My Account portal. The QR code that is generated via My Account is same the code prompted during first-time login.
+ 
 Note that, enrolling TOTP via MyAccount can be done only after first login attempt using totp authentication, and it is available only for <a :href="$withBase('/guides/users/manage-customers/')">customer</a> user accounts.
+::: warning
+ Even though federated users can log in with TOTP, note that currently Asgardeo doesn't allow customers who authenticated via an external IdP to enroll for TOTP via My Account.
+:::
  
 1. In the Asgardeo MyAccount, navigate to **Security > Multi-Factor Authentication**.
     <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount">

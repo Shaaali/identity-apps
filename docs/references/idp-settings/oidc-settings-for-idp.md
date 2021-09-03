@@ -1,4 +1,35 @@
 # OIDC settings for IdPs
+
+You can find the OIDC enterprise IdP settings under **settings** section of the selected OIDC enterprise IdP. 
+<img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-settings.png')" alt="OIDC IdP settings">
+
+## Mandatory settings
+###  Client ID
+The client ID that is generated when registering Asgardeo as an OIDC application in the external identity provider . 
+
+### Client secret
+The client secret that is generated when registering Asgardeo as an OIDC application in the external identity provider. 
+
+### Authorization endpoint URL
+The OpenID Connect standard authorization endpoint URL of the external identity provider.
+
+### Token endpoint URL
+The OpenID Connect standard token endpoint URL of the external identity provider.
+
+### Authorized redirect URL
+This is where the user needs to be redirected after completing the authentication at the external identity provider. The identity provider needs to send the authorization code to this URL upon successful authentication.
+
+You should configure `https://api.asgardeo.io/t/{your_organinzation_name}/commonauth` as the redirect URL/callback URL when you register Asgardeo as an OIDC application in the external IdP.
+
+## Additional settings
+### User info endpoint URL
+The [OpenID Connect standard userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) of the external identity provider. If this URL is not given, user attributes will be taken from ID token obtained in the token request from external IdP.
+
+### Logout URL
+The [OpenID Connect standard logout endpoint](https://openid.net/specs/openid-connect-rpinitiated-1_0.html#Terminology) of the external identity provider. If this URL is not given, Asgardeo will not send logout requests to the external IdP when a user logs out from the connected application.
+
+### Additional query parameters
+
 Asgardeo supports sending additional information to your OIDC external IdP in the form of query params in the login request.
 - Fixed query params
 - Dynamic query params
@@ -7,13 +38,13 @@ Asgardeo supports sending additional information to your OIDC external IdP in th
 
 You can check below examples when an application developer wants to send _login_hint_ as a query param to external provider.
 
-## Fixed query params    
+#### Fixed query params    
 Here Asgardeo sends the fixed query param to the external identity provider in the login request.    
    - **Sample Query Param:**   
     `login_hint=none`
       <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/queryparam/fixed-query-param.png')" alt="Add fixed query param in enterprise IDP config">
 
-## Dynamic query params
+#### Dynamic query params
 1.  Query param value sent in the application login request
     - **Sample Query Param:**     
        `login_hint=${login_hint_value}` 
@@ -57,3 +88,6 @@ Here Asgardeo sends the fixed query param to the external identity provider in t
       };
       ```
       <br>
+
+### Enable HTTP basic auth for client authentication
+Specify whether to enable HTTP basic authentication for the token request. Otherwise, client credentials are sent in the request body. 

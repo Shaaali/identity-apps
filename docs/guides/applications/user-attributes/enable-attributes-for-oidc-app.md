@@ -86,7 +86,7 @@ Asgardeo shares the user attributes, for which the user provided consent, with t
 
 #### ID token
 
-Once the <a :href="$withBase('/guides/applications/oidc/integrate-confidential-client/#get-tokens')">application calls the token endpoint</a>, Asgardeo sends the ID token in the response. 
+Once the <a :href="$withBase('/guides/applications/oidc/implement-auth-code/#get-tokens')">application calls the token endpoint</a>, Asgardeo sends the ID token in the response. 
 All the user attributes that are requested based on scopes are returned as claims in the ID token.
 
 The application can decode the ID token to view the claims.
@@ -117,7 +117,7 @@ _A sample ID token is given below:_
 
 #### Userinfo response
 
-In addition to getting attributes from the ID token, the application can <a :href="$withBase('/guides/applications/oidc/integrate-confidential-client/#retrieve-user-details')">invoke the userinfo endpoint</a> and get user attributes along with the [selected subject attribute](#select-the-subject-attribute).
+In addition to getting attributes from the ID token, the application can <a :href="$withBase('/guides/applications/oidc/implement-auth-code/#retrieve-user-details')">invoke the userinfo endpoint</a> and get user attributes along with the [selected subject attribute](#select-the-subject-attribute).
 
 _A sample userinfo response is given below:_
 

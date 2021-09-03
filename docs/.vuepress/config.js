@@ -49,7 +49,7 @@ module.exports = config({
         //     apiKey: "eb6a5c630b8ebd2d4d862a2b0aaa7a67",
         //     indexName: "asgardeo-algolia"
         // },
-
+        algoliaType: "full",
         Navbar: true,
         blog: false,
         feed: false,
@@ -98,9 +98,9 @@ module.exports = config({
                 {
                     title: 'Integrate Apps',
                     children: [
-                    ['manage-apps.md', 'Overview'],
+                    ['applications/', 'Overview'],
                     {
-                        title: 'Register Application',
+                        title: 'Register Apps',
                         prefix: 'applications/',
                         sidebarDepth: 2,
                         children: [
@@ -110,7 +110,7 @@ module.exports = config({
                         ]
                     },
                     {
-                        title: 'Add Asgardeo Login',
+                        title: 'Add Login to Apps',
                         prefix: 'applications/',
                         sidebarDepth: 2,
                         children: [
@@ -118,31 +118,40 @@ module.exports = config({
                             ['web-app/add-login-to-web-app.md', 'Add login to web app'],
                             {
                                 title: 'Implement OIDC flows',
+                                prefix: 'oidc/',
                                 children: [
-                                    ['oidc/discover-oidc-configs.md', 'Discover OIDC configurations'],
-                                    ['oidc/integrate-confidential-client.md', 'Implement Authorization Code flow'],
-                                    ['oidc/integrate-public-client.md', 'Implement Authorization Code flow with PKCE'],
+                                    ['discover-oidc-configs.md', 'Discover OIDC endpoints'],
+                                    ['implement-auth-code.md', 'Implement Authorization code flow'],
+                                    ['implement-auth-code-with-pkce.md', 'Implement Authorization Code flow with PKCE'],
+                                    ['validate-id-tokens.md', 'Validate ID tokens'],
+                                    ['request-user-info.md', 'Request user information'],
+                                    ['introspect-tokens.md', 'Validate tokens'],
+                                    ['revoke-tokens.md', 'Revoke tokens'],
+                                    ['add-logout.md', 'Implement logout'],
                                 ]
                             },
                             {
                                 title: 'Implement SAML flows',
                                 sidebarDepth: 2,
                                 children: [
-                                    ['saml/discover-saml-configs.md', 'Discover SAML configurations'],
-                                ]
-                            },
-                            {
-                                title: 'Enable User Attributes',
-                                children: [
-                                    ['user-attributes/enable-attributes-for-oidc-app.md', 'Enable attributes for OIDC apps'],
-                                    ['user-attributes/enable-attributes-for-saml-app.md', 'Enable attributes for SAML apps'],
+                                    ['saml/discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                                 ]
                             },
                         ]
                     },
                     {
+                        title: 'Enable User Attributes',
+                        prefix: 'applications/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['user-attributes/enable-attributes-for-oidc-app.md', 'Enable attributes for OIDC apps'],
+                            ['user-attributes/enable-attributes-for-saml-app.md', 'Enable attributes for SAML apps'],
+                        ]
+                    },
+                    {
                         title: 'Add Social Login',
                         prefix: 'connections/social-login/',
+                        path: 'connections/social-login/',
                         sidebarDepth: 2,
                         children: [
                             ['add-facebook-login.md', 'Add Facebook login'],
@@ -153,6 +162,7 @@ module.exports = config({
                     {
                         title: 'Add Enterprise Login',
                         prefix: 'connections/enterprise-login/',
+                        path: 'connections/enterprise-login/',
                         sidebarDepth: 2,
                         children: [
                             ['add-oidc-idp-login.md', 'Add login with OIDC'],
@@ -221,32 +231,33 @@ module.exports = config({
                 {
                     title: 'Manage Organization Settings',
                     children: [
-                        ['org-settings/organizations', 'Manage Organizations'],
+                        ['organization-settings/organizations', 'Manage organizations'],
                         {
                             title: 'Manage User Attributes',
-                            prefix: 'org-settings/attributes/',
+                            prefix: 'organization-settings/attributes/',
                             sidebarDepth: 2,
                             children: [
-                                ['manage-attributes', 'Manage Attributes'],
-                                ['manage-attribute-mappings', 'Manage Attribute Mappings'],
+                                ['manage-attributes', 'Manage attributes'],
+                                ['manage-oidc-attribute-mappings', 'Manage OIDC attribute mappings'],
+                                ['manage-scim2-attribute-mappings', 'Manage SCIM2 attribute mappings'],
                             ]
                         },
                         {
                             title: 'Account Recovery',
-                            prefix: 'org-settings/account-recovery/',
+                            prefix: 'organization-settings/',
                             sidebarDepth: 2,
                             children: [
                                 ['password-recovery', 'Configure password recovery'],
                             ]
                         },
-                        ['org-settings/configure-self-registration', 'Self-registration'],
+                        ['organization-settings/configure-self-registration', 'Self-registration'],
                         {
                             title: 'Manage Account Security',
-                            prefix: 'org-settings/account-security/',
+                            prefix: 'organization-settings/account-security/',
                             sidebarDepth: 2,
                             children: [
-                                ['login-attempts-security', 'Configure Login Attempts Security'],
-                                ['bot-detection', 'Configure Bot Detection'],
+                                ['login-attempts-security', 'Configure login-attempts security'],
+                                ['bot-detection', 'Configure bot detection'],
                             ]
                         },
                     ]
@@ -287,11 +298,12 @@ module.exports = config({
             },
             ],
             '/references/' : [
+                ['/references/user-management/user-roles.md', 'Asgardeo user roles'],
                 {
                     title: 'App Configurations',
                     children: [
                         ['/references/app-settings/oidc-settings-for-app.md', 'OIDC configurations'],
-                        ['/references/app-settings/saml-settings-for-app.md', 'Saml configurations'],
+                        ['/references/app-settings/saml-settings-for-app.md', 'SAML configurations'],
                     ]
                 },
                 {
@@ -301,7 +313,6 @@ module.exports = config({
                         ['/references/idp-settings/saml-settings-for-idp.md', 'SAML configurations'],
                     ]
                 },
-                ['/references/user-management/user-roles.md', 'Role-based permissions'],
                 ['/references/conditional-auth/api-reference.md', 'Conditional auth - API'],
             ]
 //
