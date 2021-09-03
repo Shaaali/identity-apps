@@ -193,7 +193,7 @@ The implementation of utility functions can be found in the [WSO2 extensions cod
 
 `isMemberOfAnyOfGroups()`
 
-This function returns true if the specified `user` belongs to at least one of the given `groups`, and returns false if the user does not. It includes the parameters listed below.
+This function returns `true` if the specified user belongs to at least one of the given groups, and returns `false` if the user does not. It includes the parameters listed below.
 
 - **Parameters**
 
@@ -245,8 +245,8 @@ This function sets a new cookie. It includes the parameters listed below.
         <td><code>properties</code></td>
         <td><p>A map that may contain optional attributes of the cookie with the two custom attributes given below.</p>
           <ul>
-            <li><code>sign</code>: The default value is false. If it is set to true, the value will be signed.</li>
-            <li><code>encrypt</code>: The default value is false. If it is set to true, the value will be encrypted.</li>
+            <li><code>sign</code>: The default value is <code>false</code>. If it is set to true, the value will be signed.</li>
+            <li><code>encrypt</code>: The default value is <code>false</code>. If it is set to true, the value will be encrypted.</li>
           </ul>
         </td>
       </tr>
@@ -257,7 +257,7 @@ This function sets a new cookie. It includes the parameters listed below.
 
   The size of the value has to be less than the RSA key pair length if '`encrypt`' is enabled (set to true).
 
-  ``` js
+  ```js
   setCookie(context.response, "name", "test", {"max-age" : 4000,
                                               "path" : "/",
                                               "domain" : "localhost",
@@ -276,7 +276,7 @@ This function sets a new cookie. It includes the parameters listed below.
 
 `getCookieValue()`
 
-This function gets the plain-text cookie value for the cookie `name` if it is present. It includes the parameters listed below.
+This function gets the plain-text cookie value for the cookie name if it is present. It includes the parameters listed below.
 
 - **Parameters**
 
@@ -294,8 +294,8 @@ This function gets the plain-text cookie value for the cookie `name` if it is pr
         <td><code>properties</code></td>
         <td><p>A map that may contain optional attributes of the cookie:</p>
           <ul>
-            <li><code>decrypt</code>: The default value of is false. If it is set to true, the value will be decrypted.</li>
-            <li><code>validateSignature</code>: The default value is false. If it is set to true, the signature will be validated before returning a response.</li>
+            <li><code>decrypt</code>: The default value is <code>false</code>. If it is set to <code>true</code>, the value will be decrypted.</li>
+            <li><code>validateSignature</code>: The default value is <code>false</code>. If it is set to <code>true</code>, the signature will be validated before returning a response.</li>
           </ul>
         </td>
       </tr>
