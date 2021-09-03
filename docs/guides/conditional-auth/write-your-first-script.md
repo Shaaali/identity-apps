@@ -1,36 +1,43 @@
 # Write a custom authentication script
 
-By following this guide, you will be able to write your own conditional authentication script from scratch and understand its internals.
+Follow this guide to write a conditional authentication script from scratch and to understand its internals.
 
-Let's take the following simplified set of requirements, your business may want you to implement:
+## Scenario
 
-- User tries to login to an application using **username and password** authentication.
-  - If the user belongs to **manager**, or **employee** group, they can access application.
-  - Other users should not be allowed to access the application.                                                           
+Let's consider the following simplified set of requirements for your business application:
 
-We will start from the scratch and see how can we build our first conditional authentication script.
- <img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="Authentication flow with Group based Access control">
+- User tries to log in to an application with **username and password** authentication.
+- If the user belongs to the **manager** or **employee** group, they can access the application. Other users should not be allowed to access the application.                                                           
+
+<img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="Authentication flow with Group based Access control">
 
 ## Prerequisites
 
-1. You should have registered an application. If you don't have an app registered, <a :href ="$withBase('/guides/applications/')">register an application</a> in Asgardeo.
-2. Customize the login flow and enable `Username and Password authentication` authentication.
-3. Create relevant <a :href="$withBase('/guides/users/manage-groups/')">groups</a> and assign users as necessary to try out the flow.
+-  You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+   -   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
+   -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
+   -   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">Web app with SAML</a>
+
+-  Customize the login flow in your application and enable `Username and Password` authentication.
+
+-  Create two user groups named `manager` and `employee` and assign customer accounts to them. For instructions, see the following:
+   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing groups</a>
+   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing customers</a>
 
 ## Start with the default script
 
-To start off, <a :href="$withBase('/references/conditional-auth/api-reference/')">Configure conditional authentication</a> to your application and check the default script once you enable the two steps authentication.
+To start off, <a :href="$withBase('/references/conditional-auth/api-reference/')">configure conditional authentication</a> for your application and check the default script once you enable the two steps authentication.
 
 ```js
 var onLoginRequest = function(context) {
     executeStep(1);
 };
 ```
-The above scripts does not have any conditional authentication. It allow all users to access the application after successful authentication.
+The above scripts do not have any conditional authentication. It allows all users to access the application after successful authentication through `username and password`.
 
 ## Implement onSuccess callback
 
-Now, we will implement what to do, if  **username and password based authentication** is success. You can use <a :href="$withBase('/references/conditional-auth/api-reference/')">onSuccess</a> eventCallback.
+Now, let's implement what happens when **username and password** authentication is successful. You can use the <a :href="$withBase('/references/conditional-auth/api-reference/')">onSuccess</a> eventCallback.
 
 ```js
 var onLoginRequest = function (context) {
@@ -44,7 +51,7 @@ var onLoginRequest = function (context) {
 
 ## Get user object
 
-If **username and password based authentication** is success, let's try to get the <a :href="$withBase('/references/conditional-auth/api-reference/#user')">user</a> from the <a :href="$withBase('/references/conditional-auth/api-reference/#context')">context</a>. You can use `context.currentKnownSubject` to get the authenticated user.
+If **username and password** authentication is successful, let's get the <a :href="$withBase('/references/conditional-auth/api-reference/#user')">user</a> from the <a :href="$withBase('/references/conditional-auth/api-reference/#context')">context</a>. You can use `context.currentKnownSubject`.
 
 ```js
 var groups = ['employee', 'manager'];
@@ -59,9 +66,9 @@ var onLoginRequest = function (context) {
 };
 ```
 
-## Check membership of user
+## Check membership of the user
 
-Now check whether user is a member of `admin` or `manager`. You can use the utility function <a :href="$withBase('/references/conditional-auth/api-reference/#check-group-membership')">isMemberOfAnyOfGroups(user, groups)</a>. 
+Now, let's check whether the user is a member of `manager` or `employee`. You can use the <a :href="$withBase('/references/conditional-auth/api-reference/#check-group-membership')">isMemberOfAnyOfGroups(user, groups) utility function</a>. 
 
 Refer the <a :href="$withBase('/references/conditional-auth/api-reference/#utility-functions')">inbuilt functions</a> to get to know more existing functions.
 
@@ -82,7 +89,7 @@ var onLoginRequest = function (context) {
 
 ## Fail authentication
 
-If the user is not a member, then fail the authentication and redirect the user to his application with some error code.
+If the user is not a member, fail the authentication and redirect the user to the application with some error code.
 
 ```js
 var groups = ['employee', 'manager'];
@@ -104,6 +111,6 @@ var onLoginRequest = function (context) {
 };
 ```
 
-Now you have completed writing a conditional auth script for group-based access control scenario.
+You have now written a conditional authentication script for the group-based access control scenario.
 
 Similarly, you can build your own scripts to handle many scenarios using the <a :href="$withBase('/references/conditional-auth/api-reference/')">API references</a>.
