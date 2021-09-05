@@ -97,10 +97,12 @@ module.exports = config({
                 ['get-started/create-organization.md', 'Get Started'],
                 {
                     title: 'Integrate Apps',
+                    path: 'applications/',
+                    sidebarDepth: 2,
                     children: [
-                    ['applications/', 'Overview'],
                     {
                         title: 'Register Apps',
+                        path: 'applications/spa',
                         prefix: 'applications/',
                         sidebarDepth: 2,
                         children: [
@@ -111,13 +113,15 @@ module.exports = config({
                     },
                     {
                         title: 'Add Login to Apps',
+                        path: 'applications/web-app',
                         prefix: 'applications/',
                         sidebarDepth: 2,
                         children: [
                             ['spa/add-login-to-single-page-app.md', 'Add login to an SPA'],
-                            ['web-app/add-login-to-web-app.md', 'Add login to web app'],
+                            ['web-app/add-login-to-web-app.md', 'Add login to a web app'],
                             {
                                 title: 'Implement OIDC flows',
+                                path: 'oidc',
                                 prefix: 'oidc/',
                                 children: [
                                     ['discover-oidc-configs.md', 'Discover OIDC endpoints'],
@@ -141,11 +145,12 @@ module.exports = config({
                     },
                     {
                         title: 'Enable User Attributes',
-                        prefix: 'applications/',
+                        prefix: 'applications/user-attributes/',
+                        path: 'applications/user-attributes/',
                         sidebarDepth: 2,
                         children: [
-                            ['user-attributes/enable-attributes-for-oidc-app.md', 'Enable attributes for OIDC apps'],
-                            ['user-attributes/enable-attributes-for-saml-app.md', 'Enable attributes for SAML apps'],
+                            ['enable-attributes-for-oidc-app.md', 'Enable attributes for OIDC apps'],
+                            ['enable-attributes-for-saml-app.md', 'Enable attributes for SAML apps'],
                         ]
                     },
                     {
@@ -172,23 +177,25 @@ module.exports = config({
                     {
                         title: 'Add Multi-Factor Authentication',
                         prefix: 'connections/mfa/',
+                        path: 'connections/mfa',
                         sidebarDepth: 2,
                         children: [
-                            ['', 'Overview'],
                             ['add-totp-login.md', 'Add TOTP'],
                             ['add-emailotp-login.md', 'Add Email OTP'],
                         ]
                     },
                     {
                         title: 'Add Conditional Authentication',
+                        prefix: 'conditional-auth/',
+                        path: 'conditional-auth/',
+                        sidebarDepth: 2,
                         children: [
-                            ['conditional-auth/', 'Overview'],
-                            ['conditional-auth/configure-conditional-auth.md', 'Set up conditional authentication'],
-                            ['conditional-auth/group-based-template.md', 'Add group-based authentication'],
-                            ['conditional-auth/ip-based-template.md', 'Add IP-based authentication'],
-                            ['conditional-auth/new-device-based-template.md', 'Add device-based authentication'],
-                            ['conditional-auth/user-age-based-template.md', 'Add user age-based authentication'],
-                            ['conditional-auth/write-your-first-script.md', 'Write a custom authentication script'],
+                            ['configure-conditional-auth.md', 'Set up conditional authentication'],
+                            ['group-based-template.md', 'Add group-based authentication'],
+                            ['ip-based-template.md', 'Add IP-based authentication'],
+                            ['new-device-based-template.md', 'Add device-based authentication'],
+                            ['user-age-based-template.md', 'Add user age-based authentication'],
+                            ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
                     ]
@@ -196,8 +203,9 @@ module.exports = config({
                 {
                     title: 'Manage Users',
                     prefix: 'users/',
+                    path: 'users/',
+                    sidebarDepth: 2,
                     children: [
-                        ['', 'Overview'],
                         ['owner.md', 'Manage owner'],
                         ['manage-collaborators.md', 'Manage collaborators'],
                         ['manage-customers.md', 'Manage customers'],
@@ -207,21 +215,23 @@ module.exports = config({
                         {
                             title: 'User Self-Service',
                             prefix: 'self-service/',
-                            sidebarDepth: 2,
+                            path: 'self-service/',
                             children: [
                                 {
                                     title: 'Asgardeo User',
+                                    prefix: 'asgardeo-user/',
+                                    path: 'asgardeo-user/',
                                     children: [
-                                        ['asgardeo-user/my-account', 'My Account'],
-                                        ['asgardeo-user/recover-password', 'Recover your password'],
+                                        ['recover-password.md', 'Recover your password'],
                                     ]
                                 },
                                 {
                                     title: 'Customer',
+                                    prefix: 'customer/',
+                                    path: 'customer/',
                                     children: [
-                                        ['customer/my-account', 'My Account'],
-                                        ['customer/recover-password', 'Recover your password'],
-                                        ['customer/self-register', 'Self-register'],
+                                        ['recover-password.md', 'Recover your password'],
+                                        ['self-register.md', 'Self-register'],
                                     ]
                                 },
                             ]
@@ -230,34 +240,33 @@ module.exports = config({
                 },
                 {
                     title: 'Manage Organization Settings',
+                    prefix: 'organization-settings/',
+                    path: 'organization-settings/',
+                    sidebarDepth: 2,
                     children: [
-                        ['organization-settings/organizations', 'Manage organizations'],
+                        ['organizations.md', 'Manage organizations'],
                         {
                             title: 'Manage User Attributes',
-                            prefix: 'organization-settings/attributes/',
-                            sidebarDepth: 2,
+                            path: 'attributes/',
                             children: [
-                                ['manage-attributes', 'Manage attributes'],
-                                ['manage-oidc-attribute-mappings', 'Manage OIDC attribute mappings'],
-                                ['manage-scim2-attribute-mappings', 'Manage SCIM2 attribute mappings'],
+                                ['attributes/manage-oidc-attribute-mappings', 'Manage OIDC attribute mappings'],
+                                ['attributes/manage-scim2-attribute-mappings', 'Manage SCIM2 attribute mappings'],
                             ]
                         },
                         {
                             title: 'Account Recovery',
-                            prefix: 'organization-settings/',
                             sidebarDepth: 2,
                             children: [
                                 ['password-recovery', 'Configure password recovery'],
                             ]
                         },
-                        ['organization-settings/configure-self-registration', 'Self-registration'],
+                        ['configure-self-registration', 'Self-registration'],
                         {
                             title: 'Manage Account Security',
-                            prefix: 'organization-settings/account-security/',
                             sidebarDepth: 2,
                             children: [
-                                ['login-attempts-security', 'Configure login-attempts security'],
-                                ['bot-detection', 'Configure bot detection'],
+                                ['account-security/login-attempts-security', 'Configure login-attempts security'],
+                                ['account-security/bot-detection', 'Configure bot detection'],
                             ]
                         },
                     ]
@@ -301,6 +310,7 @@ module.exports = config({
                 ['/references/user-management/user-roles.md', 'Asgardeo user roles'],
                 {
                     title: 'App Configurations',
+                    path: 'app-settings/',
                     children: [
                         ['/references/app-settings/oidc-settings-for-app.md', 'OIDC configurations'],
                         ['/references/app-settings/saml-settings-for-app.md', 'SAML configurations'],
@@ -308,6 +318,7 @@ module.exports = config({
                 },
                 {
                     title: 'IdP Configurations',
+                    path: 'idp-settings/',
                     children: [
                         ['/references/idp-settings/oidc-settings-for-idp.md', 'OIDC configurations'],
                         ['/references/idp-settings/saml-settings-for-idp.md', 'SAML configurations'],
