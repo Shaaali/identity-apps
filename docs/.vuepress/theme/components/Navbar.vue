@@ -31,7 +31,7 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
     >
-      <!-- <DarkmodeSwitch class="darkmode-switch"/> -->
+      <DarkmodeSwitch class="darkmode-switch"/>
       <AlgoliaSearchBox
           v-if="isAlgoliaSearch"
           :options="algolia"
