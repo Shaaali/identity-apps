@@ -1,5 +1,5 @@
 # Manage OpenID Connect attribute mappings
-You can map OpenID Connect claims to <a :href="$withBase('/guides/organization-settings/attributes/manage-attributes')">default attributes</a> in the organization. This allows applications that implement OpenID Connect login to receive user information in the ID token.
+You can map OpenID Connect claims to <a :href="$withBase('/guides/organization-settings/attributes/')">default attributes</a> in the organization. This allows applications that implement OpenID Connect login to receive user information in the ID token.
 
 ## View OpenID Connect attributes
 To view the OpenID Connect attributes available for your organization:
