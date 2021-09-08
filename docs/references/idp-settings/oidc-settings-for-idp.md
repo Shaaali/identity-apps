@@ -1,7 +1,6 @@
 # OIDC settings for IdPs
 
 You can find the OIDC enterprise IdP settings in the **Settings** tab of the selected OIDC enterprise IdP. 
-<img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-settings.png')" alt="OIDC IdP settings">
 
 ## Mandatory settings
 
