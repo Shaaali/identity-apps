@@ -4,6 +4,13 @@ You can find the OpenID Connect protocol related settings under **protocol** sec
   <img :src="$withBase('/assets/img/guides/applications/app-protocol-settings.png')" alt="OIDC settings">
  
 ## Basic Settings
+
+### Client credentials
+
+When your application is registered in Asgardeo, a client ID is generated as the identifier of the application. If you register a traditional web application, a client secret is generated in addition to the client ID as shown below.
+
+<img :src="$withBase('/assets/img/guides/applications/get-client-id-and-secret.png')" alt="Get client ID and secret of webapp">
+
 ### Allowed grant types
 This will determine how the application communicates with the token service. Web application template supports following grant types:
  - Code
@@ -17,6 +24,7 @@ You can enable refresh token grant to get refresh tokens.
 However, [implicit grant](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-14#section-2.1.2) and [password](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics-14#section-2.4) grants are not recommended due to security reasons.
 
 ### Public client
+
 <CommonGuide guide='guides/fragments/manage-app/oidc-settings/public-client.md'/>
 
 ### Authorized redirect URLs

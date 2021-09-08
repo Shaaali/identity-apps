@@ -2,7 +2,7 @@
 
 OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc7009) to revoke any access granted to them. This token endpoint can revoke **access tokens** and **refresh tokens**. 
 
-Confidential clients such as  web apps can keep the client credentials securely. Those clients need to prove their identity when they access the  revocation endpoint to revoke access tokens. 
+Confidential clients such as web apps can keep the client credentials securely. Those clients need to prove their identity when they access the revocation endpoint to revoke access tokens. 
 
 Public clients such as SPAs, mobile apps can't store credentials securely. Those apps need to submit only their client ID to identify the apps during token revocation.  
 
@@ -47,7 +47,7 @@ Apart from client authentication, the revocation request has some other paramete
 
 In this method, the app can send the `client_id` and `client_secret` as body params in the revocation request. 
 
-Sample request is given below.
+The sample request is given below.
 
 <CodeGroup>
 
@@ -153,7 +153,7 @@ When the token is revoked, you will get a `200 OK` response.
 
 ## Token revocation by public clients
 
-Since public clients can't store credentials securly, they don't  need to do  authentication when invoking token revocation. But they need to submit their client ID.
+Since public clients can't store credentials securely, they don't need to do authentication when invoking token revocation. But they need to submit their client ID.
 
 **Sample request:**
 

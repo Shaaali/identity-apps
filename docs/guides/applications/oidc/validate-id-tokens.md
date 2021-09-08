@@ -115,7 +115,7 @@ _Sample response:_
 
 Applications should verify the claims in the ID token before consuming it. You can either use some libraries, or you can manually verify the claims.  See [ID token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation) for details.
 
-Given below are some claims that are sent in ID token. These need to be verified by the application.
+Given below are some claims that are sent in the ID token. These need to be verified by the application.
 - **iss**(issuer): This should match the`https://api.asgardeo.io/t/<organization_name>/oauth2/token` value.
 - **aud**(audience): This should match the client ID of the application.
 - **iat** (issued at time): This indicates when the ID token was issued. Applications can reject tokens that were issued too long ago.

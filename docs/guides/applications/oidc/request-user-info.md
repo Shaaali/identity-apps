@@ -66,7 +66,7 @@ axios(config)
 </CodeGroup>
 
 **Default sample response:**  
-Asgardeo returns only `sub` claim, if there is no user attributes shared with the application.
+Asgardeo returns only `sub` claim if there is no user attributes shared with the application.
 
 ```json no-line-numbers
 {

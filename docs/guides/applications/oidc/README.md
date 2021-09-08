@@ -31,7 +31,7 @@ When Asgardeo sends the ID token to an application, there is user information en
 
 Asgardeo provides the '/oauth2/introspect' endpoint to perform token validation. Using this, the resource server can verify the access token before authorizing the access.
 
-<a :href="$withBase('/guides/applications/oidc/introspect-tokens/')">Token validation by resource servers</a> has detailed instructions on this.
+<a :href="$withBase('/guides/applications/oidc/token-validation-resource-server/')">Token validation by resource servers</a> has detailed instructions on this.
 
 ## Revoke access tokens
 

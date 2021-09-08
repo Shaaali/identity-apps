@@ -1,20 +1,20 @@
-# Implement authorization code grant with PKCE in apps
+# Implement the authorization code flow with PKCE
 
-A public client is an application that cannot keep the client credentials securely. <a :href="$withBase('/guides/applications/spa/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
-It is recommended to use authorization code grant type for public clients. In addition to that, [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with the authorization code grant to mitigate code interception attacks.
+See the instructions given below to understand how to implement OpenID Connect login using the authorization code flow with PKCE in your application.
 
-By following this guide, you will be able to understand the authorization code flow with PKCE and build on to your single-page application.
+This method is mostly suitable for public clients, which are applications that cannot keep the client credentials securely. <a :href="$withBase('/guides/applications/spa/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
 
-The below diagram explains how login using authorization code grant works with Asgardeo.
+It is recommended to use authorization code grant type for public clients. [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with the authorization code grant to mitigate code interception attacks.
+
+The following diagram explains how OpenID Connect login using the authorization code grant works with Asgardeo.
+
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
 
-You need following steps to to add login to your app using the authorization code grant with PKCE:
-1. [Get authorization code](#get-authorization-code)
-2. [Get tokens](#get-tokens)
+As shown above, you need to configure your application to get the authorization code from Asgardeo, and then exchange it for the required tokens.
 
 ## Prerequisites
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/spa/register-single-page-app/#register-app')">register a single-page application</a>.
 
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, <a :href="$withBase('/guides/applications/spa/register-single-page-app/#register-app')">register a single-page application</a>.
 
 ## Get authorization code
 
@@ -89,7 +89,7 @@ https://localhost:5000/?code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d&session_state=
 
 
 
-Once the application obtains authorization code, application has to exchange the authorization code to get below tokens:
+Once the application gets the authorization code, the application has to exchange the authorization code to get the below tokens:
 - access_token
 - refresh_token (only if refresh_token grant type is enabled)
 - id_token (only if `openid` scope is used)
