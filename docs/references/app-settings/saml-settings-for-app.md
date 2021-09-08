@@ -54,7 +54,7 @@ Used as the signing algorithm to sign the authentication response and logout res
 #### Bindings
 Specifies the mechanisms to transport SAML messages in communication protocols. Bindings define how SAML assertions and request-response protocol messages can be exchanged between identity provider and SAML application.
 
-Asgardeo by default supports below bindings:
+Asgardeo by default supports the following bindings:
 - HTTP Post
 - HTTP Redirect
 <!--  Artifact -->
