@@ -83,21 +83,22 @@ Click the **Download sample** button to download the sample. You can also choose
       ``` no-line-numbers
       consumerKey=<client ID>
       consumerSecret=<client secret>
-      scope=openid,internal_application_mgt_view
+      scope=openid,address,email,profile
    
       callBackURL=http://localhost:8080/oidc-sample-app/oauth2client
-      postLogoutRedirectURI=http://localhost:8080/oidc-sample-app/index.html
-      trustedAudience=http://localhost:8080/oidc-sample-app  
-      skipURIs=/oidc-sample-app/index.html
-      indexPage=index.html
-      logoutURL=logout     
+      trustedAudience=http://localhost:8080/oidc-sample-app      
    
-      # Asgardeo Endpoints
+      issuer=https://api.asgardeo.io/t/<organization_name>/oauth2/token
       authorizeEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/authorize
       logoutEndpoint=https://api.asgardeo.io/t/<organization_name>/oidc/logout
       tokenEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/token
-      issuer=https://api.asgardeo.io/t/<organization_name>/oauth2/token
       jwksEndpoint=https://api.asgardeo.io/t/<organization_name>/oauth2/jwks
+      #sessionIFrameEndpoint=https://dev.api.asgardeo.io/t/<organization_name>/oidc/checksession
+
+      skipURIs=/oidc-sample-app/index.html
+      indexPage=index.html
+      logoutURL=logout 
+      errorPage=error.jsp
       ```
 
 ## Run the sample
