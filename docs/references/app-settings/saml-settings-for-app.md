@@ -174,13 +174,21 @@ After adding `http://localhost:8081/sample-app-new/home.jsp` as a `recipient`:
 
 #### Enable encryption
 Specifies whether to enable encryption for SAML assertion.
+<br>
+To enable encryption, you should configure the [certificate](#certificate) of your application. You can configure the certificate from the <b>Certificates</b> section.
 
 #### Assertion encryption algorithm
 
-Used as the encryption algorithm to encrypt the SAML assertion.
+The Assertion encryption algorithm you select specifies the symmetric encryption algorithm that is used for encrypting the SAML Assertion.
+
+The following encryption process is enforced by the Assertion encryption algorithm:
+1. First, a SAML2 Key is generated. This key is used for maintaining a secure communication channel with the application.
+2. Asgardeo then uses the generated SAM2 Key value and the symmetric encryption algorithm specified here to encrypt the SAML Assertion.
 
 #### Key encryption algorithm
-Used as the encryption algorithm for SAML2 key.
+The key encryption algorithm you select specifies the asymmetric encryption algorithm that is used for encrypting the SAML2 key. 
+
+Asgardeo uses the Public Key of the application (obtained from the [certificate](#certificate))  and the asymmetric encryption algorithm specified here to encrypt the SAML2 Key.
 
 ### Attribute Profile
 
@@ -260,14 +268,16 @@ https://api.asgardeo.io/t/bifrost/samlsso?slo=true&spEntityID=https://sample.app
 Note that, you need to encode the URLs before calling the single logout service. 
 
 ### Certificate
-You can upload the public certificate of your SAML application here. 
-This certificate is used to validate the signature if application sends signed authentication requests or logout requests. 
+The certificate is used to validate signatures when authentication requests or logout requests from the application are signed. Note that request signature validation should be [enabled](#enable-request-signature-validation).
+<br>
+You can either upload your certificate file or copy the contents. Follow the steps given below.
 
-To validate signature for authentication and logout requests, you need to [enable request signature validation](#enable-request-signature-validation)
+1. Select <b>Provide Certificate</b> and click <b>New Certificate</b>.
 
   <img :src="$withBase('/assets/img/guides/applications/saml-app/upload-certificate-of-app.png')" alt="Upload app certificate">
 
-You need to upload the certificate in PEM format.
+2. Upload the certificate file or copy the certificate contents
+<br>
 
 ::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to convert your certs to PEM format using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>
  **Convert CRT to PEM**
