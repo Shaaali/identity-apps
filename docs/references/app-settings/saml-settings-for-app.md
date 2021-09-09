@@ -54,15 +54,15 @@ Used as the signing algorithm to sign the authentication response and logout res
 #### Bindings
 Specifies the mechanisms to transport SAML messages in communication protocols. Bindings define how SAML assertions and request-response protocol messages can be exchanged between identity provider and SAML application.
 
-Asgardeo supports below bindings:
+Asgardeo by default supports the following bindings:
 - HTTP Post
 - HTTP Redirect
-- Artifact
+<!--  Artifact -->
 
-Asgardeo by default supports HTTP Post and HTTP Redirect bindings. To enable support for Artifact binding, select **Artifact**.
+<!-- Asgardeo by default supports HTTP Post and HTTP Redirect bindings. To enable support for Artifact binding, select **Artifact**.
 
 #### Enable signature validation for artifact binding
-Specifies whether the artifact resolve request signature should be validated against the application certificate. If you enable this option, make sure to provide the application certificate below.
+Specifies whether the artifact resolve request signature should be validated against the application certificate. If you enable this option, make sure to provide the application certificate below. -->
 
 #### Enable IdP initiated SSO
 Specifies whether to initiate Single Sign-On (SSO) from the IdP instead of the application. If this is selected, a service provider is not required to send the SAML2 request.
