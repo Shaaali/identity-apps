@@ -44,5 +44,21 @@ Specifies the recipient(s) that this ID token is intended for. By default, the c
  ```
 <br>
 
+#### Enable encryption
+Specifies whether to enable encryption for the ID Token when issuing the token using the public key of your application.
+<br>To enable encryption, you should configure the [certificate](#certificate) of your application. You can configure the certificate from the <b>Certificates</b> section.
+
+#### Algorithm
+The algorithm enables a secure key exchange using an Asymmetric Key Encryption algorithm. 
+
+Asgardeo uses the Public Key of the application (obtained from the [certificate](#certificate)) and the asymmetric encryption algorithm specified here to encrypt the CEK.
+
+#### Encryption Method
+The encryption method enables a symmetric encryption algorithm for encrypting ID tokens. The value you select corresponds to the JWE key length that is used by the encryption method.
+
+The following encryption process is enforced by the encryption method:
+1. First, a Random Content Encryption Key (CEK) is generated. This key is used for maintaining a secure communication channel with the application.
+2. Asgardeo then uses the generated CEK value and the symmetric encryption algorithm specified here to encrypt the ID token.
+
 #### ID Token expiry time
 Provides the validity period of ID token in seconds. The default value is 3600 seconds.

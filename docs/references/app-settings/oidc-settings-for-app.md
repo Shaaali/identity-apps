@@ -47,3 +47,34 @@ The `redirect_uri` sent in the <a :href="$withBase('/guides/applications/oidc/im
 
 ### Refresh Token
  <CommonGuide guide='guides/fragments/manage-app/oidc-settings/refresh-token.md'/>
+
+### Certificate
+The certificate is used to validate signatures of signed requests and to decrypt the encrypted requests from the application to Asgardeo. Note that request signature validation should be [enabled](#enable-request-signature-validation).
+<br><br>
+You can either <b>Provide Certificate</b> or <b>Use JWKS endpoint</b> to add a certificate.
+<br>
+Follow the steps given below to Provide Certificate.
+
+1. Select <b>Provide Certificate</b> and click <b>New Certificate</b>.
+
+  <img :src="$withBase('/assets/img/guides/applications/oidc/upload-certificate-of-app.png')" alt="Upload app certificate">
+
+2. Upload the certificate file or copy the certificate contents.
+<br>
+
+::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to convert your certs to PEM format using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>
+ **Convert CRT to PEM**
+ ``` no-line-numbers
+ openssl x509 -in cert.crt -out cert.pem
+ ``` 
+**Convert CER to PEM:**
+ ``` no-line-numbers
+ openssl x509 -in cert.cer -out cert.pem
+ ```
+**Convert DER to PEM:**
+  ``` no-line-numbers
+  openssl x509 -in cert.der -out cert.pem
+ ```
+:::    
+
+<br>
