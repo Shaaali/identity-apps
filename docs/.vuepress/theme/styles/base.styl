@@ -1,6 +1,7 @@
 @require '~@theme/styles/fonts/crimson.css'
 @require './wrapper'
 @require '~@mr-hope/vuepress-shared/styles/font-awesome';
+@require './fonts'
 
 html, body
   padding 0
@@ -8,8 +9,7 @@ html, body
   background var(--bgcolor)
 
 body
-  //font-family Georgia Pro, Crimson, Georgia, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', STHeiti, 'Microsoft YaHei', SimSun, sans-serif
-  font-family -apple-system, BlinkMacSystemFont, Segoe UI, HelveticaNeue-Light, Ubuntu, Droid Sans, sans-serif, font-awesome
+  font-family 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, HelveticaNeue-Light, Ubuntu, Droid Sans, sans-serif, font-awesome
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size 16px
@@ -105,20 +105,24 @@ p
   {$contentClass}:not(.custom) > &, {$contentClass}:not(.custom) > ul &, {$contentClass}:not(.custom) > ol &
     word-break normal
     line-height 1.8em
+    font-weight 400
 
     @media (max-width $MQMobileNarrow)
       text-align left
 
 h1
   font-size 2rem
+  font-weight 700
 
 h2
   font-size 1.65rem
   padding-bottom 0.3rem
+  font-weight 600
   //border-bottom 1px solid var(--border-color)
 
 h3
   font-size 1.35rem
+  font-weight 500
 
 a.header-anchor
   font-size 0.85em

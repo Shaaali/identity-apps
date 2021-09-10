@@ -1,45 +1,52 @@
 # Add IP-based authentication
 
-You can secure the sign-in flow based on the user's IP address by applying the **IP-Based** conditional authentication template to your application. This template prompts two-factor authentication for users who are signing in from outside a given IP range.
+You can secure the login flow based on the user's IP address by applying the **IP-Based** conditional authentication template to your application. This template prompts two-factor authentication for users who log in from outside a given IP range (such as external networks or other geographical locations).
 
 ## Scenario
 
-Consider a scenario where you need to secure the sign-in flow for users signing in from external networks or other geographic
-locations. If the user's IP address is not in the configured range (i.e. 192.168.1.0/24, 10.100.0.0/16), the second authentication step is prompted.
-Users signing in from the internally configured network specified in the script can simply provide their credentials (basic authentication) to sign in.
+Consider a scenario where the internal IPs of an organization are as follows: `192.168.1.0/24, 10.100.0.0/16`. The login flow should be stepped up with TOTP when users log in from outside this IP range as follows:
+
+1. Username and password
+2. TOTP
+
+Users who log in from the internal network should be allowed to simply log in with their username and password.
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/web-app/register-oidc-web-app/')">register an application</a>.
+You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
 
-## Configure the sign-in flow
+-   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
+-   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
+-   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">Web app with SAML</a>
 
-Follow the steps given below.
+## Configure the login flow
 
-1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
-3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
-4. Turn on **Conditional Authentication** by switching the toggle.
-
-   <img :src="$withBase('/assets/img/guides/conditional-auth/enable-conditional-auth.png')" alt="Enable conditional auth in Asgardeo">
+<CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
 5. Select the **IP-Based** template.
-6. Update the following parameter in the script.
+6. Verify that the login flow is now updated with the following two authentication steps:
+
+    -   Step 1: Username and Password
+    -   Step 2: TOTP
+
+7. Update the following parameter in the script.
 
     <table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>corpNetwork</td>
-            <td>Comma separated list of IP addresses for which two-factor authentication should apply.</td>
-        </tr>
-    </tbody>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>corpNetwork</code></td>
+                <td>Comma separated list of IP addresses. Two-factor authentication should apply when users log in from outside this range. The default values in the template are <code>192.168.1.0/24</code> and <code>10.100.0.0/16</code>.</td>
+            </tr>
+        </tbody>
     </table>
+
+8. Click **Update** to confirm.
 
 ## How it works
 
@@ -110,12 +117,16 @@ configured IP address range.
 5.  If the IP address of the logged-in user is not in the configured IP range, step 2 of the authentication flow is
 executed.
 
+::: info
+Find out more about the scripting language in the <a :href="$withBase('/references/conditional-auth/api-reference/')">Conditional Authentication API Reference</a>.
+:::
+
 ## Try it out
 
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to sign in with a user who has the IP address in the configured range. You will successfully sign in to the application.
+2. Try to log in with a user who has the IP address in the configured range. You will successfully log in to the application.
 3. Log out of the application.
-4. Sign in with a user who does not belong to the configured IP address range. TOTP authentication is prompted.
+4. Log in with a user who does not belong to the configured IP address range. TOTP authentication is prompted.
    <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="ip-based-2fa-conditional-auth-totp-page">

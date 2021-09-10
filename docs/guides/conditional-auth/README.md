@@ -26,6 +26,10 @@ function doStepUp(context) {
 }
 ```
 
+::: info
+Find out more about the scripting language in the <a :href="$withBase('/references/conditional-auth/api-reference/')">Conditional Authentication API Reference</a>.
+:::
+
 ## Script templates
 
 The script editor in Asgardeo comes with a set of predefined templates to get you started with some of the most common conditional authentication scenarios. These scripts contain inline comments explaining the conditions that are applied.
@@ -53,25 +57,32 @@ required parameters, the default authentication steps, and how you can try out t
 
 The available templates are listed below.
 
-* [User-Age-Based](./user-age-based-template/)
-
-  This configures a login flow where users can log in only if their age is over the configured value. The user's age is calculated using the
-  `date of birth` attribute.
-
-* [Group-Based](./group-based-template/)
-
-  This login flow prompts 2FA for users who belong to any of the given set of groups.
-
-* [New-Device-Based](./new-device-based-template/)
-
-  This login flow sends an email notification and/or prompts 2FA for users who are logged in from a previously unused device. A cookie is used to identify whether the device has been used before.
-
-* [IP-Based](./ip-based-template/)
-
-  This login flow prompts 2FA for users who are logging in from outside the given IP range.
+<table>
+  <tr>
+    <th>Template</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a :href="$withBase('/guides/conditional-auth/user-age-based-template/')">User-Age-Based</a></td>
+    <td>This configures a login flow where users can log in only if their age is over the configured value. The user's age is calculated using the <code>date of birth</code> attribute.</td>
+  </tr>
+  <tr>
+    <td><a :href="$withBase('/guides/conditional-auth/group-based-template/')">Group-Based</a></td>
+    <td>This login flow prompts two-factor authentication (2FA) for users who belong to any of the given set of groups.</td>
+  </tr>
+  <tr>
+    <td><a :href="$withBase('/guides/conditional-auth/new-device-based-template/')">New-Device-Based</a></td>
+    <td>This login flow sends an email notification and/or prompts two-factor authentication for users who are logged in from a previously unused device.</td>
+  </tr>
+  <tr>
+    <td><a :href="$withBase('/guides/conditional-auth/ip-based-template/')">IP-Based</a></td>
+    <td>This login flow prompts two-factor authentication for users who log in from outside the given IP range.</td>
+  </tr>
+</table>
 
 If required, you can also use the script editor to introduce new functions and fields to an authentication script based on your requirement. See the instructions on <a :href="$withBase('/guides/conditional-auth/write-your-first-script/')">writing a custom authentication script</a>. 
 
 ## What's next
-* [Set up conditional authentication for your application](./configure-conditional-auth)
-* <a :href ="$withBase('/references/conditional-auth/api-reference')">Checkout the JS API reference</a>
+
+* <a :href ="$withBase('/guides/conditional-auth/configure-conditional-auth/')">Configure conditional authentication</a>
+* <a :href ="$withBase('/references/conditional-auth/api-reference/')">Conditional authentication API reference</a>

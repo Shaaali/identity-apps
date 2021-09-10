@@ -15,9 +15,10 @@ export default Vue.extend({
         },
     },
     mounted() {
-        this.darkmode =
-            localStorage.getItem("darkmode") ||
-                "off";
+        // this.darkmode =
+        //     localStorage.getItem("darkmode") ||
+        //         "off";
+        this.darkmode = "off";
         if (this.darkmodeConfig === "auto-switch")
             if (this.darkmode === "auto")
                 this.setDarkmode("auto");

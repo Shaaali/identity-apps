@@ -1,6 +1,6 @@
 # Validate ID tokens
 
-The ID token is a security token that is sent by Asgardeo to the application when a token is requested with openid scopes. This ID token contains information about the authenticated user. 
+The ID token is a security token that is sent by Asgardeo to the application when a token is requested with OpenID scopes. This ID token contains information about the authenticated user. 
 
 **Sample ID token**
 ```no-line-numbers
@@ -26,10 +26,7 @@ eyJ4NXQiOiJZemM1T1Rnd1pURTNNV1F6TVdFek5ERm1OelZoTTJOaU9UQmxOamN3TlRJNU9HTTBNbVEx
   "sid": "f78f5f4c-1862-4209-85a3-e22c2a9c068d"
 }
 ```
-When an application receives an ID token, it has to validate the ID token:
-- [Verify the signature used to sign the ID token](#verify-the-signature-in-the-id-token)
-- [Verify claims in the ID token](#verify-claims-in-the-id-token)
-
+Use one of the following methods to validate the ID token.
 
 ## Verify the signature in the ID token
 To validate the signature on the ID token, you need the public key of Asgardeo. The signature of ID tokens can be validated using the JWKS endpoint in Asgardeo. See [ID Token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation) for details.
