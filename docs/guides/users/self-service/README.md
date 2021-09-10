@@ -4,6 +4,6 @@ The My Account portal enables users including owners, collaborators, and custome
 
 Follow the instructions in the guides given below for more information. 
 
-- <a :href="$withBase('/guides/users/self-service/asgardeo-user/')">My Account for owners and collaborators</a>
+- <a :href="$withBase('/guides/users/self-service/owners/')">My Account for owners and collaborators</a>
 
 - <a :href="$withBase('/guides/users/self-service/customer/')">My Account Portal for customers</a>

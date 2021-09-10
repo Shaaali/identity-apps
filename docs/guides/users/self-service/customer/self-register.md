@@ -3,7 +3,7 @@
 Customers can self-register to an Asgardeo organization if admins have <a :href="$withBase('/guides/organization-settings/configure-self-registration/')">enabled self registration to their organization</a>.
 
 To self register:
-1. Go to the login page via the <a :href="$withBase('/guides/users/self-service/asgardeo-user/my-account/#access-my-account-portal')">My Account Portal</a> or a business application.
+1. Go to the login page via the <a :href="$withBase('/guides/users/self-service/owners-and-collaborators/my-account/#access-my-account-portal')">My Account Portal</a> or a business application.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" alt="Self register to organization">
 2. Click **Create an account**
 3. Enter your email address and click **Continue**.
