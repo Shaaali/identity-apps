@@ -49,7 +49,7 @@ The `redirect_uri` sent in the <a :href="$withBase('/guides/applications/oidc/im
  <CommonGuide guide='guides/fragments/manage-app/oidc-settings/refresh-token.md'/>
 
 ### Certificate
-The certificate is used to validate signatures of signed requests and to decrypt the encrypted requests from the application to Asgardeo. Note that request signature validation should be [enabled](#enable-request-signature-validation).
+The certificate is used to validate signatures of signed requests and to decrypt the encrypted requests from the application to Asgardeo. 
 <br><br>
 You can either <b>Provide Certificate</b> or <b>Use JWKS endpoint</b> to add a certificate.
 <br>
