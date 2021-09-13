@@ -50,14 +50,12 @@ Specifies whether to enable encryption for the ID token when the token is issued
 To enable encryption, you should configure the certificate of your application from the <b>Certificates</b> section.
 
 #### Algorithm
-The algorithm enables a secure key exchange mechanism using an asymmetric key encryption algorithm. 
-
 A single-use AES secret key, called the Content Encryption Key (CEK), is generated to encrypt the ID token payload.
 
 Asgardeo uses the public Key of the application (obtained from the <a href="#certificate">certificate</a>) and the asymmetric encryption algorithm specified here to encrypt the generated CEK. The selected algorithm is mentioned as the "alg" in the ID token header.
 
 #### Encryption Method
-The encryption method enables a symmetric encryption algorithm for encrypting ID tokens. The value you select corresponds to the JWE key length that is used by the encryption method.
+The encryption method defines a symmetric encryption algorithm for encrypting ID tokens. 
 
 Asgardeo uses the generated CEK value and the symmetric encryption algorithm specified here to encrypt the ID token. The selected encryption method is mentioned as the "enc" in the id token header. 
 
