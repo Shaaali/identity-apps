@@ -57,7 +57,7 @@ Asgardeo uses the public Key of the application (obtained from the <a href="#cer
 #### Encryption Method
 The encryption method defines a symmetric encryption algorithm for encrypting ID tokens. 
 
-Asgardeo uses the generated CEK value and the symmetric encryption algorithm specified here to encrypt the ID token. The selected encryption method is mentioned as the "enc" in the id token header. 
+Asgardeo uses a generated CEK value and the symmetric encryption algorithm specified here to encrypt the ID token. The selected encryption method is mentioned as the "enc" in the id token header. 
 
 #### ID Token expiry time
 Provides the validity period of ID token in seconds. The default value is 3600 seconds.
