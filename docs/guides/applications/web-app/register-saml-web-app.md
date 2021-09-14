@@ -7,7 +7,7 @@ There are two ways you can use to provide your SAML application configurations t
 - Provide SAML SP configurations manually
 
 ## Register app
-Login to the [Asgardeo Console](https://console.asgardeo.io/login).
+Login to the [Asgardeo Console](https://console.asgardeo.io/).
 1. In the Asgardeo Console, Select the **Develop > Applications**.
 2. Select **New Application** and select **Traditional Web Application** type.
     <img :src="$withBase('/assets/img/guides/applications/select-app-type.png')" alt="Select app type in Asgardeo">
