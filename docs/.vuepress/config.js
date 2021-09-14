@@ -250,7 +250,7 @@ module.exports = config({
                             title: 'Attributes and attribute mappings',
                             path: 'attributes/',
                             children: [
-                                ['attributes/attributes', 'User attributes'],
+                                ['attributes/manage-attributes', 'User attributes'],
                                 ['attributes/manage-oidc-attribute-mappings', 'OIDC attribute mappings'],
                                 ['attributes/manage-scim2-attribute-mappings', 'SCIM2 attribute mappings'],
                             ]
