@@ -3,7 +3,7 @@
 Users in an Asgardeo organization can recover a forgotten password by following the instructions on the Asgardeo sign-in page provided that <a :href="$withBase('/guides/organization-settings/password-recovery/')">password recovery is enabled</a> for business users in the organization.
 
 To recover your password:
-1. Go to the sign-in page via <a :href="$withBase('/guides/users/self-service/owners-and-collaborators/my-account/#access-my-account-portal')">My Account Portal</a>. 
+1. Go to the sign-in page via <a :href="$withBase('/guides/users/self-service/owners/my-account/#access-my-account-portal')">My Account Portal</a>. 
     ::: info
     If you are an owner or a collaborator, you can choose to navigate to the [Asgardeo Console](https://console.asgardeo.io/) instead. If you are a customer, you can choose to navigate to a business application you have been granter access to instead. 
     :::
