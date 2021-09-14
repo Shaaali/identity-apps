@@ -217,21 +217,22 @@ module.exports = config({
                             prefix: 'self-service/',
                             path: 'self-service/',
                             children: [
-                                {
-                                    title: 'Asgardeo User',
-                                    prefix: 'asgardeo-user/',
-                                    path: 'asgardeo-user/',
-                                    children: [
-                                        ['recover-password.md', 'Recover your password'],
-                                    ]
-                                },
+                                ['recover-password.md', 'Recover your password'],
                                 {
                                     title: 'Customer',
                                     prefix: 'customer/',
                                     path: 'customer/',
                                     children: [
-                                        ['recover-password.md', 'Recover your password'],
+                                        ['my-account.md', 'My Account'],
                                         ['self-register.md', 'Self-register'],
+                                    ]
+                                },
+                                {
+                                    title: 'Owners and collaborators',
+                                    prefix: 'owners/',
+                                    path: 'owners/',
+                                    children: [
+                                        ['my-account.md', 'My Account'],
                                     ]
                                 },
                             ]
@@ -246,11 +247,12 @@ module.exports = config({
                     children: [
                         ['organizations.md', 'Manage organizations'],
                         {
-                            title: 'Manage User Attributes',
+                            title: 'Attributes and attribute mappings',
                             path: 'attributes/',
                             children: [
-                                ['attributes/manage-oidc-attribute-mappings', 'Manage OIDC attribute mappings'],
-                                ['attributes/manage-scim2-attribute-mappings', 'Manage SCIM2 attribute mappings'],
+                                ['attributes/manage-attributes', 'User attributes'],
+                                ['attributes/manage-oidc-attribute-mappings', 'OIDC attribute mappings'],
+                                ['attributes/manage-scim2-attribute-mappings', 'SCIM2 attribute mappings'],
                             ]
                         },
                         {
