@@ -120,7 +120,7 @@ module.exports = config({
                             ['spa/add-login-to-single-page-app.md', 'Add login to an SPA'],
                             ['web-app/add-login-to-web-app.md', 'Add login to a web app'],
                             {
-                                title: 'Implement OIDC flows',
+                                title: 'Implement OIDC Flows',
                                 path: 'oidc',
                                 prefix: 'oidc/',
                                 children: [
@@ -135,7 +135,7 @@ module.exports = config({
                                 ]
                             },
                             {
-                                title: 'Implement SAML flows',
+                                title: 'Implement SAML Flows',
                                 sidebarDepth: 2,
                                 children: [
                                     ['saml/discover-saml-configs.md', 'Discover SAML endpoints and settings'],
@@ -247,7 +247,7 @@ module.exports = config({
                     children: [
                         ['organizations.md', 'Manage organizations'],
                         {
-                            title: 'Attributes and attribute mappings',
+                            title: 'Attributes and Attribute Mappings',
                             path: 'attributes/',
                             children: [
                                 ['attributes/manage-attributes', 'User attributes'],

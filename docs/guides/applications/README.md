@@ -1,4 +1,4 @@
-# Integrate apps with Asgardeo
+# Integrate Apps with Asgardeo
 
 Regardless of the application type or the development technology, you can connect your application with Asgardeo and control the way users log in to your app.
 

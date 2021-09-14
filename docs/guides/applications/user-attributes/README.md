@@ -1,9 +1,9 @@
 ---
-breadcrumb: false
+breadcrumb: true
 prev: false
 next: false
 pageClass: user-attributes-index
-heading: User Attributes
+heading: Enable User Attributes
 subHeading: Share user attributes in the user profile with
 userAttributes:
     - name: OIDC Apps
