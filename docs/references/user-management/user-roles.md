@@ -9,7 +9,7 @@ The following default roles are available in Asgardeo:
 
 2. **Application developer**: This role includes the permissions required for registering and managing applications. The application developer is a privileged user who can integrate applications with Asgardeo. 
 
-3. **Administrative auditor**: Role which provides read-only access to the organization. Since this user has list and view permission of the Asgardeo resources, this will be useful for troubleshooting issues  in the organization and provide support for other users such as developers in the organization.
+3. **Administrative auditor**: This role includes list and view permissions to Asgardeo resources, which is useful in troubleshooting issues and providing support for other users in the organization. This role provides users read only access to the organization.
 
 Only <a :href="$withBase('/guides/users/manage-collaborators/')">Collaborators</a> can be assigned to Asgardeo roles, and a collaborator can be assigned only with one role.
 
