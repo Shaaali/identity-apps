@@ -1,4 +1,4 @@
-# User self-service
+# User Self-Service
 
 The My Account portal enables users including owners, collaborators, and customers to easily access and self-manage their Asgardeo accounts. Users can manage their information, including their profile information, active sessions, and linked social accounts. 
 

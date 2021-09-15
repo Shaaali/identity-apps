@@ -1,9 +1,9 @@
 ---
-breadcrumb: false
+breadcrumb: true
 prev: false
 next: false
 pageClass: enterprise-login-index
-heading: Enterprise Login
+heading: Add Enterprise Login
 subHeading: Add enterprise login to your applications with Asgardeo
 enterpriseIDPs:
     - name: OpenID Connect
