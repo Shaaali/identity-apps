@@ -4,17 +4,58 @@ Roles consist of the permissions that are required by users to access the Asgard
 
 When you assign a role to a user, you are controlling what the user can do in Asgardeo. 
 
-The following default roles are available in Asgardeo:
-1. **Administrator**: This role includes all administrative permissions in the organization. An organization can have many users with the administrator role. An administrator is a privileged user who has overall access to the organization.
+By default, Asgardeo has the **Administrator** user role. This role includes all administrative permissions in the organization. An organization can have many users with the administrator role. An administrator is a privileged user who has overall access to the organization.
 
-2. **Application developer**: This role includes the permissions required for registering and managing applications. The application developer is a privileged user who can integrate applications with Asgardeo. 
+<!-- 2. **Application developer**: This role includes the permissions required for registering and managing applications. The application developer is a privileged user who can integrate applications with Asgardeo. 
 
 3. **Administrative auditor**: Role which provides read-only access to the organization. Since this user has list and view permission of the Asgardeo resources, this will be useful for troubleshooting issues  in the organization and provide support for other users such as developers in the organization.
 
 Only <a :href="$withBase('/guides/users/manage-collaborators/')">Collaborators</a> can be assigned to Asgardeo roles, and a collaborator can be assigned only with one role.
 
-The following tables list the permissions enabled for roles in the organization.
+The following tables list the permissions enabled for roles in the organization. -->
+The following list contains the permissions enabled for an Administrator: 
 
+## User Management
+- View users
+- Onboard users
+- Update user profiles
+- Delete users
+- Terminate sessions
+- View groups
+- Create groups
+- Update and delete groups
+- View assigned users to groups
+- Asign users to groups
+
+## Application Management
+- View apps and app settings
+- Register apps
+- Update and delete apps
+- Update Sign-in methods
+- Update protocol settings
+
+## Connections Management
+- View connections and connection settings
+- Create new connection
+- Update and delete connections
+
+## Attributes and Scopes
+- View attributes
+- Create new attributes
+- Update and delete attributes
+- View scopes
+- Add new attributes ti scopes
+- Update and delete scopes
+
+## Organization Settings
+- View account recovery scenario and settings
+- Configure account recovery scenarios
+- View self registration related settings
+- Configure self registration for users
+- View account security related settings and configurations
+- Configure account security related settings
+
+<!--
 ## Users
 <table>
   <tr>
@@ -251,5 +292,5 @@ The following tables list the permissions enabled for roles in the organization.
       <td>✖️</td>
       <td>✖️</td>
     </tr> 
-</table>
+</table> -->
 <br>
