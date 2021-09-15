@@ -24,4 +24,4 @@ To configure password recovery:
        </table>
 6. Click **Update** once you configure the required settings.  
 
-<a :href="$withBase('/guides/users/self-service/customer/recover-password/')">Try self-service password recovery</a>.     
+<a :href="$withBase('/guides/users/self-service/recover-password/')">Try self-service password recovery</a>.     

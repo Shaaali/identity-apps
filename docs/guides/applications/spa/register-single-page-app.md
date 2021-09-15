@@ -18,7 +18,7 @@ To register the app:
 
     <img :src="$withBase('/assets/img/guides/applications/create-new-spa.png')" alt="Create a new SPA">
 
-3. Enter the following details.
+3. Enter the following details:
 
     <table>
         <tr>

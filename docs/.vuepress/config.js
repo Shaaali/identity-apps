@@ -120,7 +120,7 @@ module.exports = config({
                             ['spa/add-login-to-single-page-app.md', 'Add login to an SPA'],
                             ['web-app/add-login-to-web-app.md', 'Add login to a web app'],
                             {
-                                title: 'Implement OIDC flows',
+                                title: 'Implement OIDC Flows',
                                 path: 'oidc',
                                 prefix: 'oidc/',
                                 children: [
@@ -135,7 +135,7 @@ module.exports = config({
                                 ]
                             },
                             {
-                                title: 'Implement SAML flows',
+                                title: 'Implement SAML Flows',
                                 sidebarDepth: 2,
                                 children: [
                                     ['saml/discover-saml-configs.md', 'Discover SAML endpoints and settings'],
@@ -217,21 +217,22 @@ module.exports = config({
                             prefix: 'self-service/',
                             path: 'self-service/',
                             children: [
-                                {
-                                    title: 'Asgardeo User',
-                                    prefix: 'asgardeo-user/',
-                                    path: 'asgardeo-user/',
-                                    children: [
-                                        ['recover-password.md', 'Recover your password'],
-                                    ]
-                                },
+                                ['recover-password.md', 'Recover your password'],
                                 {
                                     title: 'Customer',
                                     prefix: 'customer/',
                                     path: 'customer/',
                                     children: [
-                                        ['recover-password.md', 'Recover your password'],
+                                        ['my-account.md', 'My Account'],
                                         ['self-register.md', 'Self-register'],
+                                    ]
+                                },
+                                {
+                                    title: 'Owners and collaborators',
+                                    prefix: 'owners/',
+                                    path: 'owners/',
+                                    children: [
+                                        ['my-account.md', 'My Account'],
                                     ]
                                 },
                             ]
@@ -246,11 +247,12 @@ module.exports = config({
                     children: [
                         ['organizations.md', 'Manage organizations'],
                         {
-                            title: 'Manage User Attributes',
+                            title: 'Attributes and Attribute Mappings',
                             path: 'attributes/',
                             children: [
-                                ['attributes/manage-oidc-attribute-mappings', 'Manage OIDC attribute mappings'],
-                                ['attributes/manage-scim2-attribute-mappings', 'Manage SCIM2 attribute mappings'],
+                                ['attributes/manage-attributes', 'User attributes'],
+                                ['attributes/manage-oidc-attribute-mappings', 'OIDC attribute mappings'],
+                                ['attributes/manage-scim2-attribute-mappings', 'SCIM2 attribute mappings'],
                             ]
                         },
                         {

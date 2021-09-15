@@ -1,4 +1,4 @@
-# Implement OIDC flows
+# Implement OIDC Flows
 
 ## Discover the OIDC endpoints
 

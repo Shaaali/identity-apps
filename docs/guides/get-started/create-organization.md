@@ -2,7 +2,7 @@
 
 First things first! To start off, let's create an organization and add a user to it. This organization will be your 
 own unique space and will contain your users, groups, and applications. Once you create your organization you can 
-access it via the [Asgardeo Console](https://console.asgardeo.io/login), where  you can also create more associated 
+access it via the [Asgardeo Console](https://console.asgardeo.io/), where  you can also create more associated 
 organizations.
 
 Let's get you started with Asgardeo!

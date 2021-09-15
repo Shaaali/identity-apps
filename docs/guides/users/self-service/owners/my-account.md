@@ -2,7 +2,7 @@
 
 If you are an owner or collaborator in an Asgardeo organization, go to the [My Account portal](https://myaccount.asgardeo.io) to easily access and self-manage your information from anywhere.
 
-You can do the following on this portal:
+You can perform the following activities on this portal:
 - Update profile information
 - Change password
 - View linked social accounts

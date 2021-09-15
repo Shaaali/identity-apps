@@ -16,7 +16,7 @@ To register the app:
 
     <img :src="$withBase('/assets/img/guides/applications/create-new-web-app.png')" alt="Create a new web app">
 
-3. Enter the following details. 
+3. Enter the following details:
 
     <table>
         <tr>
