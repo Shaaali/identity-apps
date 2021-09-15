@@ -3,7 +3,7 @@ You can map OpenID Connect claims to <a :href="$withBase('/guides/organization-s
 
 ## View OpenID Connect attributes
 To view the OpenID Connect attributes available for your organization:
-1. On the Asgardeo Console, Click **Manage > Attributes> Manage Attribute Mappings**.
+1. On the Asgardeo Console, Click **Manage > Attributes > Manage Attribute Mappings**.
 2. Click **OpenID Connect**.
    <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/view-oidc-attributes.png')" alt="View OpenID Connect attributes">
 
@@ -12,12 +12,11 @@ You can find the mapped OpenID Connect attributes.
 ## Add an OpenID Connect attribute
 Asgardeo supports some OpenID Connect attributes by default. You can add new OpenID Connect attributes as follows:
 
-1. On the Asgardeo Console, Click **Manage > Attributes> Manage Attribute Mappings**.
+1. On the Asgardeo Console, Click **Manage > Attributes > Manage Attribute Mappings**.
 2. Click **OpenID Connect**.
 3. Click **New Attribute**.
 4. Enter values for the following properties: 
    <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/add-oidc-attribute-mapping.png')" alt="Add OpenID Connect attributes">
-4. Enter values for the following properties:
    <table>
          <tbody>
            <tr>
@@ -78,8 +77,8 @@ After user authentication, you can find the `email_home` claim in the ID token a
 <br>
 
 ## Delete an OpenID Connect attribute
-To view the OpenID Connect attributes available in your organization:
-1. On the Asgardeo console, click **Manage > Attributes> Manage Attribute Mappings**.
+To delete the OpenID Connect attributes available in your organization:
+1. On the Asgardeo console, click **Manage > Attributes > Manage Attribute Mappings**.
 2. Click **OpenID Connect**.
 3. Select the attribute to delete.
 4. Click **Delete**.
