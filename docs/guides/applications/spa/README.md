@@ -20,6 +20,6 @@ registerApps:
 
 ---
 
-# User Attributes
+# Register Apps
 
 <RegisterAppsOverview/>
