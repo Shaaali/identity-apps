@@ -20,6 +20,6 @@ socialLoginIDPs:
       path: /guides/connections/social-login/add-google-login/
 ---
 
-# Social Login
+# Add Social Login
 
 <SocialLoginOverview/>
