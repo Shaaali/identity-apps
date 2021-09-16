@@ -82,4 +82,5 @@ To delete the OpenID Connect attributes available in your organization:
 2. Click **OpenID Connect**.
 3. Select the attribute to delete.
 4. Click **Delete**.
-5. Type the OpenID Connect attribute name to confirm the action.
+5. Select the checkbox to confirm your action. 
+6. Click **Confirm**.  
