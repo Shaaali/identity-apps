@@ -15,7 +15,7 @@ Only <a :href="$withBase('/guides/users/manage-collaborators/')">Collaborators</
 The following tables list the permissions enabled for roles in the organization. -->
 The following list contains the permissions enabled for an Administrator: 
 
-## User Management
+## User management
 - View users
 - Onboard users
 - Update user profiles
@@ -27,19 +27,19 @@ The following list contains the permissions enabled for an Administrator:
 - View assigned users to groups
 - Asign users to groups
 
-## Application Management
+## Application management
 - View apps and app settings
 - Register apps
 - Update and delete apps
 - Update Sign-in methods
 - Update protocol settings
 
-## Connections Management
+## Connections management
 - View connections and connection settings
 - Create new connection
 - Update and delete connections
 
-## Attributes and Scopes
+## Managing Attributes and Scopes
 - View attributes
 - Create new attributes
 - Update and delete attributes
@@ -47,7 +47,7 @@ The following list contains the permissions enabled for an Administrator:
 - Add new attributes ti scopes
 - Update and delete scopes
 
-## Organization Settings
+## Managing Organization Settings
 - View account recovery scenario and settings
 - Configure account recovery scenarios
 - View self registration related settings
