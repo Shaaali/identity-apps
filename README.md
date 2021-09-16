@@ -19,6 +19,6 @@ Refer [Developer Wiki](https://github.com/wso2-enterprise/asgardeo-docs/wiki) fo
 
 | Environment | Link |
 |-------------|-----|
-| Dev         | <https://dev.docs.asgardeo.io/asgardeo/docs>    |
-| Stage       | <https://stage.docs.asgardeo.io/asgardeo/docs>    |
+| Dev         | <https://stasgrdocsdeeus201.z20.web.core.windows.net/asgardeo/docs>    |
+| Stage       | <https://stasgrdocssteus201.z20.web.core.windows.net/asgardeo/docs>    |
 | Live        | <https://wso2.com/asgardeo/docs/>    |
