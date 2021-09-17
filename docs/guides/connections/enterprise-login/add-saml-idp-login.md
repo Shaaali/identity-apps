@@ -64,11 +64,9 @@ The SAML IdP metadata document contains:
 1. Click **Manual Configuration**.
       <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-manual-config.png')" alt="Create SAML Enterprise IDP with manual configurations">
 2. Enter the following details and click **Next**:
-     - **Service provider entity ID**: A unique name for this enterprise IdP. This value will be used as the `<saml2:Issuer>` in the SAML requests initiated from Asgardeo to external Identity Provider (IdP).
-     - **Name ID format**: Name ID defines the name identifier formats supported by the external IdP. Name identifier is how Asgardeo communicates with external IdP regarding a user. 
-     - **Single sign on URL**: Specifies the Single sign-on URL of the external IdP. This is where Asgardeo will send its authentication requests. You need to obtain this from the external IdP.
-     - **Identity provider entity ID**: This is the `<saml2:Issuer>` value specified in the SAML responses issued by the external IdP. You need to obtain this from the external IdP.
-     - **SAML 2.0 protocol binding**: Bindings define how SAML assertions and request-response protocol messages can be exchanged between the external SAML IdP and Asgardeo.
+     - **Service provider entity ID**: A unique name for this enterprise IdP. This value will be used as the `<saml2:Issuer>` in the SAML requests initiated from Asgardeo to external Identity Provider (IdP). 
+     - **Identity provider Single Sign-On URL**: Specifies the Single sign-on URL of the external IdP. This is where Asgardeo will send its authentication requests. You need to obtain this from the external IdP.
+     - **Identity provider entity ID**: This is the `<saml2:Issuer>` value specified in the SAML responses issued by the external IdP. You need to obtain this from the external IdP. 
 3. Click **Next**.
 4. Upload the public certificate of the identity provider.
 5. Click **Finish**.
