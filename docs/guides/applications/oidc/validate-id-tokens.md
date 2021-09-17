@@ -3,11 +3,12 @@
 The ID token is a security token that is sent by Asgardeo to the application when a token is requested with OpenID scopes. This ID token contains information about the authenticated user. 
 
 **Sample ID token**
-```no-line-numbers
+
+```bash no-line-numbers
 eyJ4NXQiOiJZemM1T1Rnd1pURTNNV1F6TVdFek5ERm1OelZoTTJOaU9UQmxOamN3TlRJNU9HTTBNbVExWWprd1lqZzJNVEl3WldNd056TTRNemcxWkdJeVpEZzNaQSIsImtpZCI6Ill6YzVPVGd3WlRFM01XUXpNV0V6TkRGbU56VmhNMk5pT1RCbE5qY3dOVEk1T0dNME1tUTFZamt3WWpnMk1USXdaV013TnpNNE16ZzFaR0l5WkRnM1pBX1JTMjU2IiwiYWxnIjoiUlMyNTYifQ.eyJpc2siOiIzYzdlNDIyZGFkNTk1MDc3ZTAyYTYzNjRjYzViN2M5YTE2NzFkNzhmYWQ1MmZmZTVlNmE0MzcwOTRiNGNhOWZmIiwiYXRfaGFzaCI6IklVdEVuNHRLQWlzVWVXRDhIWGZwRXciLCJhdWQiOiJXc29xOHQ0bkhXODBnU25QZnlEdlJiaUNfX0VhIiwiY19oYXNoIjoic3ZicjU1SEVIUGo3emt3Z2VuSkgxUSIsInN1YiI6IkFsaWNhQGJpZnJvc3QuY29tIiwibmJmIjoxNjI5OTY4MzQ0LCJhenAiOiJXc29xOHQ0bkhXODBnU25QZnlEdlJiaUNfX0VhIiwiYW1yIjpbIkJhc2ljQXV0aGVudGljYXRvciJdLCJpc3MiOiJodHRwczpcL1wvYXBpLmFzZ2FyZGVvLmlvXC90XC9iaWZyb3N0XC9vYXV0aDJcL3Rva2VuIiwiZXhwIjoxNjI5OTcxOTQ0LCJpYXQiOjE2Mjk5NjgzNDQsInNpZCI6ImY3OGY1ZjRjLTE4NjItNDIwOS04NWEzLWUyMmMyYTljMDY4ZCJ9.D9-lJ8vtC8Hj5mJvUm1ld9w0rifPzjHc6UyCbENtWbno0zTYB_ki3_z-x7zI_-72ixiDpsjzwLbmKKWw8tFtqWM36WvdwBH6mBDVB_K7cy8NqrACLOjFgBrRa3HXwHkwAgwHp6Vpgbs35aAbwf0OTBxeohnbEA4y84D0pFILHm-u_iFG1-tS-QKKh6s8SBR0MNA6dJqj95R3NVF-tk4aztHI5GB63aaw2E883Xd6r2k4MIi3vQoB35-T_zFSebypaheyW3IXCPNsXjsyy4toMRfE4KEeI-j20vixxtIB22OlOWBMie7ce9Atzu6op0R0eJz3f3Ch6OrPxcvT3ghSJQ
 ```
 
-**Sample decoded ID token**
+**Decoded sample ID token**
 ```json no-line-numbers
 {
   "isk": "3c7e422dad595077e02a6364cc5b7c9a1671d78fad52ffe5e6a437094b4ca9ff",
@@ -26,7 +27,8 @@ eyJ4NXQiOiJZemM1T1Rnd1pURTNNV1F6TVdFek5ERm1OelZoTTJOaU9UQmxOamN3TlRJNU9HTTBNbVEx
   "sid": "f78f5f4c-1862-4209-85a3-e22c2a9c068d"
 }
 ```
-Use one of the following methods to validate the ID token.
+
+Use one of the following methods to validate the ID token:
 
 ## Verify the signature in the ID token
 To validate the signature on the ID token, you need the public key of Asgardeo. The signature of ID tokens can be validated using the JWKS endpoint in Asgardeo. See [ID Token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation) for details.
@@ -35,18 +37,18 @@ Asgardeo exposes the public key information through the standard [JWKS](https://
 
 By using a signature validation library, you can validate the signature of the ID token using the JWKS endpoint.
 
-**JWKS endpoint:**
+**JWKS endpoint**
 
 ``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/jwks
 ```
 
-**Sample request:**
+**Sample request**
 
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
 
-``` 
+```bash
 curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/jwks'
 ```
 
@@ -91,7 +93,7 @@ axios(config)
 </CodeGroupItem>
 </CodeGroup>
 
-_Sample response:_
+**Sample response**
 
 ```json no-line-numbers
 {
@@ -116,7 +118,26 @@ _Sample response:_
 Applications should verify the claims in the ID token before consuming it. You can either use some libraries, or you can manually verify the claims.  See [ID token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation) for details.
 
 Given below are some claims that are sent in the ID token. These need to be verified by the application.
-- **iss**(issuer): This should match the`https://api.asgardeo.io/t/<organization_name>/oauth2/token` value.
-- **aud**(audience): This should match the client ID of the application.
-- **iat** (issued at time): This indicates when the ID token was issued. Applications can reject tokens that were issued too long ago.
-- **exp** (expiry time): This indicates at which the time at which the ID token will expire. Applications should reject the expired tokens.
+
+<table>
+  <tr>
+    <th>Claim</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>iss</code> <p>(issuer)</p></td>
+    <td>This should match the <code>https://api.asgardeo.io/t/organization_name/oauth2/token</code> value.</td>
+  </tr>
+  <tr>
+    <td><code>aud</code> <p>(audience)</p></td>
+    <td>This should match the client ID of the application.</td>
+  </tr>
+  <tr>
+    <td><code>iat</code> <p>(issued at time)</p></td>
+    <td>This indicates when the ID token was issued. Applications can reject tokens that were issued too long ago.</td>
+  </tr>
+  <tr>
+    <td><code>exp</code> <p>(expiry time)</p></td>
+    <td>This indicates the time at which the ID token will expire. Applications should reject the expired tokens.</td>
+  </tr>
+</table>

@@ -6,35 +6,34 @@ You can do this by invoking the discovery endpoint API or by using the Asgardeo 
 
 ## Prerequisite
 
-To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
+To get started, you need to have an application registered in Asgardeo:
 
--   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app with OIDC</a>
--   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
+-   Register a <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">single-page app with OIDC</a>.
+-   Register a <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">web app with OIDC</a>.
  
 ## Use the discovery endpoint
 
-[OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) provides the capability to discover the metadata such as endpoints, scopes, response types, claims, supported client authentication methods of Identity providers such as Asgardeo.
+[OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) allows you to discover the metadata such as endpoints, scopes, response types, claims, and supported client authentication methods of identity providers such as Asgardeo.
 
-Application can dynamically discover the OpenID Connect identity provider metadata by calling the [OpenID Connect discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest) endpoint which follows the structure:  
- `<issuer>/.well-known/openid-configuration`.  
+Applications can dynamically discover the OpenID Connect identity provider metadata by calling the [OpenID Connect discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest) endpoint. The structure of the request URL is as follows: `<issuer>/.well-known/openid-configuration`.  
 
-**Issuer of Asgardeo:**
-``` no-line-numbers
-https://api.asgardeo.io/t/<organization_name>/oauth2/token
+**Issuer of Asgardeo**
+```bash no-line-numbers
+api.asgardeo.io
 ```
 
-**Discovery endpoint of Asgardeo:**
-``` no-line-numbers
+**Discovery endpoint of Asgardeo**
+```bash no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-configuration
 ```
 
-**Sample request:**
+**Sample request**
 
 <CodeGroup>
 
 <CodeGroupItem title="cURL">
 
-```  no-line-numbers
+```bash  no-line-numbers
 curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration'
 ```
 
@@ -82,7 +81,7 @@ axios(config)
 
 <br>
 
-**Sample response:**
+**Sample response**
 ```json no-line-numbers
 {
     .
@@ -102,18 +101,18 @@ axios(config)
 
 ## Get endpoints from the console
 
-Some applications and SDKs do not have the capability to dynamically resolve endpoints from  OpenID Connect discovery. You need to configure endpoints manually to support them.
+Some applications and SDKs are not capable of dynamically resolving endpoints from  OpenID Connect discovery. For such applications, you need to configure endpoints manually.
 
 You can get the endpoints from the console as follows:
 
 1. On the [Asgardeo console](https://console.asgardeo.io/), go to **Develop > Application**.
-2. Select an OIDC application from the application view.
-3. Go to the **Info** section of the application and find the server endpoints to your organization.
+2. Select an OIDC application from the list.
+3. Go to the **Info** tab of the application and find the server endpoints to your organization.
    <img :src="$withBase('/assets/img/guides/applications/app-endpoint-help.png')" alt="app-help-panel-for-endpoints">
 
 ## What's next?
 
 Explore how OpenID Connect endpoints are used when you implement login to your applications:
 
-- <a :href="$withBase('/guides/applications/oidc/implement-auth-code-with-pkce')">Implement authorization code flow with PKCE</a> for single-page applications.
-- <a :href="$withBase('/guides/applications/oidc/implement-auth-code')">Implement authorization code flow</a> for traditional web applications.
+- Implement login for single-page applications <a :href="$withBase('/guides/applications/oidc/implement-auth-code-with-pkce')">using the authorization code flow with PKCE</a>.
+- Implement login for traditional web applications <a :href="$withBase('/guides/applications/oidc/implement-auth-code')">using the authorization code flow</a>.
