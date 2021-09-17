@@ -41,7 +41,11 @@ To update the properties of a user attribute:
              <td>If this checkbox is selected, the attribute displays in user profiles.</td>
         </tr>
         <tr>
-           <td>**Make this attribute read only on user's profile**</td>
+            <td>**Make this attribute required on users's profile**</td>
+            <td>If this checkbox is selected, the user is required to specify a value for this attribute on the profile.</td>
+        </tr>
+        <tr>
+           <td>**Make this attribute read-only on user's profile**</td>
            <td>If this checkbox is selected, the user information displayed using this attribute will be read-only in user profiles.</td>
       </tr>
       </tbody>
