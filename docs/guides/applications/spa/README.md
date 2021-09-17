@@ -1,5 +1,5 @@
 ---
-breadcrumb: false
+breadcrumb: true
 prev: false
 next: false
 pageClass: register-apps-index
@@ -20,6 +20,6 @@ registerApps:
 
 ---
 
-# User Attributes
+# Register Apps
 
 <RegisterAppsOverview/>

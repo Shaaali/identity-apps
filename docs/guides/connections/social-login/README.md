@@ -1,9 +1,9 @@
 ---
-breadcrumb: false
+breadcrumb: true
 prev: false
 next: false
 pageClass: social-login-index
-heading: Social Login
+heading: Add Social Login
 subHeading: Add social login to your applications with Asgardeo
 socialLoginIDPs:
     - name: Facebook
@@ -20,6 +20,6 @@ socialLoginIDPs:
       path: /guides/connections/social-login/add-google-login/
 ---
 
-# Social Login
+# Add Social Login
 
 <SocialLoginOverview/>

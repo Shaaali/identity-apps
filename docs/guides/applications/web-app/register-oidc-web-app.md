@@ -3,7 +3,7 @@ To integrate your web application with Asgardeo using OpenID Connect, first you 
 Follow the instructions given below.
 
 ## Register app
-You need to login to your [Asgardeo Console](https://console.asgardeo.io/login) to register your OpenID Connect web application.
+You need to login to your [Asgardeo Console](https://console.asgardeo.io/) to register your OpenID Connect web application.
 <CommonGuide guide='guides/fragments/manage-app/register-app/configure-web-app-oidc-in-asgardeo.md'/>
 
 ## Obtain client ID and client secret

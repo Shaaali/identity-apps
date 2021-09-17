@@ -72,7 +72,8 @@
     transform scale(1)
 
 .darkmode-switch
-  display flex
+  // display flex
+  display none
 
   &:hover
     cursor pointer
