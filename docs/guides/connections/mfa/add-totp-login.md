@@ -35,14 +35,17 @@ To enable TOTP as a factor for multi-factor authentication, you need to add **TO
 6. Click **Update**.
 
 ## Enroll TOTP during first login 
-You can enroll for TOTP notification from the first login to the business application using some authenticator apps. Follow the steps given below to learn how to access the authenticator app from your mobile and enroll to TOTP.
+Users can enroll for TOTP notification from the first login to the business application using some authenticator apps. Follow the steps as a user who wants to access the authenticator app from your mobile and enroll to TOTP.
 1. Download authenticator.
-2. Log in to your application.
-3. User is prompted with QR code, scan the code and click continue. (This step will happen only for the first time for a user after enabling TOTP by the administrator)
+2. Log in to the application. You are prompted with a QR code.
+3. Scan the code and click **Continue**. 
+    ::: info
+        This step is prompted only when you attempt to log in for the first time.
+    :::
     <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-totp.png')" alt="QR code for TOTP authenticator in Asgardeo" width="300">
-4. Check your authenticator which you used to scan the code.
+4. Check your authenticator for which you used to scan the code.
     <img :src="$withBase('/assets/img/guides/mfa/totp/google-authenticator.png')" alt="OTP token from the authenticator" width="300">
-5. Enter the otp by checking the authenticator app.
+5. Enter the OTP by checking the authenticator app.
     <img :src="$withBase('/assets/img/guides/mfa/totp/enter-otp-token.png')" alt="User enters OTP token in Asgardeo" width="300">
 6. Click **Continue**.
 
