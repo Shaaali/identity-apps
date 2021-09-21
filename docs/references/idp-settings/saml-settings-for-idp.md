@@ -27,6 +27,7 @@ Specifies the mechanisms to transport SAML messages in communication protocols. 
 Asgardeo supports below bindings:
 - HTTP Post
 - HTTP Redirect
+- As Per Request
 
 ## Single Logout
 
