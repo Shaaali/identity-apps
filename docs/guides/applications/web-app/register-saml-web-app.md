@@ -54,7 +54,7 @@ If you selected **Manual** in the previous step, you can manually specify the SA
     </tr>
     <tr>
         <td>Assertion consumer service URLs</td>
-        <td>The URLs to which the browser is redirected to upon successful authentication and receives SAML response.</td>
+        <td>The URLs to which the browser is redirected to upon successful authentication. This receives the SAML response.</td>
     </tr>
 </table>
 
