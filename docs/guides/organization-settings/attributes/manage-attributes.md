@@ -29,23 +29,23 @@ To update the properties of a user attribute:
    <table>
       <tbody>
          <tr>
-            <td>**Attribute Display Name**</td>
+            <td><b>Attribute Display Name</b></td>
             <td>Update the display name of the attribute that will show in user profiles.</td>
          </tr>
          <tr>
-              <td>**Description**</td>
+              <td><b>Description</b></td>
               <td>Update the description for the attribute.</td>
          </tr>
        <tr>
-             <td>**Display this attribute on the user's profile**</td>
+             <td><b>Display this attribute on the user's profile</b></td>
              <td>If this checkbox is selected, the attribute displays in user profiles.</td>
         </tr>
         <tr>
-            <td>**Make this attribute required on users's profile**</td>
+            <td><b>Make this attribute required on users's profile</b></td>
             <td>If this checkbox is selected, the user is required to specify a value for this attribute on the profile.</td>
         </tr>
         <tr>
-           <td>**Make this attribute read-only on user's profile**</td>
+           <td><b>Make this attribute read-only on user's profile</b></td>
            <td>If this checkbox is selected, the user information displayed using this attribute will be read-only in user profiles.</td>
       </tr>
       </tbody>
