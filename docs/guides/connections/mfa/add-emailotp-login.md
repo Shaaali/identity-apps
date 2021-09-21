@@ -1,17 +1,17 @@
 # MFA with Email OTP
 
-Email OTP is a one-time password (OTP) sent to the user's verified email address, which the user must submit during login (as an additional authentication step). This password is typically valid for a very short period of time. 
+Email OTP is a One-Time Password (OTP) sent to the user's verified email address, which the user must submit during login (as an additional authentication step). This password is typically valid for a very short period of time. 
 
-During Email OTP authentication, the user is required to access the verified email account in quicktime to get the OTP. This prevents unauthorized users from accessing the OTP, and thereby adds an extra layer of security to the authentication process.
+During Email OTP authentication, the user is required to access the verified email account within a short time span to get the OTP. This prevents unauthorized users from accessing the OTP, and thereby adds an extra layer of security to the authentication process.
 
-Follow the instructions given below to configure multi-factor authentication (MFA) using Email OTP in Asgardeo.
+Follow the instructions given below to configure Multi-Factor Authentication (MFA) using Email OTP in Asgardeo.
 
 ## Prerequisites
-To get started, you need to have an application registered in Asgardeo. If you don't already have, register one of the following application types.
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, register an application of one of the following application types.
 
 -   <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">web app with SAML</a>
+-   <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/')">Web app with SAML</a>
 
 ::: info Info
 - You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password**.  
@@ -23,7 +23,7 @@ Asgardeo has some default settings for email OTP, which are sufficient for most 
 
 To update the default Email OTP settings:
 
-1. In the [Asgardeo Console](https://console.asgardeo.io), go to **Connections > Email OTP** and click **Setup**.
+1. On the [Asgardeo console](https://console.asgardeo.io), go to **Connections > Email OTP** and click **Setup**.
 2. Update the following parameters in the **Settings** tab:
 
     <img :src="$withBase('/assets/img/guides/mfa/emailotp/setup-email-otp.png')" alt="Setup email OTP in Asgardeo">
@@ -64,7 +64,7 @@ If Email OTP is enabled in the authentication flow of your application, the cust
 
 1. Asgardeo sends the OTP to the user's verified email address.
 2. Asgardeo prompts the user to enter the OTP code.
-   <img :src="$withBase('/assets/img/guides/mfa/emailotp/enter-email-otp.png')" alt="Authenticate with email OTP in Asgardeo">
+   <img :src="$withBase('/assets/img/guides/mfa/emailotp/enter-email-otp.png')" alt="Authenticate with email OTP in Asgardeo" width="300">
 3. If required, the user can request Asgardeo to resend the OTP. The new OTP invalidates the previously sent OTP.
 4. The user enters the OTP and clicks **Continue**.
 5. If the authentication is successful, the user can access the application.
