@@ -1,8 +1,6 @@
 # Manage collaborators
 
-A collaborator is a user who can manage the organization and has access to the organization’s administrative operations. A collaborator can be invited to the organization and assigned with
-
-A collaborator can be assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
+A collaborator is a user who can manage the organization and has access to the organization’s administrative operations. A collaborator can be invited to the organization and assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
 
 This guide walks you through the steps of managing a collaborator account. An owner or another collaborator with an administrative role can manage collaborator accounts.
 
