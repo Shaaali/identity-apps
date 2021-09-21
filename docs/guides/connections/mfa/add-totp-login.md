@@ -25,14 +25,14 @@ To use TOTP as a multi-factor authentication(MFA) option, users need to have an 
 
 ## Enable TOTP for an app
 To enable TOTP as a factor for multi-factor authentication, you need to add **TOTP** in the authentication flow of an application. The steps given below will guide you on how to enable TOTP for an application:
-1. In the Asgardeo console, there are two ways to start enabling TOTP for an application. Follow either of the options given below.
+1. On the Asgardeo console, there are two ways to start enabling TOTP for an application. Follow either of the options given below.
  - Option1: Navigate to **Develop > Applications**.
  - Option2: Navigate to **Connections > TOTP** and click **Connect**.
-3. Select the application for which the TOTP needs to be added.
-4. Go to the **Sign-in Method** tab.
-5. Click **Add TOTP as a second factor**. This will add TOTP as a second factor authenticator.
+2. Select the application for which the TOTP needs to be added.
+3. Go to the **Sign-in Method** tab.
+4. Click **Add TOTP as a second factor**. This will add TOTP as a second factor authenticator.
     <img :src="$withBase('/assets/img/guides/mfa/totp/add-totp-authenticator.png')" alt="Configuring TOTP authenticator in Asgardeo">
-6. Click **Update**.
+5. Click **Update**.
 
 ## Enroll TOTP during first login 
 Users can enroll for TOTP notification from the first login to the business application using some authenticator apps. Follow the steps as a user who wants to access the authenticator app from your mobile and enroll to TOTP.

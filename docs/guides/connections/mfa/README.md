@@ -12,15 +12,15 @@ In Asgardeo, the default authentication mechanism is **username and password**.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/mfa/one-factor-auth.png')" alt="Configuring only username and password authentication">
 
-The Asgardeo console allows configuring multi-step authentication where you can define an authentication chain containing different authenticators in each steps. By adding different authenticators, you can achieve a login flow secured by multiple factors. 
+The Asgardeo console allows configuring multi-step authentication where you can define an authentication chain containing different authenticators in each step. By adding different authenticators, you can achieve a login flow secured by multiple factors. 
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/mfa/mfa-config.png')" alt="Configuring MFA with username and password authentication">
  
-You can choose to replace the **username and password** authentication with social or enterprise logins and add a few more multi-factor authenticators to build your authentication chain.
+You can choose to replace the **username and password** authentication with social or enterprise logins and add a few more authenticators to build your authentication chain.
 
 ## Configure multi-factor authentication
 
-1. In the Asgardeo console, navigate to **Develop > Applications** and select the application to which MFA needs to be added.
+1. On the Asgardeo console, navigate to **Develop > Applications** and select the application to which MFA needs to be added.
 2. Go to **Sign-in Method**.
 3. Select **Add Authentication** in the step that you want to add an additional factor of authentication.
 3. Select a factor and click **Add**.
