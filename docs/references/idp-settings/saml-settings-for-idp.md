@@ -9,8 +9,11 @@ Also known as  issuer. Specifies the entityID of Asgardeo which acts as the appl
 
 It is recommended to use a valid urn(e.g: urn:asgardeo:id) as the entityID. 
 
-### Single Sign-On URL
+### Identity provider Single Sign-On URL
 Single sign-on URL of the external IdP. This is where Asgardeo will send its authentication requests.
+
+### Assertion Consumer Service (ACS) URL
+The Assertion Consumer Service (ACS) URL determines where Asgardeo expects the external identity provider to send the SAML response.
 
 ### Identity provider entity ID
 Also known as the issuer of identity provider. This is the `<saml2:Issuer>` value specified in the SAML responses issued by the external IdP. 
@@ -24,7 +27,7 @@ Specifies the mechanisms to transport SAML messages in communication protocols. 
 Asgardeo supports below bindings:
 - HTTP Post
 - HTTP Redirect
-- Artifact
+- As Per Request
 
 ## Single Logout
 
