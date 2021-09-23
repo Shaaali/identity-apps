@@ -154,7 +154,7 @@ When the token is revoked, you will get a `200 OK` response.
 
 ## Token revocation by public clients
 
-Since public clients can't store credentials securely and they don't need to do authentication when revoking a token. But they need to submit their client ID.
+Since public clients cannot store credentials securely and they do not need to perform authentication when revoking a token. However, they need to submit their client ID.
 
 **Sample request**
 
