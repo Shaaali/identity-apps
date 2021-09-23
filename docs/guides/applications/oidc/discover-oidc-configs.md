@@ -101,7 +101,7 @@ axios(config)
 
 ## Get endpoints from the console
 
-Some applications and SDKs are not capable of dynamically resolving endpoints from  OpenID Connect discovery. For such applications, you need to configure endpoints manually.
+Some applications and SDKs are not capable of dynamically resolving endpoints from OpenID Connect discovery. For such applications, you need to configure endpoints manually.
 
 You can get the endpoints from the console as follows:
 
