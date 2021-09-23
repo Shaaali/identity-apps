@@ -220,7 +220,7 @@ This token request takes the following parameters.
   </tr>
   <tr>
     <td><code>code</code><Badge text="Required" type="mandatory"/></td>
-    <td>The authorization code received from authorization request.</td>
+    <td>The authorization code received from the authorization request.</td>
   </tr>
   <tr>
     <td><code>code_verifier</code><Badge text="Required" type="mandatory"/></td>
