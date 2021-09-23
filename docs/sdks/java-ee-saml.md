@@ -17,7 +17,7 @@ Follow the steps given below to authenticate users to your Java EE web applicati
 
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
 - [Download](https://maven.apache.org/download.cgi) and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you already haven't.
-- You need to have an application already registered in Asgardeo. If you don't, see the instructions on <a :href="$withBase('/guides/applications/web-app/register-saml-web-app')">registering a SAML application</a>.
+- You need to have an application already registered in Asgardeo. If you don't, see the instructions on <a :href="$withBase('/guides/applications/register-saml-web-app')">registering a SAML application</a>.
 
 ## Install the SDK
 
@@ -116,7 +116,7 @@ Find the configuration information below:
       </tr>
       <tr>
          <td>SAML2.SPEntityId</td>
-         <td>This is the unique name of the application used when registering your application with Asgardeo. See <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via the Asgardeo Console.</td>
+         <td>This is the unique name of the application used when registering your application with Asgardeo. See <a :href="$withBase('/guides/applications/register-saml-web-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via the Asgardeo Console.</td>
       </tr>
       <tr>
          <td>SAML2.IdPEntityId</td>
@@ -128,7 +128,7 @@ Find the configuration information below:
      </tr>
      <tr>
            <td>IdPPublicCert</td>
-           <td>This specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo Console. See <a :href="$withBase('/guides/applications/saml/discover-saml-configs/#discover-saml-configurations-of-asgardeo')">how to get SAML configurations from the Asgardeo Console.</a></td>
+           <td>This specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo Console. See <a :href="$withBase('/guides/authentication/saml/discover-saml-configs/#discover-saml-configurations-of-asgardeo')">how to get SAML configurations from the Asgardeo Console.</a></td>
        </tr>
        <tr>
            <td>EnableSAML2SSOLogin</td>

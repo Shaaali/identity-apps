@@ -28,10 +28,10 @@ features:
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
-        link: /guides/connections/social-login/
+        link: /guides/authentication/social-login/
 
       - name: "Enterprise login"
-        link: /guides/connections/enterprise-login/
+        link: /guides/authentication/enterprise-login/
 
   - title: Add Strong Authentication
     details: Protect your user login using multi-factor and adaptive authentication.
@@ -39,10 +39,10 @@ features:
     icon: addAuthnIcon
     subLinks:
       - name: "Multi-factor authentication"
-        link: /guides/connections/mfa/
+        link: /guides/authentication/mfa/
 
       - name: "Conditional authentication"
-        link: /guides/conditional-auth/
+        link: /guides/authentication/conditional-auth/
 
   - title: Manage users
     details: Onboard users and collectively manage their access

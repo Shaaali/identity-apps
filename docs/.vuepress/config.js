@@ -96,57 +96,35 @@ module.exports = config({
                 ['', 'Introduction'],
                 ['get-started/create-organization.md', 'Get Started'],
                 {
-                    title: 'Integrate Apps',
+                    title: 'Applications',
+                    prefix: 'applications/',
                     path: 'applications/',
                     sidebarDepth: 2,
                     children: [
-                    {
-                        title: 'Register Apps',
-                        path: 'applications/spa',
-                        prefix: 'applications/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['spa/register-single-page-app.md', 'Register an SPA'],
-                            ['web-app/register-oidc-web-app.md', 'Register web app with OIDC'],
-                            ['web-app/register-saml-web-app.md', 'Register web app with SAML'],
-                        ]
-                    },
+                            ['register-single-page-app.md', 'Register an SPA'],
+                            ['register-oidc-web-app.md', 'Register web app with OIDC'],
+                            ['register-saml-web-app.md', 'Register web app with SAML'],
+                    ]
+                },
+                {   
+                    title: 'Authentication',
+                    prefix: 'authentication/',
+                    path: 'authentication/',
+                    sidebarDepth: 2,
+                    children: [
                     {
                         title: 'Add Login to Apps',
-                        path: 'applications/web-app',
-                        prefix: 'applications/',
+                        path: 'add-login-to-apps/',
                         sidebarDepth: 2,
                         children: [
                             ['spa/add-login-to-single-page-app.md', 'Add login to an SPA'],
                             ['web-app/add-login-to-web-app.md', 'Add login to a web app'],
-                            {
-                                title: 'Implement OIDC Flows',
-                                path: 'oidc',
-                                prefix: 'oidc/',
-                                children: [
-                                    ['discover-oidc-configs.md', 'Discover OIDC endpoints'],
-                                    ['implement-auth-code.md', 'Implement Authorization code flow'],
-                                    ['implement-auth-code-with-pkce.md', 'Implement Authorization Code flow with PKCE'],
-                                    ['validate-id-tokens.md', 'Validate ID tokens'],
-                                    ['request-user-info.md', 'Request user information'],
-                                    ['introspect-tokens.md', 'Validate tokens'],
-                                    ['revoke-tokens.md', 'Revoke tokens'],
-                                    ['add-logout.md', 'Implement logout'],
-                                ]
-                            },
-                            {
-                                title: 'Implement SAML Flows',
-                                sidebarDepth: 2,
-                                children: [
-                                    ['saml/discover-saml-configs.md', 'Discover SAML endpoints and settings'],
-                                ]
-                            },
                         ]
                     },
                     {
                         title: 'Enable User Attributes',
-                        prefix: 'applications/user-attributes/',
-                        path: 'applications/user-attributes/',
+                        prefix: 'user-attributes/',
+                        path: 'user-attributes/',
                         sidebarDepth: 2,
                         children: [
                             ['enable-attributes-for-oidc-app.md', 'Enable attributes for OIDC apps'],
@@ -155,8 +133,8 @@ module.exports = config({
                     },
                     {
                         title: 'Add Social Login',
-                        prefix: 'connections/social-login/',
-                        path: 'connections/social-login/',
+                        prefix: 'social-login/',
+                        path: 'social-login/',
                         sidebarDepth: 2,
                         children: [
                             ['add-facebook-login.md', 'Add Facebook login'],
@@ -166,8 +144,8 @@ module.exports = config({
                     },
                     {
                         title: 'Add Enterprise Login',
-                        prefix: 'connections/enterprise-login/',
-                        path: 'connections/enterprise-login/',
+                        prefix: 'enterprise-login/',
+                        path: 'enterprise-login/',
                         sidebarDepth: 2,
                         children: [
                             ['add-oidc-idp-login.md', 'Add login with OIDC'],
@@ -176,8 +154,8 @@ module.exports = config({
                     },
                     {
                         title: 'Add Multi-Factor Authentication',
-                        prefix: 'connections/mfa/',
-                        path: 'connections/mfa',
+                        prefix: 'mfa/',
+                        path: 'mfa',
                         sidebarDepth: 2,
                         children: [
                             ['add-totp-login.md', 'Add TOTP'],
@@ -198,10 +176,34 @@ module.exports = config({
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
-                    ]
+                    {
+                        title: 'Configure OIDC Flows',
+                        path: 'oidc',
+                        prefix: 'oidc/',
+                        children: [
+                            ['discover-oidc-configs.md', 'Discover OIDC endpoints'],
+                            ['implement-auth-code.md', 'Implement Authorization code flow'],
+                            ['implement-auth-code-with-pkce.md', 'Implement Authorization Code flow with PKCE'],
+                            ['validate-id-tokens.md', 'Validate ID tokens'],
+                            ['request-user-info.md', 'Request user information'],
+                            ['introspect-tokens.md', 'Validate tokens'],
+                            ['revoke-tokens.md', 'Revoke tokens'],
+                            ['add-logout.md', 'Implement logout'],
+                        ]
+                    },
+                    {
+                        title: 'Configure SAML Flows',
+                        path: 'saml',
+                        prefix: 'saml/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
+                        ]
+                    },
+                    ],
                 },
                 {
-                    title: 'Manage Users',
+                    title: 'User Management',
                     prefix: 'users/',
                     path: 'users/',
                     sidebarDepth: 2,
@@ -211,58 +213,27 @@ module.exports = config({
                         ['manage-customers.md', 'Manage customers'],
                         ['manage-user-profiles.md', 'Manage user profiles'],
                         ['manage-sessions.md', 'Manage active sessions'],
-                        ['manage-groups', 'Manage groups'],
+                        ['manage-groups.md', 'Manage groups'],
                         {
-                            title: 'User Self-Service',
-                            prefix: 'self-service/',
-                            path: 'self-service/',
+                            title: 'Manage Attributes and Mappings',
+                            prefix: 'attributes/',
+                            path: 'attributes/',
                             children: [
-                                ['recover-password.md', 'Recover your password'],
-                                {
-                                    title: 'Customer',
-                                    prefix: 'customer/',
-                                    path: 'customer/',
-                                    children: [
-                                        ['my-account.md', 'My Account'],
-                                        ['self-register.md', 'Self-register'],
-                                    ]
-                                },
-                                {
-                                    title: 'Owners and collaborators',
-                                    prefix: 'owners/',
-                                    path: 'owners/',
-                                    children: [
-                                        ['my-account.md', 'My Account'],
-                                    ]
-                                },
+                                ['manage-attributes', 'User attributes'],
+                                ['manage-oidc-attribute-mappings', 'OIDC attribute mappings'],
+                                ['manage-scim2-attribute-mappings', 'SCIM2 attribute mappings'],
                             ]
                         },
                     ]
                 },
                 {
-                    title: 'Manage Organization Settings',
-                    prefix: 'organization-settings/',
-                    path: 'organization-settings/',
+                    title: 'Account Management',
+                    prefix: 'user-accounts/',
+                    path: 'user-accounts/',
                     sidebarDepth: 2,
                     children: [
-                        ['organizations.md', 'Manage organizations'],
-                        {
-                            title: 'Attributes and Attribute Mappings',
-                            path: 'attributes/',
-                            children: [
-                                ['attributes/manage-attributes', 'User attributes'],
-                                ['attributes/manage-oidc-attribute-mappings', 'OIDC attribute mappings'],
-                                ['attributes/manage-scim2-attribute-mappings', 'SCIM2 attribute mappings'],
-                            ]
-                        },
-                        {
-                            title: 'Account Recovery',
-                            sidebarDepth: 2,
-                            children: [
-                                ['password-recovery', 'Configure password recovery'],
-                            ]
-                        },
-                        ['configure-self-registration', 'Self-registration'],
+                        ['password-recovery', 'Configure password recovery'],
+                        ['configure-self-registration', 'Configure self-registration'],
                         {
                             title: 'Manage Account Security',
                             sidebarDepth: 2,
@@ -271,6 +242,38 @@ module.exports = config({
                                 ['account-security/bot-detection', 'Configure bot detection'],
                             ]
                         },
+                    ]
+                },
+                {
+                    title: 'User Self-Service',
+                    prefix: 'user-self-service/',
+                    path: 'user-self-service/',
+                    children: [
+                        ['recover-password.md', 'Password recovery'],
+                        {
+                            title: 'Self-service features',
+                            sidebarDepth: 2,
+                            children: [
+                                ['access-my-account.md', 'Access MyAccount'],
+                                ['update-profile-info.md', 'Update profile information'],
+                                ['change-password.md', 'Change password'],
+                                ['manage-linked-accounts.md', 'Manage linked social accounts'],
+                                ['manage-consents.md', 'Manage consents'],
+                                ['manage-login-sessions.md', 'Manage login sessions'],
+                            ]
+                        },
+                        ['self-register.md', 'Self-register'],
+                    ]
+                },
+                {
+                    title: 'Your Asgardeo',
+                    prefix: 'your-asgardeo/',
+                    path: 'your-asgardeo/',
+                    sidebarDepth: 2,
+                    children: [
+                        ['manage-organizations.md', 'Manage organizations'],
+                        ['my-account.md', 'MyAccount for Asgardeo users'],
+                        ['recover-password.md', 'Recover your password'],
                     ]
                 },
             ],
