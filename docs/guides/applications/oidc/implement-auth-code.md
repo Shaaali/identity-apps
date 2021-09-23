@@ -72,7 +72,7 @@ https://localhost:5000/?code=97c85a59-a758-3a56-95cd-e71a505b493d&session_state=
 
 ## Get tokens
 
-After receiving the authorization code, the application has to exchange it to get the below tokens:
+After receiving the authorization code, the application has to exchange it to get the tokens given below:
 
 - `access_token`
 - `id_token`
