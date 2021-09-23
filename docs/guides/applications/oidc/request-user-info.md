@@ -1,15 +1,15 @@
 # Request user information
 
-User information is encoded inside the ID token returned along with the access token. In addition to that, OpenID Connect provides [userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) to obtain user
-information as a payload by invoking the userinfo endpoint with the access token obtained.
+User information is encoded inside the ID token returned along with the access token. In addition to that, OpenID Connect provides the [userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) to obtain additional user
+information as a payload. The application should send a request with the access token to invoke the userinfo endpoint.
 
-**Userinfo endpoint:**
+**Userinfo endpoint**
 
 ``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/userinfo
 ```
 
-**Sample request:**
+**Sample request**
 
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
@@ -65,8 +65,8 @@ axios(config)
 </CodeGroupItem>
 </CodeGroup>
 
-**Default sample response:**  
-Asgardeo returns only `sub` claim, if there is no user attributes shared with the application.
+**Default sample response**  
+Asgardeo returns only the `sub` claim if there are no user attributes shared with the application.
 
 ```json no-line-numbers
 {
@@ -74,5 +74,5 @@ Asgardeo returns only `sub` claim, if there is no user attributes shared with th
 }
 ```
 
-You can customize the user information in the response by <a :href="$withBase('/guides/applications/user-attributes/enable-attributes-for-oidc-app/')">configuring user attributes</a> with the application.
+You can customize the user information in the response by <a :href="$withBase('/guides/applications/user-attributes/enable-attributes-for-oidc-app/')">configuring user attributes</a> on the registered application.
 <br>
