@@ -1,16 +1,19 @@
 # Add login to web app
 
-Browser based standard protocols like SAML, OpenID Connect are most commonly used to integrate with identity providers to enable login to web applications. 
+Browser-based protocols like SAML and OpenID Connect are most commonly used to integrate web applications with identity providers. 
 
-Following guides provide detailed steps to integrating login to your web applications with Asgradeo using OpenID Connect or SAML.
+See the guides given below to add login to your web apps with Asgardeo using OpenID Connect or SAML.
 
 ### Try out samples
-- [Java EE OIDC  sample](/quickstarts/qsg-oidc-webapp-java-ee.md)
-- [Java EE SAML  sample](/quickstarts/qsg-saml-webapp-java-ee.md)
+
+- <a :href="$withBase('/quickstarts/qsg-oidc-webapp-java-ee')">Java EE OIDC sample</a>
+- <a :href="$withBase('/quickstarts/qsg-saml-webapp-java-ee')">Java EE SAML sample</a>
 
 ### Use an SDK to add login to your web app
-- [Java EE OIDC SDK](/sdks/java-ee-oidc.md)
-- [Java EE SAML SDK](/sdks/java-ee-saml.md)
+
+- <a :href="$withBase('/sdks/java-ee-oidc')">Java EE OIDC SDK</a>
+- <a :href="$withBase('/sdks/java-ee-saml')">Java EE SAML SDK</a>
 
 ### Manually add login to your web app
+
 - <a :href="$withBase('/guides/applications/oidc/implement-auth-code/')">Implement authorization code flow</a>
