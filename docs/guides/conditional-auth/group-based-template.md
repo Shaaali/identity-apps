@@ -24,7 +24,7 @@ Consider a scenario with two user groups, `manager` and `employee`. For users as
 
 <CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
-5. Select the **User > Group-Based** template.
+5. Select the **Adaptive MFA > Group-Based** template.
 6. Verify that the login flow is now updated with the following two authentication steps:
 
     -   Step 1: Username and Password
