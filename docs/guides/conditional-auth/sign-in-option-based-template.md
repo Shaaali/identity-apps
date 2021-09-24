@@ -76,7 +76,7 @@ Let's look at how this script works.
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to sign in with to the application with an authenticator which is not specified in the script. You will successfully sign in to the application.
+2. Try to sign in to the application with an authenticator that is not specified in the script. You will successfully sign in to the application.
 3. Log out of the application.
 4. Sign in with with the authenticator specified in the script. TOTP authentication is prompted.
    <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="ip-based-2fa-conditional-auth-totp-page">
