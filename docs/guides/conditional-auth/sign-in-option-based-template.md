@@ -67,7 +67,7 @@ var onLoginRequest = function(context) {
 
 Let's look at how this script works.
 
-1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the 1st authentication method from the context.
+1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the first authentication method from the context.
 2. The function verifies whether the given authentication method belongs to the method mentioned in ```signInOptionToStepUp```.
 3. If the first authentication method is the authentication method in ```signInOptionToStepUp```, authentication step 2 (TOTP) is prompted.
 
