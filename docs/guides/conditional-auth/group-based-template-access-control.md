@@ -81,7 +81,7 @@ var onLoginRequest = function(context) {
 
 Let's look at how this script works.
 
-1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the user from the context. 
+1. When first step of the authentication flow is complete, the **onLoginRequest** function retrieves the user from the context. 
 2. The user and the configured list of groups are passed to the following function: `isMemberOfAnyOfGroups`. 
 3. This function (which is available in Asgardeo by default) verifies whether the given user belongs to any of the listed groups. 
 4. If the user belongs to any of the configured groups, the user will be able to login successfully.
