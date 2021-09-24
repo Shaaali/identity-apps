@@ -3,7 +3,7 @@
 You can enable a more secure sign-in flow when users that sign in from a specific authentication method by applying the **Sign-In-Option-Based** conditional authentication template to your application.
 
 ## Scenario
-
+Consider a scenario where your application has multiple authentication methods configured as the first authentication step. You need to secure the sign-in flow for users signing in through a selected method of authentication (ex: basic authentication). If the user signs in with the specified authentication method, the second authentication step is prompted. Users signing in from an authentication method that is not specified in the script can simply sign in using only the first step.
 Consider a scenario where your application has multiple authentication methods configured as the first authentication step. You need to secure the sign-in flow for users signing in through a selected method of authentication (ex: basic authentication). If the user sign-in with the specified authentication method, the second authentication step is prompted. Users signing in from an authentication method which is not specified in the script can simply sign in using only the first step.
 
 ## Prerequisites
