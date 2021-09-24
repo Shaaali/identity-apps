@@ -57,7 +57,7 @@ required parameters, the default authentication steps, and how you can try out t
 
 The available templates are divided into 2 sub-categories as listed below
 1. Access Control
-2. Adaptive Authentication
+2. Adaptive MFA
 
 The pre-defined templates are listed below. 
 
