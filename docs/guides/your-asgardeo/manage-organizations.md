@@ -1,4 +1,5 @@
-# Manage multiple organizations
+# Manage your organizations
+
 Admins can create multiple organizations via the Asgardeo console and switch between the created organizations. Users or the applications created in one organization cannot access the other organization's resources unless they are onboarded to that organization.
 
 The admin who creates the organization is the <a :href="$withBase('/guides/users/owner/')">owner</a> of the organization.

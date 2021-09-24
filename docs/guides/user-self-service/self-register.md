@@ -1,12 +1,20 @@
 # Self-register as a customer
 
-Customers can self-register to an Asgardeo organization if admins have <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">enabled self registration to their organization</a>.
+<a :href="$withBase('/guides/users/manage-customers/')">Customers</a> can self-register to an Asgardeo organization from the login page that is accessed via a business application. 
 
-To self register:
+## Prerequisites
 
-1. Go to the login page via the <a :href="$withBase('/guides/user-self-service/access-my-account/')">My Account Portal</a> or a business application.
+ <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">Self-registration</a> should be enabled for business users in the organization.
+
+## Self-register
+
+To self-register as a customer, the user should follow these steps. 
+
+1. Go to the login page via a business application or the <a :href="$withBase('/guides/user-self-service/customer-self-service-portal/')">My Account portal</a>.
+
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" alt="Self register to organization">
-2. Click **Create an account**
+
+2. Click **Create an account**.
 3. Enter your email address and click **Continue**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/self-registration-enter-username.png')" alt="Self registration">
 4. Enter your details, select **I have read and understood the Privacy Policy**, and click **Sign Up**.

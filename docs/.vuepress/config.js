@@ -249,20 +249,14 @@ module.exports = config({
                     prefix: 'user-self-service/',
                     path: 'user-self-service/',
                     children: [
-                        ['recover-password.md', 'Password recovery'],
-                        {
-                            title: 'Self-service features',
-                            sidebarDepth: 2,
-                            children: [
-                                ['access-my-account.md', 'Access MyAccount'],
-                                ['update-profile-info.md', 'Update profile information'],
-                                ['change-password.md', 'Change password'],
-                                ['manage-linked-accounts.md', 'Manage linked social accounts'],
-                                ['manage-consents.md', 'Manage consents'],
-                                ['manage-login-sessions.md', 'Manage login sessions'],
-                            ]
-                        },
+                        ['customer-self-service-portal.md', 'Self-service portal'],
+                        ['update-profile-info.md', 'Update profile information'],
+                        ['change-password.md', 'Change password'],
+                        ['manage-linked-accounts.md', 'Manage linked social accounts'],
+                        ['manage-consents.md', 'Manage consents'],
+                        ['manage-login-sessions.md', 'Manage login sessions'],
                         ['self-register.md', 'Self-register'],
+                        ['customer-password-recovery.md', 'Password recovery'],
                     ]
                 },
                 {
@@ -271,8 +265,8 @@ module.exports = config({
                     path: 'your-asgardeo/',
                     sidebarDepth: 2,
                     children: [
-                        ['manage-organizations.md', 'Manage organizations'],
-                        ['my-account.md', 'MyAccount for Asgardeo users'],
+                        ['manage-organizations.md', 'Manage your organizations'],
+                        ['asgardeo-self-service.md', 'Self-service'],
                         ['recover-password.md', 'Recover your password'],
                     ]
                 },

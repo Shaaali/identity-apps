@@ -1,4 +1,4 @@
-# My Account for owners and collaborators
+# Self-service for owners and collaborators
 
 If you are an owner or collaborator in an Asgardeo organization, go to the [My Account portal](https://myaccount.asgardeo.io) to easily access and self-manage your information from anywhere.
 
