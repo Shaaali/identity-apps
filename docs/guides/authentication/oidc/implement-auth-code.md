@@ -1,27 +1,27 @@
-# Implement authorization code grant in apps
+# Implement login using the Authorization Code flow
 
-By following this guide, you will be able to understand the OpenID connect login using authorization code flow and build on to your application.
+See the instructions given below to implement login with OpenID Connect in your application by using the authorization code flow. This method is suitable for confidential clients such as traditional web applications, which use the confidential `client secret` when communicating with Asgardeo.
 
-The below diagram explains how login using authorization code grant works with Asgardeo.
+The following diagram explains how this flow works with Asgardeo:
+
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/oidc/auth_code_flow.png')" alt="Authorization code flow">
 
-You need following steps to build login to your app using authorization code grant:
-1. Get authorization code
-2. Get tokens
+As shown above, you need to configure your application to get the authorization code from Asgardeo, and then exchange it for the required tokens.
 
 ## Prerequisites
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/register-oidc-web-app/#register-app')">register an application</a>.
 
-## Get authorization code
-First, your app must initiate a login request to authorization endpoint of Asgardeo. After redirecting to Asgardeo, user will be prompted with login page if the user does is not authenticated.
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, <a :href="$withBase('/guides/applications/register-oidc-web-app/')">register a web app with OIDC</a>.
 
-**Authorization endpoint:**
+## Get the authorization code
+First, your app must initiate a login request to the authorization endpoint of Asgardeo. After redirecting to Asgardeo, the user should be prompted with a login page if the user is not authenticated.
+
+**Authorization endpoint**
 
 ``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/authorize
 ```
 
-**Authorization request**
+**Request format**
 
 ```  no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/authorize?scope={scope}&response_type=code&redirect_uri={redirect_uri}&client_id={client_id}
@@ -33,8 +33,9 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/authorize?scope={scope}&res
 https://api.asgardeo.io/t/bifrost/oauth2/authorize?response_type=code&client_id=z8RB6ysdDZhe4QO0zJAQzKbi6P4a&scope=openid&redirect_uri=http%3A%2F%2Flocalhost%3A5000
 ```
 
-
-See [Authentication Request with  Authorization code](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
+::: info
+  See [Authentication Request with  Authorization code](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest) for details.
+:::
 
 <table>
   <tr>
@@ -42,25 +43,26 @@ See [Authentication Request with  Authorization code](https://openid.net/specs/o
     <th>Description</th> 
   </tr>
   <tr>
-    <td>response_type<Badge text="Required" type="mandatory"/></td>
-    <td>Required grant type. Here, it will be <code>code</code> since we are using authorization code grant type.</td>
+    <td><code>response_type</code><Badge text="Required" type="mandatory"/></td>
+    <td>Required grant type. Use <code>code</code> to represent the authorization code grant type.</td>
   </tr>
   <tr>
-    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
-    <td>This is where the response is redirected to at the end of the process. This must be the same as the original login request.</td>
+    <td><code>redirect_uri</code><Badge text="Required" type="mandatory"/></td>
+    <td>This is where the response is redirected to at the end of the process. This needs to be the same as the original login request.</td>
   </tr>
   <tr>
-    <td>client_id<Badge text="Required" type="mandatory"/></td>
-    <td>Client id obtained when registering the application in Asgardeo.</td>
+    <td><code>client_id</code><Badge text="Required" type="mandatory"/></td>
+    <td>The client ID obtained when registering the application in Asgardeo.</td>
   </tr>
   <tr>
-    <td>scope<Badge text="Optional" type="optional"/></td>
-    <td>For the OpenId Connect flow, the scope should contain <code>openid</code> as one of the scopes. There can be additional scopes as well. Scopes should be space separated. e.g, `openid email profile`</td>
+    <td><code>scope</code><Badge text="Required" type="mandatory"/></td>
+    <td>For OpenId Connect login, use <code>openid</code> as one of the scopes. There can be additional scopes as well. Scopes should be space separated. Example: <code>openid email profile</code></td>
   </tr>
 </table>
 
-Once the user is successfully authenticated, Asgardeo will redirect the user to `redirect_uri` with authorization code.
-**Sample response**:
+Once the user is successfully authenticated, Asgardeo redirects the user to the `redirect_uri` with the authorization code.
+
+**Sample response**
 
 ``` no-line-numbers
 https://localhost:5000/?code=97c85a59-a758-3a56-95cd-e71a505b493d&session_state=a0c3bc89849ba0f236791f7fe76a837b7b4422fdc9aca16db394d19a28724a29.wQc7eSHSRrGNfECJRMhSAw
@@ -70,26 +72,27 @@ https://localhost:5000/?code=97c85a59-a758-3a56-95cd-e71a505b493d&session_state=
 
 ## Get tokens
 
+After receiving the authorization code, the application has to exchange it to get the tokens given below:
 
-Once the application obtains authorization code, application has to exchange the authorization code to get below tokens:
-- access_token
-- refresh_token (only if refresh_token grant type is enabled)
-- id_token (only if `openid` scope is used)
+- `access_token`
+- `id_token`
+- `refresh_token` (only if the `refresh_token` grant type is enabled for the application registered in Asgardeo)
 
-Application has to provide it's credentials and get tokens.
+The application has to provide its credentials and get the tokens.
 
-**Token endpoint:**
+**Token endpoint**
 
-``` no-line-numbers
+```bash no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/token
 ```
 
+**Token request**
 
 <CodeGroup>
 
 <CodeGroupItem title="cURL" active>
 
-``` 
+```bash
 curl --location --request POST 'https://api.asgardeo.io/t/<organization_name>/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code={authorization_code}' \
@@ -159,37 +162,37 @@ axios(config)
 </CodeGroupItem>
 </CodeGroup>
 
-This token request has some parameters. See [Token request with authorization code](https://openid.net/specs/openid-connect-core-1_0.html#TokenRequest).
-<br>
+This token request has the following parameters: 
+
+::: info
+ See [Token request with authorization code](https://openid.net/specs/openid-connect-core-1_0.html#TokenRequest).
+:::
+
 <table>
   <tr>
     <th>Request Parameter</th>
     <th>Description</th> 
   </tr>
    <tr>
-      <td>code<Badge text="Required" type="mandatory"/></td>
-      <td>The authorization code received from authorization request.</td>
+      <td><code>code</code><Badge text="Required" type="mandatory"/></td>
+      <td>The authorization code received from the authorization request.</td>
     </tr>
   <tr>
-    <td>grant_type<Badge text="Required" type="mandatory"/></td>
-    <td>The grant type. Here we are using 'authorization_code' grant.</td>
+    <td><code>grant_type</code><Badge text="Required" type="mandatory"/></td>
+    <td>The grant type. Here we are using the <code>authorization_code</code> grant.</td>
   </tr>
   <tr>
-    <td>redirect_uri<Badge text="Required" type="mandatory"/></td>
+    <td><code>redirect_uri</code><Badge text="Required" type="mandatory"/></td>
     <td>This is where the response is redirected to at the end of the process.</td>
   </tr>
 </table>
-<br>
 
-Token endpoint requires client  authentication for confidential clients. Asgardeo supports both:
- - **client_secret_post**: You can either send `client_id` and `client_secret` as body parameters in the POST message
- - **client_secret_basic**: You can send it as Authorization header in the request  as `Authorization: Basic BASE46_ENCODING<client_id:client_secret>`
+When your application is a confidential client, it needs to identify itself to the token endpoint by submitting the `client_id` as well as the `client_secret`. You can use one of the following methods:
 
+- Use **client_secret_post**: The `client_id` and `client_secret` are both sent as body parameters in the POST message. See the example given below.
 
-1. Sample token request using **client_secret_post**
- 
- <CodeGroupItem title="cURL" active>
-  ``` 
+  <CodeGroupItem title="cURL" active>
+  ```bash 
   curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data-urlencode 'code=97c85a59-a758-3a56-95cd-e71a505b493d' \
@@ -198,27 +201,24 @@ Token endpoint requires client  authentication for confidential clients. Asgarde
   --data-urlencode 'client_secret=z0C79zlopx8i7ByOw8K15A9dplYa' \
   --data-urlencode 'redirect_uri=https://myfirstwebapp.io/login'
   ```
-</CodeGroupItem>
+  </CodeGroupItem>
 
- 
-<br>
+- Use **client_secret_basic**: The client secret is sent as an authorization header in the request (`Authorization: Basic BASE46_ENCODING<client_id:client_secret>`). See the example given below.
 
-2. Sample token request using **client_secret_basic** 
+  <CodeGroupItem title="cURL" active>
 
-<CodeGroupItem title="cURL" active>
+  ```bash 
+  curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
+  --header 'Authorization: Basic ejhSQjZ5c2REWmhlNFFPMHpKQVF6S2JpNlA0YTp6MEM3OXpsb3B4OGk3QnlPdzhLMTVBOWRwbFlh' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data-urlencode 'code=97c85a59-a758-3a56-95cd-e71a505b493d' \
+  --data-urlencode 'grant_type=authorization_code' \
+  --data-urlencode 'redirect_uri=https://myfirstwebapp.io/login'
+  ```
 
-``` 
-curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
---header 'Authorization: Basic ejhSQjZ5c2REWmhlNFFPMHpKQVF6S2JpNlA0YTp6MEM3OXpsb3B4OGk3QnlPdzhLMTVBOWRwbFlh' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode 'code=97c85a59-a758-3a56-95cd-e71a505b493d' \
---data-urlencode 'grant_type=authorization_code' \
---data-urlencode 'redirect_uri=https://myfirstwebapp.io/login'
-```
+  </CodeGroupItem>
 
-</CodeGroupItem>
-
-Sample response will be,
+Sample response will be as follows:
 
 ```json no-line-numbers
 {
@@ -232,4 +232,4 @@ Sample response will be,
 
 <br>
 
-To get refresh token, you need to enable Refresh Token grant type for the application. By default, it is enabled for traditional web application templates.
+To get a refresh token, you need to enable the **Refresh Token** grant type for the application. By default, it is enabled for traditional web application templates.

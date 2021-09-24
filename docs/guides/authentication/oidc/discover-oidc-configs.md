@@ -1,50 +1,114 @@
 # Discover OpenID Connect endpoints of Asgardeo
 
-You can follow this document to obtain required information and the configurations to:
- - Integrate sign in with Asgardeo for your OpenID Connect SPA
- - Build login with Asgardeo using an OpenID Connect supported SDK
+When you build OpenID Connect login in your application using Asgardeo as your identity provider, you need to get the OpenID Connect endpoints and configurations from Asgardeo.
 
-In case, you want to implement login from scratch, see how to <a :href="$withBase('/guides/authentication/oidc/implement-auth-code-with-pkce')">build the OpenID Connect login flow manually</a>.
-
-When configuring OpenID Connect based sign In, you need to know two things:
-1. [Client ID of the application](#obtain-client-id-of-the-app)
-2. [OpenID Connect endpoints of Asgardeo](#discover-openid-connect-endpoints-of-asgardeo)
+You can do this by invoking the discovery endpoint API or by using the Asgardeo console as explained below.
 
 ## Prerequisite
-To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo Console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/register-single-page-app/')">register an application</a>.
 
-## Obtain Client ID of the app
-When your single-page application login with Asgardeo, application uses client ID as an identifier. To get the client ID, you can follow below steps:
-1. In the Asgardeo Console, Select the **Develop > Applications**.
-2. Select the application to integrate.
-3. Navigate to **protocol** section of the selected application.
-4. Copy **Client ID**. 
-    <img :src="$withBase('/assets/img/guides/applications/get-client-id.png')" alt="Get client ID of SPA">
+To get started, you need to have an application registered in Asgardeo:
 
-## Get the endpoints
+-   Register a <a :href="$withBase('/guides/applications/register-single-page-app/')">single-page app with OIDC</a>.
+-   Register a <a :href="$withBase('/guides/applications/register-oidc-web-app/')">web app with OIDC</a>.
+ 
+## Use the discovery endpoint
 
-You need to know the endpoints of Asgardeo if you want to add OIDC login to your application. 
- 
-There are two options for an OpenID Connect application to identify the endpoints of Asgardeo:
- 1. Use OpenID Connect discovery
- 2. Get endpoint information from Asgardeo Console
- 
-### Use OpenID Connect discovery
- 
-  <CommonGuide guide='guides/fragments/manage-app/discover-endpoints/discover-from-discovery-endpoint.md'/>
-  
+[OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) allows you to discover the metadata such as endpoints, scopes, response types, claims, and supported client authentication methods of identity providers such as Asgardeo.
+
+Applications can dynamically discover the OpenID Connect identity provider metadata by calling the [OpenID Connect discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationRequest) endpoint. The structure of the request URL is as follows: `<issuer>/.well-known/openid-configuration`.  
+
+**Issuer of Asgardeo**
+```bash no-line-numbers
+api.asgardeo.io
+```
+
+**Discovery endpoint of Asgardeo**
+```bash no-line-numbers
+https://api.asgardeo.io/t/<organization_name>/oauth2/token/.well-known/openid-configuration
+```
+
+**Sample request**
+
+<CodeGroup>
+
+<CodeGroupItem title="cURL">
+
+```bash  no-line-numbers
+curl --location --request GET 'https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration'
+```
+
+</CodeGroupItem>
+
+<CodeGroupItem title="JavaScript - jQuery" active>
+
+```js no-line-numbers
+var settings = {
+    "url": "https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration",
+    "method": "GET",
+    "timeout": 0,
+};
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+</CodeGroupItem>
+
+<CodeGroupItem title="Nodejs - Axios" active>
+
+```js no-line-numbers
+var axios = require('axios');
+
+var config = {
+    method: 'get',
+    url: 'https://api.asgardeo.io/t/bifrost/oauth2/token/.well-known/openid-configuration',
+    headers: {}
+};
+
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+```
+
+</CodeGroupItem>
+
+</CodeGroup>
+
 <br>
 
-### Get endpoint information from Console
-Some applications and SDKs do not have the capability to dynamically resolve endpoints from  OpenID Connect discovery. You need to configure endpoints manually to support them.
+**Sample response**
+```json no-line-numbers
+{
+   "introspection_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/introspect",
+   "end_session_endpoint" : "https://api.asgardeo.io/t/bifrost/oidc/logout",
+   "registration_endpoint" : "https://api.asgardeo.io/t/bifrost/api/identity/oauth2/dcr/v1.0/register",
+   "token_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/token",
+   "jwks_uri" : "https://api.asgardeo.io/t/bifrost/oauth2/jwks",
+   "revocation_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/revoke",
+   "authorization_endpoint" : "https://api.asgardeo.io/t/bifrost/oauth2/authorize",
+   "issuer" : "https://api.asgardeo.io/t/bifrost/oauth2/token"
+}
+```
 
-You can log  in to [Asgardeo Console](https://console.asgardeo.io/) and get endpoints of Asgardeo. 
+## Get endpoints from the console
 
-  <CommonGuide guide='guides/fragments/manage-app/discover-endpoints/discover-oidc-endpoints-from-console.md'/>
+Some applications and SDKs are not capable of dynamically resolving endpoints from OpenID Connect discovery. For such applications, you need to configure endpoints manually.
 
-<br>
+You can get the endpoints from the console as follows:
+
+1. On the [Asgardeo console](https://console.asgardeo.io/), go to **Develop > Application**.
+2. Select an OIDC application from the list.
+3. Go to the **Info** tab of the application and find the server endpoints to your organization.
+   <img :src="$withBase('/assets/img/guides/applications/app-endpoint-help.png')" alt="app-help-panel-for-endpoints">
 
 ## What's next?
-Now you've added login to your application with Asgardeo. You also can:
-- <a :href="$withBase('/guides/authentication/oidc/implement-auth-code-with-pkce')">Explore the OpenID Connect authentication flow in depth</a>
-- <a :href="$withBase('/references/app-settings/oidc-settings-for-app')">Configure advanced OpenID Connect settings</a>
+
+Explore how OpenID Connect endpoints are used when you implement login to your applications:
+
+- Implement login for single-page applications <a :href="$withBase('/guides/authentication/oidc/implement-auth-code-with-pkce')">using the authorization code flow with PKCE</a>.
+- Implement login for traditional web applications <a :href="$withBase('/guides/authentication/oidc/implement-auth-code')">using the authorization code flow</a>.

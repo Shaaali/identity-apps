@@ -186,7 +186,7 @@ module.exports = config({
                             ['implement-auth-code-with-pkce.md', 'Implement Authorization Code flow with PKCE'],
                             ['validate-id-tokens.md', 'Validate ID tokens'],
                             ['request-user-info.md', 'Request user information'],
-                            ['introspect-tokens.md', 'Validate tokens'],
+                            ['token-validation-resource-server.md', 'Validate tokens'],
                             ['revoke-tokens.md', 'Revoke tokens'],
                             ['add-logout.md', 'Implement logout'],
                         ]

@@ -1,8 +1,8 @@
-# Revoke access tokens
+# Revoke tokens
 
-OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc7009) to revoke any access granted to them. This token endpoint can revoke **access tokens** and **refresh tokens**. 
+OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc7009) to revoke any access granted by them. This token endpoint can revoke **access tokens** and **refresh tokens**. 
 
-Confidential clients such as  web apps can keep the client credentials securely. Those clients need to prove their identity when they access the  revocation endpoint to revoke access tokens. 
+Confidential clients such as web apps can keep the client credentials securely. Those clients need to prove their identity when they access the revocation endpoint to revoke access tokens. 
 
 Public clients such as SPAs, mobile apps can't store credentials securely. Those apps need to submit only their client ID to identify the apps during token revocation.  
 
@@ -12,7 +12,7 @@ Public clients such as SPAs, mobile apps can't store credentials securely. Those
 - Revoking an access token via the revocation endpoint will not revoke the respective refresh token.
 ::: 
 
-**Token revocation endpoint:**
+**Token revocation endpoint**
 
 ``` no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/oauth2/revoke
@@ -20,9 +20,10 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/revoke
 
 ## Token revocation by confidential clients
 
-Token endpoint requires client authentication for confidential clients. Asgardeo supports both:
- - **client_secret_post**: You can either send client_id and client_secret as body parameters in the POST message.
- - **client_secret_basic**: You can send this value in the request header as: `'Authorization: Basic BASE64_ENCODE<client_id:client_secret>'`.
+When your application is a confidential client, it needs to identify itself to the token endpoint by submitting the `client_id` as well as the `client_secret`. You can use one of the following methods:
+
+- Use **client_secret_post**: The `client_id` and `client_secret` are both sent as body parameters in the POST message. 
+- Use **client_secret_basic**: The client secret is sent as an authorization header in the request (`'Authorization: Basic BASE64_ENCODE<client_id:client_secret>'`).
 
 Apart from client authentication, the revocation request has some other parameters as well.
 
@@ -33,12 +34,12 @@ Apart from client authentication, the revocation request has some other paramete
     <th>Description</th> 
   </tr>
    <tr>
-      <td>token<Badge text="Required" type="mandatory"/></td>
+      <td><code>token</code><Badge text="Required" type="mandatory"/></td>
       <td>The token you want to inspect.</td>
     </tr>
   <tr>
-    <td>token_type_hint<Badge text="Optional" type="optional"/></td>
-    <td>The type of the token. If the token is an access token, the type should be <b>access_token</b>. For a refresh token, the type should be <b>refresh_token</b></td>
+    <td><code>token_type_hint</code><Badge text="Optional" type="optional"/></td>
+    <td>The type of token. If the token is an access token, the type should be <code>access_token</code>. For a refresh token, the type should be <code>refresh_token</code>.</td>
   </tr>
 </table>
 <br>
@@ -47,7 +48,7 @@ Apart from client authentication, the revocation request has some other paramete
 
 In this method, the app can send the `client_id` and `client_secret` as body params in the revocation request. 
 
-Sample request is given below.
+The sample request is given below.
 
 <CodeGroup>
 
@@ -137,7 +138,7 @@ echo -n '<your_client_id:your_client_secret>' | base64
 
 :::
 
-**Sample request:** 
+**Sample request** 
 
 <CodeGroupItem title="cURL" active>
 ```
@@ -153,9 +154,9 @@ When the token is revoked, you will get a `200 OK` response.
 
 ## Token revocation by public clients
 
-Since public clients can't store credentials securly, they don't  need to do  authentication when invoking token revocation. But they need to submit their client ID.
+Since public clients cannot store credentials securely and they do not need to perform authentication when revoking a token. However, they need to submit their client ID.
 
-**Sample request:**
+**Sample request**
 
 <CodeGroup>
 
@@ -227,7 +228,7 @@ axios(config)
 </CodeGroup>
 
 
-This token revocation request for public clients has the following parameters:
+This token revocation request for public clients takes the following parameters:
 <br>
 <table>
   <tr>
@@ -235,21 +236,21 @@ This token revocation request for public clients has the following parameters:
     <th>Description</th> 
   </tr>
    <tr>
-      <td>token<Badge text="Required" type="mandatory"/></td>
-      <td>The token(access token or refresh token) you want to inspect.</td>
+      <td><code>token</code><Badge text="Required" type="mandatory"/></td>
+      <td>The token (access token or refresh token) you want to inspect.</td>
     </tr>
   <tr>
-    <td>token_type_hint<Badge text="Optional" type="optional"/></td>
-    <td>The type of the token. If the token is an access token, the type should be <b>access_token</b>. For a refresh token, the type should be <b>refresh_token</b></td>
+    <td><code>token_type_hint</code><Badge text="Optional" type="optional"/></td>
+    <td>The type of the token. If the token is an access token, the type should be <code>access_token</code>. For a refresh token, the type should be <code>refresh_token</code>.</td>
   </tr>
   <tr>
-    <td>client_id<Badge text="Required" type="mandatory"/></td>
-    <td>The client ID of the application</td>
+    <td><code>client_id</code><Badge text="Required" type="mandatory"/></td>
+    <td>The client ID of the application.</td>
   </tr>
 </table>
 
 When the token is revoked, you will get a `200 OK` response.
 
 ::: info  Info
-You will always get a `200 OK` response when you try to revoke a token that is invalid, expired, or already revoked. This helps to prevent any information leaks.
+You will always get a `200 OK` response when you try to revoke an invalid token, expired, or already revoked. This helps to prevent any information leaks.
 :::
