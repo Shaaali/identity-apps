@@ -46,7 +46,7 @@ Follow the steps given below.
 
 ## How it works
 
-Shown below is the script of the device-based conditional authentication template.
+Shown below is the script of the sign-in-option-based conditional authentication template.
 
 ```js
 // This script will step up authentication and prompt TOTP in case when
