@@ -79,4 +79,4 @@ There are two ways to use a SAML metadata file during application registration:
 
 ## What's next?
 
-- <a :href="$withBase('/guides/authentication/web-app/add-login-to-web-app/')">Add login to your web app</a>
+- <a :href="$withBase('/guides/authentication/add-login-to-web-app/')">Add login to your web app</a>

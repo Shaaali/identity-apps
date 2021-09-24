@@ -56,4 +56,4 @@ You can get this client ID from the **Protocol** tab of the application as shown
 
 ## What's next?
 
-- <a :href="$withBase('/guides/authentication/spa/add-login-to-single-page-app/')">Add login to your single-page app</a>
+- <a :href="$withBase('/guides/authentication/add-login-to-single-page-app/')">Add login to your single-page app</a>

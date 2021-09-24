@@ -117,8 +117,8 @@ module.exports = config({
                         path: 'add-login-to-apps/',
                         sidebarDepth: 2,
                         children: [
-                            ['spa/add-login-to-single-page-app.md', 'Add login to an SPA'],
-                            ['web-app/add-login-to-web-app.md', 'Add login to a web app'],
+                            ['add-login-to-single-page-app.md', 'Add login to an SPA'],
+                            ['add-login-to-web-app.md', 'Add login to a web app'],
                         ]
                     },
                     {

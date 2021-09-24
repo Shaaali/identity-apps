@@ -49,4 +49,4 @@ You can get this client ID and secret from the **Protocol** tab of the applicati
 
 ## What's next?
 
-- <a :href="$withBase('/guides/authentication/web-app/add-login-to-web-app/')">Add login to your web app</a>
+- <a :href="$withBase('/guides/authentication/add-login-to-web-app/')">Add login to your web app</a>

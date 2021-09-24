@@ -6,7 +6,7 @@ See the topics given below to manage authentication for your applications.
 
 When you register an application, you can customize the login flow.
 
-- Configure Asgardeo login for <a :href="$withBase('/guides/authentication/spa/add-login-to-single-page-app/')">single-page applications with OIDC</a> or <a :href="$withBase('/guides/authentication/web-app/add-login-to-web-app/')">web applications</a> with OIDC or SAML.
+- Configure Asgardeo login for <a :href="$withBase('/guides/authentication/add-login-to-single-page-app/')">single-page applications with OIDC</a> or <a :href="$withBase('/guides/authentication/add-login-to-web-app/')">web applications</a> with OIDC or SAML.
 
 - Add <a :href="$withBase('/guides/authentication/social-login/')">social login</a> options such as <a :href="$withBase('/guides/authentication/social-login/add-google-login/')">Google</a>, <a :href="$withBase('/guides/authentication/social-login/add-facebook-login/')">Facebook</a>, and <a :href="$withBase('/guides/authentication/social-login/add-github-login/')">Github</a>.
 

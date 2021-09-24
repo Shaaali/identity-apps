@@ -1,6 +1,6 @@
 # Implement authorization code grant with PKCE in apps
 
-A public client is an application that cannot keep the client credentials securely. <a :href="$withBase('/guides/authentication/spa/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
+A public client is an application that cannot keep the client credentials securely. <a :href="$withBase('/guides/authentication/add-login-to-single-page-app/')">Single-page applications</a>, and native mobile applications are some examples for public clients. 
 It is recommended to use authorization code grant type for public clients. In addition to that, [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) should be used along with the authorization code grant to mitigate code interception attacks.
 
 By following this guide, you will be able to understand the authorization code flow with PKCE and build on to your single-page application.
