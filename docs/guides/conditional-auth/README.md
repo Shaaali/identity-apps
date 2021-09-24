@@ -76,7 +76,7 @@ The pre-defined templates are listed below.
   </tr>
   <tr>
     <td><a :href="$withBase('/guides/conditional-auth/sign-in-option-based-template/')">Sign-In-Option-Based</a></td>
-    <td>This login flow prompts 2nd Factor Authentication (2FA) only for users who are signing-in with a given sign-in option.</td>
+    <td>This login flow prompts two-factor authentication (2FA) only for users who are signing in with a given option.</td>
   </tr>
   <tr>
     <td><a :href="$withBase('/guides/conditional-auth/new-device-based-template/')">New-Device-Based</a></td>
