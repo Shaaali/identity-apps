@@ -55,7 +55,7 @@ We will discuss the scenario that the template covers, the prerequisites, the
 required parameters, the default authentication steps, and how you can try out the behavior of this template.
 -->
 
-The available templates are divided into 2 sub-categories as listed below
+The available templates are categorized as follows:
 1. Access Control
 2. Adaptive MFA
 
