@@ -56,8 +56,8 @@ required parameters, the default authentication steps, and how you can try out t
 -->
 
 The available templates are categorized as follows:
-1. Access Control
-2. Adaptive MFA
+- Access Control - These templates restricts user login to the application based on specified conditions.
+- Adaptive MFA - These templates prompt two-factor authentication for login attempts based on specific conditions.
 
 The pre-defined templates are listed below. 
 
