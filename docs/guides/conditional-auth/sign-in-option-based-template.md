@@ -4,7 +4,7 @@ You can enable a more secure sign-in flow when users that sign in from a specifi
 
 ## Scenario
 
-Consider a scenario where your application has multiple authentication methods configured as the 1st authentication step. You need to secure the sign-in flow for users signing in through a selected method of authentication (ex: basic authentication). If the user sign-in with the specified authentication method, the second authentication step is prompted. Users signing in from an authentication method which is not specified in the script can simply sign in using only the 1st step.
+Consider a scenario where your application has multiple authentication methods configured as the first authentication step. You need to secure the sign-in flow for users signing in through a selected method of authentication (ex: basic authentication). If the user sign-in with the specified authentication method, the second authentication step is prompted. Users signing in from an authentication method which is not specified in the script can simply sign in using only the first step.
 
 ## Prerequisites
 
@@ -67,7 +67,7 @@ var onLoginRequest = function(context) {
 
 Let's look at how this script works.
 
-1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the 1st authentication method from the context.
+1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the first authentication method from the context.
 2. The function verifies whether the given authentication method belongs to the method mentioned in ```signInOptionToStepUp```.
 3. If the first authentication method is the authentication method in ```signInOptionToStepUp```, authentication step 2 (TOTP) is prompted.
 
