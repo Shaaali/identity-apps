@@ -1,9 +1,3 @@
----
-pageClass: intro-page
----
-
-# Docs
-
 # Explore Asgardeo
 
 See the topics given below to explore Asgardeo and it's capabilities.
@@ -58,5 +52,3 @@ Asgardeo provides self-service interfaces for users to self-register, reset pass
 * **Easy consent management**
 With Asgardeo your users can selectively opt-in/opt-out on which user attributes they want to share with applications,
  easily review the consents they have provided for each application, and can revoke one or many of them as required.
-
- ## Asgardeo console

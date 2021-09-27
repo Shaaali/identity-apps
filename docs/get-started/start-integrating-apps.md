@@ -1,40 +1,6 @@
----
-sidebar: true
-pageClass: sdks-page
-sdkContent:
-  - name: Single Page Applications
-    technologies:
-    - icon: images/technologies/angular-logo.svg
-      name: Angular
-      sdkPath: /sdks/angular/
-      gitUrl: https://github.com/asgardeo/asgardeo-auth-angular-sdk
-      appUrl: https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip
+# Start integrating apps
 
-    - icon: images/technologies/javascript-logo.svg
-      name: Javascript
-      sdkPath: /sdks/javascript/
-      gitUrl: https://github.com/asgardeo/asgardeo-auth-spa-sdk
-      appUrl: https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/latest/download/asgardeo-html-js-app.zip
+You can get started by integrating applications with Asgardeo. Try one of the sample applications or integrate your app using the Asgardeo SDKs.
 
-    - icon: images/technologies/react-logo.svg
-      name: React
-      sdkPath: /sdks/react/
-      gitUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk
-      appUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip
-
-  - name: Web Application
-    technologies:
-    - icon: images/technologies/java-logo.svg
-      name: Java EE - OIDC
-      sdkPath: /sdks/java-ee-oidc/
-      gitUrl: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent
-      appUrl: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war
-    - icon: images/technologies/java-logo.svg
-      name: Java EE - SAML
-      sdkPath: /sdks/java-ee-saml/
-      gitUrl: https://github.com/asgardeo/asgardeo-tomcat-saml-agent
-      appUrl: https://github.com/asgardeo/asgardeo-tomcat-saml-agent/releases/latest/download/sample-app.war
-
----
-
-<SDKOverview/>
+- <a :href="$withBase('/get-started/try-samples/')">Try a Sample App</a>
+- <a :href="$withBase('/get-started/try-your-own-app/')">Try your Own App</a>

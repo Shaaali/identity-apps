@@ -2,7 +2,7 @@
 sidebar: true
 pageClass: quickstarts-page
 heading: Try a Sample App
-subHeading: Tryout our samples to learn how to enable login to your applications with Asgardeo
+subHeading: Pick your technology and try a sample application with Asgardeo login.
 technologies:
   - icon: images/technologies/angular-logo.svg
     name: Angular

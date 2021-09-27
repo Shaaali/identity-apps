@@ -8,7 +8,7 @@ Follow the steps given below to deploy a sample Java EE web application in your 
 
 ## Prerequisites
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
-- You need to have a web application registered. If you don't, <a :href="$withBase('/guides/applications/web-app/register-saml-web-app')">register a SAML application</a> in Asgardeo.
+- You need to have a web application registered. If you don't, <a :href="$withBase('/guides/applications/register-saml-web-app')">register a SAML application</a> in Asgardeo.
 - Only <a :href="$withBase('/guides/users/manage-customers/')">customers</a> can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
 
 ## Download the sample
@@ -68,7 +68,7 @@ Click the **Download sample** button to download the sample. You can also choose
       </tr>
       <tr>
           <td>IdPPublicCert</td>
-          <td>Specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo console. See <a :href="$withBase('/guides/applications/saml/discover-saml-configs/#discover-saml-configurations-of-asgardeo')">how to get SAML configurations from the console</a></td>
+          <td>Specifies the public certificate of Asgardeo. You can obtain the public certificate from the Asgardeo console. See <a :href="$withBase('/guides/authentication/saml/discover-saml-configs/#discover-saml-configurations-of-asgardeo')">how to get SAML configurations from the console</a></td>
       </tr>
       <tr>
           <td>EnableSAML2SSOLogin</td>

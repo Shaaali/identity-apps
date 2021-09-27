@@ -8,20 +8,23 @@ pageClass: intro-page
 
 The guides in this section provide the instructions for building identity and access management uses cases and managing them.
 
-## Developer Guides
+## Developer guide
 
-If you are an application developer, you can integrate your applications with Asgardeo to implement the following identity and access management use cases for your application.
+If you are an application developer, you can integrate your applications with Asgardeo to implement identity and access management use cases for your application.
 
-Implement the following use cases for your applications:
+See the following sections for details:
 
--   <a :href="$withBase('/guides/applications/')">Authentication</a>
--   <a :href="$withBase('/guides/applications/access-control/')">Access contol</a>
+-   <a :href="$withBase('/guides/applications/')">Applications</a>
+-   <a :href="$withBase('/guides/authentication/')">Authentication</a>
 
-## Administration Guides
+## Administration guide
 
 The adminstration guides cover the topics related to managing the users in your organizations and other organization settings.
 
--   <a :href="$withBase('/guides/users/')">Manage your users</a>.
--   <a :href="$withBase('/guides/users/')">Manage your user stores</a>.
--   <a :href="$withBase('/guides/organization-settings/attributes/')">Manage the user attributes and protocol mappings</a>.
--   <a :href="$withBase('/guides/organization-settings/')">Manage the settings and security of your user accounts</a>.
+-   <a :href="$withBase('/guides/users/')">User Management</a>
+-   <a :href="$withBase('/guides/user-accounts/')">User Account Management</a>
+-   <a :href="$withBase('/guides/user-self-service/')">User Self-Service</a>
+
+## Your Asgardeo guide
+
+Manage your Asgardeo organization and your administration user account. See the topics in the <a :href="$withBase('/guides/your-asgardeo/')">Your Asgardeo</a> section for details.
