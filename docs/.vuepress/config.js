@@ -66,12 +66,12 @@ module.exports = config({
         pageInfo: false,
         nav: [
           {
-            text: "Guides",
-            link: "/guides/",
+            text: "Get Started",
+            link: "/get-started/",
           },
           {
-            text: 'Quickstarts',
-            link: '/quickstarts/',
+            text: "Guides",
+            link: "/guides/",
           },
         //  These sections are yet not completed. Uncomment as they are implemented
 //          {
@@ -92,9 +92,65 @@ module.exports = config({
 //          }
         ],
         sidebar: {
+            '/get-started/' : [
+                ['', 'Get Started - Overview'],
+                ['create-asgardeo-account.md', 'Create your Account'],
+                {
+                    title: 'Start Integrating Apps',
+                    sidebarDepth: 2,
+                    children:[
+                        {
+                            title: 'Try a Sample',
+                            prefix: 'try-samples/',
+                            path: 'try-samples/',
+                            sidebarDepth: 2,
+                            children:[
+                                {
+                                    title: 'SPAs',
+                                    children:[
+                                    ['qsg-spa-angular.md', 'Angular'],
+                                    ['qsg-spa-javascript.md', 'Javascript'],
+                                    ['qsg-spa-react.md', 'React'],
+                                    ]
+                                },
+                                {
+                                    title: 'Web Apps',
+                                    children:[
+                                    ['qsg-oidc-webapp-java-ee', 'OIDC Java EE'],
+                                    ['qsg-saml-webapp-java-ee', 'SAML Java EE'],
+                                    ]
+                                },
+                            ]
+                        },      
+                        {
+                            title: 'Try your Own App',
+                            prefix: 'integrate-your-own-app/',
+                            path: 'integrate-your-own-app/',
+                            sidebarDepth: 2,
+                            children: [
+                                {
+                                    title: 'SPAs',
+                                    children:[
+                                    ['angular.md', 'Angular'],
+                                    ['javascript.md', 'Javascript'],
+                                    ['react.md', 'React'],
+                                    ]
+                                },
+                                {
+                                    title: 'Web Apps',
+                                    children:[
+                                    ['java-ee-oidc', 'OIDC Java EE'],
+                                    ['java-ee-saml', 'SAML Java EE'],
+                                    ]
+                                },
+                            ]
+                        },
+                    ]
+                },
+                ['explore-asgardeo.md', 'Explore Asgardeo'],
+            ],
             '/guides/' : [
-                ['', 'Introduction'],
-                ['get-started/create-organization.md', 'Get Started'],
+                ['', 'Guides - Overview'],
                 {
                     title: 'Integrate Apps',
                     path: 'applications/',
@@ -273,40 +329,6 @@ module.exports = config({
                         },
                     ]
                 },
-            ],
-            '/quickstarts/' : [
-            {
-                title: 'SPA',
-                children: [
-                    ['/quickstarts/qsg-spa-angular.md', 'Angular'],
-                    ['/quickstarts/qsg-spa-javascript.md', 'Javascript'],
-                    ['/quickstarts/qsg-spa-react.md', 'React'],
-                ]
-            },
-            {
-                title: 'Web App',
-                children: [
-                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'OIDC Java EE'],
-                    ['/quickstarts/qsg-saml-webapp-java-ee', 'SAML Java EE'],
-                ]
-            },
-            ],
-            '/sdks/' : [
-            {
-                title: 'SPA',
-                children: [
-                    ['/sdks/angular.md', 'Angular'],
-                    ['/sdks/javascript.md', 'Javascript'],
-                    ['/sdks/react.md', 'React'],
-                ]
-            },
-            {
-                title: 'Web App',
-                children: [
-                    ['/sdks/java-ee-oidc', 'OIDC Java EE'],
-                    ['/sdks/java-ee-saml', 'SAML Java EE'],
-                ]
-            },
             ],
             '/references/' : [
                 ['/references/user-management/user-roles.md', 'Asgardeo user roles'],

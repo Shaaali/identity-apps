@@ -56,7 +56,7 @@ Click the **Download sample** button to download the sample. You can also choose
       </tr>
       <tr>
         <td>SAML2.SPEntityId</td>
-        <td>You need to add `http://localhost.com:8080/spring-security-saml2-sample/saml/metadata` as the issuer of the application when registering it. See <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via Asgardeo console.</td>
+        <td>You need to add `http://localhost.com:8080/spring-security-saml2-sample/saml/metadata` as the issuer of the application when registering it. See <a :href="$withBase('/guides/applications/register-saml-web-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via Asgardeo console.</td>
       </tr>
       <tr>
         <td>SAML2.IdPEntityId</td>

@@ -116,7 +116,7 @@ Find the configuration information below:
       </tr>
       <tr>
          <td>SAML2.SPEntityId</td>
-         <td>This is the unique name of the application used when registering your application with Asgardeo. See <a :href="$withBase('/guides/applications/web-app/register-saml-web-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via the Asgardeo Console.</td>
+         <td>This is the unique name of the application used when registering your application with Asgardeo. See <a :href="$withBase('/guides/applications/register-saml-web-app/#register-app-using-manual-configurations')">how to register a SAML app manually</a> via the Asgardeo Console.</td>
       </tr>
       <tr>
          <td>SAML2.IdPEntityId</td>
