@@ -191,10 +191,12 @@ module.exports = config({
                         sidebarDepth: 2,
                         children: [
                             ['configure-conditional-auth.md', 'Set up conditional authentication'],
-                            ['group-based-template.md', 'Add group-based authentication'],
-                            ['ip-based-template.md', 'Add IP-based authentication'],
-                            ['new-device-based-template.md', 'Add device-based authentication'],
                             ['user-age-based-template.md', 'Add user age-based authentication'],
+                            ['group-based-template-access-control.md', 'Add group-based authentication (access control)'],
+                            ['sign-in-option-based-template.md', 'Add sign-in-option-based authentication'],
+                            ['new-device-based-template.md', 'Add device-based authentication'],
+                            ['group-based-template.md', 'Add group-based authentication (adaptive MFA)'],
+                            ['ip-based-template.md', 'Add IP-based authentication'],
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },

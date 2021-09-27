@@ -19,7 +19,7 @@ Consider a scenario where users who are younger than 18 years should be prevente
 
 <CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
-5. Select the **User > Age-Based** template.
+5. Select the **Access Control > Age-Based** template.
 6. Update the following parameter in the script.
 
     <table>
