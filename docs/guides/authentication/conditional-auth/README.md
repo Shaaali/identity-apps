@@ -55,7 +55,11 @@ We will discuss the scenario that the template covers, the prerequisites, the
 required parameters, the default authentication steps, and how you can try out the behavior of this template.
 -->
 
-The available templates are listed below.
+The available templates are categorized as follows:
+- Access Control - These templates restricts user login to the application based on specified conditions.
+- Adaptive MFA - These templates prompt two-factor authentication for login attempts based on specific conditions.
+
+The pre-defined templates are listed below. 
 
 <table>
   <tr>
@@ -66,13 +70,21 @@ The available templates are listed below.
     <td><a :href="$withBase('/guides/authentication/conditional-auth/user-age-based-template/')">User-Age-Based</a></td>
     <td>This configures a login flow where users can log in only if their age is over the configured value. The user's age is calculated using the <code>date of birth</code> attribute.</td>
   </tr>
+    <tr>
+    <td><a :href="$withBase('/guides/authentication/conditional-auth/group-based-template-access-control/')">Group-Based (Access Control)</a></td>
+    <td>This login flow allows login only for users who belong to any of the given set of groups</td>
+  </tr>
   <tr>
-    <td><a :href="$withBase('/guides/authentication/conditional-auth/group-based-template/')">Group-Based</a></td>
-    <td>This login flow prompts two-factor authentication (2FA) for users who belong to any of the given set of groups.</td>
+    <td><a :href="$withBase('/guides/authentication/conditional-auth/sign-in-option-based-template/')">Sign-In-Option-Based</a></td>
+    <td>This login flow prompts two-factor authentication (2FA) only for users who are signing in with a given option.</td>
   </tr>
   <tr>
     <td><a :href="$withBase('/guides/authentication/conditional-auth/new-device-based-template/')">New-Device-Based</a></td>
     <td>This login flow sends an email notification and/or prompts two-factor authentication for users who are logged in from a previously unused device.</td>
+  </tr>
+    <tr>
+    <td><a :href="$withBase('/guides/authentication/conditional-auth/group-based-template/')">Group-Based (Adaptive MFA)</a></td>
+    <td>This login flow prompts two-factor authentication (2FA) for users who belong to any of the given set of groups.</td>
   </tr>
   <tr>
     <td><a :href="$withBase('/guides/authentication/conditional-auth/ip-based-template/')">IP-Based</a></td>
