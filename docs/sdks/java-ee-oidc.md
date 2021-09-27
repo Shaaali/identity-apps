@@ -16,7 +16,7 @@ Follow the steps given below to authenticate users to your Java EE web applicati
 ## Prerequisites
 - [Download](https://tomcat.apache.org/tomcat-9.0-doc/) Apache Tomcat 9.x or 8.x in your local environment.
 - [Download](https://maven.apache.org/download.cgi), and [install](https://maven.apache.org/install.html) Apache Maven (3.6.x or higher) as the package manager if you already haven't.
-- You need to have an application registered in Asgardeo. If you don't, see the instructions on <a :href="$withBase('/guides/applications/web-app/register-oidc-web-app')">registering an OIDC application</a>.
+- You need to have an application registered in Asgardeo. If you don't, see the instructions on <a :href="$withBase('/guides/applications/register-oidc-web-app')">registering an OIDC application</a>.
 
 ## Install the SDK
 

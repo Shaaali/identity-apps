@@ -15,7 +15,7 @@ Follow the steps given below to authenticate users to your React SPA with OpenID
 
 ## Prerequisites
 - [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
-- <a :href="$withBase('/guides/applications/spa/register-single-page-app/')">Register an application</a> in Asgardeo.
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Register an application</a> in Asgardeo.
 
 ## Install the SDK
 
@@ -31,7 +31,7 @@ SDK uses [React Context API](https://reactjs.org/docs/context.html) under the ho
 You can easily integrate Asgardeo in your application by using `AuthProvider` as the wrapper element to inject configurations.
 
 `AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitary input that can be used to initialize the SDK instance. Provide the configurations below to get the SDK to work with your application. 
- - **clientID** : This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/applications/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.
+ - **clientID** : This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.
  - **serverOrigin** : Asgardeo server host name along with your organization name
  - **signInRedirectURL** : This is the URL to which users should be redirected after login. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
  - **signOutRedirectURL** : This is the URL to which users should be redirected after logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
