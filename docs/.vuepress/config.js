@@ -175,6 +175,7 @@ module.exports = config({
                             ['new-device-based-template.md', 'Add device-based authentication'],
                             ['group-based-template.md', 'Add group-based authentication (adaptive MFA)'],
                             ['ip-based-template.md', 'Add IP-based authentication'],
+                            ['authentication-based-on-api-calls.md', 'Add authentication based on API calls'],
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
