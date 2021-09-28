@@ -8,15 +8,15 @@ See the guides given below to add login to your SPAs with Asgardeo.
 
 ### Try out samples
 
-- <a :href="$withBase('/quickstarts/qsg-spa-react')">React SPA Sample</a>
-- <a :href="$withBase('/quickstarts/qsg-spa-angular')">Angular SPA Sample</a>
-- <a :href="$withBase('/quickstarts/qsg-spa-javascript')">JavaScript SPA Sample</a>
+- <a :href="$withBase('/get-started/try-samples/qsg-spa-react')">React SPA Sample</a>
+- <a :href="$withBase('/get-started/try-samples/qsg-spa-angular')">Angular SPA Sample</a>
+- <a :href="$withBase('/get-started/try-samples/qsg-spa-javascript')">JavaScript SPA Sample</a>
 
 ### Use an SDK to add login to your SPA
 
-- <a :href="$withBase('/sdks/react')">React SDK</a>
-- <a :href="$withBase('/sdks/angular')">Angular SDK</a>
-- <a :href="$withBase('/sdks/javascript')">Javascript SDK</a>
+- <a :href="$withBase('/get-started/try-your-own-app/react')">React SDK</a>
+- <a :href="$withBase('/get-started/try-your-own-app/angular')">Angular SDK</a>
+- <a :href="$withBase('/get-started/try-your-own-app/javascript')">Javascript SDK</a>
 
 ### Manually add login to your SPA
 

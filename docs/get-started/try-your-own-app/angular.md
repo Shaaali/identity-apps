@@ -10,7 +10,7 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/angular-logo.svg'
-    buttonPath='/quickstarts/qsg-spa-angular'
+    buttonPath='/get-started/try-samples/qsg-spa-angular'
 />
 <br>
 

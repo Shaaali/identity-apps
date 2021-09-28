@@ -10,7 +10,7 @@ Follow the steps given below to authenticate users to your JavaScript SPA with O
    buttonType='grey-outlined-icon'
    buttonText='Try out the sample app'
    startIconPath='images/technologies/javascript-logo.svg'
-   buttonPath='/quickstarts/qsg-spa-javascript'
+   buttonPath='/get-started/try-samples/qsg-spa-javascript'
 />
 
 ## Prerequisites

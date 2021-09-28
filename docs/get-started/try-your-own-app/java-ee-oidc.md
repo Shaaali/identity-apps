@@ -10,7 +10,7 @@ Follow the steps given below to authenticate users to your Java EE web applicati
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/java-logo.svg'
-    buttonPath='/quickstarts/qsg-oidc-webapp-java-ee'
+    buttonPath='/get-started/try-samples/qsg-oidc-webapp-java-ee'
 />
 
 ## Prerequisites
