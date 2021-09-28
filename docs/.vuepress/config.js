@@ -329,6 +329,9 @@ module.exports = config({
                     ]
                 },
             ],
+            '/sdks/' : [
+                ['', ''],
+            ],
             '/references/' : [
                 ['/references/user-management/user-roles.md', 'Asgardeo user roles'],
                 {
