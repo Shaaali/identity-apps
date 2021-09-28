@@ -1,4 +1,4 @@
-# Manage Users
+# User Management
 
 The users in Asgardeo are the digital representations of the identities of physical users who interact with your 
 organization. With Asgardeo, the identity lifecycle of each of these users can be easily managed by the admins of the 

@@ -1,0 +1,21 @@
+---
+breadcrumb: true
+prev: false
+next: false
+pageClass: user-attributes-index
+heading: Enable User Attributes
+subHeading: Share user attributes in the user profile with
+userAttributes:
+    - name: OIDC Apps
+      icon: images/technologies/oidc-idp-illustration.png
+      path: /guides/authentication/user-attributes/enable-attributes-for-oidc-app/
+    
+    - name: SAML Apps
+      icon: images/technologies/saml-idp-illustration.png
+      path: /guides/authentication/user-attributes/enable-attributes-for-saml-app/
+
+---
+
+# Enable User Attributes
+
+<UserAttributesOverview/>

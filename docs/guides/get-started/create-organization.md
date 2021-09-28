@@ -28,4 +28,4 @@ Now that you've set up your own organization and created your first user, you ca
 - <a :href="$withBase('/guides/users/')">Manage your users in Asgardeo</a>
 - <a :href="$withBase('/guides/users/manage-collaborators/')">Invite a collaborator user to your organization</a>
 - <a :href="$withBase('/quickstarts/')">Tryout a sample application</a>
-- <a :href="$withBase('/guides/applications/')">Manage your applications with asgardeo</a>
+- <a :href="$withBase('/guides/authentication/')">Manage your applications with asgardeo</a>
