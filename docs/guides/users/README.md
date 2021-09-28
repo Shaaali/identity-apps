@@ -38,13 +38,13 @@ An owner is always assigned the **Administrator** role. It cannot be changed by 
 
 A collaborator is a user who can manage the organization and has access to the organization’s administrative operations. A collaborator can be invited to the organization and assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
 
-Refer <a :href="$withBase('/guides/users/manage-collaborators/')">managing collaborators</a> for more information. 
+Refer <a :href="$withBase('/guides/users/manage-collaborators/')">Managing collaborators</a> for more information. 
 
 ### Customer 
 
 A customer registered in an organization can consume and access applications in that organization.
 
-Refer <a :href="$withBase('/guides/users/manage-customers/')">managing customers</a> for more information. 
+Refer <a :href="$withBase('/guides/users/manage-customers/')">Managing customers</a> for more information. 
 
 ### Comparing User Accounts
 
