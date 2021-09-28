@@ -206,7 +206,6 @@ module.exports = config({
                     path: 'users/',
                     sidebarDepth: 2,
                     children: [
-                        ['owner.md', 'Manage owner'],
                         ['manage-collaborators.md', 'Manage collaborators'],
                         ['manage-customers.md', 'Manage customers'],
                         ['manage-user-profiles.md', 'Manage user profiles'],

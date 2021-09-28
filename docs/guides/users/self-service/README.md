@@ -6,4 +6,4 @@ Follow the instructions in the guides given below for more information.
 
 - <a :href="$withBase('/guides/users/self-service/owners/')">My Account for owners and collaborators</a>
 
-- <a :href="$withBase('/guides/users/self-service/customer/')">My Account Portal for customers</a>
+- <a :href="$withBase('/guides/users/self-service/customer/')">My Account portal for customers</a>

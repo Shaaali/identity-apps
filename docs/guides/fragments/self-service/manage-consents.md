@@ -1,5 +1,5 @@
 
-When a customer logs in to some applications, Asgardeo prompts for the customer's consent to access the user attributes the application requires. The customer can view the consents given to applications and revoke them if needed.
+When a customer logs in to applications, Asgardeo prompts for the customer's consent to access the user attributes the application requires. The customer can view the consents given to applications and revoke them if needed.
 
 Given below are the steps to follow.
 
