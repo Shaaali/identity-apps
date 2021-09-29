@@ -46,7 +46,7 @@ Administrators can reset a user's password or initiate the password reset proces
 To reset the password of a user:
 1. Click **Reset Password** at the bottom of the user's profile.
   <img :src="$withBase('/assets/img/guides/users/reset-password.png')" alt="Reset User Password">
-2. Select a method to set the user password:     
+2. Select a method to reset the user password:     
    - **Invite user to set their own password:**  
     If this option is selected, a password reset request can be sent to the customer via email. The customer can then use the instructions in the email to reset the password.  
    - **Set a temporary password for the user:**  

@@ -14,7 +14,7 @@ Let's look at how admins can onboard customers from the Asgardeo Console.
 2. Click  **New User** and select **Customer** from the list.
 3. Provide the following details:
     <img :src="$withBase('/assets/img/guides/users/add-customer-user-form.png')" alt="Add customer user">
-    - **Email (username):** A unique email address to identify the user. 
+    - **Email (Username):** A unique email address to identify the user. 
         <br>
         ::: warning
          This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization and you can't change the username once it is created.
