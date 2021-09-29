@@ -21,7 +21,7 @@ To self-register as a customer, the user should follow these steps.
 5. Click on **Confirm Account** in the email sent to the registered email address.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/account-verification-email.png')" alt="Account verification email notification">
     
-    Note that, an email will only be sent if <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">Account Verification</a> is enabled.
+    Note that, an email will only be sent if **Account Verification** is enabled from <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">Self Registration</a>.
     
     Now you can log in to My Account portal, or a business application using your verified email address.
    
