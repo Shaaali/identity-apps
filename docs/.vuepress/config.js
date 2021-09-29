@@ -232,6 +232,7 @@ module.exports = config({
                             ['new-device-based-template.md', 'Add device-based authentication'],
                             ['group-based-template.md', 'Add group-based authentication (adaptive MFA)'],
                             ['ip-based-template.md', 'Add IP-based authentication'],
+                            ['add-a-secret-to-authentication-script.md', 'Add a secret to a conditional authentication script'],
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
