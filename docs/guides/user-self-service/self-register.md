@@ -16,7 +16,7 @@ To self-register as a customer, the user should follow these steps.
 3. Enter your email address and click **Continue**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/self-registration-enter-username.png')" alt="Self registration" width="300">
 4. Enter your details, select **I have read and understood the Privacy Policy**, and click **Sign Up**.
-5. Click on **Confirm Account** in the email sent to the registered email address.
+5. Click **Confirm Account** in the email sent to the registered email address.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/account-verification-email.png')" alt="Account verification email notification">
     
     Note that, an email will only be sent if **Account Verification** is enabled from <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">Self Registration</a>.
