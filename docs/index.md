@@ -17,7 +17,7 @@ features:
         link: /guides/applications/#web-applications
           
       - name: "Single page applications"
-        link: /guides/applications/#sing-page-applications
+        link: /guides/applications/#single-page-applications
       
       - name: "Native applications"
         link: 
