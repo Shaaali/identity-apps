@@ -10,7 +10,7 @@ Follow the steps given below to authenticate users to your React SPA with OpenID
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/react-logo.svg'
-    buttonPath='/quickstarts/qsg-spa-react'
+    buttonPath='/get-started/try-samples/qsg-spa-react'
 />
 
 ## Prerequisites

@@ -1,28 +1,28 @@
 ---
-sidebar: false
+sidebar: true
 pageClass: quickstarts-page
-heading: Quickstarts
-subHeading: Tryout our samples to learn how to enable login to your applications with Asgardeo
+heading: Try your Own App
+subHeading: Pick the technology of your application and enable Asgardeo login.
 technologies:
   - icon: images/technologies/angular-logo.svg
     name: Angular
-    path: /quickstarts/qsg-spa-angular/
+    path: /get-started/try-your-own-app/angular/
 
   - icon: images/technologies/javascript-logo.svg
     name: Javascript
-    path: /quickstarts/qsg-spa-javascript/
+    path: /get-started/try-your-own-app/
 
   - icon: images/technologies/react-logo.svg
     name: React
-    path: /quickstarts/qsg-spa-react/
+    path: /get-started/try-your-own-app/react/
 
   - icon: images/technologies/java-logo.svg
     name: Java EE - OIDC
-    path: /quickstarts/qsg-oidc-webapp-java-ee/
+    path: /get-started/try-your-own-app/java-ee-oidc/
   
   - icon: images/technologies/java-logo.svg
     name: Java EE - SAML
-    path: /quickstarts/qsg-saml-webapp-java-ee/
+    path: /get-started/try-your-own-app/java-ee-saml/
 ---
 
 <QuickstartOverview/>

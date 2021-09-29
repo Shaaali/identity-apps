@@ -21,9 +21,9 @@ To update the properties of a user attribute:
 1. On the Asgardeo console, click **Manage > Attributes**.
 2. Click **Attributes** to see the list of attributes.
 3. Click **Edit** for the attribute you want to update.
-   <img :src="$withBase('/assets/img/guides/organization/attributes/edit-attributes.png')" alt="Edit attributes"> 
+   <img :src="$withBase('/assets/img/guides/organization/attributes/edit-attributes.png')" alt="Edit attributes" width="500"> 
    ::: info Info
-     **Attribute** specifies the unique identifier of the attribute. It always start with `http://wso2.org/claims`. This cannot be edited.
+     The **Attribute** field specifies the unique identifier of the attribute. It always starts with `http://wso2.org/claims`. This cannot be edited.
    :::
 4. Update the following values.
    <table>

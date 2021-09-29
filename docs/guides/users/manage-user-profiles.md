@@ -1,35 +1,37 @@
 # Manage user profiles
 
-A user profile consists of user attributes that represent the details of the user. It can be the user name, email address, contact information, some custom attributes, etc. 
+A user profile consists of user attributes that represent the details of the user such as username, email address, contact information, other custom attributes, etc. 
 
 Depending on the organization's requirement, administrators can customize the list of user attributes visible in a user profile.
 
-User profiles can be managed using the Asgardeo Console or SCIM2 APIs. Users can also manage their own user profiles from the **My Account** app. 
+User profiles can be managed using the Asgardeo console or SCIM2 APIs. Users can also manage their own user profiles using **My Account**. 
 
 This guide will give you an overview on how an administrator can manage the profiles of users.
 
-From the user's profile in the Asgardeo console, admin can perform following options.
+From the user's profile in the Asgardeo console, an admin can perform the following actions.
  
 ## View profile of a user
 
 Administrators can view the user profile of any user as follows:
- 1. On the Asgardeo Console, click **Manage > Users**.
- 2. Select the user to view the profile.
- 3. Click **Edit**.  
+
+1. On the Asgardeo console, click **Manage > Users**.
+2. Select the user to view the profile.
+3. Click **Edit**.  
 
 Now you can see the profile of the user.
-  <img :src="$withBase('/assets/img/guides/users/update-user-profile.png')" alt="update-user-profile">
+
+<img :src="$withBase('/assets/img/guides/users/update-user-profile.png')" alt="update-user-profile">
     
     
 ## Update the profile of a user
 
-An administrator can update the user profile of a <a :href="$withBase('/guides/users/manage-customers/')">customer</a> via the Asgardeo Console.
+An administrator can update the user profile of a <a :href="$withBase('/guides/users/manage-customers/')">customer</a> via the Asgardeo console.
 
 To update the user profile:
-1. On the Asgardeo Console, click Manage > Users.
+1. On the Asgardeo console, click **Manage > Users**.
 2. Select the customer account and click Edit.
 3. Update the information on the user profile.
-4. Click Update to save.
+4. Click **Update** to save.
 
 ## Delete a user
 
@@ -41,7 +43,7 @@ To delete a user from user profile view:
 
 ## Reset the password of a user
 
-Administrators can reset a user's password or initiate the password reset process from the Asgardeo Console.
+Administrators can reset a user's password or initiate the password reset process from the Asgardeo console.
 
 To reset the password of a user:
 1. Click **Reset Password** at the bottom of the user's profile.
@@ -51,5 +53,5 @@ To reset the password of a user:
     If this option is selected, a password reset request can be sent to the customer via email. The customer can then use the instructions in the email to reset the password.  
    - **Set a temporary password for the user:**  
    If this option is selected, the owner/collaborator can set a temporary password for the customer.
-   <img :src="$withBase('/assets/img/guides/users/reset-password-of-user.png')" alt="Reset password">
+   <img :src="$withBase('/assets/img/guides/users/reset-password-of-user.png')" alt="Reset password" width="500">
 3. Click **Reset Password**.

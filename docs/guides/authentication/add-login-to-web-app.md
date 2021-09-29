@@ -6,13 +6,13 @@ See the guides given below to add login to your web apps with Asgardeo using Ope
 
 ### Try out samples
 
-- <a :href="$withBase('/quickstarts/qsg-oidc-webapp-java-ee')">Java EE OIDC sample</a>
-- <a :href="$withBase('/quickstarts/qsg-saml-webapp-java-ee')">Java EE SAML sample</a>
+- <a :href="$withBase('/get-started/try-samples/qsg-oidc-webapp-java-ee')">Java EE OIDC sample</a>
+- <a :href="$withBase('/get-started/try-samples/qsg-saml-webapp-java-ee')">Java EE SAML sample</a>
 
 ### Use an SDK to add login to your web app
 
-- <a :href="$withBase('/sdks/java-ee-oidc')">Java EE OIDC SDK</a>
-- <a :href="$withBase('/sdks/java-ee-saml')">Java EE SAML SDK</a>
+- <a :href="$withBase('/get-started/try-your-own-app/java-ee-oidc')">Java EE OIDC SDK</a>
+- <a :href="$withBase('/get-started/try-your-own-app/java-ee-saml')">Java EE SAML SDK</a>
 
 ### Manually add login to your web app
 
