@@ -1,7 +1,5 @@
 # Manage customers
 
-A customer registered in the organization can consume and access applications in that organization.
-
 This guide walks you through the process of managing a customer account. An owner or a collaborator with administrative privilege can manage customer accounts.
 
 ## Onboard a customer
@@ -9,12 +7,12 @@ There are two ways to onboard a customer:
 - The user can self-register via My Account.
 - An admin can invite the customer. 
 
-Let's look at how admins can onboard customers from the Asgardeo Console.
-1. On the Asgardeo Console, click **Manage > Users**.
+Let's look at how admins can onboard customers from the Asgardeo console.
+1. On the Asgardeo console, click **Manage > Users**.
 2. Click  **New User** and select **Customer** from the list.
 3. Provide the following details:
     <img :src="$withBase('/assets/img/guides/users/add-customer-user-form.png')" alt="Add customer user">
-    - **Email (username):** A unique email address to identify the user. 
+    - **Email (Username):** A unique email address to identify the user. 
         <br>
         ::: warning
          This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization and you can't change the username once it is created.
