@@ -20,17 +20,12 @@ module.exports = config({
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
         ['meta', {name: 'robots', content: 'noindex, nofollow'}],
-        ['script', {}, 
-        `
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:2626904,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        ` ]
+        ['script', {src: '/scripts/analytics.js'}],
+        ['noscript', {}, 
+            `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+        ],
+        ['script', {src: '/scripts/tagManager.js'}],
+        ['script', {src: '/scripts/hotjar.js'}]
     ],
 
     base: '/asgardeo/docs/',
