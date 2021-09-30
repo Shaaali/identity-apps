@@ -19,7 +19,13 @@ module.exports = config({
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
-        ['meta', {name: 'robots', content: 'noindex, nofollow'}]
+        ['meta', {name: 'robots', content: 'noindex, nofollow'}],
+        ['script', {src: '/scripts/analytics.js'}],
+        ['noscript', {}, 
+            `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+        ],
+        ['script', {src: '/scripts/tagManager.js'}],
+        ['script', {src: '/scripts/hotjar.js'}]
     ],
 
     base: '/asgardeo/docs/',
