@@ -1,5 +1,7 @@
 # Configure OIDC Flows
 
+Learn how to discover the OIDC endpoints in your Asgardeo organization and then use them to implement OIDC flows in your applications.
+
 ## Discover the OIDC endpoints
 
 This section covers how you can configure OIDC-based login for your single page application by discovering the required OIDC endpoints and configuring them in the Asgardeo console. 

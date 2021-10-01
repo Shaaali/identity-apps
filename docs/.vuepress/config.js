@@ -21,11 +21,23 @@ module.exports = config({
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
         ['meta', {name: 'robots', content: 'noindex, nofollow'}],
         ['script', {src: '/scripts/analytics.js'}],
+        ['script', {src: '/scripts/hotjar.js'}],
         ['noscript', {}, 
             `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
         ],
-        ['script', {src: '/scripts/tagManager.js'}],
-        ['script', {src: '/scripts/hotjar.js'}]
+        ['script', {}, `
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], d
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PSTXMT');
+        `
+        ]
     ],
 
     base: '/asgardeo/docs/',
