@@ -148,7 +148,8 @@ module.exports = config({
                         },
                     ]
                 },
-                ['explore-asgardeo.md', 'Explore Asgardeo'],
+                ['asgardeo-use-cases.md', 'Learn by Use Case'],
+ //               ['explore-asgardeo.md', 'Explore Asgardeo'],
             ],
             '/guides/' : [
                 ['', 'Guides - Overview'],

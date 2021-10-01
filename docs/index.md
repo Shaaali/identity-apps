@@ -18,9 +18,7 @@ features:
           
       - name: "Single page applications"
         link: /guides/applications/#sing-page-applications
-      
-      - name: "Native applications"
-        link: 
+  
 
   - title: Configure Federated Login
     details: Let users log in to applications with an Identity Provider of their choice.
@@ -54,9 +52,6 @@ features:
       
       - name: "Groups"
         link: /guides/users/manage-groups/
-        
-      - name: "Roles"
-        link: /references/user-management/user-roles/
 
 services:
     - title: Supported Integrations
