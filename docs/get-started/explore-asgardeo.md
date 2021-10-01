@@ -19,7 +19,3 @@ We provide,
 * **Scalable authentication:** With Asgardeo, you can experience the simplicity in adding authentication to any
  application, easy onboarding, and managing users for secure access. With the user store as a service, users can be
  easily onboarded and managed reducing complexities or set up time.
-
- ## Asgardeo console
-
- ## My Account portal
