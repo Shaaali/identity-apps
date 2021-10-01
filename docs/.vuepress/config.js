@@ -19,7 +19,13 @@ module.exports = config({
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
-        ['meta', {name: 'robots', content: 'noindex, nofollow'}]
+        ['meta', {name: 'robots', content: 'noindex, nofollow'}],
+        ['script', {src: '/scripts/analytics.js'}],
+        ['noscript', {}, 
+            `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+        ],
+        ['script', {src: '/scripts/tagManager.js'}],
+        ['script', {src: '/scripts/hotjar.js'}]
     ],
 
     base: '/asgardeo/docs/',
@@ -233,6 +239,7 @@ module.exports = config({
                             ['new-device-based-template.md', 'Add device-based authentication'],
                             ['group-based-template.md', 'Add group-based authentication (adaptive MFA)'],
                             ['ip-based-template.md', 'Add IP-based authentication'],
+                            ['add-a-secret-to-authentication-script.md', 'Add a secret to a conditional authentication script'],
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
@@ -268,7 +275,6 @@ module.exports = config({
                     path: 'users/',
                     sidebarDepth: 2,
                     children: [
-                        ['owner.md', 'Manage owner'],
                         ['manage-collaborators.md', 'Manage collaborators'],
                         ['manage-customers.md', 'Manage customers'],
                         ['manage-user-profiles.md', 'Manage user profiles'],

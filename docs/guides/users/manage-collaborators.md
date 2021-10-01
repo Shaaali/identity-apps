@@ -1,25 +1,23 @@
 # Manage collaborators
 
-A collaborator is a user who can manage the organization and has access to the organization’s administrative operations. A collaborator can be invited to the organization and assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
-
 This guide walks you through the steps of managing a collaborator account. An owner or another collaborator with an administrative role can manage collaborator accounts.
 
 ## Onboard a collaborator
 
 Admins can onboard a collaborator by sending an email invitation. 
 
-To onboard a collaborator via [Asgardeo Console](https://console.asgardeo.io):
+To onboard a collaborator via the [Asgardeo Console](https://console.asgardeo.io):
 1. Click **Manage > Users** on the Asgardeo Console.
 2. Click  **New User** and select **Collaborator** from the list.
-3. Provide the following details.
-    - **Email Address:** Email address of the collaborator.<br>
-        ::: warning
-         This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
-        :::               
+3. Provide the Email address of the collaborator.
+
+    ::: warning
+    This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
+    :::               
     <!--- **Role:** Select a role to assign to the collaborator. You can change this later.   
     <img :src="$withBase('/assets/img/guides/users/add-collaborator-account.png')" alt="Add collaborator user">-->
 4. Click **Invite**.
-5. The collaborator can access the Asgardeo Console by accepting the invitation and setting a password for the new user account.
+5. The collaborator can access the Asgardeo console by accepting the invitation and setting a password for the new user account.
      
 <!-- ## Assign roles
 

@@ -17,8 +17,10 @@ features:
         link: /guides/applications/#web-applications
           
       - name: "Single page applications"
-        link: /guides/applications/#sing-page-applications
-  
+        link: /guides/applications/#single-page-applications
+      
+      - name: "Native applications"
+        link: 
 
   - title: Configure Federated Login
     details: Let users log in to applications with an Identity Provider of their choice.

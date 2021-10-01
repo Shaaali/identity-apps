@@ -22,7 +22,7 @@ Use Asgardeo to ensure secure access for your users by enabling conditional and 
  circumstances.
 
 - Try <a :href="$withBase('/guides/authentication/conditional-auth/')">conditional authentication</a> with Asgardeo.
-- Try <a :href="$withBase('/guides/authentication/mfa/)">multi-factor authentication</a> with Asgardeo.
+- Try <a :href="$withBase('/guides/authentication/mfa/')">multi-factor authentication</a> with Asgardeo.
   
 ## User management
 You can manage user identities securely and efficiently within Asgardeo. This includes applying CRUD operations on users,
