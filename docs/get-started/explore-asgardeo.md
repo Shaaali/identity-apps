@@ -1,5 +1,9 @@
 # Explore Asgardeo
 
+::: 
+**WORK IN PROGRESS**
+:::
+
 See the topics given below to explore Asgardeo and its components.
 
 ## What is Asgardeo?
@@ -15,11 +19,11 @@ Asgardeo is an identity as a service (IDaaS) solution that provides a fully inte
  application, easy onboarding, and managing users for secure access. With the user store as a service, users can be easily onboarded and managed reducing complexities or set up time.
  -->
 
- ## Asgardeo console
+## Asgardeo console
 
  The Asgardeo console is the 
 
- ## Self-service portals (My Account)
+## Self-service portals (My Account)
 
 The **My Account** portal is the self-service portal for Asgardeo users. If you are an owner of an Asgardeo of one or multiple Asgardeo organization, you can manage your personal profile from this portal.
 
