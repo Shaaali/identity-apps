@@ -18,13 +18,13 @@ Select a technology and try integrating an application with Asgardeo.
 
 Select an identity and access management use case for your application and see how it works in Asgardeo. 
 
-<a :href="$withBase('/')">Learn more</a>
+<a :href="$withBase('/get-started/asgardeo-use-cases/')">Learn more</a>
 
 <!--
 
 ## Explore Asgardeo
 
-Explore the capabilities of Asgardeo and how it can help you build a robust identity and access management solution for your organization's applications. 
+Explore Asgardeo and its components and leard how they will help you build a robust identity and access management solution for your organization's applications. 
 
 <a :href="$withBase('/get-started/explore-asgardeo/')">Learn more</a>
 -->
