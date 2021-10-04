@@ -27,3 +27,12 @@ To reset the password, the account owner should follow these steps.
 5. Enter new password and **Proceed**.
 
 Now you have reset your password and can sign in using your new password.
+
+## Check password recovery email
+Customers can also check the email address to which their password recovery information is sent to.
+
+1. In the user's MyAccount portal, navigate to **Security > Account Recovery**.
+    <img :src="$withBase('/assets/img/guides/users/account-recovery.png')" alt="Account recovery in Asgardeo MyAccount">
+2. Click email recovery eye icon, to check the recover email address.
+   ::: warning The recovery email address will be the user's email address. This cannot be updated.
+3. Click on Done.
