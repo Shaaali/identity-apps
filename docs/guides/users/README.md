@@ -81,10 +81,6 @@ Based on your requirements, you can choose user types and create them via the [A
             <li>Manage users and groups</li>
             <li>Manage applications</li>
         </ul>
-     <li><b>Role: Application developer</b></li>
-         <ul>
-            <li>Manage applications</li>
-         </ul>
     </td>
   </tr>
   <tr>
@@ -99,4 +95,4 @@ Based on your requirements, you can choose user types and create them via the [A
 Following are the main components that are required for user management.
 - <a :href="$withBase('/guides/users/manage-groups/')">Groups</a>
 - <a :href="$withBase('/references/user-management/user-roles/')">Roles</a>
-- User stores
+- User stores <i>`(Coming soon)`</i>
