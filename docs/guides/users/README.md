@@ -64,28 +64,26 @@ Based on your requirements, you can choose user types and create them via the [A
     <td>Owner<Badge text="Asgardeo User" type="optional"/></td>
     <td>Asgardeo</td>
     <td>
-    <li>Onboard users</li>
-    <li>Create organizations</li>
-    <li>Manage users and groups</li>
-    <li>Manage applications</li>
+        <li>Onboard users</li>
+        <li>Create organizations</li>
+        <li>Manage users and groups</li>
+        <li>Manage applications</li>
     </td>
   </tr>
   <tr>
     <td>Collaborator<Badge text="Asgardeo User" type="optional"/></td>
     <td>Asgardeo</td>
     <td>
-    <li><b>Role: Administrator </b> </li>
-        <ul>
-            <li>Onboard users</li>
-            <li>Create organizations</li>
-            <li>Manage users and groups</li>
-            <li>Manage applications</li>
-        </ul>
+    By default, collaborators are assigned all administration capabilities:
+      <li>Onboard users</li>
+      <li>Create organizations</li>
+      <li>Manage users and groups</li>
+      <li>Manage applications</li>
     </td>
   </tr>
   <tr>
     <td>Customer</td>
-     <td>Organization</td>
+    <td>Organization</td>
     <td><li>Consume business applications</li></td>
   </tr>
 </table>
