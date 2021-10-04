@@ -335,6 +335,8 @@ module.exports = config({
                         ['manage-login-sessions.md', 'Manage login sessions'],
                         ['self-register.md', 'Self-register'],
                         ['customer-password-recovery.md', 'Password recovery'],
+                        ['enable-totp.md', 'Enroll TOTP'],
+                        ['discover-applications.md', 'Discover applications'],
                     ]
                 },
                 {

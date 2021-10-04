@@ -49,15 +49,4 @@ Users can enroll for TOTP notification from the first login to the business appl
     <img :src="$withBase('/assets/img/guides/mfa/totp/enter-otp-token.png')" alt="User enters OTP token in Asgardeo" width="300">
 6. Click **Continue**.
 
-
-## Enroll TOTP via MyAccount
-If the user wants to use another authenticator app for getting the OTP, the user can configure it via the My Account portal. The QR code that is generated via My Account is the same as the code prompted during the first-time login.
- 
-Note that, enrolling TOTP via MyAccount can be done only after the first login attempt using totp authentication, and it is available only for <a :href="$withBase('/guides/users/manage-customers/')">customer</a> user accounts.
-::: warning
- Even though federated users can log in with TOTP, note that currently Asgardeo doesn't allow customers who authenticated via an external IdP to enroll for TOTP via My Account.
-:::
- 
-1. In the Asgardeo MyAccount, navigate to **Security > Multi-Factor Authentication**.
-    <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount">
-2. Click TOTP edit icon and scan the prompted QR code using an authenticator.
+If the QR code is deleted from the authenticator app, there is no way to recover it from the application's end. In a scenario like this, the user should enroll TOTP through the <b>Multi Factor Authentication</b> option in the My Account portal. Learn more about <a :href="$withBase('/guides/user-self-service/enable-totp/')">enrolling TOTP from My Account</a>.
