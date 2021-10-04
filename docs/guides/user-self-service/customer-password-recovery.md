@@ -35,4 +35,4 @@ Customers can also check the email address to which their password recovery info
     <img :src="$withBase('/assets/img/guides/users/account-recovery.png')" alt="Account recovery in Asgardeo MyAccount">
 2. Click the **eye** icon, to check the recovery email address.
    ::: warning The recovery email address will be the user's email address. This cannot be updated.
-3. Click on Done.
+3. Click **Done**.
