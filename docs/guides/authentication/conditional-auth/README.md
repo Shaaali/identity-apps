@@ -94,6 +94,9 @@ The pre-defined templates are listed below.
 
 If required, you can also use the script editor to introduce new functions and fields to an authentication script based on your requirement. See the instructions on <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">writing a custom authentication script</a>. 
 
+## Secrets
+Secrets allow users to securely save the secret values associated with any external APIs, that they plan to use for conditional authentication. This feature is used to securely store the secret values on Asgardeo console, and retrieve them whenever required for conditional authentication. 
+
 ## What's next
 
 * <a :href ="$withBase('/guides/authentication/conditional-auth/configure-conditional-auth/')">Configure conditional authentication</a>
