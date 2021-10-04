@@ -6,6 +6,8 @@ tagline: A developer-first IAM solution, Asgardeo provides simplicity by integra
 homeBannerText: Work In Progress! Bear with us while we perfect our documentation for you.
 actionText: Quick Start →
 actionLink: /get-started/
+getStartedText: Get Started
+getStartedLink: /get-started/
 
 features:
   - title: Manage Your Applications

@@ -27,7 +27,7 @@
           />
         </MyTransition>
         <MyTransition :delay="0.08">
-          <Button buttonType='primary' buttonText='Get Started' buttonPath='/guides/get-started/create-organization/'/>
+          <Button buttonType='primary' :buttonText="$frontmatter.getStartedText" :buttonPath="$frontmatter.getStartedLink" />
         </MyTransition>
         <MyTransition :delay="0.12">
           <p v-if="$frontmatter.action" class="action">
