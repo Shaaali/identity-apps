@@ -49,4 +49,4 @@ Users can enroll for TOTP notification from the first login to the business appl
     <img :src="$withBase('/assets/img/guides/mfa/totp/enter-otp-token.png')" alt="User enters OTP token in Asgardeo" width="300">
 6. Click **Continue**.
 
-If the QR code is deleted from the authentictor app, there is no way to recover it from the application's end. In a scenario like this the user should <a :href="$withBase('/guides/user-self-service/enable-totp/')">enable TOTP</a> through the <b>Multi Factor Authentication</b> option in the My Account portal. 
+If the QR code is deleted from the authenticator app, there is no way to recover it from the application's end. In a scenario like this, the user should enroll TOTP through the <b>Multi Factor Authentication</b> option in the My Account portal. Learn more about <a :href="$withBase('/guides/user-self-service/enable-totp/')">enrolling TOTP from My Account</a>.
