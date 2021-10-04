@@ -1,5 +1,5 @@
 # Enroll TOTP via MyAccount
-If the user wants to use another authenticator app for getting the OTP or if the user has deleted the scanned QR from the authenticator app, the user can configure it via the My Account portal. The QR code that is generated via My Account is the same as the code prompted during the first-time login.
+If the user wants to use another authenticator app for generating OTP values or if the user has deleted the scanned QR from the authenticator app, the user can configure it again via the My Account portal. The QR code that is generated via My Account is the same code that is prompted during the first app login attempt of the user.
  
 1. In the user's MyAccount portal, navigate to **Security > Multi-Factor Authentication**.
     <img :src="$withBase('/assets/img/guides/mfa/totp/mfa-via-myaccount.png')" alt="Add MFA from Asgardeo MyAccount">
