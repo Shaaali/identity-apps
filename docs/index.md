@@ -6,6 +6,8 @@ tagline: A developer-first IAM solution, Asgardeo provides simplicity by integra
 homeBannerText: Work In Progress! Bear with us while we perfect our documentation for you.
 actionText: Quick Start →
 actionLink: /get-started/
+getStartedText: Get Started
+getStartedLink: /get-started/
 
 features:
   - title: Manage Your Applications
@@ -18,13 +20,9 @@ features:
           
       - name: "Single page applications"
         link: /guides/applications/#single-page-applications
-      
-      - name: "Native applications"
-        link: 
 
   - title: Configure Federated Login
-    details: Let users log in to applications with an Identity Provider of their choice.
-    link: 
+    details: Let users log in to applications with an identity provider of their choice.
     icon: federatedLoginIcon
     subLinks:
       - name: "Social login"
@@ -34,8 +32,7 @@ features:
         link: /guides/authentication/enterprise-login/
 
   - title: Add Strong Authentication
-    details: Protect your user login using multi-factor and adaptive authentication.
-    link:
+    details: Protect your user login using multi-factor and conditional authentication.
     icon: addAuthnIcon
     subLinks:
       - name: "Multi-factor authentication"
@@ -54,9 +51,6 @@ features:
       
       - name: "Groups"
         link: /guides/users/manage-groups/
-        
-      - name: "Roles"
-        link: /references/user-management/user-roles/
 
 services:
     - title: Supported Integrations

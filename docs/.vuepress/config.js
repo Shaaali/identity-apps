@@ -21,11 +21,23 @@ module.exports = config({
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
         ['meta', {name: 'robots', content: 'noindex, nofollow'}],
         ['script', {src: '/scripts/analytics.js'}],
+        ['script', {src: '/scripts/hotjar.js'}],
         ['noscript', {}, 
             `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
         ],
-        ['script', {src: '/scripts/tagManager.js'}],
-        ['script', {src: '/scripts/hotjar.js'}]
+        ['script', {}, `
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], d
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PSTXMT');
+        `
+        ]
     ],
 
     base: '/asgardeo/docs/',
@@ -154,7 +166,8 @@ module.exports = config({
                         },
                     ]
                 },
-                ['explore-asgardeo.md', 'Explore Asgardeo'],
+                ['asgardeo-use-cases.md', 'Learn by Use Case'],
+ //               ['explore-asgardeo.md', 'Explore Asgardeo'],
             ],
             '/guides/' : [
                 ['', 'Guides - Overview'],
@@ -238,7 +251,7 @@ module.exports = config({
                             ['new-device-based-template.md', 'Add device-based authentication'],
                             ['group-based-template.md', 'Add group-based authentication (adaptive MFA)'],
                             ['ip-based-template.md', 'Add IP-based authentication'],
-                            ['add-a-secret-to-authentication-script.md', 'Add a secret to a conditional authentication script'],
+                            ['add-authentications-based-on-api-calls.md', 'Add authentications based on API calls'],
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
@@ -322,6 +335,8 @@ module.exports = config({
                         ['manage-login-sessions.md', 'Manage login sessions'],
                         ['self-register.md', 'Self-register'],
                         ['customer-password-recovery.md', 'Password recovery'],
+                        ['enable-totp.md', 'Enroll TOTP'],
+                        ['discover-applications.md', 'Discover applications'],
                     ]
                 },
                 {
