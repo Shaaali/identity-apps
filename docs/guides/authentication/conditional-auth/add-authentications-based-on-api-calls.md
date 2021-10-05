@@ -11,7 +11,7 @@ Consider a scenario where a user needs to configure a login flow of an applicati
 6. Click on the key icon above the script to create a new secret or add an already created secret to the script. <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script">
 7. Once you click on the key icon a drop down will be displayed with options to:
     - Add an existing secret onto the script
-        - Click on the secret you wish to add to your script and it will be added to the location specified by your cursor.
+        - Click the secret you wish to add to your script and it will be added to the location specified by your cursor.
     - Create a new secret on the console:
         1. Click **Create a new secret** from the drop-down menu.
 
