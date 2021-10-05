@@ -1,4 +1,6 @@
 # Add authentication based on API calls
+You can secure the login flow of your applications based on data received from external services.
+
 ## Scenario
 Consider a scenario where a user needs to configure a login flow of an application along with a conditional script which executes an API call to a service endpoint (E.g., Choreo) after the first step, so that he can configure the login flow to prompt the second step he added based on the decision made by the service during the login flow.
 
