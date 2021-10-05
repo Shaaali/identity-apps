@@ -9,7 +9,7 @@ Consider a scenario where a user needs to configure a login flow of an applicati
 5. Write your own script which executes an API call to a service endpoint.
 
 6. Click on the key icon above the script to create a new secret or add an already created secret to the script. <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script">
-7. Once you click on the key icon a drop down will be displayed with options to:
+7. Once you click the key icon, use one of the following options from the drop-down menu:
     - Add an existing secret to the script:
         - Click the secret you wish to add to your script and it will be added to the location specified by your cursor.
     - Create a new secret on the console:
