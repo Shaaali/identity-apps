@@ -12,7 +12,7 @@ Consider a scenario where a user needs to configure a login flow of an applicati
 7. Once you click on the key icon a drop down will be displayed with options to:
     - Add an existing secret onto the script
         - Click on the secret you wish to add to your script and it will be added to the location specified by your cursor.
-    - Create a new secret on the console
+    - Create a new secret on the console:
         1. Click **Create a new secret** from the drop-down menu.
 
         2. Enter the following details:
