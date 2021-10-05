@@ -4,6 +4,6 @@ If the user wants to use another authenticator app for getting the OTP or if the
 1. In the user's MyAccount portal, navigate to **Security > Multi-Factor Authentication**.
     <img :src="$withBase('/assets/img/guides/mfa/totp/mfa-via-myaccount.png')" alt="Add MFA from Asgardeo MyAccount">
 2. Click TOTP add icon and scan the prompted QR code using an authenticator.
-    <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount">
+    <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-via-myaccount.png')" alt="SCAN QR code in Asgardeo MyAccount" width=400 height=500>
 3. Enter the TOTP code obtained after scanning the QR code.
 4. Click on Verify.
