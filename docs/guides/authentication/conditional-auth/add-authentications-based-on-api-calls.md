@@ -2,7 +2,7 @@
 You can secure the login flow of your applications based on data received from external services.
 
 ## Scenario
-Consider a scenario where a user needs to configure a login flow of an application along with a conditional script which executes an API call to a service endpoint (E.g., Choreo) after the first step, so that he can configure the login flow to prompt the second step he added based on the decision made by the service during the login flow.
+Consider a scenario where the login flow of the application should be stepped up after an API call to an external service endpoint (e.g. WSO2 Choreo). The API call should be executed after the first authentication step is successfully completed. The second authentication step should be prompted based on the decision made by the service during the API call.
 
 ## Configure the login flow
 
