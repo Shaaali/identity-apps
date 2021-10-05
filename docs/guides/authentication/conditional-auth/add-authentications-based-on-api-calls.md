@@ -13,7 +13,7 @@ Consider a scenario where a user needs to configure a login flow of an applicati
     - Add an existing secret onto the script
         - Click on the secret you wish to add to your script and it will be added to the location specified by your cursor.
     - Create a new secret on the console
-        1. Click on **Create a new secret** from the drop-down.
+        1. Click **Create a new secret** from the drop-down menu.
 
         2. Enter the following details:
             <img :src="$withBase('/assets/img/guides/secret/create-a-secret.png')" alt="Create secret in Asgardeo">
