@@ -35,7 +35,7 @@ features:
       - name: "Google"
         link: /guides/authentication/social-login/add-google-login/
 
-  - title: Enterprise IDP
+  - title: Enterprise IDPs
     details: Secure your logins using standard identity protocols. 
     link: /guides/authentication/enterprise-login/
     icon: addAuthnIcon
