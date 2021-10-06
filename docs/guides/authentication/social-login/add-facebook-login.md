@@ -45,7 +45,7 @@ To register an app in Facebook:
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-idp.png')" alt="Add Facebook IDP in Asgardeo">
 
 You can find additional configurations once you create the Facebook identity provider.
-- **Permissions**: Asgardeo requests below permissions from Facebook:
+- **Permissions**: Asgardeo requests the following permissions from Facebook:
 - **email**: Grants read access to a user's primary email address.
 - **public_profile**: Grants read access to a user's default public profile fields.  
     
