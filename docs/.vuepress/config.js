@@ -82,6 +82,8 @@ module.exports = config({
             contributor:false
         },
         pageInfo: false,
+        nextLinks: false,
+        prevLinks: false,
         nav: [
           {
             text: "Get Started",
