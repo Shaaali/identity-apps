@@ -1,11 +1,12 @@
 ---
 sidebar: true
 breadcrumb: false
-pageClass: quickstarts-page
+search: true
+pageClass: item-index-page
 heading: Try your Own App
 subHeading: Pick the technology of your application and follow the instructions to enable Asgardeo login.
 searchEmptyText: Search does not match any existing technologies.
-technologies:
+items:
   - icon: images/technologies/angular-logo.svg
     name: Angular
     path: /get-started/try-your-own-app/angular/
@@ -27,4 +28,4 @@ technologies:
     path: /get-started/try-your-own-app/java-ee-saml/
 ---
 
-<QuickstartOverview/>
+<CardView/>

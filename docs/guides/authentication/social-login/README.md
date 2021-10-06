@@ -1,11 +1,12 @@
 ---
-breadcrumb: true
+breadcrumb: false
 prev: false
 next: false
-pageClass: social-login-index
+search: false
+pageClass: item-index-page
 heading: Add Social Login
 subHeading: Add social login to your applications with Asgardeo
-socialLoginIDPs:
+items:
     - name: Facebook
       icon: images/technologies/facebook-idp-illustration.svg
       path: /guides/authentication/social-login/add-facebook-login/
@@ -22,4 +23,4 @@ socialLoginIDPs:
 
 # Add Social Login
 
-<SocialLoginOverview/>
+<CardView/>
