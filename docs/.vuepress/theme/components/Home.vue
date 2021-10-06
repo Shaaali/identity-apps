@@ -80,7 +80,7 @@
     </MyTransition>
 
     <!-- Explore Section -->
-    <MyTransition :delay="0.14">
+    <!--<MyTransition :delay="0.14">
       <div class="explore-section">
         <h1>Explore Asgardeo</h1>
         <p>Checkout how Asgardeo fits your business plan for identity and access management</p>
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>
-    </MyTransition>
+    </MyTransition>-->
 
     <MyTransition :delay="0.24">
       <Content class="theme-default-content custom" />
