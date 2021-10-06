@@ -1,30 +1,31 @@
 # Facebook Login
 
-You can add Facebook login to your applications using Asgardeo and enable users to log into applications with their Facebook account.
+You can add Facebook login to your applications using Asgardeo and enable users to log in to applications with their Facebook account.
 
 This guide provides the instructions on how to enable the Facebook login to your applications. 
 
 ## Prerequisite
-To get started, you need to have an application registered in Asgardeo. If you don't already have, register one of the following application types.
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
 
 -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
+-   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ## Register app in Facebook
 You need to register Asgardeo as an app in Facebook. You can follow the [Facebook Documentation](https://developers.facebook.com/docs/development/create-an-app) to create an app in Facebook.
 
 To register an app in Facebook:
 1. Go to [Facebook developer portal](https://developers.facebook.com/apps) and click **Create App**.
-2. Select **Consumer** app type.
-3. Provide **App Display Name** and click **Create App ID** to create an application.
-4. To add [Facebook login](https://developers.facebook.com/docs/facebook-login/), Click **Set Up** on **Facebook Login** card.
+2. Select **Consumer** as the app type and click **Next**.
+3. Provide **Display Name** and click **Create App** to create an application.
+4. To add [Facebook login](https://developers.facebook.com/docs/facebook-login/), click **Set Up** on **Facebook Login** card.
 5. Select **Web** type.
 6. Provide below as **Site URL**.
     ``` no-line-numbers
     https://api.asgardeo.io/t/<organization_name>
     ```
-7. Go to **Settings** under **Facebook Login**, and add below as **Valid OAuth Redirect URIs**.
+8. **Save** and **Continue**.
+7. From the left panel, go to **Settings** under **Facebook Login**, and add the following as the **Valid OAuth Redirect URIs**.
    ``` no-line-numbers
    https://api.asgardeo.io/t/<organization_name>/commonauth
    ```
@@ -42,17 +43,18 @@ To register an app in Facebook:
     - **App ID**: App ID obtained from Facebook.
     - **App Secret**: App secret obtained from Facebook.   
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-idp.png')" alt="Add Facebook IDP in Asgardeo">
-5. You can find additional configurations once you create the Facebook identity provider.
-    - **Permissions**: Asgardeo requests below permissions from Facebook:
-      - **email**: Grants read access to a user's primary email address.
-      - **public_profile**: Grants read access to a user's default public profile fields.  
+
+You can find additional configurations once you create the Facebook identity provider.
+- **Permissions**: Asgardeo requests the following permissions from Facebook:
+- **email**: Grants read access to a user's primary email address.
+- **public_profile**: Grants read access to a user's default public profile fields.  
     
-      Asgardeo needs these permissions to get user information and sends this to application based on the attribute configurations in the application. You can read [Facebook Documentation](https://developers.facebook.com/docs/permissions/reference) to know about permissions.
- 
+Asgardeo needs these permissions to get user information and sends this to application based on the attribute configurations in the application. You can read [Facebook Documentation](https://developers.facebook.com/docs/permissions/reference) to know about permissions.
+
 ##  Enable Facebook login
 1. On the Asgardeo Console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
-3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
-4. Click **Add Authentication** on the step, and select the Facebook identity provider you added the above.
+3. Click **Start with Default configuration** (if you have not modified the default sign in flow).
+4. Click **Add Authentication** on the step, and select the Facebook identity provider you created above.
 5. Click **Update**.
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-federation-with-basic.png')" alt="Add Facebook login in Asgardeo">
