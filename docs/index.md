@@ -65,7 +65,7 @@ features:
       - name: "Use a template"
         link: /guides/authentication/conditional-auth/#script-templates/
       
-      - name: "Write a custom authentication script"
+      - name: "Define a custom authentication flow"
         link: /guides/authentication/conditional-auth/write-your-first-script/
       
       - name: "Based on API calls"
