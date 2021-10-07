@@ -1,11 +1,12 @@
 ---
-breadcrumb: true
+breadcrumb: false
 prev: false
 next: false
-pageClass: enterprise-login-index
+search: false
+pageClass: item-index-page
 heading: Add Enterprise Login
 subHeading: Add enterprise login to your applications with Asgardeo
-enterpriseIDPs:
+items:
     - name: OpenID Connect
       icon: images/technologies/oidc-idp-illustration.png
       path: /guides/authentication/enterprise-login/add-oidc-idp-login/  
@@ -17,4 +18,4 @@ enterpriseIDPs:
 
 # Add Enterprise Login
 
-<EnterpriseLoginOverview/>
+<CardView/>

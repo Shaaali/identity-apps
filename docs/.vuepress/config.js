@@ -82,6 +82,8 @@ module.exports = config({
             contributor:false
         },
         pageInfo: false,
+        nextLinks: false,
+        prevLinks: false,
         nav: [
           {
             text: "Get Started",
@@ -289,9 +291,8 @@ module.exports = config({
                     children: [
                         ['manage-collaborators.md', 'Manage collaborators'],
                         ['manage-customers.md', 'Manage customers'],
-                        ['manage-user-profiles.md', 'Manage user profiles'],
-                        ['manage-sessions.md', 'Manage active sessions'],
                         ['manage-groups.md', 'Manage groups'],
+                        ['manage-sessions.md', 'Manage active sessions'],
                         {
                             title: 'Manage Attributes and Mappings',
                             prefix: 'attributes/',

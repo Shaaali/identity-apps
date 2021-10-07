@@ -1,6 +1,6 @@
 # Enable user attributes for OpenID Connect apps
 
-Asgardeo can share user attributes in the <a :href="$withBase('/guides/users/manage-user-profiles/')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with OpenID Connect applications. 
+Asgardeo can share user attributes in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with OpenID Connect applications. 
 
 ## Configure user attributes to share
 Follow the steps given below to configure the user attributes from the Asgardeo console to share it with the application.

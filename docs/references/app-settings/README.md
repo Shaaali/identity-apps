@@ -2,10 +2,11 @@
 breadcrumb: false
 prev: false
 next: false
-pageClass: app-configs-index
+search: false
+pageClass: item-index-page
 heading: App Configurations
 subHeading: Configure the OpenID connect or SAML protocol related settings of your application in Asgardeo
-appConfigs:
+items:
     - name: OIDC
       icon: images/technologies/oidc-idp-illustration.png
       path: /references/app-settings/oidc-settings-for-app/
@@ -18,4 +19,4 @@ appConfigs:
 
 # App Configurations
 
-<AppConfigsOverview/>
+<CardView/>
