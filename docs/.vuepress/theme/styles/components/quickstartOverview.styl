@@ -2,17 +2,18 @@
   display block
   max-width 100%
   min-height 100vh - $navbarHeight
-  padding 0 2rem 0
+  padding 0
   margin 0 auto 0
-  background var(--sdk-bgcolor)
+  background var(--bgcolor)
 
   @media (max-width $MQMobile)
     padding 0
   
   .page
-    background var(--sdk-bgcolor)
+    background var(--bgcolor)
     margin-top -15px
     padding-right 0 !important
+    padding-left 20rem
 
     @media (max-width $MQMobile)
       margin-top 0
@@ -25,7 +26,7 @@
     text-align center
     padding-top 1rem
 
-    h1:first-child
+    h2:first-child
       padding-top 5rem !important
       margin-bottom 1rem !important
 
@@ -43,8 +44,8 @@
     flex 1 1 15%
     min-width 139px
     max-width 140px
-    margin 1.5em
-    background-color var(--sdk-card-color)
+    margin 1em
+    background-color var(--bgcolor-light)
     border-radius 6px
     padding 1em
     transition all 0.3s
@@ -58,10 +59,10 @@
       color var(--text-color) !important
   
   .tech-name
-    padding-top 30px
+    padding-top 25px
     display block
-    font-size 18px
-    font-weight 600
+    font-size 16px
+    font-weight 500
     margin 0
     text-decoration none
     color var(--text-color)
@@ -71,7 +72,7 @@
       pointer-events none !important
 
     img.tech-icon
-      height 80px
+      height 60px
       width auto
       border none
       cursor: pointer !important
@@ -132,7 +133,7 @@
     padding 10px 10px 10px 35px
     border-radius 6px
     width 200px
-    background var(--sdk-card-color) url(/assets/img/search.83621669.svg) 10px 12px no-repeat
+    background var(--bgcolor-light) url(/asgardeo/docs/assets/img/search.83621669.svg) 10px 12px no-repeat
     transition 0.3s
     border 1px solid transparent
     color var(--text-color-light)

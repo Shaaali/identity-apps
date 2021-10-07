@@ -3,7 +3,7 @@
   <main class="quickstarts-page" ref="qsPage">
     <MyTransition :delay="0.01">
         <header class="title-container">
-          <h1 v-text="$frontmatter.heading"></h1>
+          <h2 v-text="$frontmatter.heading"></h2>
           <p class="description" v-text="$frontmatter.subHeading"></p>
         </header>
     </MyTransition>
@@ -13,7 +13,7 @@
       </div>
     </MyTransition>
     <MyTransition :delay="0.01">
-      <transition-group class="tech-container" name="cardAnim" mode="out-in">
+      <transition-group v-if="getQuickstarts.length > 0" class="tech-container" name="cardAnim" mode="out-in">
         <QuickstartItemCard
           v-for="technology in getQuickstarts"
           :key="technology.name"
@@ -22,6 +22,7 @@
           :qsPath="technology.path"
         ></QuickstartItemCard>
       </transition-group>
+      <h4 v-else class="tech-container" v-text="$frontmatter.searchEmptyText" name="cardAnim" mode="out-in"></h4>
     </MyTransition>
   </main>
 </template>

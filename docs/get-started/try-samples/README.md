@@ -1,18 +1,10 @@
-# Try a Sample App
-
-Pick a technology and try a sample application with Asgardeo login.
-
-- <a :href="$withBase('/get-started/try-samples/qsg-spa-angular/')">Angular</a>
-- <a :href="$withBase('/get-started/try-samples/qsg-spa-javascript/')">Javascript</a>
-- <a :href="$withBase('/get-started/try-samples/qsg-spa-react/')">React</a>
-- <a :href="$withBase('/get-started/try-samples/qsg-oidc-webapp-java-ee/')">Java EE - OIDC</a>
-- <a :href="$withBase('/get-started/try-samples/qsg-saml-webapp-java-ee/')">Java EE - SAML</a>
-
-<!--
+---
 sidebar: true
+breadcrumb: false
 pageClass: quickstarts-page
 heading: Try a Sample App
 subHeading: Pick a technology and try a sample application with Asgardeo login.
+searchEmptyText: Search does not match any existing samples.
 technologies:
   - icon: images/technologies/angular-logo.svg
     name: Angular
@@ -36,4 +28,4 @@ technologies:
 ---
 
 <QuickstartOverview/>
--->
+
