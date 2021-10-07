@@ -28,25 +28,47 @@ npm install @asgardeo/auth-angular --save
 ```
 <br>
 
-## Initialize the SDK
+## Configure the `AsgardeoAuthModule`
 
-Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations.
+Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations. This module will help you to easily integrate Asgardeo to your application.
+
+``` no-line-numbers
+import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
+```
 
 Provide the following values to the `forRoot()` function of `AsgardeoAuthModule` to get the SDK to work with your application:
- - **clientID** : This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.
- - **serverOrigin** : Asgardeo server host name along with your organization name
- - **signInRedirectURL** : This is the URL the app redirects to after logging in. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
- - **signOutRedirectURL** : This is the URL the app redirects to after logging out. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>clientID</code></td>
+    <td>This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.</td>
+  </tr>
+  <tr>
+    <td><code>serverOrigin</code></td>
+    <td>Asgardeo server host name along with your organization name.</td>
+  </tr>
+  <tr>
+    <td><code>signInRedirectURL</code></td>
+    <td>This is the URL the app redirects to after logging in. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
+  </tr>
+  <tr>
+    <td><code>signOutRedirectURL</code></td>
+    <td>This is the URL the app redirects to after logging out. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
+  </tr>
+</table>
+
+Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
 ```
-// app.module.ts
-// Import AsgardeoAuthModule and Provide Configuration Parameters.
+//app.module.ts
 
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { AppComponent } from "./app.component";
-
-// Import Auth Module
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
 import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
 
 @NgModule({
@@ -55,52 +77,45 @@ import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
     ],
     imports: [
         BrowserModule,
-
-        // Add the module as an import providing the configs (See API Docs)
         AsgardeoAuthModule.forRoot({
-            signInRedirectURL: "https://localhost:5000",
-            signOutRedirectURL: "https://localhost:5000",
-            clientID: "<client ID>",
-            serverOrigin: "https://api.asgardeo.io/t/<organization_name>"
+            signInRedirectURL: "https://localhost:4200",
+            signOutRedirectURL: "https://localhost:4200",
+            clientID: "<Client ID>",
+            serverOrigin: "https://dev.api.asgardeo.io/t/<organization_name>"
         })
     ],
-    providers: [],
-    bootstrap: [AppComponent]
-})      
+    providers: [
+        // Add your providers here.
+    ],
+    bootstrap: [ AppComponent ]
+}) 
 export class AppModule { }
 ```
 <br>
 
-## Add login
+## Use API
 
-Inject `AsgardeoAuthService` to your components to add login to your application. 
-Copy the code given below to your component and then call `handleSignIn()` twice from your login button. The first call will handle the authorization code flow and the second call, the token flow.
+Inject `AsgardeoAuthService` to your components to access the session state which contains information such as the email address of the authenticated user and the methods that are required for implementing authentication. 
 
-See [SignIn api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signin) for the advanced usages.
+Initially import the `AsgardeoAuthService` module from `@asgardeo/auth-angular` to your component.
 
-```
-// app.component.ts
-import { Component } from "@angular/core";
+``` no-line-numbers
 import { AsgardeoAuthService } from "@asgardeo/auth-angular";
-
-@Component({
-    selector: "app-root",
-    templateUrl: "./app.component.html",
-    styleUrls: ["./app.component.css"]
-})
-export class AppComponent implements OnInit {
-    
-    /*
-    * Use this function in a login button to simply sign-in.
-    */
-    handleSignIn() {
-        this.auth.signIn();
-    }
-    
-}
 ```
 
-## Get access token
+The `AsgardeoAuthService` should be injected inside the constructor as shown below: 
+
+``` no-line-numbers
+constructor(public auth: AsgardeoAuthService) { }
+```
+### Add login
+The ```signIn()``` method from `AsgardeoAuthService` can be used to easily implement a login button in your application.
+
+``` no-line-numbers
+<button (click)="auth.signIn()">Login</button>
+```
+
+### Get access token
 
 Once the user is logged in with Asgardeo, the application can get the access token issued by Asgardeo.
 
@@ -118,7 +133,7 @@ getAccessToken() {
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
-## Get decoded ID token
+### Get decoded ID token
 
 Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
@@ -180,7 +195,7 @@ From this `decodedIdToken` object, you can get,
 
 You can loop through the `decodedIdToken` object and get the other claims as well.
 
-## Get user information
+### Get user information
 
 Apart from adding login and logout to your application, you can also get the user information from the Asgardeo SDK. 
 
@@ -231,17 +246,47 @@ From this `userinfoResponse` object, you can loop through and get the required u
    </tbody>
 </table>
 
-## Add logout
+### Add logout
+Now you have logged in to your application and obtained some user information. You need a way to log out of your application and remove the user session from Asgardeo as well.
 
-Now you have logged in to your application and obtained some user information. You need a way to log out of your application and remove the user session from Asgardeo as well. 
+Logout can easily be implemented by calling the ```signOut()``` method from `AsgardeoAuthService`.
 
-By calling `handleSignOut()` in your logout button, the user can log out out from the application. 
-
-Check [signout api reference](https://github.com/asgardeo/asgardeo-auth-angular-sdk#signout) for advanced usages:
-
+``` no-line-numbers
+<button (click)="auth.signOut()">Logout</button>
 ```
-// Use this function in a logout button to simply sign-out.
-  handleSignOut(): void {
-    this.auth.signOut();
-  }
+
+
+### Sample code 
+The following code snippet demonstrates the usage of the ``state$`` observable together with other APIs exposed via ``AsgardeoAuthService``.
 ```
+//app.component.ts
+
+import { Component } from '@angular/core';
+import { AsgardeoAuthService } from "@asgardeo/auth-angular";
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div>
+      <ng-container *ngIf="(auth.state$ | async)?.isAuthenticated; else unauthenticatedView">
+        <ul>
+          <li>{{ (auth.state$ | async)?.username }}</li>
+        </ul>
+
+        <button button (click)="auth.signOut()">Logout</button>
+      </ng-container>
+
+      <ng-template #unauthenticatedView>
+        <button (click)="auth.signIn()">Login</button>
+      </ng-template>
+    </div>
+  `,
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  constructor(public auth: AsgardeoAuthService) { }
+}
+```
+
+## Add Routing
+If your application needs routing, the SDK also provides a router guard called `AsgardeoAuthGuard` which is implemented with ```CanActivate``` interface from ```@angular/router```.
