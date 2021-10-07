@@ -4,10 +4,11 @@ This guide walks you through the process of managing a customer account. An owne
 
 ## Onboard a customer
 There are two ways to onboard a customer:
-- The user can self-register via My Account.
-- An admin can invite the customer. 
+- The user can self-register via My Account or a business application if **Self-Registration** is enabled in the organization. Learn about <a :href="$withBase('/guides/user-self-service/self-register/')">customer self-registration</a>.
+- An admin can invite the customer.
 
 Let's look at how admins can onboard customers from the Asgardeo console.
+
 1. On the Asgardeo console, click **Manage > Users**.
 2. Click  **New User** and select **Customer** from the list.
 3. Provide the following details:
@@ -37,12 +38,59 @@ To assign users to groups:
 3. Go to **Groups** and assign groups.
     <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" alt="assign-groups">
 
+## Manage the customer's profile
+
+A user profile consists of user attributes that represent the details of the user such as username, email address, contact information, other custom attributes, etc. 
+
+::: info
+Administrators in the organization can configure the list of attributes that should be available in a user profile. See <a :href="$withBase('/guides/users/attributes/manage-attributes/')">Manage attributes</a> for details.
+:::
+ 
+### View profile details
+
+Administrators can view the user profile of any user as follows:
+
+1. On the Asgardeo console, click **Manage > Users**.
+2. Select the user to view the profile.
+
+   <img :src="$withBase('/assets/img/guides/users/update-user-profile.png')" alt="update-user-profile">
+
+### Update the profile
+
+An administrator can update the user profile of a <a :href="$withBase('/guides/users/manage-customers/')">customer</a> via the Asgardeo console.
+
+To update the user profile:
+
+1. On the Asgardeo console, click **Manage > Users**.
+2. Select the customer account and click **Edit**.
+3. Update the information on the user profile.
+
+   <img :src="$withBase('/assets/img/guides/users/update-user-profile.png')" alt="update-user-profile">
+
+4. Click **Update** to save.
+
+## Reset the customer's password
+
+Administrators can reset a customer's password or initiate the password reset process from the Asgardeo console.
+
+To reset the password:
+
+1. Click **Reset Password** at the bottom of the customer's profile.
+  <img :src="$withBase('/assets/img/guides/users/reset-password.png')" alt="Reset User Password">
+2. Select a method to reset the user password:     
+   - **Invite user to set their own password:**  
+    If this option is selected, a password reset request can be sent to the customer via email. The customer can then use the instructions in the email to reset the password.  
+   - **Set a temporary password for the user:**  
+   If this option is selected, the owner/collaborator can set a temporary password for the customer.
+   <img :src="$withBase('/assets/img/guides/users/reset-password-of-user.png')" alt="Reset password" width="500">
+3. Click **Reset Password**.
+
 ## Delete a customer
 A customer user account can be deleted by admins. Once an account is deleted, the action is irreversible. 
 
 To delete a customer account:
-1. On the Asgardeo Console, click **Manage > Users**.
-2. View all the users.
-3. Click **Delete** for the user that should be removed.
-4. Enable the checkbox to confirm your action.     
-5. Click **Confirm**.
+1. On the Asgardeo Console, click **Manage > Users** and select the customer.
+2. Click **Delete User** at the button of the customer's profile.
+  <img :src="$withBase('/assets/img/guides/users/delete-user.png')" alt="Delete user">
+3. Enable the checkbox to confirm your action. 
+4. Click **Confirm**. 
