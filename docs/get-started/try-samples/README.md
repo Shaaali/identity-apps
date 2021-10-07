@@ -1,11 +1,12 @@
 ---
 sidebar: true
 breadcrumb: false
-pageClass: quickstarts-page
+search: true
+pageClass: item-index-page
 heading: Try a Sample App
 subHeading: Pick a technology and try a sample application with Asgardeo login.
 searchEmptyText: Search does not match any existing samples.
-technologies:
+items:
   - icon: images/technologies/angular-logo.svg
     name: Angular
     path: /get-started/try-samples/qsg-spa-angular/
@@ -27,5 +28,5 @@ technologies:
     path: /get-started/try-samples/qsg-saml-webapp-java-ee/
 ---
 
-<QuickstartOverview/>
+<CardView/>
 
