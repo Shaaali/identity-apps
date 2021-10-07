@@ -67,9 +67,6 @@ features:
       
       - name: "Define a custom authentication flow"
         link: /guides/authentication/conditional-auth/write-your-first-script/
-      
-      - name: "Based on API calls"
-        link: /guides/authentication/conditional-auth/add-authentications-based-on-api-calls/
   
   - title: Users
     details: Manage different user profiles and enable users to manage their own profiles.
