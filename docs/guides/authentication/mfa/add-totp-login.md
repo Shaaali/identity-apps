@@ -42,7 +42,7 @@ Users can enroll for TOTP notification from the first login to the business appl
     ::: info
         This step is prompted only when you attempt to log in for the first time.
     :::
-    <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-totp.png')" alt="QR code for TOTP authenticator in Asgardeo" width="300">
+    <img :src="$withBase('/assets/img/guides/mfa/totp/scan-qr-code-totp.png')" alt="QR code for TOTP authenticator in Asgardeo" width="500">
 4. Check your authenticator for which you used to scan the code.
     <img :src="$withBase('/assets/img/guides/mfa/totp/google-authenticator.png')" alt="OTP token from the authenticator" width="300">
 5. Enter the OTP by checking the authenticator app.
