@@ -62,17 +62,14 @@ features:
     link: /guides/authentication/conditional-auth/
     icon: usersIcon
     subLinks:
-      - name: "Group-based"
-        link: /guides/authentication/conditional-auth/group-based-template/
+      - name: "Use a template"
+        link: /guides/authentication/conditional-auth/#script-templates/
       
-      - name: "IP-based"
-        link: /guides/authentication/conditional-auth/ip-based-template/
+      - name: "Define a custom authentication flow"
+        link: /guides/authentication/conditional-auth/write-your-first-script/
       
-      - name: "Device-based"
-        link: /guides/authentication/conditional-auth/new-device-based-template/
-      
-      - name: "User age-based"
-        link: /guides/authentication/conditional-auth/user-age-based-template/
+      - name: "Based on API calls"
+        link: /guides/authentication/conditional-auth/add-authentications-based-on-api-calls/
   
   - title: Users
     details: Manage different user profiles and enable users to manage their own profiles.
