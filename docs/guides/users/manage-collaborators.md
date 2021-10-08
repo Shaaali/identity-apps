@@ -15,7 +15,7 @@ To onboard a collaborator:
 1. On the Asgardeo console, click **Manage > Users**.
 2. Click **Manage > Users** on the Asgardeo console.
 3. Click  **New User** and select **Collaborator** from the list.
-4. Provide the Email address of the collaborator.
+4. Provide the email address of the collaborator.
 
     ::: warning
     This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
