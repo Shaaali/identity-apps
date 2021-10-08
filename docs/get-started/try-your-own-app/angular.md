@@ -49,7 +49,7 @@ Provide the following values to the `forRoot()` function of `AsgardeoAuthModule`
   </tr>
   <tr>
     <td><code>serverOrigin</code></td>
-    <td>Asgardeo server host name along with your organization name.</td>
+    <td>This is the Asgardeo server's host name along with your organization name.</td>
   </tr>
   <tr>
     <td><code>signInRedirectURL</code></td>
