@@ -93,7 +93,7 @@ export class AppModule { }
 ```
 <br>
 
-## Use API
+## Use the API
 
 Inject `AsgardeoAuthService` to your components to access the session state which contains information such as the email address of the authenticated user and the methods that are required for implementing authentication. 
 
