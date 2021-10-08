@@ -1,23 +1,29 @@
 # Manage collaborators
 
-This guide walks you through the steps of managing a collaborator account. An owner or another collaborator with an administrative role can manage collaborator accounts.
+This guide walks you through the steps of managing a collaborator account. If you are the owner or an existing collaborator in the organization, you can onboard new collaborators or delete existing collaborator accounts.
+
+::: info Info
+You cannot manage the user profiles of other collaborators or update their passwords from the Asgardeo console. Collaborators must <a :href="$withBase('/guides/your-asgardeo/asgardeo-self-service/#change-password')">manage their own profiles and passwords</a> using the self-service portal (My Account).
+:::
 
 ## Onboard a collaborator
 
 Admins can onboard a collaborator by sending an email invitation. 
 
-To onboard a collaborator via the [Asgardeo Console](https://console.asgardeo.io):
-1. Click **Manage > Users** on the Asgardeo Console.
-2. Click  **New User** and select **Collaborator** from the list.
-3. Provide the Email address of the collaborator.
+To onboard a collaborator:
+
+1. On the Asgardeo console, click **Manage > Users**.
+2. Click **Manage > Users** on the Asgardeo console.
+3. Click  **New User** and select **Collaborator** from the list.
+4. Provide the email address of the collaborator.
 
     ::: warning
     This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
     :::               
     <!--- **Role:** Select a role to assign to the collaborator. You can change this later.   
     <img :src="$withBase('/assets/img/guides/users/add-collaborator-account.png')" alt="Add collaborator user">-->
-4. Click **Invite**.
-5. The collaborator can access the Asgardeo console by accepting the invitation and setting a password for the new user account.
+5. Click **Invite**.
+6. The collaborator can access the Asgardeo console by accepting the invitation and setting a password for the new user account.
      
 <!-- ## Assign roles
 
@@ -37,7 +43,7 @@ For details on the available user roles and the permissions assigned to them, se
 A collaborator account can be deleted by admins. Once an account is deleted, the action is irreversible. 
 
 To delete a collaborator account:
-1. On the Asgardeo Console, click **Manage > Users**.
+1. On the Asgardeo console, click **Manage > Users**.
 2. Click **Delete** for the user you want to remove.
 3. Select the checkbox to confirm your action. 
-4. Click **Confirm**.     
+4. Click **Confirm**.   
