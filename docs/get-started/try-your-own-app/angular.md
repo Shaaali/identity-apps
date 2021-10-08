@@ -28,7 +28,7 @@ npm install @asgardeo/auth-angular --save
 ```
 <br>
 
-## Configure the `AsgardeoAuthModule`
+## Configure `AsgardeoAuthModule`
 
 Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations. This module will help you to easily integrate Asgardeo to your application.
 
