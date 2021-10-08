@@ -13,7 +13,7 @@ Admins can onboard a collaborator by sending an email invitation.
 To onboard a collaborator:
 
 1. On the Asgardeo console, click **Manage > Users**.
-2. Click **Manage > Users** on the Asgardeo Console.
+2. Click **Manage > Users** on the Asgardeo console.
 3. Click  **New User** and select **Collaborator** from the list.
 4. Provide the Email address of the collaborator.
 
