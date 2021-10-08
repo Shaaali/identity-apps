@@ -53,7 +53,7 @@ Provide the following values to the `forRoot()` function of `AsgardeoAuthModule`
   </tr>
   <tr>
     <td><code>signInRedirectURL</code></td>
-    <td>This is the URL the app redirects to after logging in. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
+    <td>This is the URL the app redirects to after user login. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
   </tr>
   <tr>
     <td><code>signOutRedirectURL</code></td>
