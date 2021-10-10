@@ -23,7 +23,7 @@ Asgardeo has some default settings for email OTP, which are sufficient for most 
 
 To update the default Email OTP settings:
 
-1. On the [Asgardeo console](https://console.asgardeo.io), go to **Connections > Email OTP** and click **Setup**.
+1. On the [Asgardeo console](https://console.asgardeo.io), go to **Connections > Email OTP** and click **Set up**.
 2. Update the following parameters in the **Settings** tab:
 
     <img :src="$withBase('/assets/img/guides/mfa/emailotp/setup-email-otp.png')" alt="Setup email OTP in Asgardeo">

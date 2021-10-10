@@ -98,5 +98,5 @@ Follow the steps given below.
 2. Try to log in with a user who belongs to the specified groups. This user will successfully log in to the application.
 3. Log out of the application.
 4. Log in again with a user who does not belong to the specified groups. The user will see the following error.
-    <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">
+    <img :src="$withBase('/assets/img/guides/conditional-auth/auth-failure.png')" alt="authentication failed">
 
