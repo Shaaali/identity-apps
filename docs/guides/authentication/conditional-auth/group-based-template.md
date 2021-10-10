@@ -92,4 +92,4 @@ Follow the steps given below.
    successfully signed in to the application.
 3. Log out of the application.
 4. Log in with a user who belongs to the `manager` or `employee` group or both. TOTP authentication is prompted.
-    <img :src="$withBase('/assets/img/guides/conditional-auth/totp-2fa.png')" alt="group-based-2fa-conditional-auth-totp-page">
+    <img :src="$withBase('/assets/img/guides/conditional-auth/enter-otp-token.png')" width="350" alt="group-based-2fa-conditional-auth-totp-page">

@@ -12,7 +12,7 @@ Let's look at how admins can onboard customers from the Asgardeo console.
 1. On the Asgardeo console, click **Manage > Users**.
 2. Click  **New User** and select **Customer** from the list.
 3. Provide the following details:
-    <img :src="$withBase('/assets/img/guides/users/add-customer-user-form.png')" alt="Add customer user">
+    <img :src="$withBase('/assets/img/guides/users/add-customer-user-form.png')" width="500" alt="Add customer user">
     - **Email (Username):** A unique email address to identify the user. 
         <br>
         ::: warning
@@ -36,7 +36,7 @@ To assign users to groups:
 1. On the Asgardeo console, click **Manage > Users**. 
 2. Click **Edit** for the user.
 3. Go to **Groups** and assign groups.
-    <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" alt="assign-groups">
+   <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" width="800" alt="Add customer user">
 
 ## Manage the customer's profile
 
@@ -53,7 +53,7 @@ Administrators can view the user profile of any user as follows:
 1. On the Asgardeo console, click **Manage > Users**.
 2. Select the user to view the profile.
 
-   <img :src="$withBase('/assets/img/guides/users/update-user-profile.png')" alt="update-user-profile">
+   <img :src="$withBase('/assets/img/guides/users/view-user-profile.png')" alt="update-user-profile">
 
 ### Update the profile
 
