@@ -38,7 +38,7 @@ Once you select the [required user attributes](#select-user-attributes), they ap
 
 From the attributes that are listed, you can select the **Mandatory** attributes. 
 
-<img :src="$withBase('/assets/img/guides/applications/attributes/saml/add-mandatory-user-attributes.png')" alt="Add mandatory user attributes in Asgardeo">
+<img :src="$withBase('/assets/img/guides/applications/attributes/saml/add-mandatory-user-attributes.png')" width="800" alt="Add mandatory user attributes in Asgardeo">
 
 
 <br>
@@ -51,12 +51,11 @@ By default, Asgardeo shares **username** as the subject. Asgardeo provides the c
 To define some other attributes as the subject:
 1. [Select it as a user attribute](#select-user-attributes). 
 2. Go to the **Subject** section under **User Attributes**.
-3. View all the user attributes that are selected from the **Subject attribute** list. Select one attribute that you need to have as the subject attribute.
-    <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
-4. Click **Update**.
 
-<br>
-<br>
+   <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
+
+3. View all the user attributes that are selected from the **Subject attribute** list. Select one attribute that you need to have as the subject attribute.
+4. Click **Update**.
 
 ### Disable the consent screen
 
@@ -74,10 +73,6 @@ Once you have configured the user attributes that are required for your applicat
 ### Asgardeo gets consent from user
  
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/get-user-consent.md'/>
-
-<img :src="$withBase('/assets/img/guides/applications/attributes/saml/provide-consent.png')" alt="Provides consent for attributes in Asgardeo">
-
-<br>
 
 ### Asgardeo shares user attributes with apps
 
