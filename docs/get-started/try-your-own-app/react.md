@@ -25,109 +25,98 @@ Run the following command to install the React SDK and the necessary dependencie
 npm install @asgardeo/auth-react react-router-dom --save
 ```
 
-## Initialize the SDK
+## Configure `AuthProvider`
 
 SDK uses [React Context API](https://reactjs.org/docs/context.html) under the hood to share the data between components. 
 You can easily integrate Asgardeo in your application by using `AuthProvider` as the wrapper element to inject configurations.
 
-`AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitary input that can be used to initialize the SDK instance. Provide the configurations below to get the SDK to work with your application. 
- - **clientID** : This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.
- - **serverOrigin** : Asgardeo server host name along with your organization name
- - **signInRedirectURL** : This is the URL to which users should be redirected after login. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
- - **signOutRedirectURL** : This is the URL to which users should be redirected after logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.
+``` no-line-number
+import { AuthProvider } from "@asgardeo/auth-react";
+```
+`AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitrary input that can be used to initialize the SDK instance. Provide the configurations below to get the SDK to work with your application. 
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>clientID</code></td>
+    <td>This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.</td>
+  </tr>
+  <tr>
+    <td><code>serverOrigin</code></td>
+    <td>This is the Asgardeo server's host name along with your organization name.</td>
+  </tr>
+  <tr>
+    <td><code>signInRedirectURL</code></td>
+    <td>This is the URL the app redirects to after user login. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
+  </tr>
+  <tr>
+    <td><code>signOutRedirectURL</code></td>
+    <td>This is the URL the app redirects to after user logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
+  </tr>
+</table>
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
 ```
-import { AuthProvider } from "@asgardeo/auth-react";
 import React from "react";
 import { render } from "react-dom";
-import HomePage from "./pages/home";
+import { AuthProvider } from "@asgardeo/auth-react";
 
-const App = () => (
+const Index = () => (
     <AuthProvider
         config={ {
-            signInRedirectURL: "https://localhost:5000",
-            signOutRedirectURL: "https://localhost:5000",
-            clientID: "<client ID>",
-            serverOrigin: "https://api.asgardeo.io/t/<organization_name>"
+            signInRedirectURL: "http://localhost:5000",
+            signOutRedirectURL: "http://localhost:5000",
+            clientID: "<Client_ID>",
+            serverOrigin: "https://dev.api.asgardeo.io/t/<Organization_name>"
         } }
     >
-        { /* Use your own component tree here instead of HomePage.  */ }
-        <HomePage />
+        { /* Rest of your application.  */ }
     </AuthProvider>
 );
 
-render((<App />), document.getElementById("root"));
+render((<Index />), document.getElementById("root"));
 ```
+## Use `useAuthContext`
+The ```useAuthContext()``` hook provided by the SDK could be used to access the session state that contains information such as the email address of the authenticated user and the methods that are required for implementing authentication.
+Use the below code segment to import the ```useAuthContext()``` hook from ```@asgardeo/auth-react```.
 
-## Add login
+``` no-line-numbers
+import { useAuthContext } from "@asgardeo/auth-react";
+```
+And then inside your components, you can access the context as follows.  
 
-The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button**
-using the `signIn()` function in the `useAuthContext` hook. Call this `signIn` method twice from your login button.
+``` no-line-numbers
+const { isLoading, state, signIn, signOut } = useAuthContext();
+```
+The above code segment shows a sample scenario where the the react app uses the ```isLoading```, ```state```, ```signIn``` and ```signOut``` functions. This section should be changed accordingly based on the functions that your react app uses.
+
+## Use the API
+
+You can now start using the SDK's API to implement the required authentication logic. Follow the instructions given below to implement each use case.
+
+### Add Login
+The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button** using the `signIn()` function in the `useContext` hook. 
 
 This `signIn()` method is used authenticate the users and get authorization code and access token.
-
-
-```
-import { useAuthContext } from "@asgardeo/auth-react";
-import React from "react";
-
-const LandingPage = () => {
-
-    // Use useAuthContext() custom react hook to access auth state and function.
-    const { signIn} = useAuthContext();
-
-    // Function for handling signin.
-    function handleSignIn(){
-        signIn();
-    }
-
-    return (
-        <div>
-            // Call handleSignIn method from a button click.
-            <button onClick={ () => handleSignIn() }>Login</button>
-        </div>
-
-    );
-};
-
-export default LandingPage;
+``` no-line-numbers
+<button onClick={ () => signIn() }>Login</button>
 ```
 
-## Get access token
+### Get access token
 
 Add the following code in your application. This enables the application to get the access token issued by Asgardeo.
 
-```
-import { useAuthContext } from "@asgardeo/auth-react";
-import React from "react";
+``` 
+const { getAccessToken } = useAuthContext();
 
-const LandingPage = () => {
-
-    // Use useAuthContext() custom react hook to access auth state and function.
-    const { signIn, getAccessToken} = useAuthContext();
-
-    // Function for handling signin.
-    function handleSignIn(){
-            signIn();
+const obtainAccessToken = () => {
+     getAccessToken().then((accessToken) => {
+        console.log(accessToken);
     }
-      
-    // Function for obtaining access token.  
-    function obtainAccessToken(){
-        getAccessToken().then((accessToken) => {
-            console.log(accessToken);
-        });
-    }
-
-    return (
-        <div>
-            <button onClick={ () => handleSignIn() }>Login</button>
-            <button onClick={ () => obtainAccessToken() }>Get token</button>
-        </div>
-
-    );
-};
+}
 ```
 
 **Sample access token** :
@@ -136,7 +125,7 @@ const LandingPage = () => {
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
-## Get decoded ID token
+### Get decoded ID token
 
 Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
@@ -145,34 +134,13 @@ SDK provides the capability to decode the token, and you can obtain claims from 
 Copy `obtainDecodedIDtoken` and call it from a button click as shown below.
 
 ```
-import { useAuthContext } from "@asgardeo/auth-react";
-import React from "react";
+const { getDecodedIDToken } = useAuthContext();
 
-const LandingPage = () => {
-
-    // Use useAuthContext() custom react hook to access auth state and function.
-    const { signIn, getDecodedIDToken } = useAuthContext();
-
-    // Function for handling signin.
-    function handleSignIn(){
-            signIn();
-    }
-    
-    // Function for obtaining decoded ID token.
-    function obtainDecodedIDtoken() {
-        getDecodedIDToken().then((decodedIDToken) => {
-            console.log(decodedIDToken);
-        })
-     }
- 
-    return (
-        <div>
-            <button onClick={ () => handleSignIn() }>Login</button>
-            <button onClick={ () => obtainDecodedIDtoken() }>Get Decoded token</button>
-        </div>
-
-    );
-};
+function obtainDecodedIDtoken() {
+    getDecodedIDToken().then((decodedIDToken) => {
+        console.log(decodedIDToken);
+    })
+}
 ```
 
 **Sample decoded ID token** object is given below:
@@ -221,7 +189,7 @@ You can loop through the `decodedIDToken` object and get the other claims as wel
 
 <br>
 
-## Get user information
+### Get user information
 
 In addition to implementing login and logout, your application can also use the SDK to get user information.
  
@@ -232,41 +200,20 @@ In addition to implementing login and logout, your application can also use the 
 To get the basic user information from SDK, copy the following script and call the `obtainUserInfo()` from a button as shown below. 
 
 ```
-import { useAuthContext } from "@asgardeo/auth-react";
-import React from "react";
-
-const LandingPage = () => {
-
-    // Use useAuthContext() custom react hook to access auth state and function.
-    const {signIn, getBasicUserInfo } = useAuthContext();
-
-    // Function for handling signin.
-    function handleSignIn(){
-            signIn();
-    }
-
-    // Function for obtaining basic user information.  
-    function obtainUserInfo() {
-        console.log("Decoded ID token");
-        getBasicUserInfo().then((basicUserDetails) => {
-            console.log(basicUserDetails);
-            console.log(basicUserDetails.username);
-        })
-    }
-
-    return (
-        <div>
-            <button onClick={ () => handleSignIn() }>Login</button>
-            <button onClick={ () => obtainUserInfo() }>Get User info</button>
-        </div>
-
-    );
-};
+const { getBasicUserInfo } = useAuthContext();
+  
+const obtainUserInfo() => {
+    console.log("Decoded ID token");
+    getBasicUserInfo().then((basicUserDetails) => {
+        console.log(basicUserDetails);
+        console.log(basicUserDetails.username);
+    })
+}
 ```
 
 **Sample basic user details**(`basicUserDetails`) object is below:
 
-```json no-line-numbers
+```no-line-numbers
 {
     "allowedScopes": "openid",
     "sessionState": "eb0e12f9a113f49ffef887a464c7980d84bb5b11dfeb1774309aee9b88c83c21.8-LXzzHCUSOOa2GeH-LFfA",
@@ -297,38 +244,46 @@ You can loop through the user info response(`basicUserDetails`), and get the fol
 
 <br>
 
-## Add logout
+### Add logout
 
 In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
 
-Call `handleSignOut()` from your logout button to enable app users to log out as shown below.
-
+``` no-line-numbers
+<button onClick={ () => signOut() }>Logout</button>
 ```
-import { useAuthContext } from "@asgardeo/auth-react";
+
+### Sample Code
+The following code snippet demonstrates the usage of the ``state`` object together with other methods from the context.
+
+``` 
 import React from "react";
+import { useAuthContext } from "@asgardeo/auth-react";
 
-const LandingPage = () => {
+function App() {
 
-    // Use useAuthContext() custom react hook to access auth state and function.
-    const { signIn, signOut } = useAuthContext();
+  const { state, signIn, signOut } = useAuthContext();
 
-    // Function for handling signin.
-    function handleSignIn(){
-            signIn();
-    }
-      
-    // Function for handling signout.
-    function handleSignOut() {
-        console.log("Signing out the user");
-        signOut()
-    }
+  return (
+    <div className="App">
+      {
+        state.isAuthenticated
+          ? (
+            <div>
+              <ul>
+                <li>{state.username}</li>
+              </ul>
 
-    return (
-        <div>       
-            <button onClick={ () => handleSignIn() }>Login</button>
-            <button onClick={ () => handleSignOut() }>Logout</button>
-        </div>
+              <button onClick={() => signOut()}>Logout</button>
+            </div>
+          )
+          : <button onClick={() => signIn()}>Login</button>
+      }
+    </div>
+  );
+}
 
-    );
-};
+export default App;
 ```
+
+## Add Routing
+If your application needs routing, the SDK provides a component called ``SecureRoute`` which is implemented with ``react-router-dom``. This component allows you to easily secure your routes with Asgardeo.
