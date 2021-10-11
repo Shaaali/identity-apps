@@ -17,7 +17,7 @@ You can access the My Account portal using the following URL:
 You can also switch to My Account from the console as follows:
 
 1. On the [Asgardeo console](https://console.asgardeo.io), click **Apps** next to your profile icon.
-    <img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/switch-to-myaccount.png')" alt="Switch to MyAccount from Console">
+    <img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/switch-to-myaccount.png')" width="500" alt="Switch to MyAccount from Console">
 2. Select **My Account** to automatically sign in to your My Account portal.
 
 ## Update profile information
