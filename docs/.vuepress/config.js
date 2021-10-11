@@ -76,7 +76,7 @@ module.exports = config({
         darkmode: 'switch',
         footer: {
             display: true,
-            content: 'Asgardeo Docs | © 2021 WSO2'
+            content: '© ' + new Date().getFullYear() + ' WSO2 Inc. All Rights Reserved'
         },
         git: {
             contributor:false
