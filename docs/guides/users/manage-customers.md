@@ -12,7 +12,7 @@ Let's look at how admins can onboard customers from the Asgardeo console.
 1. On the Asgardeo console, click **Manage > Users**.
 2. Click  **New User** and select **Customer** from the list.
 3. Provide the following details:
-    <img :src="$withBase('/assets/img/guides/users/add-customer-user-form.png')" alt="Add customer user">
+    <img :src="$withBase('/assets/img/guides/users/add-customer-user-form.png')" width="500" alt="Add customer user">
     - **Email (Username):** A unique email address to identify the user. 
         <br>
         ::: warning
@@ -33,10 +33,10 @@ Let's look at how admins can onboard customers from the Asgardeo console.
 A user can be assigned to different <a :href="$withBase('/guides/users/manage-groups/')">groups</a> in the organization. Based on the assigned groups, admins can restrict customer users' access to resources.
 
 To assign users to groups: 
-1. On the Asgardeo Console, click **Manage > Users**. 
+1. On the Asgardeo console, click **Manage > Users**. 
 2. Click **Edit** for the user.
 3. Go to **Groups** and assign groups.
-    <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" alt="assign-groups">
+   <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" width="800" alt="Add customer user">
 
 ## Manage the customer's profile
 
@@ -53,7 +53,7 @@ Administrators can view the user profile of any user as follows:
 1. On the Asgardeo console, click **Manage > Users**.
 2. Select the user to view the profile.
 
-   <img :src="$withBase('/assets/img/guides/users/update-user-profile.png')" alt="update-user-profile">
+   <img :src="$withBase('/assets/img/guides/users/view-user-profile.png')" alt="update-user-profile">
 
 ### Update the profile
 
@@ -75,7 +75,7 @@ Administrators can reset a customer's password or initiate the password reset pr
 
 To reset the password:
 
-1. Click **Reset Password** at the bottom of the customer's profile.
+1. Click **Reset password** at the bottom of the customer's profile.
   <img :src="$withBase('/assets/img/guides/users/reset-password.png')" alt="Reset User Password">
 2. Select a method to reset the user password:     
    - **Invite user to set their own password:**  
@@ -85,12 +85,28 @@ To reset the password:
    <img :src="$withBase('/assets/img/guides/users/reset-password-of-user.png')" alt="Reset password" width="500">
 3. Click **Reset Password**.
 
+## Lock a customer account
+
+When you lock a customer's user account, the user will no longer be able to access any business applications or the self-service portal (My Account). 
+
+To lock the customer account:
+
+1. On the Asgardeo console, click **Manage > Users** and select the customer.
+2. Enable the **Lock user** toggle at the bottom of the customer's profile.
+  <img :src="$withBase('/assets/img/guides/users/lock-user.png')" alt="Lock user">
+3. Enable the checkbox to confirm your action. 
+4. Click **Confirm**. 
+
+::: info
+You can unlock the user account again using the **Lock user** toggle explained above.
+:::
+
 ## Delete a customer
 A customer user account can be deleted by admins. Once an account is deleted, the action is irreversible. 
 
 To delete a customer account:
-1. On the Asgardeo Console, click **Manage > Users** and select the customer.
-2. Click **Delete User** at the button of the customer's profile.
+1. On the Asgardeo console, click **Manage > Users** and select the customer.
+2. Click **Delete User** at the bottom of the customer's profile.
   <img :src="$withBase('/assets/img/guides/users/delete-user.png')" alt="Delete user">
 3. Enable the checkbox to confirm your action. 
 4. Click **Confirm**. 

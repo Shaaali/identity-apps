@@ -12,7 +12,7 @@ To configure login attempts security:
 3. Turn on **Enabled** to enable this configuration.  
    <img :src="$withBase('/assets/img/guides/organization/account-security/login-attempts-security/disable-login-attempts-security.png')" alt="Enable login attempts security">
 4. Configure the settings below if you want to change how login attempts security works by default.
-   <img :src="$withBase('/assets/img/guides/organization/account-security/login-attempts-security/configure-login-attempts-security.png')" alt="View account security options">
+   <img :src="$withBase('/assets/img/guides/organization/account-security/login-attempts-security/configure-login-attempts-security.png')" width="800" alt="View account security options">
    <table>
       <tbody>
          <tr>

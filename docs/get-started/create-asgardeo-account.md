@@ -10,7 +10,7 @@ Let's get you started with Asgardeo!
 
 Let's sign up and create an account:
 
-1. [Sign up](https://wso2.com/asgardeo) for an Asgardeo account. 
+1. [Sign up](https://wso2.com/asgardeo/) for an Asgardeo account. 
     
     You will receive an invitation mail to your email address. 
 

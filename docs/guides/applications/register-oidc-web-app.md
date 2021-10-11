@@ -8,15 +8,15 @@ Follow the instructions given below.
 
 To register the app:
 
-1. On the [Asgardeo console](https://console.asgardeo.io/login), click **Develop > Applications**.
-
-    <img :src="$withBase('/assets/img/guides/applications/select-app-type.png')" alt="Select app type in Asgardeo">
+1. On the [Asgardeo console](https://console.asgardeo.io/login), go to **Develop > Applications**.
 
 2. Click **New Application** and select **Traditional Web Application** to open the following:
 
-    <img :src="$withBase('/assets/img/guides/applications/create-new-web-app.png')" alt="Create a new web app">
+    <img :src="$withBase('/assets/img/guides/applications/select-app-type.png')" alt="Select app type in Asgardeo">
 
 3. Enter the following details:
+
+    <img :src="$withBase('/assets/img/guides/applications/create-new-web-app.png')" alt="Create a new web app">
 
     <table>
         <tr>
