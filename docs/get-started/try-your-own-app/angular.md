@@ -30,7 +30,7 @@ npm install @asgardeo/auth-angular --save
 
 ## Configure `AsgardeoAuthModule`
 
-Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations. This module will help you to easily integrate Asgardeo to your application.
+Use the following code within your root component to initialize `AsgardeoAuthModule` for your application by providing the configurations.
 
 ``` no-line-numbers
 import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
@@ -93,9 +93,8 @@ export class AppModule { }
 ```
 <br>
 
-## Use the API
-
-Inject `AsgardeoAuthService` to your components to access the session state which contains information such as the email address of the authenticated user and the methods that are required for implementing authentication. 
+## Inject `AsgardeoAuthService`
+You can use `AsgardeoAuthService` in your components to access the session state which contains information such as the email address of the authenticated user and the methods that are required for implementing authentication. 
 
 Initially import the `AsgardeoAuthService` module from `@asgardeo/auth-angular` to your component.
 
@@ -108,6 +107,10 @@ The `AsgardeoAuthService` should be injected inside the constructor as shown bel
 ``` no-line-numbers
 constructor(public auth: AsgardeoAuthService) { }
 ```
+
+## Use the API
+You can now start using the SDK's API to implement the required authentication logic. Follow the instructions given below to implement each use case.
+
 ### Add login
 The ```signIn()``` method from `AsgardeoAuthService` can be used to easily implement a login button in your application.
 
