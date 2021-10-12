@@ -1,4 +1,4 @@
-# Add sign-in-option-based authentication
+# Add MFA based on user sign-in option
 
 You can enable a more secure sign-in flow (based on the user's sign-in method) by applying the **Sign-In-Option-Based** conditional authentication template to your application.
 

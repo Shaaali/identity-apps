@@ -1,4 +1,4 @@
-# Add IP-based authentication
+# Add MFA based on IP address
 
 You can secure the login flow based on the user's IP address by applying the **IP-Based** conditional authentication template to your application. This template prompts two-factor authentication for users who log in from outside a given IP range (such as external networks or other geographical locations).
 
