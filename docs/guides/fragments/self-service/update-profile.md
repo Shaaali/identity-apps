@@ -1,4 +1,8 @@
-The user details displayed in a user's profile corresponds to user attributes that are enabled for the organization. Administrators in the organization can configure the list of attributes that should be available in a user profile. See <a :href="$withBase('/guides/users/attributes/manage-attributes/')">Manage attributes</a> for details.
+The user details displayed in a user's profile corresponds to user attributes that are enabled for the organization. 
+
+::: info
+Administrators in the organization can configure the list of attributes that should be available in a user profile. See <a :href="$withBase('/guides/users/attributes/manage-attributes/')">Manage attributes</a> for details.
+:::
 
 To update profile information via My Account, the account owner should follow these steps.
 

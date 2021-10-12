@@ -1,11 +1,12 @@
 ---
-breadcrumb: true
+breadcrumb: false
 prev: false
 next: false
-pageClass: user-attributes-index
+search: false
+pageClass: item-index-page
 heading: Enable User Attributes
 subHeading: Share user attributes in the user profile with
-userAttributes:
+items:
     - name: OIDC Apps
       icon: images/technologies/oidc-idp-illustration.png
       path: /guides/authentication/user-attributes/enable-attributes-for-oidc-app/
@@ -18,4 +19,4 @@ userAttributes:
 
 # Enable User Attributes
 
-<UserAttributesOverview/>
+<CardView/>

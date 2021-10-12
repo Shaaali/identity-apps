@@ -11,45 +11,45 @@ getStartedLink: /get-started/
 
 features:
   - title: Login
-    details: Register your applications and enable sign-in.
+    details: Enable secure login for your applications using Asgardeo as the identity provider.
     link: /guides/authentication/add-login-to-apps/
-    icon: padlockIcon
+#    icon: padlockIcon
     subLinks:
-      - name: "For SPAs"
+      - name: "For Single Page Applications"
         link: /guides/authentication/add-login-to-single-page-app
           
-      - name: "For Web Apps"
+      - name: "For Web Applications"
         link: /guides/authentication/add-login-to-web-app/
 
   - title: Social Login
-    details: Integrate your applications with a social identity provider.
+    details: Enable your application users to login with their existing social identities.
     link: /guides/authentication/social-login/
-    icon: federatedLoginIcon
+#    icon: federatedLoginIcon
     subLinks:
-      - name: "Facebook"
+      - name: "Facebook Login"
         link: /guides/authentication/social-login/add-facebook-login/
 
-      - name: "Github"
+      - name: "Github Login"
         link: /guides/authentication/social-login/add-github-login/
 
-      - name: "Google"
+      - name: "Google Login"
         link: /guides/authentication/social-login/add-google-login/
 
   - title: Enterprise IDPs
-    details: Secure your logins using standard identity protocols. 
+    details: Enable your application users to login using a standard-based identity provider. 
     link: /guides/authentication/enterprise-login/
-    icon: addAuthnIcon
+#    icon: addAuthnIcon
     subLinks:
-      - name: "Using SAML"
+      - name: "SAML-based Identity Providers"
         link: /guides/authentication/enterprise-login/add-saml-idp-login/
 
-      - name: "Using OIDC"
+      - name: "OIDC-based Identity Providers"
         link: /guides/authentication/enterprise-login/add-oidc-idp-login/
 
   - title: Multi-factor Authentication
-    details: Strengthen your authentication flow.
+    details: Add strong authentication to your application by enabling multiple authentication factors in the login flow.
     link: /guides/authentication/mfa/
-    icon: usersIcon
+ #   icon: usersIcon
     subLinks:
       - name: "TOTP"
         link: /guides/authentication/mfa/add-totp-login/
@@ -58,26 +58,20 @@ features:
         link: /guides/authentication/mfa/add-emailotp-login/
 
   - title: Conditional Access
-    details: Customize your authentication flow with conditional scripts.
+    details: Add strong authentication to your application by customizing the login flow using a script.
     link: /guides/authentication/conditional-auth/
-    icon: usersIcon
+#    icon: usersIcon
     subLinks:
-      - name: "Group-based"
-        link: /guides/authentication/conditional-auth/group-based-template/
+      - name: "Use a template"
+        link: /guides/authentication/conditional-auth/#script-templates/
       
-      - name: "IP-based"
-        link: /guides/authentication/conditional-auth/ip-based-template/
-      
-      - name: "Device-based"
-        link: /guides/authentication/conditional-auth/new-device-based-template/
-      
-      - name: "User age-based"
-        link: /guides/authentication/conditional-auth/user-age-based-template/
+      - name: "Define a custom authentication flow"
+        link: /guides/authentication/conditional-auth/write-your-first-script/
   
   - title: Users
-    details: Manage different user profiles and enable users to manage their own profiles.
+    details: Manage users in your organizations and enable users to manage their own profiles.
     link: /guides/users/
-    icon: usersIcon
+ #   icon: usersIcon
     subLinks:
       - name: "Collaborators"
         link: /guides/users/manage-collaborators/
@@ -85,5 +79,5 @@ features:
       - name: "Customers"
         link: /guides/users/manage-customers/
       
-      - name: "User self-service"
+      - name: "User Self-Service"
         link: /guides/user-self-service/

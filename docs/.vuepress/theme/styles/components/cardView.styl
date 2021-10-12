@@ -1,4 +1,11 @@
-.quickstarts-page
+.item-index-page > .page > .page-title > h1
+  visibility hidden
+
+.item-index-page
+  .page
+    padding-left 22rem
+
+.item-page
   display block
   max-width 100%
   min-height 100vh - $navbarHeight
@@ -27,10 +34,10 @@
     padding-top 1rem
 
     h2:first-child
-      padding-top 5rem !important
+      padding-top 2rem !important
       margin-bottom 1rem !important
 
-  .tech-container
+  .item-container
     display flex
     flex-wrap wrap
     justify-content center
@@ -39,7 +46,7 @@
     p
       margin-top -18px !important
 
-  .tech-item
+  .item
     display inline-block
     flex 1 1 15%
     min-width 139px
@@ -51,6 +58,7 @@
     transition all 0.3s
     text-align center
     cursor pointer
+    border 1px solid var(--border-color)
 
     &:hover    
       transform: scale(1.025)
@@ -58,7 +66,7 @@
       text-decoration none !important
       color var(--text-color) !important
   
-  .tech-name
+  .item-name
     padding-top 25px
     display block
     font-size 16px
@@ -67,12 +75,12 @@
     text-decoration none
     color var(--text-color)
 
-  img.tech-icon.disabled
+  img.item-icon.disabled
       opacity 0.5
       pointer-events none !important
 
-    img.tech-icon
-      height 60px
+    img.item-icon
+      height 50px
       width auto
       border none
       cursor: pointer !important
@@ -119,7 +127,7 @@
     padding-left 0
     padding-right 0
   
-  .qs-search-container
+  .search-container
     padding-bottom 30px
     text-align center
     border-bottom 1px solid var(--bgcolor-light)
@@ -128,14 +136,13 @@
     @media (max-width $MQMobile)
       margin 0
   
-  .qs-search
-    border none
+  .search
     padding 10px 10px 10px 35px
     border-radius 6px
     width 200px
     background var(--bgcolor-light) url(/asgardeo/docs/assets/img/search.83621669.svg) 10px 12px no-repeat
     transition 0.3s
-    border 1px solid transparent
+    border 1px solid var(--border-color)
     color var(--text-color-light)
 
     &:focus
@@ -166,4 +173,3 @@
 
 html
   background var(--sdk-card-color) !important
-

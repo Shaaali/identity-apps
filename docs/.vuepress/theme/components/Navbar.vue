@@ -17,10 +17,10 @@
           ref="siteName"
           class="site-name"
       >{{ $site.themeConfig.productTitle }}</span>
-      <span
+      <!-- <span
           v-if="$site.themeConfig.docVersion"
           class="site-version"
-      >{{ $site.themeConfig.docVersion }}</span>
+      >{{ $site.themeConfig.docVersion }}</span> -->
     </RouterLink>
     <div class="site-nav">
       <NavLinks class="can-hide" />

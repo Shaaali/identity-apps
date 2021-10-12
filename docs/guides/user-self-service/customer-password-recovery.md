@@ -14,16 +14,16 @@ To reset the password, the account owner should follow these steps.
 
 1. Go to the login page via a business application or the <a :href="$withBase('/guides/user-self-service/customer-self-service-portal/')">My Account portal</a>.
 
-   <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" alt="Recover your password">
+   <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" width="350" alt="Recover your password">
 
 2. Click **Forgot password?**
 3. Enter your username and click **Send Reset Link**.
-   <img :src="$withBase('/assets/img/guides/organization/self-service/customer/forgot-your-password.png')" alt="Forgot your password">
+   <img :src="$withBase('/assets/img/guides/organization/self-service/customer/forgot-your-password.png')" width="350" alt="Forgot your password">
 
    An email notification is sent to your email address. 
 
 4. Open the email you received and click **Reset Password**.
-   <img :src="$withBase('/assets/img/guides/organization/self-service/customer/reset-password-email.png')" alt="Reset password email">
+   <img :src="$withBase('/assets/img/guides/organization/self-service/customer/reset-password-email.png')" width="500" alt="Reset password email">
 5. Enter new password and **Proceed**.
 
 Now you have reset your password and can sign in using your new password.

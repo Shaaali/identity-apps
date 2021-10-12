@@ -61,12 +61,12 @@ module.exports = config({
         logo: '/assets/img/asgardeo-logo-console.svg',
 
         search: true,
-        // algolia: {
-        //     appId: "FZZ2G9EYKZ",
-        //     // This is search only API key.
-        //     apiKey: "eb6a5c630b8ebd2d4d862a2b0aaa7a67",
-        //     indexName: "asgardeo-algolia"
-        // },
+//         algolia: {
+//             appId: "FZZ2G9EYKZ",
+//             // This is search only API key.
+//             apiKey: "eb6a5c630b8ebd2d4d862a2b0aaa7a67",
+//             indexName: "asgardeo-algolia"
+//         },
         algoliaType: "full",
         Navbar: true,
         blog: false,
@@ -76,7 +76,7 @@ module.exports = config({
         darkmode: 'switch',
         footer: {
             display: true,
-            content: 'Asgardeo Docs | © 2021 WSO2'
+            content: '© ' + new Date().getFullYear() + ' WSO2 Inc. All Rights Reserved'
         },
         git: {
             contributor:false
@@ -291,9 +291,8 @@ module.exports = config({
                     children: [
                         ['manage-collaborators.md', 'Manage collaborators'],
                         ['manage-customers.md', 'Manage customers'],
-                        ['manage-user-profiles.md', 'Manage user profiles'],
-                        ['manage-sessions.md', 'Manage active sessions'],
                         ['manage-groups.md', 'Manage groups'],
+                        ['manage-sessions.md', 'Manage active sessions'],
                         {
                             title: 'Manage Attributes and Mappings',
                             prefix: 'attributes/',

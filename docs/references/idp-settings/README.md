@@ -2,10 +2,11 @@
 breadcrumb: false
 prev: false
 next: false
-pageClass: idp-configs-index
+search: false
+pageClass: item-index-page
 heading: IdP Configurations
 subHeading: Configure the OpenID enterprise IdP or SAML IdP related settings in Asgardeo
-idpConfigs:
+items:
     - name: OIDC
       icon: images/technologies/oidc-idp-illustration.png
       path: /references/idp-settings/oidc-settings-for-idp/
@@ -18,4 +19,4 @@ idpConfigs:
 
 # IdP Configurations
 
-<IdpConfigsOverview/>
+<CardView/>
