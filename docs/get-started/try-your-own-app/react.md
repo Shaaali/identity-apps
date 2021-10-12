@@ -91,7 +91,7 @@ And then inside your components, you can access the context as follows.
 ``` no-line-numbers
 const { isLoading, state, signIn, signOut } = useAuthContext();
 ```
-The above code segment shows a sample scenario where the the react app uses the ```isLoading```, ```state```, ```signIn``` and ```signOut``` functions. This section should be changed accordingly based on the functions that your react app uses.
+The above code segment shows a sample scenario where the react app uses the ```isLoading```, ```state```, ```signIn``` and ```signOut``` functions. This section should be changed accordingly based on the functions that your react app uses.
 
 ## Use the API
 
