@@ -17,6 +17,7 @@ Once you select the required user attributes as mentioned [above](#select-user-a
 
 From the attributes that are listed, you can select the **Mandatory** attributes. 
 
+<!--
 ### Select the subject attribute
 
 The subject should be a unique identifier for the application user within Asgardeo. Subject is represented by the [sub](https://openid.net/specs/openid-connect-core-1_0.html#IDToken) claim in the ID token and the userinfo response. 
@@ -28,6 +29,7 @@ To define another attribute as the subject:
 3. From the **Subject attribute** list, select the attribute you want to set as the subject.
     <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
 4. Click **Update**.
+-->
 
 ### Disable the consent screen
 
@@ -79,7 +81,7 @@ OpenID Connect defines the following scope values that can be used to request cl
  
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/get-user-consent.md'/>
 
-<img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" alt="Provides consent for attributes in Asgardeo">
+<img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
 
 ### Share user attributes with apps
 Asgardeo shares the user attributes, for which the user provided consent, with the application along with the **subject** attribute via the [ID token](#id-token) and the [user info response](#userinfo-response). 
