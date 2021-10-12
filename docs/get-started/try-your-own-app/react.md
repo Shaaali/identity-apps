@@ -91,7 +91,7 @@ And then inside your components, you can access the context as follows.
 ``` no-line-numbers
 const { isLoading, state, signIn, signOut } = useAuthContext();
 ```
-The above code segment shows a sample scenario where the the react app uses the ```isLoading```, ```state```, ```signIn``` and ```signOut``` functions. This section should be changed accordingly based on the functions that your react app uses.
+The above code segment shows a sample scenario where the react app uses the ```isLoading```, ```state```, ```signIn``` and ```signOut``` functions. This section should be changed accordingly based on the functions that your react app uses.
 
 ## Use the API
 
@@ -107,7 +107,7 @@ This `signIn()` method is used authenticate the users and get authorization code
 
 ### Get access token
 
-Add the following code in your application. This enables the application to get the access token issued by Asgardeo.
+Add the following code to your application. This enables the application to get the access token issued by Asgardeo.
 
 ``` 
 const { getAccessToken } = useAuthContext();
