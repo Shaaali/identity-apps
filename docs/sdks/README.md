@@ -2,7 +2,7 @@
 sidebar: false
 pageClass: sdks-page
 sdkContent:
-  - name: Single Page Applications
+  - name: SDKs for Single Page Applications
     technologies:
     - icon: images/technologies/angular-logo.svg
       name: Angular
@@ -22,7 +22,7 @@ sdkContent:
       gitUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk
       appUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip
 
-  - name: Web Applications
+  - name: SDKs for Web Applications
     technologies:
     - icon: images/technologies/java-logo.svg
       name: Java EE - OIDC
