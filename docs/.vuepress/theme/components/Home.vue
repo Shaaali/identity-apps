@@ -72,8 +72,8 @@
             >
               <a class="sub-link">{{ subLink.name }}</a>
             </div>
-            <p v-if="feature.icon === 'padlockIcon' || feature.icon === 'usersIcon'" class="learn-more-2" @click="feature.link ? navigate(feature.link) : ''">Learn more</p>
-            <p v-if="feature.icon === 'addAuthnIcon' || feature.icon === 'federatedLoginIcon'" class="learn-more-4" @click="feature.link ? navigate(feature.link) : ''">Learn more</p>
+            <div class="sub-link-spacer"></div>
+            <p class="learn-more-4" @click="feature.link ? navigate(feature.link) : ''">Learn more</p>
           </div>
         </div>
       </div>

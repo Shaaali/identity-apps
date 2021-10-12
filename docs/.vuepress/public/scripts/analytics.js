@@ -9,5 +9,5 @@
     a.src = g;
     m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', 'UA-103065-2', 'auto');
+ga('create', '{ANALYTICS_TAG_ID}', 'auto');
 ga('send', 'pageview');

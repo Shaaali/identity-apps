@@ -1,6 +1,6 @@
-# Add group-based authentication (access control)
+# Add group-based access control
 
-To control access to your application based on the user's group, you can apply the **Group-Based** conditional authentication template under **Access Control**. Users are redirected to an error page if the user does not belong to any of groups configured in the template.
+To control access to your application based on the user's group, you can apply the **Group-Based** conditional authentication template for **Access Control**. Users are redirected to an error page if the user does not belong to any of groups configured in the template.
 
 ## Scenario
 
