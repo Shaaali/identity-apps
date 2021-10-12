@@ -15,7 +15,7 @@ features:
     link: /guides/authentication/add-login-to-apps/
     # icon: padlockIcon
     subLinks:
-      - name: "For Single Page Applications"
+      - name: "For Single-Page Applications"
         link: /guides/authentication/add-login-to-single-page-app
           
       - name: "For Web Applications"

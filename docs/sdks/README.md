@@ -2,7 +2,7 @@
 sidebar: false
 pageClass: sdks-page
 sdkContent:
-  - name: SDKs for Single Page Applications
+  - name: SDKs for Single-Page Applications
     technologies:
     - icon: images/technologies/angular-logo.svg
       name: Angular

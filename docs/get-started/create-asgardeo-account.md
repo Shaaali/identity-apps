@@ -23,15 +23,13 @@ You can now manage your own user account and organization. <a :href="$withBase('
 
 Once you have signed up and created your Asgardeo account, you can [sign in to Asgardeo](https://console.asgardeo.io/). You can use your Asgardeo credentials or one of your existing social accounts.
 
-<!--
-<img :src="$withBase('/assets/img/guides/get-started/sign-in-to-asgardeo.png')" alt="Sign in to Asgardeo">
--->
-
 When you sign in, you can register your apps and start integrating them with Asgardeo for identity and access management. You can also manage the user accounts in your organization. 
 
 See the <a :href="$withBase('/guides/')">guides</a> to learn more.
 
 <!--
+<img :src="$withBase('/assets/img/guides/get-started/sign-in-to-asgardeo.png')" alt="Sign in to Asgardeo">
+
 <img :src="$withBase('/assets/img/guides/get-started/get-started-asgardeo-console.png')" alt="Sign in to Asgardeo">
 -->
 
