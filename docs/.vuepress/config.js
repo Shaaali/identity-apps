@@ -252,8 +252,8 @@ module.exports = config({
                                 path: 'access-control/',
                                 sidebarDepth: 2,
                                 children: [
-                                    ['user-age-based-template.md', 'Age-Based'],
-                                    ['group-based-template-access-control.md', 'Group-Based'],
+                                    ['user-age-based-template.md', 'Age-based access'],
+                                    ['group-based-template-access-control.md', 'Group-based access'],
                                 ]
                             },
                             {
@@ -261,11 +261,11 @@ module.exports = config({
                                 path: 'adaptive-mfa/',
                                 sidebarDepth: 2,
                                 children: [
-                                    ['group-based-template.md', 'Group-based'],
-                                    ['sign-in-option-based-template.md', 'Sign-In-Option-Based'],
-                                    ['new-device-based-template.md', 'Device-Based'],
-                                    ['ip-based-template.md', 'IP-Based'],
-                                    ['add-authentications-based-on-api-calls.md', 'Based on API calls'],
+                                    ['group-based-template.md', 'MFA based on user group'],
+                                    ['sign-in-option-based-template.md', 'MFA based on sign-in option'],
+                                    ['new-device-based-template.md', 'MFA based on user device'],
+                                    ['ip-based-template.md', 'MFA based on IP address'],
+                                    ['add-authentications-based-on-api-calls.md', 'MFA based on API calls'],
                                 ]
                             },
                             ['write-your-first-script.md', 'Write a custom authentication script'],
