@@ -245,7 +245,7 @@ See the [signOut API reference](https://github.com/asgardeo/asgardeo-auth-spa-sd
 ```
 
 ### Sample code
-The following code snippet demonstrates the process of accessing the authenticated user's information together with other functions from the SDK
+The following code snippet demonstrates the process of accessing the authenticated user's information together with other functions from the SDK.
 
 ```
    <div>
