@@ -29,4 +29,3 @@ If you have multiple organizations, you can switch between them on the console.
 3. Select the required organization to make the switch.
 
 Now you have switched to another organization on the Asgardeo console and you can access the resources available for that organization.
-
