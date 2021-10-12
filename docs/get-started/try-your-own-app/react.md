@@ -107,7 +107,7 @@ This `signIn()` method is used authenticate the users and get authorization code
 
 ### Get access token
 
-Add the following code in your application. This enables the application to get the access token issued by Asgardeo.
+Add the following code to your application. This enables the application to get the access token issued by Asgardeo.
 
 ``` 
 const { getAccessToken } = useAuthContext();
