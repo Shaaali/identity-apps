@@ -2,7 +2,7 @@
 home: true
 heroText: Asgardeo Documentation
 heroImage: /assets/img/asgardeo-logo.png
-tagline: Welcome to the Asgardeo documentation. Within these pages, you will be able to learn and try out different use cases in Asgardeo that fulfill your identity needs and provide a seamless login experience.
+tagline: Welcome to the Asgardeo documentation! Within these pages, you will learn how to fulfill the identity and access management use cases of your applications by using Asgardeo.
 homeBannerText: Work In Progress! Bear with us while we perfect our documentation for you.
 actionText: Quick Start →
 actionLink: /get-started/
@@ -57,7 +57,7 @@ features:
       - name: "Email OTP"
         link: /guides/authentication/mfa/add-emailotp-login/
 
-  - title: Conditional Access
+  - title: Conditional Authentication
     details: Add strong authentication to your application by customizing the login flow using a script.
     link: /guides/authentication/conditional-auth/
 #    icon: usersIcon
