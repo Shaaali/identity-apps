@@ -11,7 +11,7 @@ When bot detection is enabled, Asgardeo enforces reCAPTCHA validation in the fol
 This feature is enabled by default for all the organizations in Asgardeo. You will not be able to disable this for your organization at present.
 :::
 
-To check the flows in which reCAPTCHA validation will be enforced in your organization:
+To check reCAPTCHA settings:
 1. On the Asgardeo console, click **Manage > Account Security**.
 2. Click **Configure** to open the **Bot Detection** security page.
    <img :src="$withBase('/assets/img/guides/organization/account-security/bot-detection/enable-bot-detection.png')" alt="Enable bot detection">
