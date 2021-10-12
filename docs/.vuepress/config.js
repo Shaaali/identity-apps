@@ -247,13 +247,27 @@ module.exports = config({
                         sidebarDepth: 2,
                         children: [
                             ['configure-conditional-auth.md', 'Set up conditional authentication'],
-                            ['user-age-based-template.md', 'Add user age-based authentication'],
-                            ['group-based-template-access-control.md', 'Add group-based authentication (access control)'],
-                            ['sign-in-option-based-template.md', 'Add sign-in-option-based authentication'],
-                            ['new-device-based-template.md', 'Add device-based authentication'],
-                            ['group-based-template.md', 'Add group-based authentication (adaptive MFA)'],
-                            ['ip-based-template.md', 'Add IP-based authentication'],
-                            ['add-authentications-based-on-api-calls.md', 'Add authentications based on API calls'],
+                            {
+                                title: 'Add Access Control',
+                                path: 'access-control/',
+                                sidebarDepth: 2,
+                                children: [
+                                    ['user-age-based-template.md', 'Age-Based'],
+                                    ['group-based-template-access-control.md', 'Group-Based'],
+                                ]
+                            },
+                            {
+                                title: 'Add Adaptive MFA',
+                                path: 'adaptive-mfa/',
+                                sidebarDepth: 2,
+                                children: [
+                                    ['group-based-template.md', 'Group-based'],
+                                    ['sign-in-option-based-template.md', 'Sign-In-Option-Based'],
+                                    ['new-device-based-template.md', 'Device-Based'],
+                                    ['ip-based-template.md', 'IP-Based'],
+                                    ['add-authentications-based-on-api-calls.md', 'Based on API calls'],
+                                ]
+                            },
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
