@@ -1,4 +1,4 @@
-# Add device-based authentication
+# Add MFA based on user device
 
 You can apply the **New-Device-Based** conditional authentication template to your application to enable a more secure login flow for users who log in from a previously unused device.
 

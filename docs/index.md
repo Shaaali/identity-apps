@@ -62,10 +62,13 @@ features:
     link: /guides/authentication/conditional-auth/
 #    icon: usersIcon
     subLinks:
-      - name: "Use a template"
-        link: /guides/authentication/conditional-auth/#script-templates/
+      - name: "Access Control"
+        link: /guides/authentication/conditional-auth/access-control/
+
+      - name: "Adaptive MFA"
+        link: /guides/authentication/conditional-auth/adaptive-mfa/
       
-      - name: "Define a custom authentication flow"
+      - name: "Custom Authentication Flows"
         link: /guides/authentication/conditional-auth/write-your-first-script/
   
   - title: Users
