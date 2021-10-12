@@ -1,6 +1,6 @@
-# Add group-based authentication (Adaptive MFA)
+# Add MFA based on user group
 
-You can enable a more secure login flow for users that belong to specific groups by applying the **Group-Based** conditional authentication template to your application. This template enables two-factor authentication with TOTP for users who belong to the user groups you specify.
+You can enable a more secure login flow for users that belong to specific groups by applying the **Group-Based** conditional authentication template for **Adaptive MFA**. This template enables two-factor authentication with TOTP for users who belong to the user groups you specify.
 
 ## Scenario
 
