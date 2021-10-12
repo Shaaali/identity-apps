@@ -13,7 +13,7 @@ features:
   - title: Login
     details: Enable secure login for your applications using Asgardeo as the identity provider.
     link: /guides/authentication/add-login-to-apps/
-#    icon: padlockIcon
+    # icon: padlockIcon
     subLinks:
       - name: "For Single Page Applications"
         link: /guides/authentication/add-login-to-single-page-app
@@ -24,7 +24,7 @@ features:
   - title: Social Login
     details: Enable your application users to login with their existing social identities.
     link: /guides/authentication/social-login/
-#    icon: federatedLoginIcon
+    # icon: federatedLoginIcon
     subLinks:
       - name: "Facebook Login"
         link: /guides/authentication/social-login/add-facebook-login/
@@ -38,7 +38,7 @@ features:
   - title: Enterprise IDPs
     details: Enable your application users to login using a standard-based identity provider. 
     link: /guides/authentication/enterprise-login/
-#    icon: addAuthnIcon
+    # icon: addAuthnIcon
     subLinks:
       - name: "SAML-based Identity Providers"
         link: /guides/authentication/enterprise-login/add-saml-idp-login/
@@ -49,7 +49,7 @@ features:
   - title: Multi-factor Authentication
     details: Add strong authentication to your application by enabling multiple authentication factors in the login flow.
     link: /guides/authentication/mfa/
- #   icon: usersIcon
+    # icon: usersIcon
     subLinks:
       - name: "TOTP"
         link: /guides/authentication/mfa/add-totp-login/
@@ -60,7 +60,7 @@ features:
   - title: Conditional Access
     details: Add strong authentication to your application by customizing the login flow using a script.
     link: /guides/authentication/conditional-auth/
-#    icon: usersIcon
+    # icon: usersIcon
     subLinks:
       - name: "Access Control"
         link: /guides/authentication/conditional-auth/access-control/
@@ -74,7 +74,7 @@ features:
   - title: Users
     details: Manage users in your organizations and enable users to manage their own profiles.
     link: /guides/users/
- #   icon: usersIcon
+    # icon: usersIcon
     subLinks:
       - name: "Collaborators"
         link: /guides/users/manage-collaborators/
