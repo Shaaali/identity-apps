@@ -359,9 +359,11 @@ module.exports = config({
                     path: 'your-asgardeo/',
                     sidebarDepth: 2,
                     children: [
-                        ['manage-organizations.md', 'Manage your organizations'],
                         ['asgardeo-self-service.md', 'Self-service'],
                         ['recover-password.md', 'Recover your password'],
+                        ['manage-organizations.md', 'Manage your organizations'],
+                        ['delete-organizations.md', 'Delete your organizations'],
+                        ['delete-your-user-account.md', 'Delete your user account'],
                     ]
                 },
             ],
