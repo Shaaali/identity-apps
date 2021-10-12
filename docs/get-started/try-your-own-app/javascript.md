@@ -90,7 +90,7 @@ The `sign-in` hook is used to fire a callback function after successful sign-in.
 
 To sign in, simply call the `signIn()` function using the created instance.
 
-This method is used authenticate the users and get authorization code and access token.
+This method is used to authenticate the users and to get the authorization code and access token.
 
 ``` no-line-numbers
    <button onClick="auth.signIn()">Log In</button>
