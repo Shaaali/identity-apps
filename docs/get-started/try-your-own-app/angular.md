@@ -15,8 +15,8 @@ This guide provides steps to authenticate users to your Angular SPA with OpenID 
 <br>
 
 ## Prerequisites
-1. [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
-2. <a :href="$withBase('/guides/applications/register-single-page-app/')">Register an application</a> in Asgardeo.
+- [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Register an application</a> in Asgardeo.
 <br>
 
 ## Install the SDK
