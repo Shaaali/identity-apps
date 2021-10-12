@@ -2,7 +2,7 @@
 home: true
 heroText: Asgardeo Documentation
 heroImage: /assets/img/asgardeo-logo.png
-tagline: Welcome to the Asgardeo documentation! Within these pages, you will learn how to fulfill the identity and access management use cases of your applications by using Asgardeo.
+tagline: Welcome to the Asgardeo documentation! Within these pages, you will learn how to fulfill the identity and access management requirements of your applications by using Asgardeo.
 homeBannerText: Work In Progress! Bear with us while we perfect our documentation for you.
 actionText: Quick Start →
 actionLink: /get-started/
@@ -15,7 +15,7 @@ features:
     link: /guides/authentication/add-login-to-apps/
     # icon: padlockIcon
     subLinks:
-      - name: "For Single Page Applications"
+      - name: "For Single-Page Applications"
         link: /guides/authentication/add-login-to-single-page-app
           
       - name: "For Web Applications"
