@@ -220,7 +220,7 @@ module.exports = config({
                         ]
                     },
                     {
-                        title: 'Add Enterprise Login',
+                        title: 'Add Standard-Based Login',
                         prefix: 'enterprise-login/',
                         path: 'enterprise-login/',
                         sidebarDepth: 2,
