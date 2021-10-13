@@ -64,8 +64,7 @@ You can either <b>Provide Certificate</b> or <b>Use JWKS endpoint</b> to add a c
 Follow the steps given below to Provide Certificate.
 
 1. Select <b>Provide Certificate</b> and click <b>New Certificate</b>.
-
-  <img :src="$withBase('/assets/img/guides/applications/oidc/upload-certificate-of-app.png')" alt="Upload app certificate">
+<img :src="$withBase('/assets/img/guides/applications/oidc/upload-certificate-of-app.png')" alt="Upload app certificate">
 
 2. Upload the certificate file or copy the certificate contents.
 <br>

@@ -52,7 +52,7 @@ Used as the signing algorithm to sign the authentication response and logout res
 ### Single Sign-On Profile
 
 #### Bindings
-Specifies the mechanisms to transport SAML messages in communication protocols. Bindings define how SAML assertions and request-response protocol messages can be exchanged between identity provider and SAML application.
+Specifies the mechanisms to transport SAML messages in communication protocols. Bindings define how SAML request-response protocol messages can be exchanged between identity provider and SAML application via HTTP transport.
 
 Asgardeo by default supports the following bindings:
 - HTTP Post
@@ -65,7 +65,7 @@ Asgardeo by default supports the following bindings:
 Specifies whether the artifact resolve request signature should be validated against the application certificate. If you enable this option, make sure to provide the application certificate below. -->
 
 #### Enable IdP initiated SSO
-Specifies whether to initiate Single Sign-On (SSO) from the IdP instead of the application. If this is selected, a service provider is not required to send the SAML2 request.
+Specifies whether to initiate Single Sign-On (SSO) from the IdP instead of the application. If this is selected, a service provider is not required to send the SAML2 request. The Request URL is used by the IDP to forward the users directly to the service provider.
 <br>
 
 _Request_
@@ -200,10 +200,10 @@ Specifies whether to include the user’s attributes in the SAML assertions as p
 
 ### Single Logout Profile
 All the settings under this section are related to single-logout. 
-In Single logout, if one application logs out from a browser session, Asgardeo will send logout request to the all the other SAML applications participating in the same browser session.
+In Single logout, if one application logs out from a browser session, Asgardeo will send logout requests to all the other SAML applications participating in the same browser session.
 
 #### Enable SLO
-Specifies this whether you want to enable single-logout to your application. By default, it this is disabled for applications.
+Specifies whether you want to enable single-logout to your application. By default, this is disabled for applications.
 
 #### Logout method
 Specifies the logout method that is supported by the application. Asgardeo supports below logout methods:
@@ -273,8 +273,7 @@ The certificate is used to validate signatures when authentication requests or l
 You can either upload your certificate file or copy the contents. Follow the steps given below.
 
 1. Select <b>Provide Certificate</b> and click <b>New Certificate</b>.
-
-  <img :src="$withBase('/assets/img/guides/applications/saml-app/upload-certificate-of-app.png')" alt="Upload app certificate">
+<img :src="$withBase('/assets/img/guides/applications/saml-app/upload-certificate-of-app.png')" alt="Upload app certificate">
 
 2. Upload the certificate file or copy the certificate contents
 <br>

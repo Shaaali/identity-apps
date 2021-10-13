@@ -22,7 +22,7 @@ Also known as the issuer of identity provider. This is the `<saml2:Issuer>` valu
 Name ID defines the name identifier formats supported by the external IdP. Name identifier is how Asgardeo communicates with external IdP regarding a user.
 
 ### HTTP protocol binding
-Specifies the mechanisms to transport SAML messages in communication protocols. Bindings define how SAML assertions and request-response protocol messages can be exchanged between the external SAML identity provider and Asgardeo.
+Specifies the mechanisms to transport SAML messages in communication protocols. Bindings define how SAML request-response protocol messages can be exchanged between identity provider and SAML application via HTTP transport.
 
 Asgardeo supports below bindings:
 - HTTP Post
