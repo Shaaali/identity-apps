@@ -42,13 +42,15 @@ Change the `asgardeo-angular-app/src/config.json` file with the relevant values.
 
 - **clientID** - Add the client id of the registered application. Refer <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain client ID</a> from the Asgardeo console.
 - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
+- **scope** - This specifies the user's information that the application requires to access. Ex: ``profile``and ``email``.
 
-``` json{2,3} no-line-numbers
+``` json{2,3,6} no-line-numbers
 {
     "clientID": "<client ID>",
     "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
     "signInRedirectURL": "https://localhost:5000",
-    "signOutRedirectURL": "https://localhost:5000"
+    "signOutRedirectURL": "https://localhost:5000",
+    "scope": [ "profile" ]
 }
 ```
 

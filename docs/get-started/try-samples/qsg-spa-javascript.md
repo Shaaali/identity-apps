@@ -42,12 +42,14 @@ Click the **Download sample** button to download the sample. You can also choose
 2. Scroll down to the `<script>` tag at the end of the body tag and find `authConfig` object and change the configurations with the relevant values.
   - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain the client ID</a> from the Asgardeo console.
   - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
+  - **scope** - This specifies the user's information that the application requires access to. Ex: ``profile`` and ``email``.
 
-    ``` HTML{2,4} no-line-numbers
+    ``` HTML{2,4,5} no-line-numbers
     const authConfig = {
         clientID: "<client ID>",
         signInRedirectURL: "https://localhost:5000",
-        serverOrigin: "https://api.asgardeo.io/<organization_name>"
+        serverOrigin: "https://api.asgardeo.io/<organization_name>",
+        "scope": [ "profile" ]
     };
     ```
 
