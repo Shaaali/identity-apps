@@ -35,16 +35,16 @@ features:
       - name: "Google Login"
         link: /guides/authentication/social-login/add-google-login/
 
-  - title: Enterprise IDPs
+  - title: Standard-Based IDPs
     details: Enable your application users to login using a standard-based identity provider. 
     link: /guides/authentication/enterprise-login/
     # icon: addAuthnIcon
     subLinks:
-      - name: "SAML-based Identity Providers"
-        link: /guides/authentication/enterprise-login/add-saml-idp-login/
-
-      - name: "OIDC-based Identity Providers"
+      - name: "OpenID Connect IdPs"
         link: /guides/authentication/enterprise-login/add-oidc-idp-login/
+
+      - name: "SAML IdPs"
+        link: /guides/authentication/enterprise-login/add-saml-idp-login/
 
   - title: Multi-factor Authentication
     details: Add strong authentication to your application by enabling multiple authentication factors in the login flow.
