@@ -44,7 +44,7 @@ The following list contains the permissions enabled for an Administrator:
 - Create new attributes
 - Update and delete attributes
 - View scopes
-- Add new attributes ti scopes
+- Add new attributes to scopes
 - Update and delete scopes
 
 ## Managing Organization Settings
