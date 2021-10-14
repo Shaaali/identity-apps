@@ -23,11 +23,12 @@ To configure application-specific attribute names, you need to map the selected 
 To perform mapping:
 1. Click **Enable Mapping** in the **User Attributes** section.
 2. Change the **Mapped user attribute** for the selected attribute.
- <img :src="$withBase('/assets/img/guides/applications/attributes/saml/enable-mapping.png')" alt="Eable mapping">
+   
+   <img :src="$withBase('/assets/img/guides/applications/attributes/saml/enable-mapping.png')" alt="Eable mapping">
 
 This ensures that the application receives attributes based on the name that is configured.
 
-### Select mandatory user attributes
+### Define mandatory user attributes
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-mandatory-attributes.md'/>
 
@@ -41,7 +42,8 @@ The subject attribute is used for exchanging information about the user. The sub
 By default, Asgardeo shares **username** as the subject. Asgardeo provides the capability to define any user attribute as the subject.
 
 To define some other attributes as the subject:
-1. [Select it as a user attribute](#select-user-attributes). 
+
+1. <a :href="$withBase('#select-user-attributes')">Select it as a user attribute</a>. 
 2. Go to the **Subject** section under **User Attributes**.
 
    <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
@@ -72,7 +74,7 @@ Asgardeo shares the user attributes, for which the user provided consent, with t
 
 #### Subject
 
-The subject attribute is shared via the `<saml2:Subject>` element based on the [configured subject attribute](#select-the-subject-attribute).
+The subject attribute is shared via the `<saml2:Subject>` element based on the <a :href="$withBase('#select-the-subject-attribute')">configured subject attribute</a>.
 
 _A sample Subject element found in a SAML assertion is given below:_
 
@@ -90,7 +92,7 @@ _A sample Subject element found in a SAML assertion is given below:_
 ```
 
 #### Attribute statement
-The user attributes that are consented by the user will be shared with applications via the `<saml2:AttributeStatement>` element.
+The user attributes that are consented to by the user will be shared with applications via the `<saml2:AttributeStatement>` element.
 
 _A sample attribute statement element found in a SAML assertion is given below:_
 ```xml no-line-numbers
