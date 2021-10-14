@@ -36,7 +36,7 @@ The SAML IdP metadata document contains:
 ```xml no-line-numbers
 <?xml version="1.0" encoding="UTF-8"?>
 <EntityDescriptor
-	xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="accounts.asgardeo.io">
+	xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="accounts.asgardeo.io/t/bifrost">
 	<IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" validUntil="2021-07-07T07:01:06.536Z">
 		<KeyDescriptor use="signing">
 			<KeyInfo

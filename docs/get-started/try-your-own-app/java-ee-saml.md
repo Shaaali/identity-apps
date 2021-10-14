@@ -72,7 +72,7 @@ SAML2.AssertionConsumerURL=<acs_url>
 SAML2.SPEntityId=<entity_id>
 
 #Asgardeo related configs
-SAML2.IdPEntityId=accounts.asgardeo.io
+SAML2.IdPEntityId=accounts.asgardeo.io/t/<organization_name>
 SAML2.IdPURL=https://api.asgardeo.io/t/<orgaization_name>/samlsso 
 IdPPublicCert=<public_cert_of_asgardeo_organization>
 IdPPublicCertAlias=wso2carbon
@@ -120,7 +120,7 @@ Find the configuration information below:
       </tr>
       <tr>
          <td>SAML2.IdPEntityId</td>
-         <td>This is the issuer of Asgardeo. This is always <code>accounts.asgardeo.io</code>.</td>
+         <td>This is the issuer of Asgardeo. This is always <code>accounts.asgardeo.io/t/{organization_name}</code>.</td>
       </tr>
      <tr>
           <td>SAML2.IdPURL</td>

@@ -60,7 +60,7 @@ Click the **Download sample** button to download the sample. You can also choose
       </tr>
       <tr>
         <td>SAML2.IdPEntityId</td>
-        <td>Issuer of Asgardeo. This is always <code>accounts.asgardeo.io</code>.</td>
+        <td>Issuer of Asgardeo. This is always <code>accounts.asgardeo.io/t/<organization_name></code>.</td>
       </tr>
       <tr>
         <td>SAML2.IdPURL</td>
@@ -108,7 +108,7 @@ Click the **Download sample** button to download the sample. You can also choose
       SAML2.SPEntityId=http://localhost.com:8080/spring-security-saml2-sample/saml/metadata
       
       #Asgardeo related configs
-      SAML2.IdPEntityId=accounts.asgardeo.io
+      SAML2.IdPEntityId=accounts.asgardeo.io/t/<organization_name>
       SAML2.IdPURL=https://accounts.asgardeo.io/t/<orgaization_name>/samlsso 
       IdPPublicCert=MIIC/jCCAeagAwIBAgIECXIstjANBgkqhkiG9w0BAQQFADBBMRAwDgYDVQQDDAdiaWZyb3N0MQ0wCwYDVQQLDAROb25lMQ8wDQYDVQQKDAZOb25lIEwxDTALBgNVBAYTBE5vbmUwHhcNMjEwMzIwMDYzNTU5WhcNMzEwNDE3MDYzNTU5WjBBMRAwDgYDVQQDDAdiaWZyb3N0MQ0wCwYDVQQLDAROb25lMQ8wDQYDVQQKDAZOb25lIEwxDTALBgNVBAYTBE5vbmUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCL+LfgKAXwhl3x7buxjeUmRfozJbt7aggfR/86WfB+1N1L5ICaYgybTpB3KEOvR/JxO41H2GOwSFKb15xLmRmH2qy598tvU3TjUyXftUTqp44o/gChy9iavSu2kfRNSCped0N4UAAXegtWFROiTD0iT5PbdwQ8MDyAwKZB/s2N7t82xDpoK7PO99R6Re9GcOX/tkAeBvD/SDK6MgnXU2UqI1uYJ0owBOfrxPBDhTlEkP34hPTOLNabVyJX5k5zXYvwCxQj5AWMudSUzhLjZfWiPRNqjWgv1XxAYBIccgYqon1jG++e7Fod3jY0UUclzAHiguWKuM7Ijkd8plEUTgXNAgMBAAEwDQYJKoZIhvcNAQEEBQADggEBAEIeJ9o5QYlRV2KJN5bLL7s6GV3hkYMIrzDoxHFgSvEt2XJULHWj3yvKe1hk/HzEII79fYYKS6xJv7MORegQP/zFCD8oAHt/3lnhrG1yM/SQDe60Kd5emWqLqMxNQBmmaYQDTY7F5PIdC9KJ/EeKIoz2P2QlT5TNOcj9chtRHtsohNNv6Nkew6HZ49Xlm4BsFxhP6J5YPExV4bBw+RsHeiNdcxXNGaNtD5n2L4KOHbmKddsL1x/KZ4Q67xzaS50IhNnfC84pOFxmYT2FsB02ZuVv97UsNF+8xv+GIN3qc+pIJEWdHFY29KP4da//BDdQrftzYCATe37Um09id/0KMGs=
       IdPPublicCertAlias=wso2carbon
