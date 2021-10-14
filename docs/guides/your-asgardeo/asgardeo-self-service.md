@@ -14,12 +14,11 @@ You can access the My Account portal using the following URL:
 
 [https://myaccount.asgardeo.io](https://myaccount.asgardeo.io)
 
-You can also switch to My Account from the console as follows:
+You can also switch to My Account from the [Asgardeo console](https://console.asgardeo.io). Click your profile icon as shown below and select **My Account**.
 
-1. On the [Asgardeo console](https://console.asgardeo.io), click your profile icon and select **My Account**.
-    <img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/switch-to-myaccount.png')" width="450" alt="Switch to MyAccount from Console">
+<img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/switch-to-myaccount.png')" width="450" alt="Switch to MyAccount from Console">
 
-You are now automatically signed in to your My Account portal.
+You are now automatically signed in to the portal.
 
 ## Update profile information
 
