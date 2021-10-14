@@ -8,28 +8,13 @@ Follow the steps given below to configure the user attributes from the Asgardeo 
 ### Select user attributes
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-user-attributes.md'/>
 
-### Select mandatory user attributes
+### Define mandatory user attributes
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-mandatory-attributes.md'/>
 
-Once you select the required user attributes as mentioned [above](#select-user-attributes), they will appear under **User Attributes**.
+From the attributes that are listed in the **Attributes** tab, you can select the **Mandatory** attributes as shown below.
+
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/add-mandatory-user-attributes.png')" alt="Add madatory user attributes in Asgardeo">
-
-From the attributes that are listed, you can select the **Mandatory** attributes. 
-
-<!--
-### Select the subject attribute
-
-The subject should be a unique identifier for the application user within Asgardeo. Subject is represented by the [sub](https://openid.net/specs/openid-connect-core-1_0.html#IDToken) claim in the ID token and the userinfo response. 
-By default, Asgardeo shares **username** as the subject. It provides the capability to define any user attribute as the subject.
-
-To define another attribute as the subject:
-1. First, [select the user attribute](#select-user-attributes) for the application. 
-2. Go to the **Subject** section under **User Attributes**.
-3. From the **Subject attribute** list, select the attribute you want to set as the subject.
-    <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
-4. Click **Update**.
--->
 
 ### Disable the consent screen
 

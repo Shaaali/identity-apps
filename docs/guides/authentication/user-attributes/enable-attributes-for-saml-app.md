@@ -3,19 +3,16 @@
 Asgardeo can share user attributes in the customer's <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with SAML applications. 
 
 ## Prerequisite
-The <a :href="$withBase('/references/app-settings/saml-settings-for-app/#attribute-profile')">Enable Attribute Profile</a> setting should be enabled to share the user attributes.
+
+The <a :href="$withBase('/references/app-settings/saml-settings-for-app/#attribute-profile')">Enable Attribute Profile</a> setting should be enabled for the application in Asgardeo.
 
 ## Configure user attributes to share
 
 This section guides you to configure user attributes in the console and to share them with the applications.
 
-You can perform the following actions via the [Asgardeo console](https://console.asgardeo.io).
-
 ### Select user attributes
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-user-attributes.md'/>
-
-<br>
 
 ### Map user attributes
 
@@ -34,14 +31,9 @@ This ensures that the application receives attributes based on the name that is 
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-mandatory-attributes.md'/>
 
-Once you select the [required user attributes](#select-user-attributes), they appear under **User Attributes**. 
-
-From the attributes that are listed, you can select the **Mandatory** attributes. 
+From the attributes that are listed in the **Attributes** tab, you can select the **Mandatory** attributes as shown below.
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/saml/add-mandatory-user-attributes.png')" width="800" alt="Add mandatory user attributes in Asgardeo">
-
-
-<br>
 
 ### Select the subject attribute
 
@@ -54,7 +46,7 @@ To define some other attributes as the subject:
 
    <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
 
-3. View all the user attributes that are selected from the **Subject attribute** list. Select one attribute that you need to have as the subject attribute.
+3. Select one attribute as the subject from the **Subject attribute** list.
 4. Click **Update**.
 
 ### Disable the consent screen
