@@ -32,8 +32,6 @@ This ensures that the application receives attributes based on the name that is 
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-mandatory-attributes.md'/>
 
-From the attributes that are listed in the **Attributes** tab, you can select the **Mandatory** attributes as shown below.
-
 <img :src="$withBase('/assets/img/guides/applications/attributes/saml/add-mandatory-user-attributes.png')" width="800" alt="Add mandatory user attributes in Asgardeo">
 
 ### Select the subject attribute

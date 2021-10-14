@@ -12,8 +12,6 @@ Follow the steps given below to configure the user attributes from the Asgardeo 
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-mandatory-attributes.md'/>
 
-From the attributes that are listed in the **Attributes** tab, you can select the **Mandatory** attributes as shown below.
-
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/add-mandatory-user-attributes.png')" alt="Add madatory user attributes in Asgardeo">
 
 ### Disable the consent screen
