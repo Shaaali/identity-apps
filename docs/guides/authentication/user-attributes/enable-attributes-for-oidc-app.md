@@ -30,7 +30,7 @@ Once you have configured the user attributes that are required for your applicat
 ### Application requests with scopes
 OAuth2.0 clients use scopes to determine the privilege to access the protected resources. However, for OpenID Connect, [scopes](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) can be used to request the information of users in the form of claims.
 
-Asgardeo uses `openid` as a marker scope and it will not send any user attributes for the `openid` scope. Only the user attributes that are common for the <a :href="$withBase('#select-user-attributes')">selected user attribute</a> and the requested scopes (additional scopes except openid) will be returned.
+Asgardeo uses `openid` as a marker scope and it will not send any user attributes for the `openid` scope. Only the user attributes that are common for the <a :href="$withBase('#select-user-attributes')">selected user attributes</a> and the requested scopes (additional scopes except openid) will be returned.
 
 OpenID Connect defines the following scope values that can be used to request claims:
 
