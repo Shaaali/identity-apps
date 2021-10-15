@@ -225,8 +225,8 @@ module.exports = config({
                         path: 'enterprise-login/',
                         sidebarDepth: 2,
                         children: [
-                            ['add-oidc-idp-login.md', 'Add login with OIDC'],
-                            ['add-saml-idp-login.md', 'Add login with SAML'],
+                            ['add-oidc-idp-login.md', 'Add login with OIDC IdP'],
+                            ['add-saml-idp-login.md', 'Add login with SAML IdP'],
                         ]
                     },
                     {

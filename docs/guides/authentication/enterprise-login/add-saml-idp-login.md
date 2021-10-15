@@ -1,84 +1,126 @@
-# SAML Identity Provider Login
-You can add standard [SAML login](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf) to your applications using an external SAML Identity Provider(IdP) and enable users to log into applications with their accounts in the external identity providers.
+# Add login with a SAML identity provider
+
+You can add standard [SAML login](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf) to your applications using an external SAML identity provider(IdP) and enable users to log in to your applications while maintaining their accounts in the external identity providers.
+
 <img class="borderless-img" :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/configure-login.png')" alt="Configure SAML Enterprise IDP login in Asgardeo">
 
-There are two ways you can use to provide your SAML IdP configurations to Asgardeo
-    - Use SAML IdP metadata
-    - Provide SAML IdP configurations manually
+There are two ways you can use to provide your SAML IdP configurations to Asgardeo:
+
+- Use SAML IdP metadata
+- Provide SAML IdP configurations manually
 
 This guide will show you how to register a SAML IdP in Asgardeo and enable SAML external IdP login to an application.
 
 ## Prerequisite
 
-To get started, you need to have an application registered in Asgardeo. If you don't already have, register one of the following application types.
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
 
 -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
 -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
 
-## Register app in the identity provider
+## Register Asgardeo in the IdP
 You need to register Asgardeo as a SAML application in the external identity provider. Follow the identity provider's documentation to know how to register a SAML application.
 
-You can use the following URL as the **Assertion Consumer Service URL**(also known as callback URL/ redirect URL/ ACS URL) of the application which represents Asgardeo. 
-``` no-line-numbers
+You can use the following URL as the **Assertion Consumer Service URL** (also known as callback URL/ redirect URL/ ACS URL) in the application that represents Asgardeo.
+
+```bash no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/commonauth
 ```
 
-After you register the app, you should obtain some configurations. You can either obtain some manual configuration of the identity provider, or the metadata file of the identity provider.
-1. Manual configuration 
-    - **Issuer**(also known as entityId)
+After you register the app, you should get the required configurations. You can get the configurations manually from the IdP, or you can get the metadata file of the IdP.
+
+-   Manual configuration: 
+    - **Issuer** (also known as entityId)
     - **Single sign on URL** of the identity provider (also known as login URL)
     - **Identity Provider Certificate**
 
-2. Metadata file configuration
+-   Metadata file configuration:
     - **SAML IdP metadata file** of the identity provider
     - **Identity Provider Certificate**
 
-### Create SAML identity provider
-1. On the Asgardeo Console, click **Develop > Connections**.
+## Register the SAML IdP
+
+1. On the Asgardeo console, click **Develop > Connections**.
 2. Click **New Connections**.
-3. Select **Enterprise**  connection.
+3. Select **Standard-Based IdP**.
 4. Provide a unique **identity provider name** and select **SAML**.
+
    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp.png')" alt="Create SAML Enterprise IDP in Asgardeo">
-5. Asgardeo provides two ways to register a SAML identity provider.
-     - [File Based Configuration](#create-idp-using-saml-idp-metadata-file): Provide the SAML metadata file to register the IdP.
-     - [Manual Configuration](#create-idp-using-manual-configurations): You need to provide the configurations of SAML IdP to register.
+   
+5. Select one of the following methods and add the SAML configurations:
+
+    <table>
+        <tr>
+            <th>File Based</th>
+            <td><p>Upload a SAML metadata file with the required configurations.</p> See <a :href="$withBase('#use-a-saml-metadata-file')">Use a SAML metadata file</a>.</td>
+        </tr>
+        <tr>
+            <th>Manual</th>
+            <td><p>Use this option to manually specify the required SAML configurations.</p> See <a :href="$withBase('#add-saml-configs-manually')">Add SAML configs manually</a>.</td>
+        </tr>
+    </table>
+
+### Add SAML configs manually
+
+If you selected **Manual** in the previous step, follow the steps given below.
+
+1. Enter the following details:
+   
+    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-manual-config.png')" alt="Create SAML Enterprise IDP with manual configurations">
+
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Service provider entity ID</td>
+            <td> A unique name for the SAML IdP. This value will be used as the <code>saml2:Issuer</code> in the SAML requests initiated from Asgardeo to the external identity provider (IdP).</td>
+        </tr>
+        <tr>
+            <td>Identity provider Single Sign-On URL</td>
+            <td>This vlaue specifies the single sign-on URL of the external IdP. This is where Asgardeo will send its authentication requests. You need to get this value from the external IdP.</td>
+        </tr>
+        <tr>
+            <td>Identity provider entity ID</td>
+            <td>This is the <code>saml2:Issuer</code> value specified in the SAML responses issued by the external IdP. You need to get this value from the external IdP.</td>
+        </tr>
+    </table>
+
+3. Click **Next** and upload the public certificate of the identity provider.
+4. Click **Finish** to complete the registration.
        
-### Create IdP using SAML IdP metadata file
+### Use a SAML metadata file
 
-SAML IdP metadata is a popular way of integrating a SAML IdP.
+If you selected **File Based** in the previous step, follow the steps given below.
 
-The SAML IdP metadata document contains:  
-   - IdP identifiers (entityID or sometimes called Issuer)
-   - Endpoints (single sign-on URLs, single logout URLs, etc)
-   - Supported bindings
+::: info
+A SAML IdP metadata file contains the following:
+
+- IdP identifiers (`entityID` or `Issuer`)
+- Endpoints (single sign-on URLs, single logout URLs, etc)
+- Supported bindings
+:::
     
-1. Click **File Based Configuration**.
-   <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-metafile.png')" alt="Create SAML Enterprise IDP with Metadata file">
-2. Upload the IdP metadata file.
-3. Click **Next**.
-4. Upload the public certificate of the identity provider.
-5. Click **Finish**.
+1. Upload the IdP metadata file.
 
-### Create IdP using manual configurations
-1. Click **Manual Configuration**.
-      <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-manual-config.png')" alt="Create SAML Enterprise IDP with manual configurations">
-2. Enter the following details and click **Next**:
-     - **Service provider entity ID**: A unique name for this enterprise IdP. This value will be used as the `<saml2:Issuer>` in the SAML requests initiated from Asgardeo to external Identity Provider (IdP). 
-     - **Identity provider Single Sign-On URL**: Specifies the Single sign-on URL of the external IdP. This is where Asgardeo will send its authentication requests. You need to obtain this from the external IdP.
-     - **Identity provider entity ID**: This is the `<saml2:Issuer>` value specified in the SAML responses issued by the external IdP. You need to obtain this from the external IdP. 
-3. Click **Next**.
-4. Upload the public certificate of the identity provider.
-5. Click **Finish**.
+    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-metafile.png')" alt="Create SAML Enterprise IDP with Metadata file">
 
-You can find more additional configurations once you create SAML identity provider. See <a :href="$withBase('/references/idp-settings/saml-settings-for-idp')">SAML IdP settings</a>.
+2. Click **Next** and upload the public certificate of the identity provider.
+3. Click **Finish** to complete the registration.
+
+::: info
+You can add more configurations once you create the SAML identity provider. See <a :href="$withBase('/references/idp-settings/saml-settings-for-idp')">SAML IdP settings</a>.
+:::
   
-## Enable SAML login for application
-1. On the Asgardeo Console, click **Develop > Applications**.
+## Enable the SAML IdP for login
+
+1. On the Asgardeo console, click **Develop > Applications**.
 2. Select an application from the application list that appears and navigate to the **Sign-in Method** of your application.
-3. Click **Start with Default configuration**(If you have not modified the default sign in flow).
-4. Click **Add Authentication** on the step, and select the SAML identity provider you added the above.
-5. Select **Update**.
+3. Click **Start with Default configuration**(If you have not modified the default sign-in flow).
+4. Click **Add Authentication** on the step, select the SAML identity provider, and select **Update**.
+
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/enable-saml-enterprise-login-with-basic.png')" alt="Add SAML IdP login in Asgardeo">
 
 ## Configure user attributes
@@ -86,68 +128,88 @@ You can find more additional configurations once you create SAML identity provid
 Configuring attributes for an identity provider involves mapping the attributes available in the external SAML IdP to attributes that are local to Asgardeo. 
 This is done so that Asgardeo can identify the user attributes in the response sent from the external SAML IdP. 
 
-1. On the Asgardeo Console, click **Develop > Connections**.
+1. On the Asgardeo console, click **Develop > Connections**.
 2. Select the SAML IdP connection for which you want to configure user attributes.
-3. Select **Setup** on the selected IdP connection.
-4. Go to **Attributes**.
+3. Select **Set up** on the selected IdP connection.
+4. Go to the **Attributes** tab and click **Add IdP Attributes**.
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/go-to-user-attribute-page.png')" alt="Go to attributes section in SAML IdP">
-5. Click **Add IdP Attributes**.
-6. Provide the following and click **Add Attribute Mapping**.
-    - **External IdP Attribute**: The attribute from the external IdP that should be mapped to the local attribute.
-    - **Maps to**: The local attribute to which the external IdP attribute is mapped.
+5. Provide the following values and click **Add Attribute Mapping**.
+
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/map-saml-idp-attributes.png')" alt="Map SAML IdP attributes">
-7. You can select one of the above mapped attributes as the **subject attribute**. 
+
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>External IdP Attribute</td>
+            <td>The attribute from the external IdP that should be mapped to the local attribute.</td>
+        </tr>
+        <tr>
+            <td>Maps to</td>
+            <td>The local attribute to which the external IdP attribute is mapped.</td>
+        </tr>
+    </table>
+
+6. Select one of the mapped attributes as the **subject attribute**. 
+
+    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/select-subject-attributes.png')" alt="select a subject attribute">
+
     :::info
-     To configure a different attribute as the subject, first you need to enable the <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/#find-user-id-from-requests')">Find user ID from requests</a> setting under SAML IdP.
+     To configure a different attribute as the subject, first you need to enable the <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/#find-user-id-from-requests')">Find user ID from requests</a> setting for SAML IdP.
      If this setting is not enabled, Asgardeo uses the subject attribute that is sent by the external SAML IdP.
     ::: 
 8. Click **Update**.
 
 ### How it works 
-As an example,a SAML IdP will return authenticated user's nick name and profile updated time to Asgardeo in the SAML authentication response.
-- http://schemas.idp.com/nickname   : nick name
+
+Consider a scenario where a SAML IdP returns the authenticated user's nickname and profile updated time to Asgardeo in the SAML authentication response as follows:
+
+- http://schemas.idp.com/nickname   : nickname
 - http://schemas.idp.com/updated_at : profile updated time
 
-You want to get them in the local attribute URI. So that application will receive them in the local attribute URI. 
+You may want to convert them to the local attribute URI so that the application can receive them in the local attribute URI. If you don't do that mapping, the application will receive the attributes as sent by the external IdP.
 
-If you don't do that mapping, the application will receive the attributes as sent by the external IdP.
+**A sample IdP attribute mapping done from the Asgardeo console**:
 
-**A sample IdP attribute mapping done from Asgardeo Console**:
- <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/sample-attribute-mapping.png')" alt="Sample IdP attribute mapping">
+<img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/sample-attribute-mapping.png')" alt="Sample IdP attribute mapping">
 
 **Sample attributes in the SAML assertion of the integrated SAML app**:
+
 ```xml no-line-numbers
 <saml2:AttributeStatement>
-            <saml2:Attribute Name="http://wso2.org/claims/modified"
-                             NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
-                             >
-                <saml2:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                      xsi:type="xsd:string"
-                                      >Mon Aug 30 2021 07:26:40 GMT+0000 (Coordinated Universal Time)</saml2:AttributeValue>
-            </saml2:Attribute>
-            <saml2:Attribute Name="http://wso2.org/claims/nickname"
-                             NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
-                             >
-                <saml2:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                      xsi:type="xsd:string"
-                                      >John</saml2:AttributeValue>
-            </saml2:Attribute>
-        </saml2:AttributeStatement>
+    <saml2:Attribute Name="http://wso2.org/claims/modified"
+                        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+                        >
+        <saml2:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xsi:type="xsd:string"
+                                >Mon Aug 30 2021 07:26:40 GMT+0000 (Coordinated Universal Time)</saml2:AttributeValue>
+    </saml2:Attribute>
+    <saml2:Attribute Name="http://wso2.org/claims/nickname"
+                        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+                        >
+        <saml2:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                xsi:type="xsd:string"
+                                >John</saml2:AttributeValue>
+    </saml2:Attribute>
+</saml2:AttributeStatement>
 ```
 
 **Sample subject attribute** in the assertion looks as shown below:
 
 ```xml no-line-numbers
 <saml2:Subject>
-            <saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">John</saml2:NameID>
-            <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
-                <saml2:SubjectConfirmationData InResponseTo="jimhbeljflkppacldhnjcfjkhoobkddhngnkamom"
-                                               NotOnOrAfter="2021-08-30T09:49:21.336Z"
-                                               Recipient="http://localhost:8081/sample-app/home.jsp"
-                                               />
-            </saml2:SubjectConfirmation>
+    <saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">John</saml2:NameID>
+    <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+        <saml2:SubjectConfirmationData InResponseTo="jimhbeljflkppacldhnjcfjkhoobkddhngnkamom"
+                                        NotOnOrAfter="2021-08-30T09:49:21.336Z"
+                                        Recipient="http://localhost:8081/sample-app/home.jsp"
+                                        />
+    </saml2:SubjectConfirmation>
 </saml2:Subject>
 ```
 
 ## Related links
+
 - <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/')">Configure SAML IdP settings</a>
