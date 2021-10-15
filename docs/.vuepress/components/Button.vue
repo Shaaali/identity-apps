@@ -67,6 +67,18 @@ export default {
   &.primary
     background-color: #ff7300
     color: #fff
+    border-style: solid
+    border-width: 1px
+    border-color: #ff7300
+    width 200px
+
+  &.primary-outlined
+    background-color: transparent
+    color: #ff7300
+    border-style: solid
+    border-width: 1px
+    border-color: #ff7300
+    width 200px
 
   &.danger
      background-color: #db2828

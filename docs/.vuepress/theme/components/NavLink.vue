@@ -28,11 +28,11 @@
 <style lang="stylus">
 .nav-link
   line-height 1.4rem
-  color white !important
+  color #080808 !important
   margin-right 1rem
   margin-left 1rem
-  font-size 18px
-  font-weight 400
+  font-size 15px
+  font-weight 500
 
   @media (max-width $MQMobile)
     color var(--text-color) !important
