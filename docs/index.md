@@ -2,7 +2,7 @@
 home: true
 heroText: Asgardeo Documentation
 heroImage: /assets/img/asgardeo-logo.png
-tagline: Welcome to the Asgardeo documentation! Within these pages, you will learn how to fulfill the identity and access management requirements of your applications by using Asgardeo.
+tagline: Welcome to the Asgardeo documentation! Within these pages, you will learn how to build a seamless login experience for your applications using Asgardeo.
 homeBannerText: Work In Progress! Bear with us while we perfect our documentation for you.
 actionText: Quick Start →
 actionLink: /get-started/
