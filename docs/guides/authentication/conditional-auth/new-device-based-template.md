@@ -64,6 +64,9 @@ You need an application registered in Asgardeo. If you don't already have one, r
 Shown below is the script of the device-based conditional authentication template.
 
 ```js
+// This script will step up authentication and send email notification in case of
+// a user being logging in from a new device (identified by a cookie).
+
 // Amount of time in seconds to remember a device. Set to 2 years below.
 var deviceRememberPeriod = 60 * 60 * 24 * 365 * 2;
 
@@ -80,31 +83,31 @@ var stepUpAuthentication = true;
 var emailTemplate = 'UnseenDeviceLogin';
 
 
-var onLoginRequest = function (context) {
+var onLoginRequest = function(context) {
     executeStep(1, {
         onSuccess: function (context) {
             subject = context.currentKnownSubject;
             if (!validateCookie(context, subject)) {
-                Log.debug('New device login for ' + subject.identifier);
+                Log.debug('New device login with ' + subject.uniqueId);
 
                 if (sendNotification === true) {
                     var templatePlaceholders = {
-                        'username': subject.identifier,
+                        'username': subject.uniqueId,
                         'login-time': new Date().toUTCString()
                     };
                     var isSent = sendEmail(subject, emailTemplate, templatePlaceholders);
                     if (isSent) {
-                        Log.debug('New device login notification sent to ' + subject.identifier);
+                         Log.debug('New device login notification sent to ' + subject.uniqueId);
                     } else {
-                        Log.debug('New device login notification sending failed to ' + subject.identifier);
+                         Log.debug('New device login notification sending failed to ' + subject.uniqueId);
                     }
                 }
 
                 if (stepUpAuthentication === true) {
-                    Log.debug('Stepping up authentication due to a new device login for ' + subject.identifier);
+                    Log.debug('Stepping up authentication due to a new device login with ' + subject.uniqueId);
                     executeStep(2, {
                         onSuccess: function (context) {
-                            setCookie(context.response, cookieName, subject.identifier, {
+                            setCookie(context.response, cookieName, subject.uniqueId, {
                                 'sign': true,
                                 'max-age': deviceRememberPeriod,
                                 'sameSite': 'LAX'
@@ -117,10 +120,10 @@ var onLoginRequest = function (context) {
     });
 };
 
-// Validate if the user has a valid cookie with the value as subject's username
-var validateCookie = function (context, subject) {
+//Validate if the user has a valid cookie with the value as subject's username
+var validateCookie = function(context, subject) {
     var cookieVal = getCookieValue(context.request, cookieName, {'validateSignature': true});
-    return subject.identifier === cookieVal;
+    return subject.uniqueId === cookieVal;
 };
 ```
 

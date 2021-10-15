@@ -52,8 +52,18 @@ Consider a scenario where users who are younger than 18 years should be prevente
 Shown below is the script of the user age-based conditional authentication template.
 
 ```js
+// This script will only allow login to application if the user's age is over configured value
+// The user will be redirected to an error page if the date of birth is not present or user is below configured value
+
 var ageLimit = 18;
+
+// Error page to redirect unauthorized users,
+// can be either an absolute url or relative url to server root, or empty/null
+// null/empty value will redirect to the default error page
 var errorPage = '';
+
+// Additional query params to be added to the above url.
+// Hint: Use i18n keys for error messages
 var errorPageParameters = {
     'status': 'Unauthorized',
     'statusMsg': 'You need to be over ' + ageLimit + ' years to login to this application.'
@@ -67,13 +77,13 @@ var validateDOB = function (dob) {
     return dob.match(/^(\d{4})-(\d{2})-(\d{2})$/);
 };
 
-var onLoginRequest = function (context) {
+var onLoginRequest = function(context) {
     executeStep(1, {
         onSuccess: function (context) {
             var underAge = true;
             // Extracting user store domain of authenticated subject from the first step
             var dob = context.currentKnownSubject.localClaims[dateOfBirthClaim];
-            Log.debug('DOB of user ' + context.currentKnownSubject.identifier + ' is : ' + dob);
+            Log.debug('DOB of user ' + context.currentKnownSubject.uniqueId + ' is : ' + dob);
             if (dob && validateDOB(dob)) {
                 var birthDate = new Date(dob);
                 if (getAge(birthDate) >= ageLimit) {
@@ -81,14 +91,14 @@ var onLoginRequest = function (context) {
                 }
             }
             if (underAge === true) {
-                Log.debug('User ' + context.currentKnownSubject.identifier + ' is under aged. Hence denied to login.');
+                Log.debug('User ' + context.currentKnownSubject.uniqueId + ' is under aged. Hence denied to login.');
                 sendError(errorPage, errorPageParameters);
             }
         }
     });
 };
 
-var getAge = function (birthDate) {
+var getAge = function(birthDate) {
     var today = new Date();
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
