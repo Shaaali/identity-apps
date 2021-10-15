@@ -4,10 +4,11 @@ You can add standard [OpenID Connect login](https://openid.net/specs/openid-conn
 
 ## Prerequisite
 
-To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
 
-- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a> 
-- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+-   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+-   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+-   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
 
 ## Register Asgardeo in the IdP
 
