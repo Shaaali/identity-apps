@@ -2,13 +2,7 @@
 
 You can add standard [OpenID Connect login](https://openid.net/specs/openid-connect-core-1_0.html#) to your applications using an external OpenID Connect (OIDC) identity provider (IdP) and enable users to log in to your applications while maintaining their accounts in the external identity providers.
 
-## Prerequisite
-
-To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
-
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
+Follow this guide to register a OIDC IdP in Asgardeo and add it to the login flow of your application.
 
 ## Register Asgardeo in the IdP
 
@@ -21,7 +15,7 @@ https://api.asgardeo.io/t/<organization_name>/commonauth
 ```
 Once you register an application, you will receive the following:
 
-- **client_id** (also known as app_id or application_id)
+- **client_id** (also known as `app_id` or `application_id`)
 - **client_secret** (also known as app_secret)
 
 Check the documentation of the OIDC identity provider and get the following endpoints:
@@ -33,10 +27,12 @@ Check the documentation of the OIDC identity provider and get the following endp
 
 ## Register the OIDC IdP
 
+Now, let's register the OIDC IdP in Asgardeo.
+
 1. On the Asgardeo console, click **Develop > Connections**.
 2. Click **New Connections**.
 3. Select **Standard-Based IdP**.
-4. Provide a unique **identity provider name** and select **OpenID Connect**.
+4. Provide a unique **identity provider name**, select **OpenID Connect**, and click **Next**.
 
    <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/create-oidc-enterprise-idp-wizard.png')" alt="Create OIDC Enterprise IDP in Asgardeo"> 
 
@@ -88,27 +84,33 @@ Check the documentation of the OIDC identity provider and get the following endp
          ```
         :::     
 
-7. After providing the certificate details, click **Finish**.
+7. After providing the endpoint or certificate details, click **Finish**.
 8. You can find <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-settings')">additional configurations</a> under **Settings** once you create the OIDC identity provider.
 
 Asgardeo requests for the **openid** scope from the external identity provider. If you need more attributes from the external identity provider, you can configure `scope` as an <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-query-parameters')">additional query param</a>.   For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
       
 ## Enable the OIDC IdP for login
 
+::: info Before you begin
+You need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+
+-   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+-   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+-   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
+:::
+
 1. On the Asgardeo console, click **Develop > Applications**.
-2. Select an application from the application list that appears and navigate to the **Sign-in Method** tab of your application.
-3. Click **Start with Default configuration**(If you have not modified the default sign-in flow).
-4. Click **Add Authentication** on the step, select your OIDC identity provider, and select **Update**.
+2. Open your application from the list and go to the **Sign-in Method** tab.
+3. If you haven't already defined a sign-in flow, click **Start with Default configuration** to get started.
+4. Click **Add Authentication** on the step, select your OIDC identity provider, and click **Add**.
 
     <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/enable-oidc-enterprise-login-with-basic.png')" alt="Add OIDC identity provider login in Asgardeo">
 
 ## How it works
 
-To provides this login capability, Asgardeo uses the standard [OpenID Connect with authorization code flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowSteps) underneath. For an application, the OpenID Connect login flow with the external identity provider works as follows:
+To provide this login capability, Asgardeo uses the standard [OpenID Connect with authorization code flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowSteps) underneath. For an application, this flow works as follows:
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/oidc-enterprise-login-flow.png')" alt="Add OIDC enterprise login in Asgardeo">
-
-This guide provides instructions on how to enable login in your applications. 
 
 ## Related links
 
