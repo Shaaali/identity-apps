@@ -148,7 +148,7 @@ The issuer of the application will be added as the default audience
 #### Recipients
 Recipient is a URI specifying the entity or location to which Asgardeo can present the assertion. 
 
-For example, this attribute might indicate that the assertion must be delivered to a particular network endpoint in order to prevent an intermediary from redirecting it someplace else.
+This attribute may specify the recipient endpoint to which the assertion should be delivered. This attribute is helpful in preventing an intermediary from redirecting the assertion to some other endpoint.
 
 By default, Asgardeo sends `ACS URL` as the `recipient` value.
 
