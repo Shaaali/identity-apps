@@ -52,6 +52,10 @@ The following table compares the different user account types available in Asgar
 
 Based on your requirements, you can choose user types and create them via the [Asgardeo Console](https://console.asgardeo.io).
 
+The source of the user account determines which entity manages the user's credentials and details.
+
+- **Accounts managed by Asgardeo** can persist across multiple organizations. That is, the same user account can be associated with other organizations as an owner or a collaborator. When removed from one organization, these associations with other organizations continue to persist.
+- **Accounts managed by an organization** are confined to that organization. When removed from that organization, the account is completely deleted from Asgardeo.
 <br>
 
 <table>
