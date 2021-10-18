@@ -54,7 +54,7 @@ Now, let's register the SAML IdP in Asgardeo.
 
 If you selected **Manual Configuration** in the previous step, follow the steps given below.
 
-1. Enter the following details:
+1. Enter the following details and click **Next**.
    
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-manual-config.png')" alt="Create SAML Enterprise IDP with manual configurations">
 
@@ -65,7 +65,7 @@ If you selected **Manual Configuration** in the previous step, follow the steps 
         </tr>
         <tr>
             <td>Service provider entity ID</td>
-            <td> A unique name for the SAML IdP. This value will be used as the <code>saml2:Issuer</code> in the SAML requests initiated from Asgardeo to the external identity provider (IdP).</td>
+            <td> This value will be used as the <code>saml2:Issuer</code> in the SAML requests initiated from Asgardeo to the external identity provider (IdP).</td>
         </tr>
         <tr>
             <td>Identity provider Single Sign-On URL</td>
@@ -77,7 +77,7 @@ If you selected **Manual Configuration** in the previous step, follow the steps 
         </tr>
     </table>
 
-3. Click **Next** and upload the public certificate of the identity provider.
+3. (Optional) Upload the public certificate of the identity provider.
 4. Click **Finish** to complete the registration.
        
 ### Use a SAML metadata file
@@ -92,15 +92,21 @@ A SAML IdP metadata file contains the following:
 - Supported bindings
 :::
     
-1. Upload the IdP metadata file.
+1. Specify the **service provider entity ID**.
+
+    ::: info
+    This value will be used as the <code>saml2:Issuer</code> in the SAML requests initiated from Asgardeo to the external identity provider (IdP).
+    :::
+
+2. Upload the IdP metadata file and click **Next**.
 
     <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp-with-metafile.png')" alt="Create SAML Enterprise IDP with Metadata file">
 
-2. Click **Next** and upload the public certificate of the identity provider.
-3. Click **Finish** to complete the registration.
+3. (Opional) Upload the public certificate of the identity provider.
+4. Click **Finish** to complete the registration.
 
 ::: info
-Once the SAML identity provider is created, you can configure additional <a :href="$withBase('/references/idp-settings/saml-settings-for-idp')">SAML settings</a>.
+Once the SAML identity provider is created, you can configure <a :href="$withBase('/references/idp-settings/saml-settings-for-idp')">additional SAML settings</a> from the **Protocol** tab.
 :::
   
 ## Enable the SAML IdP for login

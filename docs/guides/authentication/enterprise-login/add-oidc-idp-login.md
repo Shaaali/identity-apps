@@ -61,7 +61,7 @@ Now, let's register the OIDC IdP in Asgardeo.
         </tr>
     </table>
 
-6. Provide the mode of certificate configuration.
+6. (Optional) Provide the mode of certificate configuration.
     
     ::: info
     You can either configure a JWKS endpoint or upload a certificate of the external party. This helps to validate the signature of the assertions sent by the external identity provider.
@@ -71,21 +71,24 @@ Now, let's register the OIDC IdP in Asgardeo.
     -  **Use PEM certificate** : Upload or paste the public certificate of the external identity provider. The certificate should be in PEM format.  
         ::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to see how you can convert them to PEM format using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>
          **Convert CRT to PEM**
-         ``` no-line-numbers
+         ```bash no-line-numbers
          openssl x509 -in cert.crt -out cert.pem
          ``` 
         **Convert CER to PEM:**
-         ``` no-line-numbers
+         ```bash no-line-numbers
          openssl x509 -in cert.cer -out cert.pem
          ```  
         **Convert DER to PEM:**
-          ``` no-line-numbers
+          ```bash no-line-numbers
           openssl x509 -in cert.der -out cert.pem
          ```
         :::     
 
-7. After providing the endpoint or certificate details, click **Finish**.
-8. You can find <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-settings')">additional configurations</a> under **Settings** once you create the OIDC identity provider.
+7. Click **Finish** to complete the registration.
+
+::: info
+Once the OIDC identity provider is created, you can configure <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-settings')">additional OIDC settings</a> from the **Protocol** tab.
+:::
 
 Asgardeo requests for the **openid** scope from the external identity provider. If you need more attributes from the external identity provider, you can configure `scope` as an <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-query-parameters')">additional query param</a>.   For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
       
