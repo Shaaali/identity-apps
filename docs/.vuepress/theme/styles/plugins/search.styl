@@ -14,6 +14,9 @@
       .has-sidebar &
         width 13rem
 
+        @media (max-width $MQNarrow)
+          width 0
+
       &:focus
         width 11rem
         border-color transparent
@@ -21,6 +24,9 @@
 
         .has-sidebar &
           width 15rem
+
+          @media (max-width $MQNarrow)
+            width 4rem
 
       @media (max-width $MQNarrow)
         left 0

@@ -141,6 +141,9 @@ function css (el, property) {
       flex 0 0
       flex-basis auto
 
+    @media (max-width $MQMobile)
+      margin-left 15px
+
   .logo
     min-width $navbarHeight - $navbarVerticalPadding * 2
     height 20px
