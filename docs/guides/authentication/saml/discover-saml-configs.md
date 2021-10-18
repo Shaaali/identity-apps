@@ -36,7 +36,7 @@ The SAML IdP metadata document contains:
 ```xml no-line-numbers
 <?xml version="1.0" encoding="UTF-8"?>
 <EntityDescriptor
-	xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="accounts.asgardeo.io/t/bifrost">
+	xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="accounts.asgardeo.io/t/{organization_name}">
 	<IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" validUntil="2021-07-07T07:01:06.536Z">
 		<KeyDescriptor use="signing">
 			<KeyInfo
@@ -60,13 +60,13 @@ HFY29KP4da//BDdQrftzYCATe37Um09id/0KMGs=</X509Certificate>
 			</KeyInfo>
 		</KeyDescriptor>
 		<ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/samlartresolve" index="1"/>
-		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/bifrost/samlsso" ResponseLocation="https://api.asgardeo.io/t/bifrost/samlsso"/>
-		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/bifrost/samlsso" ResponseLocation="https://api.asgardeo.io/t/bifrost/samlsso"/>
-		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/bifrost/samlsso" ResponseLocation="https://api.asgardeo.io/t/bifrost/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/bifrost/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/bifrost/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/bifrost/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/bifrost/samlsso"/>
+		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
 	</IDPSSODescriptor>
 </EntityDescriptor>
 ```
@@ -95,7 +95,7 @@ https://api.asgardeo.io/t/<organization_name>/identity/metadata/saml2
 
 _Sample endpoint URL_
 ``` no-line-numbers
-https://api.asgardeo.io/t/bifrost/identity/metadata/saml2
+https://api.asgardeo.io/t/{organization_name}/identity/metadata/saml2
 ```
 
 <br>
