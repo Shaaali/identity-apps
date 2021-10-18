@@ -51,7 +51,6 @@ features:
       - name: "Using OIDC"
         link: /guides/authentication/enterprise-login/add-oidc-idp-login/
 
-
   - title: Multi Factor Authentication
     details: Strengthen your authentication flow
     link: /guides/authentication/mfa/

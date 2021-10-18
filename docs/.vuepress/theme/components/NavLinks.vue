@@ -36,7 +36,6 @@
   border-radius 5px
   transition 0.3s
 
-
   &:hover
     background-color #E6E6E6
 

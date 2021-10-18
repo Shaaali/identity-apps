@@ -127,7 +127,6 @@ function css (el, property) {
     display inline-block
     color #080808
 
-  
   .home-link
     height 90%
     flex 2
