@@ -107,11 +107,15 @@ function css (el, property) {
   left 0
   right 0
   height $navbarHeight
+  width 100vw
   padding $navbarVerticalPadding $navbarHorizontalPadding
   background var(--bgcolor)
   box-sizing border-box
   line-height $navbarHeight - $navbarVerticalPadding * 2
   transition 0.3s ease-in-out
+
+  @media (max-width 1236px)
+    padding $navbarVerticalPadding 10px
 
   .has-sidebar &
     padding $navbarVerticalPadding 1.5em
@@ -132,6 +136,10 @@ function css (el, property) {
     flex 2
     display flex
     justify-content flex-start
+    
+    @media (max-width $MQNarrow)
+      flex 0 0
+      flex-basis auto
 
   .logo
     min-width $navbarHeight - $navbarVerticalPadding * 2
@@ -198,7 +206,11 @@ function css (el, property) {
     height 49px
     flex 2
     display flex
-    justify-content flex-end  
+    justify-content flex-end
+
+    @media (max-width $MQNarrow)
+      flex 0 0
+      flex-basis auto
 
     @media (max-width $MQMobile)
       padding-left 0
@@ -216,4 +228,7 @@ function css (el, property) {
     display flex
     justify-content center
     flex 3
+
+    @media (max-width $MQNarrow)
+      flex 3
 </style>

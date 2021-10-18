@@ -36,11 +36,12 @@
                 radial-gradient(circle at 47% 65%, rgba(243, 115, 33, 0.1) 0%, rgba(245, 246, 246, 0.1) 15%), 
                 radial-gradient(circle at 65% 60%, rgba(144,37,142,0.15) 5%, rgba(255,255,255,1) 18%);
 
-    @media (min-width $MQNarrow)
+    @media (max-width $MQNarrow)
       display flex
       justify-content space-evenly
       align-items center
       text-align left
+      padding 6rem 2rem
 
     img
       display block
@@ -159,6 +160,12 @@
     padding 5rem 10rem
     background-color var(--feature-bgcolor)
 
+    @media (max-width $MQNarrow)
+      padding 5rem 2rem
+    
+    @media (max-width $MQMobile)
+      padding 5rem 1rem
+
     h2
       font-size 26px
       margin-bottom 0.4rem
@@ -201,6 +208,7 @@
       border-radius 0.8rem
       position relative
       justify-content flex-start
+      min-width 275px
 
       .feature-icon-container
         position absolute
@@ -229,12 +237,8 @@
         &.users
           background-color rgb(255, 247, 239)
 
-      .sub-link-container
-        position absolute
-        top 11rem
-
       .sub-link-spacer
-        min-height 8rem
+        min-height 4rem
 
       h4
         margin 4rem 0 0 0
@@ -326,6 +330,12 @@
     margin 2em -2rem
     padding 3rem 15rem
 
+    @media (max-width 1024px)
+      padding 3rem 6rem
+    
+    @media (max-width $MQMobile)
+      padding 3rem 1rem
+
     h2
       font-size 26px
       margin-bottom 0.4rem
@@ -347,12 +357,19 @@
       font-size 17px
       padding 0 10rem
 
+      @media (max-width $MQNarrow)
+        padding 0
+
     .technologies
       display flex
-      justify-content space-between
+      justify-content center
+      align-items center
+      flex-direction row
+      flex-wrap wrap
 
       .technology-card-container
         display block
+        padding-bottom 1rem
 
       .technology-card
         flex-grow 1
