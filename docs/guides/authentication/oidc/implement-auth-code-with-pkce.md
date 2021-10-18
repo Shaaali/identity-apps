@@ -57,7 +57,7 @@ This authorization request takes the following parameters.
   </tr>
   <tr>
     <td><code>redirect_uri</code><Badge text="Required" type="mandatory"/></td>
-    <td>This is where the response is redirected to at the end of the process. This should match the registered callback URL.</td>
+    <td>This is where the response is redirected to at the end of the process. This needs to be the same as one of the URLs given in the registered apps.</td>
   </tr>
   <tr>
     <td><code>client_id</code><Badge text="Required" type="mandatory"/></td>
@@ -216,7 +216,7 @@ This token request takes the following parameters.
   </tr>
   <tr>
     <td><code>redirect_uri</code><Badge text="Required" type="mandatory"/></td>
-    <td>This is where the response is redirected to at the end of the process.</td>
+    <td>This is where the response is redirected to at the end of the process. This needs to be the same as one of the URLs given in the registered apps.</td>
   </tr>
   <tr>
     <td><code>code</code><Badge text="Required" type="mandatory"/></td>

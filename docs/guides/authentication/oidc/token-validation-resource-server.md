@@ -1,7 +1,7 @@
 # Token validation by resource servers
 
 A resource server is responsible for protecting resources such as APIs via OAuth2 access tokens. Access tokens are intended for authorizing the access of a resource. 
-The resource server should be able to verify the access token sent by the application. If the application sends a <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#access-token')">self-contained JWT access token</a>, then the resource server can validate the access token without interacting with the IdP. OAuth2.0 supports [token introspection](https://datatracker.ietf.org/doc/html/rfc7662) to inspect the **access tokens** and **refresh tokens** using IdPs. 
+The resource server should be able to verify the access token sent by the application. If the application sends a <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#access-token')">self-contained JWT access token</a>, then the resource server can validate the access token without interacting with the authorization server. OAuth2.0 supports [token introspection](https://datatracker.ietf.org/doc/html/rfc7662) to inspect the **access tokens** and **refresh tokens** using authorization servers. 
 
 Asgardeo provides the `/oauth2/introspect` endpoint to perform token validation. A resource server can inspect tokens using Asgardeo and know the information related to the tokens. On Asgardeo, the resource server has to use client secret basic authentication to authenticate with the token introspection endpoint. You have to send it as the authorization header in the request: `Authorization: Basic BASE46_ENCODING<client_id:client_secret>`
 

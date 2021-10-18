@@ -28,7 +28,7 @@ eyJ4NXQiOiJZemM1T1Rnd1pURTNNV1F6TVdFek5ERm1OelZoTTJOaU9UQmxOamN3TlRJNU9HTTBNbVEx
 }
 ```
 
-Use one of the following methods to validate the ID token:
+Use the following methods to validate the ID token:
 
 ## Verify the signature in the ID token
 To validate the signature on the ID token, you need the public key of Asgardeo. The signature of ID tokens can be validated using the JWKS endpoint in Asgardeo. See [ID Token validation](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponseValidation) for details.
