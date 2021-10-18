@@ -28,7 +28,7 @@
         </MyTransition>
         <MyTransition :delay="0.08">
           <div class="button-row">
-            <Button buttonType='primary-outlined' :buttonText="$frontmatter.whatIsAsgardeoText" :buttonPath="$frontmatter.whatIsAsgardeoLink" />
+            <!-- <Button buttonType='primary-outlined' :buttonText="$frontmatter.whatIsAsgardeoText" :buttonPath="$frontmatter.whatIsAsgardeoLink" /> -->
             <Button buttonType='primary' :buttonText="$frontmatter.getStartedText" :buttonPath="$frontmatter.getStartedLink" />
           </div>
         </MyTransition>
@@ -61,15 +61,17 @@
               :class="{ link: feature.link, [`feature${index % 9}`]: true }"
               class="feature"
           >
-            <img v-if="feature.icon === 'padlockIcon'" src="../assets/icons/padlockIcon.svg" width="22" height="22" />
-            <img v-else-if="feature.icon === 'federatedLoginIcon'" src="../assets/icons/federatedLoginIcon.svg" width="26" height="26" />
-            <img v-else-if="feature.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="24" height="24" />
-            <img v-else-if="feature.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="24" height="24" />
+            <div class="feature-icon-container" :class="feature.cssClass">
+              <img
+                  class="feature-icon"
+                  :src="require(`../../theme/assets/${ feature.icon }`)"
+                  height="20"
+                />
+            </div>
             <h4>{{ feature.title }}</h4>
             <p>{{ feature.details }}</p>
-            <div class="sub-link-container">
+            <div v-if="feature.subLinks && feature.subLinks.length" class="sub-link-container">
               <div
-                  v-if="feature.subLinks && feature.subLinks.length"
                   v-for="(subLink, index) in feature.subLinks"
                   :key="index"
                   @click="subLink.link ? navigate(subLink.link) : ''"
@@ -110,12 +112,12 @@
               <p class="technology-name">{{ technology.name }}</p>
             </div>
             <div class="bottom-button-bar">
-              <div class="sdk-button" :class="technology.cssClass">
+              <a class="sdk-button" :class="technology.cssClass" :href="technology.sdkPath" target="_blank">
                 SDK
-              </div>
-              <div class="sample-button" :class="technology.cssClass">
+              </a>
+              <a class="sample-button" :class="technology.cssClass" :href="technology.samplePath" target="_blank">
                 Sample
-              </div>
+              </a>
             </div>
           </div>
         </div>

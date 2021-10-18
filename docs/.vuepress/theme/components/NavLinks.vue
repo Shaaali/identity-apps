@@ -32,7 +32,7 @@
   line-height 2rem
   font-size 15px
   color white !important
-  padding 5px 0px
+  padding 0
   border-radius 5px
   transition 0.3s
 

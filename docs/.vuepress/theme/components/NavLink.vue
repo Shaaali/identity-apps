@@ -29,8 +29,10 @@
 .nav-link
   line-height 1.4rem
   color #080808 !important
-  margin-right 1rem
-  margin-left 1rem
+  padding-right 1rem
+  padding-left 1rem
+  padding-top 0.5rem
+  padding-bottom 0.5rem
   font-size 15px
   font-weight 500
 

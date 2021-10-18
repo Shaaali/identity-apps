@@ -36,7 +36,6 @@
                 radial-gradient(circle at 47% 65%, rgba(243, 115, 33, 0.1) 0%, rgba(245, 246, 246, 0.1) 15%), 
                 radial-gradient(circle at 65% 60%, rgba(144,37,142,0.15) 5%, rgba(255,255,255,1) 18%);
 
-
     @media (min-width $MQNarrow)
       display flex
       justify-content space-evenly
@@ -203,15 +202,42 @@
       position relative
       justify-content flex-start
 
+      .feature-icon-container
+        position absolute
+        width 50px
+        height 50px
+        display flex
+        flex-direction column
+        justify-content center
+        border-radius 16px
+
+        &.login
+          background-color rgba(39, 170, 225, 0.1)
+        
+        &.social-login
+          background-color rgba(146, 39, 143, 0.1)
+
+        &.enterprise-idp
+          background-color rgb(255, 236, 246)
+        
+        &.mfa
+          background-color rgba(21, 167, 158, 0.1)
+
+        &.conditional-access
+          background-color rgb(250, 243, 247)
+
+        &.users
+          background-color rgb(255, 247, 239)
+
       .sub-link-container
         position absolute
-        top 8rem
+        top 11rem
 
       .sub-link-spacer
         min-height 8rem
 
       h4
-        margin 0.4rem 0
+        margin 4rem 0 0 0
         font-weight 600
         font-size 20px
 
@@ -359,7 +385,6 @@
           height 52px
           width auto
           border none
-          cursor: pointer !important
           margin 1rem auto
         
         .technology-name
@@ -379,6 +404,7 @@
           padding 0.5rem
           flex 2
           background-color #E7E7E7
+          color #000
           border-bottom-left-radius 16px
           text-align center
           cursor pointer

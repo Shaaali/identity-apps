@@ -15,7 +15,8 @@ features:
   - title: Login
     details: Register your applications and enable sign-in
     link: /guides/authentication/add-login-to-apps/
-    # icon: padlockIcon
+    icon: icons/feature-login.svg
+    cssClass: login
     subLinks:
       - name: "For SPAs"
         link: /guides/authentication/add-login-to-single-page-app
@@ -26,7 +27,8 @@ features:
   - title: Social Login
     details: Integrate your applications with a social identity provider
     link: /guides/authentication/social-login/
-    # icon: federatedLoginIcon
+    icon: icons/feature-social-login.svg
+    cssClass: social-login
     subLinks:
       - name: "Facebook"
         link: /guides/authentication/social-login/add-facebook-login/
@@ -40,7 +42,8 @@ features:
   - title: Enterprise IDPs
     details: Secure your logins using standard identity protocols
     link: /guides/authentication/enterprise-login/
-    # icon: addAuthnIcon
+    icon: icons/feature-enterprise-idp.svg
+    cssClass: enterprise-idp
     subLinks:
       - name: "Using SAML"
         link: /guides/authentication/enterprise-login/add-saml-idp-login/
@@ -52,7 +55,8 @@ features:
   - title: Multi Factor Authentication
     details: Strengthen your authentication flow
     link: /guides/authentication/mfa/
-    # icon: usersIcon
+    icon: icons/feature-mfa.svg
+    cssClass: mfa
     subLinks:
       - name: "TOTP"
         link: /guides/authentication/mfa/add-totp-login/
@@ -63,21 +67,23 @@ features:
   - title: Conditional Access
     details: Customize your authentication flow with conditional scripts
     link: /guides/authentication/conditional-auth/
-    # icon: usersIcon
+    icon: icons/feature-conditional-access.svg
+    cssClass: conditional-access
     subLinks:
       - name: "Group-based"
-        link: /guides/authentication/conditional-auth/access-control/
+        link: /guides/authentication/conditional-auth/group-based-template-access-control/
 
       - name: "IP-based"
-        link: /guides/authentication/conditional-auth/adaptive-mfa/
+        link: /guides/authentication/conditional-auth/ip-based-template/
       
       - name: "Device-based"
-        link: /guides/authentication/conditional-auth/write-your-first-script/
+        link: /guides/authentication/conditional-auth/new-device-based-template/
   
   - title: Users
     details: Manage user profiles and enable users to manage their own profiles
     link: /guides/users/
-    # icon: usersIcon
+    icon: icons/feature-users.svg
+    cssClass: users
     subLinks:
       - name: "Collaborators"
         link: /guides/users/manage-collaborators/
@@ -114,7 +120,7 @@ technologies:
     cssClass: oidc
   
   - name: Java EE-SAML
-    icon: images/technologies/saml-idp-illustration.png
+    icon: images/technologies/saml-logo.svg
     sdkPath: https://github.com/asgardeo/asgardeo-tomcat-saml-agent
     samplePath: https://github.com/asgardeo/asgardeo-tomcat-saml-agent/releases/latest/download/sample-app.war
     cssClass: saml

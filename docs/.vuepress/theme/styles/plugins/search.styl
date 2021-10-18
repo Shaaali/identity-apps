@@ -11,9 +11,16 @@
       border-radius 0.25em
       background-color var(--feature-bgcolor)
 
+      .has-sidebar &
+        width 13rem
+
       &:focus
         width 11rem
-        border-color var(--accent-color)
+        border-color transparent
+        background-color #FDEFE8
+
+        .has-sidebar &
+          width 15rem
 
       @media (max-width $MQNarrow)
         left 0
