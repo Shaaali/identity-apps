@@ -111,7 +111,11 @@ function css (el, property) {
   background var(--bgcolor)
   box-sizing border-box
   line-height $navbarHeight - $navbarVerticalPadding * 2
-  transition transform 0.3s ease-in-out
+  transition 0.3s ease-in-out
+
+  .has-sidebar &
+    padding $navbarVerticalPadding 1.5em
+    box-shadow 0 2px 8px var(--card-shadow-color)
 
   @media (max-width $MQMobile)
     padding-left $navbarMobileHorizontalPadding + 2.4rem
