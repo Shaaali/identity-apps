@@ -31,13 +31,12 @@ After you register the app, you should get the required configurations as explai
 Now, let's register the SAML IdP in Asgardeo.
 
 1. On the Asgardeo console, click **Develop > Connections**.
-2. Click **New Connections**.
-3. Select **Standard-Based IdP**.
-4. Provide a unique **identity provider name**, select **SAML**, and click **Next**.
+2. Click **New Connections** and select **Standard-Based IdP**.
+3. Provide a unique **identity provider name**, select **SAML**, and click **Next**.
 
    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/register-saml-idp.png')" alt="Create SAML Enterprise IDP in Asgardeo">
    
-5. Select one of the following methods and add the SAML configurations:
+4. Select one of the following methods and add the SAML configurations:
 
     <table>
         <tr>

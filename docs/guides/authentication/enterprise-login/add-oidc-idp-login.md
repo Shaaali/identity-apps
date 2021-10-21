@@ -2,7 +2,7 @@
 
 You can add standard [OpenID Connect login](https://openid.net/specs/openid-connect-core-1_0.html#) to your applications using an external OpenID Connect (OIDC) identity provider (IdP) and enable users to log in to your applications while maintaining their accounts in the external identity providers.
 
-Follow this guide to register a OIDC IdP in Asgardeo and add it to the login flow of your application.
+Follow this guide to register an OIDC IdP in Asgardeo and add it to the login flow of your application.
 
 ## Register Asgardeo in the IdP
 
@@ -16,7 +16,7 @@ https://api.asgardeo.io/t/<organization_name>/commonauth
 Once you register an application, you will receive the following:
 
 - **client_id** (also known as `app_id` or `application_id`)
-- **client_secret** (also known as app_secret)
+- **client_secret** (also known as `app_secret`)
 
 Check the documentation of the OIDC identity provider and get the following endpoints:
 
@@ -30,13 +30,12 @@ Check the documentation of the OIDC identity provider and get the following endp
 Now, let's register the OIDC IdP in Asgardeo.
 
 1. On the Asgardeo console, click **Develop > Connections**.
-2. Click **New Connections**.
-3. Select **Standard-Based IdP**.
-4. Provide a unique **identity provider name**, select **OpenID Connect**, and click **Next**.
+2. Click **New Connections** and select **Standard-Based IdP**.
+3. Provide a unique **identity provider name**, select **OpenID Connect**, and click **Next**.
 
    <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/create-oidc-enterprise-idp-wizard.png')" alt="Create OIDC Enterprise IDP in Asgardeo"> 
 
-5. Enter the following details of the external OIDC identity provider and click **Next**:    
+4. Enter the following details of the external OIDC identity provider and click **Next**:    
 
     <table>
         <tr>
@@ -61,7 +60,7 @@ Now, let's register the OIDC IdP in Asgardeo.
         </tr>
     </table>
 
-6. (Optional) Provide the mode of certificate configuration.
+5. (Optional) Provide the mode of certificate configuration.
     
     ::: info
     You can either configure a JWKS endpoint or upload a certificate of the external party. This helps to validate the signature of the assertions sent by the external identity provider.
@@ -84,13 +83,13 @@ Now, let's register the OIDC IdP in Asgardeo.
          ```
         :::     
 
-7. Click **Finish** to complete the registration.
+6. Click **Finish** to complete the registration.
 
 ::: info
 Once the OIDC identity provider is created, you can configure <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-settings')">additional OIDC settings</a> from the **Protocol** tab.
 :::
 
-Asgardeo requests for the **openid** scope from the external identity provider. If you need more attributes from the external identity provider, you can configure `scope` as an <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-query-parameters')">additional query param</a>.   For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
+Asgardeo requests for the **openid** scope from the external identity provider. If you need more attributes from the external identity provider, you can configure the `scope` as an <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-query-parameters')">additional query param</a>.   For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
       
 ## Enable the OIDC IdP for login
 
