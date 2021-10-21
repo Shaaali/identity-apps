@@ -8,7 +8,7 @@ The <a :href="$withBase('/references/app-settings/saml-settings-for-app/#attribu
 
 ## Configure user attributes to share
 
-This section guides you to configure user attributes in the console and to share them with the applications.
+Follow the steps given below to configure the user attributes from the Asgardeo console and to share them with the application.
 
 ### Select user attributes
 
