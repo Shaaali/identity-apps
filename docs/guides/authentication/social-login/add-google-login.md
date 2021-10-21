@@ -23,11 +23,11 @@ You can follow the [Google documentation](https://support.google.com/googleapi/a
     At this point, you can choose to configure your consent screen by clicking **Consent Screen**. For more information, see [User Consent](https://support.google.com/googleapi/answer/6158849#userconsent&zippy=%2Cuser-consent).
     :::
 6. Select the application type as **Web application**.
-7. Provide the following URL as the **Authorized Redirect URI** of the application.
+7. Provide the following URL as the **Authorized Redirect URI** of the application:
     ```bash no-line-numbers
     https://api.asgardeo.io/t/<organization_name>/commonauth
     ```
-8. Get the **Client ID** and **Client Secret** generated for the application.
+8. Get the client ID and client secret generated for the application.
     
 ## Register the Google IdP
 
