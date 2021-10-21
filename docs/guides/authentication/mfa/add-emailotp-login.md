@@ -1,4 +1,4 @@
-# MFA with Email OTP
+# Add MFA with Email OTP
 
 Email OTP is a One-Time Password (OTP) sent to the user's verified email address, which the user must submit during login (as an additional authentication step). This password is typically valid for a very short period of time. 
 
@@ -7,15 +7,15 @@ During Email OTP authentication, the user is required to access the verified ema
 Follow the instructions given below to configure Multi-Factor Authentication (MFA) using Email OTP in Asgardeo.
 
 ## Prerequisites
-To get started, you need to have an application registered in Asgardeo. If you don't already have one, register an application of one of the following application types.
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, register an application for one of the following application types.
 
 -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
 -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ::: info Info
-- You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password**.  
-- Email OTP cannot be used as a first step in your login flow.
+- You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or another factor that can validate user credentials.
+- Email OTP cannot be used as the first step in your login flow.
 :::
   
 ## Set up Email OTP
@@ -48,19 +48,22 @@ To update the default Email OTP settings:
 To enable Email OTP for MFA, you need to add **Email OTP** in the authentication flow of the application.
 
 Follow the steps given below.
-1. In the Asgardeo Console, go to **Develop > Applications**.
+1. On the Asgardeo Console, go to **Develop > Applications**.
 2. Select the application to add Email OTP.
 3. Go to the **Sign-in Method** tab of the selected application.
-4. Click **Start with default configuration**. 
-5. Add a new step and click **Add Authentication**.
-6. Select **Email OTP** and click **Add**.
+4. Click **Start with default configuration** and add a new step to the login flow.
+5. Click **Add Authentication**, select **Email OTP**, and click **Add**.
+   
+   ::: info
    This adds Email OTP as an authentication option for the configured step.
-    <img :src="$withBase('/assets/img/guides/mfa/emailotp/enable-email-otp.png')" alt="Enable email OTP authenticator in Asgardeo">
-7. Click **Update**.
+   :::
+
+   <img :src="$withBase('/assets/img/guides/mfa/emailotp/enable-email-otp.png')" alt="Enable email OTP authenticator in Asgardeo">
+6. Click **Update** to save your changes.
 
 ## How it works
 
-If Email OTP is enabled in the authentication flow of your application, the customer is prompted with the Email OTP authentication step once the first authentication step is completed. Given below are the high-level steps that follow:
+When Email OTP is enabled in the login flow of your application, the application user will be prompted with the Email OTP authentication step once the first authentication step is completed. Given below are the high-level steps that follow:
 
 1. Asgardeo sends the OTP to the user's verified email address.
 2. Asgardeo prompts the user to enter the OTP code.
