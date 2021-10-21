@@ -3,33 +3,16 @@
 Asgardeo can share user attributes in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with OpenID Connect applications. 
 
 ## Configure user attributes to share
-Follow the steps given below to configure the user attributes from the Asgardeo console to share it with the application.
+Follow the steps given below to configure the user attributes from the Asgardeo console to share them with the application.
 
 ### Select user attributes
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-user-attributes.md'/>
 
-### Select mandatory user attributes
+### Define mandatory user attributes
 
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/select-mandatory-attributes.md'/>
 
-Once you select the required user attributes as mentioned [above](#select-user-attributes), they will appear under **User Attributes**.
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/add-mandatory-user-attributes.png')" alt="Add madatory user attributes in Asgardeo">
-
-From the attributes that are listed, you can select the **Mandatory** attributes. 
-
-<!--
-### Select the subject attribute
-
-The subject should be a unique identifier for the application user within Asgardeo. Subject is represented by the [sub](https://openid.net/specs/openid-connect-core-1_0.html#IDToken) claim in the ID token and the userinfo response. 
-By default, Asgardeo shares **username** as the subject. It provides the capability to define any user attribute as the subject.
-
-To define another attribute as the subject:
-1. First, [select the user attribute](#select-user-attributes) for the application. 
-2. Go to the **Subject** section under **User Attributes**.
-3. From the **Subject attribute** list, select the attribute you want to set as the subject.
-    <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
-4. Click **Update**.
--->
 
 ### Disable the consent screen
 
@@ -45,7 +28,7 @@ Once you have configured the user attributes that are required for your applicat
 ### Application requests with scopes
 OAuth2.0 clients use scopes to determine the privilege to access the protected resources. However, for OpenID Connect, [scopes](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) can be used to request the information of users in the form of claims.
 
-Asgardeo uses `openid` as a marker scope and it will not send any user attributes for the `openid` scope. Only the user attributes that are common for the [selected user attributes](#select-user-attributes), and the requested scopes (additional scopes except openid) will be returned.
+Asgardeo uses `openid` as a marker scope and it will not send any user attributes for the `openid` scope. Only the user attributes that are common for the <a :href="$withBase('#select-user-attributes')">selected user attributes</a> and the requested scopes (additional scopes except openid) will be returned.
 
 OpenID Connect defines the following scope values that can be used to request claims:
 
@@ -119,7 +102,7 @@ _A sample ID token is given below:_
 
 #### Userinfo response
 
-In addition to getting attributes from the ID token, the application can <a :href="$withBase('/guides/authentication/oidc/implement-auth-code/#retrieve-user-details')">invoke the userinfo endpoint</a> and get user attributes along with the [selected subject attribute](#select-the-subject-attribute).
+In addition to getting attributes from the ID token, the application can <a :href="$withBase('/guides/authentication/oidc/implement-auth-code/#retrieve-user-details')">invoke the userinfo endpoint</a> and get user attributes along with the subject attribute.
 
 _A sample userinfo response is given below:_
 
