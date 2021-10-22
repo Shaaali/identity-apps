@@ -57,7 +57,7 @@ module.exports = config({
         docVersion: "BETA",
         productTitle: "Docs",
         editLinkText: 'Edit this page on Github',
-        logo: '/assets/img/asgardeo-logo-console.svg',
+        logo: '/assets/img/asgardeo-logo-dark.svg',
 
         search: true,
 //         algolia: {

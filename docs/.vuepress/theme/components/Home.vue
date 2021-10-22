@@ -5,9 +5,6 @@
   >
     <!-- <Banner v-if="$frontmatter.homeBannerText" :bannerText="$frontmatter.homeBannerText"/> -->
     <header class="hero">
-      <MyTransition :delay="0.04">
-        <img class="hero-image" src="../assets/asgardeoTrifactor.svg" width="150" length="300"/>
-      </MyTransition>
       <div class="hero-info">
         <MyTransition :delay="0.04">
           <h1
@@ -27,7 +24,10 @@
           />
         </MyTransition>
         <MyTransition :delay="0.08">
-          <Button buttonType='primary' :buttonText="$frontmatter.getStartedText" :buttonPath="$frontmatter.getStartedLink" />
+          <div class="button-row">
+            <!-- <Button buttonType='primary-outlined' :buttonText="$frontmatter.whatIsAsgardeoText" :buttonPath="$frontmatter.whatIsAsgardeoLink" /> -->
+            <Button buttonType='primary' :buttonText="$frontmatter.getStartedText" :buttonPath="$frontmatter.getStartedLink" />
+          </div>
         </MyTransition>
         <MyTransition :delay="0.12">
           <p v-if="$frontmatter.action" class="action">
@@ -47,7 +47,7 @@
     <MyTransition :delay="0.1">
       <div class="features-section">
         <h2>Pick Your Use Case</h2>
-        <p>Explore what you can do with Asgardeo to build your solution</p>
+        <p class="features-description">Explore what you can do with Asgardeo to build your solution</p>
         <div
             v-if="$frontmatter.features && $frontmatter.features.length"
             class="features"
@@ -58,22 +58,64 @@
               :class="{ link: feature.link, [`feature${index % 9}`]: true }"
               class="feature"
           >
-            <img v-if="feature.icon === 'padlockIcon'" src="../assets/icons/padlockIcon.svg" width="22" height="22" />
-            <img v-else-if="feature.icon === 'federatedLoginIcon'" src="../assets/icons/federatedLoginIcon.svg" width="26" height="26" />
-            <img v-else-if="feature.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="24" height="24" />
-            <img v-else-if="feature.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="24" height="24" />
+            <div class="feature-icon-container" :class="feature.cssClass">
+              <img
+                  class="feature-icon"
+                  :src="require(`../../theme/assets/${ feature.icon }`)"
+                  height="20"
+                />
+            </div>
             <h4>{{ feature.title }}</h4>
             <p>{{ feature.details }}</p>
-            <div
-                v-if="feature.subLinks && feature.subLinks.length"
-                v-for="(subLink, index) in feature.subLinks"
-                :key="index"
-                @click="subLink.link ? navigate(subLink.link) : ''"
-            >
-              <a class="sub-link">{{ subLink.name }}</a>
+            <div v-if="feature.subLinks && feature.subLinks.length" class="sub-link-container">
+              <div
+                  v-for="(subLink, index) in feature.subLinks"
+                  :key="index"
+                  @click="subLink.link ? navigate(subLink.link) : ''"
+              >
+                <a class="sub-link">{{ subLink.name }}</a>
+              </div>
             </div>
             <div class="sub-link-spacer"></div>
             <p class="learn-more-4" @click="feature.link ? navigate(feature.link) : ''">Learn more</p>
+          </div>
+        </div>
+      </div>
+    </MyTransition>
+
+    <!-- Technology Section -->
+    <MyTransition :delay="0.14">
+      <div class="technology-section">
+       <h2>Technologies</h2>
+        <p class="technologies-description">Choose a technology to add login to your own application. Alternatively, you can try out our sample applications</p>
+        <div
+            v-if="$frontmatter.technologies && $frontmatter.technologies.length"
+            class="technologies"
+        >
+          <div
+              v-for="(technology, index) in $frontmatter.technologies"
+              :key="index"
+              class="technology-card-container"
+          >
+            <div class="technology-card" :class="technology.cssClass">
+              <a>
+                <img
+                  class="technology-icon"
+                  :src="require(`../../theme/assets/${ technology.icon }`)"
+                  width="100"
+                  height="100"
+                />
+              </a>
+              <p class="technology-name">{{ technology.name }}</p>
+            </div>
+            <div class="bottom-button-bar">
+              <a class="sdk-button" :class="technology.cssClass" :href="technology.sdkPath" target="_blank">
+                SDK
+              </a>
+              <a class="sample-button" :class="technology.cssClass" :href="technology.samplePath" target="_blank">
+                Sample
+              </a>
+            </div>
           </div>
         </div>
       </div>

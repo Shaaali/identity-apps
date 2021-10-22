@@ -29,10 +29,15 @@
 .nav-item
   position relative
   display inline-block
-  margin-left 1rem
   line-height 2rem
   font-size 15px
   color white !important
+  padding 0
+  border-radius 5px
+  transition 0.3s
+
+  &:hover
+    background-color #E6E6E6
 
   @media (max-width $MQMobile)
     margin-left 0
@@ -41,29 +46,17 @@
     margin-left 0
 
   > .nav-link
+    transition 0.3s
+
     @media (min-width $MQMobile)
       color var(--dark-grey)
-
-      &::after
-        position absolute
-        content ' '
-        left 0
-        right 0
-        bottom -19px
-        height 4px
-        background var(--accent-color-l10)
-        border-radius 1px
-        visibility hidden
-        transform scaleX(0)
-        transition transform 0.3s ease-in-out
 
       &.active
         font-weight 700
 
       &:hover, &.active
-        &::after
-          visibility visible
-          transform scaleX(1)
+        ^[0]:hover &
+          background-color #E6E6E6
 
 .repo-link
   color var(--dark-grey)

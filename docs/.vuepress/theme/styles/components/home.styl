@@ -3,7 +3,7 @@
   max-width 100%
   min-height 100vh - $navbarHeight
   padding 0 2rem 0
-  margin 125px auto 0
+  margin 60px auto 0
 
   .img-header-container
     display: flex
@@ -29,14 +29,19 @@
     padding-right 1.5rem
 
   .hero
+    margin 0 -2rem
     text-align center
-    margin-bottom 3.5rem
+    padding 6rem 0
+    background: radial-gradient(circle at 75% 45%, rgba(243, 115, 33, 0.3) 0, rgba(245, 246, 246, 0.01) 17%), 
+                radial-gradient(circle at 47% 65%, rgba(243, 115, 33, 0.1) 0%, rgba(245, 246, 246, 0.1) 15%), 
+                radial-gradient(circle at 65% 60%, rgba(144,37,142,0.15) 5%, rgba(255,255,255,1) 18%);
 
-    @media (min-width $MQNarrow)
+    @media (max-width $MQNarrow)
       display flex
       justify-content space-evenly
       align-items center
       text-align left
+      padding 6rem 2rem
 
     img
       display block
@@ -70,14 +75,19 @@
         &.dark
           display block
 
+    .button-row
+      display flex
+      justify-content center
+      margin-top 2rem
+
     button
-      padding 13px 45px !important
-      margin: auto !important
+      padding 13px 20px !important
+      margin: 10px !important
       display: flex
       justify-content: center
 
     h1
-      font-size 2rem
+      font-size 32px
       text-align center
 
       @media (max-width $MQMobile)
@@ -98,7 +108,7 @@
     .description
       max-width 50rem
       color var(--text-color-light)
-      font-size 1rem
+      font-size 20px
       line-height 1.5
       text-align center
       font-weight 500
@@ -146,14 +156,21 @@
             background-color var(--accent-color-d10)
 
   .features-section
-    margin 2em -2rem
-    padding 2.2rem 2.5rem
+    margin 0 -2rem
+    padding 5rem 10rem
     background-color var(--feature-bgcolor)
 
+    @media (max-width $MQNarrow)
+      padding 5rem 2rem
+    
+    @media (max-width $MQMobile)
+      padding 5rem 1rem
+
     h2
-      font-size 1.5rem
+      font-size 26px
       margin-bottom 0.4rem
       margin-top 0
+      text-align center
 
     p
       color var(--text-color-light)
@@ -163,6 +180,11 @@
 
     h2, p
       padding 0 0.45rem
+
+    .features-description
+      text-align center
+      margin-bottom 3rem
+      font-size 17px
 
   .features
     display flex
@@ -185,17 +207,48 @@
       background var(--bgcolor)
       border-radius 0.8rem
       position relative
+      justify-content flex-start
+      min-width 275px
+
+      .feature-icon-container
+        position absolute
+        width 50px
+        height 50px
+        display flex
+        flex-direction column
+        justify-content center
+        border-radius 16px
+
+        &.login
+          background-color rgba(39, 170, 225, 0.1)
+        
+        &.social-login
+          background-color rgba(146, 39, 143, 0.1)
+
+        &.enterprise-idp
+          background-color rgb(255, 236, 246)
+        
+        &.mfa
+          background-color rgba(21, 167, 158, 0.1)
+
+        &.conditional-access
+          background-color rgb(250, 243, 247)
+
+        &.users
+          background-color rgb(255, 247, 239)
 
       .sub-link-spacer
-        min-height 3rem
+        min-height 4rem
 
       h4
-        margin 0.4rem 0
-        font-weight 700
+        margin 4rem 0 0 0
+        font-weight 600
+        font-size 20px
 
       a
         font-size 14px
         line-height 1.5rem
+        cursor pointer
 
         &.sub-link
 
@@ -205,8 +258,8 @@
       p
         padding 0
         color var(--text-color-light)
-        font-size 14px
-        font-weight 460
+        font-size 16px
+        font-weight 500
 
         &.learn-more-2
           margin-top 1.80rem
@@ -228,6 +281,8 @@
           margin-bottom 0
           position absolute
           bottom 1.5rem
+          cursor pointer
+          font-size 14px
 
           &:hover
             color #ff7300
@@ -252,11 +307,7 @@
         margin 0.5rem 0
         border-radius 0
 
-      &.link
-        cursor pointer
-
       &:hover
-        transform scale(1.025)
         box-shadow 0 2px 12px 0 var(--bgcolor-light)
         background-color var(--bgcolor)
 
@@ -274,6 +325,153 @@
       img
         .theme-dark &
           filter invert(1)
+
+  .technology-section
+    margin 2em -2rem
+    padding 3rem 15rem
+
+    @media (max-width 1024px)
+      padding 3rem 6rem
+    
+    @media (max-width $MQMobile)
+      padding 3rem 1rem
+
+    h2
+      font-size 26px
+      margin-bottom 0.4rem
+      margin-top 0
+      text-align center
+
+    p
+      color var(--text-color-light)
+      margin-top 0.1rem
+      margin-bottom 1.5rem
+      font-weight 500
+
+    h2, p
+      padding 0 0.45rem
+
+    .technologies-description
+      text-align center
+      margin-bottom 3rem
+      font-size 17px
+      padding 0 10rem
+
+      @media (max-width $MQNarrow)
+        padding 0
+
+    .technologies
+      display flex
+      justify-content center
+      align-items center
+      flex-direction row
+      flex-wrap wrap
+
+      .technology-card-container
+        display block
+        padding-bottom 1rem
+
+      .technology-card
+        flex-grow 1
+        flex-basis 0
+        min-width 140px
+        margin 0.5rem 0.5rem 0 0.5rem
+        background-color var(--bgcolor-light)
+        border-radius 6px
+        padding 1rem 1rem 0.1rem 1rem
+        transition all 0.3s
+        text-align center
+        border-radius 16px 16px 0 0
+
+        &.angular
+          background-color #F5E8F0
+        
+        &.javascript
+          background-color #FFF9C6
+        
+        &.react
+          background-color #E9F6FC
+        
+        &.oidc
+          background-color #FFF3E6
+
+        &.saml
+          background-color #FAF3F7
+        
+        img.technology-icon
+          height 52px
+          width auto
+          border none
+          margin 1rem auto
+        
+        .technology-name
+          font-size 16px
+          font-weight 600
+          color var(--text-color)
+
+      .bottom-button-bar
+        display flex
+        margin 0 0.5rem
+        height 35px
+        border-radius 0 0 16px 16px
+        font-size 14px
+        font-weight 500
+
+        .sdk-button
+          padding 0.5rem
+          flex 2
+          background-color #E7E7E7
+          color #000
+          border-bottom-left-radius 16px
+          text-align center
+          cursor pointer
+          transition 0.3s
+
+          &:hover
+            font-weight 600
+
+            &.angular
+              box-shadow inset 80px 0 50px 0 darken(#F5E8F0, 10)
+            
+            &.javascript
+              box-shadow inset 80px 0 50px 0 darken(#FFF9C6, 10)
+            
+            &.react
+              box-shadow inset 80px 0 50px 0 darken(#E9F6FC, 10)
+            
+            &.oidc
+              box-shadow inset 80px 0 50px 0 darken(#FFF3E6, 10)
+            
+            &.saml
+              box-shadow inset 80px 0 50px 0 darken(#FAF3F7, 10)
+            
+        .sample-button
+          padding 0.5rem
+          flex 3
+          background-color #363D43
+          border-bottom-right-radius 16px
+          color #fff
+          text-align center
+          cursor pointer
+          transition 0.3s ease-out
+
+          &:hover
+            font-weight 600
+
+            &.angular
+              box-shadow inset 100px 0 50px 0 darken(#F5E8F0, 50)
+            
+            &.javascript
+              box-shadow inset 100px 0 50px 0  darken(#FFF9C6, 50)
+            
+            &.react
+              box-shadow inset 100px 0 50px 0 darken(#E9F6FC, 50)
+            
+            &.oidc
+              box-shadow inset 100px 0 50px 0  darken(#FFF3E6, 50)
+            
+            &.saml
+              box-shadow inset 100px 0 50px 0  darken(#FAF3F7, 50)
 
   .explore-section
     margin 2.2em -2rem

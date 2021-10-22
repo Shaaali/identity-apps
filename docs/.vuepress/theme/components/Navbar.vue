@@ -100,55 +100,54 @@ function css (el, property) {
 <style lang="stylus">
 .navbar
   position fixed
+  display flex
+  justify-content center
   z-index 20
   top 0
   left 0
   right 0
   height $navbarHeight
+  width 100vw
   padding $navbarVerticalPadding $navbarHorizontalPadding
-  background var(--top-nav-color)
+  background var(--bgcolor)
   box-sizing border-box
-  box-shadow 0 2px 8px var(--card-shadow-color)
   line-height $navbarHeight - $navbarVerticalPadding * 2
-  transition transform 0.3s ease-in-out
+  transition 0.3s ease-in-out
+
+  @media (max-width 1236px)
+    padding $navbarVerticalPadding 10px
+
+  .has-sidebar &
+    padding $navbarVerticalPadding 1.5em
+    box-shadow 0 2px 8px var(--card-shadow-color)
 
   @media (max-width $MQMobile)
     padding-left $navbarMobileHorizontalPadding + 2.4rem
 
-  .hide-navbar &.can-hide
-    transform translateY(-100%)
+  // .hide-navbar &.can-hide
+  //   transform translateY(-100%)
 
   a, span, img
     display inline-block
-  
+    color #080808
+
   .home-link
-    padding-right 30px
     height 90%
-    border-right 1px solid #aaa
-
-    .has-sidebar &
-      border-right none
-
-    @media (max-width 1024px)
-      border-right 1px solid #aaa
-      
-      .has-sidebar &
-        border-right 1px solid #aaa
+    flex 2
+    display flex
+    justify-content flex-start
+    
+    @media (max-width $MQNarrow)
+      flex 0 0
+      flex-basis auto
 
     @media (max-width $MQMobile)
-      border-right none
-
-      .has-sidebar &
-        border-right none
-
-    @media (min-width $MQWide)
-      .has-sidebar &
-        border-right 1px solid #aaa
+      margin-left 15px
 
   .logo
     min-width $navbarHeight - $navbarVerticalPadding * 2
     height 20px
-    padding 14px 0px 10px 7px
+    padding 12px 0px 10px 7px
     vertical-align top
 
     @media (max-width $MQMobile)
@@ -173,9 +172,9 @@ function css (el, property) {
       display none
 
   .site-name
-    font-size 1.2rem
-    font-weight 400
-    color #fff
+    font-size 20px
+    font-weight 500
+    color #080808
     position relative
     padding-left 5px
 
@@ -202,15 +201,19 @@ function css (el, property) {
       text-overflow ellipsis
 
   .links
-    position absolute
     top $navbarVerticalPadding
     right $navbarHorizontalPadding
-    display flex
     box-sizing border-box
-    padding-left 1.5rem
     font-size 1.0rem
     white-space nowrap
     height 49px
+    flex 2
+    display flex
+    justify-content flex-end
+
+    @media (max-width $MQNarrow)
+      flex 0 0
+      flex-basis auto
 
     @media (max-width $MQMobile)
       padding-left 0
@@ -224,18 +227,11 @@ function css (el, property) {
   
   .site-nav
     transition all 0.3s
-    display inline-block
-    margin-left 1.5rem
     color #fff
+    display flex
+    justify-content center
+    flex 3
 
-    .has-sidebar &
-      margin-left 10.5rem
-
-    @media (max-width 1024px)
-      .has-sidebar &
-        margin-left 1rem
-    
-    @media (min-width $MQWide)
-      .has-sidebar &
-        margin-left 1rem
+    @media (max-width $MQNarrow)
+      flex 3
 </style>
