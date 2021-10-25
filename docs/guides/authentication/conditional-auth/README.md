@@ -7,7 +7,7 @@ This allows you to strengthen the authentication flow when the risk is higher. I
 
 ## Authentication script
 
-The authentication script, for configuring dynamic authentication flows in Asgardeo, is a functional language, which is similar to Javascript. You can configure the script using the script editor in the Asgardeo console. You can either use a [template](#script-templates) or <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">write a custom script</a>.
+The authentication script, for configuring dynamic authentication flows in Asgardeo, uses a functional language, which is similar to Javascript. You can configure the script using the script editor in the Asgardeo console. You can either use a [template](#script-templates) or <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">write a custom script</a>.
 
 This scripting language supports a set of inbuilt <a :href ="$withBase('/references/conditional-auth/api-reference/#utility-functions')">functions</a> and <a :href ="$withBase('/references/conditional-auth/api-reference/#object-reference')">objects</a>. A simple conditional authentication script will look like the following:
 
@@ -18,7 +18,7 @@ var onLoginRequest = function(context) {
         if (doStepUp(context) === true) { 
             executeStep(2);
         }
-}
+};
 
 function doStepUp(context) {
     // A function that decides whether to enforce second step based on the request context.
@@ -56,7 +56,7 @@ required parameters, the default authentication steps, and how you can try out t
 -->
 
 The available templates are categorized as follows:
-- Access Control - These templates restricts user login to the application based on specified conditions.
+- Access Control - These templates restrict user login to the application based on specified conditions.
 - Adaptive MFA - These templates prompt two-factor authentication for login attempts based on specific conditions.
 
 The pre-defined templates are listed below. 
@@ -95,7 +95,7 @@ The pre-defined templates are listed below.
 If required, you can also use the script editor to introduce new functions and fields to an authentication script based on your requirement. See the instructions on <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">writing a custom authentication script</a>. 
 
 ## Secrets
-Secrets securely store values associated with external APIs. These secret values are used in conditional authentication scripts when Asgardeo is required to interact with an external API (service endpoint) during the authentication process. You can securely store these secret values on the Asgardeo console and retrieve them whenever required for conditional authentication. 
+Secrets securely store values associated with external APIs. These secrets are used in conditional authentication scripts when Asgardeo is required to interact with an external API (service endpoint) during the authentication process. You can securely store secrets on the Asgardeo console and retrieve them whenever required for conditional authentication. 
 
 ## What's next
 

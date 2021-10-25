@@ -11,7 +11,7 @@ Consider a scenario with two user groups, `manager` and `employee`. For users as
 
 ## Prerequisites
 
--  You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+-  You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
    -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
    -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
    -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
@@ -89,7 +89,7 @@ Follow the steps given below.
 
 1. Access the application URL.
 2. Try to log in with a user who does not belong to any of the configured groups (manager or employee). You will 
-   successfully signed in to the application.
+   successfully sign in to the application.
 3. Log out of the application.
 4. Log in with a user who belongs to the `manager` or `employee` group or both. TOTP authentication is prompted.
     <img :src="$withBase('/assets/img/guides/conditional-auth/enter-otp-token.png')" width="350" alt="group-based-2fa-conditional-auth-totp-page">

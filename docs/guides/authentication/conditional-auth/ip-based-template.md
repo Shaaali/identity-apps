@@ -13,7 +13,7 @@ Users who log in from the internal network should be allowed to simply log in wi
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
 
 -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
@@ -23,7 +23,7 @@ You need an application registered in Asgardeo. If you don't already have one, r
 
 <CommonGuide guide='guides/fragments/manage-app/conditional-auth/configure-conditional-auth.md'/>
 
-5. Select the **IP-Based** template.
+5. Select the **Adaptive MFA > IP-Based** template.
 6. Verify that the login flow is now updated with the following two authentication steps:
 
     -   Step 1: Username and Password
@@ -56,7 +56,7 @@ Shown below is the script of the IP-based conditional authentication template.
 // Configure the network ranges here
 var corpNetwork = ['192.168.1.0/24', '10.100.0.0/16'];
 
-var onLoginRequest = function (context) {
+var onLoginRequest = function(context) {
     executeStep(1, {
         onSuccess: function (context) {
             var user = context.currentKnownSubject;
@@ -72,24 +72,34 @@ var onLoginRequest = function (context) {
 };
 
 // Function to convert ip address string to long value
-var convertIpToLong = function (ip) {
+var convertIpToLong = function(ip) {
     var components = ip.split('.');
     if (components) {
-        var ipAddr = 0, pow = 1;
-        for (var i = 3; i >= 0; i -= 1) {
-            ipAddr += pow * parseInt(components[i]);
-            pow *= 256;
-        }
-        return ipAddr;
+        var ipAddr = 0, pow = 1, i = 3;
+        return getIpAddrInLong(ipAddr, i, pow, components);
     } else {
         return -1;
     }
 };
 
+// Function to convert ip address string to long value
+var getIpAddrInLong = function(ipAddr, i, pow, components) {
+    if (i >= 0) {
+        ipAddr += pow * parseInt(components[i]);
+        pow *= 256;
+        i -= 1;
+        return getIpAddrInLong(ipAddr, i, pow, components);
+    } else {
+        return ipAddr;
+    }
+};
+
 // Function to check if the ip address is within the given subnet
-var isCorporateIP = function (ip, subnets) {
-    var subnetLength = subnets.length;
-    for (var i = 0; i < subnetLength; i++) {
+var isCorporateIP = function (ip, subnets, i) {
+    if (i === undefined) {
+        i = 0;
+    }
+    if (i < subnets.length) {
         var subnetComponents = subnets[i].split('/');
         var minHost = convertIpToLong(subnetComponents[0]);
         var ipAddr = convertIpToLong(ip);
@@ -100,8 +110,11 @@ var isCorporateIP = function (ip, subnets) {
                 return true;
             }
         }
+        i++;
+        return isCorporateIP(ip, subnets, i);
+    } else {
+        return false;
     }
-    return false;
 };
 ```
 
@@ -126,7 +139,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who has the IP address in the configured range. You will successfully log in to the application.
+2. Try to log in with a user whose IP address is in the configured range. You will successfully log in to the application.
 3. Log out of the application.
 4. Log in with a user who does not belong to the configured IP address range. TOTP authentication is prompted.
    <img :src="$withBase('/assets/img/guides/conditional-auth/enter-otp-token.png')" width="350" alt="ip-based-2fa-conditional-auth-totp-page">

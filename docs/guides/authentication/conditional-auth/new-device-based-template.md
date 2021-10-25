@@ -2,7 +2,7 @@
 
 You can apply the **New-Device-Based** conditional authentication template to your application to enable a more secure login flow for users who log in from a previously unused device.
 
-When the user signs in from such a device, this template enables two-factor authentication and/or sends an email notification when the user passes the first authentication step. A cookie is used to identify whether the device has been used before. When the cookie expires (this expiry time is specified in the template), the same browser or device is considered a new device.
+When the user signs in from a previously unused device, this template enables two-factor authentication and/or sends an email notification when the user passes the first authentication step. A cookie is used to identify whether the device has been used before. When the cookie expires (this expiry time is specified in the template), the same browser or device is considered a new device.
 
 ## Scenario
 
@@ -15,7 +15,7 @@ An email should also be sent to the customer with details of the login attempt.
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
 
 -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
@@ -32,7 +32,7 @@ You need an application registered in Asgardeo. If you don't already have one, r
     -   Step 1: Username and Password
     -   Step 2: TOTP
 
-7. Update the following parameter in the script.
+7. Update the following parameters in the script.
 
     <table>
         <thead>

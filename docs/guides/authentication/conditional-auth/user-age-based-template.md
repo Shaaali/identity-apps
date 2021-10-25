@@ -8,7 +8,7 @@ Consider a scenario where users who are younger than 18 years should be prevente
 
 ## Prerequisites
 
--   You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+-   You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
     -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
     -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
@@ -49,7 +49,7 @@ Consider a scenario where users who are younger than 18 years should be prevente
 
 ## How it works
 
-Shown below is the script of the user age-based conditional authentication template.
+Shown below is the user age-based conditional authentication template.
 
 ```js
 // This script will only allow login to application if the user's age is over configured value
@@ -127,7 +127,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who is above 18 years of age. This user will successfully log in to the application.
+2. Try to log in as a user who is above 18 years of age. This user will successfully log in to the application.
 3. Log out of the application.
 4. Log in again with a user who is below 18 years. The user will see the following error.
     <img :src="$withBase('/assets/img/guides/conditional-auth/auth-failure.png')" alt="authentication failed">
