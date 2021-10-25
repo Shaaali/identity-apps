@@ -2,6 +2,7 @@
 sidebar: true
 breadcrumb: false
 search: true
+secondarySearch: true
 pageClass: item-index-page
 heading: Try your Own App
 subHeading: Pick the technology of your application and follow the instructions to enable Asgardeo login.

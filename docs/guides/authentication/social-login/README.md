@@ -2,7 +2,8 @@
 breadcrumb: false
 prev: false
 next: false
-search: false
+search: true
+secondarySearch: false
 pageClass: item-index-page
 heading: Add Social Login
 subHeading: Add social login to your applications with Asgardeo
