@@ -24,13 +24,13 @@ sdkContent:
 
   - name: SDKs for Web Applications
     technologies:
-    - icon: images/technologies/java-logo.svg
+    - icon: images/technologies/oidc-logo.svg
       name: Java EE - OIDC
       sdkPath: /get-started/try-your-own-app/java-ee-oidc/
       gitUrl: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent
       appUrl: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war
 
-    - icon: images/technologies/java-logo.svg
+    - icon: images/technologies/saml-logo.svg
       name: Java EE - SAML
       sdkPath: /get-started/try-your-own-app/java-ee-saml/
       gitUrl: https://github.com/asgardeo/asgardeo-tomcat-saml-agent
