@@ -7,7 +7,7 @@
           <p class="description" v-text="$frontmatter.subHeading"></p>
         </header>
     </MyTransition>
-    <MyTransition v-if="$frontmatter.search == true" :delay="0.01">
+    <MyTransition v-if="$frontmatter.secondarySearch == true" :delay="0.01">
       <div class="search-container">
         <input class="search" v-model="query" type="text" placeholder="Search for technologies...">
       </div>

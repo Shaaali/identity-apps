@@ -2,7 +2,8 @@
 breadcrumb: false
 prev: false
 next: false
-search: false
+search: true
+secondarySearch: false
 pageClass: item-index-page
 heading: App Configurations
 subHeading: Configure the OpenID connect or SAML protocol related settings of your application in Asgardeo

@@ -2,7 +2,8 @@
 breadcrumb: false
 prev: false
 next: false
-search: false
+search: true
+secondarySearch: false
 pageClass: item-index-page
 heading: Enable User Attributes
 subHeading: Share user attributes in the user profile with

@@ -2,7 +2,8 @@
 breadcrumb: false
 prev: false
 next: false
-search: false
+search: true
+secondarySearch: false
 pageClass: item-index-page
 heading: IdP Configurations
 subHeading: Configure the OpenID enterprise IdP or SAML IdP related settings in Asgardeo

@@ -2,6 +2,7 @@
 sidebar: true
 breadcrumb: false
 search: true
+secondarySearch: true
 pageClass: item-index-page
 heading: Try a Sample App
 subHeading: Pick a technology and try a sample application with Asgardeo login.
