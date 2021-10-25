@@ -20,11 +20,11 @@ items:
     name: React
     path: /get-started/try-samples/qsg-spa-react/
 
-  - icon: images/technologies/java-logo.svg
+  - icon: images/technologies/oidc-logo.svg
     name: Java EE - OIDC
     path: /get-started/try-samples/qsg-oidc-webapp-java-ee/
   
-  - icon: images/technologies/java-logo.svg
+  - icon: images/technologies/saml-logo.svg
     name: Java EE - SAML
     path: /get-started/try-samples/qsg-saml-webapp-java-ee/
 ---

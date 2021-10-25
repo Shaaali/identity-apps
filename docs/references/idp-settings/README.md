@@ -9,11 +9,11 @@ heading: IdP Configurations
 subHeading: Configure the OpenID enterprise IdP or SAML IdP related settings in Asgardeo
 items:
     - name: OIDC
-      icon: images/technologies/oidc-idp-illustration.png
+      icon: images/technologies/oidc-logo.svg
       path: /references/idp-settings/oidc-settings-for-idp/
     
     - name: SAML
-      icon: images/technologies/saml-idp-illustration.png
+      icon: images/technologies/saml-logo.svg
       path: /references/idp-settings/saml-settings-for-idp/
 
 ---

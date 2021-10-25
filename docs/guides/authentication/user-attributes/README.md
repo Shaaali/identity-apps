@@ -9,11 +9,11 @@ heading: Enable User Attributes
 subHeading: Share user attributes in the user profile with
 items:
     - name: OIDC Apps
-      icon: images/technologies/oidc-idp-illustration.png
+      icon: images/technologies/oidc-logo.svg
       path: /guides/authentication/user-attributes/enable-attributes-for-oidc-app/
     
     - name: SAML Apps
-      icon: images/technologies/saml-idp-illustration.png
+      icon: images/technologies/saml-logo.svg
       path: /guides/authentication/user-attributes/enable-attributes-for-saml-app/
 
 ---
