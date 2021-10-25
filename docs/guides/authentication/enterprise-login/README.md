@@ -12,7 +12,7 @@ items:
       path: /guides/authentication/enterprise-login/add-oidc-idp-login/  
       
     - name: SAML
-      icon: images/technologies/saml-idp-illustration.png
+      icon: images/technologies/saml-logo.svg
       path: /guides/authentication/enterprise-login/add-saml-idp-login/
 ---
 
