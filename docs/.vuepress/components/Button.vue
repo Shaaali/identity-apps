@@ -1,6 +1,24 @@
 <template>
   <div :class="`${ displayType }`">
-  <button :class="`button ${ buttonType }`" @click="handleClick">
+  <a v-if="externalLink && openInNewTab" :class="`button ${ buttonType }`" :href="externalLink" target="_blank">
+    <div v-if="startIconPath"  class="start-icon-container">
+      <img :src="require(`../theme/assets/${ startIconPath }`)"/>
+    </div>
+    {{ buttonText }}
+    <div v-if="endIconPath"  class="end-icon-container">
+      <img :src="require(`../theme/assets/${ endIconPath }`)"/>
+    </div>
+  </a>
+  <a v-else-if="externalLink && !openInNewTab" :class="`button ${ buttonType }`" :href="externalLink">
+    <div v-if="startIconPath"  class="start-icon-container">
+      <img :src="require(`../theme/assets/${ startIconPath }`)"/>
+    </div>
+    {{ buttonText }}
+    <div v-if="endIconPath"  class="end-icon-container">
+      <img :src="require(`../theme/assets/${ endIconPath }`)"/>
+    </div>
+  </a>
+  <button v-else :class="`button ${ buttonType }`" @click="handleClick">
     <div v-if="startIconPath"  class="start-icon-container">
       <img :src="require(`../theme/assets/${ startIconPath }`)"/>
     </div>
@@ -28,18 +46,8 @@ export default {
   },
   methods: {
   	handleClick: function(){
-
   	  if (this.buttonPath) {
         this.$router.push(this.buttonPath);
-      }
-
-      if (this.externalLink) {
-        // Allow button to open links in a new tab if preferred.
-        if(this.openInNewTab) {
-          window.open(this.externalLink, "_blank")
-        } else {
-          window.location.href = this.externalLink;
-        }
       }
     }
   }
@@ -59,6 +67,9 @@ export default {
   border-radius 4px
   font-weight 600
   font-family inherit
+
+  &:hover 
+    text-decoration none !important
 
   &.default
     background-color #e0e1e2
