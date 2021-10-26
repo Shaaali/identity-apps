@@ -96,30 +96,30 @@ features:
 technologies:
   - name: Angular
     icon: images/technologies/angular-logo.svg
-    sdkPath: https://github.com/asgardeo/asgardeo-auth-angular-sdk
-    samplePath: https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip
+    sdkPath: /get-started/try-your-own-app/angular/
+    samplePath: /get-started/try-samples/qsg-spa-angular/
     cssClass: angular
   
   - name: Javascript
     icon: images/technologies/javascript-logo.svg
-    sdkPath: https://github.com/asgardeo/asgardeo-auth-spa-sdk
-    samplePath: https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/latest/download/asgardeo-html-js-app.zip
+    sdkPath: /get-started/try-your-own-app/javascript/
+    samplePath: /get-started/try-samples/qsg-spa-javascript/
     cssClass: javascript
   
   - name: React
     icon: images/technologies/react-logo.svg
-    sdkPath: https://github.com/asgardeo/asgardeo-auth-react-sdk
-    samplePath: https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip
+    sdkPath: /get-started/try-your-own-app/react/
+    samplePath: /get-started/try-samples/qsg-spa-react/
     cssClass: react
   
   - name: Java EE-OIDC
     icon: images/technologies/oidc-idp-illustration.png
-    sdkPath: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent
-    samplePath: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war
+    sdkPath: /get-started/try-your-own-app/java-ee-oidc/
+    samplePath: /get-started/try-samples/qsg-oidc-webapp-java-ee/
     cssClass: oidc
   
   - name: Java EE-SAML
     icon: images/technologies/saml-logo.svg
-    sdkPath: https://github.com/asgardeo/asgardeo-tomcat-saml-agent
-    samplePath: https://github.com/asgardeo/asgardeo-tomcat-saml-agent/releases/latest/download/sample-app.war
+    sdkPath: /get-started/try-your-own-app/java-ee-saml/
+    samplePath: /get-started/try-samples/qsg-saml-webapp-java-ee/
     cssClass: saml

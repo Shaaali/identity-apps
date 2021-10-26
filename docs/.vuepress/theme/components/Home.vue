@@ -109,10 +109,10 @@
               <p class="technology-name">{{ technology.name }}</p>
             </div>
             <div class="bottom-button-bar">
-              <a class="sdk-button" :class="technology.cssClass" :href="technology.sdkPath" target="_blank">
+              <a class="sdk-button" :class="technology.cssClass" @click="technology.sdkPath ? navigate(technology.sdkPath) : ''">
                 SDK
               </a>
-              <a class="sample-button" :class="technology.cssClass" :href="technology.samplePath" target="_blank">
+              <a class="sample-button" :class="technology.cssClass" @click="technology.samplePath ? navigate(technology.samplePath) : ''">
                 Sample
               </a>
             </div>
