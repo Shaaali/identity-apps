@@ -36,8 +36,6 @@ Click the **Download sample** button to download the sample. You can also choose
 
 ## Configure the sample
 
-Change the `asgardeo-react-app/src/config.json` file with the relevant values.
-
 Change the `config.json` file found in the `asgardeo-react-app/src` sample folder with the relevant values.
 
 - **clientID** - Add the client id of the registered application. Refer <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain the client ID</a> from the Asgardeo console.
