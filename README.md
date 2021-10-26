@@ -7,7 +7,7 @@ to a static single page website.
 
 ## Setting up locally
 
-Refer [Building Asgardeo docs](https://github.com/wso2-enterprise/asgardeo-docs/wiki/Building-asgardeo-docs) for details on building and running the site locally.
+[Build and run the Asgardeo docs](https://github.com/wso2-enterprise/asgardeo-docs/wiki/Build-and-run-the-docs-locally) locally.
 
 
 ## Developer Guide
