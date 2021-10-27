@@ -36,8 +36,7 @@ Secrets securely store values associated with external APIs. These secret values
         </tr>
         <tr>
             <td>Secret Value</td>
-            <td>This is the value of the secret.  You can enter a value between length 
-            <code>1</code> to <code>2048</code>.</td>
+            <td>You can enter the secret value that is <code>1</code> to <code>2048</code> bits in length.</td>
         </tr>
         <tr>
             <td>Secret Description</td>
