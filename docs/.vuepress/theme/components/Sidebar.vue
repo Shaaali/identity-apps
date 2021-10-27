@@ -48,7 +48,7 @@
     display inline-block
     color var(--text-color)
     font-weight 400
-    font-size 14px
+    font-size 15px
 
   .blogger-info.mobile
     display none
@@ -76,7 +76,7 @@
       @media (max-width $MQMobile)
         padding 0.5rem 0 0.5rem 0
 
-  & > .sidebar-links > li:first-child > div > .sidebar-link
+  & > .sidebar-links > li > div > .sidebar-link
       font-size 15px
       padding 15px 0
 

@@ -42,7 +42,7 @@ export default Vue.extend({
         depth: { type: Number, required: true },
     },
     data: () => ({
-        openGroupIndex: 0,
+        openGroupIndex: null,
     }),
     watch: {
         $route() {
@@ -50,6 +50,8 @@ export default Vue.extend({
         },
     },
     created() {
+        this.$root.$refs.SidebarLinksComponent = this;
+        this.openGroupIndex = -1;
         this.refreshIndex();
     },
     methods: {
@@ -64,6 +66,9 @@ export default Vue.extend({
         isActive(page) {
             return isActive(this.$route, page.regularPath);
         },
+        resetIndex() {
+            this.openGroupIndex = -1;
+        }
     },
 });
 //# sourceMappingURL=SidebarLinks.js.map

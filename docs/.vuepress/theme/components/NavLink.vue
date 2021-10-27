@@ -5,6 +5,7 @@
     :class="{ active }"
     :to="link"
     @focusout="focusoutAction"
+    @click.native="setSideBarIndex()"
   >
     <i v-if="item.icon" :class="`iconfont ${iconPrefix}${item.icon}`" />
     {{ item.text }}

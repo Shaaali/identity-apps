@@ -24,11 +24,6 @@
         class="sidebar-heading"
         @click="$emit('toggle')"
       >
-        <img v-if="item.icon === 'gettingStartedIcon'" src="../assets/icons/gettingStartedIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'applicationsIcon'" src="../assets/icons/applicationsIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'addLoginIcon'" src="../assets/icons/addLoginIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="15" height="15" />
         <span>{{ item.title }}</span>
         <i v-if="item.collapsable" :class="open ? 'down' : 'right'" class="fas fa-angle-right sidebar-caret"></i>
       </p>
@@ -39,11 +34,6 @@
         class="sidebar-heading"
         @click="$emit('toggle')"
       >
-        <img v-if="item.icon === 'gettingStartedIcon'" src="../assets/icons/gettingStartedIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'applicationsIcon'" src="../assets/icons/applicationsIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'addLoginIcon'" src="../assets/icons/addLoginIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'addAuthnIcon'" src="../assets/icons/addAuthnIcon.svg" width="15" height="15" />
-        <img v-else-if="item.icon === 'usersIcon'" src="../assets/icons/usersIcon.svg" width="15" height="15" />
         <span>{{ item.title }}</span>
         <i v-if="item.collapsable" :class="open ? 'down' : 'right'" class="fas fa-angle-right sidebar-caret"></i>
       </p>
@@ -107,8 +97,14 @@
   user-select none
 
   .depth-1 &
-    font-size 14px
+    font-size 15px
     line-height 1.4
+
+  .depth-2 &
+    font-size 15px
+  
+  .depth-3 &
+    font-size 15px
 
   img
     padding-right 0.3em !important
