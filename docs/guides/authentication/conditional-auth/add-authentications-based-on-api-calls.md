@@ -10,12 +10,11 @@ Consider a scenario where the login flow of the application should be stepped up
 
 5. Write your own script which executes an API call to a service endpoint.
 
-6. Click the key icon above the script to create a new secret or add an already created secret to the script. <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script">
-7. Once you click the key icon, use one of the following options from the drop-down menu:
-    - Add an existing secret to the script:
-        - Click the "+" following the secret you wish to add to your script and it will be added to the location specified by your cursor.
+6. Select the location in the script where the secret should be inserted, click the key icon above the script, and use one of the following options:
+     <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script">
 
-    - <a :href="$withBase('/guides/authentication/conditional-auth/configure-conditional-auth/#create-a-new-secret-on-the-console')"> Create a new secret on the console </a>.
+     - If you are adding an already existing secret, click "+" next to the secret in the drop-down menu.
+     - If you need a new secret, you can first <a :href="$withBase('/guides/authentication/conditional-auth/configure-conditional-auth/#create-a-new-secret-on-the-console')">create a new secret</a> and then select the new secret from the drop-down menu.
 
     Now the created secret will be displayed on the dropdown, and if you want to add this new secret to your script, click on the secret from the dropdown and it will be automatically added to the location that your cursor points to in your script.
 
