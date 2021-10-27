@@ -1,6 +1,6 @@
 # Add group-based access control
 
-To control access to your application based on the user's group, you can apply the **Group-Based** conditional authentication template within **Access Control** section. Users are redirected to an error page if the user does not belong to any of the groups configured in the template.
+To control access to your application based on the user's group, you can apply the **Group-Based** conditional authentication template (which is in the **Access Control** section). Users are redirected to an error page if the user does not belong to any of the groups configured in the template.
 
 ## Scenario
 
@@ -83,7 +83,7 @@ Let's look at how this script works.
 
 1. When the first step of the authentication flow is complete, the **onLoginRequest** function retrieves the user from the context. 
 2. The user and the configured list of groups are passed to the `isMemberOfAnyOfGroups` function. 
-3. The `isMemberOfAnyOfGroups` function which is available in Asgardeo by default verifies whether the given user belongs to any of the listed groups. 
+3. The `isMemberOfAnyOfGroups` function, which is available in Asgardeo by default, verifies whether the given user belongs to any of the listed groups. 
 4. If the user belongs to any of the configured groups, the user will be able to log in successfully.
 
 ::: info
