@@ -13,7 +13,7 @@ There are two ways to add a conditional authentication script:
 -  Use a <a :href="$withBase('/guides/authentication/conditional-auth/#script-templates')">predefined template</a>.
 -  Write a <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">new conditional auth script</a>.
 
-## Add a secrets to the script
+## Add a secret to the script
 Secrets securely store values associated with external APIs. These secret values are used in conditional authentication scripts when Asgardeo is required to interact with an external API (service endpoint) during the authentication process. You can securely store these secret values on the Asgardeo console and retrieve them whenever required for conditional authentication. 
 
 ### Create a new secret on the console
