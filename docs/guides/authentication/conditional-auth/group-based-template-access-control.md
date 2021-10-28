@@ -1,6 +1,6 @@
 # Add group-based access control
 
-To control access to your application based on the user's group, you can apply the **Group-Based** conditional authentication template for **Access Control**. Users are redirected to an error page if the user does not belong to any of groups configured in the template.
+To control access to your application based on the user's group, you can apply the **Group-Based** conditional authentication template (which is in the **Access Control** section). Users are redirected to an error page if the user does not belong to any of the groups configured in the template.
 
 ## Scenario
 
@@ -8,7 +8,7 @@ Consider a scenario with two user groups, `manager` and `employee`. Login should
 
 ## Prerequisites
 
--  You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+-  You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
    -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
    -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
    -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
@@ -35,7 +35,7 @@ Consider a scenario with two user groups, `manager` and `employee`. Login should
       <tbody>
          <tr>
             <td><code>groupsToAllowAccess</code></td>
-            <td>An array of user groups that can access the application. For this example scenario, enter <code>manager</code> and <code>employee</code>.</td>
+            <td>An array of user groups that can access the application. For this scenario, enter <code>manager</code> and <code>employee</code>.</td>
          </tr>
       </tbody>
    </table>
@@ -82,8 +82,8 @@ var onLoginRequest = function(context) {
 Let's look at how this script works.
 
 1. When the first step of the authentication flow is complete, the **onLoginRequest** function retrieves the user from the context. 
-2. The user and the configured list of groups are passed to the following function: `isMemberOfAnyOfGroups`. 
-3. This function (which is available in Asgardeo by default) verifies whether the given user belongs to any of the listed groups. 
+2. The user and the configured list of groups are passed to the `isMemberOfAnyOfGroups` function. 
+3. The `isMemberOfAnyOfGroups` function, which is available in Asgardeo by default, verifies whether the given user belongs to any of the listed groups. 
 4. If the user belongs to any of the configured groups, the user will be able to log in successfully.
 
 ::: info
@@ -95,8 +95,8 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who belongs to the specified groups. This user will successfully log in to the application.
+2. Try to log in as a user who belongs to the specified groups. This user will successfully log in to the application.
 3. Log out of the application.
-4. Log in again with a user who does not belong to the specified groups. The user will see the following error.
+4. Log in again as a user who does not belong to the specified groups. The user will see the following error.
     <img :src="$withBase('/assets/img/guides/conditional-auth/auth-failure.png')" alt="authentication failed">
 

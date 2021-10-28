@@ -8,14 +8,17 @@ Consider a scenario where your application has multiple authentication methods c
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, <a :href ="$withBase('/guides/applications/register-oidc-web-app/')">register an application</a>.
+You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
+   -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+   -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+   -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ## Configure the sign-in flow
 
 Follow the steps given below.
 
 1. On the Asgardeo console, click **Develop > Applications**.
-2. Select the application for which the conditional sign-in flow should apply and go to **Sign-in Method**.
+2. Select the application for which the conditional login flow should apply and go to the **Sign-in Method** tab.
 3. Click **Start with default configuration** to define the sign-in flow starting with `username and password`.
 4. Turn on **Conditional Authentication** by switching the toggle.
 
@@ -78,5 +81,5 @@ Follow the steps given below.
 1. Access the application URL.
 2. Try to sign in to the application with an authenticator that is not specified in the script. You will successfully sign in to the application.
 3. Log out of the application.
-4. Sign in with with the authenticator specified in the script. TOTP authentication is prompted.
+4. Sign in with the authenticator specified in the script. TOTP authentication is prompted.
    <img :src="$withBase('/assets/img/guides/conditional-auth/enter-otp-token.png')" width="350"  alt="ip-based-2fa-conditional-auth-totp-page">

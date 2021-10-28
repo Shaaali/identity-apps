@@ -13,7 +13,7 @@ Let's consider the following simplified set of requirements for your business ap
 
 ## Prerequisites
 
--  You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+-  You need an application registered in Asgardeo. If you don't already have one, register one based on the following application types:
    -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
    -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
    -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
