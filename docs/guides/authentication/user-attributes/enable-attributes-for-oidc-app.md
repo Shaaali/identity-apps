@@ -69,6 +69,10 @@ OpenID Connect defines the following scope values that can be used to request cl
 ### Share user attributes with apps
 Asgardeo shares the user attributes, for which the user provided consent, with the application along with the **subject** attribute via the [ID token](#id-token) and the [user info response](#userinfo-response). 
 
+#### Subject Attribute
+
+The subject attribute operates as the unique identifer for a customer user. The application receives this value via the **sub** parameter in the [ID token](#id-token). In OpenID Connect apps, the username is used as the sbject attribute.
+
 #### ID token
 
 Once the <a :href="$withBase('/guides/authentication/oidc/implement-auth-code/#get-tokens')">application calls the token endpoint</a>, Asgardeo sends the ID token in the response. 
