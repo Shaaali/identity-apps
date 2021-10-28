@@ -1,4 +1,4 @@
-# Add authentication based on API calls
+# Add MFA based on API calls
 You can secure the login flow of your applications based on data received from external services.
 
 ## Scenario

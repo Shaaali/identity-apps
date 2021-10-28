@@ -76,8 +76,8 @@
       @media (max-width $MQMobile)
         padding 0.5rem 0 0.5rem 0
 
-  & > .sidebar-links > li:first-child > div > .sidebar-link
-      font-size 15px
+  & > .sidebar-links > li > div > .sidebar-link
+      font-size 14px
       padding 15px 0
 
   & > .sidebar-links
@@ -88,7 +88,7 @@
   // narrow desktop / iPad
   @media (max-width $MQNarrow)
     width $mobileSidebarWidth
-    font-size 15px
+    font-size 14px
 
   @media (min-width ($MQMobile + 1px))
     .theme-container:not(.has-sidebar) &

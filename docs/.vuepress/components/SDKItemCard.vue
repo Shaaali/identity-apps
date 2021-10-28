@@ -6,16 +6,16 @@
         <p class="tech-name" v-text="techName"></p>
         <div class="tech-links">
         <a class="tech-link" @click="navigate(sdkPath)">
-            <i class="fas fa-file-alt"></i>
-            SDK
-        </a>
-        <a class="tech-link" :href="gitUrl" target="_blank">
-            <i class="fab fa-github"></i>
-            Github
+            <i class="fa fa-flask"></i>
+            Try It
         </a>
         <a class="tech-link" :href="appUrl" target="_blank">
             <i class="fas fa-download"></i>
             Sample App
+        </a>
+        <a class="tech-link" :href="gitUrl" target="_blank">
+            <i class="fab fa-github"></i>
+            Github
         </a>
         </div>
     </div>

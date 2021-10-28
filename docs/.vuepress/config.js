@@ -19,7 +19,24 @@ module.exports = config({
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
-        ['meta', {name: 'robots', content: 'noindex, nofollow'}]
+        ['script', {src: '/scripts/analytics.js'}],
+        ['script', {src: '/scripts/hotjar.js'}],
+        ['noscript', {}, 
+            `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+        ],
+        ['script', {}, `
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], d
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PSTXMT');
+        `
+        ]
     ],
 
     base: '/asgardeo/docs/',
@@ -40,15 +57,15 @@ module.exports = config({
         docVersion: "BETA",
         productTitle: "Docs",
         editLinkText: 'Edit this page on Github',
-        logo: '/assets/img/asgardeo-logo-console.svg',
+        logo: '/assets/img/asgardeo-logo-dark.svg',
 
         search: true,
-        // algolia: {
-        //     appId: "FZZ2G9EYKZ",
-        //     // This is search only API key.
-        //     apiKey: "eb6a5c630b8ebd2d4d862a2b0aaa7a67",
-        //     indexName: "asgardeo-algolia"
-        // },
+//         algolia: {
+//             appId: "FZZ2G9EYKZ",
+//             // This is search only API key.
+//             apiKey: "eb6a5c630b8ebd2d4d862a2b0aaa7a67",
+//             indexName: "asgardeo-algolia"
+//         },
         algoliaType: "full",
         Navbar: true,
         blog: false,
@@ -58,20 +75,22 @@ module.exports = config({
         darkmode: 'switch',
         footer: {
             display: true,
-            content: 'Asgardeo Docs | © 2021 WSO2'
+            content: '© ' + new Date().getFullYear() + ' WSO2 Inc. All Rights Reserved'
         },
         git: {
             contributor:false
         },
         pageInfo: false,
+        nextLinks: false,
+        prevLinks: false,
         nav: [
+          {
+            text: "Get Started",
+            link: "/get-started/",
+          },
           {
             text: "Guides",
             link: "/guides/",
-          },
-          {
-            text: 'Quickstarts',
-            link: '/quickstarts/',
           },
         //  These sections are yet not completed. Uncomment as they are implemented
 //          {
@@ -92,9 +111,67 @@ module.exports = config({
 //          }
         ],
         sidebar: {
+            '/get-started/' : [
+                ['', 'Get Started - Overview'],
+                ['create-asgardeo-account.md', 'Create your Account'],
+                {
+                    title: 'Start Integrating Apps',
+                    path: 'start-integrating-apps/',
+                    sidebarDepth: 2,
+                    children:[
+                        {
+                            title: 'Try a Sample App',
+                            prefix: 'try-samples/',
+                            path: 'try-samples/',
+                            sidebarDepth: 2,
+                            children:[
+                                {
+                                    title: 'SPAs',
+                                    children:[
+                                    ['qsg-spa-angular.md', 'Angular'],
+                                    ['qsg-spa-javascript.md', 'Javascript'],
+                                    ['qsg-spa-react.md', 'React'],
+                                    ]
+                                },
+                                {
+                                    title: 'Web Apps',
+                                    children:[
+                                    ['qsg-oidc-webapp-java-ee', 'OIDC Java EE'],
+                                    ['qsg-saml-webapp-java-ee', 'SAML Java EE'],
+                                    ]
+                                },
+                            ]
+                        },      
+                        {
+                            title: 'Try your Own App',
+                            prefix: 'try-your-own-app/',
+                            path: 'try-your-own-app/',
+                            sidebarDepth: 2,
+                            children: [
+                                {
+                                    title: 'SPAs',
+                                    children:[
+                                    ['angular.md', 'Angular'],
+                                    ['javascript.md', 'Javascript'],
+                                    ['react.md', 'React'],
+                                    ]
+                                },
+                                {
+                                    title: 'Web Apps',
+                                    children:[
+                                    ['java-ee-oidc', 'OIDC Java EE'],
+                                    ['java-ee-saml', 'SAML Java EE'],
+                                    ]
+                                },
+                            ]
+                        },
+                    ]
+                },
+                ['asgardeo-use-cases.md', 'Learn by Use Case'],
+ //               ['explore-asgardeo.md', 'Explore Asgardeo'],
+            ],
             '/guides/' : [
-                ['', 'Introduction'],
-                ['get-started/create-organization.md', 'Get Started'],
+                ['', 'Guides - Overview'],
                 {
                     title: 'Applications',
                     prefix: 'applications/',
@@ -143,13 +220,13 @@ module.exports = config({
                         ]
                     },
                     {
-                        title: 'Add Enterprise Login',
+                        title: 'Add Standard-Based Login',
                         prefix: 'enterprise-login/',
                         path: 'enterprise-login/',
                         sidebarDepth: 2,
                         children: [
-                            ['add-oidc-idp-login.md', 'Add login with OIDC'],
-                            ['add-saml-idp-login.md', 'Add login with SAML'],
+                            ['add-oidc-idp-login.md', 'Add login with OIDC IdP'],
+                            ['add-saml-idp-login.md', 'Add login with SAML IdP'],
                         ]
                     },
                     {
@@ -169,13 +246,27 @@ module.exports = config({
                         sidebarDepth: 2,
                         children: [
                             ['configure-conditional-auth.md', 'Set up conditional authentication'],
-                            ['user-age-based-template.md', 'Add user age-based authentication'],
-                            ['group-based-template-access-control.md', 'Add group-based authentication (access control)'],
-                            ['sign-in-option-based-template.md', 'Add sign-in-option-based authentication'],
-                            ['new-device-based-template.md', 'Add device-based authentication'],
-                            ['group-based-template.md', 'Add group-based authentication (adaptive MFA)'],
-                            ['ip-based-template.md', 'Add IP-based authentication'],
-                            ['add-authentications-based-on-api-calls.md', 'Add authentications based on API calls'],
+                            {
+                                title: 'Add Access Control',
+                                path: 'access-control/',
+                                sidebarDepth: 2,
+                                children: [
+                                    ['user-age-based-template.md', 'Age-based access'],
+                                    ['group-based-template-access-control.md', 'Group-based access'],
+                                ]
+                            },
+                            {
+                                title: 'Add Adaptive MFA',
+                                path: 'adaptive-mfa/',
+                                sidebarDepth: 2,
+                                children: [
+                                    ['group-based-template.md', 'MFA based on user group'],
+                                    ['sign-in-option-based-template.md', 'MFA based on sign-in option'],
+                                    ['new-device-based-template.md', 'MFA based on user device'],
+                                    ['ip-based-template.md', 'MFA based on IP address'],
+                                    ['add-authentications-based-on-api-calls.md', 'MFA based on API calls'],
+                                ]
+                            },
                             ['write-your-first-script.md', 'Write a custom authentication script'],
                         ]
                     },
@@ -185,8 +276,8 @@ module.exports = config({
                         prefix: 'oidc/',
                         children: [
                             ['discover-oidc-configs.md', 'Discover OIDC endpoints'],
-                            ['implement-auth-code.md', 'Implement Authorization code flow'],
-                            ['implement-auth-code-with-pkce.md', 'Implement Authorization Code flow with PKCE'],
+                            ['implement-auth-code.md', 'Implement login using the Authorization Code flow'],
+                            ['implement-auth-code-with-pkce.md', 'Implement login using the Authorization Code flow and PKCE'],
                             ['validate-id-tokens.md', 'Validate ID tokens'],
                             ['request-user-info.md', 'Request user information'],
                             ['token-validation-resource-server.md', 'Validate tokens'],
@@ -211,12 +302,10 @@ module.exports = config({
                     path: 'users/',
                     sidebarDepth: 2,
                     children: [
-                        ['owner.md', 'Manage owner'],
                         ['manage-collaborators.md', 'Manage collaborators'],
                         ['manage-customers.md', 'Manage customers'],
-                        ['manage-user-profiles.md', 'Manage user profiles'],
-                        ['manage-sessions.md', 'Manage active sessions'],
                         ['manage-groups.md', 'Manage groups'],
+                        ['manage-sessions.md', 'Manage active sessions'],
                         {
                             title: 'Manage Attributes and Mappings',
                             prefix: 'attributes/',
@@ -260,6 +349,8 @@ module.exports = config({
                         ['manage-login-sessions.md', 'Manage login sessions'],
                         ['self-register.md', 'Self-register'],
                         ['customer-password-recovery.md', 'Password recovery'],
+                        ['enable-totp.md', 'Enroll TOTP'],
+                        ['discover-applications.md', 'Discover applications'],
                     ]
                 },
                 {
@@ -268,45 +359,16 @@ module.exports = config({
                     path: 'your-asgardeo/',
                     sidebarDepth: 2,
                     children: [
-                        ['manage-organizations.md', 'Manage your organizations'],
                         ['asgardeo-self-service.md', 'Self-service'],
                         ['recover-password.md', 'Recover your password'],
+                        ['manage-organizations.md', 'Manage your organizations'],
+                        ['delete-organizations.md', 'Delete your organizations'],
+                        ['delete-your-user-account.md', 'Delete your user account'],
                     ]
                 },
             ],
-            '/quickstarts/' : [
-            {
-                title: 'SPA',
-                children: [
-                    ['/quickstarts/qsg-spa-angular.md', 'Angular'],
-                    ['/quickstarts/qsg-spa-javascript.md', 'Javascript'],
-                    ['/quickstarts/qsg-spa-react.md', 'React'],
-                ]
-            },
-            {
-                title: 'Web App',
-                children: [
-                    ['/quickstarts/qsg-oidc-webapp-java-ee', 'OIDC Java EE'],
-                    ['/quickstarts/qsg-saml-webapp-java-ee', 'SAML Java EE'],
-                ]
-            },
-            ],
             '/sdks/' : [
-            {
-                title: 'SPA',
-                children: [
-                    ['/sdks/angular.md', 'Angular'],
-                    ['/sdks/javascript.md', 'Javascript'],
-                    ['/sdks/react.md', 'React'],
-                ]
-            },
-            {
-                title: 'Web App',
-                children: [
-                    ['/sdks/java-ee-oidc', 'OIDC Java EE'],
-                    ['/sdks/java-ee-saml', 'SAML Java EE'],
-                ]
-            },
+                ['', ''],
             ],
             '/references/' : [
                 ['/references/user-management/user-roles.md', 'Asgardeo user roles'],

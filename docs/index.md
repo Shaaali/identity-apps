@@ -2,76 +2,124 @@
 home: true
 heroText: Asgardeo Documentation
 heroImage: /assets/img/asgardeo-logo.png
-tagline: A developer-first IAM solution, Asgardeo provides simplicity by integrating easily to any application, supporting even the unique and complex requirements.
+tagline: Welcome to the Asgardeo documentation! Within these pages, you will learn how to build a seamless login experience for your applications using Asgardeo.
 homeBannerText: Work In Progress! Bear with us while we perfect our documentation for you.
 actionText: Quick Start →
-actionLink: /guides/
+actionLink: /get-started/
+getStartedText: Get Started
+getStartedLink: /get-started/
+whatIsAsgardeoText: What is Asgardeo
+whatIsAsgardeoLink: /get-started/
 
 features:
-  - title: Manage Your Applications
-    details: Secure your applications using your preferred protocol.
-    link: /guides/applications/
-    icon: padlockIcon
+  - title: Login
+    details: Enable secure login for your applications using Asgardeo as the identity provider.
+    link: /guides/authentication/add-login-to-apps/
+    icon: icons/feature-login.svg
+    cssClass: login
     subLinks:
-      - name: "Web applications"
-        link: /guides/applications/#web-applications
+      - name: "For Single-Page Applications"
+        link: /guides/authentication/add-login-to-single-page-app
           
-      - name: "Single page applications"
-        link: /guides/applications/#sing-page-applications
+      - name: "For Web Applications"
+        link: /guides/authentication/add-login-to-web-app/
+
+  - title: Social Login
+    details: Enable your application users to login with their existing social identities.
+    link: /guides/authentication/social-login/
+    icon: icons/feature-social-login.svg
+    cssClass: social-login
+    subLinks:
+      - name: "Facebook Login"
+        link: /guides/authentication/social-login/add-facebook-login/
+
+      - name: "Github Login"
+        link: /guides/authentication/social-login/add-github-login/
+
+      - name: "Google Login"
+        link: /guides/authentication/social-login/add-google-login/
+
+  - title: Standard-Based IDPs
+    details: Enable your application users to login using a standard-based identity provider.
+    link: /guides/authentication/enterprise-login/
+    icon: icons/feature-enterprise-idp.svg
+    cssClass: enterprise-idp
+    subLinks:
+      - name: "SAML IdPs"
+        link: /guides/authentication/enterprise-login/add-saml-idp-login/
       
-      - name: "Native applications"
-        link: 
+      - name: "OpenID Connect IdPs"
+        link: /guides/authentication/enterprise-login/add-oidc-idp-login/
 
-  - title: Configure Federated Login
-    details: Let users log in to applications with an Identity Provider of their choice.
-    link: 
-    icon: federatedLoginIcon
+  - title: Multi-Factor Authentication
+    details: Add strong authentication to your application by enabling multiple authentication factors.
+    link: /guides/authentication/mfa/
+    icon: icons/feature-mfa.svg
+    cssClass: mfa
     subLinks:
-      - name: "Social login"
-        link: /guides/authentication/social-login/
+      - name: "TOTP"
+        link: /guides/authentication/mfa/add-totp-login/
+      
+      - name: "Email OTP"
+        link: /guides/authentication/mfa/add-emailotp-login/
 
-      - name: "Enterprise login"
-        link: /guides/authentication/enterprise-login/
-
-  - title: Add Strong Authentication
-    details: Protect your user login using multi-factor and adaptive authentication.
-    link:
-    icon: addAuthnIcon
+  - title: Conditional Authentication
+    details: Add strong authentication to your application by customizing the login flow using a script.
+    link: /guides/authentication/conditional-auth/
+    icon: icons/feature-conditional-access.svg
+    cssClass: conditional-access
     subLinks:
-      - name: "Multi-factor authentication"
-        link: /guides/authentication/mfa/
+      - name: "Access Control"
+        link: /guides/authentication/conditional-auth/access-control/
 
-      - name: "Conditional authentication"
-        link: /guides/authentication/conditional-auth/
-
-  - title: Manage users
-    details: Onboard users and collectively manage their access
+      - name: "Adaptive MFA"
+        link: /guides/authentication/conditional-auth/adaptive-mfa/
+      
+      - name: "Custom Authentication Flows"
+        link: /guides/authentication/conditional-auth/write-your-first-script/
+  
+  - title: Users
+    details: Manage users in your organizations and enable users to manage their own profiles.
     link: /guides/users/
-    icon: usersIcon
+    icon: icons/feature-users.svg
+    cssClass: users
     subLinks:
-      - name: "Users"
-        link: /guides/users/#user-accounts
+      - name: "Collaborators"
+        link: /guides/users/manage-collaborators/
       
-      - name: "Groups"
-        link: /guides/users/manage-groups/
-        
-      - name: "Roles"
-        link: /references/user-management/user-roles/
+      - name: "Customers"
+        link: /guides/users/manage-customers/
+      
+      - name: "User Self-Service"
+        link: /guides/user-self-service/
 
-services:
-    - title: Supported Integrations
-      details: Checkout the supported integrations with third-party systems to customize your identity flows.
-      link:
-      icon: supportedPluginsIcon
-
-    - title: Security and Compliance
-      details: Learn how Asgardeo Facilitate the security and privacy aspects of consumer identity and access management (CIAM).
-      link:
-      icon: securityComplianceIcon
-
-    - title: Solution Patterns 
-      details: Learn how common IAM challenges can be solved by Asgardeo and how you can meet your identity management needs.
-      link:
-      icon: solutionsIcon
----
-
+technologies:
+  - name: Angular
+    icon: images/technologies/angular-logo.svg
+    sdkPath: /get-started/try-your-own-app/angular/
+    samplePath: /get-started/try-samples/qsg-spa-angular/
+    cssClass: angular
+  
+  - name: Javascript
+    icon: images/technologies/javascript-logo.svg
+    sdkPath: /get-started/try-your-own-app/javascript/
+    samplePath: /get-started/try-samples/qsg-spa-javascript/
+    cssClass: javascript
+  
+  - name: React
+    icon: images/technologies/react-logo.svg
+    sdkPath: /get-started/try-your-own-app/react/
+    samplePath: /get-started/try-samples/qsg-spa-react/
+    cssClass: react
+  
+  - name: Java EE-OIDC
+    icon: images/technologies/oidc-idp-illustration.png
+    sdkPath: /get-started/try-your-own-app/java-ee-oidc/
+    samplePath: /get-started/try-samples/qsg-oidc-webapp-java-ee/
+    cssClass: oidc
+  
+  - name: Java EE-SAML
+    icon: images/technologies/saml-logo.svg
+    sdkPath: /get-started/try-your-own-app/java-ee-saml/
+    samplePath: /get-started/try-samples/qsg-saml-webapp-java-ee/
+    cssClass: saml

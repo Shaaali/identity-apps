@@ -7,9 +7,11 @@ When bot detection is enabled, Asgardeo enforces reCAPTCHA validation in the fol
 - Customer password recovery
 - Customer self registration
 
-To enable reCAPTCHA validation in your organization:
+::: info
+This feature is enabled by default for all the organizations in Asgardeo. You will not be able to disable this for your organization at present.
+:::
+
+To check reCAPTCHA settings:
 1. On the Asgardeo console, click **Manage > Account Security**.
-2. Go to **Bot Detection**.
-3. Click **Configure** to open the **Bot Detection** security page.
-4. Turn on **Enabled** to enable this configuration. 
+2. Click **Configure** to open the **Bot Detection** security page.
    <img :src="$withBase('/assets/img/guides/organization/account-security/bot-detection/enable-bot-detection.png')" alt="Enable bot detection">

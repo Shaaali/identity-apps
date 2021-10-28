@@ -12,7 +12,7 @@
           display none
 
   & > .sidebar-links > li:first-child > a
-    font-size 15px
+    font-size 14px
     line-height 1.9
     padding 11.5px 0
 

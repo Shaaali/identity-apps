@@ -1,20 +1,22 @@
 ---
-breadcrumb: true
+breadcrumb: false
 prev: false
 next: false
-pageClass: enterprise-login-index
-heading: Add Enterprise Login
-subHeading: Add enterprise login to your applications with Asgardeo
-enterpriseIDPs:
+search: true
+secondarySearch: false
+pageClass: item-index-page
+heading: Add Standard-Based Login
+subHeading: Add login to your applications using an IdP based on the authentication standard
+items:
     - name: OpenID Connect
       icon: images/technologies/oidc-idp-illustration.png
       path: /guides/authentication/enterprise-login/add-oidc-idp-login/  
       
     - name: SAML
-      icon: images/technologies/saml-idp-illustration.png
+      icon: images/technologies/saml-logo.svg
       path: /guides/authentication/enterprise-login/add-saml-idp-login/
 ---
 
-# Add Enterprise Login
+# Add Standard-Based Login
 
-<EnterpriseLoginOverview/>
+<CardView/>

@@ -2,7 +2,7 @@
 
 Admins can create multiple organizations via the Asgardeo console and switch between the created organizations. Users or the applications created in one organization cannot access the other organization's resources unless they are onboarded to that organization.
 
-The admin who creates the organization is the <a :href="$withBase('/guides/users/owner/')">owner</a> of the organization.
+The admin who creates the organization is the owner of the organization.
 
 ## Create an organization
 You can create a new organization via the Asgardeo console.
@@ -14,7 +14,7 @@ You can create a new organization via the Asgardeo console.
     ::: warning
       The organization name should be unique and you can't change the organization name once it is created. 
     :::
-    <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization-form.png')" alt="Create new organization form">
+    <img :src="$withBase('/assets/img/guides/organization/manage-organizations/create-new-organization-form.png')" alt="Create new organization form" width="300">
 4. Click **Create**.
 
 Now a new organization is created and you can access your workspace. You can start onboarding users and applications to fulfill your organizational requirements.
