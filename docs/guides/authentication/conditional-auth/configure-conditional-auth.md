@@ -49,4 +49,4 @@ Secrets securely store values associated with external APIs. These secret values
 ### Delete an existing secret
 1. Enable conditional authentication and click the key icon above the script to delete a secret. <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script"> 
 2. Click the trash icon next to the secret you wish to delete.
-2. Select the checkbox and confirm your action.
+3. Select the checkbox and confirm your action.
