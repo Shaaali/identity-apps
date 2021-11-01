@@ -78,3 +78,18 @@ You need to have an application registered in Asgardeo. If you don't already hav
 4. Click **Add Authentication** on the step, select your Github identity provider, and click **Add**.
 
    <img :src="$withBase('/assets/img/guides/idp/github-idp/add-github-federation-with-basic.png')" alt="Add Github login in Asgardeo">
+
+## Try it out
+
+Follow the steps given below 
+
+1. Access the application URL.
+2. Select **Login** to log in to your application.
+3. Select **Sign in with Github**.
+
+<img :src="$withBase('/assets/img/guides/idp/github-idp/sign-in-with-github.png')" alt="Login with Github" width=300>
+
+4. Enter credentials of an existing Github user to login.
+::: info
+Once a customer successfully logs in with Github, a customer account will be created in the Asgardeo console. This user will be managed by Github.
+:::
