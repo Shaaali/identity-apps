@@ -503,6 +503,10 @@ Contains the authentication step information. May be a null or invalid step numb
 
 <table>
     <tr>
+      <td><code>user.uniqueId</code></td>
+      <td>The unique identifier of the user.</td>
+    </tr>
+    <tr>
       <td><code>user.username</code></td>
       <td>The user’s username.</td>
     </tr>

@@ -1,4 +1,4 @@
-# Add user age-based authentication
+# Add user age-based access control
 
 To control access to your application based on the user's age, you can apply the **Age-Based** conditional authentication template. The age of the user is calculated using the `date of birth` attribute in the user's profile. Users are redirected to an error page if the date of birth is not specified in the user profile or if the user's age is below the minimum age configured in the template.
 
@@ -8,7 +8,7 @@ Consider a scenario where users who are younger than 18 years should be prevente
 
 ## Prerequisites
 
--   You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+-   You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
     -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
     -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
@@ -49,11 +49,21 @@ Consider a scenario where users who are younger than 18 years should be prevente
 
 ## How it works
 
-Shown below is the script of the user age-based conditional authentication template.
+Shown below is the user age-based conditional authentication template.
 
 ```js
+// This script will only allow login to application if the user's age is over configured value
+// The user will be redirected to an error page if the date of birth is not present or user is below configured value
+
 var ageLimit = 18;
+
+// Error page to redirect unauthorized users,
+// can be either an absolute url or relative url to server root, or empty/null
+// null/empty value will redirect to the default error page
 var errorPage = '';
+
+// Additional query params to be added to the above url.
+// Hint: Use i18n keys for error messages
 var errorPageParameters = {
     'status': 'Unauthorized',
     'statusMsg': 'You need to be over ' + ageLimit + ' years to login to this application.'
@@ -67,13 +77,13 @@ var validateDOB = function (dob) {
     return dob.match(/^(\d{4})-(\d{2})-(\d{2})$/);
 };
 
-var onLoginRequest = function (context) {
+var onLoginRequest = function(context) {
     executeStep(1, {
         onSuccess: function (context) {
             var underAge = true;
             // Extracting user store domain of authenticated subject from the first step
             var dob = context.currentKnownSubject.localClaims[dateOfBirthClaim];
-            Log.debug('DOB of user ' + context.currentKnownSubject.identifier + ' is : ' + dob);
+            Log.debug('DOB of user ' + context.currentKnownSubject.uniqueId + ' is : ' + dob);
             if (dob && validateDOB(dob)) {
                 var birthDate = new Date(dob);
                 if (getAge(birthDate) >= ageLimit) {
@@ -81,14 +91,14 @@ var onLoginRequest = function (context) {
                 }
             }
             if (underAge === true) {
-                Log.debug('User ' + context.currentKnownSubject.identifier + ' is under aged. Hence denied to login.');
+                Log.debug('User ' + context.currentKnownSubject.uniqueId + ' is under aged. Hence denied to login.');
                 sendError(errorPage, errorPageParameters);
             }
         }
     });
 };
 
-var getAge = function (birthDate) {
+var getAge = function(birthDate) {
     var today = new Date();
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
@@ -117,7 +127,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who is above 18 years of age. This user will successfully log in to the application.
+2. Try to log in as a user who is above 18 years of age. This user will successfully log in to the application.
 3. Log out of the application.
 4. Log in again with a user who is below 18 years. The user will see the following error.
-    <img :src="$withBase('/assets/img/guides/conditional-auth/user-aged-based-conditional-auth-failure.png')" alt="user-aged-based-conditional-auth-failure-error-page">
+    <img :src="$withBase('/assets/img/guides/conditional-auth/auth-failure.png')" alt="authentication failed">

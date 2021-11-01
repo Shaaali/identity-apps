@@ -1,6 +1,6 @@
 # Request user information
 
-User information is encoded inside the ID token returned along with the access token. In addition to that, OpenID Connect provides the [userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) to obtain additional user
+User information is encoded inside the ID token returned along with the access token. In addition to that, OpenID Connect provides the [userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) to obtain user
 information as a payload. The application should send a request with the access token to invoke the userinfo endpoint.
 
 **Userinfo endpoint**

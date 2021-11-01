@@ -29,10 +29,10 @@ Listed below are additional settings.
 
 ### User info endpoint URL
 
-The [OpenID Connect standard userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) of the external identity provider. If this URL is not given, user attributes are taken from the ID token in the token request from the external IdP.
+The [OpenID Connect standard userinfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) of the external identity provider. If this URL is not given, user attributes are taken from the ID token of the token response received from the external IdP.
 
 ### Logout URL
-The [OpenID Connect standard logout endpoint](https://openid.net/specs/openid-connect-rpinitiated-1_0.html#Terminology) of the external identity provider. If this URL is not given, Asgardeo sends logout requests to the external IdP when a user logs out from the connected application.
+The [OpenID Connect standard logout endpoint](https://openid.net/specs/openid-connect-rpinitiated-1_0.html#Terminology) of the external identity provider. If this URL is given, Asgardeo sends logout requests to the external IdP when a user logs out from the connected application.
 
 ### Additional query parameters
 
@@ -96,4 +96,4 @@ Here Asgardeo sends the fixed query param to the external identity provider in t
       <br>
 
 ### Enable HTTP basic auth for client authentication
-Specify whether to enable HTTP basic authentication for the token request. Otherwise, client credentials are sent in the request body. 
+Specify whether to enable HTTP basic authentication for the token request. Otherwise, client credentials are sent in the request body instead of the HTTP header. 

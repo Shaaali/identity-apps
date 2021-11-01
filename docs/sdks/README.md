@@ -2,36 +2,37 @@
 sidebar: false
 pageClass: sdks-page
 sdkContent:
-  - name: Single Page Applications
+  - name: SDKs for Single-Page Applications
     technologies:
     - icon: images/technologies/angular-logo.svg
       name: Angular
-      sdkPath: /sdks/angular/
+      sdkPath: /get-started/try-your-own-app/angular/
       gitUrl: https://github.com/asgardeo/asgardeo-auth-angular-sdk
       appUrl: https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip
 
     - icon: images/technologies/javascript-logo.svg
       name: Javascript
-      sdkPath: /sdks/javascript/
+      sdkPath: /get-started/try-your-own-app/javascript/
       gitUrl: https://github.com/asgardeo/asgardeo-auth-spa-sdk
       appUrl: https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/latest/download/asgardeo-html-js-app.zip
 
     - icon: images/technologies/react-logo.svg
       name: React
-      sdkPath: /sdks/react/
+      sdkPath: /get-started/try-your-own-app/react/
       gitUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk
       appUrl: https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip
 
-  - name: Web Application
+  - name: SDKs for Web Applications
     technologies:
-    - icon: images/technologies/java-logo.svg
+    - icon: images/technologies/oidc-logo.svg
       name: Java EE - OIDC
-      sdkPath: /sdks/java-ee-oidc/
+      sdkPath: /get-started/try-your-own-app/java-ee-oidc/
       gitUrl: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent
       appUrl: https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war
-    - icon: images/technologies/java-logo.svg
+
+    - icon: images/technologies/saml-logo.svg
       name: Java EE - SAML
-      sdkPath: /sdks/java-ee-saml/
+      sdkPath: /get-started/try-your-own-app/java-ee-saml/
       gitUrl: https://github.com/asgardeo/asgardeo-tomcat-saml-agent
       appUrl: https://github.com/asgardeo/asgardeo-tomcat-saml-agent/releases/latest/download/sample-app.war
 

@@ -4,53 +4,27 @@ pageClass: intro-page
 
 # Docs
 
-# Asgardeo Overview
+# Guides Overview
 
-Asgardeo is an identity as a service (IDaaS) solution that provides a fully integrated developer experience to create
- seamless login experiences in minutes. You can get started with common IAM use cases with no installation or maintenance hassles.
+The guides in this section provide the instructions for building identity and access management uses cases and managing them.
 
-We provide,
-* **Simplified IAM integrations:** With out-of-the-box "integrations as a service" model, you can easily integrate
- any 3rd party apps and services without building from scratch. Asgardeo can integrate with any application, be it
- web, mobile, legacy, homegrown, and various systems that enable CRM, data management, and consent management.
-  
-* **Rich developer ecosystem:** You can simply cater to your unique and complex identity requirements with the use of
- our prebuilt SDKs, IDE integration capabilities, and templated scripts. We are secure, simple, and stackable to
- enable your team to deliver a seamless user experience.
+## Developer guide
 
-* **Scalable authentication:** With Asgardeo, you can experience the simplicity in adding authentication to any
- application, easy onboarding, and managing users for secure access. With the user store as a service, users can be
- easily onboarded and managed reducing complexities or set up time.
+If you are an application developer, you can integrate your applications with Asgardeo to implement identity and access management use cases for your application.
 
-## Core use cases
+See the following sections for details:
 
-Let's take a look at the core use cases of Asgardeo.
+-   <a :href="$withBase('/guides/applications/')">Applications</a>
+-   <a :href="$withBase('/guides/authentication/')">Authentication</a>
 
-* **Single sign on**
-With Asgardeo you can enable users to provide their credentials once and obtain access to multiple applications. Thus
- they do not have the issue of remembering multiple username/password pairs to access multiple services. User
- identities are managed at a central point. This is more secure, less complex, and easily manageable.
+## Administration guide
 
-* **Identity federation**
-Use Asgardeo to allow your users federated access to multiple systems across multiple trust domains using open
- identity standards. With Bring Your Own Identity (BYOID) approach, we provide social login with well-known identity
- providers.
+The adminstration guides cover the topics related to managing the users in your organizations and other organization settings.
 
-* **Adaptive and multi-factor authentication**
-Use Asgardeo to ensure secure access for your users by enabling adaptive and multi-factor authentication (MFA). You
- can apply the right level of security to each and every login request based on the user’s devices, networks,
- locations, and usage contexts instead of having a pre-configured static login flow for everyone to follow, under all
- circumstances.
-  
-* **User management**
-You can manage user identities securely and efficiently within Asgardeo. This includes CRUD operations on users,
- controlling user activity through permissions, managing groups, defining authentication policies, managing external
- user stores, manual/automatic log-out, and resetting user passwords.
-  
-* **Self-service capabilities**
-Asgardeo provides self-service interfaces for users to self-register, reset passwords, and manage their user accounts
- with ease.
-  
-* **Easy consent management**
-With Asgardeo your users can selectively opt-in/opt-out on which user attributes they want to share with applications,
- easily review the consents they have provided for each application, and can revoke one or many of them as required.
+-   <a :href="$withBase('/guides/users/')">User Management</a>
+-   <a :href="$withBase('/guides/user-accounts/')">User Account Management</a>
+-   <a :href="$withBase('/guides/user-self-service/')">User Self-Service</a>
+
+## Your Asgardeo guide
+
+Manage your Asgardeo organization and your administration user account. See the topics in the <a :href="$withBase('/guides/your-asgardeo/')">Your Asgardeo</a> section for details.

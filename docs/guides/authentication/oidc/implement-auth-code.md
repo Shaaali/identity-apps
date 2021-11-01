@@ -48,7 +48,7 @@ https://api.asgardeo.io/t/bifrost/oauth2/authorize?response_type=code&client_id=
   </tr>
   <tr>
     <td><code>redirect_uri</code><Badge text="Required" type="mandatory"/></td>
-    <td>This is where the response is redirected to at the end of the process. This needs to be the same as the original login request.</td>
+    <td>This is where the response is redirected to at the end of the process. This needs to be the same as one of the URLs given in the registered apps.</td>
   </tr>
   <tr>
     <td><code>client_id</code><Badge text="Required" type="mandatory"/></td>

@@ -35,7 +35,7 @@ Apart from client authentication, the revocation request has some other paramete
   </tr>
    <tr>
       <td><code>token</code><Badge text="Required" type="mandatory"/></td>
-      <td>The token you want to inspect.</td>
+      <td>The token you want to revoke.</td>
     </tr>
   <tr>
     <td><code>token_type_hint</code><Badge text="Optional" type="optional"/></td>

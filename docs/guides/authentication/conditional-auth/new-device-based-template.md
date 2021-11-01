@@ -1,8 +1,8 @@
-# Add device-based authentication
+# Add MFA based on user device
 
 You can apply the **New-Device-Based** conditional authentication template to your application to enable a more secure login flow for users who log in from a previously unused device.
 
-When the user signs in from such a device, this template enables two-factor authentication and/or sends an email notification when the user passes the first authentication step. A cookie is used to identify whether the device has been used before. When the cookie expires (this expiry time is specified in the template), the same browser or device is considered a new device.
+When the user signs in from a previously unused device, this template enables two-factor authentication and/or sends an email notification when the user passes the first authentication step. A cookie is used to identify whether the device has been used before. When the cookie expires (this expiry time is specified in the template), the same browser or device is considered a new device.
 
 ## Scenario
 
@@ -15,7 +15,7 @@ An email should also be sent to the customer with details of the login attempt.
 
 ## Prerequisites
 
-You need an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
 
 -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
@@ -32,7 +32,7 @@ You need an application registered in Asgardeo. If you don't already have one, r
     -   Step 1: Username and Password
     -   Step 2: TOTP
 
-7. Update the following parameter in the script.
+7. Update the following parameters in the script.
 
     <table>
         <thead>
@@ -64,6 +64,9 @@ You need an application registered in Asgardeo. If you don't already have one, r
 Shown below is the script of the device-based conditional authentication template.
 
 ```js
+// This script will step up authentication and send email notification in case of
+// a user being logging in from a new device (identified by a cookie).
+
 // Amount of time in seconds to remember a device. Set to 2 years below.
 var deviceRememberPeriod = 60 * 60 * 24 * 365 * 2;
 
@@ -80,31 +83,31 @@ var stepUpAuthentication = true;
 var emailTemplate = 'UnseenDeviceLogin';
 
 
-var onLoginRequest = function (context) {
+var onLoginRequest = function(context) {
     executeStep(1, {
         onSuccess: function (context) {
             subject = context.currentKnownSubject;
             if (!validateCookie(context, subject)) {
-                Log.debug('New device login for ' + subject.identifier);
+                Log.debug('New device login with ' + subject.uniqueId);
 
                 if (sendNotification === true) {
                     var templatePlaceholders = {
-                        'username': subject.identifier,
+                        'username': subject.uniqueId,
                         'login-time': new Date().toUTCString()
                     };
                     var isSent = sendEmail(subject, emailTemplate, templatePlaceholders);
                     if (isSent) {
-                        Log.debug('New device login notification sent to ' + subject.identifier);
+                         Log.debug('New device login notification sent to ' + subject.uniqueId);
                     } else {
-                        Log.debug('New device login notification sending failed to ' + subject.identifier);
+                         Log.debug('New device login notification sending failed to ' + subject.uniqueId);
                     }
                 }
 
                 if (stepUpAuthentication === true) {
-                    Log.debug('Stepping up authentication due to a new device login for ' + subject.identifier);
+                    Log.debug('Stepping up authentication due to a new device login with ' + subject.uniqueId);
                     executeStep(2, {
                         onSuccess: function (context) {
-                            setCookie(context.response, cookieName, subject.identifier, {
+                            setCookie(context.response, cookieName, subject.uniqueId, {
                                 'sign': true,
                                 'max-age': deviceRememberPeriod,
                                 'sameSite': 'LAX'
@@ -117,10 +120,10 @@ var onLoginRequest = function (context) {
     });
 };
 
-// Validate if the user has a valid cookie with the value as subject's username
-var validateCookie = function (context, subject) {
+//Validate if the user has a valid cookie with the value as subject's username
+var validateCookie = function(context, subject) {
     var cookieVal = getCookieValue(context.request, cookieName, {'validateSignature': true});
-    return subject.identifier === cookieVal;
+    return subject.uniqueId === cookieVal;
 };
 ```
 

@@ -8,12 +8,11 @@ You can configure the number of consecutive failed login attempts that should be
 
 To configure login attempts security:
 1. On the Asgardeo console, click **Manage > Account Security**.
-2. Go to **Login Attempts Security**.
-3. Click **Configure** to open the **Login Attempts Security** page.
-4. Turn on **Enabled** to enable this configuration.  
+2. Click **Configure** to open the **Login Attempts Security** page.
+3. Turn on **Enabled** to enable this configuration.  
    <img :src="$withBase('/assets/img/guides/organization/account-security/login-attempts-security/disable-login-attempts-security.png')" alt="Enable login attempts security">
-5. Configure the below settings if you want to change how login attempts security works by default.
-   <img :src="$withBase('/assets/img/guides/organization/account-security/login-attempts-security/configure-login-attempts-security.png')" alt="View account security options">
+4. Configure the settings below if you want to change how login attempts security works by default.
+   <img :src="$withBase('/assets/img/guides/organization/account-security/login-attempts-security/configure-login-attempts-security.png')" width="800" alt="View account security options">
    <table>
       <tbody>
          <tr>
@@ -32,7 +31,7 @@ To configure login attempts security:
       </tr>
       </tbody>
    </table>
-6. Click **Update** once you configure the required settings.
+5. Click **Update** once you configure the required settings.
 
 ### How it works
 
@@ -53,8 +52,6 @@ Based on the above settings, let's see how account lock happens in Asgardeo when
 ``` no-line-numbers
 Account unlock timeout = Account lock duration * (Account lock duration increment factor ^ failed login attempts)
 ```
-
-<br>
 
 ## Disable login attempts security
 

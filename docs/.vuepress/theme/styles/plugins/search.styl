@@ -1,18 +1,32 @@
 .navbar
   .search-box
     height calc(2rem + 4px)
-    margin-left 0.25rem
+    margin-right 0px
+    padding-right 0px
 
     input
       margin-top 1px
       margin-bottom 1px
       border-color transparent
       border-radius 0.25em
+      background-color var(--feature-bgcolor)
+
+      .has-sidebar &
+        width 13rem
+
+        @media (max-width $MQNarrow)
+          width 0
 
       &:focus
-        width 15rem
-        background-color var(--bgcolor)
-        border-color var(--accent-color)
+        width 11rem
+        border-color transparent
+        background-color #FDEFE8
+
+        .has-sidebar &
+          width 15rem
+
+          @media (max-width $MQNarrow)
+            width 4rem
 
       @media (max-width $MQNarrow)
         left 0

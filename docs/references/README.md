@@ -1,11 +1,11 @@
 # References
 
-This section provides you with the references that might help you while working with Asgardeo. This includes concepts related to the features Asgardeo provides, catalogued content for convenience, detailed explanations on why certain defined functions and configurations exist and how you can make use of them. 
+See the topics in this section for references that will help you while working with Asgardeo. This includes concepts related to Asgardeo features, configuration details, and other resources. 
 
-- Get to know all about the types of user roles in Asgardeo and what permissions each role has from <a :href="$withBase('/references/user-management/user-roles/')">Asgardeo user roles</a>. 
+- <a :href="$withBase('/references/user-management/user-roles/')">User roles in Asgardeo</a> and their associated permissions.
 
-- Configure the <a :href="$withBase('/references/app-settings/')"> OpenID connect or SAML protocol related settings</a> of your application in Asgardeo.
+- <a :href="$withBase('/references/app-settings/')">OpenID Connect and SAML settings</a> for applications.
 
-- Configure the <a :href="$withBase('/references/idp-settings/')"> OpenID enterprise IdP or SAML IdP related settings </a> in Asgardeo. 
+- <a :href="$withBase('/references/idp-settings/')">OpenID Connect and SAML settings</a> for enterprise identity providers in Asgardeo. 
 
-- Understand the different API references you need to know to write your own conditional authentication script from <a :href="$withBase('/references/conditional-auth/api-reference/')">Conditional authentication - API reference</a>. 
+- The <a :href="$withBase('/references/conditional-auth/api-reference/')">API references</a> you need for writing conditional authentication scripts. 

@@ -16,7 +16,7 @@ Asgardeo supports some OpenID Connect attributes by default. You can add new Ope
 2. Click **OpenID Connect**.
 3. Click **New Attribute**.
 4. Enter values for the following properties: 
-   <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/add-oidc-attribute-mapping.png')" alt="Add OpenID Connect attributes">
+   <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/add-oidc-attribute-mapping.png')" alt="Add OpenID Connect attributes" width="500">
    <table>
          <tbody>
            <tr>

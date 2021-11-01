@@ -18,7 +18,7 @@ To configure password recovery:
              </tr>
              <tr>
                 <td><b>Recovery link expiry time</b></td>
-                <td>Specifies password recovery link expiry time in minutes. If you enter 60 min, password recovery email notification will be expired after 60 min.</td>
+                <td>Specifies password recovery link expiry time in minutes. If you enter 60 min, the password recovery email notification will expire after 60 min.</td>
            </tr>
           </tbody>
        </table>

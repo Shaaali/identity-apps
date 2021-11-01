@@ -47,6 +47,9 @@ export default Vue.extend({
             // eslint-disable-next-line vue/require-explicit-emits
             this.$emit("focusout");
         },
+        setSideBarIndex() {
+            this.$root.$refs.SidebarLinksComponent.resetIndex();
+        }
     },
 });
 //# sourceMappingURL=NavLink.js.map
