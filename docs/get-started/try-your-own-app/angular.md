@@ -59,6 +59,10 @@ Provide the following values to the `forRoot()` function of `AsgardeoAuthModule`
     <td><code>signOutRedirectURL</code></td>
     <td>This is the URL the app redirects to after user logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
   </tr>
+  <tr>
+    <td><code>scope</code></td>
+    <td>This specifies the user's information that the application requires to access. Ex: <code>openid</code>, <code>profile</code> and <code>email</code>.</td>
+  </tr>
 </table>
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
@@ -81,7 +85,8 @@ import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
             signInRedirectURL: "https://localhost:4200",
             signOutRedirectURL: "https://localhost:4200",
             clientID: "<Client ID>",
-            serverOrigin: "https://dev.api.asgardeo.io/t/<organization_name>"
+            serverOrigin: "https://dev.api.asgardeo.io/t/<organization_name>",
+            scope: [ "openid","profile" ]
         })
     ],
     providers: [

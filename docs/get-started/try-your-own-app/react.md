@@ -55,6 +55,10 @@ import { AuthProvider } from "@asgardeo/auth-react";
     <td><code>signOutRedirectURL</code></td>
     <td>This is the URL the app redirects to after user logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
   </tr>
+  <tr>
+    <td><code>scope</code></td>
+    <td>This specifies the user's information that the application requires to access. Ex: <code>openid</code>, <code>profile</code> and <code>email</code>.</td>
+  </tr>
 </table>
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
@@ -70,7 +74,8 @@ const Index = () => (
             signInRedirectURL: "http://localhost:5000",
             signOutRedirectURL: "http://localhost:5000",
             clientID: "<Client_ID>",
-            serverOrigin: "https://dev.api.asgardeo.io/t/<Organization_name>"
+            serverOrigin: "https://dev.api.asgardeo.io/t/<Organization_name>",
+            scope: [ "openid","profile" ]
         } }
     >
         { /* Rest of your application.  */ }
