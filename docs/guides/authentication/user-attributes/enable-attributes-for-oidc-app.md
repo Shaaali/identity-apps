@@ -71,7 +71,7 @@ Asgardeo shares the user attributes, for which the user provided consent, with t
 
 #### Subject Attribute
 
-The subject attribute operates as the unique identifer for a customer user. The application receives this value via the **sub** parameter in the [ID token](#id-token). In OpenID Connect apps, the username is used as the sbject attribute.
+The subject attribute is the unique identifer for a customer user. The application receives this value via the **sub** parameter in the [ID token](#id-token). In Asgardeo the user id assigned to a customer is used as the subject attribute. 
 
 #### ID token
 
