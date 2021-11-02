@@ -438,6 +438,16 @@ module.exports = config({
             buttonIconTitle: "Copy to clipboard",
             buttonAlign: "top",
             buttonColor: "#888"
+        }],
+        ['robots', { 
+            host: "https://wso2.com/asgardeo/docs",
+            sitemap: "/sitemap.xml",
+            policies: [
+                {
+                    userAgent: '*',
+                    allow: '/'
+                }
+            ]
         }]
     ]
 });
