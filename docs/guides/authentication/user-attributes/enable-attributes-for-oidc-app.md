@@ -71,7 +71,7 @@ Asgardeo shares the user attributes, for which the user provided consent, with t
 
 #### Subject Attribute
 
-The subject attribute is the unique identifer for a customer. The application receives this value via the **sub** parameter in the [ID token](#id-token). In Asgardeo, the user id assigned to a customer is used as the subject attribute. 
+The subject attribute is the unique identifer for a customer. The application receives this value via the **sub** parameter in the [ID token](#id-token). In Asgardeo, the user ID assigned to a customer is used as the subject attribute. 
 
 #### ID token
 
