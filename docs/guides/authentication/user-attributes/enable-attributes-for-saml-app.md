@@ -49,9 +49,13 @@ To define some other attributes as the subject:
 3. Select one attribute as the subject from the **Subject attribute** list.
 4. Click **Update**.
 
-### Disable the consent screen
+### Get consent for user attributes
 
-<CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/disable-user-consent.md'/>
+When logging in to an application, Asgardeo will prompt the customer for consent to share user attributes with the application. Customers can allow applications to access user attributes or deny access to all or certain attributes.
+
+<img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
+
+This feature is enabled in Asgardeo by default. You can disable <a :href="$withBase('/guides/authentication/managing-claims/#manage-claims-for-apps')">Consent Management</a> features in the **Advanced** section.
 
 
 ## How it works
@@ -61,10 +65,6 @@ Let's see how this flow works in Asgardeo.
 Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a customer tries to log in to your app.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
-
-### Asgardeo gets consent from user
- 
-<CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/get-user-consent.md'/>
 
 ### Asgardeo shares user attributes with apps
 

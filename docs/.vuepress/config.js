@@ -294,6 +294,15 @@ module.exports = config({
                             ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                         ]
                     },
+                    {
+                        title: 'Manage Consents',
+                        path: 'consent',
+                        prefix: 'consent/',
+                        sidebarDepth: 2,
+                        children: [
+                            ['manage-claims-for-apps.md', 'Manage consent for user attributes'],
+                        ]
+                    }
                     ],
                 },
                 {

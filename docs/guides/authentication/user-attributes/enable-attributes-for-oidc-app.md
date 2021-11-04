@@ -14,9 +14,13 @@ Follow the steps given below to configure the user attributes from the Asgardeo 
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/add-mandatory-user-attributes.png')" alt="Add madatory user attributes in Asgardeo">
 
-### Disable the consent screen
+### Configure consent settings for user attributes
 
- <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/disable-user-consent.md'/>
+When logging in to an application, Asgardeo will prompt the customer for consent to share user attributes with the application. Customers can allow applications to access user attributes or deny access to all or certain attributes.
+
+<img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
+
+This feature is enabled in Asgardeo by default. You can disable <a :href="$withBase('/guides/authentication/consent/#manage-claims-for-apps')">consent management</a> features in the **Advanced** section.
 
 ## How it works
 Let's see how this flow works in Asgardeo.
@@ -59,12 +63,6 @@ OpenID Connect defines the following scope values that can be used to request cl
       <td>phone_number, phone_number_verified</td>
   </tr>
 </table>
-
-### Get consent for user attributes
- 
-<CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/get-user-consent.md'/>
-
-<img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
 
 ### Share user attributes with apps
 Asgardeo shares the user attributes, for which the user provided consent, with the application along with the **subject** attribute via the [ID token](#id-token) and the [user info response](#userinfo-response). 
