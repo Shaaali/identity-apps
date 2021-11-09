@@ -48,7 +48,7 @@ To remove users from groups:
 
 ## Delete a group
 An admin can delete groups via the [Asgardeo console](https://console.asgardeo.io). 
-To delete a groups:
+To delete a group:
 1. On the Asgardeo console, click **Manage > Groups**.
 2. Click the trash icon next to the group you wish to delete.
 3. Select the checkbox and confirm your action.
