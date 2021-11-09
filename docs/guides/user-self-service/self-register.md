@@ -25,5 +25,5 @@ To self-register as a customer, the user should follow these steps.
    
     If you try to log in with an **unverified email address**, Asgardeo will show an error message saying that the account has not been verified and shows options to resend verification. This is applicable only if **Account Verification** setting is enabled in <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">self registration configuration</a>. 
     
-    If you have not received the confirmation email and want Asgardeo to resend the email, click **Resend** that appears under the email verification warning message.
+    If you have not received the confirmation email and want Asgardeo to resend the email, click **Resend**.
     <img :src="$withBase('/assets/img/guides/organization/self-service/customer/login-with-unverified-email.png')" alt="Login with unverified email" width="300"> 
