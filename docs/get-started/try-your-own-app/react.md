@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your React app
+# Integrate your React app
 
 Follow the steps given below to authenticate users to your React SPA with OpenID Connect using the [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk/blob/main/README.md).
 
