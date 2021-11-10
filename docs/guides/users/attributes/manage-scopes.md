@@ -74,6 +74,20 @@ All scopes except for the `openid` scope are configurable. You can add or delete
 
 ## Assign scopes to applications
 
+You can assign scopes to applications registered in Asgardeo if your applications require further information from the customer. 
+
+1. When <a :href="$withBase('/get-started/start-integrating-apps')">configurting an application</a>, append the **scope** parameter with the additional scopes that your application requires. 
+2. From the **User Attributes** section, <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">select the attributes</a> that are bound to the assigned scopes of the application.
+3. When the user logs in, Asgardeo will prompt the user with a consent screen to authorize access to the user attributes.
+4. Once the user consents, your application will have access to the requested user attributes.
+
+
+
+
+
+
+
+
 
 
 

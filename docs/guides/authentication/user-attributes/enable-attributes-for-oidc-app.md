@@ -27,7 +27,7 @@ Once you have configured the user attributes that are required for your applicat
 
 ### Application requests with scopes
 
-Scopes determine which user attributes the application has the privilege to access. Asgardeo will allow access to user attributes requested by the application as long as they are within the scopes assigned to the application. 
+Scopes determine which user attributes the application has the privilege to access. Asgardeo will allow access to user attributes requested by the application as long as they are bound to the scopes assigned to the application. 
 
 You can <a :href="$withBase('/guides/users/attributes/manage-scopes')">manage scopes</a> in the **Scopes** section in [Asgardeo console](https://console.asgardeo.io)
 
