@@ -2,7 +2,9 @@
 
 OAuth2.0 clients use **scopes** to determine the privilege to access the protected resources. However, for OpenID Connect, [scopes](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) can be used to request the information of users in the form of claims.
 
-Asgardeo uses `openid` as a marker scope and it will not send any user attributes for the `openid` scope. Only the user attributes that are common for the <a :href="$withBase('#select-user-attributes')">selected user attributes</a> and the requested scopes (additional scopes except openid) will be returned.
+Scopes is a convenient way of limiting the amount of user attributes an application has access to. An application is allowed access to user attributes only if it is bound by the requested scopes.
+
+Asgardeo uses `openid` as a marker scope during authentication and it will not send any user attributes for the `openid` scope. 
 
 OpenID Connect defines the following scope values that can be used to request claims:
 
@@ -72,17 +74,28 @@ All scopes except for the `openid` scope are configurable. You can add or delete
 3. To add a new attribute, select **New Attribute**
 4. To delete an attribute, select **Delete**
 
-## Assign scopes to applications
+## Using scopes in client applications
 
-You can assign scopes to applications registered in Asgardeo if your applications require further information from the customer. 
+You can request for scopes in applications registered in Asgardeo if your applications require further information about the customer. 
 
-1. When <a :href="$withBase('/get-started/start-integrating-apps')">configurting an application</a>, append the **scope** parameter with the additional scopes that your application requires. 
-2. From the **User Attributes** section, <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">select the attributes</a> that are bound to the assigned scopes of the application.
+1. When configuring the authentication request in your client app, append the **scope** parameter with the scopes that you need as shown below.
+
+``` json{6} no-line-numbers
+{
+    "clientID": "<client ID>",
+    "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
+    "signInRedirectURL": "https://localhost:5000",
+    "signOutRedirectURL": "https://localhost:5000",
+    "scope": [ "profile", "address", "phone" ]
+}
+```
+::: info
+Find out more about <a :href="$withBase('/get-started/start-integrating-apps')">configuring your application</a> in Asgardeo
+:::
+
+2. <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">Select the user attributes</a> bound to the scopes that the client application requires. 
 3. When the user logs in, Asgardeo will prompt the user with a consent screen to authorize access to the user attributes.
 4. Once the user consents, your application will have access to the requested user attributes.
-
-
-
 
 
 
