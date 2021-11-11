@@ -92,7 +92,7 @@ You need to have an application registered in Asgardeo. If you don't already hav
 
 ## Try it out
 
-Follow the steps given below. 
+Follow the steps given below.
 
 1. Access the application URL.
 2. Click **Login** to open the Asgardeo login page.

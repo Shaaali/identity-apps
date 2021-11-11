@@ -94,7 +94,7 @@ Follow the steps given below.
 
     <img :src="$withBase('/assets/img/guides/idp/google-idp/sign-in-with-google.png')" alt="Login with Google" width=300>
 
-4. Log in to Google with an existing user account.
+4. Log in to Google with an existing user account. 
 ::: info
 When a user successfully logs in with Google for the first time, a **customer** account is created in the Asgardeo console with the Google username. This new user account will be managed by Google.
 :::
