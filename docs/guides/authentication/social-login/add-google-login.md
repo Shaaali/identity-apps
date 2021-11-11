@@ -86,15 +86,15 @@ You need to have an application registered in Asgardeo. If you don't already hav
 
 ## Try it out
 
-Follow the steps given below 
+Follow the steps given below. 
 
 1. Access the application URL.
-2. Select **Login** to log in to your application.
-3. Select **Sign in with Google**.
+2. Click **Login** to open the Asgardeo login page.
+3. On the Asgardeo login page, **Sign in with Google**.
 
     <img :src="$withBase('/assets/img/guides/idp/google-idp/sign-in-with-google.png')" alt="Login with Google" width=300>
 
-4. Enter credentials of an existing Google user to login.
+4. Log in to Google with an existing user account.
 ::: info
-Once a customer successfully logs in with Google, a customer account will be created in the Asgardeo console. This user will be managed by Google.
+When a user successfully logs in with Google for the first time, a **customer** account is created in the Asgardeo console with the Google username. This new user account will be managed by Google.
 :::

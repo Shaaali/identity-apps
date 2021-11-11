@@ -92,15 +92,16 @@ You need to have an application registered in Asgardeo. If you don't already hav
 
 ## Try it out
 
-Follow the steps given below 
+Follow the steps given below. 
 
 1. Access the application URL.
-2. Select **Login** to log in to your application.
-3. Select **Sign in with Facebook**.
+2. Click **Login** to open the Asgardeo login page.
+3. On the Asgardeo login page, click **Sign in with Facebook**.
 
 <img :src="$withBase('/assets/img/guides/idp/facebook-idp/sign-in-with-facebook.png')" alt="Login with Facebook" width=300>
 
-4. Enter credentials of an existing Facebook user to login.
+4. Log in to Facebook with an existing user account.
+5. The user is now redirected to the application and logged in.
 ::: info
-Once a customer successfully logs in with Facebook, a customer account will be created in the Asgardeo console. This user will be managed by Facebook.
+When a user successfully logs in with Facebook for the first time, a **customer** account is created in the Asgardeo console with the Facebook username. This new user account will be managed by Facebook.
 :::
