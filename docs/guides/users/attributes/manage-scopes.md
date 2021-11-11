@@ -1,9 +1,10 @@
-# Manage Scopes
+# Manage OIDC Scopes
 
-OAuth2.0 clients use **scopes** to determine the privilege to access the protected resources. However, for OpenID Connect, [scopes](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) can be used to request the information of users in the form of claims.
+[Scopes](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) is a convenient way of limiting the amount of user attributes an application can access. Each scope corresponds to a group of user attributes or claims. If these user attributes are required for your application, you can <a :href="$withBase('#using-scopes-in-client-applications')">use the scopes</a> to get the corresponding user attributes.
 
-Scopes is a convenient way of limiting the amount of user attributes an application has access to. An application is allowed access to user attributes only if it is bound by the requested scopes.
+An application is **not** allowed access to user attributes that are beyond the scopes requested by the application.
 
+## Default OIDC scopes
 Asgardeo uses `openid` as a marker scope during authentication and it will not send any user attributes for the `openid` scope. 
 
 OpenID Connect defines the following scope values that can be used to request claims:
@@ -12,7 +13,7 @@ OpenID Connect defines the following scope values that can be used to request cl
   <tr>
     <th>Scope</th>
     <th>Description</th> 
-    <th>Claims</th>
+    <th>Attributes</th>
   </tr>
    <tr>
       <td>profile</td>
@@ -36,7 +37,7 @@ OpenID Connect defines the following scope values that can be used to request cl
   </tr>
 </table>
 
-## Create scopes
+## Create custom scopes
 
 To view OpenID Connect Scopes in your organization:
 
@@ -93,7 +94,7 @@ You can request for scopes in applications registered in Asgardeo if your applic
 Find out more about <a :href="$withBase('/get-started/start-integrating-apps')">configuring your application</a> in Asgardeo
 :::
 
-2. <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">Select the user attributes</a> bound to the scopes that the client application requires. 
+2. <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">Select the user attributes</a> that the client application requires (Ensure they are bound by the requested scopes). 
 3. When the user logs in, Asgardeo will prompt the user with a consent screen to authorize access to the user attributes.
 4. Once the user consents, your application will have access to the requested user attributes.
 
