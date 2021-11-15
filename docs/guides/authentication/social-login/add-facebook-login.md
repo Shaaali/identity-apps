@@ -76,7 +76,7 @@ Asgardeo needs these permissions to get user information. Asgardeo sends these t
 ##  Enable Facebook login
 
 ::: info Before you begin
-You need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types:
+You need to have an application registered in Asgardeo. If you don't already have one, register an application based on one the following application types:
 
 -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
 -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
@@ -89,3 +89,19 @@ You need to have an application registered in Asgardeo. If you don't already hav
 4. Click **Add Authentication** on the step, select your Facebook identity provider, and click **Add**.
 
     <img :src="$withBase('/assets/img/guides/idp/facebook-idp/add-facebook-federation-with-basic.png')" alt="Add Facebook login in Asgardeo">
+
+## Try it out
+
+Follow the steps given below.
+
+1. Access the application URL.
+2. Click **Login** to open the Asgardeo login page.
+3. On the Asgardeo login page, click **Sign in with Facebook**.
+
+<img :src="$withBase('/assets/img/guides/idp/facebook-idp/sign-in-with-facebook.png')" alt="Login with Facebook" width=300>
+
+4. Log in to Facebook with an existing user account.
+5. The user is now redirected to the application and logged in.
+::: info
+When a user successfully logs in with Facebook for the first time, a **customer** account is created in the Asgardeo console with the Facebook username. This new user account will be managed by Facebook.
+:::
