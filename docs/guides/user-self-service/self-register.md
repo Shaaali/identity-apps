@@ -12,7 +12,7 @@ To self-register as a customer, the user should follow these steps.
 
 1. Go to the login page via the <a :href="$withBase('/guides/user-self-service/customer-self-service-portal/')">My Account Portal</a> or a business application.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" alt="Self register to organization" width="300">
-2. Click **Create an account**
+2. Click **Create an account**.
 3. Enter your email address and click **Continue**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/self-registration-enter-username.png')" alt="Self registration" width="300">
 4. Enter your details, select **I have read and understood the Privacy Policy**, and click **Sign Up**.
