@@ -68,7 +68,7 @@ Once you have configured the user attributes that are required for your applicat
 
 ### Asgardeo shares user attributes with apps
 
-Asgardeo shares the user attributes, for which the user provided consent, with the application along with **subject** attribute via SAML assertion. 
+Asgardeo will share user attributes with an application, given the user has provided consent. User attributes along with the **subject** attribute are shared via SAML assertion. 
 
 #### Subject
 
