@@ -71,7 +71,7 @@ All scopes except for the `openid` scope are configurable. You can add or delete
 1. On the Asgardeo console, go to **Manage > Scopes**
 2. Select the scope to edit.
 3. To add a new attribute to the scope, click **New Attribute** and enter the details of the attribute.
-4. To delete an attribute, click **Delete**
+4. To delete an attribute from the scope, click **Delete**.
 
 ## Use scopes in client applications
 
