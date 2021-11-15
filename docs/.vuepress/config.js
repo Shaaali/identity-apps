@@ -293,17 +293,10 @@ module.exports = config({
                         children: [
                             ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                         ]
-                    },
-                    {
-                        title: 'Manage Consents',
-                        path: 'consent',
-                        prefix: 'consent/',
-                        sidebarDepth: 2,
-                        children: [
-                            ['manage-claims-for-apps.md', 'Manage consent for user attributes'],
-                        ]
-                    }
-                    ],
+                    },   
+                    
+                    ['manage-claims-for-apps.md', 'Manage user consent']
+                    ]
                 },
                 {
                     title: 'User Management',
@@ -447,6 +440,16 @@ module.exports = config({
             buttonIconTitle: "Copy to clipboard",
             buttonAlign: "top",
             buttonColor: "#888"
+        }],
+        ['robots', { 
+            host: "https://wso2.com/asgardeo/docs",
+            sitemap: "/sitemap.xml",
+            policies: [
+                {
+                    userAgent: '*',
+                    allow: '/'
+                }
+            ]
         }]
     ]
 });
