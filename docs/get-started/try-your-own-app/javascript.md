@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your JavaScript app
+# Integrate your JavaScript app
 
 Follow the steps given below to authenticate users to your JavaScript SPA with OpenID Connect using the [Asgardeo JavaScript SDK](https://github.com/asgardeo/asgardeo-auth-spa-sdk/blob/main/README.md).
 
