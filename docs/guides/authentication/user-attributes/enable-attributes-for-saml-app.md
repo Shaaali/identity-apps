@@ -55,7 +55,7 @@ When logging in to an application, Asgardeo will prompt the customer for consent
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
 
-This feature is enabled in Asgardeo by default. You can disable <a :href="$withBase('/guides/authentication/managing-claims/#manage-claims-for-apps')">Consent Management</a> features in the **Advanced** section.
+This feature is enabled in Asgardeo by default. You can disable <a :href="$withBase('/guides/authentication/manage-consent-for-attributes')">Consent Management</a> features in the **Advanced** section.
 
 
 ## How it works

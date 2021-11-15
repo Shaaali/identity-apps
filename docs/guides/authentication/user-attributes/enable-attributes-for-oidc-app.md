@@ -20,7 +20,7 @@ When logging in to an application, Asgardeo will prompt the customer for consent
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
 
-This feature is enabled in Asgardeo by default. You can disable <a :href="$withBase('/guides/authentication/consent/#manage-claims-for-apps')">consent management</a> features in the **Advanced** section.
+This feature is enabled in Asgardeo by default. You can disable <a :href="$withBase('/guides/authentication/manage-consent-for-attributes')">consent management</a> features in the **Advanced** section.
 
 ## How it works
 Let's see how this flow works in Asgardeo.
@@ -66,6 +66,10 @@ OpenID Connect defines the following scope values that can be used to request cl
 
 ### Share user attributes with apps
 Asgardeo shares the user attributes, for which the user provided consent, with the application along with the **subject** attribute via the [ID token](#id-token) and the [user info response](#userinfo-response). 
+
+#### Subject Attribute
+
+The subject attribute is the unique identifer for a customer. The application receives this value via the **sub** parameter in the [ID token](#id-token). In Asgardeo, the user ID assigned to a customer is used as the subject attribute. 
 
 #### ID token
 
