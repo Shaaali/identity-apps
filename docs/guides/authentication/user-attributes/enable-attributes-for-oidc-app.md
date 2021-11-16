@@ -68,7 +68,7 @@ OpenID Connect defines the following scope values that can be used to request cl
 
 ### Share user attributes with apps
 
-Asgardeo will share user attributes with an application, given the user has provided consent. User attributes along with the **subject** attribute are shared via the [ID token](#id-token) and the [user info response](#userinfo-response).
+Asgardeo will share these user attributes with an application given the user has provided consent. User attributes along with the **subject** attribute are shared via the [ID token](#id-token) and the [user info response](#userinfo-response).
 
 #### Subject Attribute
 

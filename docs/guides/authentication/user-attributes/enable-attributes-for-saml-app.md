@@ -62,15 +62,15 @@ Once you have configured the user attributes that are required for your applicat
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 
-### Asgardeo gets consent from user
+### Get consent for user attributes
  
 <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/get-user-consent.md'/>
 
-### Asgardeo shares user attributes with apps
+### Share user attributes with apps
 
-Asgardeo will share user attributes with an application, given the user has provided consent. User attributes along with the **subject** attribute are shared via SAML assertion. 
+Asgardeo will share these user attributes with an application given the user has provided consent. User attributes along with the **subject** attribute are shared via SAML assertions. 
 
-#### Subject
+#### Subject attribute
 
 The subject attribute is shared via the `<saml2:Subject>` element based on the <a :href="$withBase('#select-the-subject-attribute')">configured subject attribute</a>.
 
