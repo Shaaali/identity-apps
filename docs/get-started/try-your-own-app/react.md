@@ -291,4 +291,4 @@ export default App;
 ```
 
 ## Add Routing
-If your application needs routing, the SDK provides a component called ``SecureRoute`` which is implemented with ``react-router-dom``. This component allows you to easily secure your routes with Asgardeo.
+If your application needs routing, the SDK provides a component called ``SecureRoute``, which is implemented with ``react-router-dom``. This component allows you to easily secure your routes with Asgardeo.
