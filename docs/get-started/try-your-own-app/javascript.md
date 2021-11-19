@@ -64,7 +64,7 @@ To initialize the SDK, use the `getInstance()` function in the SDK and provide t
   </tr>
   <tr>
     <td><code>scope</code></td>
-    <td>This specifies the user's information that the application requires to access. Ex: <code>openid</code>, <code>profile</code> and <code>email</code>.</td>
+    <td>The list of OIDC scopes that are used for requesting user information. The <code>openid</code> scope is mandatory to get the ID token. You can add other OIDC scopes such as <code>profile</code> and <code>email</code>.</td>
   </tr>
 </table>
 
