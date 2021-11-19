@@ -42,7 +42,7 @@ Change the `config.json` file found in the `asgardeo-react-app/src` sample folde
 
 - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
 
-- **scope** - This specifies the user's information that the application requires access to. Ex: ``profile`` and ``email``.
+- **scope** - The list of OIDC scopes that are used for requesting user information. The ``openid`` scope is mandatory to get the ID token. You can add other OIDC scopes such as ``profile`` and ``email``.
     ``` json{2,3,6} no-line-numbers
     {
         "clientID": "<client ID>",
