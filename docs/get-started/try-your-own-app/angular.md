@@ -297,4 +297,4 @@ export class AppComponent {
 ```
 
 ## Add Routing
-If your application needs routing, the SDK also provides a router guard called `AsgardeoAuthGuard` which is implemented with ```CanActivate``` interface from ```@angular/router```.
+If your application needs routing, the SDK also provides a router guard called `AsgardeoAuthGuard`, which is implemented with the ```CanActivate``` interface from ```@angular/router```.
