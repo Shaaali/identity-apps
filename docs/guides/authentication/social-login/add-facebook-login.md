@@ -70,7 +70,7 @@ After the Facebook identity provider is created, go to the **Settings** tab and 
 - **public_profile**: Grants read access to a user's default public profile details.  
 
 ::: info
-Asgardeo needs these permissions to get user information. Asgardeo sends these to applications based on the attribute configurations in the application. You can read the [Facebook documentation](https://developers.facebook.com/docs/permissions/reference) to learn more.
+Asgardeo needs these permissions to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Facebook to the app. You can read the [Facebook documentation](https://developers.facebook.com/docs/permissions/reference) to learn more.
 :::
 
 ##  Enable Facebook login

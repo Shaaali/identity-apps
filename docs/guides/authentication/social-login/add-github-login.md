@@ -59,7 +59,7 @@ After the Github identity provider is created, go to the **Settings** tab and se
 - **public_profile**: Grants read access to a user's default public profile details.  
 
 ::: info
-Asgardeo needs these scopes to get user information. Asgardeo sends these to applications based on the attribute configurations in the application. You can read the [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to learn more.
+Asgardeo needs these scopes to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Github to the app. You can read the [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to learn more.
 ::: 
 
 ##  Enable Github login
