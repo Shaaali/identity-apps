@@ -20,7 +20,7 @@ An organization in Asgardeo will be your own unique space and it will contain yo
 
     You will receive an email with instructions to proceed with your account creation on Asgardeo.
 
-    <img :src="$withBase('/assets/img/guides/get-started/confirmation-email-for-self-register.png')" alt="Confirmation email for self registered users">
+    <img :src="$withBase('/assets/img/guides/get-started/confirmation-email-for-self-register.png')" alt="Confirmation email for self registered users" width="500">
 
 3. From your email, click **Confirm** and fill in the information requested to create your Asgardeo account. 
 
