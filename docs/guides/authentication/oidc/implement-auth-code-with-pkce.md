@@ -14,6 +14,10 @@ As shown above, you need to configure your application to get the authorization 
 
 To get started, you need to have an application registered in Asgardeo. If you don't already have one, <a :href="$withBase('/guides/applications/register-single-page-app/#register-app')">register a single-page application</a>.
 
+::: info
+Note that only customers can log in to business applications. Therefore, to test login on your application, you need a <a :href="$withBase('/guides/users/manage-customers')">customer account</a>.
+:::
+
 ## Get authorization code
 
 First, your app must initiate a login request to Asgardeo. After redirecting to Asgardeo, the user is prompted with a login page if the user is not already authenticated.
