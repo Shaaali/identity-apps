@@ -27,7 +27,7 @@ To self-register as a customer, the user should follow these steps.
    If **Account Verification** is enabled for <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">self-registration</a> in your organization, an email is sent to the user's registered email address.
    :::
 
-5. The user can confirm the account from the email.
+5. If **Account Verification** is enabled, the user can confirm the account from the email.
 
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/account-verification-email.png')" alt="Account verification email notification" width="600">
     
