@@ -37,8 +37,6 @@ paths:
         - me
       description: >
         A user can have multiple active sessions. This API retrieves information of all the active sessions of the authenticated user. <br>
-        <b>Permission required:</b> <br>
-        * None <br>
         <b>Scope required:</b> <br>
         * internal_login
       summary: Retrieve active sessions of the authenticated user
@@ -119,7 +117,7 @@ paths:
         - me
       description: >
         A user has multiple active sessions. This API terminates a specific session of the authenticated user identified by the session-id. <br>
-        <b>Scope required:</b>
+        <b>Scope required:</b></br>
         * internal_login
       summary: Terminate a given session of the authenticated user
       operationId: terminateSessionByLoggedInUser
@@ -396,5 +394,5 @@ securityDefinitions:
   OAuth2:
     type: oauth2
     flow: accessCode
-    authorizationUrl: https://api.asgardeo.io/t/<organization_name>/oauth2/authorize
-    tokenUrl: https://api.asgardeo.io/t/<organization_name>/oauth2/token
+    authorizationUrl: https://api.asgardeo.io/t/{org_name}/oauth2/authorize
+    tokenUrl: https://api.asgardeo.io/t/{org_name}/oauth2/token
