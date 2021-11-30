@@ -28,7 +28,6 @@ tags:
 # Applicable authentication mechanisms
 security:
   - OAuth2: []
-  - BasicAuth: []
 
 paths:
   /me/sessions:
