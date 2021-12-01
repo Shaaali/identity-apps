@@ -1,12 +1,12 @@
 openapi: 3.0.0
 info:
-  title: SCIM 2.0 Endpoint Swagger Definition
+  version: "v1"
+  title: Asgardeo - SCIM 2.0 API
   description: |
     SCIM 2.0 endpoints
-    It is written with [swagger 2](http://swagger.io/).
   contact:
-    name: WSO2 Identity Server Team
-    url: http://wso2.com
+    name: Asgardeo
+    url: 'https://wso2.com/asgardeo/'
     email: architecture@wso2.org
   license:
     name: Apache 2.0
@@ -113,8 +113,6 @@ paths:
             application/scim+json:
               schema:
                 $ref: '#/components/schemas/ErrorUserNotAvailable'
-     
-      
     patch:
       tags:
       - Me Endpoint
@@ -546,8 +544,7 @@ paths:
           type: string
       - name: filter
         in: query
-        description: |
-          Filter expression for filtering. Supported filters are ‘Ew’, ‘Eq’, ‘Co’, ‘Sw’, ‘and’.
+        description: Filter expression for filtering. Supported filters are ‘Ew’, ‘Eq’, ‘Co’, ‘Sw’, ‘and’.
         schema:
           type: string
       - name: startIndex
@@ -961,8 +958,7 @@ paths:
       tags:
       - Service Provider Config Endpoint
       summary: Get Service Provider Config
-      description: |
-        This API returns the service provider's configuration details.
+      description: This API returns the service provider's configuration details.
       operationId: getServiceProviderConfig
       responses:
         200:
