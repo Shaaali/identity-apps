@@ -14,7 +14,7 @@ info:
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
 tags:
   - name: Email template types
-    description: An email template type groups multiple email templates. For example, one template type can have multiple email templates for different languages.
+    description: An email template type can have multiple email templates for different languages.
   - name: Email templates
     description: An email template of a specific type and language.
 security:
@@ -31,10 +31,10 @@ paths:
 
         <b>Scopes required:</b> `internal_email_mgt_view`
       parameters:
-        - $ref: '#/components/parameters/limitQueryParam'
-        - $ref: '#/components/parameters/offsetQueryParam'
-        - $ref: '#/components/parameters/sortOrderQueryParam'
-        - $ref: '#/components/parameters/sortByQueryParam'
+        # - $ref: '#/components/parameters/limitQueryParam'
+        # - $ref: '#/components/parameters/offsetQueryParam'
+        # - $ref: '#/components/parameters/sortOrderQueryParam'
+        # - $ref: '#/components/parameters/sortByQueryParam'
         - $ref: '#/components/parameters/requiredAttributesQueryParam'
       responses:
         '200':
@@ -122,7 +122,7 @@ paths:
     get:
       tags:
         - Email templates
-      summary: Retrieve Email template (details) per template type
+      summary: Retrieve Email templates (details) per template type
       operationId: getEmailTemplateType
       description: |
         Retrieves an email template type (matching the template type ID) including all of its email templates. <br>
@@ -130,10 +130,11 @@ paths:
         <br><b>Scopes required:</b> `internal_email_mgt_view`
       parameters:
         - $ref: '#/components/parameters/templateTypeIdPathParam'
-        - $ref: '#/components/parameters/limitQueryParam'
-        - $ref: '#/components/parameters/offsetQueryParam'
-        - $ref: '#/components/parameters/sortOrderQueryParam'
-        - $ref: '#/components/parameters/sortByQueryParam'
+        #- $ref: '#/components/parameters/templateTypeIdPathParam'
+        #- $ref: '#/components/parameters/limitQueryParam'
+        #- $ref: '#/components/parameters/offsetQueryParam'
+        #- $ref: '#/components/parameters/sortOrderQueryParam'
+        #- $ref: '#/components/parameters/sortByQueryParam'
       responses:
         '200':
           description: Results matching the request criteria
@@ -235,10 +236,10 @@ paths:
         <b>Scopes required:</b> `internal_email_mgt_view`
       parameters:
         - $ref: '#/components/parameters/templateTypeIdPathParam'
-        - $ref: '#/components/parameters/limitQueryParam'
-        - $ref: '#/components/parameters/offsetQueryParam'
-        - $ref: '#/components/parameters/sortOrderQueryParam'
-        - $ref: '#/components/parameters/sortByQueryParam'
+        #- $ref: '#/components/parameters/limitQueryParam'
+        #- $ref: '#/components/parameters/offsetQueryParam'
+        #- $ref: '#/components/parameters/sortOrderQueryParam'
+        #- $ref: '#/components/parameters/sortByQueryParam'
       responses:
         '200':
           description: Results matching the request criteria
@@ -267,15 +268,15 @@ paths:
       description: |
         Retrieves the email template that matches the specified template ID and template type. <br>
 
-        <b>Scopes required:</b><br>* `internal_email_mgt_view`
+        <b>Scopes required:</b> `internal_email_mgt_view`
          
       parameters:
         - $ref: '#/components/parameters/templateTypeIdPathParam'
         - $ref: '#/components/parameters/templateIdPathParam'
-        - $ref: '#/components/parameters/limitQueryParam'
-        - $ref: '#/components/parameters/offsetQueryParam'
-        - $ref: '#/components/parameters/sortOrderQueryParam'
-        - $ref: '#/components/parameters/sortByQueryParam'
+        #- $ref: '#/components/parameters/limitQueryParam'
+        #- $ref: '#/components/parameters/offsetQueryParam'
+        #- $ref: '#/components/parameters/sortOrderQueryParam'
+        #- $ref: '#/components/parameters/sortByQueryParam'
       responses:
         '200':
           description: Results matching the request criteria
@@ -419,7 +420,7 @@ components:
       name: requiredAttributes
       required: false
       description: >-
-        Specifies the required parameters in the response. See the response schema for the complete list of parameters your can get in the response.
+        Specifies the required parameters in the response. See the response schema for the complete list of parameters your can get in the response. </br></br> By default, all the required parameters (in the response schema) will be returned. Use this parameter to specify additional attributes that you need in the response.
       schema:
         type: string
   responses:
@@ -462,7 +463,12 @@ components:
         authorizationCode:
           authorizationUrl: 'https://api.asgardeo.io/t/{org-name}/oauth2/authorize'
           tokenUrl: 'https://api.asgardeo.io/t/{org-name}/oauth2/token'
-         # scopes: {}
+          scopes:
+            internal_email_mgt_view: Grants read access
+            internal_email_mgt_create: Grants write access
+            internal_email_mgt_delete: Grants permission to delete records
+            internal_email_mgt_update: Grants permission to update existing records
+
   schemas:
     EmailTemplateTypeWithoutTemplates:
       type: object
@@ -532,7 +538,7 @@ components:
         body:
           type: string
           example: HTML Body
-          description: The body of the email.
+          description: The body (HTML) of the email.
         footer:
           type: string
           example: WSO2 Asgardeo Team
