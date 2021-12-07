@@ -388,8 +388,6 @@ parameters:
 # Security Definitions
 #---------------------
 securityDefinitions:
-  BasicAuth:
-    type: basic
   OAuth2:
     type: oauth2
     flow: accessCode
