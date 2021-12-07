@@ -204,54 +204,6 @@ paths:
       tags:
         - Self Register
 
-  # The endpoint that is used to self register lite accounts with email/SMS verification.
-  /lite:
-    post:
-      description: |
-        This API is used for lite user self registration.
-      x-wso2-request: |
-        curl -X POST -H "Authorization: Bearer <bearer_token>" -H "Content-Type: application/json" -d '{"email": "<username>","realm": "<user_store>","properties": []}' "https://localhost:9443/api/identity/user/v1.0/lite"
-      x-wso2-curl: |
-        curl -X POST -H "Authorization: Bearer 3e7eac8a-2652-3099-9383-0955b179f4d0" -H "Content-Type: application/json" -d '{"email": "lanka@wso2.com","realm": "CUSTOMER-DEFAULT","properties": []}' "https://localhost:9443/api/identity/user/v1.0/lite"
-        curl -X POST -H "Authorization: Bearer 3e7eac8a-2652-3099-9383-0955b179f4d0" -H "Content-Type: application/json" -d '{"email": "lanka@wso2.com","realm": "CUSTOMER-DEFAULT","preferredChannel":"Email","claims":[], "properties": []}' "https://localhost:9443/api/identity/user/v1.0/lite"
-      x-wso2-response: |
-        "HTTP/1.1 201 Created"
-
-      summary: |
-        Lite register user
-
-      # These are the post parameters:
-      parameters:
-        - name: user
-          in: body
-          description:  Sends optional property parameters over email based on an email template.
-          required: true
-          schema:
-            $ref: '#/definitions/LiteUserRegistrationRequest'
-
-      responses:
-        201:
-          description: Successfully created
-          schema:
-            $ref: '#/definitions/SuccessfulUserCreation'
-        400:
-          description: Bad Request
-          schema:
-            $ref: '#/definitions/Error'
-
-        500:
-          description: Server Error
-          schema:
-            $ref: '#/definitions/Error'
-
-        409:
-          description: Conflict
-          schema:
-            $ref: '#/definitions/Error'
-      tags:
-        - Self Register
-        - Lite
-
   /validate-code:
     post:
       description: |
