@@ -477,6 +477,7 @@ components:
       in: path
       description: ID of the session.
       required: true
+
       schema:
         type: string
   securitySchemes:

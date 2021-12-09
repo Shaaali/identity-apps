@@ -4,7 +4,7 @@ info:
   description: |
     This document specifies a **RESTful API** for **Asgardeo** by WSO2 .
 
-    It is written with [swagger 2](http://swagger.io/).
+    It is written with [swagger 3](http://swagger.io/).
   contact:
     name: WSO2
     url: https://wso2.com/asgardeo/
@@ -207,6 +207,7 @@ paths:
                 $ref: '#/components/schemas/Error'
         500:
           description: Server Error
+
           content:
             application/json:
               schema:
@@ -254,6 +255,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+
       x-wso2-request: |
         curl -k -v -X POST -H "Authorization: <Base64Encoded_username:password>" -H "Content-Type: application/json"
          -d '{ "code": "<validation_code>","verifiedChannel":{"type":<type>, "claim":<claim_uri},
