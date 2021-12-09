@@ -388,10 +388,12 @@ parameters:
 # Security Definitions
 #---------------------
 securityDefinitions:
-  BasicAuth:
-    type: basic
   OAuth2:
     type: oauth2
     flow: accessCode
     authorizationUrl: https://api.asgardeo.io/t/{org_name}/oauth2/authorize
     tokenUrl: https://api.asgardeo.io/t/{org_name}/oauth2/token
+    scopes:
+            read: Grants read access
+            write: Grants write access
+            admin: Grants read and write access to administrative information
