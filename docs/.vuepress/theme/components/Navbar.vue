@@ -228,7 +228,7 @@ function css (el, property) {
 
   .button
     padding 7px 15px !important
-    margin-left  10px !important
+    margin-left 10px !important
     font-size 14px !important
     width auto
     line-height 1
