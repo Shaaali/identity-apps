@@ -25,8 +25,8 @@
         </MyTransition>
         <MyTransition :delay="0.08">
           <div class="button-row">
-            <!-- <Button buttonType='primary-outlined' :buttonText="$frontmatter.whatIsAsgardeoText" :buttonPath="$frontmatter.whatIsAsgardeoLink" /> -->
-            <Button buttonType='primary' :buttonText="$frontmatter.getStartedText" :buttonPath="$frontmatter.getStartedLink" />
+            <Button class="main-btn" buttonType='primary-outlined' openInNewTab="true" :buttonText="$frontmatter.asgardeoSignupText" :externalLink="$frontmatter.asgardeoSignupLink" />
+            <Button class="main-btn" buttonType='primary' :buttonText="$frontmatter.getStartedText" :buttonPath="$frontmatter.getStartedLink" />
           </div>
         </MyTransition>
         <MyTransition :delay="0.12">

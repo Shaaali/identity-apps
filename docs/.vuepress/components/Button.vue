@@ -18,7 +18,7 @@
       <img :src="require(`../theme/assets/${ endIconPath }`)"/>
     </div>
   </a>
-  <button v-else :class="`button ${ buttonType }`" @click="handleClick">
+  <a v-else :class="`button ${ buttonType }`" @click="handleClick">
     <div v-if="startIconPath"  class="start-icon-container">
       <img :src="require(`../theme/assets/${ startIconPath }`)"/>
     </div>
@@ -26,7 +26,7 @@
     <div v-if="endIconPath"  class="end-icon-container">
       <img :src="require(`../theme/assets/${ endIconPath }`)"/>
     </div>
-  </button>
+  </a>
   </div>
 </template>
 
