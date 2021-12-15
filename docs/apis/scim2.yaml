@@ -11,7 +11,6 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
-  version: 1.0.0
 servers:
   - url: 'https://api.asgardeo.io/t/{org-name}/scim2'
     variables:
@@ -25,7 +24,7 @@ tags:
   - name: Groups Endpoint
     description: This endpoint performs actions related to all groups in the organization.
   - name: Bulk Endpoint
-    description: .
+    description: This endpoint allows developers to create or update users in bulk.
   - name: Resource Type Endpoint
     description: .
   - name: Service Provider Config Endpoint
