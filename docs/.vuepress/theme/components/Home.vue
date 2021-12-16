@@ -25,7 +25,7 @@
         </MyTransition>
         <MyTransition :delay="0.08">
           <div class="button-row">
-            <!-- <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/> -->
+            <!-- <Button buttonType='primary-outlined' :buttonText="$frontmatter.whatIsAsgardeoText" :buttonPath="$frontmatter.whatIsAsgardeoLink" /> -->
             <Button buttonType='primary' :buttonText="$frontmatter.getStartedText" :buttonPath="$frontmatter.getStartedLink" />
           </div>
         </MyTransition>
