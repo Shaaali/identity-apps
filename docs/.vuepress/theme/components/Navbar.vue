@@ -117,15 +117,9 @@ function css (el, property) {
   @media (max-width 1236px)
     padding $navbarVerticalPadding 10px
 
-  .header-signup-btn
-    display none
-
   .has-sidebar &
     padding $navbarVerticalPadding 1.5em
     box-shadow 0 2px 8px var(--card-shadow-color)
-
-    .header-signup-btn
-      display block
 
   @media (max-width $MQMobile)
     padding-left $navbarMobileHorizontalPadding + 2.4rem
