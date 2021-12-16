@@ -8,8 +8,8 @@ actionText: Quick Start →
 actionLink: /get-started/
 getStartedText: Get Started
 getStartedLink: /get-started/
-asgardeoSignupText: Try Asgardeo
-asgardeoSignupLink: https://asgardeo.io/signup
+whatIsAsgardeoText: What is Asgardeo
+whatIsAsgardeoLink: /get-started/
 
 features:
   - title: Login
