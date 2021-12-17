@@ -6,7 +6,7 @@
       <NavLink v-else :item="item" />
     </div>
 
-    <a class="mobile-signup nav-links" href="https://asgardeo.io/signup" target="_blank">Try Asgardeo</a>
+    <a class="mobile-signup nav-links" href="https://asgardeo.io/signup" target="_blank">Sign Up for Asgardeo</a>
 
     <!-- repo link -->
     <a
