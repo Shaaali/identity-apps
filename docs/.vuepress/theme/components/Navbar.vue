@@ -37,7 +37,7 @@
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <Button class="header-signup-btn" buttonType="default-outlined" buttonText="Try Asgardeo" openInNewTab="true" externalLink="https://asgardeo.io/signup"/>
+      <Button class="header-signup-btn" buttonType="default-outlined" buttonText="Sign Up for Asgardeo" openInNewTab="true" externalLink="https://asgardeo.io/signup"/>
     </div>
   </div>
 </template>
@@ -237,4 +237,8 @@ function css (el, property) {
 
     @media (max-width $MQNarrow)
       flex 3
+  
+  .header-signup-btn
+    @media (max-width $MQNarrow)
+      display none
 </style>
