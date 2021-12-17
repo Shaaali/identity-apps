@@ -237,4 +237,8 @@ function css (el, property) {
 
     @media (max-width $MQNarrow)
       flex 3
+  
+  .header-signup-btn
+    @media (max-width $MQNarrow)
+      display none
 </style>

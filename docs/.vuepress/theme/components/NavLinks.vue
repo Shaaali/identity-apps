@@ -6,6 +6,8 @@
       <NavLink v-else :item="item" />
     </div>
 
+    <a class="mobile-signup nav-links" href="https://asgardeo.io/signup" target="_blank">Try Asgardeo</a>
+
     <!-- repo link -->
     <a
       v-if="repoLink && $themeConfig.repoDisplay !== false"
@@ -64,4 +66,14 @@
 
   @media (max-width $MQMobile)
     margin-left 0
+
+.mobile-signup
+  display none !important
+  margin 0.5em 1rem
+
+  .button
+    padding 5px 10px
+
+  @media (max-width $MQMobile)
+    display block !important
 </style>

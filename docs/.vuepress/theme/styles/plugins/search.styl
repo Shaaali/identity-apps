@@ -10,11 +10,14 @@
       border-color transparent
       border-radius 0.25em
       background-color var(--feature-bgcolor)
-      width 7rem
+
+      @media (min-width $MQNormal)
+        width 7rem
+
+      @media (min-width $MQNarrow)
+        width 5rem
 
       .has-sidebar &
-        width 10rem
-
         @media (max-width $MQNarrow)
           width 0
 
@@ -23,11 +26,14 @@
         border-color transparent
         background-color #FDEFE8
 
-        .has-sidebar &
-          width 11rem
+        @media (max-width $MQWide - 1)
+          width 6rem
+        
+        @media (max-width 768px)
+          width 3rem
 
-          @media (max-width $MQNarrow)
-            width 4rem
+        @media (max-width $MQMobile)
+          width 11rem
 
       @media (max-width $MQNarrow)
         left 0
