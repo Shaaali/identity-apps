@@ -65,7 +65,7 @@ After the Google identity provider is created, go to the **Settings** tab and se
 - **profile**: Allows to view the user's basic profile data. 
 
 ::: info
-Asgardeo needs these scopes to get user information. Asgardeo sends these to applications based on the attribute configurations in the application. You can read the [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) to learn more.
+Asgardeo needs these scopes to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Google to the app. You can read the [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) to learn more.
 ::: 
  
 ##  Enable Google login
