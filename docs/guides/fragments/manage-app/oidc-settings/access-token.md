@@ -27,7 +27,7 @@ In additional to usual opaque tokens, Asgardeo supports self-contained JWT token
 <br>
 
 #### User access token expiry time
-This provides the validity period of access token issued to a user in seconds. The default expiry time is 3600 seconds.
+This provides the validity period of access tokens issued to a user in seconds. The default expiry time is 3600 seconds.
 
 #### Application access token expiry time
 This specifies the validity period of the access tokens issued to an application with the ``Client Credentials`` grant in seconds.
