@@ -25,7 +25,7 @@ features:
         link: /guides/authentication/add-login-to-web-app/
 
   - title: Social Login
-    details: Enable your application users to login with their existing social identities.
+    details: Enable your application users to log in with their existing social identities.
     link: /guides/authentication/social-login/
     icon: icons/feature-social-login.svg
     cssClass: social-login
@@ -40,7 +40,7 @@ features:
         link: /guides/authentication/social-login/add-google-login/
 
   - title: Standard-Based IDPs
-    details: Enable your application users to login using a standard-based identity provider.
+    details: Enable your application users to log in using a standard-based identity provider.
     link: /guides/authentication/enterprise-login/
     icon: icons/feature-enterprise-idp.svg
     cssClass: enterprise-idp
