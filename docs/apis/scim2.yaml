@@ -24,7 +24,7 @@ tags:
   - name: Groups Endpoint
     description: This endpoint performs actions related to all groups in the organization.
   - name: Bulk Endpoint
-    description: Create/ Update/ Delete SCIM Resources (Users/ Groups) in Bulk.
+    description: This endpoint is used to create/update/delete SCIM resources (users and/or groups) in bulk.
   - name: Resource Type Endpoint
     description: This API lists and returns metadata about resource types.
   - name: Service Provider Config Endpoint
