@@ -8,7 +8,7 @@ In Asgardeo, each piece of user information is mapped to a <a :href="$withBase('
 An application is **not** allowed access to user attributes that are beyond the scopes requested by the application.
 :::
 
-If your application needs to retrieve a certain set of user information when a user logs in, you can use the scopes relevant to those attributes when you <a :href="$withBase('#use-scopes-in-client-applications')">configure your app</a>.
+If your application needs to retrieve a certain set of user attributes when a user logs in, you can use the scopes relevant to those attributes when you <a :href="$withBase('#use-scopes-in-client-applications')">configure your app</a>.
 
 ## Default OIDC scopes
 Asgardeo uses `openid` as a marker scope during authentication and it will not return any user attributes for the `openid` scope. 
