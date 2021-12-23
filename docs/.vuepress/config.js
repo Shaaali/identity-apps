@@ -314,6 +314,7 @@ module.exports = config({
                                 ['manage-attributes', 'User attributes'],
                                 ['manage-oidc-attribute-mappings', 'OIDC attribute mappings'],
                                 ['manage-scim2-attribute-mappings', 'SCIM2 attribute mappings'],
+                                ['manage-scopes', 'OIDC Scopes'],
                             ]
                         },
                     ]
