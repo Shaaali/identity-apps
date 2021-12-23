@@ -132,7 +132,7 @@ As an application developer, you can follow the steps given below to request use
     }
     ```
     ::: info
-    Find out more about <a :href="$withBase('/get-started/start-integrating-apps')">configuring your application</a> in Asgardeo.
+    Find out more about <a :href="$withBase('/get-started/start-integrating-apps')">configuring applications</a>.
     :::
 
 When the user logs in, Asgardeo will prompt the user with a consent screen to authorize access to the user attributes. Once the user consents, your application will have access to the requested user attributes.
