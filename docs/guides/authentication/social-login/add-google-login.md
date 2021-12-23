@@ -65,7 +65,7 @@ After the Google identity provider is created, go to the **Settings** tab and se
 - **profile**: Allows to view the user's basic profile data. 
 
 ::: info
-Asgardeo needs these scopes to get user information. Asgardeo sends these to applications based on the attribute configurations in the application. You can read the [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) to learn more.
+Asgardeo needs these scopes to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Google to the app. You can read the [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) to learn more.
 ::: 
  
 ##  Enable Google login
@@ -83,3 +83,18 @@ You need to have an application registered in Asgardeo. If you don't already hav
 4. Click **Add Authentication** on the step, select your Google identity provider, and click **Add**.
 
     <img :src="$withBase('/assets/img/guides/idp/google-idp/add-google-federation-with-basic.png')" alt="Add Google login in Asgardeo">
+
+## Try it out
+
+Follow the steps given below. 
+
+1. Access the application URL.
+2. Click **Login** to open the Asgardeo login page.
+3. On the Asgardeo login page, **Sign in with Google**.
+
+    <img :src="$withBase('/assets/img/guides/idp/google-idp/sign-in-with-google.png')" alt="Login with Google" width=300>
+
+4. Log in to Google with an existing user account. 
+::: info
+When a user successfully logs in with Google for the first time, a **customer** account is created in the Asgardeo console with the Google username. This new user account will be managed by Google.
+:::

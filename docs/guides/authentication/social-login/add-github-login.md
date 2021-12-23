@@ -59,7 +59,7 @@ After the Github identity provider is created, go to the **Settings** tab and se
 - **public_profile**: Grants read access to a user's default public profile details.  
 
 ::: info
-Asgardeo needs these scopes to get user information. Asgardeo sends these to applications based on the attribute configurations in the application. You can read the [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to learn more.
+Asgardeo needs these scopes to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Github to the app. You can read the [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to learn more.
 ::: 
 
 ##  Enable Github login
@@ -78,3 +78,18 @@ You need to have an application registered in Asgardeo. If you don't already hav
 4. Click **Add Authentication** on the step, select your Github identity provider, and click **Add**.
 
    <img :src="$withBase('/assets/img/guides/idp/github-idp/add-github-federation-with-basic.png')" alt="Add Github login in Asgardeo">
+
+## Try it out
+
+Follow the steps given below. 
+
+1. Access the application URL. 
+2. Click **Login** to open the Asgardeo login page.
+3. On the Asgardeo login page, **Sign in with Github**.
+
+<img :src="$withBase('/assets/img/guides/idp/github-idp/sign-in-with-github.png')" alt="Login with Github" width=300>
+
+4. Log in to Github with an existing user account.
+::: info
+When a user successfully logs in with Github for the first time, a **customer** account is created in the Asgardeo console with the Github username. This new user account will be managed by Github.
+:::

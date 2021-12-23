@@ -59,7 +59,7 @@ HFY29KP4da//BDdQrftzYCATe37Um09id/0KMGs=</X509Certificate>
 				</X509Data>
 			</KeyInfo>
 		</KeyDescriptor>
-		<ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/samlartresolve" index="1"/>
+		<ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/{organization_name}/samlartresolve" index="1"/>
 		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
 		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
 		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
@@ -95,7 +95,7 @@ https://api.asgardeo.io/t/<organization_name>/identity/metadata/saml2
 
 _Sample endpoint URL_
 ``` no-line-numbers
-https://api.asgardeo.io/t/{organization_name}/identity/metadata/saml2
+https://api.asgardeo.io/t/bifrost/identity/metadata/saml2
 ```
 
 <br>

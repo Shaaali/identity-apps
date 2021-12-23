@@ -37,7 +37,7 @@
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <!-- <Button buttonType='grey-outlined' buttonText='Sign Up' externalLink='https://asgardeo.io/early-signup'/> -->
+      <Button class="header-signup-btn" buttonType="default-outlined" buttonText="Sign Up for Asgardeo" openInNewTab="true" externalLink="https://asgardeo.io/signup"/>
     </div>
   </div>
 </template>
@@ -221,9 +221,12 @@ function css (el, property) {
       right $navbarMobileHorizontalPadding
 
   .button
-    padding 9px 25px !important
-    margin 0 3px !important
+    padding 7px 15px !important
+    margin-left 10px !important
     font-size 14px !important
+    width auto
+    line-height 1
+    border-radius 0.25em
   
   .site-nav
     transition all 0.3s
@@ -234,4 +237,8 @@ function css (el, property) {
 
     @media (max-width $MQNarrow)
       flex 3
+  
+  .header-signup-btn
+    @media (max-width $MQNarrow)
+      display none
 </style>

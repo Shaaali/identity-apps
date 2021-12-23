@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your JavaScript app
+# Integrate your JavaScript app
 
 Follow the steps given below to authenticate users to your JavaScript SPA with OpenID Connect using the [Asgardeo JavaScript SDK](https://github.com/asgardeo/asgardeo-auth-spa-sdk/blob/main/README.md).
 
@@ -62,6 +62,10 @@ To initialize the SDK, use the `getInstance()` function in the SDK and provide t
     <td><code>signOutRedirectURL</code></td>
     <td>This is the URL the app redirects to after user logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
   </tr>
+  <tr>
+    <td><code>scope</code></td>
+    <td>The list of OIDC scopes that are used for requesting user information. The <code>openid</code> scope is mandatory to get the ID token. You can add other OIDC scopes such as <code>profile</code> and <code>email</code>.</td>
+  </tr>
 </table>
 
 ```
@@ -74,7 +78,8 @@ auth.initialize({
    signInRedirectURL: "https://localhost:5000",
    signOutRedirectURL: "https://localhost:5000",
    clientID: "<clientId>",
-   serverOrigin: "https://api.asgardeo.io/t/<organization_name>"
+   serverOrigin: "https://api.asgardeo.io/t/<organization_name>",
+   scope: [ "openid","profile" ]
 });
 </script>
 ```

@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your Angular app
+# Integrate your Angular app
 
 This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md).
 
@@ -59,6 +59,10 @@ Provide the following values to the `forRoot()` function of `AsgardeoAuthModule`
     <td><code>signOutRedirectURL</code></td>
     <td>This is the URL the app redirects to after user logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
   </tr>
+  <tr>
+    <td><code>scope</code></td>
+    <td>The list of OIDC scopes that are used for requesting user information. The <code>openid</code> scope is mandatory to get the ID token. You can add other OIDC scopes such as <code>profile</code> and <code>email</code>.</td>
+  </tr>
 </table>
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
@@ -81,7 +85,8 @@ import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
             signInRedirectURL: "https://localhost:4200",
             signOutRedirectURL: "https://localhost:4200",
             clientID: "<Client ID>",
-            serverOrigin: "https://dev.api.asgardeo.io/t/<organization_name>"
+            serverOrigin: "https://dev.api.asgardeo.io/t/<organization_name>",
+            scope: [ "openid","profile" ]
         })
     ],
     providers: [
@@ -292,4 +297,4 @@ export class AppComponent {
 ```
 
 ## Add Routing
-If your application needs routing, the SDK also provides a router guard called `AsgardeoAuthGuard` which is implemented with ```CanActivate``` interface from ```@angular/router```.
+If your application needs routing, the SDK also provides a router guard called `AsgardeoAuthGuard`, which is implemented with the ```CanActivate``` interface from ```@angular/router```.

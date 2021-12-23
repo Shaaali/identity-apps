@@ -1,6 +1,6 @@
 {
   "name": "asgardeo-docs",
-  "version": "0.0.304",
+  "version": "0.0.333",
   "description": "Asgardeo Documentation",
   "authors": {
     "name": "",
@@ -29,5 +29,8 @@
     "vuepress-plugin-chunkload-redirect": "^1.0.3",
     "vuepress-plugin-tabs": "^0.3.0",
     "vuepress-theme-hope": "^1.13.1"
+  },
+  "dependencies": {
+    "vuepress-plugin-robots": "^1.0.1"
   }
 }

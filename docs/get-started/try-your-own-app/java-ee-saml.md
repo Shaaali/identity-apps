@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your Java EE webapp with SAML
+# Integrate your Java EE webapp with SAML
 
 Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat using the [Asgardeo Tomcat SAML Agent](https://github.com/asgardeo/asgardeo-tomcat-saml-agent) which enables SAML-based login and logout.
 

@@ -2,7 +2,7 @@
 breadcrumb: false
 ---
 
-# Add login to your React app
+# Integrate your React app
 
 Follow the steps given below to authenticate users to your React SPA with OpenID Connect using the [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk/blob/main/README.md).
 
@@ -55,6 +55,10 @@ import { AuthProvider } from "@asgardeo/auth-react";
     <td><code>signOutRedirectURL</code></td>
     <td>This is the URL the app redirects to after user logout. See <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">Authorized redirect URLs</a>.</td>
   </tr>
+  <tr>
+    <td><code>scope</code></td>
+    <td>The list of OIDC scopes that are used for requesting user information. The <code>openid</code> scope is mandatory to get the ID token. You can add other OIDC scopes such as <code>profile</code> and <code>email</code>.</td>
+  </tr>
 </table>
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
@@ -70,7 +74,8 @@ const Index = () => (
             signInRedirectURL: "http://localhost:5000",
             signOutRedirectURL: "http://localhost:5000",
             clientID: "<Client_ID>",
-            serverOrigin: "https://dev.api.asgardeo.io/t/<Organization_name>"
+            serverOrigin: "https://dev.api.asgardeo.io/t/<Organization_name>",
+            scope: [ "openid","profile" ]
         } }
     >
         { /* Rest of your application.  */ }
@@ -286,4 +291,4 @@ export default App;
 ```
 
 ## Add Routing
-If your application needs routing, the SDK provides a component called ``SecureRoute`` which is implemented with ``react-router-dom``. This component allows you to easily secure your routes with Asgardeo.
+If your application needs routing, the SDK provides a component called ``SecureRoute``, which is implemented with ``react-router-dom``. This component allows you to easily secure your routes with Asgardeo.

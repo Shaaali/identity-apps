@@ -18,11 +18,13 @@ An organization in Asgardeo will be your own unique space and it will contain yo
 
     <img :src="$withBase('/assets/img/guides/get-started/sign-up-to-asgardeo.png')" alt="Sign up to Asgardeo">
 
-    You will receive an mail with instructions.
+    You will receive an email with instructions to proceed with your account creation on Asgardeo.
 
-3. From your email, click **Confirm** and follow the instructions on the Asgardeo console's sign-in page.
+    <img :src="$withBase('/assets/img/guides/get-started/confirmation-email-for-self-register.png')" alt="Confirmation email for self registered users" width="500">
 
-When you are done, you will be signed in to the Asgardeo console. You can now manage your own user account and organization. <a :href="$withBase('/guides/your-asgardeo/')">Learn more</a>.
+3. From your email, click **Confirm** and fill in the information requested to create your Asgardeo account. 
+
+On successful registration, you will be signed in to the Asgardeo console. You can now manage your own user account and organization. <a :href="$withBase('/guides/your-asgardeo/')">Learn more</a>.
 
 ## Sign in to the console
 
