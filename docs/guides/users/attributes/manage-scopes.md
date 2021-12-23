@@ -118,7 +118,7 @@ As an application developer, you can follow the steps given below to request use
 1. First, go to the Asgardeo console and see that your application has the <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">required attributes enabled</a>. 
 2. Go to **Manage > Scopes** in the console and see that the required attributes are bound to a **scope**. 
 
-   You may have a <a :href="$withBase('#default-oidc-scopes')">default OIDC scope</a> or a <a :href="$withBase('#create-custom-scopes')">custom scope</a>.
+   You may have <a :href="$withBase('#default-oidc-scopes')">default OIDC scopes</a> or <a :href="$withBase('#create-custom-scopes')">custom scopes</a>.
 
 3. When configuring the authentication request in your client app, append the **scope** parameter with the scopes that you need:
 
