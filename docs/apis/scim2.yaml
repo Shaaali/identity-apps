@@ -12,7 +12,7 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: 'https://api.asgardeo.io/t/{org-name}/scim2'
+  - url: 'https://api.asgardeo.io/t/{organization-name}/scim2'
     variables:
       tenant-domain:
         default: unknown
@@ -24,11 +24,11 @@ tags:
   - name: Groups Endpoint
     description: This endpoint performs actions related to all groups in the organization.
   - name: Bulk Endpoint
-    description: This endpoint allows developers to create or update users in bulk.
+    description: Create/ Update/ Delete SCIM Resources (Users/ Groups) in Bulk.
   - name: Resource Type Endpoint
-    description: .
+    description: This API lists and returns metadata about resource types.
   - name: Service Provider Config Endpoint
-    description: .
+    description: This API returns the service provider's configuration details.
 security:
   - OAuth2: []
 paths:
@@ -162,7 +162,7 @@ paths:
       - Groups Endpoint
       summary: Filter Groups
       description: "This API returns groups according to the specified filter, sort, and pagination parameters.\n\n  
-      <b>Scope required:</b> ``internal_role_mgt_view``"
+      <b>Scope required:</b> ``internal_group_mgt_view``"
       operationId: getGroup
       parameters:
       - name: attributes
@@ -227,7 +227,7 @@ paths:
       - Groups Endpoint
       summary: Create Group
       description: "This API creates a group and returns the details of the created group including its unique ID.\n\n
-        <b>Scope required:</b> ``internal_role_mgt_create``"
+        <b>Scope required:</b> ``internal_group_mgt_create``"
       operationId: createGroup
       parameters:
       - name: attributes
@@ -284,7 +284,7 @@ paths:
       - Groups Endpoint
       summary: Search Groups
       description: "This API returns groups according to the specified filter, sort, and pagination parameters.\n\n
-        <b>Scope required:</b> ``internal_role_mgt_view``"
+        <b>Scope required:</b> ``internal_group_mgt_view``"
       operationId: getGroupsByPost
       requestBody:
         content:
@@ -324,7 +324,7 @@ paths:
       - Groups Endpoint
       summary: Get Group by ID
       description: "This API returns the group details of a particular group using its unique ID.\n\n
-        <b>Scope required:</b> ``internal_role_mgt_view``"
+        <b>Scope required:</b> ``internal_group_mgt_view``"
       operationId: getGroup by id
       parameters:
       - name: id
@@ -373,7 +373,7 @@ paths:
       - Groups Endpoint
       summary: Update Group - PUT
       description: "This API updates the group details and returns the updated group details using a PUT operation.\n\n
-        <b>Scope required:</b> ``internal_role_mgt_update``"
+        <b>Scope required:</b> ``internal_group_mgt_update``"
       operationId: updateGroup
       parameters:
       - name: id
@@ -435,7 +435,7 @@ paths:
       - Groups Endpoint
       summary: Delete Group
       description: "This API deletes a particular group using its unique ID.\n\n 
-      <b>Scope required:</b> ``internal_role_mgt_delete``"
+      <b>Scope required:</b> ``internal_group_mgt_delete``"
       operationId: deleteGroup
       parameters:
       - name: id
@@ -471,7 +471,7 @@ paths:
       - Groups Endpoint
       summary: Update Group - PATCH
       description: "This API updates the group details and returns the updated group details using a PATCH operation.\n\n 
-        <b>Scope required:</b> ``internal_role_mgt_update``"
+        <b>Scope required:</b> ``internal_group_mgt_update``"
       operationId: patchGroup
       parameters:
       - name: id
@@ -893,7 +893,7 @@ paths:
     post:
       tags:
       - Bulk Endpoint
-      summary: Create/ Update/ Delete SCIM Resources (Users/ Groups/ Roles) in Bulk
+      summary: Create/ Update/ Delete SCIM Resources (Users/ Groups) in Bulk
       description: "This API is used to create multiple users at once.\n\n
       <b>Scope required:</b> ``internal_user_mgt_create``"
       operationId: createBulkUsers
@@ -963,19 +963,19 @@ paths:
         200:
           description: Schema is found
           content:
-            application/scim+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/SPConfigResponse'
         401:
           description: Unauthorized
           content:
-            application/scim+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorUnauthorized'
         404:
           description: Schema not found
           content:
-            application/scim+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorSchemaNotFound'
 components:
@@ -1000,7 +1000,7 @@ components:
               example: Berry
         userName:
           type: string
-          example: kim
+          example: CUSTOMER-DEFAULT/kim@gmail.com
         password:
           type: string
           example: abc123
@@ -1008,7 +1008,7 @@ components:
           type: array
           example:
           - type: home
-            value: kim@gmail.com
+            value: CUSTOMER-DEFAULT/kim@gmail.com
             primary: true
           - type: work
             value: kim@wso2.com
@@ -1115,7 +1115,7 @@ components:
               example: Berry
         userName:
           type: string
-          example: kim
+          example: CUSTOMER-DEFAULT/kim@gmail.com
         emails:
           type: array
           example:
