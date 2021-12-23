@@ -14,9 +14,13 @@ Follow the steps given below to configure the user attributes from the Asgardeo 
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/add-mandatory-user-attributes.png')" alt="Add madatory user attributes in Asgardeo">
 
-### Disable the consent screen
+### Configure consent settings for user attributes
 
- <CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/disable-user-consent.md'/>
+When logging in to an application, Asgardeo will prompt the customer for consent to share user attributes with the application. Customers can allow applications to access user attributes or deny access to all or certain attributes.
+
+<img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
+
+This feature is enabled in Asgardeo by default. You can disable <a :href="$withBase('/guides/authentication/manage-consent-for-attributes')">consent management</a> features in the **Advanced** section.
 
 ## How it works
 Let's see how this flow works in Asgardeo.
@@ -33,15 +37,13 @@ Scopes determine which user attributes the application has the privilege to acce
 Learn more about <a :href="$withBase('/guides/users/attributes/manage-scopes')">managing scopes</a> in Asgardeo
 :::
 
-### Get consent for user attributes
- 
-<CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/get-user-consent.md'/>
-
-<img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
-
 ### Share user attributes with apps
 
 Asgardeo will share these user attributes with an application given the user has provided consent. User attributes along with the **subject** attribute are shared via the [ID token](#id-token) and the [user info response](#userinfo-response).
+
+#### Subject Attribute
+
+The subject attribute is the unique identifer for a customer. The application receives this value via the **sub** parameter in the [ID token](#id-token). In Asgardeo, the user ID assigned to a customer is used as the subject attribute. 
 
 #### Subject Attribute
 
