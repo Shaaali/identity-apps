@@ -13,7 +13,7 @@ particular IdP, the users from the external IdP will be provisioned into Asgarde
 :::
 
 As an organization administrator, you can specify whether users federated from third-party identity providers are
-locally provisioned or not. It means Asgardeo will not store users' PII locally for users federated from an external
+locally provisioned or not. If provisioning is disabled Asgardeo will not store users' PII locally for users federated from an external
 provider.
 
 By default, Asgardeo keeps JIT User Provisioning **disabled** when creating an IdP.
