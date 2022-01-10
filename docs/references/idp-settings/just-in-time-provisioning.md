@@ -30,7 +30,7 @@ To enable JIT User provisioning:
 <img :src="$withBase('/assets/img/references/idp-settings/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
 
 ::: info
-When you enable this configuration, user's login through federated IDP to a business application is performed in a
+When you enable this configuration, federated users logging in to a business application will pass-through their profiles and credentials from an external IdP. 
 pass-through mode. The application end-user will bring both the external system's profile and credentials, and Asgardeo
 Asgardeo will not create a local account for these users.
 :::
