@@ -32,7 +32,7 @@ To enable JIT User provisioning:
 ::: info
 When you enable this configuration, user's login through federated IDP to a business application is performed in a
 pass-through mode. The application end-user will bring both the external system's profile and credentials, and Asgardeo
-will not create a local account for the user.
+Asgardeo will not create a local account for these users.
 :::
 
 ### Disable JIT User Provisioning
