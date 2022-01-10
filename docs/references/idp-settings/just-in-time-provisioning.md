@@ -9,7 +9,7 @@ will provision the user to its internal user store along with the user claims ob
 ::: tip
 You can configure JIT provisioning against an identity provider, but not against a service provider. If you
 associate a JIT enabled connection (IdP) with an application (SP) for outbound authentication, 
-particular IdP, the users from the external IdP will be provisioned into Asgardeo's internal user store.
+the users from the IdP will be provisioned into Asgardeo's internal user store.
 :::
 
 As an administrator of an organization, you can choose to provision users federated from third-party identity providers in Asgardeo.
