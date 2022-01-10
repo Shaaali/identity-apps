@@ -46,7 +46,7 @@ To disable JIT User provisioning:
 
 ::: info
 When you disable this configuration, user authentication through a federated IdP
-happens locally. User's profile and the user's claims received from the external IdP are stored in Asgardeo by
+happens locally. User's profile, and the user's claims received from the external IdP are stored in Asgardeo by
 creating a local account.
 :::
 
@@ -57,7 +57,7 @@ the target connection. In such a scenario, the following warning will be display
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-interconnections-conflict.png')" alt="JIT User Provisioning Interconnections Conflict">
 
-This means that some applications that depend on the connection that you are trying to update has 2FA configured in their
+This means that there are some applications that depend on the connection you are trying to update, and it has 2FA configured in their
 authentication sequence. To avoid unusual login behaviours, you have to conditionally switch to **not to use 2FA** for this
 IdP. Functionally, 2FA requires users' identifier to successfully authenticate.
 
