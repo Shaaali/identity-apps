@@ -37,7 +37,7 @@ To disable JIT configuration, all you have to do is disable the below configurat
 <img :src="$withBase('/assets/img/references/idp-settings/jit-disabled.png')" alt="JIT User Provisioning Config Disabled">
 
 ::: info
-When you disable proxy mode configuration, the user's authentication through federated IDP to a business
+When you disable this configuration, the user's authentication through federated IDP to a business
 application is performed locally. Asgardeo will store the end user's external system's profile and PII on-premises by
 creating a local account.
 :::
