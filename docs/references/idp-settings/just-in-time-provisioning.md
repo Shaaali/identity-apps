@@ -24,7 +24,7 @@ To enable JIT User provisioning:
 
 1. On Asgardeo Console, click `Develop` > `Connections` and select the IdP.
 2. Move to the `Advanced` tab of the selected IdP.
-3. Tick the `Just-in-Time User Provisioning` checkbox.
+3. Select the `Just-in-Time User Provisioning` checkbox.
 4. Click `Update` to save.
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
