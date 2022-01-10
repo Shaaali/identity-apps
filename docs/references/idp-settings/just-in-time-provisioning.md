@@ -63,4 +63,4 @@ It means that listed applications depending on the connection that you are tryin
 authentication sequence. To avoid unusual login behaviours, you have to conditionally switch **not to use 2FA** for this
 IdP. Functionally, 2FA requires users' identifier to successfully authenticate.
 
-You can learn how to conditionally skip authentication with our adaptive script <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Adaptive Script Docs</a>.
+You can learn how to conditionally skip authentication using our adaptive script <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Adaptive Script Docs</a>.
