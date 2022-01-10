@@ -8,9 +8,8 @@ provision the user to its internal user store with the user claims (PII) from th
 
 ::: tip
 You configure JIT provisioning against an identity provider – not against service providers. Whenever you
-associate a connection (IdP) with an application (SP) for outbound authentication, if the
-JIT provisioning is enabled by default for that particular IdP, the users from the external IdP
-will be provisioned into Asgardeo's internal user store.
+associate a connection (IdP) with an application (SP) for outbound authentication, if JIT provisioning is enabled for a
+particular IdP, the users from the external IdP will be provisioned into Asgardeo's internal user store.
 :::
 
 As an organization administrator, you can specify whether users federated from third-party identity providers are
@@ -25,9 +24,11 @@ To enable JIT configuration, all you have to do is enable the below configuratio
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
 
-When you enable this configuration, users' login through federated IDP to a business application is performed in a
+::: info
+When you enable this configuration, user's login through federated IDP to a business application is performed in a
 pass-through mode. The application end-user will bring both the external system's profile and credentials, and Asgardeo
 will not create a local account for the user.
+:::
 
 ### Disable JIT User Provisioning
 
@@ -52,4 +53,4 @@ It means that listed applications depending on the connection that you are tryin
 authentication sequence. To avoid unusual login behaviours, you have to conditionally switch **not to use 2FA** for this
 IdP. Functionally, 2FA requires users' identifier to successfully authenticate.
 
-You can learn how to conditionally skip authentication with our adaptive script [Adaptive Script Docs](/references/conditional-auth/api-reference/#execute-a-step)
+You can learn how to conditionally skip authentication with our adaptive script <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Adaptive Script Docs</a>.
