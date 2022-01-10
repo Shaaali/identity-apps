@@ -23,7 +23,7 @@ By default, Asgardeo keeps JIT User Provisioning **disabled** when creating an I
 
 To enable JIT configuration, all you have to do is enable the below configuration via the Advanced section.
 
-// Insert checkbox checked image
+<img :src="$withBase('/assets/img/references/idp-settings/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
 
 When you enable this configuration, users' login through federated IDP to a business application is performed in a
 pass-through mode. The application end-user will bring both the external system's profile and credentials, and Asgardeo
@@ -33,7 +33,7 @@ will not create a local account for the user.
 
 To disable JIT configuration, all you have to do is disable the below configuration via the Advanced section.
 
-// Insert checkbox unchecked image
+<img :src="$withBase('/assets/img/references/idp-settings/jit-disabled.png')" alt="JIT User Provisioning Config Disabled">
 
 ::: info
 When you disable proxy mode configuration, the user's authentication through federated IDP to a business
@@ -46,10 +46,10 @@ creating a local account.
 When you are disabling JIT configuration, you have to make sure there's no 2FA configured applications depending on
 the target connection. In such a scenario, we will show you a warning message like below.
 
-// Insert multi app conflict message
+<img :src="$withBase('/assets/img/references/idp-settings/jit-interconnections-conflict.png')" alt="JIT User Provisioning Interconnections Conflict">
 
 It means that listed applications depending on the connection that you are trying to update and has 2FA configured in their
-authentication sequence. To avoid usual login behaiours, you have to conditionally switch **not to use 2FA** for this
+authentication sequence. To avoid unusual login behaviours, you have to conditionally switch **not to use 2FA** for this
 IdP. Functionally, 2FA requires users' identifier to successfully authenticate.
 
-You can learn how to conditionally skip authentication with our adaptive script [Adaptive Script Docs](/docs)
+You can learn how to conditionally skip authentication with our adaptive script [Adaptive Script Docs](/references/conditional-auth/api-reference/#execute-a-step)
