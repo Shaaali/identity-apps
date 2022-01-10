@@ -55,7 +55,7 @@ creating a local account.
 #### Interconnections with Applications
 
 When you are disabling JIT configuration, you have to make sure there's no 2FA configured applications depending on
-the target connection. In such a scenario, we will show you a warning message like below.
+the target connection. In such a scenario, the following warning message will be displayed.
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-interconnections-conflict.png')" alt="JIT User Provisioning Interconnections Conflict">
 
