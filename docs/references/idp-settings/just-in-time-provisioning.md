@@ -57,8 +57,9 @@ the target connection. In such a scenario, the following warning will be display
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-interconnections-conflict.png')" alt="JIT User Provisioning Interconnections Conflict">
 
-This means that there are some applications that depend on the connection you are trying to update, and it has 2FA configured in their
-authentication sequence. To avoid unusual login behaviours, you have to conditionally switch to **not to use 2FA** for this
-IdP. Functionally, 2FA requires users' identifier to successfully authenticate.
+This means some applications depend on the connection you are trying to update, and this application(s)
+have 2FA configured in their authentication sequence. To avoid unusual login behaviors, you have to
+conditionally switch to **not to use 2FA** for this IdP. Functionally, 2FA requires a user
+identifier to authenticate successfully.
 
 You can learn how to conditionally skip authentication using our adaptive script <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Adaptive Script Docs</a>.
