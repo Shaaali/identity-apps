@@ -20,7 +20,12 @@ By default, Asgardeo keeps JIT User Provisioning **disabled** when creating an I
 
 ### Enable JIT User Provisioning
 
-To enable JIT configuration, all you have to do is enable the below configuration via the Advanced section.
+To enable JIT User provisioning:
+
+1. On Asgardeo Console, click `Develop` > `Connections` and select the IdP.
+2. Move to the `Advanced` tab of the selected IdP.
+3. Tick the `Just-in-Time User Provisioning` checkbox.
+4. Click `Update` to save.
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
 
@@ -32,7 +37,12 @@ will not create a local account for the user.
 
 ### Disable JIT User Provisioning
 
-To disable JIT configuration, all you have to do is disable the below configuration via the Advanced section.
+To disable JIT User provisioning:
+
+1. On Asgardeo Console, click `Develop` > `Connections` and select the IdP.
+2. Move to the `Advanced` tab of the selected IdP.
+3. Un-tick the `Just-in-Time User Provisioning` checkbox.
+4. Click `Update` to save.
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-disabled.png')" alt="JIT User Provisioning Config Disabled">
 
