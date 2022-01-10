@@ -14,7 +14,6 @@ particular IdP, the users from the external IdP will be provisioned into Asgarde
 
 As an organization administrator, you can specify whether users federated from third-party identity providers are
 If provisioning is disabled, Asgardeo will not store user claims of federated users.
-provider.
 
 By default, Asgardeo keeps JIT User Provisioning **disabled** when creating an IdP.
 
