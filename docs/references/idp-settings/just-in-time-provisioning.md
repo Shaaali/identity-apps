@@ -48,7 +48,7 @@ To disable JIT User provisioning:
 
 ::: info
 When you disable this configuration, user authentication through a federated IdP
-application is performed locally. Asgardeo will store the end user's external system's profile and PII on-premises by
+happens locally. User's profile and the user's claims received from the external IdP are stored in Asgardeo by
 creating a local account.
 :::
 
