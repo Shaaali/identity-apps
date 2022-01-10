@@ -7,7 +7,7 @@ Asgardeo receives a positive authentication response from the external identity 
 will provision the user to its internal user store along with the user claims obtained from the authentication response.
 
 ::: tip
-You can configure JIT provisioning against an identity provider, but not against service providers. Whenever you
+You can configure JIT provisioning against an identity provider, but not against a service provider. Whenever you
 associate a connection (IdP) with an application (SP) for outbound authentication, if JIT provisioning is enabled for a
 particular IdP, the users from the external IdP will be provisioned into Asgardeo's internal user store.
 :::
