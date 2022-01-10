@@ -12,7 +12,7 @@ associate a JIT enabled connection (IdP) with an application (SP) for outbound a
 particular IdP, the users from the external IdP will be provisioned into Asgardeo's internal user store.
 :::
 
-As an organization administrator, you can specify whether users federated from third-party identity providers are
+As an administrator of an organization, you can choose to provision users federated from third-party identity providers in Asgardeo.
 If provisioning is disabled, Asgardeo will not store user claims of federated users.
 
 By default, Asgardeo keeps JIT User Provisioning **disabled** when creating an IdP.
