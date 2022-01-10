@@ -1,7 +1,7 @@
 # Just-in-Time User Provisioning
 
 Just-in-Time (JIT) User Provisioning is about how to provision users to Asgardeo during federated authentication. A
-service provider (SP) initiates the authentication request, and the user gets redirected to Asgardeo, and then Asgardeo
+service provider (SP) initiates the authentication request, and the user gets redirected to Asgardeo. Finally, Asgardeo
 redirects the user to an external Identity Provider (IdP) for authentication. JIT provisioning gets triggered in such a
 scenario when Asgardeo receives a positive authentication response from the external identity provider. Asgardeo will
 provision the user to its internal user store with the user claims (PII) from the authentication response.
