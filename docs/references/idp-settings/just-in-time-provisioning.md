@@ -59,7 +59,7 @@ the target connection. In such a scenario, the following warning message will be
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-interconnections-conflict.png')" alt="JIT User Provisioning Interconnections Conflict">
 
-It means that listed applications depending on the connection that you are trying to update and has 2FA configured in their
+This means that some applications that depend on the connection that you are trying to update has 2FA configured in their
 authentication sequence. To avoid unusual login behaviours, you have to conditionally switch to **not to use 2FA** for this
 IdP. Functionally, 2FA requires users' identifier to successfully authenticate.
 
