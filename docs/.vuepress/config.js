@@ -300,10 +300,8 @@ module.exports = config({
                             title: 'Configure JIT User Provisioning',
                             path: 'jit-provisioning',
                             prefix: 'jit-provisioning/',
-                            sidebarDepth: 2,
                             children: [
-                                ['enable-jit-user-provisioning.md', 'Enable JIT User Provisioning'],
-                                ['disable-jit-user-provisioning.md', 'Disable JIT User Provisioning'],
+                                ['jit-provisioning', 'JIT User Provisioning'],
                             ]
                         },
                     ]
