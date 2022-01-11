@@ -293,9 +293,19 @@ module.exports = config({
                         children: [
                             ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                         ]
-                    },   
-                    
-                    ['manage-claims-for-apps.md', 'Manage user consent']
+                    },
+
+                    ['manage-claims-for-apps.md', 'Manage user consent'],
+                        {
+                            title: 'Configure JIT User Provisioning',
+                            path: 'jit-provisioning',
+                            prefix: 'jit-provisioning/',
+                            sidebarDepth: 2,
+                            children: [
+                                ['enable-jit-user-provisioning.md', 'Enable JIT User Provisioning'],
+                                ['disable-jit-user-provisioning.md', 'Disable JIT User Provisioning'],
+                            ]
+                        },
                     ]
                 },
                 {
