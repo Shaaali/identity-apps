@@ -296,14 +296,7 @@ module.exports = config({
                     },
 
                     ['manage-claims-for-apps.md', 'Manage user consent'],
-                        {
-                            title: 'Configure JIT User Provisioning',
-                            path: 'jit-provisioning',
-                            prefix: 'jit-provisioning/',
-                            children: [
-                                ['jit-provisioning', 'JIT User Provisioning'],
-                            ]
-                        },
+                    ['jit-user-provisioning.md', 'Configure JIT User Provisioning'],
                     ]
                 },
                 {
