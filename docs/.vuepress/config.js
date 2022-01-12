@@ -293,9 +293,7 @@ module.exports = config({
                         children: [
                             ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                         ]
-                    },   
-                    
-                    ['manage-claims-for-apps.md', 'Manage user consent']
+                    },
                     ]
                 },
                 {
