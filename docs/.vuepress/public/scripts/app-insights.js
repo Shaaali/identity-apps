@@ -36,7 +36,7 @@ export class AppInsights {
         // Create application insights instance if not already created.
         if (!this.externalAppInsightsInstance) {
             // Read configuration values.
-            const endpointUrl = "";
+            const endpointUrl = "{INSIGHTS_ENDPOINT_URL}";
 
             // Disable if the instrumentation key is not provided.
             if (this.instrumentationKey === "") {
@@ -49,7 +49,7 @@ export class AppInsights {
                 instrumentationKey: this.instrumentationKey,
             };
 
-            if (endpointUrl !== "") {
+            if (endpointUrl !== "{INSIGHTS_ENDPOINT_URL}") {
                 config.endpointUrl = endpointUrl;
             }
 
