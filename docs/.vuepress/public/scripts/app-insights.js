@@ -49,7 +49,7 @@ export class AppInsights {
                 instrumentationKey: this.instrumentationKey,
             };
 
-            if (endpointUrl !== "{INSIGHTS_ENDPOINT_URL}") {
+            if (endpointUrl !== "") {
                 config.endpointUrl = endpointUrl;
             }
 
