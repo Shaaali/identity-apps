@@ -31,6 +31,7 @@
     "vuepress-theme-hope": "^1.13.1"
   },
   "dependencies": {
+    "@microsoft/applicationinsights-web": "^2.7.2",
     "vuepress-plugin-robots": "^1.0.1"
   }
 }

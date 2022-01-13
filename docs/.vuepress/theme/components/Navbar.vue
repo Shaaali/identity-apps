@@ -37,7 +37,15 @@
           :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <Button class="header-signup-btn" buttonType="default-outlined" buttonText="Sign Up for Asgardeo" v-bind:openInNewTab="true" externalLink="https://asgardeo.io/signup?utm_source=asgardeo_docs"/>
+      <div @click="appInsightEvent">
+        <Button
+          class="header-signup-btn"
+          buttonType="default-outlined"
+          buttonText="Sign Up for Asgardeo"
+          v-bind:openInNewTab="true"
+          externalLink="https://asgardeo.io/signup?utm_source=asgardeo_docs"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -51,6 +59,7 @@ import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import Button from "../../components/Button"
 import DarkmodeSwitch from "@theme/components/Theme/DarkmodeSwitch.vue"
+import { AppInsights } from '../../public/scripts/app-insights'
 export default {
   name: 'Navbar',
   components: {
@@ -87,6 +96,12 @@ export default {
     }
     handleLinksWrapWidth()
     window.addEventListener('resize', handleLinksWrapWidth, false)
+  },
+  methods: {
+    appInsightEvent: function (e) {
+      const appInsight = new AppInsights();
+      appInsight.trackEvent("docs-header-sign-up-for-asgardeo-button");
+    }
   }
 }
 function css (el, property) {
