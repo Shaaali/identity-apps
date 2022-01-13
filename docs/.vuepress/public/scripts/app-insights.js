@@ -7,7 +7,7 @@
  * You may not alter or remove any copyright or other notice from copies of this content."
  */
 
-import { ApplicationInsights } from '@microsoft/applicationinsights-web'
+import { ApplicationInsights } from "@microsoft/applicationinsights-web"
 /**
  * App Insights class to perform application insights related functions.
  */
@@ -37,8 +37,6 @@ export class AppInsights {
         if (!this.externalAppInsightsInstance) {
             // Read configuration values.
             const endpointUrl = "";
-            const cookieDomain = "";
-            const cookiePostfix = "";
 
             // Disable if the instrumentation key is not provided.
             if (this.instrumentationKey === "") {
@@ -53,13 +51,6 @@ export class AppInsights {
 
             if (endpointUrl !== "") {
                 config.endpointUrl = endpointUrl;
-            }
-            if (cookieDomain !== "") {
-                config.cookieDomain = cookieDomain;
-            }
-            if (cookiePostfix !== "") {
-                config.sessionCookiePostfix = cookiePostfix;
-                config.userCookiePostfix = cookiePostfix;
             }
 
             this.externalAppInsightsInstance = new ApplicationInsights({
