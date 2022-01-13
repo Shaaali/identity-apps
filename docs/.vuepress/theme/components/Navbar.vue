@@ -100,7 +100,7 @@ export default {
   methods: {
     appInsightEvent: function (e) {
       const appInsight = new AppInsights();
-      appInsight.trackEvent("docs-header-sign-up-for-asgardeo-button");
+      appInsight.trackEvent("docs-header-click-signup");
     }
   }
 }
