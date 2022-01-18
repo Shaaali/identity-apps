@@ -27,7 +27,7 @@ the target connection. In such a scenario, the following warning will be display
 
 This means some applications that depend on the connection you are trying to update, have 2FA
 configured in their authentication sequence. To avoid unusual login behaviors,
-conditionally switch to **not to use 2FA** for this IdP. Functionally, 2FA requires a user
+conditionally switch to **not to use 2FA** for the selected IdP. Functionally, 2FA requires a user
 identifier to authenticate successfully.
 
 You can learn how to conditionally skip authentication using our adaptive script <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Adaptive Script Docs</a>.
