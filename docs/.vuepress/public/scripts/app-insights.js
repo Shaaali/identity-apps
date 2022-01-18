@@ -20,6 +20,7 @@ export class AppInsights {
         this.isEnabled = true;
         this.isInitialized = false;
         this.instrumentationKey = "{AZURE_INSTRUMENTATION_KEY}";
+        this.endpointUrl = "{INSIGHTS_ENDPOINT_URL}";
     }
 
     /**
@@ -35,9 +36,6 @@ export class AppInsights {
 
         // Create application insights instance if not already created.
         if (!this.externalAppInsightsInstance) {
-            // Read configuration values.
-            const endpointUrl = "{INSIGHTS_ENDPOINT_URL}";
-
             // Disable if the instrumentation key is not provided.
             if (this.instrumentationKey === "") {
                 this.isEnabled = false;
@@ -49,8 +47,8 @@ export class AppInsights {
                 instrumentationKey: this.instrumentationKey,
             };
 
-            if (endpointUrl !== "") {
-                config.endpointUrl = endpointUrl;
+            if (this.endpointUrl !== "") {
+                config.endpointUrl = this.endpointUrl;
             }
 
             this.externalAppInsightsInstance = new ApplicationInsights({
