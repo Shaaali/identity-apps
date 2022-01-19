@@ -59,7 +59,6 @@ import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import Button from "../../components/Button"
 import DarkmodeSwitch from "@theme/components/Theme/DarkmodeSwitch.vue"
-import { AppInsights } from '../../public/scripts/app-insights'
 export default {
   name: 'Navbar',
   components: {
@@ -99,8 +98,7 @@ export default {
   },
   methods: {
     appInsightEvent: function (e) {
-      const appInsight = new AppInsights();
-      appInsight.trackEvent("docs-header-click-signup");
+      window.appInsights.trackEvent({name: "docs-header-click-signup"});
     }
   }
 }
