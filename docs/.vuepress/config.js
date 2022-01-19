@@ -21,6 +21,7 @@ module.exports = config({
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
         ['script', {src: '/scripts/analytics.js'}],
         ['script', {src: '/scripts/hotjar.js'}],
+        ['script', {src: '/scripts/app-insights.js'}],
         ['noscript', {}, 
             `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
         ],
