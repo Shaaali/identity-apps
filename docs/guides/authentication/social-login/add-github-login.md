@@ -93,3 +93,6 @@ Follow the steps given below.
 ::: info
 When a user successfully logs in with Github for the first time, a **customer** account is created in the Asgardeo console with the Github username. This new user account will be managed by Github.
 :::
+
+## Related Links
+- <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">Configure JIT user provisioning</a>

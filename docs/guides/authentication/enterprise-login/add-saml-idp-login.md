@@ -211,5 +211,5 @@ You may want to convert them to the local attribute URI so that the application 
 ```
 
 ## Related links
-
+- <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">Configure JIT user provisioning</a>
 - <a :href="$withBase('/references/idp-settings/saml-settings-for-idp/')">Configure SAML IdP settings</a>
