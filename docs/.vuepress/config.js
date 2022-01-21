@@ -21,6 +21,7 @@ module.exports = config({
         ['meta', {name: 'google-site-verification', content: 't7sfVDHspOQUclosR3wjsyXV34xmdbqiefY0WeLfqgM'}],
         ['script', {src: '/scripts/analytics.js'}],
         ['script', {src: '/scripts/hotjar.js'}],
+        ['script', {src: '/scripts/app-insights.js'}],
         ['noscript', {}, 
             `<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSTXMT" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
         ],
@@ -293,9 +294,8 @@ module.exports = config({
                         children: [
                             ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                         ]
-                    },   
-                    
-                    ['manage-claims-for-apps.md', 'Manage user consent']
+                    },
+                        ['jit-user-provisioning.md', 'Configure JIT User Provisioning'],
                     ]
                 },
                 {
@@ -389,6 +389,7 @@ module.exports = config({
                     children: [
                         ['/references/idp-settings/oidc-settings-for-idp.md', 'OIDC configurations'],
                         ['/references/idp-settings/saml-settings-for-idp.md', 'SAML configurations'],
+                        ['/references/idp-settings/just-in-time-provisioning.md', 'Just-in-Time User Provisioning'],
                     ]
                 },
                 ['/references/conditional-auth/api-reference.md', 'Conditional auth - API'],
