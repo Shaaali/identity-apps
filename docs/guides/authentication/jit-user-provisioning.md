@@ -49,4 +49,4 @@ the selected IdP. If the IdP has such applications, the following warning will b
 
 This warning shows that there are applications using MFA to authenticate users, and certain MFA mechanisms require a provisoned user account for proper functionality.
 
-You can learn more on how to conditionally skip authentication using our <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Conditional Authentication </a>docs.
+You can learn more on how to conditionally skip authentication using our <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Conditional Authentication</a> docs.
