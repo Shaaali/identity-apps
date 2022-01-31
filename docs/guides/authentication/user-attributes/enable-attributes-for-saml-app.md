@@ -36,7 +36,8 @@ This ensures that the application receives attributes based on the name that is 
 
 ### Select the subject attribute
 
-The subject attribute is used for exchanging information about the user. The subject is represented by the **subject** attribute in the SAML assertion. 
+The subject attribute is used for exchanging information about the user. The subject is represented by the **subject** attribute in the SAML assertion.
+ 
 By default, Asgardeo shares **username** as the subject. Asgardeo provides the capability to define any user attribute as the subject.
 
 To define some other attributes as the subject:
@@ -49,10 +50,6 @@ To define some other attributes as the subject:
 3. Select one attribute as the subject from the **Subject attribute** list.
 4. Click **Update**.
 
-### Disable the consent screen
-
-<CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/disable-user-consent.md'/>
-
 ## How it works
 
 Let's see how this flow works in Asgardeo.
@@ -61,9 +58,19 @@ Once you have configured the user attributes that are required for your applicat
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 
-### Get consent for user attributes
- 
-<CommonGuide guide='guides/fragments/manage-app/manage-user-attributes/get-user-consent.md'/>
+### Checks mandatory attributes
+
+When the user logs in to the app, a request is sent to Asgardeo.
+
+Asgardeo verifies whether the user's profile has values for all the [mandatory attributes](#define-mandatory-user-attributes) that are enabled for the application. If there are missing values, a screen is prompted for the user to enter the missing values.
+
+### Requests user consent
+
+By default, Asgardeo requests the user's consent to share the user attributes with the application.
+
+::: info
+Learn more about <a :href="$withBase('/guides/authentication/manage-consent-for-attributes')">managing user consent</a>.
+:::
 
 ### Share user attributes with apps
 
@@ -89,6 +96,7 @@ _A sample Subject element found in a SAML assertion is given below:_
 ```
 
 #### Attribute statement
+
 The user attributes that are consented to by the user will be shared with applications via the `<saml2:AttributeStatement>` element.
 
 _A sample attribute statement element found in a SAML assertion is given below:_
