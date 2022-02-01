@@ -40,7 +40,7 @@ The subject attribute is used for exchanging information about the user. The sub
  
 By default, Asgardeo shares **username** as the subject. Asgardeo provides the capability to define any user attribute as the subject.
 
-To define some other attributes as the subject:
+To define a different attribute as the subject:
 
 1. <a :href="$withBase('#select-user-attributes')">Select it as a user attribute</a>. 
 2. Go to the **Subject** section under **User Attributes**.
