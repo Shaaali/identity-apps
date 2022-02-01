@@ -97,7 +97,7 @@ _A sample Subject element found in a SAML assertion is given below:_
 
 #### Attribute statement
 
-The user attributes that are consented to by the user will be shared with applications via the `<saml2:AttributeStatement>` element.
+The user attributes for which the user has given consent will be shared with applications via the `<saml2:AttributeStatement>` element.
 
 _A sample attribute statement element found in a SAML assertion is given below:_
 ```xml no-line-numbers
