@@ -57,7 +57,7 @@ The subject attribute is the unique identifer for a customer. The application re
 
 Once the <a :href="$withBase('/guides/authentication/oidc/implement-auth-code/#get-tokens')">application calls the token endpoint</a>, Asgardeo sends the ID token in the response. 
 
-All the user attributes that are requested based on scopes are returned as claims in the ID token. The application can decode the ID token to view the claims.
+All the user attributes that are requested by scopes are returned as claims in the ID token. The application can decode the ID token to view the claims.
 
 _A sample ID token is given below:_
 
