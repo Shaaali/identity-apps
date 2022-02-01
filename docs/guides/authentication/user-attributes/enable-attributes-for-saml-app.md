@@ -47,7 +47,7 @@ To define a different attribute as the subject:
 
    <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
 
-3. Select one attribute as the subject from the **Subject attribute** list.
+3. Select an attribute as the subject from the **Subject attribute** list.
 4. Click **Update**.
 
 ## How it works
