@@ -38,7 +38,7 @@ This ensures that the application receives attributes based on the name that is 
 
 The subject attribute is used for exchanging information about the user. The subject is represented by the **subject** attribute in the SAML assertion.
  
-By default, Asgardeo shares **username** as the subject. Asgardeo provides the capability to define any user attribute as the subject.
+By default, Asgardeo shares **username** as the subject. You can define any user attribute as the subject.
 
 To define a different attribute as the subject:
 
