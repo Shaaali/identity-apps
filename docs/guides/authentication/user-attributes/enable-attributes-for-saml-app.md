@@ -58,7 +58,7 @@ Once you have configured the user attributes that are required for your applicat
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 
-### Checks mandatory attributes
+### Asgardeo checks for mandatory attributes
 
 When the user logs in to the app, a request is sent to Asgardeo.
 
