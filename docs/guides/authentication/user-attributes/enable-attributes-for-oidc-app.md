@@ -33,7 +33,7 @@ Scopes determine which user attributes the application is privileged to access. 
 Learn more about <a :href="$withBase('/guides/users/attributes/manage-scopes')">managing scopes</a> in Asgardeo.
 :::
 
-### Checks mandatory attributes
+### Asgardeo checks for mandatory attributes
 
 Asgardeo verifies whether the user's profile has values for all the [mandatory attributes](#define-mandatory-user-attributes) that are requested by the application. If there are missing values, Asgardeo will prompt the user to enter the missing values.
 
