@@ -35,7 +35,7 @@ Learn more about <a :href="$withBase('/guides/users/attributes/manage-scopes')">
 
 ### Checks mandatory attributes
 
-Asgardeo verifies whether the user's profile has values for all the [mandatory attributes](#define-mandatory-user-attributes) that are enabled for the application. If there are missing values, a screen is prompted for the user to enter the missing values.
+Asgardeo verifies whether the user's profile has values for all the [mandatory attributes](#define-mandatory-user-attributes) that are requested by the application. If there are missing values, Asgardeo will prompt the user to enter the missing values.
 
 ### Requests user consent
 
