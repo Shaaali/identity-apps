@@ -47,7 +47,7 @@ Learn more about <a :href="$withBase('/guides/authentication/manage-consent-for-
 
 ### Shares attributes with the app
 
-If the user gives consent, Asgardeo returns the requested user attributes as well as the **subject** attribute to the application in the **ID token**.
+If the user gives consent to share attributes with the application, Asgardeo returns the requested user attributes as well as the **subject** attribute to the application in the **ID token**.
 
 #### Subject Attribute
   
