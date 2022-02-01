@@ -10,7 +10,7 @@ Once the user is logged in, Asgardeo requests consent from the customer to share
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
 
-If the user **does not have** the attribute details in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a>, Asgardeo will prompt the user to enter the **mandatory** user attributes during login.
+If the application requires **mandatory** attributes for which values are not specified in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a>, Asgardeo will prompt the user to enter those values during login.
 
 The user can do one of the following during login:
 
