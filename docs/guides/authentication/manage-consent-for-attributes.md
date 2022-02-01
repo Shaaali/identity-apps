@@ -2,7 +2,7 @@
 
 If <a :href="$withBase('/guides/authentication/user-attributes/')">user attributes are enabled</a> for applications registered in Asgardeo, the applications can access these attributes when the user logs in to the app. However, it may be necessary to get the user's consent before sharing the user's information.
 
-In Asgardeo, you can let the app users (customers) acknowledge the use of user attributes or skip consent as explained below.
+In Asgardeo, you can either display a screen to request consent for user attributes or skip this step as explained below.
 
 ## Get consent for user attributes
 
