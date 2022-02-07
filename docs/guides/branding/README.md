@@ -38,7 +38,7 @@ You can temporarily disable your branding preferences by switching off this togg
 
 ## Revert your branding
 
-If you want to revert your branding preferences, you can click **Revert** in the danger zone.
+If you want to revert your branding preferences, scroll down to the **Danger Zone** and click **Revert to default**.
 
 Note that this permanently removes all the branding options that you have saved and the Asgardeo defaults will immediately apply.
 
