@@ -15,7 +15,7 @@ Follow the steps given below to configure the branding preferences for your orga
 
     <img :src="$withBase('/assets/img/guides/branding/branding-asgardeo-console-ui.png')" alt="Asgardeo Console - Branding UI">
 
-2. Update the [available branding options](#branding-preferences) in the **General**, **Design**, and **Advanced**tabs.
+2. Update the [available branding options](#branding-preferences) in the **General**, **Design**, and **Advanced** tabs.
 
 ::: info Note
 -   If you leave any of the branding preferences empty, Asgardeo defaults will be used.
