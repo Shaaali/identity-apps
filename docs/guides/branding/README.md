@@ -44,7 +44,7 @@ Note that this permanently removes all the branding options that you have saved 
 
 ## Request more branding
 
-If you need to apply more branding than what is allowed from the Asgardeo console, contact the Asgardeo team.
+If you need to apply more branding than what is allowed from the Asgardeo console, contact the Asgardeo team at **asgardeo-help@wso2.com**.
 
 ## Branding preferences
 
