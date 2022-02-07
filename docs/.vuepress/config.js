@@ -299,6 +299,12 @@ module.exports = config({
                     ]
                 },
                 {
+                    title: 'Branding',
+                    prefix: 'branding/',
+                    path: 'branding/',
+                    sidebarDepth: 2
+                },
+                {
                     title: 'User Management',
                     prefix: 'users/',
                     path: 'users/',
