@@ -116,5 +116,4 @@ To provide this login capability, Asgardeo uses the standard [OpenID Connect wit
 
 ## Related links
 
-- <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">Configure JIT user provisioning</a>
 - <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/')">Configure OIDC IdP settings</a>
