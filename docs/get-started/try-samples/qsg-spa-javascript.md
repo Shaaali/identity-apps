@@ -48,8 +48,8 @@ Click the **Download sample** button to download the sample. You can also choose
     const authConfig = {
         clientID: "<client ID>",
         signInRedirectURL: "https://localhost:5000",
-        serverOrigin: "https://api.asgardeo.io/<organization_name>",
-        "scope": [ "profile" ]
+        serverOrigin: "https://api.asgardeo.io/t/<organization_name>",
+        scope: [ "profile" ]
     };
     ```
 
