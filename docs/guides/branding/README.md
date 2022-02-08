@@ -4,6 +4,12 @@ You can customize the user interfaces presented to your customers at login, sign
 
 By branding these interfaces, your customers will get a familiar and consistent user experience.
 
+::: info 
+See the complete list of [branding options](#branding-preferences) available in Asgardeo currently.
+:::
+
+<img class="borderless-img" :src="$withBase('/assets/img/guides/branding/branding-example.png')" alt="Asgardeo branding example" width="1000">
+
 ## Prerequisites
 
 You need to have an organization in Asgardeo. <a :href="$withBase('/get-started/create-asgardeo-account/')">Create an organization</a> if you don’t have one.
@@ -31,21 +37,29 @@ Follow the steps given below to configure the branding preferences for your orga
 
 4. Save your updates.
 
-## Publish/Disable your branding
+## Publish your branding
 
-Once you are ready with your branding preferences, use the **Publish Changes** toggle to go live with your updates.
+Once you are ready with your branding updates, use the **Publish Changes** toggle to go live with your updates. 
 
-You can temporarily disable your branding preferences by switching off this toggle. When disabled, Asgardeo’s default branding will apply to your flows.
+Note that all subsequent branding changes that you save are immediately published if this toggle is switched on. 
+
+::: info Info
+The **Powered by Asgardeo** label will display on the Asgardeo-powered interfaces when branding is published.
+:::
+
+## Disable your branding
+
+You can temporarily disable your branding preferences by switching off the **Publish Changes** toggle. Your branding updates will still be saved and you can choose to publish them again later.
+
+When disabled, Asgardeo’s default branding will apply to the interfaces in your application login, user registration, and account recovery flows.
 
 ## Revert your branding
 
 If you want to revert your branding preferences, scroll down to the **Danger Zone** and click **Revert to default**.
 
+::: warning Warning
 Note that this permanently removes all the branding options that you have saved and the Asgardeo defaults will immediately apply.
-
-## Request more branding
-
-If you need to apply more branding than what is allowed from the Asgardeo console, contact the Asgardeo team at **asgardeo-help@wso2.com**.
+:::
 
 ## Branding preferences
 
@@ -144,3 +158,7 @@ Listed below are some advanced branding preferences you can apply to the user re
       </td>
    </tr>
 </table>
+
+## Extended branding preferences
+
+If you need to apply more branding than what is allowed from the Asgardeo console, contact the Asgardeo team at **asgardeo-help@wso2.com**.
