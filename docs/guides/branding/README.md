@@ -8,7 +8,7 @@ By branding these interfaces, your customers will get a familiar and consistent 
 See the complete list of [branding options](#branding-preferences) available in Asgardeo currently.
 :::
 
-<img class="borderless-img" :src="$withBase('/assets/img/guides/branding/branding-example.png')" alt="Asgardeo branding example" width="1000">
+<img class="borderless-img" :src="$withBase('/assets/img/guides/branding/branding-example.png')" alt="Asgardeo branding example">
 
 ## Prerequisites
 
