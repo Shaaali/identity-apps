@@ -44,7 +44,7 @@ Once you are ready with your branding updates, use the **Publish Changes** toggl
 Note that all subsequent branding changes that you save are immediately published if this toggle is switched on. 
 
 ::: info Info
-The **Powered by Asgardeo** label will display on the Asgardeo-powered interfaces when branding is published.
+For free-tier subscriptions, the **Powered by Asgardeo** label will display on the Asgardeo-powered interfaces when branding is published.
 :::
 
 ## Disable your branding
