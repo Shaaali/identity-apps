@@ -25,17 +25,35 @@ Manage the user attributes you want to share with your application:
 
 ## Manage connections
 
-An Identity Provider (IdP) is responsible for authenticating users and issuing identification information by using security tokens like SAML 2.0, OpenID Connect, OAuth 2.0, and WS-Trust.
+You can define connections to external identity providers (IdPs) and use them to authenticate users who log in to your applications. This process of authenticating users with external IdPs is known as **identity federation**.
 
-Authenticating the users by trusting an assertion from an external identity provider is popularly known as **identity federation**. Identity federation helps to reduce the sign-in and sign-up flows and provides the capability for the users to choose their trusted identity provider for sign-in.
+::: info
+The external identity provider (IdP) authenticates users and issues the identification information by using security tokens like SAML 2.0, OpenID Connect, OAuth 2.0, and WS-Trust.
+:::
 
-Asgardeo supports a variety of external identity providers with various Open Standard protocols (eg:, OAuth2.0, OpenID Connect, and SAML). You can configure any number of external identity providers to your application via Asgardeo.
+The following diagram illustrates how identity federation works in Asgardeo.
 
-Current trends require the usage of services from hundreds of websites in a connected world. Most of these websites need the user to create an account with them by providing a valid email address and password. Remembering all the different user IDs and passwords that you use can be difficult and cumbersome. To make life easier most websites now provide the user with an option to log in using their Facebook account, Twitter account, Google account, etc. Since most internet users have one of these accounts, it makes creating a new account an instant action.
+.......
 
-To make this process much easier, the Asgardeo comes with a set of more specific identity providers:
+### Benefits of identity federation
+
+There are several benefits of using identity federation:
+
+-   Remove the hassle of manually creating user accounts for all of your customers.  
+
+    Typically, when a user signs in to an application, a valid email address and password is provided for authentication. For this to work, the user must already have a registered account in the organization. Identity federation allows users to sign in with a user account registered with another IdP and automatically get access to your application. That is, an SSO connection is established between the external IdP and Asgardeo.
+
+    ::: info
+    If the IdP connection is <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">configured with JIT user provisioning</a> in Asgardeo, this act of signing in with the external IdP will also automatically create a local account in the Asgardeo user store.
+    :::
+
+-   Give customers the convenience of choosing their existing, trusted IdP when they sign in or sign up to your organization in Asgardeo.
+
+### Supported external IdPs
+
+Asgardeo supports a variety of external identity providers with various open-standard protocols (such as OAuth2.0, OpenID Connect, and SAML).
 
 - <a :href="$withBase('/guides/authentication/social-login/')">Social identity providers</a>
 - <a :href="$withBase('/guides/authentication/enterprise-login/')">Enterprise identity providers</a>
 
-To connect to other identity providers, which are not social identity providers, you can use open-standard enterprise login.
+You can configure any number of external IdPs for your application via Asgardeo.
