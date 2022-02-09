@@ -306,6 +306,7 @@ module.exports = config({
                         ['manage-customers.md', 'Manage customers'],
                         ['manage-groups.md', 'Manage groups'],
                         ['manage-sessions.md', 'Manage active sessions'],
+                        ['manage-migration.md', 'Migrate Users'],
                         {
                             title: 'Manage Attributes and Mappings',
                             prefix: 'attributes/',
