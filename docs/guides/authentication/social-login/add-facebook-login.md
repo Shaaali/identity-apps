@@ -105,3 +105,7 @@ Follow the steps given below.
 ::: info
 When a user successfully logs in with Facebook for the first time, a **customer** account is created in the Asgardeo console with the Facebook username. This new user account will be managed by Facebook.
 :::
+
+## Related Links
+
+- <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">Configure JIT user provisioning</a>
