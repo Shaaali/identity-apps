@@ -1,52 +1,51 @@
-# Configure Just-in-Time user provisioning
+# Configure Just-in-Time (JIT) user provisioning
 
-If you are an administrator of an organization, Just-in-Time (JIT) user provisioning can be configured for any external
-IdP. Enabling JIT provisioning allows Asgardeo to store federated user's identity and user claims, in the Asgardeo user
-store.
+This guide explains the concept of Just-In-Time user provisioning, why and when to use it, and also the instuctions for configuring it.
 
 ## Introduction
 
-Just-in-Time (JIT) user provisioning is a method used to store the user's identity and user claims in the Asgardeo user store, if the user is aunthenticated through an external Identity provider (IdP). 
+Just-in-Time (JIT) user provisioning is a method used to store a user's identity and user claims in the Asgardeo user store when the user is authenticated through an <a :href="$withBase('/guides/authentication/#manage-connections')">external identity provider (IdP)</a>.
+
+### How JIT provisioning works
 
 The flow of JIT user provisioning is as follows: 
 
 1. When an application initiates an authentication request, the user gets redirected to Asgardeo. 
-2. Once in Asgardeo, if the user decides to use an external identity provider for authentication,
-Asgardeo redirects the user to the selected external IdP. 
-3. JIT provisioning gets triggered when Asgardeo receives a positive authentication response from the external IdP. 
+2. If the user has used an external identity provider for authentication, Asgardeo redirects the user to the selected external IdP. 
+3. Asgardeo receives a positive authentication response from the external IdP with the user information.
+4. JIT provisioning is triggered and Asgardeo creates a user account in its internal user store along with the user claims obtained from the authentication response.
 
-In such a scenario, Asgardeo will create a user account to its internal user store along with the user claims obtained from the authentication response.
+With this process, new user accounts are automatically provisioned to Asgardeo through external IdPs.
 
-## Enable JIT user provisioning
+### How to use JIT provisioning
 
-To enable JIT user provisioning:
+If you disable JIT provisioning for an IdP, be sure to validate its effect on your applications that use <a :href="$withBase('/guides/authentication/mfa/')">multi-factor authentication (MFA)</a>. This is because certain MFA mechanisms (such as TOTP and EmailOTP) require the login users to have local accounts in Asgardeo.
 
-1. On Asgardeo Console, click **Develop > Connections** and select the IdP.
-2. Go to the **Advanced** tab of the selected IdP.
-3. Select the **Just-in-Time User Provisioning** checkbox.
-<img :src="$withBase('/assets/img/guides/jit-provisioning/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
+In the user login flow, the authentication step for subject identification is where the login user is identified by validating credentials. For the MFA step to work, the user credentials that were validated should be stored in a local user account. This means that JIT provisioning is required for external IdPs that are in the subject identification step.
 
-4. Click **Update** to save.
+Alternatively, you can configure a login flow to skip the second authentication step when the specific IdP is used as the first authenticator. This can be achieved by a <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">conditional authentication script</a> with the <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">step-execution method</a>.
+
+## Prerequisites
+
+First, the external IdP should be registered in Asgardeo as a connection. 
 
 ::: info
-When you disable this configuration, the user's profile and user claims received from the external IdP are stored in Asgardeo by creating a local account.
+Learn more about how to enable login to your application using the following external IdPs: 
+- <a :href="$withBase('/guides/authentication/social-login/add-facebook-login/')">Facebook</a>
+- <a :href="$withBase('/guides/authentication/social-login/add-google-login/')">Google</a>
+- <a :href="$withBase('/guides/authentication/social-login/add-github-login/')">Github</a>
+- <a :href="$withBase('/guides/authentication/enterprise-login/add-oidc-idp-login/')">OpenID Connect IdPs</a>
+- <a :href="$withBase('/guides/authentication/enterprise-login/add-saml-idp-login/')">SAML IdPs</a>
 :::
 
 ## Disable JIT user provisioning
 
-To disable JIT user provisioning, unselect the **Just-in-Time User Provisioning** checkbox.
+To disable JIT user provisioning for an external IdP:
 
-<img :src="$withBase('/assets/img/guides/jit-provisioning/jit-disabled.png')" alt="JIT User Provisioning Config Disabled">
+1. On Asgardeo console, click **Develop > Connections** and select the IdP.
+2. Go to the **Advanced** tab of the selected IdP.
+3. Clear the **Just-in-Time User Provisioning** checkbox.
+    
+    <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
 
-::: info
-When you enable this configuration, Asgardeo will not create a local account for the users federated through an external IdP.
-:::
-
-When disabling JIT configuration, ensure there are no MFA configured applications depending on
-the selected IdP. If the IdP has such applications, the following warning will be displayed.
-
-<img :src="$withBase('/assets/img/references/idp-settings/jit-interconnections-conflict.png')" alt="JIT User Provisioning Interconnections Conflict">
-
-This warning shows that there are applications using MFA to authenticate users, and certain MFA mechanisms require a provisoned user account for proper functionality.
-
-You can learn more on how to conditionally skip authentication using our <a :href="$withBase('/references/conditional-auth/api-reference/#execute-a-step')">Conditional Authentication</a> docs.
+4. Click **Update** to save.
