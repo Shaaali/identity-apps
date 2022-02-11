@@ -31,10 +31,6 @@ You can define connections to external identity providers (IdPs) and use them to
 The external identity provider (IdP) authenticates users and issues the identification information by using security tokens like SAML 2.0, OpenID Connect, OAuth 2.0, and WS-Trust.
 :::
 
-The following diagram illustrates how identity federation works in Asgardeo.
-
-.......
-
 ### Benefits of identity federation
 
 There are several benefits of using identity federation:

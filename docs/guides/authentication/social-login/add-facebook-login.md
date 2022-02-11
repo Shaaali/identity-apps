@@ -64,6 +64,8 @@ Now, let's register the Facebook IdP in Asgardeo.
         </tr>
     </table>
 
+4. If required, your can <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">disable JIT user provisioning</a>.
+
 After the Facebook identity provider is created, go to the **Settings** tab and see the list of permissions granted by Facebook to Asgardeo.
 
 - **email**: Grants read access to a user's primary email address.
@@ -106,6 +108,3 @@ Follow the steps given below.
 When a user successfully logs in with Facebook for the first time, a **customer** account is created in the Asgardeo console with the Facebook username. This new user account will be managed by Facebook.
 :::
 
-## Related Links
-
-- <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">Configure JIT user provisioning</a>

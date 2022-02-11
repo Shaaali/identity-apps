@@ -53,6 +53,8 @@ Now, let's register the Github IdP in Asgardeo.
       </tr>
     </table>
 
+4. If required, your can <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">disable JIT user provisioning</a>.
+
 After the Github identity provider is created, go to the **Settings** tab and see the list of **scopes** to which Github has granted permissions.
 
 - **email**: Grants read access to a user's primary email address.
@@ -93,6 +95,3 @@ Follow the steps given below.
 ::: info
 When a user successfully logs in with Github for the first time, a **customer** account is created in the Asgardeo console with the Github username. This new user account will be managed by Github.
 :::
-
-## Related Links
-- <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">Configure JIT user provisioning</a>
