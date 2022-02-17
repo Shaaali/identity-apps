@@ -28,7 +28,7 @@ Identity providers now support automatic user migration over manual methods. Thi
 
 * **Credential transition**
 
-    This is one of the main challenges faced during user migration as systems have their passwords stored as hashes. The password policies and hashing mechanisms vary across different IdPs. Due to this, a hashed password on one system will not be usable on another.
+    Identity providers use hashing algorithms to store user passwords securely. The password policies and hashing mechanisms vary across different IdPs. Due to this, a hashed password on one system will not be usable on another.
 
 
 * **Schema matching**
