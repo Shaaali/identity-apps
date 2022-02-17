@@ -24,7 +24,7 @@ Alternatively, you can use traditional approaches of user migration. However the
 
 ## Challenges of traditional user migration
 
-Identity providers now support automatic user migration over manual methods. This helps administrators to import users with their groups, attributes, and other characteristics. These traditional automated user migration methods run with various challenges, which may result in operational overhead for administrators and a bad user experience. Users may face challenges in the following areas while using traditional user migration methods,
+Identity providers now support automatic user migration over manual methods. This helps administrators to import users with their groups, attributes, and other characteristics. These traditional automated user migration methods run with various challenges, which may result in operational overhead for administrators and a bad user experience. Users may face challenges in the following areas while using traditional user migration methods: 
 
 * **Credential transition**
 
