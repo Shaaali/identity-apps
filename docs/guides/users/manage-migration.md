@@ -10,7 +10,7 @@ You may need to migrate users from an external IdP to Asgardeo if the organizati
 * To reorganize, restructure, and simplify data storage.
 * To combine user data storages for centralized user management during company acquisitions and mergers.
 * To move or separate identity data due to geo-political, data protection, compliance, and regulatory reasons.
-* The organization requires effective identity management that can provide additional protection over user data storage, scalability in IAM, and minimal maintenance costs.
+* Effective identity management that can provide additional protection over user data storage, scalability in IAM, and minimal maintenance costs.
 
 ## How to migrate users to Asgardeo?
 
