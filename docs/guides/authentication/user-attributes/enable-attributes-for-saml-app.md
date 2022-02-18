@@ -96,7 +96,7 @@ _A sample Subject element found in a SAML assertion is given below:_
 
 #### Attribute statement
 
-The user attributes for which the user has given consent will be shared with applications via the `<saml2:AttributeStatement>` element.
+If the user gives consent to share attributes with the application, Asgardeo returns the requested user attributes via the `<saml2:AttributeStatement>` element
 
 _A sample attribute statement element found in a SAML assertion is given below:_
 ```xml no-line-numbers
