@@ -71,7 +71,7 @@ By default, Asgardeo requests the user's consent to share the user attributes wi
 Learn more about <a :href="$withBase('/guides/authentication/manage-consent-for-attributes')">managing user consent</a>.
 :::
 
-### Share user attributes with apps
+### Shares attributes with the app
 
 Asgardeo will share these user attributes with an application given the user has provided consent. User attributes along with the **subject** attribute are shared via SAML assertions. 
 
