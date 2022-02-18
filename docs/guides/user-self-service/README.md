@@ -14,4 +14,5 @@ Listed below are self service features that are available in the **My Account** 
 - Update the account recovery email
 - Discover and maintain applications
 - Enroll TOTP
+- Register FIDO2 Security Key/Biometrics
 

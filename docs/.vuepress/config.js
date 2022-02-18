@@ -200,6 +200,12 @@ module.exports = config({
                         ]
                     },
                     {
+                        title: 'Enable passwordless login',
+                        prefix: 'passwordless-login/',
+                        path: 'passwordless-login/',
+                        sidebarDepth: 2
+                    },
+                    {
                         title: 'Enable User Attributes',
                         prefix: 'user-attributes/',
                         path: 'user-attributes/',
@@ -361,6 +367,7 @@ module.exports = config({
                         ['self-register.md', 'Self-register'],
                         ['customer-password-recovery.md', 'Password recovery'],
                         ['enable-totp.md', 'Enroll TOTP'],
+                        ['register-security-key.md', 'Register for passwordless login'],
                         ['discover-applications.md', 'Discover applications'],
                     ]
                 },
