@@ -38,5 +38,8 @@ Asgardeo provides self-service interfaces for users to self-register, reset pass
 Try <a :href="$withBase('/guides/user-self-service/')">user self-service</a> in Asgardeo.
   
 ## Consent management
-With Asgardeo, your users can selectively opt-in/opt-out on which user attributes they want to share with applications,
+
+With Asgardeo, your users can select which user attributes they want to share with applications,
  easily review the consents they have provided for each application, and revoke one or many of them as required.
+
+Learn about <a :href="$withBase('/guides/authentication/manage-consent-for-attributes/')">consent management</a> in Asgardeo.

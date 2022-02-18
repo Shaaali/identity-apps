@@ -295,7 +295,8 @@ module.exports = config({
                             ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                         ]
                     },
-                        ['jit-user-provisioning.md', 'Configure JIT User Provisioning'],
+                        ['manage-consent-for-attributes.md', 'Manage user consent'],
+                        ['jit-user-provisioning.md', 'Configure JIT User Provisioning']
                     ]
                 },
                 {
