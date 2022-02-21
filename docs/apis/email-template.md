@@ -17,10 +17,10 @@ sidebar : false
 --- -->
 
 
-<!-- <redoc spec-url="http://localhost:8081/docs/apis/redoc.html"></redoc>
+<!-- <redoc spec-url="http://http://127.0.0.1::8081/docs/apis/email-template.yaml"></redoc>
 <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script> -->
 
-<iframe class = "api-container" width="100%" src="http://127.0.0.1:8081/docs/apis/redoc.html" frameborder="0" ></iframe>
+<iframe class = "api-container" width="100%" src="http://localhost:8081/docs/apis/redoc.html" frameborder="0" ></iframe>
 
 
 <style lang="stylus">
