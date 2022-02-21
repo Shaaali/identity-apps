@@ -8,9 +8,9 @@
   },
   "scripts": {
     "predev": "vuepress check-md docs",
-    "dev": "concurrently \"vuepress dev docs\" \"http-server -p 8081\"",
+    "dev": "concurrently \"http-server -p 8081\" \"vuepress dev docs\"",
     "prebuild": "vuepress check-md docs",
-    "build": "vuepress build docs",
+    "build": "concurrently \"http-server -p 8081\" \"vuepress dev docs\"",
     "postbuild": "sh check-links.sh"
   },
   "license": "MIT",
