@@ -395,7 +395,7 @@ module.exports = config({
                     children: [
                         ['/references/idp-settings/oidc-settings-for-idp.md', 'OIDC configurations'],
                         ['/references/idp-settings/saml-settings-for-idp.md', 'SAML configurations'],
-                        ['/references/idp-settings/just-in-time-provisioning.md', 'Just-in-Time User Provisioning'],
+                        ['/references/idp-settings/jit-mfa-conflict.md', 'MFA based Sign-in flow with JIT user provisioning'],
                     ]
                 },
                 ['/references/conditional-auth/api-reference.md', 'Conditional auth - API'],
