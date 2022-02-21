@@ -8,7 +8,7 @@
   },
   "scripts": {
     "predev": "vuepress check-md docs",
-    "dev": "vuepress dev docs",
+    "dev": "concurrently \"vuepress dev docs\" \"http-server -p 8081\"",
     "prebuild": "vuepress check-md docs",
     "build": "vuepress build docs",
     "postbuild": "sh check-links.sh"
@@ -32,6 +32,9 @@
   },
   "dependencies": {
     "@microsoft/applicationinsights-web": "^2.7.2",
+    "concurrently": "^7.0.0",
+    "http-server": "^14.1.0",
+    "redoc": "^2.0.0-rc.63",
     "vuepress-plugin-robots": "^1.0.1"
   }
 }

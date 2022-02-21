@@ -45,6 +45,9 @@ export default Vue.extend({
         pageDescrypted() {
             return this.password === this.pagePassword;
         },
+        getContentClass() {
+            return this.$frontmatter.isApiPage ?"":"theme-default-content";
+        },
     },
     mounted() {
         // Adding event listener to fix offset scroll on-click.

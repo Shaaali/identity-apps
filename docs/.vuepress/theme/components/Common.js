@@ -58,7 +58,7 @@ let Common = class Common extends Mixins(GlobalEncryptMixin) {
         return this.getHeader(this.sidebarItems);
     }
     get enableAnchor() {
-        return this.$themeConfig.anchorDisplay !== false && this.headers.length > 0;
+        return this.$themeConfig.anchorDisplay !== false && this.headers.length > 0 && this.$page.frontmatter.anchor!=false;
     }
     /** Get scroll distance */
     getScrollTop() {
