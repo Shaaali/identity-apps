@@ -6,7 +6,7 @@ JIT configuration for an affected connection. Else the authentication flow will 
 
 ## How do you know if it is going to break?
 
-In scenarios which the authentication flow is going to break, the following warning will be displayed.
+For scenarios in which the authentication flow is going to break, the following warning will be displayed.
 This displays the connections (identity providers) that have JIT disabled.
 
 <img :src="$withBase('/assets/img/references/idp-settings/jit-mfa-conflict.png')" alt="MFA based Sign-in flow with JIT user provisioning">
