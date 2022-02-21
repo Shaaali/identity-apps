@@ -1,4 +1,4 @@
-# MFA based Sign-in flow with JIT user provisioning
+# MFA based sign-in flow with JIT user provisioning
 
 When you disable the JIT configuration and integrate it into an application authentication sequence,
 you must ensure configured multi-factor options are skipped during the authentication flow or enable
