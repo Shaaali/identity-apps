@@ -1,3 +1,4 @@
+
 # Add passwordless login with FIDO2
 
 FIDO2 lets you go passwordless by allowing your application users to use hardware-based authenticators in place of passwords. Application users can either use a FIDO2 supported hardware security key or a built-in authenticator on their devices such as a fingerprint scanner, TouchID, FaceID or Windows Hello to authenticate.
@@ -16,9 +17,11 @@ You can configure FIDO2 Passwordless login for you apps in two ways:
     -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
     -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
--   A FIDO2 security key registered with Asgardeo. Learn how to [register your FIDO2 security key in Asgardeo](https://datatracker.ietf.org/doc/html/rfc6238)
+
+-   A FIDO2 security key registered with Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>
 
 ## Enable Passwordless login for an app
+
 Follow the steps given below to enable **Passwordless** login to the login flow of your application. 
 
 1. On the Asgardeo console, use one of the following options to start:
@@ -43,10 +46,11 @@ Follow the steps given below to enable **Passwordless** login to the login flow 
 
 ## Try it out
 
-Application users can enroll for TOTP notifications when they log in to the business application the first time. Given below are the steps that a user will follow:
+Follow the steps given below.
 
-1. Once you have followed the above steps you will get the Sign In With Security Key option on the login page.
+1. Access the application URL.
+2. Click **Login** to open the Asgardeo login page.
+3. On the Asgardeo login page, click **Sign In With Security Key**. You will be redirected to the FIDO2 login page.
     <img :src="$withBase('/assets/img/guides/passwordless/sign-in-with-security-key.png')" alt="Sign In With Security Key in Asgardeo" width="500">
-2. When you select the **Sign In With the Security Key** option, you will be redirected to the FIDO2 login page.
+4. Follow the instructions given by your browser or device to login.
     <img :src="$withBase('/assets/img/guides/passwordless/sign-in-with-security-key-page.png')" alt="Sign In With Security Key page in Asgardeo" width="500">
-3. Follow the instructions given by your browser or device to login.
