@@ -200,7 +200,7 @@ module.exports = config({
                         ]
                     },
                     {
-                        title: 'Enable passwordless login',
+                        title: 'Add passwordless login',
                         prefix: 'passwordless-login/',
                         path: 'passwordless-login/',
                         sidebarDepth: 2
