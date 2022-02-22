@@ -22,7 +22,7 @@ You can configure FIDO2 Passwordless login for you apps in two ways:
 
 ## Enable Passwordless login for an app
 
-Follow the steps given below to enable **Passwordless** login to the login flow of your application. 
+Follow the steps given below to enable **Passwordless** login for your application. 
 
 1. On the Asgardeo console, use one of the following options to start:
     - Option 1: Go to **Develop > Applications**.
