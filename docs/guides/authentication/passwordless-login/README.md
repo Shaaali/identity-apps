@@ -18,7 +18,9 @@ You can configure FIDO2 Passwordless login for you apps in two ways:
     -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
--   A FIDO2 security key registered with Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>
+::: info
+ To try out passwordless login, you need to have a FIDO2 security key registered in Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>.
+:::
 
 ## Enable Passwordless login for an app
 
