@@ -52,7 +52,7 @@ JIT user provisioning is enabled by default. If you have disabled JIT user provi
 
 To enable JIT user provisioning for an external IdP:
 
-1. On Asgardeo console, click **Develop > Connections** and select the IdP.
+1. On the Asgardeo console, click **Develop > Connections** and select the IdP.
 2. Go to the **Advanced** tab of the selected IdP.
 3. Check the **Just-in-Time User Provisioning** checkbox.
     
