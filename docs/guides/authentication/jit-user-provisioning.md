@@ -47,7 +47,7 @@ To disable JIT user provisioning for an external IdP:
 ## Enable JIT user provisioning
 
 ::: info
-JIT provisioning is enabled by default, if you have disabled JIT user provisioning use these instructions to enable it.
+JIT user provisioning is enabled by default. If you have disabled JIT user provisioning, use these instructions to enable it.
 :::
 
 To enable JIT user provisioning for an external IdP:
