@@ -71,8 +71,7 @@ In such scenarios, you will see the following warning in the application’s sig
 To avoid such errors, you can use one of the following options:
 - Conditionally skip the MFA
     You can skip configured MFA for external connections during the authentication flow by using the
-    following authentication script as an example. For more information on this script, you can refer to the
-    <a :href="$withBase('/guides/authentication/conditional-auth/sign-in-option-based-template/#how-it-works')">sign-in option based conditional authentication script</a>.
+    following authentication script as an example.
     
     ```js
     var localAuthenticator = 'LOCAL';
