@@ -71,7 +71,7 @@ This displays the connections (identity providers) that have JIT disabled.
 
 <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-mfa-conflict.png')" alt="MFA based Sign-in flow with JIT user provisioning">
 
-At this point, you may have to decide on whether you want to **enable JIT** for the listed connections or **conditionally skip MFA** for these providers.
+At this point, you can use one of the following options:
 - [Enable JIT user provisioning](#enable-jit-user-provisioning)
 - Conditionally skip MFA 
     
