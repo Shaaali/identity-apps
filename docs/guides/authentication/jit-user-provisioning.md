@@ -36,7 +36,7 @@ Disabling JIT user provisioning might break the application login flow if you ha
 
 To disable JIT user provisioning for an external IdP:
 
-1. On Asgardeo console, click **Develop > Connections** and select the IdP.
+1. On the Asgardeo console, click **Develop > Connections** and select the IdP.
 2. Go to the **Advanced** tab of the selected IdP.
 3. Clear the **Just-in-Time User Provisioning** checkbox.
     
