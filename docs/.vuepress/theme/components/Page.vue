@@ -24,7 +24,8 @@
     </MyTransition>
 
     <MyTransition v-show="!pagePassword || pageDescrypted" :delay="0.08">
-      <Content :key="$route.path" :class="getContentClass" />
+      <Content :key="$route.path" class="theme-default-content" />
+      <!-- <Content :key="$route.path" :class="getContentClass" /> -->
     </MyTransition>
 
     <MyTransition v-if="!pagePassword || pageDescrypted" :delay="0.12">

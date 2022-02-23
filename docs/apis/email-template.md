@@ -2,6 +2,7 @@
 pageClass: apis-page
 isApiPage: true
 sidebar : false
+breadcrumb: false
 ---
 
 <!-- ---
@@ -16,18 +17,31 @@ sidebar : false
                 "sidebar-open": this.isSidebarOpen,
 --- -->
 
-
-<!-- <redoc spec-url="http://http://127.0.0.1::8081/docs/apis/email-template.yaml"></redoc>
+<!-- 
+<redoc spec-url="http://http://localhost:8081/docs/apis/email-template.yaml"></redoc>
 <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script> -->
 
 <iframe class = "api-container" width="100%" src="http://localhost:8081/docs/apis/redoc.html" frameborder="0" ></iframe>
+
 
 
 <style lang="stylus">
 .api-container
   min-height 100vh
 
+.apis-page .theme-default-content
+  max-width 100vw
+
+.apis-page .page .page-title h1
+
+  padding-top 0px
+  margin-top -100px !important 
+
+.apis-page .page .page-title
+  padding-top 0px
 </style>
+
+
 
 
 <!-- 
