@@ -88,7 +88,4 @@ To avoid such errors, you can use one of the following options:
     ```
 - [Enable JIT provisioning](#enable-jit-user-provisioning)
 
-::: info
-For more information on this script, you can refer to the <a :href="$withBase('/guides/authentication/conditional-auth/sign-in-option-based-template/#how-it-works')">sign-in option based conditional authentication script</a>.
-:::
 
