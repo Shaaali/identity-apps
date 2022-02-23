@@ -71,7 +71,7 @@ In such scenarios, you will see the following warning in the application’s sig
 To avoid such errors, you can use one of the following options:
 - Conditionally skip MFA
     
-    You can skip configured MFA for external connections during the authentication flow by using the
+    You can skip MFA for external connections during the login flow by using the
     following authentication script as an example.
     
     ```js
