@@ -1,4 +1,4 @@
-# Register FIDO2 Security key/Biometrics for passwordless login
+# Register FIDO2 security key/biometrics for passwordless login
 
 Application users need to register their Security Key/Biometrics via MyAccount prior to using Passwordless login for the applications.
  
