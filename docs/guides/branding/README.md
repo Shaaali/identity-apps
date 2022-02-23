@@ -120,7 +120,7 @@ Listed below are the design changes you can apply to the user registration and l
       </td>
    </tr>
    <tr>
-      <td>Contact Email</td>
+      <td>Primary Color</td>
       <td>
          <p>You can update the main color that appears dominantly in primary actions, anchor tags, etc.</p>
          <p>By default, Asgardeo uses an orange shade as the primary color. You can change this to match your organization’s style guide by entering a hex color code or by clicking the color swatch and picking a color.</p>
