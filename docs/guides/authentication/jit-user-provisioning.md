@@ -64,10 +64,7 @@ To enable JIT user provisioning for an external IdP:
 
 If you have disabled JIT provisioning for an IdP, you need to validate its effect on your applications that use [multi-factor authentication (MFA)](https://stasgrdocsdeeus201.z20.web.core.windows.net/asgardeo/docs/guides/authentication/mfa/). This is because certain MFA mechanisms (such as TOTP and EmailOTP) require the login users to have local accounts in Asgardeo. Therefore, the application’s sign-in flow involving JIT-disabled IdPs and the MFA options will break by default. 
 
-In the user login flow, the authentication step for subject identification is where the login user is identified by validating credentials. For the MFA step to work, the user credentials that were validated should be stored in a local user account. This means that JIT provisioning is required for external IdPs that are configured as the subject identification step.
-
-For scenarios in which the authentication flow is going to break, the following warning will be displayed.
-This displays the connections (identity providers) that have JIT disabled.
+In such scenarios, you will see the following warning in the application’s sign-in flow:
 
 <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-mfa-conflict.png')" alt="MFA based Sign-in flow with JIT user provisioning">
 
