@@ -4,7 +4,7 @@ This guide explains the concept of Just-In-Time user provisioning, why and when 
 
 ## How JIT provisioning works
 
-Just-in-Time (JIT) user provisioning is a method used to store a user's identity and user claims in the Asgardeo user store when the user is authenticated through an external identity provider (IdP).
+Just-in-Time (JIT) user provisioning is a method used to store a user's identity and user claims in the Asgardeo user store when the user is authenticated through an <a :href="$withBase('/guides/authentication/#manage-connections')">external identity provider (IdP)</a>.
 
 The flow of JIT user provisioning is as follows: 
 
