@@ -68,14 +68,12 @@ In such scenarios, you will see the following warning in the application’s sig
 
 <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-mfa-conflict.png')" alt="MFA based Sign-in flow with JIT user provisioning">
 
-At this point, you can use one of the following options:
-- [Enable JIT user provisioning](#enable-jit-user-provisioning)
-- Conditionally skip MFA 
-    
+To avoid such errors, you can use one of the following options:
+- Conditionally skip the MFA
     You can skip configured MFA for external connections during the authentication flow by using the
     following authentication script as an example. For more information on this script, you can refer to the
     <a :href="$withBase('/guides/authentication/conditional-auth/sign-in-option-based-template/#how-it-works')">sign-in option based conditional authentication script</a>.
-
+    
     ```js
     var localAuthenticator = 'LOCAL';
     var onLoginRequest = function (context) {
@@ -89,6 +87,7 @@ At this point, you can use one of the following options:
         });
     };
     ```
+- [Enable JIT provisioning](#enable-jit-user-provisioning)
 
 
 
