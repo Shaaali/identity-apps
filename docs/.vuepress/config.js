@@ -303,7 +303,7 @@ module.exports = config({
                         ]
                     },
                         ['manage-consent-for-attributes.md', 'Manage user consent'],
-                        ['jit-user-provisioning.md', 'Configure JIT User Provisioning']
+                        ['jit-user-provisioning.md', 'Configure JIT user provisioning']
                     ]
                 },
                 {
