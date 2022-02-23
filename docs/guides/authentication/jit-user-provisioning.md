@@ -62,7 +62,7 @@ To enable JIT user provisioning for an external IdP:
 
 ## Troubleshoot sign-in flow errors
 
-If you have disabled JIT provisioning for an IdP, you need to validate its effect on your applications that use [multi-factor authentication (MFA)](https://stasgrdocsdeeus201.z20.web.core.windows.net/asgardeo/docs/guides/authentication/mfa/). This is because certain MFA mechanisms (such as TOTP and EmailOTP) require the login users to have local accounts in Asgardeo. Therefore, the application’s sign-in flow involving JIT-disabled IdPs and the MFA options will break by default. 
+If you have disabled JIT provisioning for an IdP, you need to validate its effect on your applications that use <a :href="$withBase('/guides/authentication/mfa/')">multi-factor authentication</a>. This is because certain MFA mechanisms (such as TOTP and EmailOTP) require the login users to have local accounts in Asgardeo. Therefore, the application’s sign-in flow involving JIT-disabled IdPs and the MFA options will break by default. 
 
 In such scenarios, you will see the following warning in the application’s sign-in flow:
 
@@ -70,6 +70,7 @@ In such scenarios, you will see the following warning in the application’s sig
 
 To avoid such errors, you can use one of the following options:
 - Conditionally skip the MFA
+    
     You can skip configured MFA for external connections during the authentication flow by using the
     following authentication script as an example.
     
@@ -86,6 +87,9 @@ To avoid such errors, you can use one of the following options:
         });
     };
     ```
+    ::: info
+    For more information on this script, you can refer to the <a :href="$withBase('/guides/authentication/conditional-auth/sign-in-option-based-template/#how-it-works')">sign-in option based conditional authentication script</a>.
+    :::
 - [Enable JIT provisioning](#enable-jit-user-provisioning)
 
 
