@@ -22,7 +22,7 @@ You can configure FIDO2 Passwordless login for you apps in two ways:
  To try out passwordless login, you need to have a FIDO2 security key registered in Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>.
 :::
 
-## Enable Passwordless login for an app
+## Enable passwordless login for an app
 
 Follow the steps given below to enable **Passwordless** login for your application. 
 
