@@ -72,7 +72,7 @@ To avoid such errors, you can use one of the following options:
 - Conditionally skip MFA
     
     You can skip MFA for external connections during the login flow by using the
-    following authentication script as an example.
+    following authentication example script:
     
     ```js
     var localAuthenticator = 'LOCAL';
