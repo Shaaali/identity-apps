@@ -31,7 +31,7 @@ Learn more about how to enable login to your application using the following ext
 ## Disable JIT user provisioning
 
 ::: warning
-Disabling JIT user provisioning might break the application login flow if you have MFA configured. Learn more about [troubleshooting sign-in flow errors with JIT](#troubleshoot-sign-in-flow-errors).
+Disabling JIT user provisioning might break the application login flow if you have multi-factor authentication (MFA) configured. Learn more about [troubleshooting sign-in flow errors with JIT](#troubleshoot-sign-in-flow-errors).
 :::
 
 To disable JIT user provisioning for an external IdP:
@@ -88,7 +88,7 @@ To avoid such errors, you can use one of the following options:
     };
     ```
     ::: info
-    For more information on this script, you can refer to the <a :href="$withBase('/guides/authentication/conditional-auth/sign-in-option-based-template/#how-it-works')">sign-in option based conditional authentication script</a>.
+    For more information on this script, refer the <a :href="$withBase('/guides/authentication/conditional-auth/sign-in-option-based-template/#how-it-works')">sign-in option based conditional authentication script</a>.
     :::
 - [Enable JIT provisioning](#enable-jit-user-provisioning)
 
