@@ -7,7 +7,7 @@ FIDO2 lets you go passwordless by allowing your application users to use hardwar
  The FIDO Alliance, whose mission is to reduce the world’s reliance on passwords, introduced its latest specifications, collectively called FIDO2. FIDO2 specifications are the World Wide Web Consortium’s (W3C) Web Authentication specification (WebAuthn) and FIDO alliance’s corresponding Client to Authenticator Protocol (CTAP).
 :::
 
-You can configure FIDO2 Passwordless login for you apps in two ways:
+You can configure FIDO2 passwordless login for you apps in two ways:
 - FIDO2 as a first factor where an application user can use a FIDO2 supported authenticator to log in without entering a username or a password.
 - FIDO2 with identifier-first flow where an application user will be required to enter a username before using a FIDO2 supported authenticator to log in. This option will be available soon.
 
@@ -29,21 +29,21 @@ Follow the steps given below to enable **passwordless** login for your applicati
 1. On the Asgardeo console, use one of the following options to start:
     - Option 1: Go to **Develop > Applications**.
     - Option 2: Go to **Connections > Passwordless** and click **Set up**.
-2. Select the application for which Passwordless login needs to be enabled.
+2. Select the application for which passwordless login needs to be enabled.
 3. Go to the **Sign-in Method** tab:
 
     - If you don't have a customized login flow, you can click **Add Passwordless login**. 
 
       <img :src="$withBase('/assets/img/guides/passwordless/add-passwordless-login.png')" alt="Configuring passwordless login in Asgardeo">
     
-    - If you have an already built login flow, you can add Security Key/Biometrics as an additional authenticator for the first step.
+    - If you have an already built login flow, you can add security Key/biometrics as an additional authenticator for the first step.
 
       <img :src="$withBase('/assets/img/guides/passwordless/passwordless-login-step.png')" alt="Customize the login flow">
 
 4. Click **Update** to save your changes.
 
 ::: info
- Application users need to register their Security key/Biometrics via the MyAccount app prior to using Passwordless login for applications. Make sure to educate them on registration steps. Learn more about <a :href="$withBase('/guides/user-self-service/register-security-key/')">Register FIDO2 security key via MyAccount</a>.
+ Application users need to register their security key/biometrics via the MyAccount app prior to using passwordless login for applications. Make sure to educate them on registration steps. Learn more about <a :href="$withBase('/guides/user-self-service/register-security-key/')">Register FIDO2 security key via MyAccount</a>.
 :::
 
 ## Try it out

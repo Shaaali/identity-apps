@@ -368,7 +368,7 @@ module.exports = config({
                         ['self-register.md', 'Self-register'],
                         ['customer-password-recovery.md', 'Password recovery'],
                         ['enable-totp.md', 'Enroll TOTP'],
-                        ['register-security-key.md', 'Register FIDO2 Security key/Biometrics'],
+                        ['register-security-key.md', 'Register FIDO2 security key/biometrics'],
                         ['discover-applications.md', 'Discover applications'],
                     ]
                 },
