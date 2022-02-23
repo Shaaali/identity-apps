@@ -69,7 +69,7 @@ In such scenarios, you will see the following warning in the application’s sig
 <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-mfa-conflict.png')" alt="MFA based Sign-in flow with JIT user provisioning">
 
 To avoid such errors, you can use one of the following options:
-- Conditionally skip the MFA
+- Conditionally skip MFA
     
     You can skip configured MFA for external connections during the authentication flow by using the
     following authentication script as an example.
