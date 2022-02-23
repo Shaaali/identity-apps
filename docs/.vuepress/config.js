@@ -200,7 +200,8 @@ module.exports = config({
                         ]
                     },
                     {
-                        title: 'Enable passwordless login',
+
+                        title: 'Add passwordless login',
                         prefix: 'passwordless-login/',
                         path: 'passwordless-login/',
                         sidebarDepth: 2
@@ -367,7 +368,7 @@ module.exports = config({
                         ['self-register.md', 'Self-register'],
                         ['customer-password-recovery.md', 'Password recovery'],
                         ['enable-totp.md', 'Enroll TOTP'],
-                        ['register-security-key.md', 'Register for passwordless login'],
+                        ['register-security-key.md', 'Register FIDO2 Security key/Biometrics'],
                         ['discover-applications.md', 'Discover applications'],
                     ]
                 },
