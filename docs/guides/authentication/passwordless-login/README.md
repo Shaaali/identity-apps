@@ -12,7 +12,7 @@ You can configure FIDO2 passwordless login for your apps in two ways:
 - **Identifier first + Security key/Biometrics**: An application user enters a username. Asgardeo verifies the identity and prompts the user to use a FIDO2 supported authenticator to log in.
 
 ## Prerequisites
--   To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
+To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
     -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
     -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
