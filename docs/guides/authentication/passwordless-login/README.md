@@ -1,5 +1,5 @@
 
-# Add passwordless login with FIDO2
+# Add passwordless login with FIDO2 
 
 FIDO2 lets you go passwordless by allowing your application users to use hardware-based authenticators in place of passwords. Application users can either use a FIDO2 supported hardware security key or a built-in authenticator on their devices such as a fingerprint scanner, TouchID, FaceID or Windows Hello to authenticate.
 
@@ -7,7 +7,7 @@ FIDO2 lets you go passwordless by allowing your application users to use hardwar
  The FIDO Alliance, whose mission is to reduce the world’s reliance on passwords, introduced its latest specifications, collectively called FIDO2. FIDO2 specifications are the World Wide Web Consortium’s (W3C) Web Authentication specification (WebAuthn) and FIDO alliance’s corresponding Client to Authenticator Protocol (CTAP).
 :::
 
-You can configure FIDO2 passwordless login for your apps using two methods:
+You can configure FIDO2 passwordless login for your apps using two methods: 
 - **Security key/Biometrics**: An application user uses a FIDO2 supported authenticator to log in without entering a username or a password.
 - **Identifier first + Security key/Biometrics**: An application user enters a username first. Asgardeo verifies the identity from the username and prompts the user to use a FIDO2 supported authenticator to log in.
 
@@ -21,7 +21,7 @@ To get started, you need to have an application registered in Asgardeo. If you d
  To try out passwordless login, you need to have a FIDO2 security key registered in Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>.
 :::
 
-## Enable passwordless login for an app
+## Enable passwordless login for an app 
 
 Follow the steps given below to enable **passwordless** login for your application. 
 
