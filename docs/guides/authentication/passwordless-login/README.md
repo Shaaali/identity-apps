@@ -9,7 +9,7 @@ FIDO2 lets you go passwordless by allowing your application users to use hardwar
 
 You can configure FIDO2 passwordless login for your apps in two ways:
 - **Security key/Biometrics**: An application user uses a FIDO2 supported authenticator to log in without entering a username or a password.
-- **Identifier first + Security key/Biometrics**: An application user enters a username. Asgardeo verifies the identity and prompts the user to use a FIDO2 supported authenticator to log in.
+- **Identifier first + Security key/Biometrics**: An application user enters a username first. Asgardeo verifies the identity from the username and prompts the user to use a FIDO2 supported authenticator to log in.
 
 ## Prerequisites
 -   To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
@@ -42,7 +42,7 @@ Follow the steps given below to enable **passwordless** login for your applicati
 4. Click **Update** to save your changes.
 
 ::: info
- Application users need to register their security keys/biometrics via the My Account app prior to using passwordless login. Ensure they are familiar with how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register a security key/biometrics via My Account.</a>
+ Application users need to register their security keys/biometrics via the My Account app prior to using passwordless login. Be sure to educate your users on how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register a security key/biometrics via My Account.</a>
 :::
 
 ## Try it out
