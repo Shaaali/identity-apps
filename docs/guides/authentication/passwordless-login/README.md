@@ -7,9 +7,9 @@ FIDO2 lets you go passwordless by allowing your application users to use hardwar
  The FIDO Alliance, whose mission is to reduce the world’s reliance on passwords, introduced its latest specifications, collectively called FIDO2. FIDO2 specifications are the World Wide Web Consortium’s (W3C) Web Authentication specification (WebAuthn) and FIDO alliance’s corresponding Client to Authenticator Protocol (CTAP).
 :::
 
-You can configure FIDO2 passwordless login for you apps in two ways:
-- FIDO2 as a first factor where an application user can use a FIDO2 supported authenticator to log in without entering a username or a password.
-- FIDO2 with identifier-first flow where an application user will be required to enter a username before using a FIDO2 supported authenticator to log in. This option will be available soon.
+You can configure FIDO2 passwordless login for your apps in two ways:
+- **Security key/Biometrics**: An application user uses a FIDO2 supported authenticator to log in without entering a username or a password.
+- **Identifier first + Security key/Biometrics**: An application user enters a username. Asgardeo verifies the identity and prompts the user to use a FIDO2 supported authenticator to log in.
 
 
 ## Prerequisites
@@ -44,7 +44,7 @@ Follow the steps given below to enable **passwordless** login for your applicati
 4. Click **Update** to save your changes.
 
 ::: info
- Application users need to register their security key/biometrics via the MyAccount app prior to using passwordless login for applications. Make sure to educate them on registration steps. Learn more about <a :href="$withBase('/guides/user-self-service/register-security-key/')">Register FIDO2 security key via MyAccount</a>.
+ Application users need to register their security keys/biometrics via the My Account app prior to using passwordless login. Ensure they are familiar with how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register a security key/biometrics via My Account.</a>
 :::
 
 ## Try it out
