@@ -7,7 +7,7 @@ FIDO2 lets you go passwordless by allowing your application users to use hardwar
  The FIDO Alliance, whose mission is to reduce the world’s reliance on passwords, introduced its latest specifications, collectively called FIDO2. FIDO2 specifications are the World Wide Web Consortium’s (W3C) Web Authentication specification (WebAuthn) and FIDO alliance’s corresponding Client to Authenticator Protocol (CTAP).
 :::
 
-You can configure FIDO2 passwordless login for your apps in two ways:
+You can configure FIDO2 passwordless login for your apps using two methods:
 - **Security key/Biometrics**: An application user uses a FIDO2 supported authenticator to log in without entering a username or a password.
 - **Identifier first + Security key/Biometrics**: An application user enters a username. Asgardeo verifies the identity and prompts the user to use a FIDO2 supported authenticator to log in.
 
