@@ -10,7 +10,7 @@
     "predev": "vuepress check-md docs",
     "dev": "concurrently \"http-server -p 8081\" \"vuepress dev docs\"",
     "prebuild": "vuepress check-md docs",
-    "build": "concurrently \"http-server -p 8081\" \"vuepress dev docs\"",
+    "build": "vuepress build docs",
     "postbuild": "sh check-links.sh"
   },
   "license": "MIT",

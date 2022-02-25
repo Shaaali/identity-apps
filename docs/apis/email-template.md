@@ -3,37 +3,26 @@ pageClass: apis-page
 isApiPage: true
 sidebar : false
 breadcrumb: false
+
 ---
 
-<!-- ---
-pageClass: intro-page
-sidebar : false
-# Heading
+<redoc spec-url='/asgardeo/docs/assets/OpenApiSpec/email-template.yaml'></redoc>
+<script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script>
 
-                "has-navbar": this.enableNavbar,
-                "has-sidebar": this.enableSidebar,
-                "has-anchor": this.enableAnchor,
-                "hide-navbar": this.hideNavbar,
-                "sidebar-open": this.isSidebarOpen,
---- -->
 
-<!-- 
-<redoc spec-url="http://http://localhost:8081/docs/apis/email-template.yaml"></redoc>
-<script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script> -->
-
-<iframe class = "api-container" width="100%" src="http://localhost:8081/docs/apis/redoc.html" frameborder="0" ></iframe>
+<!-- <iframe class = "api-container" width="100%" src="http://localhost:8081/docs/apis/redoc.html" frameborder="0" ></iframe> -->
 
 
 
 <style lang="stylus">
 .api-container
   min-height 100vh
+  padding 0px
 
 .apis-page .theme-default-content
   max-width 100vw
 
 .apis-page .page .page-title h1
-
   padding-top 0px
   margin-top -100px !important 
 
@@ -72,6 +61,19 @@ sidebar : false
 <!-- <body>
   <link href="http://127.0.0.1:8081/docs/apis/email-template.html" rel="import" />
 </body> -->
+
+
+<!-- ---
+pageClass: intro-page
+sidebar : false
+# Heading
+
+                "has-navbar": this.enableNavbar,
+                "has-sidebar": this.enableSidebar,
+                "has-anchor": this.enableAnchor,
+                "hide-navbar": this.hideNavbar,
+                "sidebar-open": this.isSidebarOpen,
+--- -->
 
 
 

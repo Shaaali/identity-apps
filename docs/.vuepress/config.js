@@ -402,7 +402,10 @@ module.exports = config({
             ],
 
             '/apis/' :[['','Overview'],
-                       ['/apis/email-template.md','Email Templates']]
+                       ['/apis/email-template.md','Email Templates'],
+                       ['/apis/scim2.md','SCIM 2.0'],
+                       ['/apis/self-sign-up.md','Self Sign-up'],
+                       ['/apis/session.md','Session']]
 //
 //            '/concepts/' : [
 //            '',
