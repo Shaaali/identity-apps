@@ -1,7 +1,7 @@
 
 # Add passwordless login with FIDO2 
 
-FIDO2 lets you go passwordless by allowing your application users to use FIDO2-supported hardware security keys or built-in authenticators on their devices such as fingerprint scanners, TouchID, FaceID or Windows Hello to login.
+FIDO2 lets you go passwordless by allowing your application users to use FIDO2-supported hardware security keys or built-in authenticators on their devices (such as fingerprint scanners, TouchID, FaceID or Windows Hello) to log in.
 
 ::: info What is FIDO2?
  The FIDO Alliance, whose mission is to reduce the world’s reliance on passwords, introduced its latest specifications, collectively called FIDO2. FIDO2 specifications are the World Wide Web Consortium’s (W3C) Web Authentication specification (WebAuthn) and FIDO alliance’s corresponding Client to Authenticator Protocol (CTAP).
