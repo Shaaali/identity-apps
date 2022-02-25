@@ -1,7 +1,7 @@
 
 # Add passwordless login with FIDO2 
 
-FIDO2 lets you go passwordless by allowing your application users to use hardware-based authenticators in place of passwords. Application users can either use a FIDO2-supported hardware security key or a built-in authenticator on their devices such as a fingerprint scanner, TouchID, FaceID or Windows Hello to authenticate.
+FIDO2 lets you go passwordless by allowing your application users to use FIDO2-supported hardware security keys or built-in authenticators on their devices such as fingerprint scanners, TouchID, FaceID or Windows Hello to login.
 
 ::: info What is FIDO2?
  The FIDO Alliance, whose mission is to reduce the world’s reliance on passwords, introduced its latest specifications, collectively called FIDO2. FIDO2 specifications are the World Wide Web Consortium’s (W3C) Web Authentication specification (WebAuthn) and FIDO alliance’s corresponding Client to Authenticator Protocol (CTAP).
@@ -9,13 +9,13 @@ FIDO2 lets you go passwordless by allowing your application users to use hardwar
 
 You can configure FIDO2 passwordless login for your apps using two methods: 
 - **Security key/Biometrics**: An application user uses a FIDO2-supported authenticator to log in without entering a username or a password.
-- **Identifier first + Security key/Biometrics**: An application user enters a username first. Asgardeo verifies the identity from the username and prompts the user to use a FIDO2-supported authenticator to log in.
+- **Identifier first + Security key/Biometrics**: An application user enters a username first. Asgardeo verifies the identity from the username and prompts the user to use a FIDO2-supported authenticator to log in. (This feature will be available soon in Asgardeo)
 
 ## Prerequisites
 To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
-    -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
-    -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
-    -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+-  <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+-  <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+-  <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ::: info
  To try out passwordless login, you need to have a FIDO2 security key registered in Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>.
