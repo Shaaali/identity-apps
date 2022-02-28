@@ -1,79 +1,17 @@
 ---
 pageClass: apis-page
-isApiPage: true
 sidebar : false
 breadcrumb: false
-
+url: /asgardeo/docs/content/apiDocs/email-template.yaml
 ---
 
-<redoc spec-url='/asgardeo/docs/assets/OpenApiSpec/email-template.yaml'></redoc>
-<script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script>
+<APIOverview/>
+<!-- <redoc spec-url='/asgardeo/docs/assets/OpenApiSpec/email-template.yaml'></redoc>
+<script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script> -->
+
+<!-- <script src="https://unpkg.com/@stoplight/elements/web-components.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@stoplight/elements/styles.min.css">
 
 
-<!-- <iframe class = "api-container" width="100%" src="http://localhost:8081/docs/apis/redoc.html" frameborder="0" ></iframe> -->
-
-
-
-<style lang="stylus">
-.api-container
-  min-height 100vh
-  padding 0px
-
-.apis-page .theme-default-content
-  max-width 100vw
-
-.apis-page .page .page-title h1
-  padding-top 0px
-  margin-top -100px !important 
-
-.apis-page .page .page-title
-  padding-top 0px
-</style>
-
-
-
-
-<!-- 
-<template>
-  <body>
-  <redoc spec-url='http://127.0.0.1:8081/docs/apis/email-template.yaml'></redoc>
-  <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"> </script>
-  </body>
-</template> -->
-
-<!-- <a target="_self";href="http://127.0.0.1:8081/docs/apis/email-template.html">LINK</a> -->
-<!-- <template>
-    <iframe width="1500" height="600" :src="ihtml"></iframe>
-</template>
-
-
-
-<!-- <script>
-  export default {
-      props: {
-          ihtml: {
-              type: String
-          }
-      }
-  }
-</script> --> 
-
-<!-- <body>
-  <link href="http://127.0.0.1:8081/docs/apis/email-template.html" rel="import" />
-</body> -->
-
-
-<!-- ---
-pageClass: intro-page
-sidebar : false
-# Heading
-
-                "has-navbar": this.enableNavbar,
-                "has-sidebar": this.enableSidebar,
-                "has-anchor": this.enableAnchor,
-                "hide-navbar": this.hideNavbar,
-                "sidebar-open": this.isSidebarOpen,
---- -->
-
-
+<iframe class = "api-container" width="100%" src="http://localhost:8081/docs/apis/redoc.html" frameborder="0" ></iframe> -->
 
