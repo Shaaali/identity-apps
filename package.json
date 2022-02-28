@@ -31,7 +31,11 @@
     "vuepress-theme-hope": "^1.13.1"
   },
   "dependencies": {
+    "@hnluu8/vue-redoc-wrapper": "^0.1.15",
     "@microsoft/applicationinsights-web": "^2.7.2",
+    "concurrently": "^7.0.0",
+    "http-server": "^14.1.0",
+    "redoc": "^2.0.0-rc.63",
     "vuepress-plugin-robots": "^1.0.1"
   }
 }
