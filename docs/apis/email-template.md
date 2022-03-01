@@ -15,3 +15,4 @@ url: /asgardeo/docs/content/apiDocs/email-template.yaml
 
 <iframe class = "api-container" width="100%" src="http://localhost:8081/docs/apis/redoc.html" frameborder="0" ></iframe> -->
 
+
