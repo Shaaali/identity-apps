@@ -1,6 +1,8 @@
 <template>
-    <main class="stoplight">
-          <head >
+    <main class="apis-page">
+
+        <iframe class = "api-container" width="100%" :src="$frontmatter.url" frameborder="0" ></iframe>
+          <!-- <head >
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <title>Elements in HTML</title>
@@ -13,7 +15,7 @@
             router="hash"
             />
 
-        </body>
+        </body> -->
     </main>
 </template>
 
@@ -28,4 +30,4 @@ export default{
 }
 </script>
 
-<style src="../theme/styles/components/stoplight.css">
+<style src="../theme/styles/components/apiOverview.styl" lang="stylus">
