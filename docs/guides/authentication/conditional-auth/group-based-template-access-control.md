@@ -6,6 +6,8 @@ To control access to your application based on the user's group, you can apply t
 
 Consider a scenario with two user groups, `manager` and `employee`. Login should be allowed to users assigned to these groups.
 
+<img :src="$withBase('/assets/img/guides/conditional-auth/group-based-access-control.png')" alt="Group-based access control">
+
 ## Prerequisites
 
 -  You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
