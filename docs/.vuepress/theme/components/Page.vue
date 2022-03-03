@@ -1,7 +1,7 @@
 <template>
   <main class="page">
     <MyTransition>
-      <BreadCrumb :key="$route.path" style="margin:0;"/>
+      <BreadCrumb :key="$route.path"/>
           </MyTransition>
 
     <slot name="top" />
