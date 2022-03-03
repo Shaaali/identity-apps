@@ -7593,7 +7593,7 @@ iframe{
 	display:inline
 }
 .sl-prose caption a,.sl-prose figcaption a,.sl-prose li a,.sl-prose p a,.sl-prose table a{
-	color:var(--color-link)
+	color:var(--color-asgardeo-link)
 }
 .sl-prose caption a:hover,.sl-prose figcaption a:hover,.sl-prose li a:hover,.sl-prose p a:hover,.sl-prose table a:hover{
 	color:var(--color-link-dark)
@@ -7944,6 +7944,7 @@ input{
 	--primary-h:202;
 	--primary-s:100%;
 	--primary-l:55%;
+	--color-asgardeo-link:#ff7300;
 	--color-text-primary:#0081cc;
 	--color-primary-dark:#1891d8;
 	--color-primary-darker:#126fa5;
