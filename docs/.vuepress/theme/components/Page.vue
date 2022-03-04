@@ -1,7 +1,7 @@
 <template>
   <main class="page">
     <MyTransition>
-      <BreadCrumb :key="$route.path" style="margin:0;"/>
+      <BreadCrumb :key="$route.path" />
           </MyTransition>
 
     <slot name="top" />
@@ -25,7 +25,6 @@
 
     <MyTransition v-show="!pagePassword || pageDescrypted" :delay="0.08">
       <Content :key="$route.path" class="theme-default-content" />
-      <!-- <Content :key="$route.path" :class="getContentClass" /> -->
     </MyTransition>
 
     <MyTransition v-if="!pagePassword || pageDescrypted" :delay="0.12">
@@ -92,7 +91,7 @@
 
   .breadcrumb
     max-width $contentWidth + 200rem
-    padding-bottom 1rem 
+    padding-bottom 1rem
 
     .has-anchor &
       max-width $contentWidth
