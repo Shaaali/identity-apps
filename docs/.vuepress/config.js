@@ -94,10 +94,10 @@ module.exports = config({
             link: "/guides/",
           },
         //  These sections are yet not completed. Uncomment as they are implemented
-         {
-           text: 'APIs',
-           link: '/apis/',
-         },
+//          {
+//            text: 'APIs',
+//            link: '/apis/',
+//          },
          {
            text: 'SDKs',
            link: '/sdks/'
@@ -408,13 +408,7 @@ module.exports = config({
                     ]
                 },
                 ['/references/conditional-auth/api-reference.md', 'Conditional auth - API'],
-            ],
-
-            '/apis/' :[['','Overview'],
-                       ['/apis/email-template.md','Email Templates'],
-                       ['/apis/scim2.md','SCIM 2.0'],
-                       ['/apis/self-sign-up.md','Self Sign-up'],
-                       ['/apis/session.md','Session']]
+            ]
 //
 //            '/concepts/' : [
 //            '',
