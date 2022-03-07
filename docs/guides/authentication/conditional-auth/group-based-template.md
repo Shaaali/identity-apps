@@ -9,7 +9,7 @@ Consider a scenario with two user groups, `manager` and `employee`. For users as
 1. Username and password
 2. TOTP
 
-<img :src="$withBase('/assets/img/guides/conditional-auth/group-based-adaptive-auth.png')" alt="Group based adaptive authentication">
+<img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/group-based-adaptive-auth.png')" alt="Group based adaptive authentication">
 
 ## Prerequisites
 

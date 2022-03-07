@@ -11,7 +11,7 @@ Consider a scenario where the internal IPs of an organization are as follows: `1
 
 Users who log in from the internal network should be allowed to simply log in with their username and password.
 
-<img :src="$withBase('/assets/img/guides/conditional-auth/ip-based-adaptive-auth.png')" alt="IP address based adaptive authentication">
+<img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/ip-based-adaptive-auth.png')" alt="IP address based adaptive authentication">
 
 ## Prerequisites
 

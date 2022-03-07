@@ -18,7 +18,7 @@ Secrets securely store values associated with external APIs. These secret values
 
 ### Create a new secret
 
-1. Enable conditional authentication and click the key icon above the script to create a new secret. <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script">
+1. Enable conditional authentication and click the key icon above the script to create a new secret. <img class="borderless-img" :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script">
 
 2. Click **Create a new secret** from the drop-down menu.
 
