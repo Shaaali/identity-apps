@@ -6,7 +6,7 @@ To control access to your application based on the user's age, you can apply the
 
 Consider a scenario where users who are younger than 18 years should be prevented from signing in to an application and redirected to an error message.
 
-<img :src="$withBase('/assets/img/guides/conditional-auth/age-based-access-control.png')" alt="Age based access control">
+<img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/age-based-access-control.png')" alt="Age based access control">
 
 ## Prerequisites
 
