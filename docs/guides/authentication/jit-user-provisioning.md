@@ -15,6 +15,8 @@ The flow of JIT user provisioning is as follows:
 
 With this process, new user accounts are automatically provisioned to Asgardeo through external IdPs.
 
+<img class="borderless-img" :src="$withBase('/assets/img/guides/jit-provisioning/how-jit-works.png')" alt="How JIT user provisioning works">
+
 ## Prerequisites
 
 First, the external IdP should be registered in Asgardeo as a connection. 
@@ -40,7 +42,7 @@ To disable JIT user provisioning for an external IdP:
 2. Go to the **Advanced** tab of the selected IdP.
 3. Clear the **Just-in-Time User Provisioning** checkbox.
     
-    <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
+    <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-enabled.png')" alt="JIT user provisioning configuration is enabled">
 
 4. Click **Update** to save.
 
