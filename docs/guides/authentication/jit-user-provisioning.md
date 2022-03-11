@@ -46,6 +46,10 @@ To disable JIT user provisioning for an external IdP:
 
 4. Click **Update** to save.
 
+::: info
+When JIT is disabled, a user profile is not created, thus there in no location to store the attributes of the user. In cases as such the attributes are directly passed to the application.
+:::
+
 ## Enable JIT user provisioning
 
 ::: info
@@ -61,6 +65,10 @@ To enable JIT user provisioning for an external IdP:
     <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-disabled.png')" alt="JIT User Provisioning Config Disabled">
 
 4. Click **Update** to save.
+
+::: info
+When JIT is enabled, Asgardeo will create a user profile and store the user attributes recieved from the external IdP. 
+:::
 
 ## Troubleshoot sign-in flow errors
 
