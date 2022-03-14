@@ -402,6 +402,7 @@ module.exports = config({
             ],
 
             '/apis/' :[['','Overview'],
+                       ['/apis/authentication.md','Authentication'],
                        ['/apis/email-template.md','Email Templates'],
                        ['/apis/scim2.md','SCIM 2.0'],
                        ['/apis/self-sign-up.md','Self Sign-up'],
