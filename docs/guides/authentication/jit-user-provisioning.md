@@ -47,7 +47,7 @@ To disable JIT user provisioning for an external IdP:
 4. Click **Update** to save.
 
 ::: info
-When JIT is disabled, a user profile is not created, thus there in no location to store the attributes of the user. In cases as such the attributes are directly passed to the application.
+When JIT is disabled, a user profile is not created. Therefore, there is no location to store the attributes of the user. In such cases, the attributes are directly passed to the application.
 :::
 
 ## Enable JIT user provisioning
