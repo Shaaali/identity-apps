@@ -58,7 +58,7 @@ Now, let's register the Google IdP in Asgardeo.
       </tr>
     </table>  
 
-4. If required, your can <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">disable JIT user provisioning</a>.  
+4. If required, you can <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">disable JIT user provisioning</a>.  
 
 After the Google identity provider is created, go to the **Settings** tab and see the list of **scopes** to which Google has granted permissions.
 
