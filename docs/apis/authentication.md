@@ -1,6 +1,6 @@
-# Introduction
+# Authentication
 
-This guide provides the procedure on how to invoke management APIs in Asgardeo. The owners and the collaborators of an organization can access the management API's for organization level settings.
+This guide provides the procedure on getting an access token and invoking the management APIs in Asgardeo securely. The owners and the collaborators of an organization can access the management API's for organization level settings.
 
 ## Invoke the management APIs
 
@@ -17,11 +17,11 @@ The organization administrator has to create a new application with client crede
 <img :src="$withBase('/assets/img/apis/management-apis/register-a-sba.png')" alt="Register a standard based application">
 
 3. Provide an application name.
-4. Select **OIDC Standard-Based Application** and **Management Application** checkbox.
+4. Select **OIDC Standard-Based Application** type and the **Management Application** checkbox.
 5. Click **Register** to complete the registraion.
 6. Move to the **Protocol** tab and select **Client Credential** as the grant type for the application.
 
-The client credentials for your application are displayed in the Protocol tab as shown below.
+The client credentials for your application are displayed in the protocol tab as shown below.
 <img :src="$withBase('/assets/img/apis/management-apis/obtain-client-credentials.png')" alt="Obtain the client ID and client secret of the app">
 
 ::: info
@@ -81,7 +81,7 @@ curl -X GET "https://api.asgardeo.io/t/<org_name>/scim2/Users" -H "accept: appli
 ```
 
 ## Best practices
-When invoking the management APIs we recommend if you use the following best practices: 
+When invoking the management APIs we recommend you to use the following best practices: 
 - If the ``client_id`` and ``client_secret`` are compromised, anyone can use them to invoke the client credentials grant and get an access token with all the access levels of the admin. Therefore, we highly recommend not to share the client id and client secret. 
 - If required, the administrator can set a higher expiry time for the application token through the application configurations in the Asgardeo console.
 - When requesting the access token, the administrator can request a token with some specific scopes (for example ``internal_email_mgt_update``) and share it with the developer. This way, the developer will not misuse the token.
