@@ -9,7 +9,7 @@ To invoke the management API:
 2. [Request an access token](#request-access-token)
 3. [Access the API](#access-the-api)
 
-### Register an application
+### Register a management app
 The organization administrator has to create a new application with client credentials grant type: 
 
 1. On the Asgardeo Console, go to **Develop > Applications**
