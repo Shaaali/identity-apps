@@ -5,7 +5,7 @@ This guide provides the procedure on how to invoke management APIs in Asgardeo. 
 ## Invoke the management APIs
 
 To invoke the management API: 
-1. [Register a Standard Based Application](#register-an-application)
+1. [Register a standard-based Application](#register-an-application)
 2. [Request an access token](#request-access-token)
 3. [Access the API](#access-the-api)
 
