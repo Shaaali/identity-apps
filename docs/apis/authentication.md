@@ -5,7 +5,7 @@ This guide provides the procedure on getting an access token and invoking the ma
 ## Invoke the management APIs
 
 To invoke the management API: 
-1. [Register a standard-based Application](#register-an-application)
+1. [Register a standard-based Application](#register-a-application)
 2. [Request an access token](#request-access-token)
 3. [Access the API](#access-the-api)
 
