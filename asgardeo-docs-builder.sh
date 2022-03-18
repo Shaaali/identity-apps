@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Fail the script when a subsuquent command or pipe redirection fails
+set -e
+set -o pipefail
+
 # Variables
 REPO_DIR=$1
 GIT_TOKEN=$2
