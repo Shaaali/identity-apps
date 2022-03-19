@@ -1,25 +1,29 @@
 # Authentication
 
-This guide provides the procedure on getting an access token and invoking the management APIs in Asgardeo securely. The owners and the collaborators of an organization can access the management API's for organization level settings.
+To access management APIs in Asgardeo, you need to first get an access token from your organization for the API operations that you want to access. You can then use this access token to securely invoke those API operations.
 
-## Invoke the management APIs
+Follow the instructions given below.
 
-To invoke the management API: 
+## Get an access token
+
+Follow the steps given below to get an access token with the required permissions.
+
 1. [Register a standard-based Application](#register-a-management-app)
-2. [Request an access token](#request-access-token)
-3. [Access the API](#access-the-api)
+2. [Request an access token](#request-an-access-token)
 
 ### Register a management app
-The organization administrator has to create a new application with client credentials grant type: 
 
-1. On the Asgardeo Console, go to **Develop > Applications**
+Use the **standard-based** app type to register an OIDC management app:
+
+1. On the Asgardeo console, go to **Develop > Applications**.
 2. Click **New Application** and select **Standard-Based Application** to open the following:
-<img :src="$withBase('/assets/img/apis/management-apis/register-a-sba.png')" alt="Register a standard based application">
+
+    <img :src="$withBase('/assets/img/apis/management-apis/register-a-sba.png')" alt="Register a standard based application">
 
 3. Provide an application name.
-4. Select **OIDC Standard-Based Application** type and the **Management Application** checkbox.
-5. Click **Register** to complete the registraion.
-6. Move to the **Protocol** tab and select **Client Credential** as the grant type for the application.
+4. Select **OIDC Standard-Based Application** as the app type and the **Management Application** checkbox.
+5. Click **Register** to complete the registration.
+6. Go to the **Protocol** tab and select **Client Credential** as the grant type for the application.
 
 The client credentials for your application are displayed in the protocol tab as shown below.
 <img :src="$withBase('/assets/img/apis/management-apis/obtain-client-credentials.png')" alt="Obtain the client ID and client secret of the app">
@@ -28,10 +32,9 @@ The client credentials for your application are displayed in the protocol tab as
 The client ID and client secret are sensitive information that must be protected. See the [best practices](#best-practices) before you proceed.
 :::
 
-### Request access token
-An organization administrator can request for an access token for the organization from the token endpoint.
+### Request an access token
 
-If you are an administrator the cURL command format below can be used to request for an access token for your organization.
+You can now request an access token from the token endpoint by specifying the scopes (permission level) that you require. Use the following cURL command format in your request:
 
 ``` js
 curl -X POST \
@@ -64,17 +67,18 @@ https://api.asgardeo.io/t/<org_name>/oauth2/token \
     </tr>
 </table>
 
-Executing the cURL command will provide you with the access token for your application. This access token can be used to invoke the management APIs.
-
 #### Sample access token
+
+Shown below is a sample access token that you will receive in the response.
+
 ```
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
-### Access the API
-The developer can use the received access token access token as an **Authorization Bearer** header to access the management APIs. 
+## Access the API
+You can now use the access token as an **Authorization Bearer** header to access the management APIs. 
 
-This is a sample cURL command template which can be used to invoke the API.
+This is a sample cURL command template for the request.
 
 ``` js
 curl -X GET "https://api.asgardeo.io/t/<org_name>/scim2/Users" -H "accept: application/scim+json" -H "Authorization: Bearer <access_token>"
