@@ -1,6 +1,6 @@
 # Authentication
 
-To access management APIs in Asgardeo, you need to first get an access token from your organization for the API operations that you want to access. You can then use this access token to securely invoke those API operations.
+To access <a :href="$withBase('/apis/')">management APIs</a>  in Asgardeo, you need to first get an access token from your organization for the API operations that you want to access. You can then use this access token to securely invoke those API operations.
 
 Follow the instructions given below.
 
