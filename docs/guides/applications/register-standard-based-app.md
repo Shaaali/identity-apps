@@ -26,3 +26,8 @@ To register an application:
     :::
 
 4. Click **Register** to complete the registration.
+
+## What's Next?
+
+- <a :href="$withBase('/references/app-settings/oidc-settings-for-app/')">Configuring an OIDC application</a>
+- <a :href="$withBase('/references/app-settings/saml-settings-for-app/')">Configuring a SAML application</a>
