@@ -182,7 +182,7 @@ module.exports = config({
                             ['register-single-page-app.md', 'Register an SPA'],
                             ['register-oidc-web-app.md', 'Register web app with OIDC'],
                             ['register-saml-web-app.md', 'Register web app with SAML'],
-                            ['register-standard-based-app.md', 'Register an Standard-based app'],
+                            ['register-standard-based-app.md', 'Register a standard-based app'],
                     ]
                 },
                 {   
