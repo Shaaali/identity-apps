@@ -1929,8 +1929,7 @@ components:
     OAuth2:
       type: oauth2
       flows:
-        authorizationCode:
-          authorizationUrl: https://api.asgardeo.io/t/{org-name}/authorize
+        clientCredentials:
           tokenUrl: https://api.asgardeo.io/t/{org-name}/oauth/token
           scopes:
             read: Grants read access
