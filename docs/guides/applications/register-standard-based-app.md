@@ -15,7 +15,7 @@ Alternatively, you can register using an application type that has configuration
 
 To register an application:
 
-1. On the Asgardeo Console, go to **Develop > Applications**
+1. On the Asgardeo console, go to **Develop > Applications**.
 2. Click **New Application** and select **Standard-Based Application** to open the following:
     <img :src="$withBase('/assets/img/guides/applications/register-an-sba.png')" alt="Register a standard-based application">
 3. Provide an application name and select the other options based on your requirements.
