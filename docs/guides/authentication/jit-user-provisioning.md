@@ -13,6 +13,8 @@ The flow of JIT user provisioning is as follows:
 3. Asgardeo receives a positive authentication response from the external IdP with the user information.
 4. JIT provisioning is triggered and Asgardeo creates a user account in its internal user store along with the user claims obtained from the authentication response.
 
+<img class="borderless-img" :src="$withBase('/assets/img/guides/jit-provisioning/how-jit-works.png')" alt="How JIT user provisioning works">
+
 With this process, new user accounts are automatically provisioned to Asgardeo through external IdPs.
 
 ## Prerequisites
@@ -40,9 +42,13 @@ To disable JIT user provisioning for an external IdP:
 2. Go to the **Advanced** tab of the selected IdP.
 3. Clear the **Just-in-Time User Provisioning** checkbox.
     
-    <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-enabled.png')" alt="JIT User Provisioning Config Enabled">
+    <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-enabled.png')" alt="JIT user provisioning configuration is enabled">
 
 4. Click **Update** to save.
+
+::: info
+When JIT is disabled, a user profile is not created. Therefore, there is no location to store the attributes of the user. In such cases, the attributes are directly passed to the application.
+:::
 
 ## Enable JIT user provisioning
 
@@ -59,6 +65,10 @@ To enable JIT user provisioning for an external IdP:
     <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-disabled.png')" alt="JIT User Provisioning Config Disabled">
 
 4. Click **Update** to save.
+
+::: info
+When JIT is enabled, Asgardeo will create a user profile and store the user attributes recieved from the external IdP. 
+:::
 
 ## Troubleshoot sign-in flow errors
 
