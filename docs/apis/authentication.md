@@ -21,7 +21,7 @@ Use the **standard-based** app type to register an OIDC management app:
     <img :src="$withBase('/assets/img/apis/management-apis/register-a-sba.png')" alt="Register a standard based application">
 
 3. Provide an application name.
-4. Select **OIDC Standard-Based Application** as the app type and the **Management Application** checkbox. Learn more about <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/')">OIDC configurations</a>
+4. Select **OIDC Standard-Based Application** as the app type and the **Management Application** checkbox. Learn more about <a :href="$withBase('/references/app-settings/oidc-settings-for-app/')">OIDC configurations</a>
 
 5. Click **Register** to complete the registration.
 6. Go to the **Protocol** tab and select **Client Credential** as the grant type for the application.
