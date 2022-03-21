@@ -13,9 +13,9 @@ The flow of JIT user provisioning is as follows:
 3. Asgardeo receives a positive authentication response from the external IdP with the user information.
 4. JIT provisioning is triggered and Asgardeo creates a user account in its internal user store along with the user claims obtained from the authentication response.
 
-With this process, new user accounts are automatically provisioned to Asgardeo through external IdPs.
-
 <img class="borderless-img" :src="$withBase('/assets/img/guides/jit-provisioning/how-jit-works.png')" alt="How JIT user provisioning works">
+
+With this process, new user accounts are automatically provisioned to Asgardeo through external IdPs.
 
 ## Prerequisites
 
