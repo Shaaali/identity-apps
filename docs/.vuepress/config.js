@@ -94,14 +94,14 @@ module.exports = config({
             link: "/guides/",
           },
         //  These sections are yet not completed. Uncomment as they are implemented
-//          {
-//            text: 'APIs',
-//            link: '/apis/',
-//          },
          {
            text: 'SDKs',
            link: '/sdks/'
          },
+         {
+            text: 'APIs',
+            link: '/apis/',
+          },
          {
             text: 'References',
             link: '/references/'
@@ -200,13 +200,6 @@ module.exports = config({
                         ]
                     },
                     {
-
-                        title: 'Add passwordless login',
-                        prefix: 'passwordless-login/',
-                        path: 'passwordless-login/',
-                        sidebarDepth: 2
-                    },
-                    {
                         title: 'Enable User Attributes',
                         prefix: 'user-attributes/',
                         path: 'user-attributes/',
@@ -302,8 +295,7 @@ module.exports = config({
                             ['discover-saml-configs.md', 'Discover SAML endpoints and settings'],
                         ]
                     },
-                        ['manage-consent-for-attributes.md', 'Manage user consent'],
-                        ['jit-user-provisioning.md', 'Configure JIT user provisioning']
+                        ['jit-user-provisioning.md', 'Configure JIT User Provisioning'],
                     ]
                 },
                 {
@@ -322,7 +314,6 @@ module.exports = config({
                         ['manage-customers.md', 'Manage customers'],
                         ['manage-groups.md', 'Manage groups'],
                         ['manage-sessions.md', 'Manage active sessions'],
-                        ['migrate-users.md', 'Migrate Users'],
                         {
                             title: 'Manage Attributes and Mappings',
                             prefix: 'attributes/',
@@ -368,7 +359,6 @@ module.exports = config({
                         ['self-register.md', 'Self-register'],
                         ['customer-password-recovery.md', 'Password recovery'],
                         ['enable-totp.md', 'Enroll TOTP'],
-                        ['register-security-key.md', 'Register FIDO2 security key/biometrics'],
                         ['discover-applications.md', 'Discover applications'],
                     ]
                 },
@@ -389,6 +379,14 @@ module.exports = config({
             '/sdks/' : [
                 ['', ''],
             ],
+            '/apis/' :[
+                ['','APIs - Overview'],
+                ['/apis/authentication.md','Authentication'],
+                ['/apis/email-template.md','Email templates API'],
+                ['/apis/scim2.md','User management (SCIM 2.0) API'],
+                ['/apis/self-sign-up.md','Self service API'],
+                ['/apis/session.md','Session management API']
+            ],
             '/references/' : [
                 ['/references/user-management/user-roles.md', 'Asgardeo user roles'],
                 {
@@ -405,6 +403,7 @@ module.exports = config({
                     children: [
                         ['/references/idp-settings/oidc-settings-for-idp.md', 'OIDC configurations'],
                         ['/references/idp-settings/saml-settings-for-idp.md', 'SAML configurations'],
+                        ['/references/idp-settings/just-in-time-provisioning.md', 'Just-in-Time User Provisioning'],
                     ]
                 },
                 ['/references/conditional-auth/api-reference.md', 'Conditional auth - API'],
