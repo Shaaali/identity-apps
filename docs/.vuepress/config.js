@@ -95,13 +95,13 @@ module.exports = config({
           },
         //  These sections are yet not completed. Uncomment as they are implemented
          {
-           text: 'APIs',
-           link: '/apis/',
-         },
-         {
            text: 'SDKs',
            link: '/sdks/'
          },
+         {
+            text: 'APIs',
+            link: '/apis/',
+          },
          {
             text: 'References',
             link: '/references/'
@@ -379,6 +379,14 @@ module.exports = config({
             '/sdks/' : [
                 ['', ''],
             ],
+            '/apis/' :[
+                ['','APIs - Overview'],
+                ['/apis/authentication.md','Authentication'],
+                ['/apis/email-template.md','Email templates API'],
+                ['/apis/scim2.md','User management (SCIM 2.0) API'],
+                ['/apis/self-sign-up.md','Self service API'],
+                ['/apis/session.md','Session management API']
+            ],
             '/references/' : [
                 ['/references/user-management/user-roles.md', 'Asgardeo user roles'],
                 {
@@ -399,14 +407,7 @@ module.exports = config({
                     ]
                 },
                 ['/references/conditional-auth/api-reference.md', 'Conditional auth - API'],
-            ],
-
-            '/apis/' :[['','Overview'],
-                       ['/apis/authentication.md','Authentication'],
-                       ['/apis/email-template.md','Email Templates'],
-                       ['/apis/scim2.md','SCIM 2.0'],
-                       ['/apis/self-sign-up.md','Self Sign-up'],
-                       ['/apis/session.md','Session']]
+            ]
 //
 //            '/concepts/' : [
 //            '',
