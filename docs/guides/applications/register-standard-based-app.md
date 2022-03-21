@@ -3,7 +3,7 @@ When you integrate an application with Asgardeo, the first step is to register y
 
 You can also use the standard-based application type in the following scenarios:
 - Integrate a web/mobile application with the password grant type. The application types for, single- page applications and, traditional web applications and mobile applications do not support password grant type as it is not recommended. 
-- Access the <a :href="$withBase('/apis/')"> management APIs</a> of Asgardeo.
+- Access the <a :href="$withBase('/apis/')">management APIs</a> of Asgardeo.
 ::: info
 Alternatively, you can register using an application type that has configurations optimized for specific applications.
 - <a :href="$withBase('/guides/applications/register-single-page-app/')">Register an SPA</a>
