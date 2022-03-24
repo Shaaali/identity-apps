@@ -278,7 +278,7 @@ paths:
       tags:
       - admin
       summary: Terminate a session
-      description: "Terminate a specific session of a user by the session-id.\n\n
+      description: "Terminate a specific session of a user identified by the `session-id`.\n\n
       <b>Scope required:</b> ``internal_session_delete`` "
       operationId: terminateSessionBySessionId
       parameters:
