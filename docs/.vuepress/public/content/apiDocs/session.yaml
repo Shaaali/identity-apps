@@ -134,7 +134,7 @@ paths:
       tags:
       - me
       summary: Terminate a given session of the authenticated user
-      description: "A user has multiple active sessions. This API terminates a specific session of the authenticated user identified by the session-id.\n\n
+      description: "A user has multiple active sessions. This API terminates a specific session of the authenticated user identified by the `session-id`.\n\n
       <b>Scope required:</b> ``internal_login`` "
       operationId: terminateSessionByLoggedInUser
       parameters:
