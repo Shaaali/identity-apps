@@ -8,7 +8,7 @@ Follow the instructions given below.
 
 Follow the steps given below to get an access token with the required permissions.
 
-1. [Register a standard-based Application](#register-a-management-app)
+1. [Register a management app](#register-a-management-app)
 2. [Request an access token](#request-an-access-token)
 
 ### Register a management app
