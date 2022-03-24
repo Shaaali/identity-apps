@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Asgardeo - User Session Management API
-  description: This is the RESTful API for managing user sessions in Asgardeo
+  description: This is the RESTful API for managing user sessions in Asgardeo.
   contact:
     name: Asgardeo
     url: https://wso2.com/asgardeo/
