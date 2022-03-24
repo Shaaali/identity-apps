@@ -104,7 +104,7 @@ paths:
       tags:
       - me
       summary: Terminate all the active sessions of the authenticated user
-      description: "A user has multiple active sessions. This API terminates all the active sessions of the authenticated user.\n\n 
+      description: "A user has multiple active sessions. This endpoint is used to retrieve all the active sessions of the authenticated user.\n\n 
       <b>Scope required:</b> ``internal_login``"
       operationId: terminateSessionsByLoggedInUser
       responses:
