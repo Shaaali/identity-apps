@@ -4,7 +4,7 @@ info:
   title: Asgardeo - SCIM 2.0 API
   description: |
     This is the RESTful API for SCIM 2.0 in WSO2 Asgardeo. 
-    This API allows creating, deleting, listing and updating user and group schemas.
+    This API allows creating, deleting, listing, and updating user and group schemas.
   contact:
     name: Asgardeo
     url: 'https://wso2.com/asgardeo/'
