@@ -172,7 +172,7 @@ paths:
       - admin
       summary: Get active sessions
       description: "Retrieves information related to the active sessions of a user
-        identified by the user-id. \n\n
+        identified by the `user-id`. \n\n
       <b>Scope required:</b> ``internal_session_view``"
       operationId: getSessionsByUserId
       parameters:
