@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Asgardeo - Self Service API
   description: |
-    This document specifies the **Self Service APIs** for **Asgardeo** by WSO2 .
+    This API is used for accessing the self service capabilities for application users in Asgardeo.
   contact:
     name: WSO2
     url: https://wso2.com/asgardeo/
