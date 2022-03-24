@@ -26,7 +26,7 @@ paths:
       tags:
       - me
       summary: Retrieve active sessions of the authenticated user
-      description: "A user can have multiple active sessions. This API retrieves information of all the active sessions of the authenticated user.\n\n
+      description: "A user can have multiple active sessions. This endpoint is used to retrieve information of all the active sessions of the authenticated user.\n\n
       <b>Scope required:</b>``internal_login``"
       operationId: getSessionsOfLoggedInUser
       parameters:
