@@ -244,7 +244,7 @@ paths:
       tags:
       - admin
       summary: Terminate all sessions
-      description: "Delete all the sessions of a user identified by the user-id.\n\n
+      description: "Delete all the sessions of a user identified by the `user-id`.\n\n
         <b>Scope required:</b> ``internal_session_delete``"
       operationId: terminateSessionsByUserId
       parameters:
