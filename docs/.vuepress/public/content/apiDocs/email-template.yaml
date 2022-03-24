@@ -460,8 +460,7 @@ components:
     OAuth2:
       type: oauth2
       flows:
-        authorizationCode:
-          authorizationUrl: 'https://api.asgardeo.io/t/{org-name}/oauth2/authorize'
+        clientCredentials:
           tokenUrl: 'https://api.asgardeo.io/t/{org-name}/oauth2/token'
           scopes:
             internal_email_mgt_view: Grants read access

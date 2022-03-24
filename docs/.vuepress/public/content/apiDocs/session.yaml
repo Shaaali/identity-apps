@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: Asgardeo - User Session Management API Definition
-  description: This is the RESTful API for managing user sessions in Asgardeo
+  title: Asgardeo - User Session Management API
+  description: This is the RESTful API for managing user sessions in Asgardeo.
   contact:
     name: Asgardeo
     url: https://wso2.com/asgardeo/
@@ -26,8 +26,8 @@ paths:
       tags:
       - me
       summary: Retrieve active sessions of the authenticated user
-      description: |
-        A user can have multiple active sessions. This API retrieves information of all the active sessions of the authenticated user. <br> <b>Scope required:</b> <br> * internal_login
+      description: "A user can have multiple active sessions. This endpoint is used to retrieve information of all the active sessions of the authenticated user.\n\n
+      <b>Scope required:</b>``internal_login``"
       operationId: getSessionsOfLoggedInUser
       parameters:
       - name: limit
@@ -104,8 +104,8 @@ paths:
       tags:
       - me
       summary: Terminate all the active sessions of the authenticated user
-      description: |
-        A user has multiple active sessions. This API terminates all the active sessions of the authenticated user. <br> <b>Scope required:</b> <br> * internal_login
+      description: "A user has multiple active sessions. This endpoint is used to retrieve all the active sessions of the authenticated user.\n\n 
+      <b>Scope required:</b> ``internal_login``"
       operationId: terminateSessionsByLoggedInUser
       responses:
         204:
@@ -134,8 +134,8 @@ paths:
       tags:
       - me
       summary: Terminate a given session of the authenticated user
-      description: |
-        A user has multiple active sessions. This API terminates a specific session of the authenticated user identified by the session-id. <br> <b>Scope required:</b></br> * internal_login
+      description: "A user has multiple active sessions. This API terminates a specific session of the authenticated user identified by the `session-id`.\n\n
+      <b>Scope required:</b> ``internal_login`` "
       operationId: terminateSessionByLoggedInUser
       parameters:
       - name: session-id
@@ -171,8 +171,9 @@ paths:
       tags:
       - admin
       summary: Get active sessions
-      description: Retrieves information related to the active sessions of a user
-        identified by the user-id. <br> <b>Scope required:</b> </br> * internal_session_view
+      description: "Retrieves information related to the active sessions of a user
+        identified by the `user-id`. \n\n
+      <b>Scope required:</b> ``internal_session_view``"
       operationId: getSessionsByUserId
       parameters:
       - name: user-id
@@ -243,8 +244,8 @@ paths:
       tags:
       - admin
       summary: Terminate all sessions
-      description: Delete all the sessions of a user identified by the user-id. <br>
-        <b>Scope required:</b> </br> * internal_session_delete
+      description: "Delete all the sessions of a user identified by the `user-id`.\n\n
+        <b>Scope required:</b> ``internal_session_delete``"
       operationId: terminateSessionsByUserId
       parameters:
       - name: user-id
@@ -277,8 +278,8 @@ paths:
       tags:
       - admin
       summary: Terminate a session
-      description: Terminate a specific session of a user by the session-id. <br>
-        <b>Scope required:</b> <br> * internal_session_delete
+      description: "Terminate a specific session of a user identified by the `session-id`.\n\n
+      <b>Scope required:</b> ``internal_session_delete`` "
       operationId: terminateSessionBySessionId
       parameters:
       - name: user-id
@@ -484,7 +485,6 @@ components:
     OAuth2:
       type: oauth2
       flows:
-        authorizationCode:
-          authorizationUrl: https://api.asgardeo.io/t/{org_name}/oauth2/authorize
+        clientCredentials:
           tokenUrl: https://api.asgardeo.io/t/{org_name}/oauth2/token
           scopes: {}

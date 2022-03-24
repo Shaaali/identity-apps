@@ -1,10 +1,8 @@
 openapi: 3.0.1
 info:
-  title: Asgardeo Rest API - User
+  title: Asgardeo - Self Service API
   description: |
-    This document specifies a **RESTful API** for **Asgardeo** by WSO2 .
-
-    It is written with [swagger 3](http://swagger.io/).
+    This API is used for accessing the self service capabilities for application users in Asgardeo.
   contact:
     name: WSO2
     url: https://wso2.com/asgardeo/
@@ -93,8 +91,9 @@ paths:
       - Self Register
       summary: |
         Self resend code
-      description: This API is used to resend the confirmation code to the authenticated
-        user if it is missing. <br><b>Scope required:</b> </br> * internal_usr_mgt_view
+      description: "This API is used to resend the confirmation code to the authenticated
+        user if it is missing.\n\n  
+      <b>Scope required:</b>``internal_usr_mgt_view``"
       requestBody:
         description: Sends property parameters such as the recovery scenario.
         content:

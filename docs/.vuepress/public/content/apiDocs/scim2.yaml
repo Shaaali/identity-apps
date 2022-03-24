@@ -3,7 +3,8 @@ info:
   version: "v1"
   title: Asgardeo - SCIM 2.0 API
   description: |
-    SCIM 2.0 endpoints
+    This is the RESTful API for SCIM 2.0 in WSO2 Asgardeo. 
+    This API allows creating, deleting, listing, and updating user and group schemas.
   contact:
     name: Asgardeo
     url: 'https://wso2.com/asgardeo/'
@@ -1929,10 +1930,6 @@ components:
     OAuth2:
       type: oauth2
       flows:
-        authorizationCode:
-          authorizationUrl: https://api.asgardeo.io/t/{org-name}/authorize
+        clientCredentials:
           tokenUrl: https://api.asgardeo.io/t/{org-name}/oauth/token
-          scopes:
-            read: Grants read access
-            write: Grants write access
-            admin: Grants read and write access to administrative information
+          scopes: []
