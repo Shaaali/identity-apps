@@ -126,8 +126,8 @@ As an application developer, you can follow the steps given below to request use
     {
       "clientID": "<client ID>",
       "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
-      "signInRedirectURL": "https://localhost:5000",
-      "signOutRedirectURL": "https://localhost:5000",
+      "signInRedirectURL": "https://localhost:3000",
+      "signOutRedirectURL": "https://localhost:3000",
       "scope": [ "profile", "address", "phone" ]
     }
     ```

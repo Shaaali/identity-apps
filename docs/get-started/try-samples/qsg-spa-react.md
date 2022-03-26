@@ -47,15 +47,15 @@ Change the `config.json` file found in the `asgardeo-react-app/src` sample folde
     {
         "clientID": "<client ID>",
         "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
-        "signInRedirectURL": "https://localhost:5000",
-        "signOutRedirectURL": "https://localhost:5000",
+        "signInRedirectURL": "https://localhost:3000",
+        "signOutRedirectURL": "https://localhost:3000",
         "scope": [ "profile" ]
     }
     ```
 
 ## Run the sample
 
-Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000` 
+Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:3000` 
 
 ```bash no-line-numbers
 npm install && npm start
