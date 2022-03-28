@@ -1,9 +1,9 @@
 These configurations are enabled only if refresh token grant type is added as an allowed grant type.
 
-#### Rotate refresh token
+#### Renew refresh token
 Asgardeo issues a new refresh token each time when access token is refreshed with refresh token grant type. The previous token gets invalidated.
 
-If application does not want to get new refresh token for each request, you can unselect this **Rotate refresh token** setting. Then the same refresh token will be issued with refresh token grant type until the refresh token get expires.
+If application does not want to get new refresh token for each request, you can unselect this **Renew refresh token** setting. Then the same refresh token will be issued with refresh token grant type until the refresh token get expires.
 
 <br>
 
