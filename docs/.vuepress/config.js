@@ -311,8 +311,8 @@ module.exports = config({
                     path: 'users/',
                     sidebarDepth: 2,
                     children: [
-                        ['manage-collaborators.md', 'Manage collaborators'],
-                        ['manage-customers.md', 'Manage customers'],
+                        ['manage-collaborators.md', 'Manage administrators'],
+                        ['manage-customers.md', 'Manage users'],
                         ['manage-groups.md', 'Manage groups'],
                         ['manage-sessions.md', 'Manage active sessions'],
                         {

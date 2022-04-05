@@ -20,9 +20,9 @@ Let's consider the following simplified set of requirements for your business ap
 
 -  Customize the login flow in your application and enable `Username and Password` authentication.
 
--  Create two user groups named `manager` and `employee` and assign customer accounts to them. For instructions, see the following:
+-  Create two user groups named `manager` and `employee` and assign user accounts to them. For instructions, see the following:
    -  <a :href="$withBase('/guides/users/manage-groups/')">Managing groups</a>
-   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing customers</a>
+   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing users</a>
 
 ## Start with the default script
 

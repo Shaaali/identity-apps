@@ -1,8 +1,8 @@
 # Branding your organization
 
-You can customize the user interfaces presented to your customers at login, sign-up, and account recovery flows according to the theming guidelines of your organization.
+You can customize the user interfaces presented to your users at login, sign-up, and account recovery flows according to the theming guidelines of your organization.
 
-By branding these interfaces, your customers will get a familiar and consistent user experience.
+By branding these interfaces, your users will get a familiar and consistent user experience.
 
 ::: info 
 See the complete list of [branding options](#branding-preferences) available in Asgardeo currently.
@@ -81,13 +81,13 @@ Listed below are general branding preferences you can apply to the user registra
    <tr>
       <td>Copyright Text</td>
       <td>
-         <p>The copyright text is a short description that informs customers about the copyright law protecting your applications.</p>
+         <p>The copyright text is a short description that informs users about the copyright law protecting your applications.</p>
          <p>In Asgardeo, the copyright text will appear on the footer of the login screens.</p>
       </td>
    </tr>
    <tr>
       <td>Contact Email</td>
-      <td>This email address will appear on the error pages and other pages where customers would require support from the organization admin.</td>
+      <td>This email address will appear on the error pages and other pages where users would require support from the organization admin.</td>
    </tr>
 </table>
 
@@ -140,14 +140,14 @@ Listed below are some advanced branding preferences you can apply to the user re
    <tr>
       <td>Privacy Policy</td>
       <td>
-         <p>This is a link to a statement or a legal document that states how your organization collects, handles, and processes the data of your customers and visitors.</p>
+         <p>This is a link to a statement or a legal document that states how your organization collects, handles, and processes the data of your users and visitors.</p>
          <p>Once you configure a valid URL, Asgardeo will show this on the footer of the login screens.</p>
       </td>
    </tr>
    <tr>
       <td>Terms of Service</td>
       <td>
-         <p>This is a link to an agreement that your customers must agree to and abide by in order to use your organization's applications or other services.</p>
+         <p>This is a link to an agreement that your users must agree to and abide by in order to use your organization's applications or other services.</p>
          <p>Once you configure a valid URL, Asgardeo will show this on the footer of the login screens.</p>
       </td>
    </tr>
