@@ -12,5 +12,5 @@ Given below are the steps to follow.
     - Clear the attributes individually and click **Update**. This removes access to the unselected user attributes for the given application.
     - Click **Revoke** to revoke all the user attributes shared with that application.
 
-If consent is revoked for a user attribute, the user will be prompted with consent in the next login attempt to that application.
+If consent is revoked for a user attribute, the user will be prompted for consent in the next login attempt to that application.
 
