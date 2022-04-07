@@ -41,7 +41,7 @@ See the <a :href="$withBase('/guides/')">guides</a> to learn more.
 Let's start by adding the first user to your organization.
 
 1. On the Asgardeo console, click **Manage > Users**.
-2. Click **New User** button.
+2. Click **New User**.
 3. Fill in the user's details.
     <img :src="$withBase('/assets/img/guides/get-started/create-customer-account.png')" alt="customer-account-create-ui">
 4. Select **Set a temporary password for the user** and enter a temporary password for the user. The user will be able to change the password later.

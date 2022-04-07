@@ -13,7 +13,7 @@ Administrators can onboard another administrator by sending an email invitation.
 To onboard an administrator:
 
 1. On the Asgardeo console, click **Manage > Administrators**.
-2. Click **New Administrator** button.
+2. Click **New Administrator**.
 4. Provide the email address of the administrator and click **Invite**.
 
     ::: warning
@@ -30,7 +30,7 @@ For details on the available user roles and the permissions assigned to them, se
 
 ## Delete an administrator
 
-An administrator account can be deleted by administrator. Once an account is deleted, the action is irreversible. 
+An administrator account can be deleted by administrators. Once an account is deleted, the action is irreversible.
 
 To delete an administrator account:
 1. On the Asgardeo console, click **Manage > Administrators**.

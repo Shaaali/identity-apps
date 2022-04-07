@@ -36,7 +36,7 @@ An owner is always assigned the **Administrator** role. It cannot be changed by 
 
 ### Administrator 
 
-An administrator is a user who can manage the organization and has access to the organization’s administrative operations. An administrator can be invited to the organization and assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
+An administrator can manage the organization and has access to the organization’s administrative operations. An administrator can be invited to the organization and assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
 
 Refer <a :href="$withBase('/guides/users/manage-collaborators/')">Managing administrators</a> for more information. 
 

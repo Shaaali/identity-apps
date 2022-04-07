@@ -1,16 +1,16 @@
 # Manage users
 
-This guide walks you through the process of managing a user account. An owner or an administrator with administrative privilege can manage user accounts.
+This guide walks you through the process of managing a user account. An owner or an administrator can manage user accounts.
 
 ## Onboard a user
 There are two ways to onboard a user:
 - The user can self-register via My Account or a business application if **Self-Registration** is enabled in the organization. Learn about <a :href="$withBase('/guides/user-self-service/self-register/')">user self-registration</a>.
 - An administrator can invite the user.
 
-Let's look at how administrator can onboard users from the Asgardeo console.
+Let's look at how administrators can onboard users from the Asgardeo console.
 
 1. On the Asgardeo console, click **Manage > Users**.
-2. Click  **New User** button.
+2. Click  **New User**.
 3. Provide the following details:
     <img :src="$withBase('/assets/img/guides/users/add-user-form.png')" width="500" alt="Add user">
     - **Email (Username):** A unique email address to identify the user. 
@@ -25,7 +25,7 @@ Let's look at how administrator can onboard users from the Asgardeo console.
             If this option is selected, an email with a confirmation link will be sent to the provided email (username). The user can use the confirmation link to set a new password and to confirm the new account.  
       - **Set a temporary password for the user:**
             If this option is selected, the administrator can set a temporary password for the user.              
-4. Click **Next**. (This option will only appear if your organization already have created groups. Otherwise, click **Finish**.)
+4. Click **Next**. (This option will only appear if your organization has created any groups. Otherwise, click **Finish**.)
 5.  If required, you can assign the user to some groups. 
 6. Click **Finish**.
      
@@ -81,7 +81,7 @@ To reset the password:
    - **Invite user to set their own password:**  
     If this option is selected, a password reset request can be sent to the user via email. The user can then use the instructions in the email to reset the password.  
    - **Set a temporary password for the user:**  
-   If this option is selected, the owner/administrator can set a temporary password for the user.
+   If this option is selected, the owner or an administrator can set a temporary password for the user.
    <img :src="$withBase('/assets/img/guides/users/reset-password-of-user.png')" alt="Reset password" width="500">
 3. Click **Reset Password**.
 
