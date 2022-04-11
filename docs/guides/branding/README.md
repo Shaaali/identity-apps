@@ -221,7 +221,7 @@ Decide how you want the footer to look in the login screens by modifying the fol
 
 Use one of the following options to override the default font for the theme you selected.
 
-##### Use a web safe font
+##### Use a web-safe font
 
 <table>
    <tr>
