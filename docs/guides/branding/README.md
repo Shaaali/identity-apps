@@ -263,7 +263,7 @@ Use one of the following options to override the default font for the theme you 
 
 ::: details Headings
 
-These preferences decide the look and feel of  `h1`, `h2`, `h3`, `h4`, `h5`, and `h6` elements in the login screens.
+These preferences decide the look and feel of  `h1`, `h2`, `h3`, `h4`, `h5`, and `h6` elements on the login screens.
 
 <table>
    <tr>
