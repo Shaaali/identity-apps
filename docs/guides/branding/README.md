@@ -325,7 +325,7 @@ These preferences change the look and feel of buttons that appear on the login s
       <td>Border Radius</td>
       <td>
          <p>This is the border radius of the secondary action buttons.</p>
-         <p>By default, Asgardeo uses <code>4 pixels</code> as the border-radius for secondary buttons.</p>
+         <p>By default, Asgardeo uses <b>four</b> pixels as the border-radius for secondary buttons.</p>
       </td>
    </tr>
 </table>
