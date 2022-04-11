@@ -152,7 +152,7 @@ This is the primary color palette of the login screens. Click the color swatch a
       <td>Primary Color</td>
       <td>
          <p>The color that appears dominantly in primary actions, anchor tags, etc.</p>
-         <p>By default, Asgardeo uses an orange shade as the primary color for both <b>Light</b> & <b>Dark</b> themes</p>
+         <p>By default, Asgardeo uses an orange shade as the primary color for both <b>Light</b> and <b>Dark</b> themes</p>
       </td>
    </tr>
    <tr>
