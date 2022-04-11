@@ -95,13 +95,13 @@ Listed below are general branding preferences you can apply to the user registra
 
 Listed below are the design changes you can apply to the user registration and login interfaces.
 
-#### Theme Variations
+#### Theme variations
 
 Select from either **Dark** or **Light** theme variations to modify the styling of your login screens. You can start from these predefined theme variations and work your way through customizing the colors, images, etc.
 
 Asgardeo uses the **Light** theme by default.
 
-#### Theme Preferences
+#### Theme preferences
 
 The following design preferences apply to the theme you select. You can configure and save separate design preferences for each of the themes.
 
@@ -221,7 +221,7 @@ Decide how you want the footer to look in the login screens by modifying the fol
 
 Use one of the following options to override the default font for the theme you selected.
 
-##### Use a web-safe font
+##### Use a web safe font
 
 <table>
    <tr>
@@ -231,7 +231,7 @@ Use one of the following options to override the default font for the theme you 
    <tr>
       <td>Font Family</td>
       <td>
-         <p>The list of available web-safe fonts to select from.</p>
+         <p>The list of available web safe fonts to select from.</p>
          <p>By default, Asgardeo uses Montserrat the font family.</p>
       </td>
    </tr>
