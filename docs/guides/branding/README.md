@@ -403,7 +403,7 @@ These preferences change how the login box appears on the screens.
    <tr>
       <td>Border Radius</td>
       <td>
-         <p>This is the border radius of the login box.</p>
+         <p>This is the border-radius of the login box.</p>
          <p>By default, Asgardeo uses <code>12 pixels</code> as the border-radius for the login box.</p>
       </td>
    </tr>
