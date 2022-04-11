@@ -397,7 +397,7 @@ These preferences change how the login box appears on the screens.
       <td>Border Width</td>
       <td>
          <p>This is the border width of the login box.</p>
-         <p>By default, Asgardeo uses 1 pixel as the border width for the login box.</p>
+         <p>By default, Asgardeo uses <b>one</b> pixel as the border width for the login box.</p>
       </td>
    </tr>
    <tr>
