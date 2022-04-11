@@ -443,7 +443,7 @@ These preferences change how the input fields, checkboxes, etc, look on the logi
    <tr>
       <td>Border Width</td>
       <td>
-         <p>This is the border radius of the inputs in the login screens.</p>
+         <p>This is the border radius of the inputs on the login screens.</p>
          <p>By default, Asgardeo uses <code>4 pixels</code> as the border radius for the login box.</p>
       </td>
    </tr>
