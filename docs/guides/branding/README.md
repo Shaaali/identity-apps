@@ -422,7 +422,7 @@ These preferences change the look and feel of input fields, checkboxes, etc. on 
    <tr>
       <td>Background Color</td>
       <td>
-         <p>This is the background color of the inputs in the login screens.</p>
+         <p>This is the background color of the inputs on the login screens.</p>
          <p>By default, Asgardeo uses white as the background color for the inputs.</p>
       </td>
    </tr>
