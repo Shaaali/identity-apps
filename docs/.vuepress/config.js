@@ -303,12 +303,7 @@ module.exports = config({
                     title: 'Branding',
                     prefix: 'branding/',
                     path: 'branding/',
-                    sidebarDepth: 2,
-                    children: [
-                        ['general-preferences.md', 'General Preferences'],
-                        ['design-preferences.md', 'Design Preferences'],
-                        ['advanced-preferences.md', 'Advanced Preferences']
-                    ]
+                    sidebarDepth: 2
                 },
                 {
                     title: 'User Management',
