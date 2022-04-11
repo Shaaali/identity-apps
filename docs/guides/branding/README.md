@@ -451,7 +451,7 @@ These preferences change the look and feel of input fields, checkboxes, etc. on 
       <td>Border Radius</td>
       <td>
          <p>This is the border radius of the login box.</p>
-         <p>By default, Asgardeo uses <code>12 pixels</code> as the border-radius for the login box.</p>
+         <p>By default, Asgardeo uses <b>12</b> pixels as the border-radius for the login box.</p>
       </td>
    </tr>
 </table>
