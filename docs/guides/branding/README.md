@@ -178,7 +178,7 @@ These are the basic design preferences you can update for login screens.
       <td>Background Color</td>
       <td>
          <p>This is the main background color that appears on the login screens.</p>
-         <p>By default, Asgardeo uses a gray shade as the page background color.</p>
+         <p>By default, Asgardeo uses a gray shade as the page's background color.</p>
       </td>
    </tr>
    <tr>
