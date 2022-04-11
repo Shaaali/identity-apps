@@ -436,7 +436,7 @@ These preferences change how the input fields, checkboxes, etc, look on the logi
    <tr>
       <td>Border Color</td>
       <td>
-         <p>This is the border color of the inputs in the login screens.</p>
+         <p>This is the border color of the inputs on the login screens.</p>
          <p>By default, Asgardeo uses a lighter gray shade as the border color of the inputs.</p>
       </td>
    </tr>
