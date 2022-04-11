@@ -255,7 +255,7 @@ Use one of the following options to override the default font for the theme you 
       <td>Font Family</td>
       <td>
          <p>This is the font family corresponding to the font imported using the URL  (specified in the <b>Font Import URL</b> field).</p>
-         <p>E.g., <code>'Poppins', sans-serif</code></p>
+         <p>E.g., <code>Poppins</code>, <code>Sans-serif</code></p>
       </td>
    </tr>
 </table>
