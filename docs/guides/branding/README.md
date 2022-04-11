@@ -466,7 +466,7 @@ These preferences change how the input fields, checkboxes, etc, look on the logi
    <tr>
       <td>Font Color</td>
       <td>
-         <p>This is the font color of the input labels in the login screens.</p>
+         <p>This is the font color of the input labels on the login screens.</p>
          <p>By default, the page font color will be used until a value for this is defined.</p>
       </td>
    </tr>
