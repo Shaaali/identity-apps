@@ -343,7 +343,7 @@ These preferences change the look and feel of buttons used for linking external 
       <td>Background Color</td>
       <td>
          <p>This is the background color for external-connection buttons.</p>
-         <p>By default, Asgardeo uses a light gray shade as the font color for external connection buttons.</p>
+         <p>By default, Asgardeo uses a light gray shade as the font color for external-connection buttons.</p>
       </td>
    </tr>
    <tr>
