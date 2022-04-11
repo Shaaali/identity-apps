@@ -356,7 +356,7 @@ These preferences change the look and feel of buttons used for linking external 
    <tr>
       <td>Border Radius</td>
       <td>
-         <p>This is the border radius of the external connection buttons.</p>
+         <p>This is the border radius of the external-connection buttons.</p>
          <p>By default, Asgardeo uses <b>four</b> pixels as the border-radius for external-connection buttons.</p>
       </td>
    </tr>
