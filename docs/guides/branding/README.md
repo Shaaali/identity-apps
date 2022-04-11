@@ -412,7 +412,7 @@ These preferences change how the login box appears on the screens.
 
 ::: details Inputs
 
-These preferences change how the input fields, checkboxes, etc, look on the login screens.
+These preferences change the look and feel of input fields, checkboxes, etc. on the login screens.
 
 <table>
    <tr>
