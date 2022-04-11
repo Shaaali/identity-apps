@@ -231,7 +231,7 @@ Use one of the following options to override the default font for the theme you 
    <tr>
       <td>Font Family</td>
       <td>
-         <p>The list of available web safe fonts to select from.</p>
+         <p>The list of available web-safe fonts to select from.</p>
          <p>By default, Asgardeo uses Montserrat the font family.</p>
       </td>
    </tr>
