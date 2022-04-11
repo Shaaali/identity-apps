@@ -185,7 +185,7 @@ These are the basic design preferences you can update for login screens.
       <td>Font Color</td>
       <td>
          <p>The font color of the text that appears on the pages.</p>
-         <p>By default, Asgardeo uses black as the page font color.</p>
+         <p>By default, Asgardeo uses black as the font color.</p>
       </td>
    </tr>
 </table>
