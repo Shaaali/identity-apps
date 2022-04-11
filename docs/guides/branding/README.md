@@ -204,7 +204,7 @@ Decide how you want the footer to look in the login screens by modifying the fol
       <td>Border Color</td>
       <td>
          <p>The color of the top border of the footer that appears on the login screens.</p>
-         <p>By default, Asgardeo uses a gray shade as the footer border color.</p>
+         <p>By default, Asgardeo uses a gray shade as the footer's border color.</p>
       </td>
    </tr>
    <tr>
