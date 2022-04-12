@@ -29,7 +29,7 @@ Follow the steps given below to configure the branding preferences for your orga
    -   The real-time preview will show you a sample view as you update the values.
    :::
 
-3. Before you save your updates, check the **Publish Changes** toggle.
+3. Before you save your updates, check the **Go Live** toggle.
 
    ::: info Important
    If the toggle is already switched on, the changes you save are immediately published to your application flows.
@@ -39,7 +39,7 @@ Follow the steps given below to configure the branding preferences for your orga
 
 ## Publish your branding
 
-Once you are ready with your branding updates, use the **Publish Changes** toggle to go live with your updates. 
+Once you are ready with your branding updates, use the **Go Live** toggle to go live with your updates. 
 
 Note that all subsequent branding changes that you save are immediately published if this toggle is switched on. 
 
@@ -95,6 +95,20 @@ Listed below are general branding preferences you can apply to the user registra
 
 Listed below are the design changes you can apply to the user registration and login interfaces.
 
+#### Theme variations
+
+Select from either **Dark** or **Light** theme variations to modify the styling of your login screens. You can start from these predefined theme variations and work your way through customizing the colors, images, etc.
+
+Asgardeo uses the **Light** theme by default.
+
+#### Theme preferences
+
+The following design preferences apply to the theme you select. You can configure and save separate design preferences for each of the themes.
+
+::: details Images
+
+You can configure the logo and favicon for the theme you selected.
+
 <table>
    <tr>
       <th>Branding Preference</th>
@@ -119,14 +133,345 @@ Listed below are the design changes you can apply to the user registration and l
          <p>Use an image with a square aspect ratio that’s at least 16x16 pixels in size for better results.</p>
       </td>
    </tr>
+</table>
+
+::: info Important
+Be sure that the hosted image you use will properly return Content-Type headers. Without these headers, the image will not correctly render and you will experience a 403 error. You can use static image hosting services to ensure these headers are properly returned.
+:::
+
+::: details Color Palette
+
+This is the primary color palette of the login screens. Click the color swatch and apply colors that match your organization’s style guide.
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
    <tr>
       <td>Primary Color</td>
       <td>
-         <p>You can update the main color that appears dominantly in primary actions, anchor tags, etc.</p>
-         <p>By default, Asgardeo uses an orange shade as the primary color. You can change this to match your organization’s style guide by entering a hex color code or by clicking the color swatch and picking a color.</p>
+         <p>The color that appears dominantly in primary actions, anchor tags, etc.</p>
+         <p>By default, Asgardeo uses an orange shade as the primary color for both <b>Light</b> and <b>Dark</b> themes</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Secondary Color</td>
+      <td>
+         <p>The color that appears in secondary actions and other emphasized content.</p>
+         <p>By default, Asgardeo uses a lighter gray shade as the secondary color.</p>
       </td>
    </tr>
 </table>
+:::
+
+::: details Page
+
+These are the basic design preferences you can update for login screens.
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Background Color</td>
+      <td>
+         <p>This is the main background color that appears on the login screens.</p>
+         <p>By default, Asgardeo uses a gray shade as the page's background color.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>The font color of the text that appears on the pages.</p>
+         <p>By default, Asgardeo uses black as the font color.</p>
+      </td>
+   </tr>
+</table>
+:::
+
+::: details Footer
+
+Decide how you want the footer to look in the login screens by modifying the following attributes:
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Border Color</td>
+      <td>
+         <p>The color of the top border of the footer that appears on the login screens.</p>
+         <p>By default, Asgardeo uses a gray shade as the footer's border color.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>The font color of the texts and links that appear on the footer.</p>
+         <p>By default, the page font color will be used until a value for this is defined.</p>
+      </td>
+   </tr>
+</table>
+:::
+
+::: details Font
+
+Use one of the following options to override the default font for the theme you selected.
+
+##### Use a web-safe font
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Font Family</td>
+      <td>
+         <p>The list of available web-safe fonts to select from.</p>
+         <p>By default, Asgardeo uses Montserrat as the font family.</p>
+      </td>
+   </tr>
+</table>
+
+##### Import a font
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Font Import URL</td>
+      <td>
+         <p>Get the URL of a hosted font from the font service and add it here.</p>
+         <p>E.g., <code>https://fonts.googleapis.com/css2?family=Poppins&display=swap</code></p>
+      </td>
+   </tr>
+   <tr>
+      <td>Font Family</td>
+      <td>
+         <p>This is the font family corresponding to the font imported using the URL  (specified in the <b>Font Import URL</b> field).</p>
+         <p>E.g., <code>Poppins</code>, <code>Sans-serif</code></p>
+      </td>
+   </tr>
+</table>
+:::
+
+::: details Headings
+
+These preferences decide the look and feel of  `h1`, `h2`, `h3`, `h4`, `h5`, and `h6` elements on the login screens.
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>This is the font color of the headings that appear on the login screens.</p>
+         <p>By default, the page font color will be used until a value for this is defined.</p>
+      </td>
+   </tr>
+</table>
+:::
+
+::: details Buttons
+
+These preferences change the look and feel of buttons that appear on the login screens.
+
+##### Primary Button
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>This is the font color of the text inside the primary action buttons.</p>
+         <p>By default, Asgardeo uses white as the font color for primary buttons.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Radius</td>
+      <td>
+         <p>This is the border radius of the primary action buttons.</p>
+         <p>By default, Asgardeo uses <b>four</b> pixels as the border-radius for primary buttons.</p>
+      </td>
+   </tr>
+</table>
+
+##### Secondary Button
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>This is the font color of the text inside the secondary action buttons.</p>
+         <p>By default, Asgardeo uses a dark gray shade as the font color for secondary buttons.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Radius</td>
+      <td>
+         <p>This is the border radius of the secondary action buttons.</p>
+         <p>By default, Asgardeo uses <b>four</b> pixels as the border-radius for secondary buttons.</p>
+      </td>
+   </tr>
+</table>
+
+##### External Connection Button
+
+These preferences change the look and feel of buttons used for linking external identity providers (Facebook, Google, etc.) from the login screens.
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Background Color</td>
+      <td>
+         <p>This is the background color for external-connection buttons.</p>
+         <p>By default, Asgardeo uses a light gray shade as the font color for external-connection buttons.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>This is the font color of the text inside the external-connection buttons.</p>
+         <p>By default, Asgardeo uses a dark gray shade as the font color for external-connection buttons.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Radius</td>
+      <td>
+         <p>This is the border radius of the external-connection buttons.</p>
+         <p>By default, Asgardeo uses <b>four</b> pixels as the border-radius for external-connection buttons.</p>
+      </td>
+   </tr>
+</table>
+:::
+
+::: details Login Box
+
+These preferences change how the login box appears on the screens.
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Background Color</td>
+      <td>
+         <p>This is the background color of the login box.</p>
+         <p>By default, Asgardeo uses white as the background color for the login box.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>This is the font color of the text inside the login box.</p>
+         <p>By default, the page font color will be used until a value for this is defined.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Radius</td>
+      <td>
+         <p>This is the border color of the login box.</p>
+         <p>By default, Asgardeo doesn’t have a border color for the login box.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Width</td>
+      <td>
+         <p>This is the border width of the login box.</p>
+         <p>By default, Asgardeo uses <b>one</b> pixel as the border width for the login box.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Radius</td>
+      <td>
+         <p>This is the border-radius of the login box.</p>
+         <p>By default, Asgardeo uses <code>12</code> pixels as the border-radius for the login box.</p>
+      </td>
+   </tr>
+</table>
+:::
+
+::: details Inputs
+
+These preferences change the look and feel of input fields, checkboxes, etc. on the login screens.
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Background Color</td>
+      <td>
+         <p>This is the background color of the inputs on the login screens.</p>
+         <p>By default, Asgardeo uses white as the background color for the inputs.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>This is the font color of the inputs on the login screens.</p>
+         <p>By default, the page font color will be used until a value for this is defined.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Color</td>
+      <td>
+         <p>This is the border color of the inputs on the login screens.</p>
+         <p>By default, Asgardeo uses a lighter gray shade as the border color of the inputs.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Width</td>
+      <td>
+         <p>This is the border radius of the inputs on the login screens.</p>
+         <p>By default, Asgardeo uses <code>four</code> pixels as the border-radius for the login box.</p>
+      </td>
+   </tr>
+   <tr>
+      <td>Border Radius</td>
+      <td>
+         <p>This is the border radius of the login box.</p>
+         <p>By default, Asgardeo uses <b>12</b> pixels as the border-radius for the login box.</p>
+      </td>
+   </tr>
+</table>
+
+##### Input Labels
+
+<table>
+   <tr>
+      <th>Branding Preference</th>
+      <th>Description</th>
+   </tr>
+   <tr>
+      <td>Font Color</td>
+      <td>
+         <p>This is the font color of the input labels on the login screens.</p>
+         <p>By default, the page font color will be used until a value for this is defined.</p>
+      </td>
+   </tr>
+</table>
+:::
 
 ### Advanced preferences
 
