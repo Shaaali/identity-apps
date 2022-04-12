@@ -41,14 +41,14 @@ Click the **Download sample** button to download the sample. You can also choose
 Change the `asgardeo-angular-app/src/config.json` file with the relevant values.
 
 - **clientID** - Add the client id of the registered application. Refer <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain client ID</a> from the Asgardeo console.
-- **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
+- **baseUrl** - `https://api.asgardeo.io/t/<organization_name>`
 - **scope** - The list of OIDC scopes that are used for requesting user information. The ``openid`` scope is mandatory to get the ID token. You can add other OIDC scopes such as ``profile`` and ``email``.
 .
 
 ``` json{2,3,6} no-line-numbers
 {
     "clientID": "<client ID>",
-    "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
+    "baseUrl": "https://api.asgardeo.io/t/<organization_name>",
     "signInRedirectURL": "https://localhost:3000",
     "signOutRedirectURL": "https://localhost:3000",
     "scope": [ "profile" ]

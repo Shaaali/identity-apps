@@ -48,7 +48,7 @@ Provide the following values to the `forRoot()` function of `AsgardeoAuthModule`
     <td>This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.</td>
   </tr>
   <tr>
-    <td><code>serverOrigin</code></td>
+    <td><code>baseUrl</code></td>
     <td>This is the Asgardeo server's host name along with your organization name.</td>
   </tr>
   <tr>
@@ -85,7 +85,7 @@ import { AsgardeoAuthModule } from "@asgardeo/auth-angular";
             signInRedirectURL: "https://localhost:4200",
             signOutRedirectURL: "https://localhost:4200",
             clientID: "<Client ID>",
-            serverOrigin: "https://dev.api.asgardeo.io/t/<organization_name>",
+            baseUrl: "https://dev.api.asgardeo.io/t/<organization_name>",
             scope: [ "openid","profile" ]
         })
     ],

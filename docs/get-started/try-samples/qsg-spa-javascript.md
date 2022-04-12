@@ -41,14 +41,14 @@ Click the **Download sample** button to download the sample. You can also choose
 1. Open the `index.html` file located at the root of the project 
 2. Scroll down to the `<script>` tag at the end of the body tag and find `authConfig` object and change the configurations with the relevant values.
   - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain the client ID</a> from the Asgardeo console.
-  - **serverOrigin** - `https://api.asgardeo.io/t/<organization_name>`
+  - **baseUrl** - `https://api.asgardeo.io/t/<organization_name>`
   - **scope** - The list of OIDC scopes that are used for requesting user information. The ``openid`` scope is mandatory to get the ID token. You can add other OIDC scopes such as ``profile`` and ``email``.
 
     ``` HTML{2,4,5} no-line-numbers
     const authConfig = {
         clientID: "<client ID>",
         signInRedirectURL: "https://localhost:3000",
-        serverOrigin: "https://api.asgardeo.io/t/<organization_name>",
+        baseUrl: "https://api.asgardeo.io/t/<organization_name>",
         scope: [ "profile" ]
     };
     ```

@@ -44,7 +44,7 @@ import { AuthProvider } from "@asgardeo/auth-react";
     <td>This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.</td>
   </tr>
   <tr>
-    <td><code>serverOrigin</code></td>
+    <td><code>baseUrl</code></td>
     <td>This is the Asgardeo server's host name along with your organization name.</td>
   </tr>
   <tr>
@@ -74,7 +74,7 @@ const Index = () => (
             signInRedirectURL: "http://localhost:3000",
             signOutRedirectURL: "http://localhost:3000",
             clientID: "<Client_ID>",
-            serverOrigin: "https://dev.api.asgardeo.io/t/<Organization_name>",
+            baseUrl: "https://dev.api.asgardeo.io/t/<Organization_name>",
             scope: [ "openid","profile" ]
         } }
     >
