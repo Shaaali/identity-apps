@@ -75,8 +75,8 @@ var auth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 
 // Once instantiated, the  client can be initialized by passing the relevant parameters such as the server origin, redirect URL, client ID, etc.
 auth.initialize({
-   signInRedirectURL: "https://localhost:5000",
-   signOutRedirectURL: "https://localhost:5000",
+   signInRedirectURL: "https://localhost:3000",
+   signOutRedirectURL: "https://localhost:3000",
    clientID: "<clientId>",
    serverOrigin: "https://api.asgardeo.io/t/<organization_name>",
    scope: [ "openid","profile" ]

@@ -47,7 +47,7 @@ Click the **Download sample** button to download the sample. You can also choose
     ``` HTML{2,4,5} no-line-numbers
     const authConfig = {
         clientID: "<client ID>",
-        signInRedirectURL: "https://localhost:5000",
+        signInRedirectURL: "https://localhost:3000",
         serverOrigin: "https://api.asgardeo.io/t/<organization_name>",
         scope: [ "profile" ]
     };
@@ -55,7 +55,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 ## Run the sample
 
-Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:5000`. 
+Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:3000`. 
 
 ```bash no-line-numbers
 npm install && npm start
