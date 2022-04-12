@@ -1,6 +1,6 @@
-# Self-service portal for customers
+# Self-service portal for users
 
-<a :href="$withBase('/guides/users/manage-customers/')">Customers</a> in your organization can access their self-service portal (**My Account**). The customer can use this portal to manage one's account details and interactions with the organization. See the complete list of <a :href="$withBase('/guides/user-self-service/')">self-service capabilities</a>.
+<a :href="$withBase('/guides/users/manage-customers/')">Users</a> in your organization can access their self-service portal (**My Account**). The user can use this portal to manage one's account details and interactions with the organization. See the complete list of <a :href="$withBase('/guides/user-self-service/')">self-service capabilities</a>.
 
 The format of the **My Account** portal URL is as follows:
 

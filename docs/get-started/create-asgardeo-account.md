@@ -38,23 +38,23 @@ See the <a :href="$withBase('/guides/')">guides</a> to learn more.
 
 ## Create a user
 
-Let's start by adding the first customer to your organization.
+Let's start by adding the first user to your organization.
 
 1. On the Asgardeo console, click **Manage > Users**.
-2. Click **New User** and select **Customer**.
+2. Click **New User**.
 3. Fill in the user's details.
     <img :src="$withBase('/assets/img/guides/get-started/create-customer-account.png')" alt="customer-account-create-ui">
 4. Select **Set a temporary password for the user** and enter a temporary password for the user. The user will be able to change the password later.
 
 6. Click **Next** and **Finish**.
 
-You can now manage this customer account from the Asgardeo console. The customer can also self-manage the user account. Learn more about <a :href="$withBase('/guides/user-self-service/')">user self-service</a>.
+You can now manage this user account from the Asgardeo console. The user can also self-manage the account. Learn more about <a :href="$withBase('/guides/user-self-service/')">user self-service</a>.
 
-This customer can start using the applications you register in this organization.
+This user can start using the applications you register in this organization.
 
 ## What's next?
 
-Now that you've set up your own organization and created your first customer, you can:
+Now that you've set up your own organization and created your first user, you can:
 
 1. <a :href="$withBase('/guides/applications/')">Register your applications with asgardeo</a>
 2. <a :href="$withBase('/get-started/start-integrating-apps/')">Start integrating your apps</a>
