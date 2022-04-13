@@ -20,7 +20,8 @@ sleep 5
 
 # Some services like `https://docs.github.com` or `https://api.github.com` require a valid user-agent header.
 # The deafult user agent header set by the `broken link checker` lib doesn't seem to work in some cases.
-USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
+# See https://stackoverflow.com/a/39912696
+USER_AGENT="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
 
 # https://www.npmjs.com/package/broken-link-checker
 if blc --input http://localhost:$PORT/asgardeo/docs/  --user-agent=$USER_AGENT -grf; then
