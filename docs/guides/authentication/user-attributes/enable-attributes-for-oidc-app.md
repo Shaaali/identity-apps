@@ -30,7 +30,7 @@ When the user logs in to the app, a request is sent to Asgardeo with the relevan
 Scopes determine which user attributes the application has the privilege to access. A client application can only access user attributes that are bound by the requested scopes.
 
 ::: info
-Learn more about <a :href="$withBase('/guides/users/attributes/manage-scopesXXX')">managing scopes</a> in Asgardeo.
+Learn more about <a :href="$withBase('/guides/users/attributes/manage-scopes')">managing scopes</a> in Asgardeo.
 :::
 
 ### Asgardeo checks for mandatory attributes
