@@ -38,15 +38,15 @@ To update the properties of a user attribute:
          </tr>
        <tr>
              <td><b>Display this attribute on the user's profile</b></td>
-             <td>If this checkbox is selected, the attribute is displayed in user profiles.</td>
+             <td>If this checkbox is selected, the attribute is displayed in customer user profiles.</td>
         </tr>
         <tr>
             <td><b>Make this attribute required on user's profile</b></td>
-            <td>If this checkbox is selected, users are required to specify a value for this attribute on their profile.</td>
+            <td>If this checkbox is selected, customers are required to specify a value for this attribute on their profile.</td>
         </tr>
         <tr>
            <td><b>Make this attribute read-only on user's profile</b></td>
-           <td>If this checkbox is selected, the user information displayed using this attribute will be read-only in user profiles.</td>
+           <td>If this checkbox is selected, the user information displayed using this attribute will be read-only in customer user profiles.</td>
       </tr>
       </tbody>
    </table>
