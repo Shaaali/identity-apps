@@ -3,9 +3,9 @@
 Asgardeo uses [reCAPTCHA](https://developers.google.com/recaptcha/) to detect bots that attempt unauthorized login or other types of internet abuse. This is a free service provided by Google that verifies whether a user is a human or a robot. It comes in the form of a widget.
 
 When bot detection is enabled, Asgardeo enforces reCAPTCHA validation in the following scenarios:
-- User login
-- User password recovery
-- User self registration
+- Customer login
+- Customer password recovery
+- Customer self registration
 
 ::: info
 This feature is enabled by default for all the organizations in Asgardeo. You will not be able to disable this for your organization at present.

@@ -1,6 +1,6 @@
-# Self-service for owners and administrators
+# Self-service for owners and collaborators
 
-If you are an owner or an administrator in an Asgardeo organization, go to the [My Account portal](https://myaccount.asgardeo.io) to easily access and self-manage your information from anywhere.
+If you are an owner or a collaborator in an Asgardeo organization, go to the [My Account portal](https://myaccount.asgardeo.io) to easily access and self-manage your information from anywhere.
 
 You can perform the following activities on this portal:
 - Update profile information

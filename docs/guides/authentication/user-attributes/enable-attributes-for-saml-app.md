@@ -1,6 +1,6 @@
 # Enable user attributes for SAML apps
 
-Asgardeo can share user attributes in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user's profile</a> with the applications. This guide walks you through the steps for sharing user attributes with SAML applications. 
+Asgardeo can share user attributes in the customer's <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with SAML applications.
 
 ## Prerequisite
 
@@ -54,7 +54,7 @@ To define a different attribute as the subject:
 
 Let's see how this flow works in Asgardeo.
 
-Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a user tries to log in to your app.
+Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a customer tries to log in to your app.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 

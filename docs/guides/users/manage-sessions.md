@@ -10,7 +10,7 @@ Asgardeo maintains user sessions based on session cookies. Active sessions in As
  
 Active sessions can be terminated explicitly by using the session management APIs as well.
 
-An administrator or an owner can view and terminate the active session(s) of users via the Asgardeo console.
+An administrator (owner/collaborator) can view and terminate the active session(s) of users via the Asgardeo console.
 
 ## View active sessions of users
 

@@ -1,6 +1,6 @@
 # Account Management
 
-This section explains how owners can create multiple organizations in the Asgardeo console, switch between them, manage user attributes, perform account recovery, provide users with self-service capabilities, and mitigate risks via configuring security measures for user accounts. 
+This section explains how owners can create multiple organizations in the Asgardeo console, switch between them, manage user attributes, perform account recovery, provide customers with self-service capabilities, and mitigate risks via configuring security measures for user accounts. 
 
 -   Organization owners can manage the resources within their organizations. 
 
@@ -10,11 +10,11 @@ This section explains how owners can create multiple organizations in the Asgard
 
     See <a :href="$withBase('/guides/users/attributes/')">Manage user attributes</a> for instructions.
 
--   In Asgardeo, accounts can be recovered by administrators or by the users themselves. Users can recover their forgotten passwords using the self-service passwords recovery option. 
+-   In Asgardeo, accounts can be recovered by administrators or by the users themselves. Customers can recover their forgotten passwords using the self-service passwords recovery option. 
     
     See <a :href="$withBase('/guides/user-accounts/password-recovery/')">Configure password recovery</a> for instructions.
 
--   Users can self-register to an organization in Asgardeo via an application’s login page.
+-   Customers can self-register to an organization in Asgardeo via an application’s login page.
     
     See <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">Configure self-registration</a> for instructions.
 

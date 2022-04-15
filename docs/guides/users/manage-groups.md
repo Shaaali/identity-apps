@@ -5,7 +5,7 @@ A group is a collection of users who have the same privileges to access resource
 One user can be assigned to any number of groups. Applications can get details about groups a user belongs to in the authentication response (e.g., ID token) from Asgardeo as a user attribute.                                                          
 
 ::: info
-Only <a :href="$withBase('/guides/users/manage-customers/')">users</a> can be assigned to a group.
+Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> can be assigned to a group.
 :::
 
 For example, you can create the following user groups: `Admin`, `Manager`, and `Developer`. When one user group is granted access to a resource, it applies to all users in the group.
@@ -18,12 +18,12 @@ To create a new group:
 2. Click **New Group**.
 3. Provide the following details.
     - **Group Name:** A unique name to identify the group.   
-    - **Add Users:** If you already have existing users, you can search and add them.
+    - **Add Users:** If you already have existing customers, you can search and add them.
     <img :src="$withBase('/assets/img/guides/groups/create-new-group-form.png')" alt="create-new-group-form" width="500">
 4. Click **Finish**.
 
 ## Assign users to groups
-Users can be assigned to groups. Admins can restrict access to resources based on the groups.
+Customers can be assigned to groups. Admins can restrict access to resources based on the groups.
 
 To assign users to groups:
 1. On the Asgardeo console, click **Manage > Groups**.
@@ -35,7 +35,7 @@ To assign users to groups:
 6. Click **Save**.
 
 ## Remove users from groups
-<a :href="$withBase('/guides/users/manage-customers/')">Users</a> can be removed from the assigned groups by administrators.
+<a :href="$withBase('/guides/users/manage-customers/')">Customer</a> users can be removed from the assigned groups by admins.
 
 To remove users from groups:
 1. On the Asgardeo console, click **Manage > Groups**.
@@ -47,7 +47,9 @@ To remove users from groups:
 6. Click **Save**.
 
 ## Delete a group
-An administrator can delete groups via the [Asgardeo console](https://console.asgardeo.io). 
+
+An admin can delete groups via the [Asgardeo console](https://console.asgardeo.io).
+
 To delete a group:
 1. On the Asgardeo console, click **Manage > Groups**.
 2. Click the trash icon next to the group you wish to delete.
