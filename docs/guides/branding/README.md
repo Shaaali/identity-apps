@@ -1,6 +1,6 @@
 # Branding your organization
 
-You can customize the user interfaces presented to your users at login, sign-up, and account recovery flows according to the theming guidelines of your organization.
+You can customize the user interfaces presented to your users during the login, sign-up, and account recovery flows according to the theming guidelines of your organization.
 
 By branding these interfaces, your users will get a familiar and consistent user experience.
 
@@ -49,9 +49,9 @@ For free-tier subscriptions, the **Powered by Asgardeo** label will display on t
 
 ## Disable your branding
 
-You can temporarily disable your branding preferences by switching off the **Publish Changes** toggle. Your branding updates will still be saved and you can choose to publish them again later.
+You can temporarily disable your branding preferences by switching off the **Go Live** toggle. Your branding updates will still be saved and you can choose to publish them again later.
 
-When disabled, Asgardeo’s default branding will apply to the interfaces in your application login, user registration, and account recovery flows.
+When disabled, Asgardeo’s default branding will apply to the interfaces in your application's login, user registration, and account recovery flows.
 
 ## Revert your branding
 
@@ -67,7 +67,7 @@ Listed below are the branding preferences that you can customize using the Asgar
 
 ### General preferences
 
-Listed below are general branding preferences you can apply to the user registration and login interfaces.
+Listed below are general branding preferences you can apply to the interfaces.
 
 <table>
    <tr>
