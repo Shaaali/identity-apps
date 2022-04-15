@@ -6,7 +6,7 @@ In Asgardeo, you can either display a screen to request consent for user attribu
 
 ## Get consent for user attributes
 
-Once the user is logged in, Asgardeo requests consent to share the user's attributes with the application. 
+Once the user is logged in, Asgardeo requests consent to share the user's attributes with the application.
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
 
@@ -14,13 +14,13 @@ If the application requires **mandatory** attributes for which values are not sp
 
 The user can do one of the following during login:
 
--  Select specific user attributes and click **Allow**. 
-    
-    This will share only the selected user attributes with the application. However, note that the user cannot unselect the mandatory user attributes.
-    
--  If the user does not want to share any of the requested user attributes, they can click **Deny**. 
+- Select specific user attributes and click **Allow**.
 
-Asgardeo will not prompt for consent for the allowed attributes again unless a user revokes the provided consent via MyAccount. 
+    This will share only the selected user attributes with the application. However, note that the user cannot unselect the mandatory user attributes.
+
+- If the user does not want to share any of the requested user attributes, they can click **Deny**.
+
+Asgardeo will not prompt for consent for the allowed attributes again unless a user revokes the provided consent via MyAccount.
 
 ## Disable the consent screen
 

@@ -1,8 +1,8 @@
 # Revoke tokens
 
-OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc7009) to revoke any access granted by them. This token endpoint can revoke **access tokens** and **refresh tokens**. 
+OAuth2.0 supports [token revocation](https://datatracker.ietf.org/doc/html/rfc7009) to revoke any access granted by them. This token endpoint can revoke **access tokens** and **refresh tokens**.
 
-Confidential clients such as web apps can keep the client credentials securely. Those clients need to prove their identity when they access the revocation endpoint to revoke access tokens. 
+Confidential clients such as web apps can keep the client credentials securely. Those clients need to prove their identity when they access the revocation endpoint to revoke access tokens.
 
 Public clients such as SPAs, mobile apps can't store credentials securely. Those apps need to submit only their client ID to identify the apps during token revocation.  
 
@@ -10,7 +10,7 @@ Public clients such as SPAs, mobile apps can't store credentials securely. Those
 ::: info Info
 - Revoking a refresh token via the revocation endpoint will not revoke the respective access token.
 - Revoking an access token via the revocation endpoint will not revoke the respective refresh token.
-::: 
+:::
 
 **Token revocation endpoint**
 
@@ -22,7 +22,7 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/revoke
 
 When your application is a confidential client, it needs to identify itself to the token endpoint by submitting the `client_id` as well as the `client_secret`. You can use one of the following methods:
 
-- Use **client_secret_post**: The `client_id` and `client_secret` are both sent as body parameters in the POST message. 
+- Use **client_secret_post**: The `client_id` and `client_secret` are both sent as body parameters in the POST message.
 - Use **client_secret_basic**: The client secret is sent as an authorization header in the request (`'Authorization: Basic BASE64_ENCODE<client_id:client_secret>'`).
 
 Apart from client authentication, the revocation request has some other parameters as well.
@@ -31,7 +31,7 @@ Apart from client authentication, the revocation request has some other paramete
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
    <tr>
       <td><code>token</code><Badge text="Required" type="mandatory"/></td>
@@ -46,7 +46,7 @@ Apart from client authentication, the revocation request has some other paramete
 
 ### Client secret post based authentication
 
-In this method, the app can send the `client_id` and `client_secret` as body params in the revocation request. 
+In this method, the app can send the `client_id` and `client_secret` as body params in the revocation request.
 
 The sample request is given below.
 
@@ -128,7 +128,7 @@ In client secret basic authentication, the application has to do base64 encoding
 
 The authorization header should look as follows:
 
-`Basic BASE46_ENCODING<your_client_id:your_client_secret>`   
+`Basic BASE46_ENCODING<your_client_id:your_client_secret>`
 
 :::tip Tips
 To perform base64 encoding for the client ID and secret, you can use a tool, or you can run the below command.
@@ -138,7 +138,7 @@ echo -n '<your_client_id:your_client_secret>' | base64
 
 :::
 
-**Sample request** 
+**Sample request**
 
 <CodeGroupItem title="cURL" active>
 ```
@@ -233,7 +233,7 @@ This token revocation request for public clients takes the following parameters:
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
    <tr>
       <td><code>token</code><Badge text="Required" type="mandatory"/></td>

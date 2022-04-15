@@ -1,6 +1,6 @@
 # Validate ID tokens
 
-The ID token is a security token that is sent by Asgardeo to the application when a token is requested with OpenID scopes. This ID token contains information about the authenticated user. 
+The ID token is a security token that is sent by Asgardeo to the application when a token is requested with OpenID scopes. This ID token contains information about the authenticated user.
 
 **Sample ID token**
 

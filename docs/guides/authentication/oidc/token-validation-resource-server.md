@@ -1,9 +1,11 @@
 # Token validation by resource servers
 
-A resource server is responsible for protecting resources such as APIs via OAuth2 access tokens. Access tokens are intended for authorizing the access of a resource. 
-The resource server should be able to verify the access token sent by the application. If the application sends a <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#access-token')">self-contained JWT access token</a>, then the resource server can validate the access token without interacting with the authorization server. OAuth2.0 supports [token introspection](https://datatracker.ietf.org/doc/html/rfc7662) to inspect the **access tokens** and **refresh tokens** using authorization servers. 
+A resource server is responsible for protecting resources such as APIs via OAuth2 access tokens. Access tokens are intended for authorizing the access of a resource.
+The resource server should be able to verify the access token sent by the application. If the application sends a <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#access-token')">self-contained JWT access token</a>, then the resource server can validate the access token without interacting with the authorization server.
+OAuth2.0 supports [token introspection](https://datatracker.ietf.org/doc/html/rfc7662) to inspect the **access tokens** and **refresh tokens** using authorization servers.
 
-Asgardeo provides the `/oauth2/introspect` endpoint to perform token validation. A resource server can inspect tokens using Asgardeo and know the information related to the tokens. On Asgardeo, the resource server has to use client secret basic authentication to authenticate with the token introspection endpoint. You have to send it as the authorization header in the request: `Authorization: Basic BASE46_ENCODING<client_id:client_secret>`
+Asgardeo provides the `/oauth2/introspect` endpoint to perform token validation. A resource server can inspect tokens using Asgardeo and know the information related to the tokens. On Asgardeo, the resource server has to use client secret basic authentication to authenticate with the token introspection endpoint.
+You have to send it as the authorization header in the request: `Authorization: Basic BASE46_ENCODING<client_id:client_secret>`
 
 **Token introspection endpoint**
 
@@ -14,9 +16,9 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/introspect
 ::: tip Tips
  To perform base64 encoding for the client ID and client secret, you can use a tool, or you can run the below command.
 
- `
- echo -n '<client_id:client_secret>' | base64
- ` 
+`
+echo -n '<client_id:client_secret>' | base64
+`
 :::
 
 **Request format**
@@ -40,7 +42,7 @@ curl --location --request POST 'https://api.asgardeo.io/t/{organization}/oauth2/
 ```
 </CodeGroupItem>
 
-This introspection request takes the following parameters: 
+This introspection request takes the following parameters:
 
 ::: info
  See the [OAuth2.0 introspection request](https://datatracker.ietf.org/doc/html/rfc7662#section-2.1) for details.
@@ -49,7 +51,7 @@ This introspection request takes the following parameters:
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
   <tr>
     <td><code>token</code><Badge text="Required" type="mandatory"/></td>

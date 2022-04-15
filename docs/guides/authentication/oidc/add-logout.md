@@ -25,7 +25,7 @@ The logout request has the following parameters:
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
   <tr>
     <td><code>id_token_hint</code><Badge text="Recommended" type="recommended"/></td>
@@ -33,7 +33,10 @@ The logout request has the following parameters:
   </tr>
   <tr>
     <td><code>post_logout_redirect_uri</code><Badge text="Optional" type="optional"/></td>
-    <td>The URL to be redirected to during user logout. The value defined here should be added as one of the <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">authorized redirect URLs</a>. This should be passed along with the <code>id_token_hint</code>. If the <code>post_logout_redirect_uri</code> parameter is not passed, the user will be routed to Asgardeo's common page after logout.</td>
+    <td>
+    The URL to be redirected to during user logout. The value defined here should be added as one of the <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#authorized-redirect-urls')">authorized redirect URLs</a>. This should be passed along with the <code>id_token_hint</code>.
+    If the <code>post_logout_redirect_uri</code> parameter is not passed, the user will be routed to Asgardeo's common page after logout.
+    </td>
   </tr>
   <tr>
     <td><code>state</code><Badge text="Optional" type="optional"/></td>

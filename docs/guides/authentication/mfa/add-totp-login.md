@@ -12,21 +12,21 @@ TOTP authenticators use the [TOTP specification](https://datatracker.ietf.org/do
 :::
 
 ## Prerequisites
--   To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
-    -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
-    -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
-    -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
--   Download and install one of the authenticator apps mentioned above.
+- To get started, you need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types.
+  - <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+  - <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+  - <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- Download and install one of the authenticator apps mentioned above.
 
 ::: info Info
- - You can use TOTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or another factor that can validate user credentials.
- - TOTP cannot be used as the first step of your login flow.
- - Federated users (users who are authenticated using external IdPs) can log in with TOTP MFA option.
+- You can use TOTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or another factor that can validate user credentials.
+- TOTP cannot be used as the first step of your login flow.
+- Federated users (users who are authenticated using external IdPs) can log in with TOTP MFA option.
 :::
 
 ## Enable TOTP for an app
 
-Follow the steps given below to enable **TOTP** as the second factor in the login flow of your application. 
+Follow the steps given below to enable **TOTP** as the second factor in the login flow of your application.
 
 1. On the Asgardeo console, use one of the following options to start:
     - Option 1: Go to **Develop > Applications**.
@@ -34,25 +34,25 @@ Follow the steps given below to enable **TOTP** as the second factor in the logi
 2. Select the application for which TOTP needs to be added.
 3. Go to the **Sign-in Method** tab and add the TOTP authenticator:
 
-    - If you don't have a customized login flow, you can click **Add TOTP as a second factor**. 
+    - If you don't have a customized login flow, you can click **Add TOTP as a second factor**.
 
       <img :src="$withBase('/assets/img/guides/mfa/totp/add-totp-authenticator.png')" alt="Configuring TOTP authenticator in Asgardeo">
-    
+
       This opens the customized login flow with TOTP as a second-factor authenticator:
-    
+
     - If you have an already customized login flow, you can add a second step and add TOTP as the authenticator.
 
       <img :src="$withBase('/assets/img/guides/mfa/totp/view-totp-authenticator.png')" alt="Customize the login flow">
 
 5. Click **Update** to save your changes.
 
-## Enroll TOTP during first login 
+## Enroll TOTP during first login
 
 Application users can enroll for TOTP notifications when they log in to the business application the first time. Given below are the steps that a user will follow:
 
 1. Download an authenticator app to a mobile device.
 2. Try to log in to the application by providing credentials. The user is prompted with a QR code.
-3. Scan the QR code using the authenticator app, select the checkbox, and click **Continue**. 
+3. Scan the QR code using the authenticator app, select the checkbox, and click **Continue**.
     ::: info
     Note that this step is prompted only when the user attempts to log in for the first time.
     :::

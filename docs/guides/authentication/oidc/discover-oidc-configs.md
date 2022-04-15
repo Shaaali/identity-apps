@@ -8,9 +8,9 @@ You can do this by invoking the discovery endpoint API or by using the Asgardeo 
 
 To get started, you need to have an application registered in Asgardeo:
 
--   Register a <a :href="$withBase('/guides/applications/register-single-page-app/')">single-page app with OIDC</a>.
--   Register a <a :href="$withBase('/guides/applications/register-oidc-web-app/')">web app with OIDC</a>.
- 
+- Register a <a :href="$withBase('/guides/applications/register-single-page-app/')">single-page app with OIDC</a>.
+- Register a <a :href="$withBase('/guides/applications/register-oidc-web-app/')">web app with OIDC</a>.
+
 ## Use the discovery endpoint
 
 [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) allows you to discover the metadata such as endpoints, scopes, response types, claims, and supported client authentication methods of identity providers such as Asgardeo.

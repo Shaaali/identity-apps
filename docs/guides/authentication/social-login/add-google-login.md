@@ -28,7 +28,7 @@ You can follow the [Google documentation](https://support.google.com/googleapi/a
     https://api.asgardeo.io/t/<organization_name>/commonauth
     ```
 8. Get the client ID and client secret generated for the application.
-    
+
 ## Register the Google IdP
 
 Now, let's register the Google IdP in Asgardeo.
@@ -64,19 +64,19 @@ After the Google identity provider is created, go to the **Settings** tab and se
 
 - **email**: Allows to view the user's email address.
 - **openid**: Allows authentication using OpenID Connect and to obtain the ID token.
-- **profile**: Allows to view the user's basic profile data. 
+- **profile**: Allows to view the user's basic profile data.
 
 ::: info
 Asgardeo needs these scopes to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Google to the app. You can read the [Google documentation](https://developers.google.com/identity/protocols/oauth2/openid-connect#scope-param) to learn more.
-::: 
- 
-##  Enable Google login
+:::
+
+## Enable Google login
 ::: info Before you begin
 You need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types:
 
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
 :::
 
 1. On the Asgardeo console, go to **Develop > Applications**.
@@ -88,7 +88,7 @@ You need to have an application registered in Asgardeo. If you don't already hav
 
 ## Try it out
 
-Follow the steps given below. 
+Follow the steps given below.
 
 1. Access the application URL.
 2. Click **Login** to open the Asgardeo login page.
@@ -96,7 +96,7 @@ Follow the steps given below.
 
     <img :src="$withBase('/assets/img/guides/idp/google-idp/sign-in-with-google.png')" alt="Login with Google" width=300>
 
-4. Log in to Google with an existing user account. 
+4. Log in to Google with an existing user account.
 ::: info
 When a user successfully logs in with Google for the first time, a **user** account is created in the Asgardeo console with the Google username. This new user account will be managed by Google.
 :::

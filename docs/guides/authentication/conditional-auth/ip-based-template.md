@@ -17,9 +17,9 @@ Users who log in from the internal network should be allowed to simply log in wi
 
 You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
 
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ## Configure the login flow
 
@@ -28,8 +28,8 @@ You need an application registered in Asgardeo. If you don’t already have one,
 5. Select the **Adaptive MFA > IP-Based** template.
 6. Verify that the login flow is now updated with the following two authentication steps:
 
-    -   Step 1: Username and Password
-    -   Step 2: TOTP
+    - Step 1: Username and Password
+    - Step 2: TOTP
 
 7. Update the following parameter in the script.
 
@@ -122,14 +122,14 @@ var isCorporateIP = function (ip, subnets, i) {
 
 Let's look at how this script works.
 
-1.  The **convertIpToLong** function converts and returns the provided IP address as a long value.
-2.  The **isCorporateIP** function returns whether the user's IP address is in the given range. This method accepts two inputs. The
+1. The **convertIpToLong** function converts and returns the provided IP address as a long value.
+2. The **isCorporateIP** function returns whether the user's IP address is in the given range. This method accepts two inputs. The
 first argument is the IP address that should be validated and the second argument is the allowed IP range.
-3.  When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the IP
-address of the user from the context. 
-4.  This IP address is passed to the _isCorporateIP_ function along with the
+3. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the IP
+address of the user from the context.
+4. This IP address is passed to the _isCorporateIP_ function along with the
 configured IP address range.
-5.  If the IP address of the logged-in user is not in the configured IP range, step 2 of the authentication flow is
+5. If the IP address of the logged-in user is not in the configured IP range, step 2 of the authentication flow is
 executed.
 
 ::: info
