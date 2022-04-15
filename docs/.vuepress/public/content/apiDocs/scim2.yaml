@@ -5,13 +5,6 @@ info:
   description: |
     This is the RESTful API for SCIM 2.0 in WSO2 Asgardeo. 
     This API allows creating, deleting, listing, and updating user and group schemas.
-  contact:
-    name: Asgardeo
-    url: 'https://wso2.com/asgardeo/'
-    email: architecture@wso2.org
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0
 servers:
   - url: 'https://api.asgardeo.io/t/{organization-name}/scim2'
     variables:
@@ -1930,6 +1923,17 @@ components:
     OAuth2:
       type: oauth2
       flows:
+        authorizationCode:
+          authorizationUrl: https://api.asgardeo.io/t/{org-name}/oauth2/authorize
         clientCredentials:
           tokenUrl: https://api.asgardeo.io/t/{org-name}/oauth/token
-          scopes: []
+          scopes:
+            internal_login: 
+            internal_user_mgt_list: Grant permissions to read user records.
+            internal_user_mgt_create: Grant permissions to create new users.
+            internal_user_mgt_update: Grant permissions to update existing users.
+            internal_user_mgt_delete: Grant permissions to delete users.
+            internal_group_mgt_view: Grant permissions to read group records.
+            internal_group_mgt_create: Grant permissions to create new group records.
+            internal_group_mgt_update: Grant permissions to update existing group records.
+            internal_group_mgt_delete: Grant permissions to delete group records.

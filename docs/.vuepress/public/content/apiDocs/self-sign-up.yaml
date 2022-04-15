@@ -1,16 +1,9 @@
 openapi: 3.0.1
 info:
+  version: "v1"
   title: Asgardeo - Self Service API
   description: |
     This API is used for accessing the self service capabilities for application users in Asgardeo.
-  contact:
-    name: WSO2
-    url: https://wso2.com/asgardeo/
-    email: architecture@wso2.org
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.0
 servers:
 - url: https://api.asgardeo.io/t/{organization_name}/api/identity/user/v1.0
 paths:
@@ -397,7 +390,7 @@ paths:
       - User Export
       summary: Search user ID by username
       description: Returns the user ID of the given username. This ID can be used
-        with the /pi-info endpoint.
+        with the ``/pi-info`` endpoint.
       operationId: searchUserByName
       parameters:
       - name: username
@@ -881,3 +874,11 @@ components:
         newUsername:
           type: string
           description: Expected new username of the User.
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.asgardeo.io/t/{org-name}/oauth/token
+          scopes:
+            internal_usr_mgt_view: 
