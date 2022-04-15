@@ -125,7 +125,7 @@ As an application developer, you can follow the steps given below to request use
     ``` json{6}
     {
       "clientID": "<client ID>",
-      "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
+      "baseUrl": "https://api.asgardeo.io/t/<organization_name>",
       "signInRedirectURL": "https://localhost:3000",
       "signOutRedirectURL": "https://localhost:3000",
       "scope": [ "profile", "address", "phone" ]

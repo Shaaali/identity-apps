@@ -51,7 +51,7 @@ To initialize the SDK, use the `getInstance()` function in the SDK and provide t
     <td>This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.</td>
   </tr>
   <tr>
-    <td><code>serverOrigin</code></td>
+    <td><code>baseUrl</code></td>
     <td>This is the Asgardeo server's host name along with your organization name.</td>
   </tr>
   <tr>
@@ -78,7 +78,7 @@ auth.initialize({
    signInRedirectURL: "https://localhost:3000",
    signOutRedirectURL: "https://localhost:3000",
    clientID: "<clientId>",
-   serverOrigin: "https://api.asgardeo.io/t/<organization_name>",
+   baseUrl: "https://api.asgardeo.io/t/<organization_name>",
    scope: [ "openid","profile" ]
 });
 </script>
