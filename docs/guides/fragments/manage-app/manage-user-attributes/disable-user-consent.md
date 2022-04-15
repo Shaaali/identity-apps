@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable-next-line -->
 Asgardeo prompts users with a consent page. From the consent page, users can select the attributes that can be shared with the application or deny the consent request.
 
 If you don't want to provide that control to users, you can disable the consent screen as follows:

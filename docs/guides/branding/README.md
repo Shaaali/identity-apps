@@ -4,7 +4,7 @@ You can customize the user interfaces presented to your users at login, sign-up,
 
 By branding these interfaces, your users will get a familiar and consistent user experience.
 
-::: info 
+::: info
 See the complete list of [branding options](#branding-preferences) available in Asgardeo currently.
 :::
 
@@ -25,8 +25,8 @@ Follow the steps given below to configure the branding preferences for your orga
 2. Update the [available branding options](#branding-preferences) in the **General**, **Design**, and **Advanced** tabs.
 
    ::: info Note
-   -   If you leave any of the branding preferences empty, Asgardeo defaults will be used.
-   -   The real-time preview will show you a sample view as you update the values.
+   - If you leave any of the branding preferences empty, Asgardeo defaults will be used.
+   - The real-time preview will show you a sample view as you update the values.
    :::
 
 3. Before you save your updates, check the **Go Live** toggle.
@@ -39,9 +39,9 @@ Follow the steps given below to configure the branding preferences for your orga
 
 ## Publish your branding
 
-Once you are ready with your branding updates, use the **Go Live** toggle to go live with your updates. 
+Once you are ready with your branding updates, use the **Go Live** toggle to go live with your updates.
 
-Note that all subsequent branding changes that you save are immediately published if this toggle is switched on. 
+Note that all subsequent branding changes that you save are immediately published if this toggle is switched on.
 
 ::: info Info
 For free-tier subscriptions, the **Powered by Asgardeo** label will display on the Asgardeo-powered interfaces when branding is published.
