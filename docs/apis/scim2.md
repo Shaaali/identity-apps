@@ -5,5 +5,6 @@ breadcrumb: false
 url: /asgardeo/docs/content/apiDocs/scim2.html
 ---
 
+<!-- markdownlint-disable-next-line -->
 <APIStoplight/>
 
