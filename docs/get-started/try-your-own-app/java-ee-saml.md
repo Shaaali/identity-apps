@@ -6,7 +6,7 @@ breadcrumb: false
 
 Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat using the [Asgardeo Tomcat SAML Agent](https://github.com/asgardeo/asgardeo-tomcat-saml-agent) which enables SAML-based login and logout.
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/java-logo.svg'
@@ -23,7 +23,7 @@ Follow the steps given below to authenticate users to your Java EE web applicati
 
 Follow the steps given below to install the SAML agent.
 
-1.  Add the relevant dependencies.  
+1. Add the relevant dependencies.  
 
     To get started, you need to enable the SAML agent in your application's project by adding the relevant dependencies to the `pom.xml` file.
 
@@ -35,7 +35,7 @@ Follow the steps given below to install the SAML agent.
     </dependency>
     ```
 
-2.  Add the nexus repository.   
+2. Add the nexus repository.
 
     The agent is hosted at **WSO2 Internal Repository**. Point to this nexus repository to resolve the dependency mentioned above.
 
@@ -60,7 +60,7 @@ See the [reference documentation](https://github.com/asgardeo/asgardeo-tomcat-sa
 
 Follow the steps given below to initialize the SAML agent.
 
-### Create the configuration file 
+### Create the configuration file
 
 To initialize the SAML agent, you need a property file with the configurations such as the Asgardeo endpoints. The Asgardeo SAML agent reads the configurations from this file.
 
@@ -100,7 +100,7 @@ PrivateKeyPassword=<app_private_key_password>
 
 For advanced use cases such as SAML response signing, the Asgardeo SAML Agent uses a keystore with your private key. If your application doesn't have a keystore already, generate a keystore file and copy it to the **<APP_HOME>/src/main/resources** directory. Make sure to update KeyStorePassword, PrivateKeyAlias, and PrivateKeyPassword with relevant values.
   
-Find the configuration information below: 
+Find the configuration information below:
 
 <table>
    <thead>
@@ -140,11 +140,13 @@ Find the configuration information below:
        </tr>
        <tr>
          <td>SAML2.EnableResponseSigning</td>
-         <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+         <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>.
+         If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
      </tr>
      <tr>
        <td>SAML2.EnableAssertionSigning</td>
-       <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+       <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>.
+       If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
      </tr>
      <tr>
        <td>SAML2.EnableAssertionEncryption</td>
@@ -174,10 +176,10 @@ Find the configuration information below:
         <td>PrivateKeyPassword</td>
         <td>Password of the private key of your application</td>
       </tr>
-     
+
    </tbody>
 </table>
-    
+
 See the complete list of [configuration properties](https://github.com/asgardeo/asgardeo-tomcat-saml-agent/blob/master/io.asgardeo.tomcat.saml.agent.sample/src/main/resources/configuration-catalog.md).
 
 ### Configure the keystore
@@ -233,7 +235,7 @@ When the user clicks the button, the SAML agent intercepts the request and initi
 
 ## Add logout
 
-In the previous steps, you implemented login for your app. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
+In the previous steps, you implemented login for your app. Now you need a way to log users out of your application and remove the user sessions from Asgardeo.
 
 When the user initiates the logout, the local authenticated application session is cleared and the session in Asgardeo is terminated.
 

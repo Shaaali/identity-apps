@@ -6,7 +6,7 @@ breadcrumb: false
 
 Follow the steps given below to authenticate users to your React SPA with OpenID Connect using the [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk/blob/main/README.md).
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/react-logo.svg'
@@ -21,19 +21,19 @@ Follow the steps given below to authenticate users to your React SPA with OpenID
 
 Run the following command to install the React SDK and the necessary dependencies from the npm registry.
 
-```
+``` no-line-numbers
 npm install @asgardeo/auth-react react-router-dom --save
 ```
 
 ## Configure `AuthProvider`
 
-SDK uses [React Context API](https://reactjs.org/docs/context.html) under the hood to share the data between components. 
+SDK uses [React Context API](https://reactjs.org/docs/context.html) under the hood to share the data between components.
 You can easily integrate Asgardeo in your application by using `AuthProvider` as the wrapper element to inject configurations.
 
 ``` no-line-number
 import { AuthProvider } from "@asgardeo/auth-react";
 ```
-`AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitrary input that can be used to initialize the SDK instance. Provide the configurations below to get the SDK to work with your application. 
+`AuthProvider` takes a config object as a [prop](https://reactjs.org/docs/components-and-props.html) which is an arbitrary input that can be used to initialize the SDK instance. Provide the configurations below to get the SDK to work with your application.
 <table>
   <tr>
     <th>Parameter</th>
@@ -63,7 +63,7 @@ import { AuthProvider } from "@asgardeo/auth-react";
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
-```
+``` js
 import React from "react";
 import { render } from "react-dom";
 import { AuthProvider } from "@asgardeo/auth-react";
@@ -103,7 +103,7 @@ The above code segment shows a sample scenario where the react app uses the ```i
 You can now start using the SDK's API to implement the required authentication logic. Follow the instructions given below to implement each use case.
 
 ### Add Login
-The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button** using the `signIn()` function in the `useContext` hook. 
+The Asgardeo React SDK provides React Hooks to easily authenticate your React application. Implement a **Login button** using the `signIn()` function in the `useContext` hook.
 
 This `signIn()` method is used authenticate the users and get authorization code and access token.
 ``` no-line-numbers
@@ -114,7 +114,7 @@ This `signIn()` method is used authenticate the users and get authorization code
 
 Add the following code to your application. This enables the application to get the access token issued by Asgardeo.
 
-``` 
+``` ts
 const { getAccessToken } = useAuthContext();
 
 const obtainAccessToken = () => {
@@ -134,11 +134,11 @@ const obtainAccessToken = () => {
 
 Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
-SDK provides the capability to decode the token, and you can obtain claims from this decoded ID token. 
+SDK provides the capability to decode the token, and you can obtain claims from this decoded ID token.
 
 Copy `obtainDecodedIDtoken` and call it from a button click as shown below.
 
-```
+``` ts
 const { getDecodedIDToken } = useAuthContext();
 
 function obtainDecodedIDtoken() {
@@ -171,7 +171,7 @@ function obtainDecodedIDtoken() {
 }
 ```
 
-From this decoded ID Token(`decodedIDToken`) object, you can get, 
+From this decoded ID Token(`decodedIDToken`) object, you can get,
 
 <table>
    <tbody>
@@ -197,14 +197,14 @@ You can loop through the `decodedIDToken` object and get the other claims as wel
 ### Get user information
 
 In addition to implementing login and logout, your application can also use the SDK to get user information.
- 
- There are two ways for you to get user information:
- - Get user information from the [decoded ID token](#get-decoded-id-token).
- - Use the `getBasicUserInfo()` API and get basic user information.
 
-To get the basic user information from SDK, copy the following script and call the `obtainUserInfo()` from a button as shown below. 
+There are two ways for you to get user information:
+- Get user information from the [decoded ID token](#get-decoded-id-token).
+- Use the `getBasicUserInfo()` API and get basic user information.
 
-```
+To get the basic user information from SDK, copy the following script and call the `obtainUserInfo()` from a button as shown below.
+
+``` ts
 const { getBasicUserInfo } = useAuthContext();
   
 const obtainUserInfo() => {
@@ -251,7 +251,7 @@ You can loop through the user info response(`basicUserDetails`), and get the fol
 
 ### Add logout
 
-In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
+In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo.
 
 ``` no-line-numbers
 <button onClick={ () => signOut() }>Logout</button>
@@ -260,7 +260,7 @@ In the previous steps, you implemented login for your app and enabled your app t
 ### Sample Code
 The following code snippet demonstrates the usage of the ``state`` object together with other methods from the context.
 
-``` 
+``` ts
 import React from "react";
 import { useAuthContext } from "@asgardeo/auth-react";
 

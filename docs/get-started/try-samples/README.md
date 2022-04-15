@@ -29,5 +29,6 @@ items:
     path: /get-started/try-samples/qsg-saml-webapp-java-ee/
 ---
 
+<!-- markdownlint-disable-next-line -->
 <CardView/>
 
