@@ -5,9 +5,9 @@ To remove an organization you own in Asgardeo, you need to contact the Asgardeo 
 ## Before you begin
 Note the following before you proceed to delete an organization.
 
--  Only an organization owner can request the organization to be deleted.
--  If you remove all the organizations you own in Asgardeo, your user account will also get deleted from Asgardeo.
--  A deleted organization cannot be restored. Proceed with caution. 
+- Only an organization owner can request the organization to be deleted.
+- If you remove all the organizations you own in Asgardeo, your user account will also get deleted from Asgardeo.
+- A deleted organization cannot be restored. Proceed with caution.
 
 ## Send a request
 

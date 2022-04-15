@@ -2,7 +2,7 @@
 
 <a :href="$withBase('/guides/users/manage-customers/')">Users</a> can recover a forgotten password by following the instructions on the Asgardeo sign-in page.
 
-Alternatively, if the account owner is already signed in to the self-service portal, the password can be updated <a :href="$withBase('/guides/user-self-service/change-password/')">using the My Account portal</a>. 
+Alternatively, if the account owner is already signed in to the self-service portal, the password can be updated <a :href="$withBase('/guides/user-self-service/change-password/')">using the My Account portal</a>.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ Alternatively, if the account owner is already signed in to the self-service por
 
 ## Recover password
 
-To reset the password, the account owner should follow these steps. 
+To reset the password, the account owner should follow these steps.
 
 1. Go to the login page via a business application or the <a :href="$withBase('/guides/user-self-service/customer-self-service-portal/')">My Account portal</a>.
 
@@ -20,7 +20,7 @@ To reset the password, the account owner should follow these steps.
 3. Enter your username and click **Send Reset Link**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/forgot-your-password.png')" width="350" alt="Forgot your password">
 
-   An email notification is sent to your email address. 
+   An email notification is sent to your email address.
 
 4. Open the email you received and click **Reset Password**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/reset-password-email.png')" width="500" alt="Reset password email">

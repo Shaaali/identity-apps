@@ -22,7 +22,7 @@ You are now automatically signed in to the portal.
 
 ## Update profile information
 
-The user details displayed in your profile corresponds to the default attributes that are enabled for the organization. 
+The user details displayed in your profile corresponds to the default attributes that are enabled for the organization.
 
 To update your profile information via My Account:
 
@@ -30,10 +30,10 @@ To update your profile information via My Account:
 2. Click **Personal Info** to see the profile information.
    <img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/update-profile-info.png')" alt="Update user profile from MyAccount">
 
-3. If required, update the editable information. 
+3. If required, update the editable information.
 
 
-## Change password 
+## Change password
 <CommonGuide guide='guides/fragments/self-service/change-password.md'/>
 
 ## Manage linked social accounts

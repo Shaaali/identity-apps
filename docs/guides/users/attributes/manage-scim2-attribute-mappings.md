@@ -6,7 +6,7 @@ Attributes in your organization are mapped to the following SCIM 2.0 schemas map
 - [Enterprise schema attributes](https://datatracker.ietf.org/doc/html/rfc7643#section-4.3)
 - Custom schema attributes
 
-The attributes in the core, user, and enterprise schemas are well-defined in the [SCIM 2.0 specification](https://datatracker.ietf.org/doc/html/rfc7643) and you can't modify the attributes in these schemas. Custom schema attributes can be added or deleted by users. 
+The attributes in the core, user, and enterprise schemas are well-defined in the [SCIM 2.0 specification](https://datatracker.ietf.org/doc/html/rfc7643) and you can't modify the attributes in these schemas. Custom schema attributes can be added or deleted by users.
 
 ## View SCIM 2.0 attributes
 To view the SCIM 2 attributes mapped to user attributes in your organization:
@@ -20,7 +20,7 @@ You can add new SCIM 2.0 custom schema attributes as follows:
 1. On the Asgardeo console, click **Manage > Attributes > Manage Attribute Mappings**.
 2. Click **SCIM 2.0**.
 3. Click **New Attribute**.
-4. Enter values for the following properties: 
+4. Enter values for the following properties:
    <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/add-scim2-attribute-mapping.png')" alt="Add OpenID Connect attributes" width="500">
    <table>
          <tbody>
@@ -34,7 +34,7 @@ You can add new SCIM 2.0 custom schema attributes as follows:
             </tr>
          </tbody>
       </table>
-5. Click **Save**.     
+5. Click **Save**.
 
 ## Delete a SCIM 2.0 custom schema attribute
 To delete the SCIM 2.0 custom schema attributes available in your organization:

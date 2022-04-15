@@ -1,6 +1,6 @@
 # Discover applications
 
-Users can view the applications that they have access to within the organization. 
+Users can view the applications that they have access to within the organization.
 
 ## Prerequisites
 

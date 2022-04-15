@@ -13,7 +13,7 @@ Let's look at how administrators can onboard users from the Asgardeo console.
 2. Click  **New User**.
 3. Provide the following details:
     <img :src="$withBase('/assets/img/guides/users/add-user-form.png')" width="500" alt="Add user">
-    - **Email (Username):** A unique email address to identify the user. 
+    - **Email (Username):** A unique email address to identify the user.
         <br>
         ::: warning
          This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization and you can't change the username once it is created.
@@ -24,28 +24,28 @@ Let's look at how administrators can onboard users from the Asgardeo console.
       - **Invite user to set their own password:**
             If this option is selected, an email with a confirmation link will be sent to the provided email (username). The user can use the confirmation link to set a new password and to confirm the new account.  
       - **Set a temporary password for the user:**
-            If this option is selected, the administrator can set a temporary password for the user.              
+            If this option is selected, the administrator can set a temporary password for the user.
 4. Click **Next**. (This option will only appear if your organization has created any groups. Otherwise, click **Finish**.)
-5.  If required, you can assign the user to some groups. 
+5. If required, you can assign the user to some groups.
 6. Click **Finish**.
-     
+
 ## Assign groups
 A user can be assigned to different <a :href="$withBase('/guides/users/manage-groups/')">groups</a> in the organization. Based on the assigned groups, administrators can restrict user's access to resources.
 
-To assign users to groups: 
-1. On the Asgardeo console, click **Manage > Users**. 
+To assign users to groups:
+1. On the Asgardeo console, click **Manage > Users**.
 2. Click **Edit** for the user.
 3. Go to **Groups** and assign groups.
    <img :src="$withBase('/assets/img/guides/users/assign-groups-to-users.png')" width="800" alt="Add user">
 
 ## Manage the user's profile
 
-A user profile consists of attributes that represent the details of the user such as username, email address, contact information, other custom attributes, etc. 
+A user profile consists of attributes that represent the details of the user such as username, email address, contact information, other custom attributes, etc.
 
 ::: info
 Administrators in the organization can configure the list of attributes that should be available in a user profile. See <a :href="$withBase('/guides/users/attributes/manage-attributes/')">Manage attributes</a> for details.
 :::
- 
+
 ### View profile details
 
 Administrators can view the user profile of any user as follows:
@@ -77,7 +77,7 @@ To reset the password:
 
 1. Click **Reset password** at the bottom of the user's profile.
   <img :src="$withBase('/assets/img/guides/users/reset-password.png')" alt="Reset User Password">
-2. Select a method to reset the user password:     
+2. Select a method to reset the user password:
    - **Invite user to set their own password:**  
     If this option is selected, a password reset request can be sent to the user via email. The user can then use the instructions in the email to reset the password.  
    - **Set a temporary password for the user:**  
@@ -87,26 +87,26 @@ To reset the password:
 
 ## Lock a user account
 
-When you lock a user's account, the user will no longer be able to access any business applications or the self-service portal (My Account). 
+When you lock a user's account, the user will no longer be able to access any business applications or the self-service portal (My Account).
 
 To lock the user account:
 
 1. On the Asgardeo console, click **Manage > Users** and select the user.
 2. Enable the **Lock user** toggle at the bottom of the user's profile.
   <img :src="$withBase('/assets/img/guides/users/lock-user.png')" alt="Lock user">
-3. Enable the checkbox to confirm your action. 
-4. Click **Confirm**. 
+3. Enable the checkbox to confirm your action.
+4. Click **Confirm**.
 
 ::: info
 You can unlock the user account again using the **Lock user** toggle explained above.
 :::
 
 ## Delete a user
-A user account can be deleted by administrators. Once an account is deleted, the action is irreversible. 
+A user account can be deleted by administrators. Once an account is deleted, the action is irreversible.
 
 To delete a user account:
 1. On the Asgardeo console, click **Manage > Users** and select the user.
 2. Click **Delete User** at the bottom of the user's profile.
   <img :src="$withBase('/assets/img/guides/users/delete-user.png')" alt="Delete user">
-3. Enable the checkbox to confirm your action. 
-4. Click **Confirm**. 
+3. Enable the checkbox to confirm your action.
+4. Click **Confirm**.

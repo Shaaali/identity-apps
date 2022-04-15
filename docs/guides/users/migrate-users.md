@@ -24,7 +24,7 @@ Alternatively, you can use traditional approaches to user migration. However, th
 
 ## Challenges of traditional user migration
 
-Identity providers generally support various automatic user migration methods, which help administrators import user records (including group details, attributes, and other characteristics) from external systems. 
+Identity providers generally support various automatic user migration methods, which help administrators import user records (including group details, attributes, and other characteristics) from external systems.
 
 These traditional methods come with various challenges as explained below, which become an operational overhead for administrators and provide a bad user experience:
 

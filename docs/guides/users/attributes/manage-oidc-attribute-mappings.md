@@ -15,7 +15,7 @@ Asgardeo supports some OpenID Connect attributes by default. You can add new Ope
 1. On the Asgardeo Console, Click **Manage > Attributes > Manage Attribute Mappings**.
 2. Click **OpenID Connect**.
 3. Click **New Attribute**.
-4. Enter values for the following properties: 
+4. Enter values for the following properties:
    <img :src="$withBase('/assets/img/guides/organization/attributes/attribute-mappings/add-oidc-attribute-mapping.png')" alt="Add OpenID Connect attributes" width="500">
    <table>
          <tbody>
@@ -29,7 +29,7 @@ Asgardeo supports some OpenID Connect attributes by default. You can add new Ope
             </tr>
          </tbody>
       </table>
-5. Click **Save**.     
+5. Click **Save**.
 
 For example, shown below are a set of OpenID Connect claims mapped to user attribute in Asgardeo:
  <table>
@@ -82,5 +82,5 @@ To delete the OpenID Connect attributes available in your organization:
 2. Click **OpenID Connect**.
 3. Select the attribute to delete.
 4. Click **Delete**.
-5. Select the checkbox to confirm your action. 
+5. Select the checkbox to confirm your action.
 6. Click **Confirm**.  

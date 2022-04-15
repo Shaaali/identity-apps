@@ -4,7 +4,7 @@ If you are an owner or an administrator in an Asgardeo organization, you can rec
 
 To recover your password:
 
-1. Go to the sign-in page via the <a :href="$withBase('/guides/your-asgardeo/asgardeo-self-service/#access-my-account-portal')">My Account Portal</a>. 
+1. Go to the sign-in page via the <a :href="$withBase('/guides/your-asgardeo/asgardeo-self-service/#access-my-account-portal')">My Account Portal</a>.
 
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" width="350" alt="Recover your password">
 
@@ -12,7 +12,7 @@ To recover your password:
 3. Enter your username and click **Send Reset Link**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/forgot-your-password.png')" width="350" alt="Forgot your password">
 
-   An email notification is sent to your email address. 
+   An email notification is sent to your email address.
 
 4. Open the email you received and click **Reset Password**.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/reset-password-email.png')" width="500" alt="Reset password email">
