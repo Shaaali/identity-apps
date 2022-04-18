@@ -3,7 +3,7 @@ These configurations are enabled only if refresh token grant type is added as an
 #### Renew refresh token
 Asgardeo issues a new refresh token each time when access token is refreshed with refresh token grant type. The previous token gets invalidated.
 
-If application does not want to get new refresh token for each request, you can unselect this **Renew refresh token** setting. Then the same refresh token will be issued with refresh token grant type until the refresh token get expires.
+If the application does not want to get a new refresh token for each request, you can clear the **Renew refresh token** checkbox. Then, the same refresh token will be issued with refresh token grant type until the refresh token expires.
 
 <br>
 
