@@ -57,7 +57,7 @@ Follow the steps given below.
     <img :src="$withBase('/assets/img/guides/passwordless/sign-in-with-security-key-page.png')" alt="Sign In With Security Key page in Asgardeo" width="500">
 
 ::: info
-FIDO2 passwordless login with platform authenticators will NOT work in the **Firefox browser** in macOS Catalina and Big Sur due to browser limitations.
+FIDO2 passwordless login with platform authenticators will NOT work in the **Firefox browser** in macOS Catalina, Big Sur and Monterey due to browser limitations.
 :::
 
 ::: info
