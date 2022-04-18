@@ -1,6 +1,6 @@
 # Recover your password
 
-If you are an owner or collaborator in an Asgardeo organization, you can recover a forgotten password by following the instructions on the Asgardeo sign-in page.
+If you are an owner or an administrator in an Asgardeo organization, you can recover a forgotten password by following the instructions on the Asgardeo sign-in page.
 
 To recover your password:
 

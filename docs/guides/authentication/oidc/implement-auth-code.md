@@ -13,7 +13,7 @@ As shown above, you need to configure your application to get the authorization 
 To get started, you need to have an application registered in Asgardeo. If you don't already have one, <a :href="$withBase('/guides/applications/register-oidc-web-app/')">register a web app with OIDC</a>.
 
 ::: info
-Note that only customers can log in to business applications. Therefore, to test login on your application, you need a <a :href="$withBase('/guides/users/manage-customers')">customer account</a>.
+Note that only users can log in to business applications. Therefore, to test login on your application, you need a <a :href="$withBase('/guides/users/manage-customers')">user account</a>.
 :::
 
 ## Get the authorization code

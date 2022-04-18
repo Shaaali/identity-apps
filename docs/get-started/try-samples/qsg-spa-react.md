@@ -10,7 +10,7 @@ Following this guide, you will be able to deploy a sample React single page appl
 
 - You need to have npm with Node.js. If you don't have it, [Install npm and node](https://www.npmjs.com/get-npm) in your local environment.
 - You need to have a single-page application registered. If you don't have an app registered, <a :href="$withBase('/guides/applications/register-single-page-app/')">register an application</a> in Asgardeo.
-- Only <a :href="$withBase('/guides/users/manage-customers/')">customer</a> users can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a customer account</a> if you don't already have one.
+- Only <a :href="$withBase('/guides/users/manage-customers/')">users</a> can log in to applications. <a :href="$withBase('/guides/users/manage-customers/#onboard-customer-user')">Create a user account</a> if you don't already have one.
 
 ## Download the sample
 
@@ -61,6 +61,6 @@ Run the following command at the root of the project to start up the sample appl
 npm install && npm start
 ```
 
-Log in to Asgardeo using your customer account credentials.
+Log in to Asgardeo using your user account credentials.
 
 

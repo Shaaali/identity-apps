@@ -84,10 +84,10 @@ features:
     icon: icons/feature-users.svg
     cssClass: users
     subLinks:
-      - name: "Collaborators"
+      - name: "Administrators"
         link: /guides/users/manage-collaborators/
       
-      - name: "Customers"
+      - name: "Users"
         link: /guides/users/manage-customers/
       
       - name: "User Self-Service"
