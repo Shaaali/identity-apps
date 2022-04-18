@@ -55,3 +55,11 @@ Follow the steps given below.
     <img :src="$withBase('/assets/img/guides/passwordless/sign-in-with-security-key.png')" alt="Sign In With Security Key in Asgardeo" width="500">
 4. Follow the instructions given by your browser or device to login.
     <img :src="$withBase('/assets/img/guides/passwordless/sign-in-with-security-key-page.png')" alt="Sign In With Security Key page in Asgardeo" width="500">
+
+::: info
+FIDO2 passwordless login with platform authenticators will NOT work in the **Firefox browser** in macOS Catalina and Big Sur due to browser limitations.
+:::
+
+::: info
+FIDO2 passwordless login with roaming authenticators will NOT work in the **Firefox browser** as the browser doesn't support CTAP2 (Client to Authenticator Protocol 2) with PIN.
+:::
