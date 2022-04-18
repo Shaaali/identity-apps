@@ -200,6 +200,8 @@ module.exports = config({
                             ['add-login-to-web-app.md', 'Add login to a web app'],
                         ]
                     },
+                    ['add-passwordless-login.md', 'Add passwordless login'],
+
                     {
                         title: 'Enable User Attributes',
                         prefix: 'user-attributes/',
@@ -358,6 +360,7 @@ module.exports = config({
                         ['manage-consents.md', 'Manage consents'],
                         ['manage-login-sessions.md', 'Manage login sessions'],
                         ['self-register.md', 'Self-register'],
+                        ['register-security-key.md', 'Register FIDO2 security key/biometrics'],
                         ['customer-password-recovery.md', 'Password recovery'],
                         ['enable-totp.md', 'Enroll TOTP'],
                         ['discover-applications.md', 'Discover applications'],

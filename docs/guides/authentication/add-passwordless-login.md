@@ -1,4 +1,3 @@
-
 # Add passwordless login with FIDO2 
 
 FIDO2 lets you go passwordless by allowing your application users to use FIDO2-supported hardware security keys or built-in authenticators on their devices (such as fingerprint scanners, TouchID, FaceID or Windows Hello) to log in.
