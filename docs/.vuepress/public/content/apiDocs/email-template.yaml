@@ -2,9 +2,10 @@ openapi: 3.0.0
 info:
   version: "v1"
   title: Asgardeo - Email Templates API
-  description: >-
-    This is the RESTful API for managing email templates in WSO2 Asgardeo.This API allows adding, retrieving, replacing, and removing email
-    templates and template types.[Authentication](https://wso2.com/asgardeo/docs/apis/authentication/)
+  description: 
+    "This is the RESTful API for managing email templates in WSO2 Asgardeo. This API allows adding, retrieving, replacing, and removing email
+    templates and template types. 
+    \n To access the email template APIs in Asgardeo, you need to first [get an access token](https://wso2.com/asgardeo/docs/apis/authentication/#get-an-access-token) from your organization."
 tags:
   - name: Email template types
     description: An email template type can have multiple email templates for different languages.

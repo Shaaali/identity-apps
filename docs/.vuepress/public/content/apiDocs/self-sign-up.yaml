@@ -2,8 +2,9 @@ openapi: 3.0.1
 info:
   version: "v1"
   title: Asgardeo - Self Service API
-  description: |
-    This API is used for accessing the self service capabilities for application users in Asgardeo.
+  description: 
+    "This API is used for accessing the self service capabilities for application users in Asgardeo. 
+    \n To access the self sign-up APIs in Asgardeo, you need to first [get an access token](https://wso2.com/asgardeo/docs/apis/authentication/#get-an-access-token) from your organization."
 servers:
 - url: https://api.asgardeo.io/t/{organization_name}/api/identity/user/v1.0
 paths:
