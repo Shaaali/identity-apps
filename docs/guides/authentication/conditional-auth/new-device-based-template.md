@@ -11,7 +11,7 @@ Consider a scenario where users who log in to an application from a new device o
 1. Username and password
 2. TOTP
 
-An email should also be sent to the customer with details of the login attempt.
+An email should also be sent to the user with details of the login attempt.
 
 ## Prerequisites
 

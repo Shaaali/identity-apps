@@ -19,7 +19,7 @@ Follow the steps given below to configure the user attributes from the Asgardeo 
 
 Let's see how this flow works in Asgardeo.
 
-Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a customer tries to log in to your app.
+Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a user tries to log in to your app.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/oidc/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 
@@ -51,7 +51,7 @@ If the user consents to share attributes with the application, Asgardeo returns 
 
 #### Subject Attribute
   
-The subject attribute is the unique identifer for a customer. The application receives this value via the [subject attribute](#subject-attribute) parameter in the [ID token](#id-token). In Asgardeo, the user ID assigned to a customer is used as the subject attribute. 
+The subject attribute is the unique identifer for a user. The application receives this value via the [subject attribute](#subject-attribute) parameter in the [ID token](#id-token). In Asgardeo, the user ID assigned to a user is used as the subject attribute. 
 
 #### ID token
 
