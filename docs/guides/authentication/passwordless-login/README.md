@@ -1,7 +1,11 @@
 
 # Add passwordless login with FIDO2 
 
-FIDO2 lets you go passwordless by allowing your application users to use FIDO2-supported hardware security keys or built-in authenticators on their devices (such as fingerprint scanners, TouchID, FaceID or Windows Hello) to log in.
+FIDO2 lets you go passwordless by allowing your application users to use FIDO2-supported hardware security keys or built-in authenticators on their devices to log in.
+
+There are two types of authenticators which you can use with Asgardeo passwordless authentication.
+- **Platform authenticators** (also known as `internal` authenticators): Authenticators like fingerprint scanners, TouchID, FaceID or Windows Hello which are bound to a particular device.
+- **Roaming authenticators** (also known as `cross-platform` or `external` authenticators): Authenticators like hardware security keys which are external and not bound to any specific device.
 
 ::: info What is FIDO2?
  The FIDO Alliance, whose mission is to reduce the world’s reliance on passwords, introduced its latest specifications, collectively called FIDO2. FIDO2 specifications are the World Wide Web Consortium’s (W3C) Web Authentication specification (WebAuthn) and FIDO alliance’s corresponding Client to Authenticator Protocol (CTAP).
@@ -18,7 +22,9 @@ To get started, you need to have an application registered in Asgardeo. If you d
 -  <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ::: info
- To try out passwordless login, you need to have a FIDO2 security key registered in Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>.
+- To try out passwordless login, you need to have a FIDO2 security key registered in Asgardeo. Learn how to <a :href="$withBase('/guides/user-self-service/register-security-key/')">register your FIDO2 security key</a>.
+- FIDO2 passwordless login with platform authenticators will NOT work on the **Firefox** browser in macOS Catalina, Big Sur and Monterey due to browser limitations.
+- FIDO2 passwordless login with roaming authenticators will NOT work on the **Firefox** browser as the browser doesn't support CTAP2 (Client to Authenticator Protocol 2) with PIN.
 :::
 
 ## Enable passwordless login for an app 
@@ -55,11 +61,3 @@ Follow the steps given below.
     <img :src="$withBase('/assets/img/guides/passwordless/sign-in-with-security-key.png')" alt="Sign In With Security Key in Asgardeo" width="500">
 4. Follow the instructions given by your browser or device to login.
     <img :src="$withBase('/assets/img/guides/passwordless/sign-in-with-security-key-page.png')" alt="Sign In With Security Key page in Asgardeo" width="500">
-
-::: info
-FIDO2 passwordless login with platform authenticators will NOT work in the **Firefox browser** in macOS Catalina, Big Sur and Monterey due to browser limitations.
-:::
-
-::: info
-FIDO2 passwordless login with roaming authenticators will NOT work in the **Firefox browser** as the browser doesn't support CTAP2 (Client to Authenticator Protocol 2) with PIN.
-:::
