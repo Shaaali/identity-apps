@@ -2,7 +2,7 @@
 
 FIDO2 lets you go passwordless by allowing your application users to use FIDO2-supported hardware security keys or built-in authenticators on their devices to log in.
 
-There are two types of authenticators which you can use with Asgardeo passwordless authentication.
+There are two types of authenticators, which you can use with Asgardeo passwordless authentication.
 - **Platform authenticators** (also known as `internal` authenticators): Authenticators like fingerprint scanners, TouchID, FaceID or Windows Hello which are bound to a particular device.
 - **Roaming authenticators** (also known as `cross-platform` or `external` authenticators): Authenticators like hardware security keys which are external and not bound to any specific device.
 
