@@ -1,8 +1,8 @@
 # User Self-Service
 
-An owner or a collaborator with administrative privileges can manage customer accounts. However, this is not always necessary since customers can easily manage their own Asgardeo accounts <a :href="$withBase('/guides/user-self-service/customer-self-service-portal/')">using the My Account portal</a>.
+An owner or a administrator with administrative privileges can manage user accounts. However, this is not always necessary since users can easily manage their own Asgardeo accounts <a :href="$withBase('/guides/user-self-service/customer-self-service-portal/')">using the My Account portal</a>.
 
-## Self-service capabilities for customers
+## Self-service capabilities for users
 
 Listed below are self service features that are available in the **My Account** portal of the user.
 

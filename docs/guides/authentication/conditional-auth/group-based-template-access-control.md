@@ -15,9 +15,9 @@ Consider a scenario with two user groups, `manager` and `employee`. Login should
    -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
    -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
--  Create two user groups named `manager` and `employee` and assign customer accounts to them. For instructions, see the following:
+-  Create two user groups named `manager` and `employee` and assign user accounts to them. For instructions, see the following:
    -  <a :href="$withBase('/guides/users/manage-groups/')">Managing groups</a>
-   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing customers</a>
+   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing users</a>
 
 ## Configure the login flow
 

@@ -34,17 +34,17 @@ The owner account cannot be deleted once it is created. There can be only one ow
 
 An owner is always assigned the **Administrator** role. It cannot be changed by other admins either.
 
-### Collaborator 
+### Administrator 
 
-A collaborator is a user who can manage the organization and has access to the organization’s administrative operations. A collaborator can be invited to the organization and assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
+An administrator can manage the organization and has access to the organization’s administrative operations. An administrator can be invited to the organization and assigned with the Administrator <a :href="$withBase('/references/user-management/user-roles/')">user role</a>.
 
-Refer <a :href="$withBase('/guides/users/manage-collaborators/')">Managing collaborators</a> for more information.
+Refer <a :href="$withBase('/guides/users/manage-collaborators/')">Managing administrators</a> for more information. 
 
-### Customer
+### User 
 
-A customer registered in an organization can consume and access applications in that organization.
+A user registered in an organization can consume and access applications in that organization.
 
-Refer <a :href="$withBase('/guides/users/manage-customers/')">Managing customers</a> for more information.
+Refer <a :href="$withBase('/guides/users/manage-customers/')">Managing users</a> for more information. 
 
 ### Comparing User Accounts
 
@@ -54,7 +54,7 @@ Based on your requirements, you can choose user types and create them via the [A
 
 The source of the user account determines which entity manages the user's credentials and details.
 
-- **Accounts managed by Asgardeo** can persist across multiple organizations. That is, the same user account can be associated with other organizations as an owner or a collaborator. When removed from one organization, these associations with other organizations continue to persist.
+- **Accounts managed by Asgardeo** can persist across multiple organizations. That is, the same user account can be associated with other organizations as an owner or an administrator. When removed from one organization, these associations with other organizations continue to persist.
 - **Accounts managed by an organization** are confined to that organization. When removed from that organization, the account is completely deleted from Asgardeo.
 <br>
 
@@ -75,10 +75,10 @@ The source of the user account determines which entity manages the user's creden
     </td>
   </tr>
   <tr>
-    <td>Collaborator<Badge text="Asgardeo User" type="optional"/></td>
+    <td>Administrator<Badge text="Asgardeo User" type="optional"/></td>
     <td>Asgardeo</td>
     <td>
-    By default, collaborators are assigned all administration capabilities:
+    By default, administrators are assigned all administration capabilities:
       <li>Onboard users</li>
       <li>Create organizations</li>
       <li>Manage users and groups</li>
@@ -86,7 +86,7 @@ The source of the user account determines which entity manages the user's creden
     </td>
   </tr>
   <tr>
-    <td>Customer</td>
+    <td>User</td>
     <td>Organization</td>
     <td><li>Consume business applications</li></td>
   </tr>

@@ -29,7 +29,7 @@ The logout request has the following parameters:
   </tr>
   <tr>
     <td><code>id_token_hint</code><Badge text="Recommended" type="recommended"/></td>
-    <td>The ID token returned by Asgardeo (in response to the token request) is passed to the logout endpoint with a hint about the customer's current authenticated session on the application.</td>
+    <td>The ID token returned by Asgardeo (in response to the token request) is passed to the logout endpoint with a hint about the user's current authenticated session on the application.</td>
   </tr>
   <tr>
     <td><code>post_logout_redirect_uri</code><Badge text="Optional" type="optional"/></td>

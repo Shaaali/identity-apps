@@ -6,7 +6,7 @@ In Asgardeo, you can either display a screen to request consent for user attribu
 
 ## Get consent for user attributes
 
-Once the user is logged in, Asgardeo requests consent from the customer to share user attributes with the application. 
+Once the user is logged in, Asgardeo requests consent to share the user's attributes with the application. 
 
 <img :src="$withBase('/assets/img/guides/applications/attributes/oidc/provide-consent.png')" width="400" alt="Provides consent for attributes in Asgardeo">
 

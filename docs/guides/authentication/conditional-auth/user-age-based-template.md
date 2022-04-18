@@ -15,7 +15,7 @@ Consider a scenario where users who are younger than 18 years should be prevente
     -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
     -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
--   Go to the customer's profile and update the birth date so that the current age is below 18 years. For instructions, see <a :href="$withBase('/guides/applications/register-single-page-app/')">Manage user profiles</a>.
+-   Go to the user's profile and update the birth date so that the current age is below 18 years. For instructions, see <a :href="$withBase('/guides/applications/register-single-page-app/')">Manage user profiles</a>.
 
 ## Configure the login flow
 
