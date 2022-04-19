@@ -1,6 +1,6 @@
 # Configure self-registration
 
-<a :href="$withBase('/guides/users/manage-customers/')">Users</a> can self-register to an organization in Asgardeo via an application’s login page. This creates a new user account in the organization. 
+<a :href="$withBase('/guides/users/manage-customers/')">Users</a> can self-register to an organization in Asgardeo via an application’s login page. This creates a new user account in the organization.
 
 To disable this capability in your organization or to change the default configurations, see the following instructions:
 
@@ -8,8 +8,8 @@ To disable this capability in your organization or to change the default configu
     <img :src="$withBase('/assets/img/guides/organization/self-registration/configure-self-registration.png')" alt="Configure self registration">
 2. Configure the below settings.
 
-    -   To disable self-registration, turn off the toggle.
-    -   To configure how self-registration works, update the following settings and click **Update**.
+    - To disable self-registration, turn off the toggle.
+    - To configure how self-registration works, update the following settings and click **Update**.
         <table>
             <tbody>
                 <tr>

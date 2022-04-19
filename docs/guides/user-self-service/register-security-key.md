@@ -1,6 +1,6 @@
 # Register FIDO2 security key/biometrics for passwordless login
 
-Application users need to register their security key/biometrics via MyAccount prior to <a :href="$withBase('/guides/authentication/passwordless-login/')">using passwordless login</a> in applications.
+Application users need to register their security key/biometrics via MyAccount prior to <a :href="$withBase('/guides/authentication/add-passwordless-login/')">using passwordless login</a> in applications.
 
 1. In the user's My Account portal, go to **Security > Additional Authentication**.
     <img :src="$withBase('/assets/img/guides/passwordless/register-security-key-via-myaccount.png')" alt="Register security key/biometrics via MyAccount">

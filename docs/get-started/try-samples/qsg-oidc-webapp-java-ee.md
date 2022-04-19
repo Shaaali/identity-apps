@@ -16,7 +16,7 @@ Following this guide, you will be able to deploy a sample Java EE web applicatio
 
 Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='Download sample'
@@ -25,7 +25,7 @@ Click the **Download sample** button to download the sample. You can also choose
     externalLink='https://github.com/asgardeo/asgardeo-tomcat-oidc-agent/releases/latest/download/oidc-sample-app.war'
     v-bind:openInNewTab='true'
 />
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='View source'
@@ -37,11 +37,11 @@ Click the **Download sample** button to download the sample. You can also choose
 ## Configure the sample
 
 1. Copy the **war** file downloaded in the [previous step](#download-the-sample) to the deployment location in your Tomcat server(i.e, referred as <TOMCAT_HOME>).
-2. Run the webapp from `<TOMCAT_HOME>/bin` folder to explode the webapp to edit configurations. 
+2. Run the webapp from `<TOMCAT_HOME>/bin` folder to explode the webapp to edit configurations.
     ```shell script no-line-numbers
    sh catalina.sh start
    ```
-3. Update the `oidc-sample-app.properties` file located in `<TOMCAT_HOME>/webapps/oidc-sample-app/WEB-INF/classes` with the relevant values.    
+3. Update the `oidc-sample-app.properties` file located in `<TOMCAT_HOME>/webapps/oidc-sample-app/WEB-INF/classes` with the relevant values.
      <br>
      <table>
       <tr>
@@ -77,9 +77,9 @@ Click the **Download sample** button to download the sample. You can also choose
         <td>`https://api.asgardeo.io/t/<organization_name>/oauth2/jwks` is the jwks endpoint of Asgardeo. Change the organization name here.</td>
     </tr>
     </table>
-     
+
      <br>
-     
+
       ``` no-line-numbers
       consumerKey=<client ID>
       consumerSecret=<client secret>

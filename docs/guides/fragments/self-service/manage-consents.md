@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable-next-line -->
 When a user logs in to applications, Asgardeo prompts for the user's consent to access the user attributes the application requires. The user can view the consents given to applications and revoke them if needed.
 
 Given below are the steps to follow.

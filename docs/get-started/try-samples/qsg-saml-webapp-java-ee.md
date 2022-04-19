@@ -15,7 +15,7 @@ Follow the steps given below to deploy a sample Java EE web application in your 
 
 Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='Download sample'
@@ -24,7 +24,7 @@ Click the **Download sample** button to download the sample. You can also choose
     externalLink='https://github.com/asgardeo/asgardeo-tomcat-saml-agent/releases/latest/download/sample-app.war'
     v-bind:openInNewTab='true'
 />
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='View source'
@@ -40,7 +40,7 @@ Click the **Download sample** button to download the sample. You can also choose
     ```shell script no-line-numbers
     sh catalina.sh start
     ```
-3. Update the `sample-app.properties` file located in `<TOMCAT_HOME>/webapps/sample-app/WEB-INF/classes` with the relevant values.    
+3. Update the `sample-app.properties` file located in `<TOMCAT_HOME>/webapps/sample-app/WEB-INF/classes` with the relevant values.
      <br>
      <table>
      <thead>
@@ -80,11 +80,17 @@ Click the **Download sample** button to download the sample. You can also choose
       </tr>
       <tr>
         <td>SAML2.EnableResponseSigning</td>
-        <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+        <td>
+        If this configuration is set to <code>true</code>, the application validates the signature in the SAML response. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>.
+        If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.
+        </td>
     </tr>
     <tr>
       <td>SAML2.EnableAssertionSigning</td>
-      <td>If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>. If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.</td>
+      <td>
+      If this configuration is set to <code>true</code>, the application validates the signature in the SAML assertion. If this configuration is set to <code>true</code>, then <a :href="$withBase('/references/app-settings/saml-settings-for-app/#response-signing')">enable response signing from Asgardeo</a>.
+      If this configuration is set to <code>false</code>, the application does not mandate response signing from Asgardeo.
+      </td>
     </tr>
     <tr>
       <td>SAML2.EnableAssertionEncryption</td>
@@ -100,9 +106,9 @@ Click the **Download sample** button to download the sample. You can also choose
     </tr>
     </tbody>
     </table>
-     
+
      <br>
-     
+
       ```  no-line-numbers
       SAML2.AssertionConsumerURL=http://localhost:8080/sample-app/home.jsp
       SAML2.SPEntityId=http://localhost.com:8080/spring-security-saml2-sample/saml/metadata

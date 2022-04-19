@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable-next-line -->
 The account owner can view one's linked social accounts and remove them if needed.
 
 Given below are the steps to follow.

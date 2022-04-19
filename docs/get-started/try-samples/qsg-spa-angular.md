@@ -16,9 +16,9 @@ Follow the steps given below in order to try out the sample application.
 
 ## Download the sample
 
-Click the **Download sample** button to download the sample. You can also choose to view the source before doing so. 
+Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='Download sample'
@@ -27,7 +27,7 @@ Click the **Download sample** button to download the sample. You can also choose
     externalLink='https://github.com/asgardeo/asgardeo-auth-angular-sdk/releases/latest/download/asgardeo-angular-app.zip'
     v-bind:openInNewTab='true'
 />
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='View source'
@@ -57,7 +57,7 @@ Change the `asgardeo-angular-app/src/config.json` file with the relevant values.
 
 ## Run the sample
 
-Run the following command at the root of the project to start the sample application. The app will be accessible at `https://localhost:3000`. 
+Run the following command at the root of the project to start the sample application. The app will be accessible at `https://localhost:3000`.
 
 ```bash no-line-numbers
 npm install && npm start

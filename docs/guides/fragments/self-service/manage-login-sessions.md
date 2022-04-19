@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable-next-line -->
 The account owner can self-manage <a :href="$withBase('/guides/users/manage-sessions/')">active sessions</a> via My Account as follows:
 
 1. Sign in to the My Account portal.

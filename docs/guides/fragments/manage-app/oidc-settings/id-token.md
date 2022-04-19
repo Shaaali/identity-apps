@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-next-line -->
 #### Audience
 Specifies the recipient(s) that this ID token is intended for. By default, the client ID of this application is added as an audience. You can add multiple audiences in the ID token.
 
@@ -55,9 +56,9 @@ A single-use AES secret key, called the Content Encryption Key (CEK), is generat
 Asgardeo uses the public Key of the application (obtained from the <a href="#certificate">certificate</a>) and the asymmetric encryption algorithm specified here to encrypt the generated CEK. The selected algorithm is mentioned as the "alg" in the ID token header.
 
 #### Encryption Method
-The encryption method defines a symmetric encryption algorithm for encrypting ID tokens. 
+The encryption method defines a symmetric encryption algorithm for encrypting ID tokens.
 
-Asgardeo uses a generated CEK value and the symmetric encryption algorithm specified here to encrypt the ID token. The selected encryption method is mentioned as the "enc" in the id token header. 
+Asgardeo uses a generated CEK value and the symmetric encryption algorithm specified here to encrypt the ID token. The selected encryption method is mentioned as the "enc" in the id token header.
 
 #### ID Token expiry time
 Provides the validity period of ID token in seconds. The default value is 3600 seconds.

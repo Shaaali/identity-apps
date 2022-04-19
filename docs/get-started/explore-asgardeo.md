@@ -1,6 +1,6 @@
 # Explore Asgardeo
 
-::: 
+:::
 **WORK IN PROGRESS**
 :::
 
@@ -21,7 +21,7 @@ Asgardeo is an identity as a service (IDaaS) solution that provides a fully inte
 
 ## Asgardeo console
 
- The Asgardeo console is the 
+ The Asgardeo console is the
 
 ## Self-service portals (My Account)
 

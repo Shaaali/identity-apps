@@ -29,4 +29,5 @@ items:
     path: /get-started/try-your-own-app/java-ee-saml/
 ---
 
+<!-- markdownlint-disable-next-line -->
 <CardView/>
