@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-next-line -->
 **Description:**
 <!-- Give a brief description of the issue -->
 
@@ -9,7 +10,7 @@
 
 **Affected Product Version:**
 
-**OS, DB, other environment details and versions:**    
+**OS, DB, other environment details and versions:**
 
 **Steps to reproduce:**
 

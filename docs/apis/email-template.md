@@ -5,5 +5,6 @@ breadcrumb: false
 url: /asgardeo/docs/content/apiDocs/email-template.html
 ---
 
+<!-- markdownlint-disable-next-line -->
 <APIStoplight/>
 
