@@ -1,6 +1,6 @@
 # Add MFA with Email OTP
 
-Email OTP is a One-Time Password (OTP) sent to the user's verified email address, which the user must submit during login (as an additional authentication step). This password is typically valid for a very short period of time. 
+Email OTP is a One-Time Password (OTP) sent to the user's verified email address, which the user must submit during login (as an additional authentication step). This password is typically valid for a very short period of time.
 
 During Email OTP authentication, the user is required to access the verified email account within a short time span to get the OTP. This prevents unauthorized users from accessing the OTP, and thereby adds an extra layer of security to the authentication process.
 
@@ -9,9 +9,9 @@ Follow the instructions given below to configure Multi-Factor Authentication (MF
 ## Prerequisites
 To get started, you need to have an application registered in Asgardeo. If you don't already have one, register an application for one of the following application types.
 
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ::: info Info
 - You can use Email OTP for multi-factor authentication only if a previous authentication step is configured with **username and password** or another factor that can validate user credentials.
@@ -53,7 +53,7 @@ Follow the steps given below.
 3. Go to the **Sign-in Method** tab of the selected application.
 4. Click **Start with default configuration** and add a new step to the login flow.
 5. Click **Add Authentication**, select **Email OTP**, and click **Add**.
-   
+
    ::: info
    This adds Email OTP as an authentication option for the configured step.
    :::

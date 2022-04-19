@@ -10,11 +10,11 @@ Given below are the high-level steps for enabling [conditional authentication](.
 
 There are two ways to add a conditional authentication script:
 
--  Use a <a :href="$withBase('/guides/authentication/conditional-auth/#script-templates')">predefined template</a>.
--  Write a <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">new conditional auth script</a>.
+- Use a <a :href="$withBase('/guides/authentication/conditional-auth/#script-templates')">predefined template</a>.
+- Write a <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">new conditional auth script</a>.
 
 ## Add a secret to the script
-Secrets securely store values associated with external APIs. These secret values are used in conditional authentication scripts when Asgardeo is required to interact with an external API (service endpoint) during the authentication process. You can securely store these secret values on the Asgardeo console and retrieve them whenever required for conditional authentication. 
+Secrets securely store values associated with external APIs. These secret values are used in conditional authentication scripts when Asgardeo is required to interact with an external API (service endpoint) during the authentication process. You can securely store these secret values on the Asgardeo console and retrieve them whenever required for conditional authentication.
 
 ### Create a new secret
 
@@ -47,6 +47,6 @@ Secrets securely store values associated with external APIs. These secret values
 4. Click **Finish** to complete the creation.
 
 ### Delete an existing secret
-1. Enable conditional authentication and click the key icon above the script to delete a secret. <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script"> 
+1. Enable conditional authentication and click the key icon above the script to delete a secret. <img :src="$withBase('/assets/img/guides/secret/add-secret-to-script.png')" alt="Add secret to script">
 2. Click the trash icon next to the secret you wish to delete.
 3. Select the checkbox and confirm your action.

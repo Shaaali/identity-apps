@@ -4,9 +4,9 @@ Learn how to discover the OIDC endpoints in your Asgardeo organization and then 
 
 ## Discover the OIDC endpoints
 
-This section covers how you can configure OIDC-based login for your single page application by discovering the required OIDC endpoints and configuring them in the Asgardeo console. 
+This section covers how you can configure OIDC-based login for your single page application by discovering the required OIDC endpoints and configuring them in the Asgardeo console.
 
-<a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/')">Discover OIDC endpoints</a> has detailed instructions on this. 
+<a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/')">Discover OIDC endpoints</a> has detailed instructions on this.
 
 
 ## Implement authorization code grant in apps
@@ -19,15 +19,15 @@ The guides listed below will help you understand the OIDC login flow using the a
 
 ## Validate ID tokens
 
-This section explains how the signature and the claims are verifieed in the ID token that is sent by Asgardeo to an application. 
+This section explains how the signature and the claims are verifieed in the ID token that is sent by Asgardeo to an application.
 
-<a :href="$withBase('/guides/authentication/oidc/validate-id-tokens/')">Validate ID tokens</a> has detailed instructions on this. 
+<a :href="$withBase('/guides/authentication/oidc/validate-id-tokens/')">Validate ID tokens</a> has detailed instructions on this.
 
 ## Request user information
 
-When Asgardeo sends the ID token to an application, there is user information encoded within it. This can be obtained using the userinfo endpoint. 
+When Asgardeo sends the ID token to an application, there is user information encoded within it. This can be obtained using the userinfo endpoint.
 
-<a :href="$withBase('/guides/authentication/oidc/request-user-info/')">Request user information</a> has detailed instructions on this. 
+<a :href="$withBase('/guides/authentication/oidc/request-user-info/')">Request user information</a> has detailed instructions on this.
 
 ## Token validation by resource servers
 
@@ -43,6 +43,6 @@ The token revocation endpoint can revoke any access granted to both confidential
 
 ## Add logout to application
 
-The logout endpoint is used to terminate the user session at Asgardeo and to log the user out. 
+The logout endpoint is used to terminate the user session at Asgardeo and to log the user out.
 
 <a :href="$withBase('/guides/authentication/oidc/add-logout/')">Add logout to application</a> has detailed instructions on this.

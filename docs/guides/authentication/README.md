@@ -35,15 +35,16 @@ The external identity provider (IdP) authenticates users and issues the identifi
 
 There are several benefits of using identity federation:
 
--   Remove the hassle of manually creating accounts for all of your users.  
+- Remove the hassle of manually creating accounts for all of your users.  
 
-    Typically, when a user signs in to an application, a valid email address and password is provided for authentication. For this to work, the user must already have a registered account in the organization. Identity federation allows users to sign in with a user account registered with another IdP and automatically get access to your application. That is, an SSO connection is established between the external IdP and Asgardeo.
+    Typically, when a user signs in to an application, a valid email address and password is provided for authentication. For this to work, the user must already have a registered account in the organization. Identity federation allows users to sign in with a user account registered with another IdP and automatically get access to your application.
+    That is, an SSO connection is established between the external IdP and Asgardeo.
 
     ::: info
     If the IdP connection is <a :href="$withBase('/guides/authentication/jit-user-provisioning/')">configured with JIT user provisioning</a> in Asgardeo, this act of signing in with the external IdP will also automatically create a local account in the Asgardeo user store.
     :::
 
--   Give users the convenience of choosing their existing, trusted IdP when they sign in or sign up to your organization in Asgardeo.
+- Give users the convenience of choosing their existing, trusted IdP when they sign in or sign up to your organization in Asgardeo.
 
 ### Supported external IdPs
 

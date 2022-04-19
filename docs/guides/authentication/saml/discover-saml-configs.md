@@ -1,8 +1,8 @@
 # Discover SAML endpoints and configs in Asgardeo
 
 You can follow this document to obtain required information and the configurations to:
- - Integrate sign in with Asgardeo for your SAML web application
- - Build login with Asgardeo using a SAML supported library
+- Integrate sign in with Asgardeo for your SAML web application
+- Build login with Asgardeo using a SAML supported library
 
 When configuring SAML based sign in with Asgardeo, you need to know:
 1. SAML IdP endpoints of Asgardeo
@@ -15,7 +15,7 @@ When configuring SAML based sign in with Asgardeo, you need to know:
 To get started, you need to have an application registered in Asgardeo. If you don't have an app registered, go to [Asgardeo console](https://console.asgardeo.io/) to <a :href="$withBase('/guides/applications/register-saml-web-app/')">register a SAML application</a>.
 
 ## Get SAML configs
-You need to know the SAML IdP configurations of Asgardeo if you want to add SAML login to your application. 
+You need to know the SAML IdP configurations of Asgardeo if you want to add SAML login to your application.
 
 There are two options for a SAML application to get the SAML IdP configurations of Asgardeo:
 1. [Use SAML IdP metadata of Asgardeo](#use-saml-metadata)
@@ -23,26 +23,26 @@ There are two options for a SAML application to get the SAML IdP configurations 
 
 ### Use SAML metadata
 
-[SAML metadata](https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf) is an XML document which contains information necessary to integrate a SAML application with a with SAML supported identity provider. 
+[SAML metadata](https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf) is an XML document which contains information necessary to integrate a SAML application with a with SAML supported identity provider.
 
 The SAML IdP metadata document contains:
  1. Endpoints (single sign-on URLs, single logout URLs, etc)
  2. Supported bindings
  3. IdP identifiers (entityID or sometimes called Issuer)
  4. Public certificate
- 
+
 **Sample SAML IdP metadata of Asgardeo**
 
 ```xml no-line-numbers
 <?xml version="1.0" encoding="UTF-8"?>
 <EntityDescriptor
-	xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="accounts.asgardeo.io/t/{organization_name}">
-	<IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" validUntil="2021-07-07T07:01:06.536Z">
-		<KeyDescriptor use="signing">
-			<KeyInfo
-				xmlns="http://www.w3.org/2000/09/xmldsig#">
-				<X509Data>
-					<X509Certificate>MIIC/jCCAeagAwIBAgIECXIstjANBgkqhkiG9w0BAQQFADBBMRAwDgYDVQQDDAdiaWZyb3N0MQ0w
+    xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="accounts.asgardeo.io/t/{organization_name}">
+    <IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" validUntil="2021-07-07T07:01:06.536Z">
+        <KeyDescriptor use="signing">
+            <KeyInfo
+                xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+                    <X509Certificate>MIIC/jCCAeagAwIBAgIECXIstjANBgkqhkiG9w0BAQQFADBBMRAwDgYDVQQDDAdiaWZyb3N0MQ0w
 CwYDVQQLDAROb25lMQ8wDQYDVQQKDAZOb25lIEwxDTALBgNVBAYTBE5vbmUwHhcNMjEwMzIwMDYz
 NTU5WhcNMzEwNDE3MDYzNTU5WjBBMRAwDgYDVQQDDAdiaWZyb3N0MQ0wCwYDVQQLDAROb25lMQ8w
 DQYDVQQKDAZOb25lIEwxDTALBgNVBAYTBE5vbmUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
@@ -56,18 +56,18 @@ v7MORegQP/zFCD8oAHt/3lnhrG1yM/SQDe60Kd5emWqLqMxNQBmmaYQDTY7F5PIdC9KJ/EeKIoz2
 P2QlT5TNOcj9chtRHtsohNNv6Nkew6HZ49Xlm4BsFxhP6J5YPExV4bBw+RsHeiNdcxXNGaNtD5n2
 L4KOHbmKddsL1x/KZ4Q67xzaS50IhNnfC84pOFxmYT2FsB02ZuVv97UsNF+8xv+GIN3qc+pIJEWd
 HFY29KP4da//BDdQrftzYCATe37Um09id/0KMGs=</X509Certificate>
-				</X509Data>
-			</KeyInfo>
-		</KeyDescriptor>
-		<ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/{organization_name}/samlartresolve" index="1"/>
-		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
-		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
-		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
-		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
-	</IDPSSODescriptor>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/{organization_name}/samlartresolve" index="1"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso" ResponseLocation="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://api.asgardeo.io/t/{organization_name}/samlsso"/>
+    </IDPSSODescriptor>
 </EntityDescriptor>
 ```
 
@@ -105,7 +105,7 @@ https://api.asgardeo.io/t/bifrost/identity/metadata/saml2
 
 Some applications and SDKs do not have the capability to dynamically resolve endpoints from  SAML metadata file. You need to configure endpoints manually to support them.
 
-You can login to [Asgardeo Console](https://console.asgardeo.io/) and get endpoints of Asgardeo. 
+You can login to [Asgardeo Console](https://console.asgardeo.io/) and get endpoints of Asgardeo.
 
 1. In the Asgardeo Console, Select **Develop > Application**.
 2. Select the SAML application from the application view.

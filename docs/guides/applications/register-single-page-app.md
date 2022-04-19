@@ -1,6 +1,6 @@
 # Register an OpenID Connect single-page app
 
-To add login to your single-page application with Asgardeo, you need to first register your app in Asgardeo. 
+To add login to your single-page application with Asgardeo, you need to first register your app in Asgardeo.
 
 Your app will be registered as an OpenID Connect single-page app and a client ID will be issued. Note that client secrets are not issued because single-page apps are public clients. However, the <a :href="$withBase('/references/app-settings/oidc-settings-for-app/#proof-key-for-code-exchange-pkce')">PKCE (Proof Key for Code Exchange)</a> extension is enabled by default as a security measure.
 
@@ -39,7 +39,7 @@ To register the app:
 
 ## Disable PKCE (optional)
 
-This single-page application you registered is configured with the [OpenID Connect Authorization Code Grant](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) with [PKCE](https://datatracker.ietf.org/doc/html/rfc7636). 
+This single-page application you registered is configured with the [OpenID Connect Authorization Code Grant](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) with [PKCE](https://datatracker.ietf.org/doc/html/rfc7636).
 
 If your app does not support PKCE, you can disable it as follows:
 

@@ -1,8 +1,8 @@
 # Register a standard-based application
-When you integrate an application with Asgardeo, the first step is to register your app from the Asgardeo console. If you choose the standard-based application type when you register your app, it allows you to configure the protocol settings (OIDC or SAML) from scratch. 
+When you integrate an application with Asgardeo, the first step is to register your app from the Asgardeo console. If you choose the standard-based application type when you register your app, it allows you to configure the protocol settings (OIDC or SAML) from scratch.
 
 You can also use the standard-based application type in the following scenarios:
-- Integrate a web/mobile application with the password grant type. The application types for, single- page applications and, traditional web applications and mobile applications do not support password grant type as it is not recommended. 
+- Integrate a web/mobile application with the password grant type. The application types for, single- page applications and, traditional web applications and mobile applications do not support password grant type as it is not recommended.
 - Access the <a :href="$withBase('/apis/')">management APIs</a> of Asgardeo.
 ::: info
 Alternatively, you can register using an application type that has configurations optimized for specific applications.
