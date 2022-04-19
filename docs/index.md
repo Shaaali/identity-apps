@@ -1,4 +1,3 @@
-<!-- markdownlint-disable-next-line -->
 ---
 home: true
 heroText: Asgardeo Documentation
