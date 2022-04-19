@@ -166,8 +166,8 @@ This is done so that Asgardeo can identify the user attributes in the response s
 
 Consider a scenario where a SAML IdP returns the authenticated user's nickname and profile updated time to Asgardeo in the SAML authentication response as follows:
 
-- <http://schemas.idp.com/nickname>   : nickname
-- <http://schemas.idp.com/updated_at> : profile updated time
+- http://schemas.idp.com/nickname   : nickname
+- http://schemas.idp.com/updated_at : profile updated time
 
 You may want to convert them to the local attribute URI so that the application can receive them in the local attribute URI. If you don't do that mapping, the application will receive the attributes as sent by the external IdP.
 
