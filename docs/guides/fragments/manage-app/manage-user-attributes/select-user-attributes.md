@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable-next-line -->
 You need to first specify the user attributes required for an application. This ensures that when a user logs in, the application can only get access to the user information exposed through these attributes.
 
 To add user attributes to the app:

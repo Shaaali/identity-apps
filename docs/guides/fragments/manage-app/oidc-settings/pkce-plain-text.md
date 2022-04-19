@@ -1,5 +1,6 @@
+<!-- markdownlint-disable-next-line -->
 If this configuration is selected, the applications can use `plain` algorithm. i.e,`code_challenge = code_verifier`. But this is not recommended due to security best practises.
- 
+
  ``` no-line-numbers
 https://api.asgardeo.io/t/bifrost/oauth2/authorize?response_type=code&client_id=Wsoq8t4nHW80gSnPfyDvRbiC__Ea&scope=openidprofile&redirect_uri=http%3A%2F%2Flocalhost%3A5000&code_challenge_method=plain&code_challenge=nAkA5m0EKlFbHFvF_V53Icig9gSnqr-HxH44Lvkne2c
 ```
@@ -9,7 +10,7 @@ _Sample token request_:
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
 
-``` 
+```bash
 curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d' \
