@@ -6,7 +6,7 @@ breadcrumb: false
 
 This guide provides steps to authenticate users to your Angular SPA with OpenID Connect using the [Asgardeo Angular SDK](https://github.com/asgardeo/asgardeo-auth-angular-sdk/blob/main/README.md).
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/angular-logo.svg'
@@ -67,7 +67,7 @@ Provide the following values to the `forRoot()` function of `AsgardeoAuthModule`
 
 Copy and use the following code within your root component to configure `AuthProvider` for your application.
 
-```
+``` ts
 //app.module.ts
 
 import { NgModule } from '@angular/core';
@@ -99,7 +99,7 @@ export class AppModule { }
 <br>
 
 ## Inject `AsgardeoAuthService`
-You can use `AsgardeoAuthService` in your components to access the session state which contains information such as the email address of the authenticated user and the methods that are required for implementing authentication. 
+You can use `AsgardeoAuthService` in your components to access the session state which contains information such as the email address of the authenticated user and the methods that are required for implementing authentication.
 
 Initially import the `AsgardeoAuthService` module from `@asgardeo/auth-angular` to your component.
 
@@ -107,7 +107,7 @@ Initially import the `AsgardeoAuthService` module from `@asgardeo/auth-angular` 
 import { AsgardeoAuthService } from "@asgardeo/auth-angular";
 ```
 
-The `AsgardeoAuthService` should be injected inside the constructor as shown below: 
+The `AsgardeoAuthService` should be injected inside the constructor as shown below:
 
 ``` no-line-numbers
 constructor(public auth: AsgardeoAuthService) { }
@@ -128,15 +128,15 @@ The ```signIn()``` method from `AsgardeoAuthService` can be used to easily imple
 Once the user is logged in with Asgardeo, the application can get the access token issued by Asgardeo.
 
 Refer [getAccessToken](https://github.com/asgardeo/asgardeo-auth-angular-sdk#getaccesstoken) for more information.
- 
-```
+
+``` ts
 getAccessToken() {
     this.auth.getAccessToken().then((accessToken) => console.log(accessToken));
   }
 ```
 
 **Sample** `accessToken`:
- 
+
 ``` no-line-numbers
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
@@ -145,11 +145,11 @@ getAccessToken() {
 
 Once the user is logged in with Asgardeo, the application can get the ID token issued by Asgardeo.
 
-The SDK provides the capability to decode this token and provide the claims. 
+The SDK provides the capability to decode this token and provide the claims.
 
 Copy `getDecodedIdToken()` and call it from a button click.
 
-```
+``` ts
 getDecodedIdToken() {
     this.auth.getDecodedIDToken().then((decodedIdToken) => {
       console.log(decodedIdToken);
@@ -182,7 +182,7 @@ getDecodedIdToken() {
 }
 ```
 
-From this `decodedIdToken` object, you can get, 
+From this `decodedIdToken` object, you can get,
 
 <table>
    <tbody>
@@ -205,15 +205,15 @@ You can loop through the `decodedIdToken` object and get the other claims as wel
 
 ### Get user information
 
-Apart from adding login and logout to your application, you can also get the user information from the Asgardeo SDK. 
+Apart from adding login and logout to your application, you can also get the user information from the Asgardeo SDK.
 
 There are two ways for you to get user information:
 1. Get user information from [decoded ID token](#get-decoded-id-token).
 2. Use `getBasicUserInfo()` API and get basic userinfo.
- 
-Refer [Github documentation](https://github.com/asgardeo/asgardeo-auth-angular-sdk#basicuserinfo) for more information. 
 
-```
+Refer [Github documentation](https://github.com/asgardeo/asgardeo-auth-angular-sdk#basicuserinfo) for more information.
+
+``` ts
 getUserInfo(){
     this.auth.getBasicUserInfo().then((userinfoResponse) => {
       console.log(userinfoResponse);
@@ -264,9 +264,9 @@ Logout can easily be implemented by calling the ```signOut()``` method from `Asg
 ```
 
 
-### Sample code 
+### Sample code
 The following code snippet demonstrates the usage of the ``state$`` observable together with other APIs exposed via ``AsgardeoAuthService``.
-```
+``` ts
 //app.component.ts
 
 import { Component } from '@angular/core';

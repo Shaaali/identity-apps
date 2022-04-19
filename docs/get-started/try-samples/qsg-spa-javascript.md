@@ -18,7 +18,7 @@ Follow the steps given below in order to try out the sample application.
 
 Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='Download sample'
@@ -27,7 +27,7 @@ Click the **Download sample** button to download the sample. You can also choose
     externalLink='https://github.com/asgardeo/asgardeo-auth-spa-sdk/releases/latest/download/asgardeo-html-js-app.zip'
     v-bind:openInNewTab='true'
 />
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='View source'
@@ -38,11 +38,11 @@ Click the **Download sample** button to download the sample. You can also choose
 
 ## Configure the sample
 
-1. Open the `index.html` file located at the root of the project 
+1. Open the `index.html` file located at the root of the project.
 2. Scroll down to the `<script>` tag at the end of the body tag and find `authConfig` object and change the configurations with the relevant values.
-  - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain the client ID</a> from the Asgardeo console.
-  - **baseUrl** - `https://api.asgardeo.io/t/<organization_name>`
-  - **scope** - The list of OIDC scopes that are used for requesting user information. The ``openid`` scope is mandatory to get the ID token. You can add other OIDC scopes such as ``profile`` and ``email``.
+    - **clientID** - You should add the client id of the registered application. Refer <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id')">how to obtain the client ID</a> from the Asgardeo console.
+    - **baseUrl** - `https://api.asgardeo.io/t/<organization_name>`
+    - **scope** - The list of OIDC scopes that are used for requesting user information. The ``openid`` scope is mandatory to get the ID token. You can add other OIDC scopes such as ``profile`` and ``email``.
 
     ``` HTML{2,4,5} no-line-numbers
     const authConfig = {
@@ -55,7 +55,7 @@ Click the **Download sample** button to download the sample. You can also choose
 
 ## Run the sample
 
-Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:3000`. 
+Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:3000`.
 
 ```bash no-line-numbers
 npm install && npm start

@@ -6,7 +6,7 @@ breadcrumb: false
 
 Follow the steps given below to authenticate users to your Java EE web application deployed on Tomcat using the [Asgardeo Tomcat OIDC Agent](https://github.com/asgardeo/asgardeo-tomcat-oidc-agent) which enables OIDC-based login and logout.
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     buttonText='Try out the sample app'
     startIconPath='images/technologies/java-logo.svg'

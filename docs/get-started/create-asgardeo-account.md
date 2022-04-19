@@ -4,7 +4,7 @@ First things first! To start off, you need to join an organization in Asgardeo. 
 
 Let's get you started with Asgardeo!
 
-## Sign up!
+## Sign up
 
 Let's sign up and create your first organization.
 
@@ -22,7 +22,7 @@ An organization in Asgardeo will be your own unique space and it will contain yo
 
     <img :src="$withBase('/assets/img/guides/get-started/confirmation-email-for-self-register.png')" alt="Confirmation email for self registered users" width="500">
 
-3. From your email, click **Confirm** and fill in the information requested to create your Asgardeo account. 
+3. From your email, click **Confirm** and fill in the information requested to create your Asgardeo account.
 
 On successful registration, you will be signed in to the Asgardeo console. You can now manage your own user account and organization. <a :href="$withBase('/guides/your-asgardeo/')">Learn more</a>.
 
@@ -32,7 +32,7 @@ Once you have signed up and created your Asgardeo account, you can [sign in to A
 
 <img :src="$withBase('/assets/img/guides/get-started/sign-in-to-asgardeo.png')" alt="Sign up to Asgardeo">
 
-When you sign in, you can register your apps and start integrating them with Asgardeo for identity and access management. You can also manage the user accounts in your organization. 
+When you sign in, you can register your apps and start integrating them with Asgardeo for identity and access management. You can also manage the user accounts in your organization.
 
 See the <a :href="$withBase('/guides/')">guides</a> to learn more.
 

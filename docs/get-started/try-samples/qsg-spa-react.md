@@ -16,7 +16,7 @@ Following this guide, you will be able to deploy a sample React single page appl
 
 Click the **Download sample** button to download the sample. You can also choose to view the source before doing so.
 
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='Download sample'
@@ -25,7 +25,7 @@ Click the **Download sample** button to download the sample. You can also choose
     externalLink='https://github.com/asgardeo/asgardeo-auth-react-sdk/releases/latest/download/asgardeo-react-app.zip'
     v-bind:openInNewTab='true'
 />
-<Button 
+<Button
     buttonType='grey-outlined-icon'
     displayType='inline-button'
     buttonText='View source'
@@ -55,7 +55,7 @@ Change the `config.json` file found in the `asgardeo-react-app/src` sample folde
 
 ## Run the sample
 
-Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:3000` 
+Run the following command at the root of the project to start up the sample application. The app will be accessible at `https://localhost:3000`
 
 ```bash no-line-numbers
 npm install && npm start
