@@ -1,6 +1,6 @@
 # Manage attributes
 
-An attribute is a piece of information about a particular user. It can be anything associated with the user, such as name, group, preferences, etc. 
+An attribute is a piece of information about a particular user. It can be anything associated with the user, such as name, group, preferences, etc.
 
 User attributes represent information directly related to the user, such as the street address, username, email, first name, and more.
 
@@ -21,7 +21,7 @@ To update the properties of a user attribute:
 1. On the Asgardeo console, click **Manage > Attributes**.
 2. Click **Attributes** to see the list of attributes.
 3. Click **Edit** for the attribute you want to update.
-   <img :src="$withBase('/assets/img/guides/organization/attributes/edit-attributes.png')" width="800" alt="Edit attributes"> 
+   <img :src="$withBase('/assets/img/guides/organization/attributes/edit-attributes.png')" width="800" alt="Edit attributes">
    ::: info Info
      The **Attribute** field specifies the unique identifier of the attribute. It always starts with `http://wso2.org/claims`. This cannot be edited.
    :::
