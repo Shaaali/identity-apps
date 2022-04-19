@@ -428,6 +428,6 @@ components:
         clientCredentials:
           tokenUrl: https://api.asgardeo.io/t/{org-name}/oauth/token
           scopes:
-            internal_login: 
+            internal_login: Grant permission for an authenticated user for self session management.
             internal_session_view: Grant permissions to list seeion info.
             internal_session_delete: Grant permissions to delete sessions.

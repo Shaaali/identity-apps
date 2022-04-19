@@ -665,7 +665,6 @@ paths:
       - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: getUsersByPost
       requestBody:
-        definition: "This is a JSON object that contains relevant values used to search for a user."
         content:
           application/scim+json:
             schema:
@@ -1944,7 +1943,7 @@ components:
       \n\n **Authorization Code OAuth Flow**
       \n\n Authorization URL: 'https://api.asgardeo.io/t/{org-name}/oauth2/authorize'
       \n\n This flow type is used for the ```me``` endpoint of SCIM2 APIs. You can use the following scope for this endpoints.
-        \n\n - ```internal_login```:  
+        \n\n - ```internal_login```: Grant permission for an authenticated user for self management.  
       \n\n**Client Credentials OAuth Flow**
       \n\n Token URL: https://api.asgardeo.io/t/{org-name}/oauth/token
       \n\n This flow type is used for the following endpoints:
