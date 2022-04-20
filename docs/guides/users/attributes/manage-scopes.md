@@ -99,7 +99,6 @@ To add new scopes to your organization:
                 </tr>
             </tbody>
         </table>
-        
 4. Select the attributes that should be bound to the scope and click **Finish**.
     <img :src="$withBase('/assets/img/guides/organization/scopes/select-attributes.png')" alt="Select attributes bound to scope" width=500>
 
