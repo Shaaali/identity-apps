@@ -13,7 +13,7 @@ As shown above, you need to configure your application to get the authorization 
 To get started, you need to have an application registered in Asgardeo. If you don't already have one, <a :href="$withBase('/guides/applications/register-oidc-web-app/')">register a web app with OIDC</a>.
 
 ::: info
-Note that only customers can log in to business applications. Therefore, to test login on your application, you need a <a :href="$withBase('/guides/users/manage-customers')">customer account</a>.
+Note that only users can log in to business applications. Therefore, to test login on your application, you need a <a :href="$withBase('/guides/users/manage-customers')">user account</a>.
 :::
 
 ## Get the authorization code
@@ -44,7 +44,7 @@ https://api.asgardeo.io/t/bifrost/oauth2/authorize?response_type=code&client_id=
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
   <tr>
     <td><code>response_type</code><Badge text="Required" type="mandatory"/></td>
@@ -166,7 +166,7 @@ axios(config)
 </CodeGroupItem>
 </CodeGroup>
 
-This token request has the following parameters: 
+This token request has the following parameters:
 
 ::: info
  See [Token request with authorization code](https://openid.net/specs/openid-connect-core-1_0.html#TokenRequest).
@@ -175,7 +175,7 @@ This token request has the following parameters:
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
    <tr>
       <td><code>code</code><Badge text="Required" type="mandatory"/></td>
@@ -196,7 +196,7 @@ When your application is a confidential client, it needs to identify itself to t
 - Use **client_secret_post**: The `client_id` and `client_secret` are both sent as body parameters in the POST message. See the example given below.
 
   <CodeGroupItem title="cURL" active>
-  ```bash 
+  ```bash
   curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data-urlencode 'code=97c85a59-a758-3a56-95cd-e71a505b493d' \
@@ -211,7 +211,7 @@ When your application is a confidential client, it needs to identify itself to t
 
   <CodeGroupItem title="cURL" active>
 
-  ```bash 
+  ```bash
   curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
   --header 'Authorization: Basic ejhSQjZ5c2REWmhlNFFPMHpKQVF6S2JpNlA0YTp6MEM3OXpsb3B4OGk3QnlPdzhLMTVBOWRwbFlh' \
   --header 'Content-Type: application/x-www-form-urlencoded' \

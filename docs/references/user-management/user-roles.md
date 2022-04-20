@@ -2,7 +2,7 @@
 
 Roles consist of the permissions that are required by users to access the Asgardeo resources such as functions available on the Asgardeo Console, REST APIs, etc.
 
-When you assign a role to a user, you are controlling what the user can do in Asgardeo. 
+When you assign a role to a user, you are controlling what the user can do in Asgardeo.
 
 By default, Asgardeo has the **Administrator** user role. This role includes all administrative permissions in the organization. An organization can have many users with the administrator role. An administrator is a privileged user who has overall access to the organization.
 
@@ -10,10 +10,10 @@ By default, Asgardeo has the **Administrator** user role. This role includes all
 
 3. **Administrative auditor**: This role includes list and view permissions to Asgardeo resources, which is useful in troubleshooting issues and providing support for other users in the organization. This role provides users read only access to the organization.
 
-Only <a :href="$withBase('/guides/users/manage-collaborators/')">Collaborators</a> can be assigned to Asgardeo roles, and a collaborator can be assigned only with one role.
+Only <a :href="$withBase('/guides/users/manage-collaborators/')">Adminstrators</a> can be assigned to Asgardeo roles, and an administrator can be assigned only with one role.
 
 The following tables list the permissions enabled for roles in the organization. -->
-The following list contains the permissions enabled for an Administrator: 
+The following list contains the permissions enabled for an Administrator:
 
 ## User management
 - View users

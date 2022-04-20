@@ -72,12 +72,12 @@ https://api.asgardeo.io/t/<org_name>/oauth2/token \
 
 Shown below is a sample access token that you will receive in the response.
 
-```
+``` text
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
 ## Access the API
-You can now use the access token as an **Authorization Bearer** header to access the management APIs. 
+You can now use the access token as an **Authorization Bearer** header to access the management APIs.
 
 This is a sample cURL command template for the request.
 
@@ -86,7 +86,7 @@ curl -X GET "https://api.asgardeo.io/t/<org_name>/scim2/Users" -H "accept: appli
 ```
 
 ## Best practices
-When invoking the management APIs we recommend you to use the following best practices: 
-- If the ``client_id`` and ``client_secret`` are compromised, anyone can use them to invoke the client credentials grant and get an access token with all the access levels of the admin. Therefore, we highly recommend not to share the client id and client secret. 
+When invoking the management APIs we recommend you to use the following best practices:
+- If the ``client_id`` and ``client_secret`` are compromised, anyone can use them to invoke the client credentials grant and get an access token with all the access levels of the admin. Therefore, we highly recommend not to share the client id and client secret.
 - If required, the administrator can set a higher expiry time for the application token through the application configurations in the Asgardeo console.
 - When requesting the access token, the administrator can request a token with some specific scopes (for example ``internal_email_mgt_update``) and share it with the developer. This way, the developer will not misuse the token.

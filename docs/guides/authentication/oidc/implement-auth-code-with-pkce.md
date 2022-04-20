@@ -1,6 +1,8 @@
 # Implement login using the Authorization Code flow and PKCE
 
-See the instructions given below to implement login with OpenID Connect in your application by using the authorization code flow and PKCE. This method is most suitable for public clients, which are applications that cannot keep the client credentials securely. <a :href="$withBase('/guides/applications/register-single-page-app')">Single-page applications</a> and native mobile applications are some examples for public clients. 
+See the instructions given below to implement login with OpenID Connect in your application by using the authorization code flow and PKCE. This method is most suitable for public clients, which are applications that cannot keep the client credentials securely.
+
+<a :href="$withBase('/guides/applications/register-single-page-app')">Single-page applications</a> and native mobile applications are some examples for public clients.
 
 For public clients, it is recommended to use [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) along with the authorization code grant to mitigate code interception attacks.
 
@@ -15,7 +17,7 @@ As shown above, you need to configure your application to get the authorization 
 To get started, you need to have an application registered in Asgardeo. If you don't already have one, <a :href="$withBase('/guides/applications/register-single-page-app/#register-app')">register a single-page application</a>.
 
 ::: info
-Note that only customers can log in to business applications. Therefore, to test login on your application, you need a <a :href="$withBase('/guides/users/manage-customers')">customer account</a>.
+Note that only users can log in to business applications. Therefore, to test login on your application, you need a <a :href="$withBase('/guides/users/manage-customers')">user account</a>.
 :::
 
 ## Get authorization code
@@ -42,9 +44,9 @@ https://api.asgardeo.io/t/bifrost/oauth2/authorize?scope=openid&response_type=co
 
 <br>
 
-This authorization request takes the following parameters. 
+This authorization request takes the following parameters.
 
-::: info 
+::: info
  See [Authentication Request with Authorization code](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest) and [Authorization Request with PKCE](https://datatracker.ietf.org/doc/html/rfc7636#page-9)
 :::
 
@@ -53,7 +55,7 @@ This authorization request takes the following parameters.
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
   <tr>
     <td><code>response_type</code><Badge text="Required" type="mandatory"/></td>
@@ -202,7 +204,7 @@ curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' 
 </CodeGroupItem>
 
 
-This token request takes the following parameters. 
+This token request takes the following parameters.
 
 ::: info
  See [Token request with authorization code](https://openid.net/specs/openid-connect-core-1_0.html#TokenRequest) and [Token request with PKCE](https://datatracker.ietf.org/doc/html/rfc7636#page-10).
@@ -212,7 +214,7 @@ This token request takes the following parameters.
 <table>
   <tr>
     <th>Request Parameter</th>
-    <th>Description</th> 
+    <th>Description</th>
   </tr>
   <tr>
     <td><code>grant_type</code><Badge text="Required" type="mandatory"/></td>

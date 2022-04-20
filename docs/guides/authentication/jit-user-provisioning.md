@@ -6,10 +6,10 @@ This guide explains the concept of Just-In-Time user provisioning, why and when 
 
 Just-in-Time (JIT) user provisioning is a method used to store a user's identity and user claims in the Asgardeo user store when the user is authenticated through an <a :href="$withBase('/guides/authentication/#manage-connections')">external identity provider (IdP)</a>.
 
-The flow of JIT user provisioning is as follows: 
+The flow of JIT user provisioning is as follows:
 
-1. When an application initiates an authentication request, the user gets redirected to Asgardeo. 
-2. If the user has used an external identity provider for authentication, Asgardeo redirects the user to the selected external IdP. 
+1. When an application initiates an authentication request, the user gets redirected to Asgardeo.
+2. If the user has used an external identity provider for authentication, Asgardeo redirects the user to the selected external IdP.
 3. Asgardeo receives a positive authentication response from the external IdP with the user information.
 4. JIT provisioning is triggered and Asgardeo creates a user account in its internal user store along with the user claims obtained from the authentication response.
 
@@ -19,10 +19,10 @@ With this process, new user accounts are automatically provisioned to Asgardeo t
 
 ## Prerequisites
 
-First, the external IdP should be registered in Asgardeo as a connection. 
+First, the external IdP should be registered in Asgardeo as a connection.
 
 ::: info
-Learn more about how to enable login to your application using the following external IdPs: 
+Learn more about how to enable login to your application using the following external IdPs:
 - <a :href="$withBase('/guides/authentication/social-login/add-facebook-login/')">Facebook</a>
 - <a :href="$withBase('/guides/authentication/social-login/add-google-login/')">Google</a>
 - <a :href="$withBase('/guides/authentication/social-login/add-github-login/')">Github</a>
@@ -41,7 +41,7 @@ To disable JIT user provisioning for an external IdP:
 1. On the Asgardeo console, click **Develop > Connections** and select the IdP.
 2. Go to the **Advanced** tab of the selected IdP.
 3. Clear the **Just-in-Time User Provisioning** checkbox.
-    
+
     <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-enabled.png')" alt="JIT user provisioning configuration is enabled">
 
 4. Click **Update** to save.
@@ -61,18 +61,19 @@ To enable JIT user provisioning for an external IdP:
 1. On the Asgardeo console, click **Develop > Connections** and select the IdP.
 2. Go to the **Advanced** tab of the selected IdP.
 3. Check the **Just-in-Time User Provisioning** checkbox.
-    
+
     <img :src="$withBase('/assets/img/guides/jit-provisioning/jit-disabled.png')" alt="JIT User Provisioning Config Disabled">
 
 4. Click **Update** to save.
 
 ::: info
-When JIT is enabled, Asgardeo will create a user profile and store the user attributes recieved from the external IdP. 
+When JIT is enabled, Asgardeo will create a user profile and store the user attributes recieved from the external IdP.
 :::
 
 ## Troubleshoot sign-in flow errors
 
-If you have disabled JIT provisioning for an IdP, you need to validate its effect on your applications that use <a :href="$withBase('/guides/authentication/mfa/')">multi-factor authentication</a>. This is because certain MFA mechanisms (such as TOTP and EmailOTP) require the login users to have local accounts in Asgardeo. Therefore, the application’s sign-in flow involving JIT-disabled IdPs and the MFA options will break by default. 
+If you have disabled JIT provisioning for an IdP, you need to validate its effect on your applications that use <a :href="$withBase('/guides/authentication/mfa/')">multi-factor authentication</a>. This is because certain MFA mechanisms (such as TOTP and EmailOTP) require the login users to have local accounts in Asgardeo.
+Therefore, the application’s sign-in flow involving JIT-disabled IdPs and the MFA options will break by default.
 
 In such scenarios, you will see the following warning in the application’s sign-in flow:
 
@@ -80,10 +81,10 @@ In such scenarios, you will see the following warning in the application’s sig
 
 To avoid such errors, you can use one of the following options:
 - Conditionally skip MFA
-    
+
     You can skip MFA for external connections during the login flow by using the
     following example script:
-    
+
     ```js
     var localAuthenticator = 'LOCAL';
     var onLoginRequest = function (context) {

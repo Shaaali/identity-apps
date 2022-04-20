@@ -8,7 +8,7 @@ Follow this guide to register an OIDC IdP in Asgardeo and add it to the login fl
 
 You need to register an OpenID Connect application with the external identity provider. Follow the identity provider's documentation to know how to register an OIDC application.
 
-You can use the following URL as the **callbackURL** of the application. 
+You can use the following URL as the **callbackURL** of the application.
 
 ```bash no-line-numbers
 https://api.asgardeo.io/t/<organization_name>/commonauth
@@ -33,9 +33,9 @@ Now, let's register the OIDC IdP in Asgardeo.
 2. Click **New Connections** and select **Standard-Based IdP**.
 3. Provide a unique **identity provider name**, select **OpenID Connect**, and click **Next**.
 
-   <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/create-oidc-enterprise-idp-wizard.png')" alt="Create OIDC Enterprise IDP in Asgardeo"> 
+   <img :src="$withBase('/assets/img/guides/idp/oidc-enterprise-idp/create-oidc-enterprise-idp-wizard.png')" alt="Create OIDC Enterprise IDP in Asgardeo">
 
-4. Enter the following details of the external OIDC identity provider and click **Next**:    
+4. Enter the following details of the external OIDC identity provider and click **Next**:
 
     <table>
         <tr>
@@ -61,27 +61,27 @@ Now, let's register the OIDC IdP in Asgardeo.
     </table>
 
 5. (Optional) Provide the mode of certificate configuration.
-    
+
     ::: info
     You can either configure a JWKS endpoint or upload a certificate of the external party. This helps to validate the signature of the assertions sent by the external identity provider.
     :::
 
-    -  **JWKS endpoint**: The JWKS endpoint of the external identity provider.
-    -  **Use PEM certificate** : Upload or paste the public certificate of the external identity provider. The certificate should be in PEM format.  
+    - **JWKS endpoint**: The JWKS endpoint of the external identity provider.
+    - **Use PEM certificate** : Upload or paste the public certificate of the external identity provider. The certificate should be in PEM format.  
         ::: details If you have certificate in other formats such as `.crt`, `.cer` or `.der`, expand here to see how you can convert them to PEM format using <a href="https://www.openssl.org/" target="_blank">OpenSSL</a>
          **Convert CRT to PEM**
          ```bash no-line-numbers
          openssl x509 -in cert.crt -out cert.pem
-         ``` 
+         ```
         **Convert CER to PEM:**
          ```bash no-line-numbers
          openssl x509 -in cert.cer -out cert.pem
          ```  
         **Convert DER to PEM:**
-          ```bash no-line-numbers
-          openssl x509 -in cert.der -out cert.pem
+         ```bash no-line-numbers
+         openssl x509 -in cert.der -out cert.pem
          ```
-        :::     
+        :::
 
 6. Click **Finish** to complete the registration.
 
@@ -89,16 +89,17 @@ Now, let's register the OIDC IdP in Asgardeo.
 Once the OIDC identity provider is created, you can configure <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-settings')">additional OIDC settings</a> from the **Protocol** tab.
 :::
 
-Asgardeo requests for the **openid** scope from the external identity provider. If you need more attributes from the external identity provider, you can configure `scope` as an <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-query-parameters')">additional query param</a>.   For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
-      
+Asgardeo requests for the **openid** scope from the external identity provider. If you need more attributes from the external identity provider, you can configure `scope` as an <a :href="$withBase('/references/idp-settings/oidc-settings-for-idp/#additional-query-parameters')">additional query param</a>.
+For example, you can configure the key as `scope` and the value as `openid profile` (i.e, `scope=openid profile`).
+
 ## Enable the OIDC IdP for login
 
 ::: info Before you begin
 You need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types:
 
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
 :::
 
 1. On the Asgardeo console, click **Develop > Applications**.

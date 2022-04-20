@@ -37,7 +37,7 @@ This function is called when the initial login request is received by Asgardeo. 
 
 ### Execute a step
 
-`executeStep()` 
+`executeStep()`
 
 This function is called to execute an authentication step in the login flow. Authentication steps need to be configured before using this function. This method accepts an object as a parameter and should include the parameters listed below.
 

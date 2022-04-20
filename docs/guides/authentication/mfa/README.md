@@ -8,14 +8,14 @@ Authentication factors in MFA relies on two or more independent credentials of t
 - **Possession factor** - Something you have, such as a FIDO key or an ATM card.
 - **Inherence factor**  - Something you are, such as your fingerprint or your iris pattern.
 
-On Asgardeo, the default authentication mechanism is **username and password**. 
+On Asgardeo, the default authentication mechanism is **username and password**.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/mfa/one-factor-auth.png')" alt="Configuring only username and password authentication">
 
-The Asgardeo console allows configuring multi-step authentication where you can define an authentication chain containing different authenticators in each step. By adding different authenticators, you can achieve a login flow secured by multiple factors. 
+The Asgardeo console allows configuring multi-step authentication where you can define an authentication chain containing different authenticators in each step. By adding different authenticators, you can achieve a login flow secured by multiple factors.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/mfa/mfa-config.png')" alt="Configuring MFA with username and password authentication">
- 
+
 You can choose to replace the **username and password** authentication with social or enterprise logins and add a few more authenticators to build your authentication chain.
 
 ## Configure multi-factor authentication

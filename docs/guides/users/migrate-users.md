@@ -17,14 +17,14 @@ You may need to migrate users from an external IdP to Asgardeo if the organizati
 You can contact the Asgardeo team at **asgardeo-help@wso2.com** for guidance on migrating your existing user base from your current IdP to your Asgardeo user store.
 
 ::: info
-Make sure you use your owner account or a collaborator account with admin privileges to send the request.
+Make sure you use your owner account or an administrator account with admin privileges to send the request.
 :::
 
 Alternatively, you can use traditional approaches to user migration. However, these methods run with challenges as listed in the section below.
 
 ## Challenges of traditional user migration
 
-Identity providers generally support various automatic user migration methods, which help administrators import user records (including group details, attributes, and other characteristics) from external systems. 
+Identity providers generally support various automatic user migration methods, which help administrators import user records (including group details, attributes, and other characteristics) from external systems.
 
 These traditional methods come with various challenges as explained below, which become an operational overhead for administrators and provide a bad user experience:
 

@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable-next-line -->
 By enabling this option, Asgardeo mandates an application to use [PKCE](https://datatracker.ietf.org/doc/html/rfc7636) with the <a :href="$withBase('/guides/authentication/oidc/implement-auth-code-with-pkce/#get-tokens')">authorization code flow</a>. The application has to send a `code challenge` in the authorization request and the corresponding `code verifier` in the token request. Asgardeo supports `SHA-256` and `plain`.
 
 _Sample authorization request_
@@ -11,7 +11,7 @@ _Sample token request_:
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
 
-``` 
+```bash
 curl --location --request POST 'https://api.asgardeo.io/t/bifrost/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'code=60cb4ba7-b7b2-3f2f-8319-58122f1b2f5d' \

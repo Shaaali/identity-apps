@@ -1,6 +1,6 @@
 # Enable user attributes for OpenID Connect apps
 
-Asgardeo can share user attributes in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with OpenID Connect applications. 
+Asgardeo can share user attributes in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with OpenID Connect applications.
 
 ## Configure user attributes to share
 Follow the steps given below to configure the user attributes from the Asgardeo console and to share them with the application.
@@ -19,7 +19,7 @@ Follow the steps given below to configure the user attributes from the Asgardeo 
 
 Let's see how this flow works in Asgardeo.
 
-Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a customer tries to log in to your app.
+Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a user tries to log in to your app.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/oidc/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 
@@ -51,11 +51,11 @@ If the user consents to share attributes with the application, Asgardeo returns 
 
 #### Subject Attribute
   
-The subject attribute is the unique identifer for a customer. The application receives this value via the [subject attribute](#subject-attribute) parameter in the [ID token](#id-token). In Asgardeo, the user ID assigned to a customer is used as the subject attribute. 
+The subject attribute is the unique identifer for a user. The application receives this value via the [subject attribute](#subject-attribute) parameter in the [ID token](#id-token). In Asgardeo, the user ID assigned to a user is used as the subject attribute.
 
 #### ID token
 
-Once the <a :href="$withBase('/guides/authentication/oidc/implement-auth-code/#get-tokens')">application calls the token endpoint</a>, Asgardeo sends the ID token in the response. 
+Once the <a :href="$withBase('/guides/authentication/oidc/implement-auth-code/#get-tokens')">application calls the token endpoint</a>, Asgardeo sends the ID token in the response.
 
 All the user attributes that are requested by scopes are returned as claims in the ID token. The application can decode the ID token to view the claims.
 

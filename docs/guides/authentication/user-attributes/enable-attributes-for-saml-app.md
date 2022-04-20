@@ -1,6 +1,6 @@
 # Enable user attributes for SAML apps
 
-Asgardeo can share user attributes in the customer's <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user profile</a> with the applications. This guide walks you through the steps for sharing user attributes with SAML applications. 
+Asgardeo can share user attributes in the <a :href="$withBase('/guides/users/manage-customers/#manage-the-customer-s-profile')">user's profile</a> with the applications. This guide walks you through the steps for sharing user attributes with SAML applications.
 
 ## Prerequisite
 
@@ -18,12 +18,12 @@ Follow the steps given below to configure the user attributes from the Asgardeo 
 
 In the user attribute configurations, you can either choose default attribute names or define application-specific user attribute names.
 
-To configure application-specific attribute names, you need to map the selected user attributes to application-specific user attributes. 
+To configure application-specific attribute names, you need to map the selected user attributes to application-specific user attributes.
 
 To perform mapping:
 1. Click **Enable Mapping** in the **User Attributes** section.
 2. Change the **Mapped user attribute** for the selected attribute.
-   
+
    <img :src="$withBase('/assets/img/guides/applications/attributes/saml/enable-mapping.png')" alt="Eable mapping">
 
 This ensures that the application receives attributes based on the name that is configured.
@@ -37,15 +37,15 @@ This ensures that the application receives attributes based on the name that is 
 ### Select the subject attribute
 
 The subject attribute is used for exchanging information about the user. The subject is represented by the **subject** attribute in the SAML assertion.
- 
+
 By default, Asgardeo shares **username** as the subject. You can define any user attribute as the subject.
 
 To define a different attribute as the subject:
 
-1. <a :href="$withBase('#select-user-attributes')">Select it as a user attribute</a>. 
+1. <a :href="$withBase('#select-user-attributes')">Select it as a user attribute</a>.
 2. Go to the **Subject** section under **User Attributes**.
 
-   <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo"> 
+   <img :src="$withBase('/assets/img/guides/applications/attributes/saml/select-sub-attribute.png')" alt="Select subject attribute in Asgardeo">
 
 3. Select an attribute as the subject from the **Subject attribute** list.
 4. Click **Update**.
@@ -54,7 +54,7 @@ To define a different attribute as the subject:
 
 Let's see how this flow works in Asgardeo.
 
-Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a customer tries to log in to your app.
+Once you have configured the user attributes that are required for your application, Asgardeo implements the following process when a user tries to log in to your app.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/applications/attributes/saml/how-it-works.png')" alt="Provides consent for attributes in Asgardeo">
 
@@ -73,7 +73,7 @@ Learn more about <a :href="$withBase('/guides/authentication/manage-consent-for-
 
 ### Shares attributes with the app
 
-Asgardeo will share these user attributes with an application given the user has provided consent. User attributes along with the **subject** attribute are shared via SAML assertions. 
+Asgardeo will share these user attributes with an application given the user has provided consent. User attributes along with the **subject** attribute are shared via SAML assertions.
 
 #### Subject attribute
 
@@ -83,13 +83,13 @@ _A sample Subject element found in a SAML assertion is given below:_
 
 ```xml no-line-numbers
 <saml2:Subject>
-	<saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">alice@bifrost.com</saml2:NameID>
-	<saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
-			<saml2:SubjectConfirmationData InResponseTo="immfmmacmiaomepphphhlfokfggpffkleokajfbg"
-											NotOnOrAfter="2021-07-13T06:09:33.594Z"
-											Recipient="http://localhost:8081/sample-app/home.jsp"
-											/>
-	</saml2:SubjectConfirmation>
+   <saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">alice@bifrost.com</saml2:NameID>
+   <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+         <saml2:SubjectConfirmationData InResponseTo="immfmmacmiaomepphphhlfokfggpffkleokajfbg"
+                                 NotOnOrAfter="2021-07-13T06:09:33.594Z"
+                                 Recipient="http://localhost:8081/sample-app/home.jsp"
+                                 />
+   </saml2:SubjectConfirmation>
 
 </saml2:Subject>
 ```

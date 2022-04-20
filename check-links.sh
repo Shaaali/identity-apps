@@ -18,8 +18,13 @@ cd docs/.vuepress/dist || exit
 serve -p $PORT &
 sleep 5
 
+# Some services like `https://docs.github.com` or `https://api.github.com` require a valid user-agent header.
+# The deafult user agent header set by the `broken link checker` lib doesn't seem to work in some cases.
+# See https://stackoverflow.com/a/39912696
+USER_AGENT=""
+
 # https://www.npmjs.com/package/broken-link-checker
-if blc --input http://localhost:$PORT/asgardeo/docs/ -grf; then
+if blc --input http://localhost:$PORT/asgardeo/docs/  --user-agent="$USER_AGENT" -grf; then
   echo "No broken links found."
   exit 0
 else

@@ -1,4 +1,4 @@
-
+<!-- markdownlint-disable-next-line -->
 To change the current password via My Account, the account owner should follow these steps. Alternativaly, the account owner can <a :href="$withBase('/guides/user-self-service/customer-password-recovery/')">reset the password</a> from the application login page.
 
 1. Sign in to the My Account portal.

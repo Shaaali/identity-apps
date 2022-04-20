@@ -1,6 +1,6 @@
-# Self-service for owners and collaborators
+# Self-service for owners and administrators
 
-If you are an owner or collaborator in an Asgardeo organization, go to the [My Account portal](https://myaccount.asgardeo.io) to easily access and self-manage your information from anywhere.
+If you are an owner or an administrator in an Asgardeo organization, go to the [My Account portal](https://myaccount.asgardeo.io) to easily access and self-manage your information from anywhere.
 
 You can perform the following activities on this portal:
 - Update profile information
@@ -22,7 +22,7 @@ You are now automatically signed in to the portal.
 
 ## Update profile information
 
-The user details displayed in your profile corresponds to the default attributes that are enabled for the organization. 
+The user details displayed in your profile corresponds to the default attributes that are enabled for the organization.
 
 To update your profile information via My Account:
 
@@ -30,10 +30,10 @@ To update your profile information via My Account:
 2. Click **Personal Info** to see the profile information.
    <img :src="$withBase('/assets/img/guides/organization/self-service/myaccount/update-profile-info.png')" alt="Update user profile from MyAccount">
 
-3. If required, update the editable information. 
+3. If required, update the editable information.
 
 
-## Change password 
+## Change password
 <CommonGuide guide='guides/fragments/self-service/change-password.md'/>
 
 ## Manage linked social accounts

@@ -1,12 +1,12 @@
 # SAML settings for IdPs
-You can find the SAML IdP related settings under **settings** section of the selected SAML IdP. 
+You can find the SAML IdP related settings under **settings** section of the selected SAML IdP.
 
 ## Basic settings
 
 ### Service provider entity ID
 Also known as  issuer. Specifies the entityID of Asgardeo which acts as the application. This value will be used as the `<saml2:Issuer>` in the SAML requests initiated from Asgardeo to external Identity Provider (IdP). You need to provide a unique value as the service provider entityId.
 
-It is recommended to use a valid urn(e.g: urn:asgardeo:id) as the entityID. 
+It is recommended to use a valid urn(e.g: urn:asgardeo:id) as the entityID.
 
 ### Identity provider Single Sign-On URL
 Single sign-on URL of the external IdP. This is where Asgardeo will send its authentication requests.
@@ -15,7 +15,7 @@ Single sign-on URL of the external IdP. This is where Asgardeo will send its aut
 The Assertion Consumer Service (ACS) URL determines where Asgardeo expects the external identity provider to send the SAML response.
 
 ### Identity provider entity ID
-Also known as the issuer of identity provider. This is the `<saml2:Issuer>` value specified in the SAML responses issued by the external IdP. 
+Also known as the issuer of identity provider. This is the `<saml2:Issuer>` value specified in the SAML responses issued by the external IdP.
 
 ### Identity provider NameID format
 Name ID defines the name identifier formats supported by the external IdP. Name identifier is how Asgardeo communicates with external IdP regarding a user.
@@ -54,7 +54,7 @@ Specifies if SAML2 authentication request to the external IdP from Asgardeo must
 Used as the signing algorithm to sign the authentication request and logout request.
 
 ### Digest algorithm
-Used as the digest algorithm in authentication request and logout request. 
+Used as the digest algorithm in authentication request and logout request.
 
 ## Advanced
 
@@ -73,26 +73,26 @@ Asgardeo supports sending additional information to your SAML external IdP in th
 
 You can check below examples when an application developer wants to send _login_hint_ as a query param to external provider.
 
-#### Fixed query params    
-Here Asgardeo sends the fixed query param (e.g: `login_hint`) to the external identity provider in the login request.    
-   - **Sample Query Param:**   
+#### Fixed query params
+Here Asgardeo sends the fixed query param (e.g: `login_hint`) to the external identity provider in the login request.
+    - **Sample Query Param:**
     `login_hint=none`
       <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/queryparam/fixed-query-param.png')" alt="Add fixed query param in enterprise IDP config">
 #### Dynamic query params
-1.  Query param value sent in the application login request
-    - **Sample Query Param:**     
-       `login_hint={login_hint_value}` 
-      <br> 
-    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/queryparam/dynamic_query_param.png')" alt="Add dynamic query param in enterprise IDP config"> 
+1. Query param value sent in the application login request
+    - **Sample Query Param:**
+       `login_hint={login_hint_value}`
+      <br>
+    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/queryparam/dynamic_query_param.png')" alt="Add dynamic query param in enterprise IDP config">
     - If the application does not send the query param `login_hint_value` in the login request, the particular parameterized query param  will not be sent to the external SAML identity provider.
-                   
+
 2. Query param value resolved in a conditional authentication script
-   - **Sample Query Param:**     
-    `login_hint=$authparam{login_hint_value}` 
-    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/queryparam/dynamic_query_param_from_conditional_auth.png')" alt="Add dynamic query param in enterprise IDP config"> 
+   - **Sample Query Param:**
+    `login_hint=$authparam{login_hint_value}`
+    <img :src="$withBase('/assets/img/guides/idp/saml-enterprise-idp/queryparam/dynamic_query_param_from_conditional_auth.png')" alt="Add dynamic query param in enterprise IDP config">
     Here _login_hint_value_ needs to be resolved from the conditional auth script.
     <br>  
-    
+
    - **Sample conditional auth script:**  
        ```js
       // Step 1: username and password authentication  

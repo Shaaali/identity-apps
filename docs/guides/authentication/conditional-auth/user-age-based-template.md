@@ -10,12 +10,12 @@ Consider a scenario where users who are younger than 18 years should be prevente
 
 ## Prerequisites
 
--   You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
-    -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
-    -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
-    -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
+  - <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+  - <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+  - <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
--   Go to the customer's user profile and update the birth date so that the current age is below 18 years. For instructions, see <a :href="$withBase('/guides/applications/register-single-page-app/')">Manage user profiles</a>.
+- Go to the user's profile and update the birth date so that the current age is below 18 years. For instructions, see <a :href="$withBase('/guides/applications/register-single-page-app/')">Manage user profiles</a>.
 
 ## Configure the login flow
 
@@ -113,11 +113,11 @@ var getAge = function(birthDate) {
 
 Let's look at how this script works.
 
-1.  The **validateDOB** function validates whether the provided date of birth is correct.
-2.  The **getAge** function calculates the age based on the configured birth date.
-3.  When step 1 of the authentication flow is complete, the **onLoginRequest** function checks whether the
-age of the user is above the configured age limit. 
-4.  If the age is below the configured limit, the user is directed to the
+1. The **validateDOB** function validates whether the provided date of birth is correct.
+2. The **getAge** function calculates the age based on the configured birth date.
+3. When step 1 of the authentication flow is complete, the **onLoginRequest** function checks whether the
+age of the user is above the configured age limit.
+4. If the age is below the configured limit, the user is directed to the
 configured error page.
 
 ::: info

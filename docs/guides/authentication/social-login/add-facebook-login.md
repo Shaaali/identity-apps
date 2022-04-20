@@ -75,14 +75,14 @@ After the Facebook identity provider is created, go to the **Settings** tab and 
 Asgardeo needs these permissions to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Facebook to the app. You can read the [Facebook documentation](https://developers.facebook.com/docs/permissions/reference) to learn more.
 :::
 
-##  Enable Facebook login
+## Enable Facebook login
 
 ::: info Before you begin
 You need to have an application registered in Asgardeo. If you don't already have one, register an application based on one the following application types:
 
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
 :::
 
 1. On the Asgardeo console, go to **Develop > Applications**.
@@ -105,6 +105,6 @@ Follow the steps given below.
 4. Log in to Facebook with an existing user account.
 5. The user is now redirected to the application and logged in.
 ::: info
-When a user successfully logs in with Facebook for the first time, a **customer** account is created in the Asgardeo console with the Facebook username. This new user account will be managed by Facebook.
+When a user successfully logs in with Facebook for the first time, a **user** account is created in the Asgardeo console with the Facebook username. This new user account will be managed by Facebook.
 :::
 

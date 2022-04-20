@@ -19,7 +19,7 @@ Follow the steps given below to authenticate users to your JavaScript SPA with O
 
 ## Install the SDK
 
-There are two ways to integrate the ```@asgardeo/auth-spa``` SDK into your javascript application. 
+There are two ways to integrate the ```@asgardeo/auth-spa``` SDK into your javascript application.
 
 ### Load from a CDN
 
@@ -51,7 +51,7 @@ To initialize the SDK, use the `getInstance()` function in the SDK and provide t
     <td>This is the Client ID of your OIDC app. See <a :href="$withBase('/guides/authentication/oidc/discover-oidc-configs/#obtain-client-id-of-the-app')">how to obtain client ID</a>.</td>
   </tr>
   <tr>
-    <td><code>serverOrigin</code></td>
+    <td><code>baseUrl</code></td>
     <td>This is the Asgardeo server's host name along with your organization name.</td>
   </tr>
   <tr>
@@ -68,17 +68,17 @@ To initialize the SDK, use the `getInstance()` function in the SDK and provide t
   </tr>
 </table>
 
-```
+``` js
 <script>
 // This client is a class and can be instantiated as follows.
 var auth = AsgardeoAuth.AsgardeoSPAClient.getInstance();
 
 // Once instantiated, the  client can be initialized by passing the relevant parameters such as the server origin, redirect URL, client ID, etc.
 auth.initialize({
-   signInRedirectURL: "https://localhost:5000",
-   signOutRedirectURL: "https://localhost:5000",
+   signInRedirectURL: "https://localhost:3000",
+   signOutRedirectURL: "https://localhost:3000",
    clientID: "<clientId>",
-   serverOrigin: "https://api.asgardeo.io/t/<organization_name>",
+   baseUrl: "https://api.asgardeo.io/t/<organization_name>",
    scope: [ "openid","profile" ]
 });
 </script>
@@ -103,11 +103,11 @@ This method is used to authenticate the users and to get the authorization code 
 
 ### Get access token
 
-Add the following script to the html file and call it from a button. This is used to get the access token from the SDK. 
+Add the following script to the html file and call it from a button. This is used to get the access token from the SDK.
 
 See the [SDK reference](https://github.com/asgardeo/asgardeo-auth-js-sdk#getAccessToken) for more information.
 
-``` 
+``` js
 <script>
 
 async function getToken() {
@@ -129,7 +129,7 @@ To get the decoded token, call `getDecodedIdToken()` from a button click as show
 
 See the [SDK reference](https://github.com/asgardeo/asgardeo-auth-spa-sdk#getdecodedidtoken) for details.
 
-``` 
+``` js
 <script>
 // Use this function in a button to simply get decoded ID token.
 function getDecodedIdToken(){
@@ -193,10 +193,10 @@ There are two ways for you to get user information:
 - Get user information from the [decoded ID token](#get-decoded-id-token).
 - Use the `getBasicUserInfo()` API and get basic user information.
 
-To get the basic user information from the SDK, copy the following script and call the `getBasicUserInfo()` from a button. 
+To get the basic user information from the SDK, copy the following script and call the `getBasicUserInfo()` from a button.
 See the [SDK reference](https://github.com/asgardeo/asgardeo-auth-spa-sdk#getBasicUserInfo) for details.
 
-```
+``` js
 <script>
 // Use this function in a button to simply get user info.
 function getBasicUserInfo(){
@@ -241,7 +241,7 @@ You can loop through the user info response(`userinfoResponse`), and get the fol
 
 ### Add logout
 
-In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo. 
+In the previous steps, you implemented login for your app and enabled your app to get some information about the user that is logged in. Now you need a way to log users out of your application and remove the user sessions from Asgardeo.
 
 See the [signOut API reference](https://github.com/asgardeo/asgardeo-auth-spa-sdk#signout) for advanced usages.
 
@@ -252,7 +252,7 @@ See the [signOut API reference](https://github.com/asgardeo/asgardeo-auth-spa-sd
 ### Sample code
 The following code snippet demonstrates the process of accessing the authenticated user's information together with other functions from the SDK.
 
-```
+``` js
    <div>
       <!-- Authenticated View --->
       <div id="authenticated-view" style="display: none;">

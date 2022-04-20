@@ -1,8 +1,9 @@
+<!-- markdownlint-disable-next-line -->
 #### Token type  
 In additional to usual opaque tokens, Asgardeo supports self-contained JWT tokens as well.
 
 1. **Opaque**: These types of tokens are plain text tokens. If a resource server wants to know information related to opaque token, it has to query introspection endpoint and get the information related to tokens.
-   
+
 ```json no-line-numbers
 {
 "access_token": "9fac7747-bb2d-46be-bef2-a95b2f69f8b2",
@@ -12,7 +13,7 @@ In additional to usual opaque tokens, Asgardeo supports self-contained JWT token
 "expires_in": 3522
 }
 ```
-      
+
 2. **JWT token**: JWT tokens are self-contained verifiable access tokens. They contain information related to tokens. If a resource server wants to know the information related to that token, it can decode the token and get the required information without any additional network calls.
 
 ```json no-line-numbers

@@ -1,24 +1,24 @@
 # Manage OIDC Scopes
 
-[OpenID Connect (OIDC) Scopes](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) are a convenient way of limiting the amount of user information that an application can access when a user logs in. 
+[OpenID Connect (OIDC) Scopes](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) are a convenient way of limiting the amount of user information that an application can access when a user logs in.
 
-In Asgardeo, each piece of user information is mapped to a <a :href="$withBase('/guides/users/attributes/manage-attributes/')">user attribute</a> and an OIDC scope corresponds to a group of user attributes (or claims). For example, see the <a :href="$withBase('#default-oidc-scopes')">default OIDC scopes</a> and the list of corresponding user attributes. 
+In Asgardeo, each piece of user information is mapped to a <a :href="$withBase('/guides/users/attributes/manage-attributes/')">user attribute</a> and an OIDC scope corresponds to a group of user attributes (or claims). For example, see the <a :href="$withBase('#default-oidc-scopes')">default OIDC scopes</a> and the list of corresponding user attributes.
 
-::: info 
+::: info
 An application is **not** allowed access to user attributes that are beyond the scopes requested by the application.
 :::
 
 If your application needs to retrieve a certain set of user attributes when a user logs in, you can use the scopes relevant to those attributes when you <a :href="$withBase('#use-scopes-in-client-applications')">configure your app</a>.
 
 ## Default OIDC scopes
-Asgardeo uses `openid` as a marker scope during authentication and it will not return any user attributes for the `openid` scope. 
+Asgardeo uses `openid` as a marker scope during authentication and it will not return any user attributes for the `openid` scope.
 
 Listed below are the default OpenID Connect scopes that you can use to request user attributes for your application:
 
 <table>
   <tr>
     <th>Scope</th>
-    <th>Description</th> 
+    <th>Description</th>
     <th>Attributes</th>
   </tr>
    <tr>
@@ -104,7 +104,7 @@ To add new scopes to your organization:
 
 ## Edit Scopes
 
-All scopes except for the `openid` scope are configurable. You can add or delete attributes based on your requirement. 
+All scopes except for the `openid` scope are configurable. You can add or delete attributes based on your requirement.
 
 1. In the Asgardeo console, go to **Manage > Scopes**
 2. Select the scope to edit.
@@ -115,8 +115,8 @@ All scopes except for the `openid` scope are configurable. You can add or delete
 
 As an application developer, you can follow the steps given below to request user information from Asgardeo using scopes.
 
-1. First, go to the Asgardeo console and see that your application has the <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">required attributes enabled</a>. 
-2. Go to **Manage > Scopes** in the console and see that the required attributes are bound to a **scope**. 
+1. First, go to the Asgardeo console and see that your application has the <a :href="$withBase('/guides/authentication/user-attributes/enable-attributes-for-oidc-app/#select-user-attributes')">required attributes enabled</a>.
+2. Go to **Manage > Scopes** in the console and see that the required attributes are bound to a **scope**.
 
    You may have <a :href="$withBase('#default-oidc-scopes')">default OIDC scopes</a> or <a :href="$withBase('#create-custom-scopes')">custom scopes</a>.
 
@@ -125,9 +125,9 @@ As an application developer, you can follow the steps given below to request use
     ``` json{6}
     {
       "clientID": "<client ID>",
-      "serverOrigin": "https://api.asgardeo.io/t/<organization_name>",
-      "signInRedirectURL": "https://localhost:5000",
-      "signOutRedirectURL": "https://localhost:5000",
+      "baseUrl": "https://api.asgardeo.io/t/<organization_name>",
+      "signInRedirectURL": "https://localhost:3000",
+      "signOutRedirectURL": "https://localhost:3000",
       "scope": [ "profile", "address", "phone" ]
     }
     ```

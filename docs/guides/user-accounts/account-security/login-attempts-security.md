@@ -44,8 +44,8 @@ Based on the above settings, let's see how account lock happens in Asgardeo when
 1. User tries to log in with an incorrect password in **5 consecutive attempts** (Number of consecutive failed login attempts).
 2. User account will be **locked** for **5 minutes** (Account lock duration).
 3. After **5 minutes**, the account will be unlocked.
-   -  If the user enters the correct password, the user can successfully log in.
-   -  If the user tries an incorrect password, the account will be locked for a duration of period incremented by **2 times**(Account lock duration increment factor) the previous lock duration.
+   - If the user enters the correct password, the user can successfully log in.
+   - If the user tries an incorrect password, the account will be locked for a duration of period incremented by **2 times**(Account lock duration increment factor) the previous lock duration.
         - That is, the account will be locked for 2 x (5 ^ 1)= 10 minutes.
         - If the user attempts to log in with an incorrect password again after the wait time(10min) has elapsed, and the account is unlocked, the account will be locked for 2 * (5 ^ 2)= 50 minutes.
 

@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-next-line -->
 These configurations are enabled only if refresh token grant type is added as an allowed grant type.
 
 #### Renew refresh token

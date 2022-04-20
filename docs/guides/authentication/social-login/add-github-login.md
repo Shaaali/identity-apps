@@ -18,7 +18,7 @@ You can follow the [Github documentation](https://docs.github.com/en/developers/
       ```bash no-line-numbers
        https://api.asgardeo.io/t/<organization_name>
       ```
-   - **Authorization callback URL**
+    - **Authorization callback URL**
       ```bash no-line-numbers
       https://api.asgardeo.io/t/<organization_name>/commonauth
       ```
@@ -62,16 +62,16 @@ After the Github identity provider is created, go to the **Settings** tab and se
 
 ::: info
 Asgardeo needs these scopes to get user information. Asgardeo checks the attribute configurations of the application and sends the relevant attributes received from Github to the app. You can read the [Github Documentation](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to learn more.
-::: 
+:::
 
-##  Enable Github login
+## Enable Github login
 
 ::: info Before you begin
 You need to have an application registered in Asgardeo. If you don't already have one, register one of the following application types:
 
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">web app with SAML</a>
 :::
 
 1. On the Asgardeo console, go to **Develop > Applications**.
@@ -83,9 +83,9 @@ You need to have an application registered in Asgardeo. If you don't already hav
 
 ## Try it out
 
-Follow the steps given below. 
+Follow the steps given below.
 
-1. Access the application URL. 
+1. Access the application URL.
 2. Click **Login** to open the Asgardeo login page.
 3. On the Asgardeo login page, **Sign in with Github**.
 
@@ -93,5 +93,5 @@ Follow the steps given below.
 
 4. Log in to Github with an existing user account.
 ::: info
-When a user successfully logs in with Github for the first time, a **customer** account is created in the Asgardeo console with the Github username. This new user account will be managed by Github.
+When a user successfully logs in with Github for the first time, a **user** account is created in the Asgardeo console with the Github username. This new user account will be managed by Github.
 :::

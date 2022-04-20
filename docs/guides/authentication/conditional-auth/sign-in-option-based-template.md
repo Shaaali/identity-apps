@@ -4,16 +4,17 @@ You can enable a more secure sign-in flow (based on the user's sign-in method) b
 
 ## Scenario
 
-Consider a scenario where your application has multiple authentication methods configured as the first authentication step. You need to secure the sign-in flow for users signing in through a selected method of authentication (ex: basic authentication). If the user sign-in with the specified authentication method, the second authentication step is prompted. Users signing in from an authentication method which is not specified in the script can simply sign in using only the first step.
+Consider a scenario where your application has multiple authentication methods configured as the first authentication step. You need to secure the sign-in flow for users signing in through a selected method of authentication (ex: basic authentication). If the user sign-in with the specified authentication method, the second authentication step is prompted.
+Users signing in from an authentication method which is not specified in the script can simply sign in using only the first step.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/signin-based-adaptive-auth.png')" alt="Sign-in based adaptive authentication">
 
 ## Prerequisites
 
 You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
-   -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
-   -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
-   -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ## Configure the sign-in flow
 
@@ -43,7 +44,7 @@ Follow the steps given below.
                     <ul>
                     <li>For basic authentication using username and password use <code>LOCAL</code> as the parameter value.</li>
                     <li>For federated IdPs use the name of the IdP as the parameter value (Ex: <code>Facebook</code>, <code>Google</code>, <code>Github</code>).</li>
-                    </ul>    
+                    </ul>
                 </td>
             </tr>
         </tbody>
