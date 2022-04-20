@@ -21,7 +21,7 @@ Use the **standard-based** app type to register an OIDC management app:
     <img :src="$withBase('/assets/img/apis/management-apis/register-a-sba.png')" alt="Register a standard based application">
 
 3. Provide an application name.
-4. Select **OIDC Standard-Based Application** as the app type and then select the **Management Application** checkbox. 
+4. Select **OIDC Standard-Based Application** as the app type and then select the **Management Application** checkbox.
 
     ::: info
     Learn more about <a :href="$withBase('/references/app-settings/oidc-settings-for-app/')">OIDC configurations</a>.
@@ -39,7 +39,7 @@ The client ID and client secret are sensitive information that must be protected
 
 ### Request an access token
 
-You can now request an access token from the token endpoint by specifying the internal scopes (permission level) that you require to access. 
+You can now request an access token from the token endpoint by specifying the internal scopes (permission level) that you require to access.
 
 ::: info
 See the relevant API reference docs for the list of internal scopes for each API.
@@ -98,12 +98,8 @@ curl -X GET "https://api.asgardeo.io/t/<org_name>/scim2/Users" -H "accept: appli
 ```
 
 ## Best practices
-<<<<<<< HEAD
-When invoking the management APIs we recommend you to use the following best practices:
+
+When invoking the management APIs we recommend the following best practices:
 - If the ``client_id`` and ``client_secret`` are compromised, anyone can use them to invoke the client credentials grant and get an access token with all the access levels of the admin. Therefore, we highly recommend not to share the client id and client secret.
-=======
-When invoking the management APIs we recommend the following best practices: 
-- If the ``client_id`` and ``client_secret`` are compromised, anyone can use them to invoke the client credentials grant and get an access token with all the access levels of the admin. Therefore, we highly recommend not to share the client id and client secret. 
->>>>>>> ee64d6f... API improvements
 - If required, the administrator can set a higher expiry time for the application token through the application configurations in the Asgardeo console.
-- When you request an access token, be sure that it is specific to the scopes that are required for a specific task. This allows you to mitigate the risk of token misuse when you share it with other developers. 
+- When you request an access token, be sure that it is specific to the scopes that are required for a specific task. This allows you to mitigate the risk of token misuse when you share it with other developers.
