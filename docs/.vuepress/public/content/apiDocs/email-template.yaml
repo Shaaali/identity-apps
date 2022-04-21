@@ -2,16 +2,10 @@ openapi: 3.0.0
 info:
   version: "v1"
   title: Asgardeo - Email Templates API
-  description: >-
-    This is the RESTful API for managing email templates in WSO2 Asgardeo.This API allows adding, retrieving, replacing, and removing email
-    templates and template types.
-  contact:
-    name: Asgardeo
-    url: 'https://wso2.com/asgardeo/'
-    email: architecture@wso2.com
-  license:
-    name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  description: 
+    "This is the RESTful API for managing email templates in WSO2 Asgardeo. This API allows adding, retrieving, replacing, and removing email
+    templates and template types. 
+    \n To access the email template APIs in Asgardeo, you need to first [get an access token](https://wso2.com/asgardeo/docs/apis/authentication/#get-an-access-token) from your organization."
 tags:
   - name: Email template types
     description: An email template type can have multiple email templates for different languages.
@@ -24,7 +18,7 @@ paths:
     get:
       tags:
         - Email template types
-      summary: Retrieve all email template types
+      summary: Get email template types
       operationId: getAllEmailTemplateTypes
       description: |
         Retrieves all the email template types in your organization, with limited details of the email templates.
@@ -122,7 +116,7 @@ paths:
     get:
       tags:
         - Email templates
-      summary: Retrieve Email templates (details) per template type
+      summary: Get email templates per type
       operationId: getEmailTemplateType
       description: |
         Retrieves an email template type (matching the template type ID) including all of its email templates. <br>
@@ -155,7 +149,7 @@ paths:
     post:
       tags:
         - Email templates
-      summary: Add email template to existing template type
+      summary: Add email template
       operationId: addEmailTemplate
       description: |
         Adds a new email template to a template type. Note that the template ID is the locale and it be unique for the template type. You cannot have two templates with the same locale for a template type.
@@ -194,7 +188,7 @@ paths:
     put:
       tags:
         - Email templates
-      summary: Replace all email templates for template type
+      summary: Replace all email templates
       operationId: updateEmailTemplateType
       description: |
         Replaces all the email templates of the respective email template type with
@@ -228,7 +222,7 @@ paths:
     get:
       tags:
         - Email templates
-      summary: Retrieve email templates (list) per template type
+      summary: List email templates per type
       operationId: getTemplatesListOfEmailTemplateType
       description: |
         Retrieves the list of email templates for the template type ID. <br>
@@ -263,7 +257,7 @@ paths:
     get:
       tags:
         - Email templates
-      summary:  Retrieve a single email template
+      summary:  Get an email template
       operationId: getEmailTemplate
       description: |
         Retrieves the email template that matches the specified template ID and template type. <br>
@@ -297,7 +291,7 @@ paths:
     put:
       tags:
         - Email templates
-      summary: Replace an existing email template
+      summary: Replace an email template
       operationId: updateEmailTemplate
       description: |
         Replaces the email template identified by the template ID and template type. <br>

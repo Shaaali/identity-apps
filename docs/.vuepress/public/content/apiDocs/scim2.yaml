@@ -2,16 +2,10 @@ openapi: 3.0.0
 info:
   version: "v1"
   title: Asgardeo - SCIM 2.0 API
-  description: |
-    This is the RESTful API for SCIM 2.0 in WSO2 Asgardeo. 
-    This API allows creating, deleting, listing, and updating user and group schemas.
-  contact:
-    name: Asgardeo
-    url: 'https://wso2.com/asgardeo/'
-    email: architecture@wso2.org
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0
+  description: 
+    "This is the RESTful API for SCIM 2.0 in WSO2 Asgardeo. 
+    This API allows creating, deleting, listing, and updating user and group schemas. 
+    \n To access the SCIM 2.0 APIs in Asgardeo, you need to first [get an access token](https://wso2.com/asgardeo/docs/apis/authentication/#get-an-access-token) from your organization."
 servers:
   - url: 'https://api.asgardeo.io/t/{organization-name}/scim2'
     variables:
@@ -30,8 +24,6 @@ tags:
     description: This API lists and returns metadata about resource types.
   - name: Service Provider Config Endpoint
     description: This API returns the service provider's configuration details.
-security:
-  - OAuth2: []
 paths:
   /Me:
     get:
@@ -39,7 +31,8 @@ paths:
       - Me Endpoint
       summary: Get Me
       description: "This API returns the user details of the currently authenticated user.\n\n
-      <b>Scope required:</b> ``internal_login``"
+      - <b>Scope required:</b> ``internal_login`` \n\n
+      - <b>Flow type:</b> Authorization Code OAuth Flow"
       parameters:
       - name: attributes
         in: query
@@ -75,7 +68,8 @@ paths:
       - Me Endpoint
       summary: Update Me
       description: "This API uses a PUT operation to update user details.\n\n  
-      <b>Scope required:</b>``internal_login``"
+      - <b>Scope required:</b>``internal_login``\n\n
+      - <b>Flow type:</b> Authorization Code OAuth Flow"
       operationId: updateUserMe
       parameters:
       - name: attributes
@@ -118,7 +112,8 @@ paths:
       - Me Endpoint
       summary: Update Me - PATCH
       description: "This API uses a PATCH operation to update user details.\n\n
-      <b>Scope required:</b> ``internal_login``"
+      - <b>Scope required:</b> ``internal_login`` \n\n
+      - <b>Flow type:</b> Authorization Code OAuth Flow"
       operationId: patchUserMe
       parameters:
       - name: attributes
@@ -163,7 +158,8 @@ paths:
       - Groups Endpoint
       summary: Filter Groups
       description: "This API returns groups according to the specified filter, sort, and pagination parameters.\n\n  
-      <b>Scope required:</b> ``internal_group_mgt_view``"
+      - <b>Scope required:</b> ``internal_group_mgt_view`` \n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: getGroup
       parameters:
       - name: attributes
@@ -228,7 +224,8 @@ paths:
       - Groups Endpoint
       summary: Create Group
       description: "This API creates a group and returns the details of the created group including its unique ID.\n\n
-        <b>Scope required:</b> ``internal_group_mgt_create``"
+      - <b>Scope required:</b> ``internal_group_mgt_create``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: createGroup
       parameters:
       - name: attributes
@@ -285,7 +282,8 @@ paths:
       - Groups Endpoint
       summary: Search Groups
       description: "This API returns groups according to the specified filter, sort, and pagination parameters.\n\n
-        <b>Scope required:</b> ``internal_group_mgt_view``"
+      - <b>Scope required:</b> ``internal_group_mgt_view``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: getGroupsByPost
       requestBody:
         content:
@@ -325,7 +323,8 @@ paths:
       - Groups Endpoint
       summary: Get Group by ID
       description: "This API returns the group details of a particular group using its unique ID.\n\n
-        <b>Scope required:</b> ``internal_group_mgt_view``"
+        - <b>Scope required:</b> ``internal_group_mgt_view``\n\n
+        - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: getGroup by id
       parameters:
       - name: id
@@ -374,7 +373,8 @@ paths:
       - Groups Endpoint
       summary: Update Group - PUT
       description: "This API updates the group details and returns the updated group details using a PUT operation.\n\n
-        <b>Scope required:</b> ``internal_group_mgt_update``"
+      - <b>Scope required:</b> ``internal_group_mgt_update`` \n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: updateGroup
       parameters:
       - name: id
@@ -436,7 +436,8 @@ paths:
       - Groups Endpoint
       summary: Delete Group
       description: "This API deletes a particular group using its unique ID.\n\n 
-      <b>Scope required:</b> ``internal_group_mgt_delete``"
+      - <b>Scope required:</b> ``internal_group_mgt_delete``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: deleteGroup
       parameters:
       - name: id
@@ -472,7 +473,8 @@ paths:
       - Groups Endpoint
       summary: Update Group - PATCH
       description: "This API updates the group details and returns the updated group details using a PATCH operation.\n\n 
-        <b>Scope required:</b> ``internal_group_mgt_update``"
+      - <b>Scope required:</b> ``internal_group_mgt_update``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: patchGroup
       parameters:
       - name: id
@@ -529,7 +531,8 @@ paths:
       - Users Endpoint
       summary: Filter Users
       description: "This API returns users according to the filter, sort and pagination parameters. Pagination is not supported across user stores and LDAP multi-attribute group filtering. However, filtering is supported across multiple user stores.\n\n
-        <b>Scope required:</b> ``internal_user_mgt_list``"
+      - <b>Scope required:</b> ``internal_user_mgt_list``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: getUser
       parameters:
       - name: attributes
@@ -594,7 +597,8 @@ paths:
       - Users Endpoint
       summary: Create User
       description: "This API creates a user and returns the user details along with the user's unique ID.\n\n
-        <b>Scope required:</b> ``internal_user_mgt_create``"
+      - <b>Scope required:</b> ``internal_user_mgt_create``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: createUser
       parameters:
       - name: attributes
@@ -657,7 +661,8 @@ paths:
       - Users Endpoint
       summary: Search Users
       description: "This API returns users according to the filter, sort and pagination parameters.\n\n 
-        <b>Scope required:</b> ``internal_user_mgt_list``"
+      - <b>Scope required:</b> ``internal_user_mgt_list``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: getUsersByPost
       requestBody:
         content:
@@ -697,7 +702,8 @@ paths:
       - Users Endpoint
       summary: Get User by ID
       description: "Return user details if a user found.\n\n
-      <b>Scope required:</b> ``internal_user_mgt_list``"
+      - <b>Scope required:</b> ``internal_user_mgt_list``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: getUser by id
       parameters:
       - name: id
@@ -746,7 +752,8 @@ paths:
       - Users Endpoint
       summary: Update User - PUT
       description: "This API updates user details and return the updated user details using a PUT operation.\n\n 
-        <b>Scope required:</b> ``internal_user_mgt_update``"
+      - <b>Scope required:</b> ``internal_user_mgt_update``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: updateUser
       parameters:
       - name: id
@@ -802,7 +809,8 @@ paths:
       - Users Endpoint
       summary: Delete User by ID
       description: "This API deletes a user using the user's unique ID.\n\n 
-      <b>Scope required:</b> ``internal_user_mgt_delete``"
+      - <b>Scope required:</b> ``internal_user_mgt_delete``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: deleteUser
       parameters:
       - name: id
@@ -838,8 +846,9 @@ paths:
       - Users Endpoint
       summary: Update User - PATCH
       description: "This API updates user details and returns the updated user details using a PATCH operation.\n\n 
-        <b>Scope required:</b> ``internal_user_mgt_update``\n\n
-        <b>Supported Operations:</b>``add``, ``replace``, ``remove``"
+      - <b>Scope required:</b> ``internal_user_mgt_update``\n\n
+      - <b>Supported Operations:</b>``add``, ``replace``, ``remove``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: patchUser
       parameters:
       - name: id
@@ -896,7 +905,8 @@ paths:
       - Bulk Endpoint
       summary: Create/ Update/ Delete SCIM Resources (Users/ Groups) in Bulk
       description: "This API is used to create multiple users at once.\n\n
-      <b>Scope required:</b> ``internal_user_mgt_create``"
+      - <b>Scope required:</b> ``internal_user_mgt_create``\n\n
+      - <b>Flow type:</b> Client Credentials OAuth Flow"
       operationId: createBulkUsers
       requestBody:
         content:
@@ -1929,7 +1939,25 @@ components:
   securitySchemes:
     OAuth2:
       type: oauth2
-      flows:
-        clientCredentials:
-          tokenUrl: https://api.asgardeo.io/t/{org-name}/oauth/token
-          scopes: []
+      description: "You can use the following OAuth grant types to securely access the respective API endpoints.
+      \n\n **Authorization Code OAuth Flow**
+      \n\n Authorization URL: 'https://api.asgardeo.io/t/{org-name}/oauth2/authorize'
+      \n\n This flow type is used for the ```me``` endpoint of SCIM2 APIs. You can use the following scope for this endpoints.
+        \n\n - ```internal_login```: Grant permission for an authenticated user for self management.  
+      \n\n**Client Credentials OAuth Flow**
+      \n\n Token URL: https://api.asgardeo.io/t/{org-name}/oauth/token
+      \n\n This flow type is used for the following endpoints:
+        \n\n - ```users``` endpoint
+        \n\n - ```group``` endpoint
+        \n\n - ```bulk``` endpoint
+        \n\n - ```resource type``` endpoint
+        \n\n - ```service provider config``` endpoint 
+      \n\n You can use the following scopes for each of the endpoints.
+        \n\n - ```internal_user_mgt_list```: Grant permissions to read user records.
+        \n\n - ```internal_user_mgt_create```: Grant permissions to create new users.
+        \n\n - ```internal_user_mgt_update```: Grant permissions to update existing users.
+        \n\n - ```internal_user_mgt_delete```: Grant permissions to delete users.
+        \n\n - ```internal_group_mgt_view```: Grant permissions to read group records.
+        \n\n - ```internal_group_mgt_create```: Grant permissions to create new group records.
+        \n\n - ```internal_group_mgt_update```: Grant permissions to update existing group records.
+        \n\n - ```internal_group_mgt_delete```: Grant permissions to delete group records."
