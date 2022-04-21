@@ -14,7 +14,7 @@ To onboard an administrator:
 
 1. On the Asgardeo console, click **Manage > Administrators**.
 2. Click **New Administrator**.
-4. Provide the email address of the administrator and click **Invite**.
+3. Provide the email address of the administrator and click **Invite**.
 
     ::: warning
     This email address will be used as the username in Asgardeo. Note that a username is always unique to the organization, and you can't change the username once it is created.
