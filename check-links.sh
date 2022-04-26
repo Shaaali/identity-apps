@@ -24,7 +24,8 @@ sleep 5
 USER_AGENT=""
 
 # https://www.npmjs.com/package/broken-link-checker
-if blc --input http://localhost:$PORT/asgardeo/docs/  --user-agent="$USER_AGENT" -grf; then
+# shellcheck disable=SC2086
+if blc --input http://localhost:$PORT/asgardeo/docs/  --user-agent=$USER_AGENT -grf; then
   echo "No broken links found."
   exit 0
 else
