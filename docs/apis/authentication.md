@@ -21,7 +21,11 @@ Use the **standard-based** app type to register an OIDC management app:
     <img :src="$withBase('/assets/img/apis/management-apis/register-a-sba.png')" alt="Register a standard based application">
 
 3. Provide an application name.
-4. Select **OIDC Standard-Based Application** as the app type and the **Management Application** checkbox. Learn more about <a :href="$withBase('/references/app-settings/oidc-settings-for-app/')">OIDC configurations</a>
+4. Select **OIDC Standard-Based Application** as the app type and then select the **Management Application** checkbox.
+
+    ::: info
+    Learn more about <a :href="$withBase('/references/app-settings/oidc-settings-for-app/')">OIDC configurations</a>.
+    :::
 
 5. Click **Register** to complete the registration.
 6. Go to the **Protocol** tab and select **Client Credential** as the grant type for the application.
@@ -35,7 +39,13 @@ The client ID and client secret are sensitive information that must be protected
 
 ### Request an access token
 
-You can now request an access token from the token endpoint by specifying the scopes (permission level) that you require. Use the following cURL command format in your request:
+You can now request an access token from the token endpoint by specifying the internal scopes (permission level) that you require to access.
+
+::: info
+See the relevant API reference docs for the list of internal scopes for each API.
+:::
+
+Use the following cURL command format in your request:
 
 ``` js
 curl -X POST \
@@ -44,6 +54,8 @@ https://api.asgardeo.io/t/<org_name>/oauth2/token \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -d 'grant_type=client_credentials&scope=<scope>'
 ```
+
+Replace the following variables in the above request.
 
 <table>
     <tr>
@@ -64,7 +76,7 @@ https://api.asgardeo.io/t/<org_name>/oauth2/token \
     </tr>
         <tr>
         <td><code>scope</code></td>
-        <td>The scope corresponding to the API you want to use.</td>
+        <td>The scope corresponding to the API you want to use.See the relevant API reference docs for the list of internal scopes for each API.</td>
     </tr>
 </table>
 
@@ -72,12 +84,12 @@ https://api.asgardeo.io/t/<org_name>/oauth2/token \
 
 Shown below is a sample access token that you will receive in the response.
 
-```
+``` text
 61985b0e-26c3-38b7-acff-b18ad934eafc 
 ```
 
 ## Access the API
-You can now use the access token as an **Authorization Bearer** header to access the management APIs. 
+You can now use the access token as an **Authorization Bearer** header to access the management APIs.
 
 This is a sample cURL command template for the request.
 
@@ -86,7 +98,8 @@ curl -X GET "https://api.asgardeo.io/t/<org_name>/scim2/Users" -H "accept: appli
 ```
 
 ## Best practices
-When invoking the management APIs we recommend you to use the following best practices: 
-- If the ``client_id`` and ``client_secret`` are compromised, anyone can use them to invoke the client credentials grant and get an access token with all the access levels of the admin. Therefore, we highly recommend not to share the client id and client secret. 
+
+When invoking the management APIs we recommend the following best practices:
+- If the ``client_id`` and ``client_secret`` are compromised, anyone can use them to invoke the client credentials grant and get an access token with all the access levels of the admin. Therefore, we highly recommend not to share the client id and client secret.
 - If required, the administrator can set a higher expiry time for the application token through the application configurations in the Asgardeo console.
-- When requesting the access token, the administrator can request a token with some specific scopes (for example ``internal_email_mgt_update``) and share it with the developer. This way, the developer will not misuse the token.
+- When you request an access token, be sure that it is specific to the scopes that are required for a specific task. This allows you to mitigate the risk of token misuse when you share it with other developers.

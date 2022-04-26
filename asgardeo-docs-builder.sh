@@ -46,6 +46,7 @@ jq --arg variable "$NEW_ASGARDEO_DOCS_VERSION" '.version = $variable' package.js
 
 git -C "$REPO_DIR" config user.name "$GIT_USERNAME"
 git -C "$REPO_DIR" config user.email "iam-cloud@wso2.com"
+git -C "$REPO_DIR" pull
 
 git -C "$REPO_DIR" add "$DOCS_INFO_JSON_PATH"
 git -C "$REPO_DIR" commit -m "Updating version in package.json to $NEW_ASGARDEO_DOCS_VERSION"

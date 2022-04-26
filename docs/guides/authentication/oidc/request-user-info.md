@@ -14,7 +14,7 @@ https://api.asgardeo.io/t/<organization_name>/oauth2/userinfo
 <CodeGroup>
 <CodeGroupItem title="cURL" active>
 
-``` 
+```bash
 curl --location --request GET 'https://api.asgardeo.io/t/{organization}/oauth2/userinfo' \
 --header 'Authorization: Bearer {your_access_token}'
 ```

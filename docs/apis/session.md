@@ -5,4 +5,5 @@ breadcrumb: false
 url: /asgardeo/docs/content/apiDocs/session.html
 ---
 
+<!-- markdownlint-disable-next-line -->
 <APIStoplight/>

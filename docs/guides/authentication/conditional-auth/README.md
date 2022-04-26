@@ -59,7 +59,7 @@ The available templates are categorized as follows:
 - Access Control - These templates restrict user login to the application based on specified conditions.
 - Adaptive MFA - These templates prompt two-factor authentication for login attempts based on specific conditions.
 
-The pre-defined templates are listed below. 
+The pre-defined templates are listed below.
 
 <table>
   <tr>
@@ -92,7 +92,7 @@ The pre-defined templates are listed below.
   </tr>
 </table>
 
-If required, you can also use the script editor to introduce new functions and fields to an authentication script based on your requirement. See the instructions on <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">writing a custom authentication script</a>. 
+If required, you can also use the script editor to introduce new functions and fields to an authentication script based on your requirement. See the instructions on <a :href="$withBase('/guides/authentication/conditional-auth/write-your-first-script/')">writing a custom authentication script</a>.
 
 ## What's next
 

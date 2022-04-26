@@ -13,14 +13,14 @@ Consider a scenario with two user groups, `manager` and `employee`. For users as
 
 ## Prerequisites
 
--  You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
-   -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
-   -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
-   -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
+  - <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+  - <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+  - <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
--  Create two user groups named `manager` and `employee` and assign user accounts to them. For instructions, see the following:
-   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing groups</a>
-   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing users</a>
+- Create two user groups named `manager` and `employee` and assign user accounts to them. For instructions, see the following:
+  - <a :href="$withBase('/guides/users/manage-groups/')">Managing groups</a>
+  - <a :href="$withBase('/guides/users/manage-groups/')">Managing users</a>
 
 ## Configure the login flow
 
@@ -29,8 +29,8 @@ Consider a scenario with two user groups, `manager` and `employee`. For users as
 5. Select the **Adaptive MFA > Group-Based** template.
 6. Verify that the login flow is now updated with the following two authentication steps:
 
-    -   Step 1: Username and Password
-    -   Step 2: TOTP
+    - Step 1: Username and Password
+    - Step 2: TOTP
 
 7. Update the following parameter in the script.
 
@@ -76,9 +76,9 @@ var onLoginRequest = function (context) {
 
 Let's look at how this script works.
 
-1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the user from the context. 
-2. The user and the configured list of groups are passed to the following function: `isMemberOfAnyOfGroups`. 
-3. This function (which is available in Asgardeo by default) verifies whether the given user belongs to any of the listed groups. 
+1. When step 1 of the authentication flow is complete, the **onLoginRequest** function retrieves the user from the context.
+2. The user and the configured list of groups are passed to the following function: `isMemberOfAnyOfGroups`.
+3. This function (which is available in Asgardeo by default) verifies whether the given user belongs to any of the listed groups.
 4. If the user belongs to any of the configured groups, authentication step 2 (TOTP) is prompted.
 
 ::: info
@@ -90,7 +90,7 @@ Find out more about the scripting language in the <a :href="$withBase('/referenc
 Follow the steps given below.
 
 1. Access the application URL.
-2. Try to log in with a user who does not belong to any of the configured groups (manager or employee). You will 
+2. Try to log in with a user who does not belong to any of the configured groups (manager or employee). You will
    successfully sign in to the application.
 3. Log out of the application.
 4. Log in with a user who belongs to the `manager` or `employee` group or both. TOTP authentication is prompted.

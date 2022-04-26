@@ -7,22 +7,22 @@ Follow this guide to write a conditional authentication script from scratch and 
 Let's consider the following simplified set of requirements for your business application:
 
 - User tries to log in to an application with **username and password** authentication.
-- If the user belongs to the **manager** or **employee** group, they can access the application. Other users should not be allowed to access the application.                                                           
+- If the user belongs to the **manager** or **employee** group, they can access the application. Other users should not be allowed to access the application.
 
 <img class="borderless-img" :src="$withBase('/assets/img/guides/conditional-auth/conditional-auth-flow-diagram-condition-flow.png')" alt="Authentication flow with Group based Access control">
 
 ## Prerequisites
 
--  You need an application registered in Asgardeo. If you don't already have one, register one based on the following application types:
-   -   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
-   -   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
-   -   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- You need an application registered in Asgardeo. If you don't already have one, register one based on the following application types:
+  - <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+  - <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+  - <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
--  Customize the login flow in your application and enable `Username and Password` authentication.
+- Customize the login flow in your application and enable `Username and Password` authentication.
 
--  Create two user groups named `manager` and `employee` and assign user accounts to them. For instructions, see the following:
-   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing groups</a>
-   -  <a :href="$withBase('/guides/users/manage-groups/')">Managing users</a>
+- Create two user groups named `manager` and `employee` and assign user accounts to them. For instructions, see the following:
+  - <a :href="$withBase('/guides/users/manage-groups/')">Managing groups</a>
+  - <a :href="$withBase('/guides/users/manage-groups/')">Managing users</a>
 
 ## Start with the default script
 
@@ -68,7 +68,7 @@ var onLoginRequest = function (context) {
 
 ## Check membership of the user
 
-Now, let's check whether the user is a member of `manager` or `employee`. You can use the <a :href="$withBase('/references/conditional-auth/api-reference/#check-group-membership')">isMemberOfAnyOfGroups(user, groups) utility function</a>. 
+Now, let's check whether the user is a member of `manager` or `employee`. You can use the <a :href="$withBase('/references/conditional-auth/api-reference/#check-group-membership')">isMemberOfAnyOfGroups(user, groups) utility function</a>.
 
 Refer the <a :href="$withBase('/references/conditional-auth/api-reference/#utility-functions')">inbuilt functions</a> to get to know more existing functions.
 

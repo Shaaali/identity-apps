@@ -8,7 +8,7 @@
 
 ## Self-register
 
-To self-register as a user, the user should follow these steps. 
+To self-register as a user, the user should follow these steps.
 
 1. Go to the login page via the user <a :href="$withBase('/guides/user-self-service/customer-self-service-portal/')">My Account Portal</a> or a business application.
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/recover-your-password.png')" alt="Self register to organization" width="400">
@@ -30,9 +30,9 @@ To self-register as a user, the user should follow these steps.
 5. If **Account Verification** is enabled, the user can confirm the account from the email.
 
    <img :src="$withBase('/assets/img/guides/organization/self-service/customer/account-verification-email.png')" alt="Account verification email notification" width="600">
-    
+
 Now, the user can log in to the My Account portal or any business applications in your organization. The email address is the username.
-   
+
 If the user tries to log in with an **unverified email address**, Asgardeo will show an error message saying that the account has not been verified and shows options to resend verification. This is applicable only if **Account Verification** is enabled for <a :href="$withBase('/guides/user-accounts/configure-self-registration/')">self registration</a>.
 
 <img :src="$withBase('/assets/img/guides/organization/self-service/customer/login-with-unverified-email.png')" alt="Login with unverified email" width="400">

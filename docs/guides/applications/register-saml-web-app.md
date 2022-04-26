@@ -38,10 +38,10 @@ To register the app:
     </table>
 
 ### Add SAML configs manually
-    
+
 If you selected **Manual** in the previous step, you can manually specify the SAML configurations as follows:
 
-<img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app.png')" alt="Register SAML app"> 
+<img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app.png')" alt="Register SAML app">
 
 <table>
     <tr>
@@ -69,13 +69,13 @@ An SP metadata XML file contains the following:
 
 There are two ways to use a SAML metadata file during application registration:
 
--   Select the **File Based** option and upload the SAML SP metadata file. 
+- Select the **File Based** option and upload the SAML SP metadata file.
 
     <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app-using-metadata-file.png')" alt="Register SAML app using metadata file">
 
--   Select the **URL Based** option and specify the SAML meta URL, which refers to the endpoint that hosts the SAML metadata file.
+- Select the **URL Based** option and specify the SAML meta URL, which refers to the endpoint that hosts the SAML metadata file.
 
-    <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app-using-meta-url.png')" alt="Register SAML app using meta url">     
+    <img :src="$withBase('/assets/img/guides/applications/saml-app/register-saml-app-using-meta-url.png')" alt="Register SAML app using meta url">
 
 ## What's next?
 

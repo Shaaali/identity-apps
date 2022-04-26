@@ -6,10 +6,10 @@ Currently, Asgardeo supports integrating two application types. When you select 
 
 ## Single-page applications
 
-Single-page applications(SPAs) are apps that run on the browser and do not require a page reload with a change 
-in content. 
+Single-page applications(SPAs) are apps that run on the browser and do not require a page reload with a change
+in content.
 
-The main advantage of a single-page application is its speed. Since content is dynamically updated as the user interacts with it, the user does not need to wait for page reloads. Users can experience a seamless flow with high responsiveness from the application. 
+The main advantage of a single-page application is its speed. Since content is dynamically updated as the user interacts with it, the user does not need to wait for page reloads. Users can experience a seamless flow with high responsiveness from the application.
 
 JavaScript frameworks and libraries, such as AngularJS, React, Vue.js, are some popular technologies adopted to build SPAs.
 

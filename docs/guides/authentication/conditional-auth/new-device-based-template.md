@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-file MD037 -->
 # Add MFA based on user device
 
 You can apply the **New-Device-Based** conditional authentication template to your application to enable a more secure login flow for users who log in from a previously unused device.
@@ -17,9 +18,9 @@ An email should also be sent to the user with details of the login attempt.
 
 You need an application registered in Asgardeo. If you don’t already have one, register an application based on one of the following application types:
 
--   <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
--   <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
--   <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
+- <a :href="$withBase('/guides/applications/register-single-page-app/')">Single-page app</a>
+- <a :href="$withBase('/guides/applications/register-oidc-web-app/')">Web app with OIDC</a>
+- <a :href="$withBase('/guides/applications/register-saml-web-app/')">Web app with SAML</a>
 
 ## Configure the login flow
 
@@ -29,8 +30,8 @@ You need an application registered in Asgardeo. If you don’t already have one,
 
 6. Verify that the login flow is now updated with the following two authentication steps:
 
-    -   Step 1: Username and Password
-    -   Step 2: TOTP
+    - Step 1: Username and Password
+    - Step 2: TOTP
 
 7. Update the following parameters in the script.
 
@@ -129,12 +130,12 @@ var validateCookie = function(context, subject) {
 
 Let's look at how this script works.
 
-1.  The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the <a :href ="$withBase('/references/conditional-auth/api-reference/#get-cookie-value')">getCookieValue(request, name, properties</a> function. The cookie name is configured with the **cookieName** parameter.
-2.  When step 1 of the authentication flow is complete, the **onLoginRequest** function validates the **deviceAuth** cookie. 
-3.  If there is no valid cookie found, the function checks whether the **sendNotification** and **stepUpAuthentication** parameters are enabled.
-4.  If the **sendNotification** property is enabled, the <a :href ="$withBase('/references/conditional-auth/api-reference/#send-email')">sendEmail(user, templateId, placeholderParameters)</a> function is called to send the notification email with the login timestamp. The email template is set as **UnseenDeviceLogin** in the **emailTemplate** variable.
-5.  If the **stepUpAuthentication** parameter is enabled, step 2 of the authentication flow is executed.
-6.  On the successful execution of step 2 of the authentication flow, the <a :href ="$withBase('/references/conditional-auth/api-reference/#set-cookie')">setCookie(response, name, value, properties)</a> function is called to set a **deviceAuth** cookie.
+1. The **validateCookie** function verifies whether the user has a valid cookie for the logged-in user. This function calls the <a :href ="$withBase('/references/conditional-auth/api-reference/#get-cookie-value')">getCookieValue(request, name, properties</a> function. The cookie name is configured with the **cookieName** parameter.
+2. When step 1 of the authentication flow is complete, the **onLoginRequest** function validates the **deviceAuth** cookie.
+3. If there is no valid cookie found, the function checks whether the **sendNotification** and **stepUpAuthentication** parameters are enabled.
+4. If the **sendNotification** property is enabled, the <a :href ="$withBase('/references/conditional-auth/api-reference/#send-email')">sendEmail(user, templateId, placeholderParameters)</a> function is called to send the notification email with the login timestamp. The email template is set as **UnseenDeviceLogin** in the **emailTemplate** variable.
+5. If the **stepUpAuthentication** parameter is enabled, step 2 of the authentication flow is executed.
+6. On the successful execution of step 2 of the authentication flow, the <a :href ="$withBase('/references/conditional-auth/api-reference/#set-cookie')">setCookie(response, name, value, properties)</a> function is called to set a **deviceAuth** cookie.
 
 ::: info
 Find out more about the scripting language in the <a :href="$withBase('/references/conditional-auth/api-reference/')">Conditional Authentication API Reference</a>.
@@ -147,5 +148,5 @@ Follow the steps given below.
 1. Access the application URL from a **new device/browser**.
 2. Try to log in to the application. TOTP authentication is prompted and the configured email of the user receives the email notification.
     <img :src="$withBase('/assets/img/guides/conditional-auth/new-device-email-notification.png')" alt="new-device-email-notification-sample">
-3. Log out of the application. 
+3. Log out of the application.
 4. Log in with the same user from the same device/browser. You will successfully log in to the application with only the basic authentication.
