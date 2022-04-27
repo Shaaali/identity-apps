@@ -22,10 +22,10 @@ sleep 5
 # The deafult user agent header set by the `broken link checker` lib doesn't seem to work in some cases.
 # See https://stackoverflow.com/a/39912696
 USER_AGENT=""
-
+GITHUB_DOCS_DOMAIN="https://docs.github.com"
 # https://www.npmjs.com/package/broken-link-checker
 # shellcheck disable=SC2086
-if blc --input http://localhost:$PORT/asgardeo/docs/  --user-agent=$USER_AGENT -grf; then
+if blc --input http://localhost:$PORT/asgardeo/docs/  --user-agent=$USER_AGENT --exclude=$GITHUB_DOCS_DOMAIN -grf; then
   echo "No broken links found."
   exit 0
 else
